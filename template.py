@@ -35,7 +35,7 @@ bibHTML = '''<?xml version="1.0" encoding="UTF-8"?>
 	<pre>%s</pre>
 </div>
 <hr/>
-<p>%s</p>
+%s
 <div style="clear:both"/><hr />
 <div class="last">
 	<em>

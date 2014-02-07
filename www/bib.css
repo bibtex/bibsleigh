@@ -7,10 +7,8 @@ body {background-color:#CCC}
 .left {float:left;text-align:center}
 .pad {padding-bottom:20px}
 .main {margin-left:220px;margin-right:10px}
-.mult {-moz-column-count:4;-moz-column-gap:20px;
-       -webkit-column-count:4;-webkit-column-gap:20px;
-       column-count:4;column-gap:20px;}
-a.src {font-family:'Courier New',Courier,Monaco,mono}
 ul ul {padding-top:10px;padding-bottom:10px}
 .pre {border: 1px solid black;}
 pre {border-top: 1px solid black;}
+dt {font-weight:bold;}
+.toc a:link, .toc a:visited{color:#600;}

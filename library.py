@@ -94,8 +94,14 @@ class BibEntry(object):
 		f = open(fs,'w')
 		f.write(self.toBIB())
 		f.close()
+	def getKeyHTML(self):
+		if self['booktitle'] and self['year']:
+			c = self['booktitle'][-1]
+			return self['key'][0].replace(c,'<a href="%s-%s.html">%s</a>' % (c,self['year'][0],c))
+		else:
+			return self['key'][0]
 	def toBIB(self):
-		s = '@%s{%s,\n' % (self.t, self['key'][0])
+		s = '@%s{%s,\n' % (self.t, self.getKeyHTML())
 		for k in self.args:
 			if k in ('author', 'editor'):
 				s += '\t%-10s = "%s",\n' % (k,' and '.join(self.dict[k]))
@@ -175,7 +181,7 @@ class BibEntry(object):
 			# print('Warning: no %s defined!' % arg)
 			pass
 	def updatewith(self, xref):
-		xref.linked.append(self.key)
+		xref.linked.append(self)
 		print('Updating',self.key,'with',xref.key)
 		for inh in ('editor','publisher','isbn','volume','series'):
 			if xref[inh]:
@@ -194,8 +200,27 @@ class BibEntry(object):
 			self.getVenueHTML(),
 			self.getCodeLongShort(),
 			self.toBIB(),
-			self.linked))
+			self.contentsHTML()))
 		h.close()
+	def contentsHTML(self):
+		if not self.linked:
+			return ''
+		items = {}
+		for link in self.linked:
+			if link['pages']:
+				p = int(link['pages'][0].split('-')[0])
+				pp = ', pp. ' + link['pages'][0] 
+			else:
+				p = 0
+				pp = ''
+				while p in items.keys():
+					p -= 1
+			items[p] = '<dt><a href="%s.html">%s</a></dt><dd>%s (%s)%s.</dd>' % (link['key'][0], link['key'][0], link.getTitleHTML(), link.getAuthorsShortHTML(), pp)
+		return '<h3>Contents</h3><dl class="toc">'+ ''.join([items[i] for i in sorted(items.keys())]) + '</dl>'
+	def getAuthorsShortHTML(self):
+		if not self['author']:
+			return '&mdash;'
+		return ', '.join(['<abbr title="%s">%s</abbr>' % (name,''.join([s[0] for s in name.split(' ')])) for name in self['author']])
 	def getAuthorsHTML(self):
 		if self['author']:
 			return ', '.join(self['author'])
