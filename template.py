@@ -12,9 +12,9 @@ bibHTML = '''<?xml version="1.0" encoding="UTF-8"?>
 </head>
 <body>
 <div class="left">
-	(a link to bibSLEIGH)<br/>
-	<a href="index.html"><img src="../conf/sle.png" alt="Software Language Engineering" class="pad"/></a><br/>
-	(a link to edit)<br/>
+	<!-- (a link to bibSLEIGH)<br/> -->
+	<a href="index.html"><img src="../conf/%s.png" alt="%s" class="pad"/></a><br/>
+	<!-- (a link to edit)<br/> -->
 	<a href="http://creativecommons.org/licenses/by-sa/3.0/" title="CC-BY-SA"><img src="../www/cc-by-sa.png" alt="CC-BY-SA"/></a><br/>
 	<a href="http://creativecommons.org/licenses/by-sa/3.0/" title="Open Knowledge"><img src="../www/open-knowledge.png" alt="Open Knowledge" class="pad" /></a><br/>
 	<a href="http://validator.w3.org/check/referer" title="XHTML 1.0 W3C Rec"><img src="../www/xhtml10.png" alt="XHTML 1.0 W3C Rec" /></a><br/>

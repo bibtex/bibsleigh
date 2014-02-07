@@ -3,6 +3,8 @@
 from template import bibHTML
 import xml.etree.cElementTree as ET
 
+supported = ['SLE','MoDELS','GTTSE','CSMR','WCRE','SAC','POPL']
+
 locations = []
 
 numfixes = {
@@ -29,6 +31,7 @@ class BibLib(object):
 		b.sanitize()
 		self.xs.append(b)
 		print('Added:', b.key)
+		other.clear()
 		return self
 	def __getitem__(self,key):
 		for x in self.xs:
@@ -206,14 +209,17 @@ class BibEntry(object):
 	def updatewith(self, xref):
 		print('Updating',self.key,'with',xref.key)
 		for inh in ('editor','publisher','isbn','volume','series'):
-			for v in xref[inh]:
-				self[inh] = v
+			if xref[inh]:
+				for v in xref[inh]:
+					self[inh] = v
 		self.dict['booktitle'] = [xref.dict['title'][0],xref.dict['booktitle'][0]]
 		self.sanitize()
 	def writeHTML(self,fs):
 		h = open(fs,'w',encoding='utf-8')
 		h.write(bibHTML %
 			(self.getTitleTXT(),
+			self.getVenueIcon(),
+			self.getVenueHTML(), # simple yet questionable
 			self.getAuthorsHTML(),
 			self.getTitleHTML(),
 			self.getVenueHTML(),
@@ -223,19 +229,24 @@ class BibEntry(object):
 	def getAuthorsHTML(self):
 		if self['author']:
 			return ', '.join(self['author'])
-		else:
+		elif self['editor']:
 			return ', '.join(self['editor'])+' (editors)'
+		else:
+			print('ERROR: neither authors nor editor in',self.key)
+			return ''
 	def getTitleTXT(self):
 		# TODO: not exhaustive
 		return self['title'][0].replace('<i>','').replace('</i>','')
 	def getTitleHTML(self):
 		return self['title'][0]
+	def getVenueIcon(self):
+		return self['booktitle'][-1].lower()
 	def getVenueHTML(self):
 		return '%s, %s' % (self['booktitle'][0], self['year'][0])
 	def getCodeLongShort(self):
 		code = ''
 		for tag in ('title','booktitle','series'):
-			if len(self[tag])==2:
+			if self[tag] and len(self[tag])==2:
 				code += "$('#"+tag+"').text(this.checked?'%s':'%s');" % tuple(self[tag])
 		return code
 
@@ -245,16 +256,15 @@ if __name__ == '__main__':
 	locations = f.read().split('\n')
 	f.close()
 	xs = BibLib()
-	# parser = ET.XMLParser(encoding="ISO-8859-1")
 	parser = ET.XMLParser(encoding="utf-8")
-	# for event, elem in ET.iterparse('dblp.xml', events=("end",)):
-	for event, elem in ET.iterparse('try.xml', events=("end",), parser=parser):
+	# for event, elem in ET.iterparse('try.xml', events=("end",), parser=parser):
+	for event, elem in ET.iterparse('dblp.xml', events=("end",), parser=parser):
 		# If the 'events' option is omitted, only “end” events are returned.
-		if elem.findtext('booktitle')=='SLE':
+		if elem.findtext('booktitle') in supported:
 			xs += elem
-			elem.clear()
 	for x in xs:
 		print('I got', x.key)
 		if x['crossref'] and xs[x['crossref'][0]]:
 			x.updatewith(xs[x['crossref'][0]])
 	xs.writeHTML()
+	print(len(xs),'bib entries processed.')
