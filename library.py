@@ -1,26 +1,14 @@
 #!/usr/local/bin/python3
 
 from template import bibHTML
+from venues import venuesMap
 import xml.etree.cElementTree as ET
+
+unk = []
 
 supported = ['SLE','MoDELS','GTTSE','CSMR','WCRE','SAC','POPL']
 
 locations = []
-
-numfixes = {
-	'1st': 'First',
-	'2nd': 'Second',
-	'3rd': 'Third',
-	'4th': 'Fourth',
-	'5th': 'Fifth',
-	'6th': 'Sixth',
-	'7th': 'Seventh',
-	'8th': 'Eighth',
-	'9th': 'Ninth',
-	'10th': 'Tenth',
-	'Eleventh': '11th',
-	'Twelfth': '12th'
-}
 
 class BibLib(object):
 	def __init__(self):
@@ -169,31 +157,8 @@ class BibEntry(object):
 			tmp += '-'
 		self['key'] = self['booktitle'][0].upper()+'-'+tmp+self['year'][0]
 		# fix title for conferences
-		if self['title'][0].count(',')>2 and self['title'][0].find('Conference')>0:
-			cs = self['title'][0].split(', ')
-			ds = []
-			title = ''
-			for c in cs:
-				if c.isdigit():
-					continue
-				if self['booktitle'] and c.startswith(self['booktitle'][0]) and c.replace(self['booktitle'][0],'').strip().isdigit():
-					continue
-				if c.startswith('January') or c.startswith('February') or c.startswith('March') or c.startswith('April') or c.startswith('May') or c.startswith('June') or c.startswith('July') or c.startswith('August') or c.startswith('September') or c.startswith('October') or c.startswith('November') or c.startswith('December'):
-					continue
-				if c in locations:
-					continue
-				if c.find('Conference')>-1:
-					title = c
-					continue
-				ds.append(c)
-			ds[0] = '%s on %s' % (title, ds[0])
-			if len(ds)==2:
-				self.dict['title'] = ['%s of the %s' % (ds[1],ds[0])]
-			else:	
-				self.dict['title'] = [', '.join(ds)]
-			for k in numfixes:
-				self.dict['title'][0] = self.dict['title'][0].replace(k,numfixes[k])
-			# print('Still got:',ds)
+		if self['title'][0] in venuesMap.keys():
+			self.dict['title'] = [venuesMap[self['title'][0]]]
 		# fix series
 		if self['series'] and len(self['series'])==1:
 			if self['series'][0] in ('Lecture Notes in Computer Science','LNCS'):
@@ -266,5 +231,14 @@ if __name__ == '__main__':
 		print('I got', x.key)
 		if x['crossref'] and xs[x['crossref'][0]]:
 			x.updatewith(xs[x['crossref'][0]])
+			unk.append(xs[x['crossref'][0]]['title'][0])
 	xs.writeHTML()
 	print(len(xs),'bib entries processed.')
+	un = []
+	for x in unk:
+		if x not in venuesMap.keys() and x not in venuesMap.values():
+			un.append(x)
+	print(len(un),'unknown venue names.')
+	f = open('venues.lst','w')
+	f.write('\n'.join(un))
+	f.close()
