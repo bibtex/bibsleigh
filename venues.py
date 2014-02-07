@@ -1,3 +1,5 @@
+#!/usr/local/bin/python3
+
 venuesMap = {
 '10th  Working Conference on Reverse Engineering (WCRE 2003), 13-16 November 2003, Victoria, Canada':
 	'Proceedings of the 10th Working Conference on Reverse Engineering',

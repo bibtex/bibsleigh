@@ -1,13 +1,12 @@
 #!/usr/local/bin/python3
 
-from template import bibHTML
+from template import bibHTML, confHTML
 from venues import venuesMap
 from short import contractions
+from supported import supported
 import xml.etree.cElementTree as ET
 
 unk = []
-
-supported = ['SLE','MoDELS','GTTSE','CSMR','WCRE','SAC','POPL']
 
 locations = []
 
@@ -208,7 +207,8 @@ class BibEntry(object):
 		h.write(bibHTML %
 			(self.getTitleTXT(),
 			self.getVenueIcon(),
-			self.getVenueHTML(), # simple yet questionable
+			self.getVenueShort(),
+			self.getVenueShort(),
 			self.getAuthorsHTML(),
 			self.getTitleHTML(),
 			self.getVenueHTML(),
@@ -216,6 +216,11 @@ class BibEntry(object):
 			self.toBIB(),
 			self.contentsHTML()))
 		h.close()
+	def getVenueShort(self):
+		if self['booktitle'] and self['booktitle'][-1] in supported.keys():
+			return supported[self['booktitle'][-1]]
+		else:
+			return self.getVenueHTML()
 	def contentsHTML(self):
 		if not self.linked:
 			return ''
@@ -266,10 +271,10 @@ if __name__ == '__main__':
 	f.close()
 	xs = BibLib()
 	parser = ET.XMLParser(encoding="utf-8")
-	# for event, elem in ET.iterparse('try.xml', events=("end",), parser=parser):
-	for event, elem in ET.iterparse('dblp.xml', events=("end",), parser=parser):
+	# for event, elem in ET.iterparse('dblp.xml', events=("end",), parser=parser):
+	for event, elem in ET.iterparse('try.xml', events=("end",), parser=parser):
 		# If the 'events' option is omitted, only “end” events are returned.
-		if elem.findtext('booktitle') in supported:
+		if elem.findtext('booktitle') in supported.keys():
 			xs += elem
 	for x in xs:
 		print('I got', x.key)
@@ -286,3 +291,15 @@ if __name__ == '__main__':
 	f = open('venues.lst','w')
 	f.write('\n'.join(un))
 	f.close()
+	for ven in supported.keys():
+		f = open('html/%s.html' % ven, 'w')
+		# f.write(ConfHTML % (supported[ven],))
+		f.write(confHTML %
+			(supported[ven],
+			ven.lower(),
+			supported[ven],
+			supported[ven],
+			'%s (%s)' % (supported[ven],ven),
+			''))
+		f.close()
+	print(len(supported),'venues.')
