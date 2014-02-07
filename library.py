@@ -11,6 +11,15 @@ supported = ['SLE','MoDELS','GTTSE','CSMR','WCRE','SAC','POPL']
 
 locations = []
 
+def purenum(a):
+	num = int(''.join([x for x in a if x.isdigit()]))
+	if num < 40:
+		return '20%s' % num
+	elif num < 100:
+		return '19%s' % num
+	else:
+		return str(num)
+
 class BibLib(object):
 	def __init__(self):
 		self.xs = []
@@ -96,10 +105,14 @@ class BibEntry(object):
 		f.close()
 	def getKeyHTML(self):
 		if self['booktitle'] and self['year']:
-			c = self['booktitle'][-1]
-			return self['key'][0].replace(c,'<a href="%s-%s.html">%s</a>' % (c,self['year'][0],c))
-		else:
-			return self['key'][0]
+			es = self['key'][0].split('-')
+			if len(es)==3 and es[2].isdigit() and es[0]==self['booktitle'][-1]:
+				# we are a paper => refer to the corresponding conference edition
+				return '<a href="%s-%s.html">%s</a>-%s-%s' % (es[0],es[2],es[0],es[1],es[2])
+			if len(es)==2 and es[1].isdigit() and es[0]==self['booktitle'][-1]:
+				# we are a conference edition => refer to the series
+				return '<a href="%s.html">%s</a>-%s' % (es[0],es[0],es[1])
+		return self['key'][0]
 	def toBIB(self):
 		s = '@%s{%s,\n' % (self.t, self.getKeyHTML())
 		for k in self.args:
@@ -163,7 +176,8 @@ class BibEntry(object):
 			tmp = tmp[:-2]
 		if tmp:
 			tmp += '-'
-		self['key'] = self['booktitle'][0].upper()+'-'+tmp+self['year'][0]
+		# NB: self['year'] can be incorrect (e.g., SLE used to publish proceedings the year after the event)
+		self['key'] = self['booktitle'][0].upper()+'-'+tmp+purenum(self.key)
 		# fix title for conferences
 		if self['title'][0] in venuesMap.keys():
 			self.dict['title'] = [venuesMap[self['title'][0]]]
@@ -209,7 +223,7 @@ class BibEntry(object):
 		for link in self.linked:
 			if link['pages']:
 				p = int(link['pages'][0].split('-')[0])
-				pp = ', pp. ' + link['pages'][0] 
+				pp = ', pp. ' + link['pages'][0].replace('--','–')
 			else:
 				p = 0
 				pp = ''
@@ -219,7 +233,7 @@ class BibEntry(object):
 		return '<h3>Contents</h3><dl class="toc">'+ ''.join([items[i] for i in sorted(items.keys())]) + '</dl>'
 	def getAuthorsShortHTML(self):
 		if not self['author']:
-			return '&mdash;'
+			return '—'
 		return ', '.join(['<abbr title="%s">%s</abbr>' % (name,''.join([s[0] for s in name.split(' ')])) for name in self['author']])
 	def getAuthorsHTML(self):
 		if self['author']:
