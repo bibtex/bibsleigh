@@ -2,6 +2,7 @@
 
 from template import bibHTML
 from venues import venuesMap
+from short import contractions
 import xml.etree.cElementTree as ET
 
 unk = []
@@ -41,6 +42,7 @@ class BibEntry(object):
 		self.args = []
 		self.t = ''
 		self.key = ''
+		self.linked = []
 	def __getitem__(self,key):
 		if key in self.args:
 			return self.dict[key]
@@ -97,7 +99,7 @@ class BibEntry(object):
 		for k in self.args:
 			if k in ('author', 'editor'):
 				s += '\t%-10s = "%s",\n' % (k,' and '.join(self.dict[k]))
-			elif k in ('title', 'booktitle', 'series'):
+			elif k in ('title', 'booktitle', 'series', 'publisher'):
 				if len(self.dict[k])==1:
 					s += '\t%-10s = "{%s}",\n' % (k,self.dict[k][0])
 				else:
@@ -160,10 +162,11 @@ class BibEntry(object):
 		if self['title'][0] in venuesMap.keys():
 			self.dict['title'] = [venuesMap[self['title'][0]]]
 		# fix series
-		if self['series'] and len(self['series'])==1:
-			if self['series'][0] in ('Lecture Notes in Computer Science','LNCS'):
-				self.dict['series'] = ['Lecture Notes in Computer Science','LNCS']
-			# TODO: extend for ENTCS etc
+		for ctr in ('series','publisher'):
+			if self[ctr] and len(self[ctr])==1:
+				for a in contractions:
+					if self[ctr][0] == a[0]:
+						self.dict[ctr] = a
 	def prioritise(self, arg):
 		if arg in self.args:
 			self.args.remove(arg)
@@ -172,6 +175,7 @@ class BibEntry(object):
 			# print('Warning: no %s defined!' % arg)
 			pass
 	def updatewith(self, xref):
+		xref.linked.append(self.key)
 		print('Updating',self.key,'with',xref.key)
 		for inh in ('editor','publisher','isbn','volume','series'):
 			if xref[inh]:
@@ -189,7 +193,8 @@ class BibEntry(object):
 			self.getTitleHTML(),
 			self.getVenueHTML(),
 			self.getCodeLongShort(),
-			self.toBIB()))
+			self.toBIB(),
+			self.linked))
 		h.close()
 	def getAuthorsHTML(self):
 		if self['author']:
@@ -210,7 +215,7 @@ class BibEntry(object):
 		return '%s, %s' % (self['booktitle'][0], self['year'][0])
 	def getCodeLongShort(self):
 		code = ''
-		for tag in ('title','booktitle','series'):
+		for tag in ('title','booktitle','series','publisher'):
 			if self[tag] and len(self[tag])==2:
 				code += "$('#"+tag+"').text(this.checked?'%s':'%s');" % tuple(self[tag])
 		return code

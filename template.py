@@ -8,7 +8,7 @@ bibHTML = '''<?xml version="1.0" encoding="UTF-8"?>
 	<meta name="keywords" content="software linguistics, software language engineering, book of knowledge, glossary, Russian; иньекция; English; inject"/>
 	<title>SL(E)BOK — bibSLEIGH — %s</title>
 	<link href="../www/bib.css" rel="stylesheet" type="text/css"/>
-	<script src="jquery.min.js"></script>
+	<script src="../www/jquery.min.js"></script>
 </head>
 <body>
 <div class="left">
@@ -28,12 +28,14 @@ bibHTML = '''<?xml version="1.0" encoding="UTF-8"?>
 	%s.
 </h2>
 <div class="pre">
-<form>
-	<input type="checkbox" checked="true" onClick="%s"/> Full names
-	<input type="checkbox" checked="true" onClick="(this.checked)?$('#isbn').show():$('#isbn').hide();"/> ISxN
-</form>
-<pre>%s</pre>
+	<form>
+		<input type="checkbox" checked="true" onClick="%s"/> Full names
+		<input type="checkbox" checked="true" onClick="(this.checked)?$('#isbn').show():$('#isbn').hide();"/> ISxN
+	</form>
+	<pre>%s</pre>
 </div>
+<hr/>
+<p>%s</p>
 <div style="clear:both"/><hr />
 <div class="last">
 	<em>
