@@ -1,6 +1,24 @@
 #!/usr/local/bin/python3
 
+from template import bibHTML
 import xml.etree.cElementTree as ET
+
+locations = []
+
+numfixes = {
+	'1st': 'First',
+	'2nd': 'Second',
+	'3rd': 'Third',
+	'4th': 'Fourth',
+	'5th': 'Fifth',
+	'6th': 'Sixth',
+	'7th': 'Seventh',
+	'8th': 'Eighth',
+	'9th': 'Ninth',
+	'10th': 'Tenth',
+	'Eleventh': '11th',
+	'Twelfth': '12th'
+}
 
 class BibLib(object):
 	def __init__(self):
@@ -59,6 +77,7 @@ class BibEntry(object):
 				self.args.append(e.tag)
 				self.dict[e.tag] = []
 			newval = e.text
+			# newval = ET.tostring(e,encoding="ISO-8859-1")
 			if not e.text:
 				newval = ''
 			# NB: only works on one level of mixed content nesting
@@ -88,7 +107,10 @@ class BibEntry(object):
 			if k in ('author', 'editor'):
 				s += '\t%-10s = "%s",\n' % (k,' and '.join(self.dict[k]))
 			elif k in ('title', 'booktitle'):
-				s += '\t%-10s = "{%s}",\n' % (k,self.dict[k][0])
+				if len(self.dict[k])==1:
+					s += '\t%-10s = "{%s}",\n' % (k,self.dict[k][0])
+				else:
+					s += '\t%-10s = "{%s (%s)}",\n' % (k,self.dict[k][0],self.dict[k][1])
 			elif k in ('ee','crossref','key'):
 				pass
 			elif k == 'doi':
@@ -141,6 +163,32 @@ class BibEntry(object):
 		if tmp:
 			tmp += '-'
 		self['key'] = self['booktitle'][0].upper()+'-'+tmp+self['year'][0]
+		# fix title for conferences
+		if self['title'][0].count(',')>2 and self['title'][0].find('Conference')>0:
+			cs = self['title'][0].split(', ')
+			ds = []
+			title = ''
+			for c in cs:
+				if c.isdigit():
+					continue
+				if self['booktitle'] and c.startswith(self['booktitle'][0]) and c.replace(self['booktitle'][0],'').strip().isdigit():
+					continue
+				if c.startswith('January') or c.startswith('February') or c.startswith('March') or c.startswith('April') or c.startswith('May') or c.startswith('June') or c.startswith('July') or c.startswith('August') or c.startswith('September') or c.startswith('October') or c.startswith('November') or c.startswith('December'):
+					continue
+				if c in locations:
+					continue
+				if c.find('Conference')>-1:
+					title = c
+					continue
+				ds.append(c)
+			ds[0] = '%s on %s' % (title, ds[0])
+			if len(ds)==2:
+				self.dict['title'] = ['%s of the %s' % (ds[1],ds[0])]
+			else:	
+				self.dict['title'] = [', '.join(ds)]
+			for k in numfixes:
+				self.dict['title'][0] = self.dict['title'][0].replace(k,numfixes[k])
+			print('Still got:',ds)
 	def prioritise(self, arg):
 		if arg in self.args:
 			self.args.remove(arg)
@@ -153,44 +201,11 @@ class BibEntry(object):
 		for inh in ('editor','publisher','isbn','volume','series'):
 			for v in xref[inh]:
 				self[inh] = v
+		self.dict['booktitle'] = [xref.dict['title'][0],xref.dict['booktitle'][0]]
 		pass
 	def writeHTML(self,fs):
-		h = open(fs,'w')
-		h.write('''<?xml version="1.0" encoding="UTF-8"?>
-		<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-		<html xmlns="http://www.w3.org/1999/xhtml" xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-		<head>
-			<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-			<meta name="keywords" content="software linguistics, software language engineering, book of knowledge, glossary, Russian; иньекция; English; inject"/>
-			<title>SL(E)BOK — bibSLEIGH — %s</title>
-			<link href="../sleg.css" rel="stylesheet" type="text/css"/>
-		</head>
-		<body>
-		<div class="left">
-			(a link to bibSLEIGH)<br/>
-			<a href="index.html"><img src="../conf/sle.png" alt="Software Language Engineering" class="pad"/></a><br/>
-			(a link to edit)<br/>
-			<a href="http://creativecommons.org/licenses/by-sa/3.0/" title="CC-BY-SA"><img src="../www/cc-by-sa.png" alt="CC-BY-SA"/></a><br/>
-			<a href="http://creativecommons.org/licenses/by-sa/3.0/" title="Open Knowledge"><img src="../www/open-knowledge.png" alt="Open Knowledge" class="pad" /></a><br/>
-			<a href="http://validator.w3.org/check/referer" title="XHTML 1.0 W3C Rec"><img src="../www/xhtml10.png" alt="XHTML 1.0 W3C Rec" /></a><br/>
-			<a href="http://jigsaw.w3.org/css-validator/check/referer" title="CSS 2.1 W3C CanRec"><img src="../www/css21.png" alt="CSS 2.1 W3C CanRec" class="pad" /></a><br/>
-			<div>[<a href="mailto:vadim@grammarware.net">Complain!</a>]</div>
-		</div>
-		<div class="main">
-		<h2>
-			%s<br/>
-			<em>%s</em>.<br/>
-			%s.
-		</h2>
-		<pre>%s</pre>
-		<div style="clear:both"/><hr />
-		<div class="last">
-			<em>
-				<a href="http://github.com/slebok/bibsleigh">Bibliography of Software Language Engineering IGH</a> (BibSLEIGH) is
-				created and maintained by <a href="http://grammarware.net">Dr. Vadim Zaytsev</a>.<br/>
-				Hosted as a part of <a href="http://slebok.github.io/">SLEBOK</a> on <a href="http://www.github.com/">GitHub</a>.
-			</em>
-		</div></body></html>''' %
+		h = open(fs,'w',encoding='utf-8')
+		h.write(bibHTML %
 			(self.getTitleTXT(),
 			self.getAuthorsHTML(),
 			self.getTitleHTML(),
@@ -212,9 +227,14 @@ class BibEntry(object):
 
 
 if __name__ == '__main__':
+	f = open('locations.lst','r')
+	locations = f.read().split('\n')
+	f.close()
 	xs = BibLib()
+	# parser = ET.XMLParser(encoding="ISO-8859-1")
+	parser = ET.XMLParser(encoding="utf-8")
 	# for event, elem in ET.iterparse('dblp.xml', events=("end",)):
-	for event, elem in ET.iterparse('try.xml', events=("end",)):
+	for event, elem in ET.iterparse('try.xml', events=("end",), parser=parser):
 		# If the 'events' option is omitted, only “end” events are returned.
 		if elem.findtext('booktitle')=='SLE':
 			xs += elem
@@ -224,4 +244,3 @@ if __name__ == '__main__':
 		if x['crossref'] and xs[x['crossref'][0]]:
 			x.updatewith(xs[x['crossref'][0]])
 	xs.writeHTML()
-	
