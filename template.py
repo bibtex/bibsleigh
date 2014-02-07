@@ -7,7 +7,7 @@ bibHTML = '''<?xml version="1.0" encoding="UTF-8"?>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 	<meta name="keywords" content="software linguistics, software language engineering, book of knowledge, glossary, Russian; иньекция; English; inject"/>
 	<title>SL(E)BOK — bibSLEIGH — %s</title>
-	<link href="../sleg.css" rel="stylesheet" type="text/css"/>
+	<link href="../www/bib.css" rel="stylesheet" type="text/css"/>
 	<script src="jquery.min.js"></script>
 </head>
 <body>
@@ -27,11 +27,17 @@ bibHTML = '''<?xml version="1.0" encoding="UTF-8"?>
 	<em>%s</em>.<br/>
 	%s.
 </h2>
+<div class="pre">
+<form>
+	<input type="checkbox" checked="true" onClick="%s"/> Full names
+	<input type="checkbox" checked="true" onClick="(this.checked)?$('#isbn').show():$('#isbn').hide();"/> ISxN
+</form>
 <pre>%s</pre>
+</div>
 <div style="clear:both"/><hr />
 <div class="last">
 	<em>
-		<a href="http://github.com/slebok/bibsleigh">Bibliography of Software Language Engineering IGH</a> (BibSLEIGH) is
+		<a href="http://github.com/slebok/bibsleigh">Bibliography of Software Language Engineering in Generated Hypertext</a> (BibSLEIGH) is
 		created and maintained by <a href="http://grammarware.net">Dr. Vadim Zaytsev</a>.<br/>
 		Hosted as a part of <a href="http://slebok.github.io/">SLEBOK</a> on <a href="http://www.github.com/">GitHub</a>.
 	</em>

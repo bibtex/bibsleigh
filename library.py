@@ -106,15 +106,17 @@ class BibEntry(object):
 		for k in self.args:
 			if k in ('author', 'editor'):
 				s += '\t%-10s = "%s",\n' % (k,' and '.join(self.dict[k]))
-			elif k in ('title', 'booktitle'):
+			elif k in ('title', 'booktitle', 'series'):
 				if len(self.dict[k])==1:
 					s += '\t%-10s = "{%s}",\n' % (k,self.dict[k][0])
 				else:
-					s += '\t%-10s = "{%s (%s)}",\n' % (k,self.dict[k][0],self.dict[k][1])
+					s += '\t%-10s = "{<span id="%s">%s</span>}",\n' % (k,k,self.dict[k][0])
 			elif k in ('ee','crossref','key'):
 				pass
 			elif k == 'doi':
 				s += '\t%-10s = "<a href="http://dx.doi.org/%s">%s</a>",\n' % (k,self.dict[k][0],self.dict[k][0])
+			elif k == 'isbn':
+				s += '<span id="isbn">\t%-10s = "%s",\n</span>' % (k,self.dict[k][0])
 			else:
 				s += '\t%-10s = "%s",\n' % (k,self.dict[k][0])
 		s += '}'
@@ -151,7 +153,7 @@ class BibEntry(object):
 		for x in ('editor','year','booktitle','title','author'):
 			self.prioritise(x)
 		# fix url: drop if local
-		if not self['url'][0].startswith('http://'):
+		if self['url'] and not self['url'][0].startswith('http://'):
 			self.args.remove('url')
 			self.dict.pop('url')
 		# fix key:
@@ -188,7 +190,12 @@ class BibEntry(object):
 				self.dict['title'] = [', '.join(ds)]
 			for k in numfixes:
 				self.dict['title'][0] = self.dict['title'][0].replace(k,numfixes[k])
-			print('Still got:',ds)
+			# print('Still got:',ds)
+		# fix series
+		if self['series'] and len(self['series'])==1:
+			if self['series'][0] in ('Lecture Notes in Computer Science','LNCS'):
+				self.dict['series'] = ['Lecture Notes in Computer Science','LNCS']
+			# TODO: extend for ENTCS etc
 	def prioritise(self, arg):
 		if arg in self.args:
 			self.args.remove(arg)
@@ -202,7 +209,7 @@ class BibEntry(object):
 			for v in xref[inh]:
 				self[inh] = v
 		self.dict['booktitle'] = [xref.dict['title'][0],xref.dict['booktitle'][0]]
-		pass
+		self.sanitize()
 	def writeHTML(self,fs):
 		h = open(fs,'w',encoding='utf-8')
 		h.write(bibHTML %
@@ -210,6 +217,7 @@ class BibEntry(object):
 			self.getAuthorsHTML(),
 			self.getTitleHTML(),
 			self.getVenueHTML(),
+			self.getCodeLongShort(),
 			self.toBIB()))
 		h.close()
 	def getAuthorsHTML(self):
@@ -224,6 +232,12 @@ class BibEntry(object):
 		return self['title'][0]
 	def getVenueHTML(self):
 		return '%s, %s' % (self['booktitle'][0], self['year'][0])
+	def getCodeLongShort(self):
+		code = ''
+		for tag in ('title','booktitle','series'):
+			if len(self[tag])==2:
+				code += "$('#"+tag+"').text(this.checked?'%s':'%s');" % tuple(self[tag])
+		return code
 
 
 if __name__ == '__main__':
