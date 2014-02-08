@@ -194,7 +194,145 @@ venuesMap = {
 'The 41st Annual ACM SIGPLAN-SIGACT Symposium on Principles of Programming Languages, POPL \'14, San Diego, CA, USA, January 20-21, 2014':
 	'Proceedings of the 41st Symposium on Principles of Programming Languages',
 'WCRE 2008, Proceedings of the 15th Working Conference on Reverse Engineering, Antwerp, Belgium, October 15-18, 2008':
-	'Proceedings of the 15th Working Conference on Reverse Engineering'
+	'Proceedings of the 15th Working Conference on Reverse Engineering',
+'Conference on Object-Oriented Programming Systems, Languages, and Applications (OOPSLA\'86), Portland, Oregon, Proceedings':
+	'Proceedings of the First Conference on Object-Oriented Programming Systems, Languages, and Applications',
+'Conference on Object-Oriented Programming Systems, Languages, and Applications (OOPSLA\'87), Orlando, Florida, USA, October 4-8, 1987, Proceedings':
+	'Proceedings of the Second Conference on Object-Oriented Programming Systems, Languages, and Applications',
+'Conference on Object-Oriented Programming Systems, Languages, and Applications (OOPSLA\'88), San Diego, California, USA, September 25-30, 1988, Proceedings':
+	'Proceedings of the Third Conference on Object-Oriented Programming Systems, Languages, and Applications',
+'Conference on Object-Oriented Programming Systems, Languages, and Applications (OOPSLA\'91), Sixth Annual Conference, Phoenix, Arizona, USA, October 6-11, 1991, Proceedings':
+	'Proceedings of the Sixth Conference on Object-Oriented Programming Systems, Languages, and Applications',
+'Conference on Object-Oriented Programming Systems, Languages, and Applications (OOPSLA\'92), Seventh Annual Conference, Vancouver, British Columbia, Canada, October 18-22, 1992, Proceedings':
+	'Proceedings of the Seventh Conference on Object-Oriented Programming Systems, Languages, and Applications',
+'Conference on Object-Oriented Programming Systems, Languages, and Applications (OOPSLA), Eighth Annual Conference, Washington, DC, USA, September 26 - October 1, 1993, Proceedings':
+	'Proceedings of the Eighth Conference on Object-Oriented Programming Systems, Languages, and Applications',
+'Conference on Object-Oriented Programming: Systems, Languages, and Applications (OOPSLA\'89), New Orleans, Louisiana, USA, October 1-6, 1989, Proceedings':
+	'Proceedings of the Fourth Conference on Object-Oriented Programming: Systems, Languages, and Applications',
+'OOPSLA\'94, Proceedings of the Ninth Annual Conference on Object-Oriented Programming Systems, Languages, and Applications, Portland, Oregon, USA, October 23-27, 1994':
+	'Proceedings of the Ninth Annual Conference on Object-Oriented Programming Systems, Languages, and Applications',
+'OOPSLA\'95, Proceedings of the Tenth Annual Conference on Object-Oriented Programming Systems, Languages, and Applications, Austin, Texas, USA, October 15-19, 1995':
+	'Proceedings of the Tenth Annual Conference on Object-Oriented Programming Systems, Languages, and Applications',
+'Proceedings of the 1996 ACM SIGPLAN Conference on Object-Oriented Programming Systems, Languages & Applications (OOPSLA \'96), San Jose, California, October 6-10, 1996':
+	'Proceedings of the 11th Conference on Object-Oriented Programming Systems, Languages & Applications',
+'Proceedings of the 1997 ACM SIGPLAN Conference on Object-Oriented Programming Systems, Languages & Applications (OOPSLA \'97), Atlanta, Georgia, October 5-9, 1997':
+	'Proceedings of the 12th Conference on Object-Oriented Programming Systems, Languages & Applications',
+'Proceedings of the 1998 ACM SIGPLAN Conference on Object-Oriented Programming Systems, Languages & Applications (OOPSLA \'98), Vancouver, British Columbia, Canada, October 18-22, 1998':
+	'Proceedings of the 13th Conference on Object-Oriented Programming Systems, Languages & Applications',
+'Proceedings of the 1999 ACM SIGPLAN Conference on Object-Oriented Programming Systems, Languages & Applications (OOPSLA \'99), Denver, Colorado, USA, November 1-5, 1999':
+	'Proceedings of the 14th Conference on Object-Oriented Programming Systems, Languages & Applications',
+'Proceedings of the 19th Annual ACM SIGPLAN Conference on Object-Oriented Programming, Systems, Languages, and Applications, OOPSLA 2004, October 24-28, 2004, Vancouver, BC, Canada':
+	'Proceedings of the 19th Annual Conference on Object-Oriented Programming, Systems, Languages, and Applications',
+'Proceedings of the 2000 ACM SIGPLAN Conference on Object-Oriented Programming Systems, Languages & Applications (OOPSLA 2000), Minneapolis, Minnesota, USA, October 15-19, 2000':
+	'Proceedings of the 15th Conference on Object-Oriented Programming Systems, Languages & Applications',
+'Proceedings of the 2001 ACM SIGPLAN Conference on Object-Oriented Programming Systems, Languages and Applications, OOPSLA 2001, Tampa, Florida, USA, October 14-18, 2001':
+	'Proceedings of the 16th Conference on Object-Oriented Programming Systems, Languages and Applications',
+'Proceedings of the 2002 ACM SIGPLAN Conference on Object-Oriented Programming Systems, Languages and Applications, OOPSLA 2002, Seattle, Washington, USA, November 4-8, 2002':
+	'Proceedings of the 17th Conference on Object-Oriented Programming Systems, Languages and Applications',
+'Proceedings of the 2003 ACM SIGPLAN Conference on Object-Oriented Programming Systems, Languages and Applications, OOPSLA 2003, October 26-30, 2003, Anaheim, CA, USA':
+	'Proceedings of the 18th Conference on Object-Oriented Programming Systems, Languages and Applications',
+'Proceedings of the 2013 ACM SIGPLAN International Conference on Object Oriented Programming Systems Languages & Applications, OOPSLA 2013, part of SPLASH 2013, Indianapolis, IN, USA, October 26-31, 2013':
+	'Proceedings of the 28th International Conference on Object Oriented Programming Systems Languages & Applications',
+'Proceedings of the 20th Annual ACM SIGPLAN Conference on Object-Oriented Programming, Systems, Languages, and Applications, OOPSLA 2005, October 16-20, 2005, San Diego, CA, USA':
+	'Proceedings of the 20th Annual Conference on Object-Oriented Programming, Systems, Languages, and Applications',
+'Proceedings of the 21th Annual ACM SIGPLAN Conference on Object-Oriented Programming, Systems, Languages, and Applications, OOPSLA 2006, October 22-26, 2006, Portland, Oregon, USA':
+	'Proceedings of the 21th Annual Conference on Object-Oriented Programming, Systems, Languages, and Applications',
+'Proceedings of the 22nd Annual ACM SIGPLAN Conference on Object-Oriented Programming, Systems, Languages, and Applications, OOPSLA 2007, October 21-25, 2007, Montreal, Quebec, Canada':
+	'Proceedings of the 22nd Annual Conference on Object-Oriented Programming, Systems, Languages, and Applications',
+'Proceedings of the 23rd Annual ACM SIGPLAN Conference on Object-Oriented Programming, Systems, Languages, and Applications, OOPSLA 2008, October 19-23, 2008, Nashville, TN, USA':
+	'Proceedings of the 23rd Annual Conference on Object-Oriented Programming, Systems, Languages, and Applications',
+'Proceedings of the 24th Annual ACM SIGPLAN Conference on Object-Oriented Programming, Systems, Languages, and Applications, OOPSLA 2009, October 25-29, 2009, Orlando, Florida, USA':
+	'Proceedings of the 24th Annual Conference on Object-Oriented Programming, Systems, Languages, and Applications',
+'Proceedings of the 25th Annual ACM SIGPLAN Conference on Object-Oriented Programming, Systems, Languages, and Applications, OOPSLA 2010, October 17-21, 2010, Reno/Tahoe, Nevada, USA':
+	'Proceedings of the 25th Annual Conference on Object-Oriented Programming, Systems, Languages, and Applications',
+'Proceedings of the 26th Annual ACM SIGPLAN Conference on Object-Oriented Programming, Systems, Languages, and Applications, OOPSLA 2011, part of SPLASH 2011, Portland, OR, USA, October 22 - 27, 2011':
+	'Proceedings of the 26th Annual Conference on Object-Oriented Programming, Systems, Languages, and Applications',
+'Proceedings of the 27th Annual ACM SIGPLAN Conference on Object-Oriented Programming, Systems, Languages, and Applications, OOPSLA 2012, part of SPLASH 2012, Tucson, AZ, USA, October 21-25, 2012':
+	'Proceedings of the 27th Annual Conference on Object-Oriented Programming, Systems, Languages, and Applications',
+'18th International Conference on Software Maintenance (ICSM 2002), Maintaining Distributed Heterogeneous Systems, 3-6 October 2002, Montreal, Quebec, Canada':
+	'Proceedings of the 18th International Conference on Software Maintenance',
+'1996 International Conference on Software Maintenance (ICSM \'96), 4-8 November 1996, Monterey, CA, USA, Proceedings':
+	'Proceedings of the 12th International Conference on Software Maintenance',
+'1997 International Conference on Software Maintenance (ICSM \'97), 1-3 October 1997, Bari, Italy, Proceedings':
+	'Proceedings of the 13th International Conference on Software Maintenance',
+'19th International Conference on Software Maintenance (ICSM 2003), The Architecture of Existing Systems, 22-26 September 2003, Amsterdam, The Netherlands':
+	'Proceedings of the 19th International Conference on Software Maintenance',
+'2013 IEEE International Conference on Software Maintenance, Eindhoven, The Netherlands, September 22-28, 2013':
+	'Proceedings of the 29th International Conference on Software Maintenance',
+'20th International Conference on Software Maintenance (ICSM 2004), 11-17 September 2004, Chicago, IL, USA':
+	'Proceedings of the 20th International Conference on Software Maintenance',
+'21st IEEE International Conference on Software Maintenance (ICSM 2005), 25-30 September 2005, Budapest, Hungary':
+	'Proceedings of the 21st International Conference on Software Maintenance',
+'22nd IEEE International Conference on Software Maintenance (ICSM 2006), 24-27 September 2006, Philadelphia, Pennsylvania, USA':
+	'Proceedings of the 22nd International Conference on Software Maintenance',
+'23rd IEEE International Conference on Software Maintenance (ICSM 2007), October 2-5, 2007, Paris, France':
+	'Proceedings of the 23rd International Conference on Software Maintenance',
+'24th IEEE International Conference on Software Maintenance (ICSM 2008), September 28 - October 4, 2008, Beijing, China':
+	'Proceedings of the 24th International Conference on Software Maintenance',
+'25th IEEE International Conference on Software Maintenance (ICSM 2009), September 20-26, 2009, Edmonton, Alberta, Canada':
+	'Proceedings of the 25th International Conference on Software Maintenance',
+'26th IEEE International Conference on Software Maintenance (ICSM 2010), September 12-18, 2010, Timisoara, Romania':
+	'Proceedings of the 26th International Conference on Software Maintenance',
+'28th IEEE International Conference on Software Maintenance, ICSM 2012, Trento, Italy, September 23-28, 2012':
+	'Proceedings of the 28th International Conference on Software Maintenance',
+'ECOOP \'89: Proceedings of the Third European Conference on Object-Oriented Programming, Nottingham, UK, July 10-14, 1989':
+	'Proceedings of the Third European Conference on Object-Oriented Programming',
+'ECOOP \'92, European Conference on Object-Oriented Programming, Utrecht, The Netherlands, June 29 - July 3, 1992, Proceedings':
+	'Proceedings of the Sixth European Conference on Object-Oriented Programming',
+'ECOOP 2000 - Object-Oriented Programming, 14th European Conference, Sophia Antipolis and Cannes, France, June 12-16, 2000, Proceedings':
+	'Proceedings of the 14th European Conference on Object-Oriented Programming',
+'ECOOP 2001 - Object-Oriented Programming, 15th European Conference, Budapest, Hungary, June 18-22, 2001, Proceedings':
+	'Proceedings of the 15th European Conference on Object-Oriented Programming',
+'ECOOP 2002 - Object-Oriented Programming, 16th European Conference, Malaga, Spain, June 10-14, 2002, Proceedings':
+	'Proceedings of the 16th European Conference on Object-Oriented Programming',
+'ECOOP 2003 - Object-Oriented Programming, 17th European Conference, Darmstadt, Germany, July 21-25, 2003, Proceedings':
+	'Proceedings of the 17th European Conference on Object-Oriented Programming',
+'ECOOP 2004 - Object-Oriented Programming, 18th European Conference, Oslo, Norway, June 14-18, 2004, Proceedings':
+	'Proceedings of the 18th European Conference on Object-Oriented Programming',
+'ECOOP 2005 - Object-Oriented Programming, 19th European Conference, Glasgow, UK, July 25-29, 2005, Proceedings':
+	'Proceedings of the 19th European Conference on Object-Oriented Programming',
+'ECOOP 2006 - Object-Oriented Programming, 20th European Conference, Nantes, France, July 3-7, 2006, Proceedings':
+	'Proceedings of the 20th European Conference on Object-Oriented Programming',
+'ECOOP 2007 - Object-Oriented Programming, 21st European Conference, Berlin, Germany, July 30 - August 3, 2007, Proceedings':
+	'Proceedings of the 21st European Conference on Object-Oriented Programming',
+'ECOOP 2008 - Object-Oriented Programming, 22nd European Conference, Paphos, Cyprus, July 7-11, 2008, Proceedings':
+	'Proceedings of the 22nd European Conference on Object-Oriented Programming',
+'ECOOP 2009 - Object-Oriented Programming, 23rd European Conference, Genoa, Italy, July 6-10, 2009. Proceedings':
+	'Proceedings of the 23rd European Conference on Object-Oriented Programming',
+'ECOOP 2010 - Object-Oriented Programming, 24th European Conference, Maribor, Slovenia, June 21-25, 2010. Proceedings':
+	'Proceedings of the 24th European Conference on Object-Oriented Programming',
+'ECOOP 2011 - Object-Oriented Programming - 25th European Conference, Lancaster, UK, July 25-29, 2011 Proceedings':
+	'Proceedings of the 25th European Conference on Object-Oriented Programming',
+'ECOOP 2012 - Object-Oriented Programming - 26th European Conference, Beijing, China, June 11-16, 2012. Proceedings':
+	'Proceedings of the 26th European Conference on Object-Oriented Programming',
+'ECOOP 2013 - Object-Oriented Programming - 27th European Conference, Montpellier, France, July 1-5, 2013. Proceedings':
+	'Proceedings of the 27th European Conference on Object-Oriented Programming',
+'ECOOP\'87 European Conference on Object-Oriented Programming, Paris, France, June 15-17, 1987, Proceedings':
+	'Proceedings of the First European Conference on Object-Oriented Programming',
+'ECOOP\'88 European Conference on Object-Oriented Programming, Oslo, Norway, August 15-17, 1988, Proceedings':
+	'Proceedings of the Second European Conference on Object-Oriented Programming',
+'ECOOP\'91 European Conference on Object-Oriented Programming, Geneva, Switzerland, July  15-19, 1991, Proceedings':
+	'Proceedings of the Fifth European Conference on Object-Oriented Programming',
+'ECOOP\'93 - Object-Oriented Programming, 7th European Conference, Kaiserslautern, Germany, July 26-30, 1993, Proceedings':
+	'Proceedings of the Seventh European Conference on Object-Oriented Programming',
+'ECOOP\'95 - Object-Oriented Programming, 9th European Conference, Århus, Denmark, August 7-11, 1995, Proceedings':
+	'Proceedings of the Ninth European Conference on Object-Oriented Programming',
+'ECOOP\'96 - Object-Oriented Programming, 10th European Conference, Linz, Austria, July 8-12, 1996, Proceedings':
+	'Proceedings of the Tenth European Conference on Object-Oriented Programming',
+'ECOOP\'98 - Object-Oriented Programming, 12th European Conference, Brussels, Belgium, July 20-24, 1998, Proceedings':
+	'Proceedings of the 12th European Conference on Object-Oriented Programming',
+'ECOOP\'99 - Object-Oriented Programming, 13th European Conference, Lisbon, Portugal, June 14-18, 1999, Proceedings':
+	'Proceedings of the 13th European Conference on Object-Oriented Programming',
+'IEEE 27th International Conference on Software Maintenance, ICSM 2011, Williamsburg, VA, USA, September 25-30, 2011':
+	'Proceedings of the 27th Conference on Software Maintenance',
+'Object-Oriented Programming, Proceedings of the 8th European Conference, ECOOP \'94, Bologna, Italy, July 4-8, 1994':
+	'Proceedings of the Eighth European Conference on Object-Oriented Programming',
+'Proceedings of the Conference on Software Maintenance, ICSM 1993, Montréal, Quebec, Canada, September 1993':
+	'Proceedings of the Ninth Conference on Software Maintenance',
+'Proceedings of the International Conference on Software Maintenance, ICSM 1994, Victoria, BC, Canada, September 1994':
+	'Proceedings of the Tenth International Conference on Software Maintenance',
+'Proceedings of the International Conference on Software Maintenance, ICSM 1995, Opio (Nice), France, October 17-20, 1995':
+	'Proceedings of the 11th International Conference on Software Maintenance'
 }
 
 numfixes = {

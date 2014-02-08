@@ -241,7 +241,7 @@ class BibEntry(object):
 	def getAuthorsShortHTML(self):
 		if not self['author']:
 			return '—'
-		return ', '.join(['<abbr title="%s">%s</abbr>' % (name,''.join([s[0] for s in name.split(' ')])) for name in self['author']])
+		return ', '.join(['<abbr title="%s">%s</abbr>' % (name,''.join([s[0] for s in name.split(' ') if s[0].isalpha()])) for name in self['author']])
 	def getAuthorsHTML(self):
 		if self['author']:
 			return ', '.join(self['author'])
@@ -314,5 +314,5 @@ if __name__ == '__main__':
 			))
 	print(len(supported),'venues.')
 	f = open('html/index.html','w')
-	f.write(uberHTML % '\n'.join(confs))
+	f.write(uberHTML % '\n'.join(sorted(confs)))
 	f.close()
