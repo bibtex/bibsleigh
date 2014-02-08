@@ -37,6 +37,20 @@ class BibLib(object):
 			if x.key == key:
 				return x
 		return None
+	def getConferenceList(self,key):
+		byY = {}
+		for x in self.xs:
+			if x.t == 'proceedings' and x.key.find('conf/%s/' % key.lower())>-1:
+				y = x['year'][0] 
+				if y not in byY.keys():
+					byY[y] = []
+				byY[y].append(x['title'][0])
+		s = ''
+		for y in sorted(byY.keys()):
+			s += '<dt>%s</dt>' % y
+			for x in byY[y]:
+				s += '<dd><a href="%s.html">%s</a> (%s %s)</dd>' % (x['key'],x.getTitleHTML(),x['key'].replace('-',' '))
+		return s
 	def __len__(self):
 		return len(self.xs)
 	def __iter__(self):
@@ -279,7 +293,7 @@ if __name__ == '__main__':
 		if elem.findtext('booktitle') in supported.keys():
 			xs += elem
 	for x in xs:
-		print('I got', x.key)
+		# print('I got', x.key)
 		if x['crossref'] and xs[x['crossref'][0]]:
 			x.updatewith(xs[x['crossref'][0]])
 			unk.append(xs[x['crossref'][0]]['title'][0])
@@ -296,14 +310,13 @@ if __name__ == '__main__':
 	confs = []
 	for ven in supported.keys():
 		f = open('html/%s.html' % ven, 'w')
-		# f.write(ConfHTML % (supported[ven],))
 		f.write(confHTML %
 			(supported[ven],
 			ven.lower(),
 			supported[ven],
 			supported[ven],
 			'%s (%s)' % (supported[ven],ven),
-			''))
+			xs.getConferenceList(ven)))
 		f.close()
 		confs.append('<div class="pic"><a href="%s.html" title="%s"><img src="../conf/%s.png" alt="%s"><br/>%s</a></div>' %
 			(ven,

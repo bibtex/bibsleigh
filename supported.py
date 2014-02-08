@@ -1,5 +1,9 @@
 #!/usr/local/bin/python3
 
+# TODO: WICSA? ECSA? ICPC! ICFP! ICMT! ICGT! PPDP! LOPSTR! ECMFA TOOLS! DSL IFM!
+# TODO: DYLA SQM LDTA! XM MPM MoDEVVa DSM ME?
+# TODO: TCS, SCP, SPE, EMSE, SoSyM, JFP, TSE, TOPLAS, TOSEM
+
 supported = {
 	'CSMR': 'Conference on Software Maintenance and Reengineering',
 	'ECOOP': 'European Conference on Object-Oriented Programming',
