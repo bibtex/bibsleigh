@@ -228,7 +228,7 @@ class BibEntry(object):
 			return ''
 		items = {}
 		for link in self.linked:
-			if link['pages']:
+			if link['pages'] and link['pages'][0].split('-')[0].isdigit():
 				p = int(link['pages'][0].split('-')[0])
 				pp = ', pp. ' + link['pages'][0].replace('--','–')
 			else:

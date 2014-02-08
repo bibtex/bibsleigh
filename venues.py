@@ -332,7 +332,179 @@ venuesMap = {
 'Proceedings of the International Conference on Software Maintenance, ICSM 1994, Victoria, BC, Canada, September 1994':
 	'Proceedings of the Tenth International Conference on Software Maintenance',
 'Proceedings of the International Conference on Software Maintenance, ICSM 1995, Opio (Nice), France, October 17-20, 1995':
-	'Proceedings of the 11th International Conference on Software Maintenance'
+	'Proceedings of the 11th International Conference on Software Maintenance',
+'11th IEEE Working Conference on Source Code Analysis and Manipulation, SCAM 2011, Williamsburg, VA, USA, September 25-26, 2011':
+	'Proceedings of the 11th Working Conference on Source Code Analysis and Manipulation',
+'12th IEEE International Working Conference on Source Code Analysis and Manipulation, SCAM 2012, Riva del Garda, Italy, September 23-24, 2012':
+	'Proceedings of the 12th International Working Conference on Source Code Analysis and Manipulation',
+'13th IEEE International Working Conference on Source Code Analysis and Manipulation, SCAM 2013, Eindhoven, Netherlands, September 22-23, 2013':
+	'Proceedings of the 13th International Working Conference on Source Code Analysis and Manipulation',
+'1st IEEE International Workshop on Source Code Analysis and Manipulation (SCAM 2001), 10 November 2001, Florence, Italy':
+	'Proceedings of the First International Workshop on Source Code Analysis and Manipulation',
+'2nd IEEE International Workshop on Source Code Analysis and Manipulation (SCAM 2002), 1 October 2002, Montreal, Canada':
+	'Proceedings of the Second International Workshop on Source Code Analysis and Manipulation',
+'3rd IEEE International Workshop on Source Code Analysis and Manipulation (SCAM 2003), 26-27 September 2003, Amsterdam, The Netherlands':
+	'Proceedings of the Third International Workshop on Source Code Analysis and Manipulation',
+'4th IEEE International Workshop on Source Code Analysis and Manipulation (SCAM 2004), 15-16 September 2004, Chicago, IL, USA':
+	'Proceedings of the Fourth International Workshop on Source Code Analysis and Manipulation',
+'5th IEEE International Workshop on Source Code Analysis and Manipulation (SCAM 2005), 30 September - 1 October 2005, Budapest, Hungary':
+	'Proceedings of the Fifth International Workshop on Source Code Analysis and Manipulation',
+'Eighth IEEE International Working Conference on Source Code Analysis and Manipulation (SCAM 2008), 28-29 September 2008, Beijing, China':
+	'Proceedings of the Eighth International Working Conference on Source Code Analysis and Manipulation',
+'Ninth IEEE International Working Conference on Source Code Analysis and Manipulation, SCAM 2009, Edmonton, Alberta, Canada, September 20-21, 2009':
+	'Proceedings of the Ninth International Working Conference on Source Code Analysis and Manipulation',
+'Seventh IEEE International Workshop on Source Code Analysis and Manipulation (SCAM 2007), September 30 - October 1, 2007, Paris, France':
+	'Proceedings of the Seventh International Workshop on Source Code Analysis and Manipulation',
+'Sixth IEEE International Workshop on Source Code Analysis and Manipulation (SCAM 2006), 27-29 September 2006, Philadelphia, Pennsylvania, USA':
+	'Proceedings of the Sixth International Workshop on Source Code Analysis and Manipulation',
+'Tenth IEEE International Working Conference on Source Code Analysis and Manipulation, SCAM 2010, Timisoara, Romania, 12-13 September 2010':
+	'Proceedings of the Tenth International Working Conference on Source Code Analysis and Manipulation',
+'23rd International Conference on Rewriting Techniques and Applications (RTA\'12) , RTA 2012, May 28 - June 2, 2012, Nagoya, Japan':
+	'Proceedings of the 23rd International Conference on Rewriting Techniques and Applications',
+'24th International Conference on Rewriting Techniques and Applications, RTA 2013, June 24-26, 2013, Eindhoven, The Netherlands':
+	'Proceedings of the 24th International Conference on Rewriting Techniques and Applications',
+'ESOP \'88, 2nd European Symposium on Programming, Nancy, France, March 21-24, 1988, Proceedings':
+	'Proceedings of the Second European Symposium on Programming',
+'ESOP \'92, 4th European Symposium on Programming, Rennes, France, February 26-28, 1992, Proceedings':
+	'Proceedings of the Fourth European Symposium on Programming',
+'ESOP 86, European Symposium on Programming, Saarbrücken, Federal Republic of Germany, March 17-19, 1986, Proceedings':
+	'Proceedings of the First European Symposium on Programming',
+'ESOP\'90, 3rd European Symposium on Programming, Copenhagen, Denmark, May 15-18, 1990, Proceedings':
+	'Proceedings of the Third European Symposium on Programming',
+'Proceedings of the 21st International Conference on Rewriting Techniques and Applications, RTA 2010, July 11-13, 2010, Edinburgh, Scottland, UK':
+	'Proceedings of the 21st International Conference on Rewriting Techniques and Applications',
+'Proceedings of the 22nd International Conference on Rewriting Techniques and Applications, RTA 2011, May 30 - June 1, 2011, Novi Sad, Serbia':
+	'Proceedings of the 22nd International Conference on Rewriting Techniques and Applications',
+'Programming Languages and Systems - 20th European Symposium on Programming, ESOP 2011, Held as Part of the Joint European Conferences on Theory and Practice of Software, ETAPS 2011, Saarbrücken, Germany, March 26-April 3, 2011. Proceedings':
+	'Proceedings of the 20th European Symposium on Programming',
+'Programming Languages and Systems - 21st European Symposium on Programming, ESOP 2012, Held as Part of the European Joint Conferences on Theory and Practice of Software, ETAPS 2012, Tallinn, Estonia, March 24 - April 1, 2012. Proceedings':
+	'Proceedings of the 21st European Symposium on Programming',
+'Programming Languages and Systems - 22nd European Symposium on Programming, ESOP 2013, Held as Part of the European Joint Conferences on Theory and Practice of Software, ETAPS 2013, Rome, Italy, March 16-24, 2013. Proceedings':
+	'Proceedings of the 22nd European Symposium on Programming',
+'Programming Languages and Systems - ESOP\'94, 5th European Symposium on Programming, Edinburgh, U.K., April 11-13, 1994, Proceedings':
+	'Proceedings of the Fifth European Symposium on Programming',
+'Programming Languages and Systems - ESOP\'96, 6th European Symposium on Programming, Linköping, Sweden, April 22-24, 1996, Proceedings':
+	'Proceedings of the Sixth European Symposium on Programming',
+'Programming Languages and Systems - ESOP\'98, 7th European Symposium on Programming, Held as Part of the European Joint Conferences on the Theory and Practice of Software, ETAPS\'98, Lisbon, Portugal, March 28 - April 4, 1998, Proceedings':
+	'Proceedings of the Seventh European Symposium on Programming',
+'Programming Languages and Systems, 10th European Symposium on Programming, ESOP 2001 Held as Part of the Joint European Conferences on Theory and Practice of Software, ETAPS 2001 Genova, Italy, April 2-6, 2001, Proceedings':
+	'Proceedings of the Tenth European Symposium on Programming',
+'Programming Languages and Systems, 11th European Symposium on Programming, ESOP 2002, held as Part of the Joint European Conference on Theory and Practice of Software, ETAPS 2002, Grenoble, France, April 8-12, 2002, Proceedings':
+	'Proceedings of the 11th European Symposium on Programming',
+'Programming Languages and Systems, 12th European Symposium on Programming, ESOP 2003, Held as Part of the Joint European Conferences on Theory and Practice of Software, ETAPS 2003, Warsaw, Poland, April 7-11, 2003, Proceedings':
+	'Proceedings of the 12th European Symposium on Programming',
+'Programming Languages and Systems, 13th European Symposium on Programming, ESOP 2004, Held as Part of the Joint European Conferences on Theory and Practice of Software, ETAPS 2004, Barcelona, Spain, March 29 - April 2, 2004, Proceedings':
+	'Proceedings of the 13th European Symposium on Programming',
+'Programming Languages and Systems, 14th European Symposium on Programming,ESOP 2005, Held as Part of the Joint European Conferences on Theory and Practice of Software, ETAPS 2005, Edinburgh, UK, April 4-8, 2005, Proceedings':
+	'Proceedings of the 14th European Symposium on Programming',
+'Programming Languages and Systems, 15th European Symposium on Programming, ESOP 2006, Held as Part of the Joint European Conferences on Theory and Practice of Software, ETAPS 2006, Vienna, Austria, March 27-28, 2006, Proceedings':
+	'Proceedings of the 15th European Symposium on Programming',
+'Programming Languages and Systems, 16th European Symposium on Programming, ESOP 2007, Held as Part of the Joint European Conferences on Theory and Practics of Software, ETAPS 2007, Braga, Portugal, March 24 - April 1, 2007, Proceedings':
+	'Proceedings of the 16th European Symposium on Programming',
+'Programming Languages and Systems, 17th European Symposium on Programming, ESOP 2008, Held as Part of the Joint European Conferences on Theory and Practice of Software, ETAPS 2008, Budapest, Hungary, March 29-April 6, 2008. Proceedings':
+	'Proceedings of the 17th European Symposium on Programming',
+'Programming Languages and Systems, 18th European Symposium on Programming, ESOP 2009, Held as Part of the Joint European Conferences on Theory and Practice of Software, ETAPS 2009, York, UK, March 22-29, 2009. Proceedings':
+	'Proceedings of the 18th European Symposium on Programming',
+'Programming Languages and Systems, 19th European Symposium on Programming, ESOP 2010, Held as Part of the Joint European Conferences on Theory and Practice of Software, ETAPS 2010, Paphos, Cyprus, March 20-28, 2010. Proceedings':
+	'Proceedings of the 19th European Symposium on Programming',
+'Programming Languages and Systems, 8th European Symposium on Programming, ESOP\'99, Held as Part of the European Joint Conferences on the Theory and Practice of Software, ETAPS\'99, Amsterdam, The Netherlands, 22-28 March, 1999, Proceedings':
+	'Proceedings of the Eighth European Symposium on Programming',
+'Programming Languages and Systems, 9th European Symposium on Programming, ESOP 2000, Held as Part of the European Joint Conferences on the Theory and Practice of Software, ETAPS 2000, Berlin, Germany, March 25 - April 2, 2000, Proceedings':
+	'Proceedings of the Ninth European Symposium on Programming',
+'Rewriting Techniques and Applications, 10th International Conference, RTA-99, Trento, Italy, July 2-4, 1999, Proceedings':
+	'Proceedings of the 10th International Conference on Rewriting Techniques and Applications',
+'Rewriting Techniques and Applications, 11th International Conference, RTA 2000, Norwich, UK, July 10-12, 2000, Proceedings':
+	'Proceedings of the 11th International Conference on Rewriting Techniques and Applications',
+'Rewriting Techniques and Applications, 12th International Conference, RTA 2001, Utrecht, The Netherlands, May 22-24, 2001, Proceedings':
+	'Proceedings of the 12th International Conference on Rewriting Techniques and Applications',
+'Rewriting Techniques and Applications, 13th International Conference, RTA 2002, Copenhagen, Denmark, July 22-24, 2002, Proceedings':
+	'Proceedings of the 13th International Conference on Rewriting Techniques and Applications',
+'Rewriting Techniques and Applications, 14th International Conference, RTA 2003, Valencia, Spain, June 9-11, 2003, Proceedings':
+	'Proceedings of the 14th International Conference on Rewriting Techniques and Applications',
+'Rewriting Techniques and Applications, 15th International Conference, RTA 2004, Aachen, Germany, June 3-5, 2004, Proceedings':
+	'Proceedings of the 15th International Conference on Rewriting Techniques and Applications',
+'Rewriting Techniques and Applications, 19th International Conference, RTA 2008, Hagenberg, Austria, July 15-17, 2008, Proceedings':
+	'Proceedings of the 19th International Conference on Rewriting Techniques and Applications',
+'Rewriting Techniques and Applications, 20th International Conference, RTA 2009, Brasília, Brazil, June 29 - July 1, 2009, Proceedings':
+	'Proceedings of the 20th International Conference on Rewriting Techniques and Applications',
+'Rewriting Techniques and Applications, 2nd International Conference, RTA-87, Bordeaux, France, May 25-27, 1987, Proceedings':
+	'Proceedings of the Second International Conference on Rewriting Techniques and Applications',
+'Rewriting Techniques and Applications, 3rd International Conference, RTA-89, Chapel Hill, North Carolina, USA, April 3-5, 1989, Proceedings':
+	'Proceedings of the Third International Conference on Rewriting Techniques and Applications',
+'Rewriting Techniques and Applications, 4th International Conference, RTA-91, Como, Italy, April 10-12, 1991, Proceedings':
+	'Proceedings of the Fourth International Conference on Rewriting Techniques and Applications',
+'Rewriting Techniques and Applications, 5th International Conference, RTA-93, Montreal, Canada, June  16-18, 1993, Proceedings':
+	'Proceedings of the Fifth International Conference on Rewriting Techniques and Applications',
+'Rewriting Techniques and Applications, 6th International Conference, RTA-95, Kaiserslautern, Germany, April 5-7, 1995, Proceedings':
+	'Proceedings of the Sixth International Conference on Rewriting Techniques and Applications',
+'Rewriting Techniques and Applications, 7th International Conference, RTA-96, New Brunswick, NJ, USA, July 27-30, 1996, Proceedings':
+	'Proceedings of the Seventh International Conference on Rewriting Techniques and Applications',
+'Rewriting Techniques and Applications, 8th International Conference, RTA-97, Sitges, Spain, June 2-5, 1997, Proceedings':
+	'Proceedings of the Eighth International Conference on Rewriting Techniques and Applications',
+'Rewriting Techniques and Applications, 9th International Conference, RTA-98, Tsukuba, Japan, March 30 - April 1, 1998, Proceedings':
+	'Proceedings of the Ninth International Conference on Rewriting Techniques and Applications',
+'Rewriting Techniques and Applications, First International Conference, RTA-85, Dijon, France, May 20-22, 1985, Proceedings':
+	'Proceedings of the First International Conference on Rewriting Techniques and Applications',
+'Term Rewriting and Applications, 16th International Conference, RTA 2005, Nara, Japan, April 19-21, 2005, Proceedings':
+	'Proceedings of the 16th International Conference on Term Rewriting and Applications',
+'Term Rewriting and Applications, 17th International Conference, RTA 2006, Seattle, WA, USA, August 12-14, 2006, Proceedings':
+	'Proceedings of the 17th International Conference on Term Rewriting and Applications',
+'Term Rewriting and Applications, 18th International Conference, RTA 2007, Paris, France, June 26-28, 2007, Proceedings':
+	'Proceedings of the 18th International Conference on Term Rewriting and Applications',
+'ACM SIGPLAN Conference on Programming Language Design and Implementation, PLDI \'12, Beijing, China - June 11 - 16, 2012':
+	'Proceedings of the 33rd Conference on Programming Language Design and Implementation',
+'ACM SIGPLAN Conference on Programming Language Design and Implementation, PLDI \'13, Seattle, WA, USA, June 16-19, 2013':
+	'Proceedings of the 34th Conference on Programming Language Design and Implementation',
+'Proceedings of the 1999 ACM SIGPLAN Conference on Programming Language Design and Implementation (PLDI), Atlanta, Georgia, USA, May 1-4, 1999':
+	'Proceedings of the 20th Conference on Programming Language Design and Implementation',
+'Proceedings of the 2000 ACM SIGPLAN Conference on Programming Language Design and Implementation (PLDI), Vancouver, Britith Columbia, Canada, June 18-21, 2000':
+	'Proceedings of the 21st Conference on Programming Language Design and Implementation',
+'Proceedings of the 2001 ACM SIGPLAN Conference on Programming Language Design and Implementation (PLDI), Snowbird, Utah, USA, June 20-22, 2001':
+	'Proceedings of the 22nd Conference on Programming Language Design and Implementation',
+'Proceedings of the 2002 ACM SIGPLAN Conference on Programming Language Design and Implementation (PLDI), Berlin, Germany, June 17-19, 2002':
+	'Proceedings of the 23rd Conference on Programming Language Design and Implementation',
+'Proceedings of the 2009 ACM SIGPLAN Conference on Programming Language Design and Implementation, PLDI 2009, Dublin, Ireland, June 15-21, 2009':
+	'Proceedings of the 30th Conference on Programming Language Design and Implementation',
+'Proceedings of the 2010 ACM SIGPLAN Conference on Programming Language Design and Implementation, PLDI 2010, Toronto, Ontario, Canada, June 5-10, 2010':
+	'Proceedings of the 31st Conference on Programming Language Design and Implementation',
+'Proceedings of the 32nd ACM SIGPLAN Conference on Programming Language Design and Implementation, PLDI 2011, San Jose, CA, USA, June 4-8, 2011':
+	'Proceedings of the 32nd Conference on Programming Language Design and Implementation',
+'Proceedings of the ACM SIGPLAN \'97 Conference on Programming Language Design and Implementation (PLDI), Las Vegas, Nevada, June 15-18, 1997':
+	'Proceedings of the 18th Conference on Programming Language Design and Implementation',
+'Proceedings of the ACM SIGPLAN \'98 Conference on Programming Language Design and Implementation (PLDI), Montreal, Canada, June 17-19, 1998':
+	'Proceedings of the 19th Conference on Programming Language Design and Implementation',
+'Proceedings of the ACM SIGPLAN 2003 Conference on Programming Language Design and Implementation 2003, San Diego, California, USA, June 9-11, 2003':
+	'Proceedings of the 24th Conference on Programming Language Design and Implementation',
+'Proceedings of the ACM SIGPLAN 2004 Conference on Programming Language Design and Implementation 2004, Washington, DC, USA, June 9-11, 2004':
+	'Proceedings of the 25th Conference on Programming Language Design and Implementation',
+'Proceedings of the ACM SIGPLAN 2005 Conference on Programming Language Design and Implementation, Chicago, IL, USA, June 12-15, 2005':
+	'Proceedings of the 26th Conference on Programming Language Design and Implementation',
+'Proceedings of the ACM SIGPLAN 2006 Conference on Programming Language Design and Implementation, Ottawa, Ontario, Canada, June 11-14, 2006':
+	'Proceedings of the 27th Conference on Programming Language Design and Implementation',
+'Proceedings of the ACM SIGPLAN 2007 Conference on Programming Language Design and Implementation, San Diego, California, USA, June 10-13, 2007':
+	'Proceedings of the 28th Conference on Programming Language Design and Implementation',
+'Proceedings of the ACM SIGPLAN 2008 Conference on Programming Language Design and Implementation, Tucson, AZ, USA, June 7-13, 2008':
+	'Proceedings of the 29th Conference on Programming Language Design and Implementation',
+'Proceedings of the ACM SIGPLAN\'88 Conference on Programming Language Design and Implementation (PLDI), Atlanta, Georgia, USA, June 22-24, 1988':
+	'Proceedings of the Ninth Conference on Programming Language Design and Implementation',
+'Proceedings of the ACM SIGPLAN\'89 Conference on Programming Language Design and Implementation (PLDI), Portland, Oregon, USA, June 21-23, 1989':
+	'Proceedings of the Tenth Conference on Programming Language Design and Implementation',
+'Proceedings of the ACM SIGPLAN\'90 Conference on Programming Language Design and Implementation (PLDI), White Plains, New York, USA, June 20-22, 1990':
+	'Proceedings of the 11th Conference on Programming Language Design and Implementation',
+'Proceedings of the ACM SIGPLAN\'91 Conference on Programming Language Design and Implementation (PLDI), Toronto, Ontario, Canada, June 26-28, 1991':
+	'Proceedings of the 12th Conference on Programming Language Design and Implementation',
+'Proceedings of the ACM SIGPLAN\'92 Conference on Programming Language Design and Implementation (PLDI), San Francisco, California, USA, June 17-19, 1992':
+	'Proceedings of the 13th Conference on Programming Language Design and Implementation',
+'Proceedings of the ACM SIGPLAN\'93 Conference on Programming Language Design and Implementation (PLDI), Albuquerque, New Mexico, USA, June 23-25, 1993':
+	'Proceedings of the 14th Conference on Programming Language Design and Implementation',
+'Proceedings of the ACM SIGPLAN\'94 Conference on Programming Language Design and Implementation (PLDI), Orlando, Florida, USA, June 20-24, 1994':
+	'Proceedings of the 15th Conference on Programming Language Design and Implementation',
+'Proceedings of the ACM SIGPLAN\'95 Conference on Programming Language Design and Implementation (PLDI), La Jolla, California, USA, June 18-21, 1995':
+	'Proceedings of the 16th Conference on Programming Language Design and Implementation',
+'Proceedings of the ACM SIGPLAN\'96 Conference on Programming Language Design and Implementation (PLDI), Philadephia, Pennsylvania, May 21-24, 1996':
+	'Proceedings of the 17th Conference on Programming Language Design and Implementation',
+'Proceedings of the Symposium on Interpreters and Interpretive Techniques, 1987, St. Paul, Minnesota, USA, June 24 - 26, 1987':
+	'Proceedings of the Eighth Symposium on Interpreters and Interpretive Techniques'
 }
 
 numfixes = {
