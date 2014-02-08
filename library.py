@@ -1,6 +1,6 @@
 #!/usr/local/bin/python3
 
-from template import bibHTML, confHTML
+from template import bibHTML, confHTML, uberHTML
 from venues import venuesMap
 from short import contractions
 from supported import supported
@@ -12,7 +12,9 @@ locations = []
 
 def purenum(a):
 	num = int(''.join([x for x in a if x.isdigit()]))
-	if num < 40:
+	if num < 10:
+		return '200%s' % num
+	elif num < 40:
 		return '20%s' % num
 	elif num < 100:
 		return '19%s' % num
@@ -235,7 +237,7 @@ class BibEntry(object):
 				while p in items.keys():
 					p -= 1
 			items[p] = '<dt><a href="%s.html">%s</a></dt><dd>%s (%s)%s.</dd>' % (link['key'][0], link['key'][0], link.getTitleHTML(), link.getAuthorsShortHTML(), pp)
-		return '<h3>Contents</h3><dl class="toc">'+ ''.join([items[i] for i in sorted(items.keys())]) + '</dl>'
+		return ('<h3>Contents (%s items)</h3><dl class="toc">' % len(items))+ ''.join([items[i] for i in sorted(items.keys())]) + '</dl>'
 	def getAuthorsShortHTML(self):
 		if not self['author']:
 			return '—'
@@ -271,8 +273,8 @@ if __name__ == '__main__':
 	f.close()
 	xs = BibLib()
 	parser = ET.XMLParser(encoding="utf-8")
-	# for event, elem in ET.iterparse('dblp.xml', events=("end",), parser=parser):
-	for event, elem in ET.iterparse('try.xml', events=("end",), parser=parser):
+	# for event, elem in ET.iterparse('try.xml', events=("end",), parser=parser):
+	for event, elem in ET.iterparse('dblp.xml', events=("end",), parser=parser):
 		# If the 'events' option is omitted, only “end” events are returned.
 		if elem.findtext('booktitle') in supported.keys():
 			xs += elem
@@ -291,6 +293,7 @@ if __name__ == '__main__':
 	f = open('venues.lst','w')
 	f.write('\n'.join(un))
 	f.close()
+	confs = []
 	for ven in supported.keys():
 		f = open('html/%s.html' % ven, 'w')
 		# f.write(ConfHTML % (supported[ven],))
@@ -302,4 +305,14 @@ if __name__ == '__main__':
 			'%s (%s)' % (supported[ven],ven),
 			''))
 		f.close()
+		confs.append('<div class="pic"><a href="%s.html" title="%s"><img src="../conf/%s.png" alt="%s"><br/>%s</a></div>' %
+			(ven,
+			supported[ven],
+			ven.lower(),
+			supported[ven],
+			ven
+			))
 	print(len(supported),'venues.')
+	f = open('html/index.html','w')
+	f.write(uberHTML % '\n'.join(confs))
+	f.close()
