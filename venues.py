@@ -504,7 +504,83 @@ venuesMap = {
 'Proceedings of the ACM SIGPLAN\'96 Conference on Programming Language Design and Implementation (PLDI), Philadephia, Pennsylvania, May 21-24, 1996':
 	'Proceedings of the 17th Conference on Programming Language Design and Implementation',
 'Proceedings of the Symposium on Interpreters and Interpretive Techniques, 1987, St. Paul, Minnesota, USA, June 24 - 26, 1987':
-	'Proceedings of the Eighth Symposium on Interpreters and Interpretive Techniques'
+	'Proceedings of the Eighth Symposium on Interpreters and Interpretive Techniques',
+'17th International Conference on Software Engineering, Seattle, Washington, USA, April 23-30, 1995, Proceedings':
+	'Proceedings of the 17th International Conference on Software Engineering',
+'18th International Conference on Software Engineering, Berlin, Germany, March 25-29, 1996, Proceedings':
+	'Proceedings of the 18th International Conference on Software Engineering',
+'26th International Conference on Software Engineering (ICSE 2004), 23-28 May 2004, Edinburgh, United Kingdom':
+	'Proceedings of the 26th International Conference on Software Engineering',
+'27th International Conference on Software Engineering (ICSE 2005), 15-21 May 2005, St. Louis, Missouri, USA':
+	'Proceedings of the 27th International Conference on Software Engineering',
+'28th International Conference on Software Engineering (ICSE 2006), Shanghai, China, May 20-28, 2006':
+	'Proceedings of the 28th International Conference on Software Engineering',
+'29th International Conference on Software Engineering (ICSE 2007), Minneapolis, MN, USA, May 20-26, 2007':
+	'Proceedings of the 29th International Conference on Software Engineering',
+'30th International Conference on Software Engineering (ICSE 2008), Leipzig, Germany, May 10-18, 2008':
+	'Proceedings of the 30th International Conference on Software Engineering',
+'31st International Conference on Software Engineering, ICSE 2009, May 16-24, 2009, Vancouver, Canada, Proceedings':
+	'Proceedings of the 31st International Conference on Software Engineering',
+'34th International Conference on Software Engineering, ICSE 2012, June 2-9, 2012, Zurich, Switzerland':
+	'Proceedings of the 34th International Conference on Software Engineering',
+'35th International Conference on Software Engineering, ICSE \'13, San Francisco, CA, USA, May 18-26, 2013':
+	'Proceedings of the 35th International Conference on Software Engineering',
+'Forging New Links, Proceedings of the 1998 International Conference on Software Engineering, ICSE 98, Kyoto, Japan, April 19-25, 1998':
+	'Proceedings of the 20th International Conference on Software Engineering',
+'Proceedings of the 11th International Conference on Software Engineering, Pittsburg, PA, USA, May 15-18, 1989':
+	'Proceedings of the 11th International Conference on Software Engineering',
+'Proceedings of the 12th International Conference on Software Engineering, Nice, France, March 26-30, 1990':
+	'Proceedings of the 12th International Conference on Software Engineering',
+'Proceedings of the 13th International Conference on Software Engineering, Austin, TX, USA, May 13-17, 1991':
+	'Proceedings of the 13th International Conference on Software Engineering',
+'Proceedings of the 14th International Conference on Software Engineering, Melbourne, Australia, May 11-15, 1992':
+	'Proceedings of the 14th International Conference on Software Engineering',
+'Proceedings of the 15th International Conference on Software Engineering, Baltimore, Maryland, USA, May 17-21, 1993':
+	'Proceedings of the 15th International Conference on Software Engineering',
+'Proceedings of the 16th International Conference on Software Engineering, Sorrento, Italy, May 16-21, 1994':
+	'Proceedings of the 16th International Conference on Software Engineering',
+'Proceedings of the 1999 International Conference on Software Engineering, ICSE\' 99, Los Angeles, CA, USA, May 16-22, 1999':
+	'Proceedings of the 21st International Conference on Software Engineering',
+'Proceedings of the 22nd International Conference on on Software Engineering, ICSE 2000, Limerick Ireland, June 4-11, 2000':
+	'Proceedings of the 22nd International Conference on on Software Engineering',
+'Proceedings of the 22rd International Conference on Software Engineering, ICSE 2002, 19-25 May 2002, Orlando, Florida, USA':
+	'Proceedings of the 22rd International Conference on Software Engineering',
+'Proceedings of the 23rd International Conference on Software Engineering, ICSE 2001, 12-19 May 2001, Toronto, Ontario, Canada':
+	'Proceedings of the 23rd International Conference on Software Engineering',
+'Proceedings of the 25th International Conference on Software Engineering, May 3-10, 2003, Portland, Oregon, USA':
+	'Proceedings of the 25th International Conference on Software Engineering',
+'Proceedings of the 2nd International Conference on Software Engineering, San Francisco, California, USA, October 13-15, 1976':
+	'Proceedings of the Second International Conference on Software Engineering',
+'Proceedings of the 33rd International Conference on Software Engineering, ICSE 2011, Waikiki, Honolulu , HI, USA, May 21-28, 2011':
+	'Proceedings of the 33rd International Conference on Software Engineering',
+'Proceedings of the 3rd International Conference on Software Engineering, Atlanta, Georgia, USA, May 10-12, 1978':
+	'Proceedings of the Third International Conference on Software Engineering',
+'Proceedings of the 4th International Conference on Software Engineering, Munich, Germany, September 1979':
+	'Proceedings of the Fourth International Conference on Software Engineering',
+'Proceedings of the 5th International Conference on Software Engineering, San Diego, California, USA, March 9-12, 1981':
+	'Proceedings of the Fifth International Conference on Software Engineering',
+'Proceedings, 10th International Conference on Software Engineering, Singapore, Singapore, April 11-15, 1988':
+	'Proceedings of the 10th International Conference on Software Engineering',
+'Proceedings, 6th International Conference on Software Engineering, Tokyo, Japan, September 13-16, 1982':
+	'Proceedings of the Sixth International Conference on Software Engineering',
+'Proceedings, 7th International Conference on Software Engineering, Orlando, Florida, USA, March 26-29, 1984':
+	'Proceedings of the Seventh International Conference on Software Engineering',
+'Proceedings, 8th International Conference on Software Engineering, London, UK, August 28-30, 1985':
+	'Proceedings of the Eighth International Conference on Software Engineering',
+'Proceedings, 9th International Conference on Software Engineering, Monterey, California, USA, March 30 - April 2, 1987':
+	'Proceedings of the Ninth International Conference on Software Engineering',
+'Pulling Together, Proceedings of the 19th International Conference on Software Engineering, Boston, Massachusetts, USA, May 17-23, 1997':
+	'Proceedings of the 19th International Conference on Software Engineering',
+'5th European Software Engineering Conference, Sitges, Spain, September 25-28, 1995, Proceedings':
+	'Proceedings of the Fifth European Software Engineering Conference',
+'ESEC \'87, 1st European Software Engineering Conference, Strasbourg, France, September 9-11, 1987, Proceedings':
+	'Proceedings of the First European Software Engineering Conference',
+'ESEC \'89, 2nd European Software Engineering Conference, University of Warwick, Coventry, UK, September 11-15, 1989, Proceedings':
+	'Proceedings of the Second European Software Engineering Conference',
+'ESEC \'91, 3rd European Software Engineering Conference, Milan, Italy, October 21-24, 1991, Proceedings':
+	'Proceedings of the Third European Software Engineering Conference',
+'Software Engineering - ESEC \'93, 4th European Software Engineering Conference, Garmisch-Partenkirchen, Germany, September 13-17, 1993, Proceedings':
+	'Proceedings of the Fourth European Software Engineering Conference',
 }
 
 numfixes = {

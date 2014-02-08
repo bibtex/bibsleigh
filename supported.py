@@ -15,5 +15,8 @@ supported = {
 	'SCAM': 'Source Code Analysis and Manipulation',
 	'SLE': 'Software Language Engineering',
 	'WCRE': 'Working Conference on Reverse Engineering',
+	'ICSE': 'International Conference on Software Engineering',
+	'ESEC': 'European Software Engineering Conference',
+	# 'FSE': 'Foundations of Software Engineering',
 }
 
