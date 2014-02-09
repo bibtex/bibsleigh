@@ -1,6 +1,6 @@
 #!/usr/local/bin/python3
 
-bibHTML = '''<?xml version="1.0" encoding="UTF-8"?>
+header = '''<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
@@ -11,7 +11,22 @@ bibHTML = '''<?xml version="1.0" encoding="UTF-8"?>
 	<script src="../www/jquery.min.js"></script>
 </head>
 <body>
-<div class="left">
+<div class="left">'''
+
+footer = '''
+<div style="clear:both"/><hr />
+<div class="last">
+	<em>
+		<a href="http://slebok.github.io/bibsleigh">Bibliography of Software Language Engineering in Generated Hypertext</a>
+		(<a href="http://github.com/slebok/bibsleigh">BibSLEIGH</a>) is
+		created and maintained by <a href="http://grammarware.net">Dr. Vadim Zaytsev</a>.<br/>
+		Hosted as a part of <a href="http://slebok.github.io/">SLEBOK</a> on <a href="http://www.github.com/">GitHub</a>.
+	</em>
+</div>
+</body>
+</html>'''
+
+bibHTML = header+'''
 	<!-- (a link to bibSLEIGH)<br/> -->
 	<a href="index.html"><img src="../conf/%s.png" alt="%s" title="%s" class="pad"/></a><br/>
 	<!-- (a link to edit)<br/> -->
@@ -36,29 +51,9 @@ bibHTML = '''<?xml version="1.0" encoding="UTF-8"?>
 </div>
 <hr/>
 %s
-<div style="clear:both"/><hr />
-<div class="last">
-	<em>
-		<a href="http://github.com/slebok/bibsleigh">Bibliography of Software Language Engineering in Generated Hypertext</a> (BibSLEIGH) is
-		created and maintained by <a href="http://grammarware.net">Dr. Vadim Zaytsev</a>.<br/>
-		Hosted as a part of <a href="http://slebok.github.io/">SLEBOK</a> on <a href="http://www.github.com/">GitHub</a>.
-	</em>
-</div>
-</body>
-</html>'''
+'''+footer
 
-confHTML = '''<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-	<meta name="keywords" content="software linguistics, software language engineering, book of knowledge, glossary, Russian; иньекция; English; inject"/>
-	<title>SLEBoK — bibSLEIGH — %s</title>
-	<link href="../www/bib.css" rel="stylesheet" type="text/css"/>
-	<script src="../www/jquery.min.js"></script>
-</head>
-<body>
-<div class="left">
+confHTML = header+'''
 	<!-- (a link to bibSLEIGH)<br/> -->
 	<a href="index.html"><img src="../conf/%s.png" alt="%s" title="%s" class="pad"/></a><br/>
 	<!-- (a link to edit)<br/> -->
@@ -72,29 +67,9 @@ confHTML = '''<?xml version="1.0" encoding="UTF-8"?>
 <h2>%s</h2>
 <h3>Editions:</h3>
 <dl>%s</dl>
-<div style="clear:both"/><hr />
-<div class="last">
-	<em>
-		<a href="http://github.com/slebok/bibsleigh">Bibliography of Software Language Engineering in Generated Hypertext</a> (BibSLEIGH) is
-		created and maintained by <a href="http://grammarware.net">Dr. Vadim Zaytsev</a>.<br/>
-		Hosted as a part of <a href="http://slebok.github.io/">SLEBOK</a> on <a href="http://www.github.com/">GitHub</a>.
-	</em>
-</div>
-</body>
-</html>'''
+'''+footer
 
-uberHTML = '''<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-	<meta name="keywords" content="software linguistics, software language engineering, book of knowledge, glossary, Russian; иньекция; English; inject"/>
-	<title>SLEBoK — BibSLEIGH</title>
-	<link href="../www/bib.css" rel="stylesheet" type="text/css"/>
-	<script src="../www/jquery.min.js"></script>
-</head>
-<body>
-<div class="left">
+uberHTML = (header % 'Bibliography of Software Language Engineering in Generated Hypertext')+'''
 	<a href="index.html"><img src="../www/bibsleigh.png" alt="BibSLEIGH" title="BibSLEIGH" class="pad"/></a><br/>
 	<a href="http://creativecommons.org/licenses/by-sa/3.0/" title="CC-BY-SA"><img src="../www/cc-by-sa.png" alt="CC-BY-SA"/></a><br/>
 	<a href="http://creativecommons.org/licenses/by-sa/3.0/" title="Open Knowledge"><img src="../www/open-knowledge.png" alt="Open Knowledge" class="pad" /></a><br/>
@@ -106,13 +81,4 @@ uberHTML = '''<?xml version="1.0" encoding="UTF-8"?>
 <h2>Bibliography of Software Language Engineering in Generated Hypertext (BibSLEIGH)</h2>
 <p>Description TBD</p>
 %s
-<div style="clear:both"/><hr />
-<div class="last">
-	<em>
-		<a href="http://github.com/slebok/bibsleigh">Bibliography of Software Language Engineering in Generated Hypertext</a> (BibSLEIGH) is
-		created and maintained by <a href="http://grammarware.net">Dr. Vadim Zaytsev</a>.<br/>
-		Hosted as a part of <a href="http://slebok.github.io/">SLEBOK</a> on <a href="http://www.github.com/">GitHub</a>.
-	</em>
-</div>
-</body>
-</html>'''
+'''+footer

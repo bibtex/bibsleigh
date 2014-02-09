@@ -44,12 +44,12 @@ class BibLib(object):
 				y = x['year'][0] 
 				if y not in byY.keys():
 					byY[y] = []
-				byY[y].append(x['title'][0])
+				byY[y].append(x)#['title'][0])
 		s = ''
 		for y in sorted(byY.keys()):
 			s += '<dt>%s</dt>' % y
 			for x in byY[y]:
-				s += '<dd><a href="%s.html">%s</a> (%s %s)</dd>' % (x['key'],x.getTitleHTML(),x['key'].replace('-',' '))
+				s += '<dd><a href="%s.html">%s</a> (%s)</dd>' % (x['key'][0],x.getTitleHTML(),x['key'][0].replace('-',' '))
 		return s
 	def __len__(self):
 		return len(self.xs)

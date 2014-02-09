@@ -68,7 +68,7 @@ venuesMap = {
 'Conference Record of POPL\'97: The 24th ACM SIGPLAN-SIGACT Symposium on Principles of Programming Languages, Papers Presented at the Symposium, Paris, France, 15-17 January 1997':
 	'Conference Record of the 24th Symposium on Principles of Programming Languages',
 'Conference Record of the ACM Symposium on Principles of Programming Languages, Boston, Massachusetts, USA, October 1973':
-	'Conference Record of the Symposium on Principles of Programming Languages',
+	'Conference Record of the First Symposium on Principles of Programming Languages',
 'Conference Record of the Eighteenth Annual ACM Symposium on Principles of Programming Languages, Orlando, Florida, USA, January 21-23, 1991':
 	'Conference Record of the 18th Annual Symposium on Principles of Programming Languages',
 'Conference Record of the Eighth Annual ACM Symposium on Principles of Programming Languages, Williamsburg, Virginia, USA, January 1981':
@@ -542,7 +542,7 @@ venuesMap = {
 'Proceedings of the 1999 International Conference on Software Engineering, ICSE\' 99, Los Angeles, CA, USA, May 16-22, 1999':
 	'Proceedings of the 21st International Conference on Software Engineering',
 'Proceedings of the 22nd International Conference on on Software Engineering, ICSE 2000, Limerick Ireland, June 4-11, 2000':
-	'Proceedings of the 22nd International Conference on on Software Engineering',
+	'Proceedings of the 22nd International Conference on Software Engineering',
 'Proceedings of the 22rd International Conference on Software Engineering, ICSE 2002, 19-25 May 2002, Orlando, Florida, USA':
 	'Proceedings of the 22rd International Conference on Software Engineering',
 'Proceedings of the 23rd International Conference on Software Engineering, ICSE 2001, 12-19 May 2001, Toronto, Ontario, Canada':
@@ -581,6 +581,10 @@ venuesMap = {
 	'Proceedings of the Third European Software Engineering Conference',
 'Software Engineering - ESEC \'93, 4th European Software Engineering Conference, Garmisch-Partenkirchen, Germany, September 13-17, 1993, Proceedings':
 	'Proceedings of the Fourth European Software Engineering Conference',
+'Software Engineering - ESEC/FSE \'97, 6th European Software Engineering Conference Held Jointly with the 5th ACM SIGSOFT Symposium on Foundations of Software Engineering, Zurich, Switzerland, September 22-25, 1997, Proceedings':
+	'Proceedings of the Sixth European Software Engineering Conference / Fifth Symposium on Foundations of Software Engineering',
+'Conference on Object-Oriented Programming Systems, Languages, and Applications / European Conference on Object-Oriented Programming (OOPSLA/ECOOP), Ottawa, Canada, October 21-25, 1990, Proceedings':
+	'Proceedings of the Fifth Conference on Object-Oriented Programming: Systems, Languages, and Applications / European Conference on Object-Oriented Programming',
 }
 
 numfixes = {
