@@ -585,6 +585,20 @@ venuesMap = {
 	'Proceedings of the Sixth European Software Engineering Conference / Fifth Symposium on Foundations of Software Engineering',
 'Conference on Object-Oriented Programming Systems, Languages, and Applications / European Conference on Object-Oriented Programming (OOPSLA/ECOOP), Ottawa, Canada, October 21-25, 1990, Proceedings':
 	'Proceedings of the Fifth Conference on Object-Oriented Programming: Systems, Languages, and Applications / European Conference on Object-Oriented Programming',
+'The Unified Modeling Language, «UML»\'98: Beyond the Notation, First International Workshop, Mulhouse, France, June 3-4, 1998, Selected Papers':
+	'Selected Papers of the First International Workshop on the Unified Modeling Language: Beyond the Notation',
+'UML 2002 - The Unified Modeling Language, 5th International Conference, Dresden, Germany, September 30 - October 4, 2002, Proceedings':
+	'Proceedings of the Fifth International Conference on the Unified Modeling Language',
+'«UML» 2000 - The Unified Modeling Language, Advancing the Standard, Third International Conference, York, UK, October 2-6, 2000, Proceedings':
+	'Proceedings of the Third International Conference on the Unified Modeling Language: Advancing the Standard',
+'«UML» 2001 - The Unified Modeling Language, Modeling Languages, Concepts, and Tools, 4th International Conference, Toronto, Canada, October 1-5, 2001, Proceedings':
+	'Proceedings of the Fourth International Conference on the Unified Modeling Language, Modeling Languages, Concepts, and Tools',
+'«UML» 2003 - The Unified Modeling Language, Modeling Languages and Applications, 6th International Conference, San Francisco, CA, USA, October 20-24, 2003, Proceedings':
+	'Proceedings of the Sixth International Conference on the Unified Modeling Language, Modeling Languages and Applications',
+'«UML» 2004 - The Unified Modelling Language: Modelling Languages and Applications. 7th International Conference, Lisbon, Portugal, October 11-15, 2004. Proceedings':
+	'Proceedings of the Seventh International Conference on the Unified Modelling Language: Modelling Languages and Applications',
+'«UML»\'99: The Unified Modeling Language - Beyond the Standard, Second International Conference, Fort Collins, CO, USA, October 28-30, 1999, Proceedings':
+	'Proceedings of the Second International Conference on the Unified Modeling Language: Beyond the Standard',
 }
 
 numfixes = {

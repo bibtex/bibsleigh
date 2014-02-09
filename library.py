@@ -3,7 +3,7 @@
 from template import bibHTML, confHTML, uberHTML
 from venues import venuesMap
 from short import contractions
-from supported import supported
+from supported import supported, merged
 import xml.etree.cElementTree as ET
 
 unk = []
@@ -21,6 +21,12 @@ def purenum(a):
 	else:
 		return str(num)
 
+def findall(x,ys):
+	for y in ys:
+		if x.find('conf/%s/' % y.lower()) > -1:
+			return True
+	return False
+
 class BibLib(object):
 	def __init__(self):
 		self.xs = []
@@ -37,10 +43,10 @@ class BibLib(object):
 			if x.key == key:
 				return x
 		return None
-	def getConferenceList(self,key):
+	def getConferenceList(self,keys):
 		byY = {}
 		for x in self.xs:
-			if x.t == 'proceedings' and x.key.find('conf/%s/' % key.lower())>-1:
+			if x.t == 'proceedings' and findall(x.key, keys):
 				y = x['year'][0] 
 				if y not in byY.keys():
 					byY[y] = []
@@ -308,7 +314,18 @@ if __name__ == '__main__':
 	f.write('\n'.join(un))
 	f.close()
 	confs = []
+	lost = []
 	for ven in supported.keys():
+		if ven not in merged.keys():
+			merged[ven] = [ven]
+		else:
+			lost.extend(merged[ven])
+			lost.remove(ven)
+	for ven in supported.keys():
+		if ven not in merged.keys():
+			merged[ven] = [ven]
+		if ven in lost:
+			continue
 		f = open('html/%s.html' % ven, 'w')
 		f.write(confHTML %
 			(supported[ven],
@@ -316,7 +333,7 @@ if __name__ == '__main__':
 			supported[ven],
 			supported[ven],
 			'%s (%s)' % (supported[ven],ven),
-			xs.getConferenceList(ven)))
+			xs.getConferenceList(merged[ven])))
 		f.close()
 		confs.append('<div class="pic"><a href="%s.html" title="%s"><img src="../conf/%s.png" alt="%s"><br/>%s</a></div>' %
 			(ven,
