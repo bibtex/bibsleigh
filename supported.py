@@ -22,7 +22,7 @@ supported = {
 	'SLE': 'Software Language Engineering',
 	'UML': 'Unified Modelling Language',
 	'WCRE': 'Working Conference on Reverse Engineering',
-	# # 'FSE': 'Foundations of Software Engineering',
+	'SIGSOFT': 'Foundations of Software Engineering',
 }
 
 merged = {
