@@ -10,6 +10,8 @@ unk = []
 
 locations = []
 
+secretkeys = ('LOCALKEY','VENUE','YEAR')
+
 def purenum(a):
 	num = int(''.join([x for x in a if x.isdigit()]))
 	if num < 10:
@@ -55,7 +57,7 @@ class BibLib(object):
 		for y in sorted(byY.keys()):
 			s += '<dt>%s</dt>' % y
 			for x in byY[y]:
-				s += '<dd><a href="%s.html">%s</a> (%s)</dd>' % (x['key'][0],x.getTitleHTML(),x['key'][0].replace('-',' '))
+				s += '<dd><a href="%s.html">%s</a> (%s %s)</dd>' % (x['key'],x.getTitleHTML(), x['VENUE'], x['YEAR'])
 		return s
 	def __len__(self):
 		return len(self.xs)
@@ -63,7 +65,7 @@ class BibLib(object):
 		return self.xs.__iter__()
 	def writeHTML(self):
 		for x in self.xs:
-			fn = 'html/%s.html' % x['key'][0]
+			fn = 'html/%s.html' % x['key']
 			x.writeHTML(fn)
 
 class BibEntry(object):
@@ -74,7 +76,12 @@ class BibEntry(object):
 		self.key = ''
 		self.linked = []
 	def __getitem__(self,key):
-		if key in self.args:
+		if key == 'key':
+			if 'LOCALKEY' in self.dict.keys():
+				return '%s-%s-%s' % (self.dict['VENUE'], self.dict['LOCALKEY'], self.dict['YEAR'])
+			else:
+				return '%s-%s' % (self.dict['VENUE'], self.dict['YEAR'])
+		if key in self.args or key in secretkeys:
 			return self.dict[key]
 		else:
 			return None
@@ -125,6 +132,7 @@ class BibEntry(object):
 		f.write(self.toBIB())
 		f.close()
 	def getKeyHTML(self):
+		# TODO: update to hidden attributes
 		if self['booktitle'] and self['year']:
 			es = self['key'][0].split('-')
 			if len(es)==3 and es[2].isdigit() and es[0]==self['booktitle'][-1]:
@@ -147,7 +155,7 @@ class BibEntry(object):
 			elif k in ('ee','crossref','key'):
 				pass
 			elif k == 'doi':
-				s += '\t%-10s = "<a href="http://dx.doi.org/%s">%s</a>",\n' % (k,self.dict[k][0],self.dict[k][0])
+				s += '<span id="doi">\t%-10s = "<a href="http://dx.doi.org/%s">%s</a>",\n</span>' % (k,self.dict[k][0],self.dict[k][0])
 			elif k == 'isbn':
 				s += '<span id="isbn">\t%-10s = "%s",\n</span>' % (k,self.dict[k][0])
 			else:
@@ -156,6 +164,9 @@ class BibEntry(object):
 		return s.replace('<i>','\\emph{').replace('</i>','}')
 	def sanitize(self):
 		for k in self.dict.keys():
+			# don't sanitise secret keys?
+			if k in secretkeys:
+				continue
 			# make all pairs observable
 			if k not in self.args:
 				self.args.append(k)
@@ -190,15 +201,20 @@ class BibEntry(object):
 			self.args.remove('url')
 			self.dict.pop('url')
 		# fix key:
-		tmp = self.key.split('/')[-1]
-		if tmp[-4:].isdigit():
-			tmp = tmp[:-4]
-		elif tmp[-2:].isdigit():
-			tmp = tmp[:-2]
-		if tmp:
-			tmp += '-'
+		tmp = self.key.split('/')
+		if tmp[-1][-4:].isdigit():
+			tmp[-1] = tmp[-1][:-4]
+		elif tmp[-1][-2:].isdigit():
+			tmp[-1] = tmp[-1][:-2]
+		if tmp[-1]:
+			self.dict['LOCALKEY'] = tmp[-1]
+		if self['booktitle'][0].find(' ')<0:
+			self.dict['VENUE'] = self['booktitle'][0].upper()
+		else:
+			self.dict['VENUE'] = tmp[1].upper()
+		self.dict['YEAR'] = purenum(self.key)
 		# NB: self['year'] can be incorrect (e.g., SLE used to publish proceedings the year after the event)
-		self['key'] = self['booktitle'][0].upper()+'-'+tmp+purenum(self.key)
+		# self['key'] = self['booktitle'][0].upper()+'-'+tmp+purenum(self.key)
 		# fix title for conferences
 		if self['title'][0] in venuesMap.keys():
 			self.dict['title'] = [venuesMap[self['title'][0]]]
@@ -256,7 +272,7 @@ class BibEntry(object):
 				pp = ''
 				while p in items.keys():
 					p -= 1
-			items[p] = '<dt><a href="%s.html">%s</a></dt><dd>%s (%s)%s.</dd>' % (link['key'][0], link['key'][0], link.getTitleHTML(), link.getAuthorsShortHTML(), pp)
+			items[p] = '<dt><a href="%s.html">%s</a></dt><dd>%s (%s)%s.</dd>' % (link['key'], link['key'], link.getTitleHTML(), link.getAuthorsShortHTML(), pp)
 		return ('<h3>Contents (%s items)</h3><dl class="toc">' % len(items))+ ''.join([items[i] for i in sorted(items.keys())]) + '</dl>'
 	def getAuthorsShortHTML(self):
 		if not self['author']:
@@ -298,6 +314,10 @@ if __name__ == '__main__':
 		# If the 'events' option is omitted, only “end” events are returned.
 		if elem.findtext('booktitle') in supported.keys():
 			xs += elem
+		elif 'key' in elem.attrib:
+			ks = elem.attrib['key'].split('/')
+			if len(ks)>=3 and ks[0] == 'conf' and ks[1] in map(lambda x:x.lower(),supported.keys()):
+				xs += elem
 	for x in xs:
 		# print('I got', x.key)
 		if x['crossref'] and xs[x['crossref'][0]]:
@@ -320,7 +340,8 @@ if __name__ == '__main__':
 			merged[ven] = [ven]
 		else:
 			lost.extend(merged[ven])
-			lost.remove(ven)
+			if ven in lost:
+				lost.remove(ven)
 	for ven in supported.keys():
 		if ven not in merged.keys():
 			merged[ven] = [ven]

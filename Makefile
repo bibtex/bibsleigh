@@ -7,4 +7,5 @@ run:
 	rm -f venues.unq
 
 clean:
-	cd html && (ls -1 | grep '.html' | xargs -n1 rm)
+	rm -rf html
+	mkdir html

@@ -45,6 +45,7 @@ bibHTML = header+'''
 <div class="pre">
 	<form>
 		<input type="checkbox" checked="true" onClick="%s"/> Full names
+		<input type="checkbox" checked="true" onClick="(this.checked)?$('#doi').show():$('#doi').hide();"/> DOI
 		<input type="checkbox" checked="true" onClick="(this.checked)?$('#isbn').show():$('#isbn').hide();"/> ISxN
 	</form>
 	<pre>%s</pre>

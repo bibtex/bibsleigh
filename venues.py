@@ -599,6 +599,68 @@ venuesMap = {
 	'Proceedings of the Seventh International Conference on the Unified Modelling Language: Modelling Languages and Applications',
 '«UML»\'99: The Unified Modeling Language - Beyond the Standard, Second International Conference, Fort Collins, CO, USA, October 28-30, 1999, Proceedings':
 	'Proceedings of the Second International Conference on the Unified Modeling Language: Beyond the Standard',
+'20th ACM SIGSOFT Symposium on the Foundations of Software Engineering (FSE-20), SIGSOFT/FSE\'12, Cary, NC, USA - November 11 - 16, 2012':
+	'Proceedings of the 20th Symposium on the Foundations of Software Engineering',
+'ACM SIGSOFT Symposium on Foundations of Software Engineering, an Diego, California, USA, November 6-10, 2000, Proceedings':
+	'Proceedings of the Eighth Symposium on Foundations of Software Engineering',
+'Joint Meeting of the European Software Engineering Conference and the ACM SIGSOFT Symposium on the Foundations of Software Engineering, ESEC/FSE\'13, Saint Petersburg, Russian Federation, August 18-26, 2013':
+	'Proceedings of the Joint Meeting of the 14th European Software Engineering Conference and the 21th Symposium on the Foundations of Software Engineering',
+'Proceedings of the 10th European Software Engineering Conference held jointly with 13th ACM SIGSOFT International Symposium on Foundations of Software Engineering, 2005, Lisbon, Portugal, September 5-9, 2005':
+	'Proceedings of the 10th European Software Engineering Conference held jointly with 13th International Symposium on Foundations of Software Engineering',
+'Proceedings of the 11th ACM SIGSOFT Symposium on Foundations of Software Engineering 2003 held jointly with 9th European Software Engineering Conference, ESEC/FSE 2003, Helsinki, Finland, September 1-5, 2003':
+	'Proceedings of the 11th Symposium on Foundations of Software Engineering held jointly with the Ninth European Software Engineering Conference',
+'Proceedings of the 12th ACM SIGSOFT International Symposium on Foundations of Software Engineering, 2004, Newport Beach, CA, USA, October 31 - November 6, 2004':
+	'Proceedings of the 12th International Symposium on Foundations of Software Engineering',
+'Proceedings of the 14th ACM SIGSOFT International Symposium on Foundations of Software Engineering, FSE 2006, Portland, Oregon, USA, November 5-11, 2006':
+	'Proceedings of the 14th International Symposium on Foundations of Software Engineering',
+'Proceedings of the 16th ACM SIGSOFT International Symposium on Foundations of Software Engineering, 2008, Atlanta, Georgia, USA, November 9-14, 2008':
+	'Proceedings of the 16th International Symposium on Foundations of Software Engineering',
+'Proceedings of the 18th ACM SIGSOFT International Symposium on Foundations of Software Engineering, 2010, Santa Fe, NM, USA, November 7-11, 2010':
+	'Proceedings of the 18th International Symposium on Foundations of Software Engineering',
+'Proceedings of the 2007 Conference Specification and Verification of Component-Based Systems, SAVCBS 2007, Dubrovnik, Croatia, September 3-4, 2007':
+	'Proceedings of the Sixth Specification and Verification of Component-Based Systems Workshop',
+'Proceedings of the 2007 International Workshop on Engineering of Software Services for Pervasive Environments, ESSPE 2007, Dubrovnik, Croatia, September 4, 2007':
+	'Proceedings of the International Workshop on Engineering of Software Services for Pervasive Environments',
+'Proceedings of the 2007 Workshop on Domain Specific Approaches to Software Test Automation, DOSTA 2007, Dubrovnik, Croatia, September 4, 2007':
+	'Proceedings of the Workshop on Domain Specific Approaches to Software Test Automation',
+'Proceedings of the 2007 Workshop on Engineering Fault Tolerant Systems, EFTS 2007, Dubrovnik, Croatia, September 4, 2007':
+	'Proceedings of the Workshop on Engineering Fault Tolerant Systems',
+'Proceedings of the 2nd International Workshop on Service Oriented Software Engineering: in conjunction with the 6th ESEC/FSE joint meeting, IW-SOSWE 2007, Dubrovnik, Croatia, September 3, 2007':
+	'Proceedings of the Second International Workshop on Service Oriented Software Engineering',
+'Proceedings of the 4th International Workshop on Exception Handling, WEH 2008, Atlanta, Georgia, USA, November 14, 2008':
+	'Proceedings of the Fourth International Workshop on Exception Handling',
+'Proceedings of the 6th joint meeting of the European Software Engineering Conference and the ACM SIGSOFT International Symposium on Foundations of Software Engineering, 2007, Dubrovnik, Croatia, September 3-7, 2007':
+	'Proceedings of the Sixth joint meeting of the 11th European Software Engineering Conference and the 15th International Symposium on Foundations of Software Engineering',
+'Proceedings of the 6th joint meeting of the European Software Engineering Conference and the ACM SIGSOFT International Symposium on Foundations of Software Engineering, 2007, Dubrovnik, Croatia, September 3-7, 2007, Companion Papers':
+	'Companion Papers of the Sixth joint meeting of the 11th European Software Engineering Conference and the 15th International Symposium on Foundations of Software Engineering',
+'Proceedings of the 7th joint meeting of the European Software Engineering Conference and the ACM SIGSOFT International Symposium on Foundations of Software Engineering, 2009, Amsterdam, The Netherlands, August 24-28, 2009':
+	'Proceedings of the Seventh joint meeting of the 12th European Software Engineering Conference and the 17th International Symposium on Foundations of Software Engineering',
+'Proceedings of the 8th European Software Engineering Conference held jointly with 9th ACM SIGSOFT International Symposium on Foundations of Software Engineering 2001, Vienna, Austria, September 10-14, 2001':
+	'Proceedings of the Eighth European Software Engineering Conference held jointly with Ninth International Symposium on Foundations of Software Engineering',
+'Proceedings of the International Workshop on Synthesis and Analysis of Component Connectors: in conjunction with the 6th ESEC/FSE joint meeting, SYANCO 2007, Dubrovnik, Croatia, September 3-4, 2007':
+	'Proceedings of the International Workshop on Synthesis and Analysis of Component Connectors',
+'Proceedings of the Tenth ACM SIGSOFT Symposium on Foundations of Software Engineering 2002, Charleston, South Carolina, USA, November 18-22, 2002':
+	'Proceedings of the Tenth Symposium on Foundations of Software Engineering',
+'Proceedings of the Workshop on Future of Software Engineering Research, FoSER 2010, at the 18th ACM SIGSOFT International Symposium on Foundations of Software Engineering, 2010, Santa Fe, NM, USA, November 7-11, 2010':
+	'Proceedings of the Workshop on Future of Software Engineering Research',
+'SAVCBS\'09, Proceedings of the 8th International Workshop on Specification and Verification of Component-Based Systems, August 25, 2009, Amsterdam, The Netherlands':
+	'Proceedings of the 8th International Workshop on Specification and Verification of Component-Based Systems',
+'SIGSOFT \'93, Proceedings of the First ACM SIGSOFT Symposium on Foundations of Software Engineering, Los Angeles, California, USA, December 7-10, 1993':
+	'Proceedings of the First Symposium on Foundations of Software Engineering',
+'SIGSOFT \'94, Proceedings of the Second ACM SIGSOFT Symposium on Foundations of Software Engineering, New Orleans, Louisiana, USA, December 6-9, 1994':
+	'Proceedings of the Second Symposium on Foundations of Software Engineering',
+'SIGSOFT \'95, Proceedings of the Third ACM SIGSOFT Symposium on Foundations of Software Engineering, Washington, DC, USA, October 10-13, 1995':
+	'Proceedings of the Third Symposium on Foundations of Software Engineering',
+'SIGSOFT \'96, Proceedings of the Fourth ACM SIGSOFT Symposium on Foundations of Software Engineering, San Francisco, California, USA, October 16-18, 1996':
+	'Proceedings of the Fourth Symposium on Foundations of Software Engineering',
+'SIGSOFT \'98, Proceedings of the ACM SIGSOFT International Symposium on Foundations of Software Engineering, Lake Buena Vista, Florida, USA, November 3-5, 1998':
+	'Proceedings of the Sixth International Symposium on Foundations of Software Engineering',
+'SIGSOFT/FSE\'11 19th ACM SIGSOFT Symposium on the Foundations of Software Engineering (FSE-19) and ESEC\'11: 13rd European Software Engineering Conference (ESEC-13), Szeged, Hungary, September 5-9, 2011':
+	'Proceedings of the 19th Symposium on the Foundations of Software Engineering and the 13rd European Software Engineering Conference',
+'Software Engineering - ESEC/FSE\'99, 7th European Software Engineering Conference, Held Jointly with the 7th ACM SIGSOFT Symposium on the Foundations of Software Engineering, Toulouse, France, September 1999, Proceedings':
+	'Proceedings of the Seventh European Software Engineering Conference, Held Jointly with the Seventh Symposium on the Foundations of Software Engineering',
+'The 1st International Workshop on Software Ecosystem Architectures, WEA 2013, Saint Petersburg, Russian Federation, August 19, 2013':
+	'The First International Workshop on Software Ecosystem Architectures',
 }
 
 numfixes = {
