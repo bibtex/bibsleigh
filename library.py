@@ -29,6 +29,46 @@ def findall(x,ys):
 			return True
 	return False
 
+class BibIssue(object):
+	def __init__(self, lib, keys):
+		pass
+
+class BibVenue(object):
+	def __init__(self, lib, ven):
+		self.ven = ven
+		self.sup = supported[ven]
+		keys = merged[ven]
+		self.byY = {}
+		for x in lib.xs:
+			if x.t == 'proceedings' and findall(x.key, keys):
+				y = x['year'][0] 
+				if y not in self.byY.keys():
+					self.byY[y] = []
+				self.byY[y].append(x)
+	def getHTML(self):
+		s = ''
+		for y in sorted(self.byY.keys()):
+			s += '<dt>%s</dt>' % y
+			for x in self.byY[y]:
+				s += '<dd><span class="icn" title="main venue">(c)</span><a href="%s.html">%s</a> (%s %s)</dd>' % (x['key'],x.getTitleHTML(), x['VENUE'], x['YEAR'])
+		return s
+	def getConfHTML(self):
+		return confHTML % (
+			self.sup,
+			self.ven.lower(),
+			self.sup,
+			self.sup,
+			'%s (%s)' % (self.sup, self.ven),
+			ven.getHTML())
+	def getNameIcon(self):
+		return '<div class="pic"><a href="%s.html" title="%s"><img src="../conf/%s.png" alt="%s"><br/>%s</a></div>' % (
+			self.ven,
+			self.sup,
+			self.ven.lower(),
+			self.sup,
+			self.ven
+			)
+
 class BibLib(object):
 	def __init__(self):
 		self.xs = []
@@ -78,9 +118,12 @@ class BibEntry(object):
 	def __getitem__(self,key):
 		if key == 'key':
 			if 'LOCALKEY' in self.dict.keys():
-				return '%s-%s-%s' % (self.dict['VENUE'], self.dict['LOCALKEY'], self.dict['YEAR'])
+				return '%s-%s-%s' % (self.dict['VENUE'], self.dict['YEAR'], self.dict['LOCALKEY'])
+				# return '%s-%s-%s' % (self.dict['VENUE'], self.dict['LOCALKEY'], self.dict['YEAR'])
 			else:
 				return '%s-%s' % (self.dict['VENUE'], self.dict['YEAR'])
+		if key == 'html':
+			return '%s.html' % self['key']
 		if key in self.args or key in secretkeys:
 			return self.dict[key]
 		else:
@@ -134,10 +177,10 @@ class BibEntry(object):
 	def getKeyHTML(self):
 		# TODO: update to hidden attributes
 		if self['booktitle'] and self['year']:
-			es = self['key'][0].split('-')
-			if len(es)==3 and es[2].isdigit() and es[0]==self['booktitle'][-1]:
+			es = self['key'].split('-')
+			if len(es)==3 and es[1].isdigit() and es[0]==self['booktitle'][-1]:
 				# we are a paper => refer to the corresponding conference edition
-				return '<a href="%s-%s.html">%s</a>-%s-%s' % (es[0],es[2],es[0],es[1],es[2])
+				return '<a href="%s-%s.html">%s</a>-%s-%s' % (es[0],es[1],es[0],es[1],es[2])
 			if len(es)==2 and es[1].isdigit() and es[0]==self['booktitle'][-1]:
 				# we are a conference edition => refer to the series
 				return '<a href="%s.html">%s</a>-%s' % (es[0],es[0],es[1])
@@ -277,7 +320,7 @@ class BibEntry(object):
 	def getAuthorsShortHTML(self):
 		if not self['author']:
 			return '—'
-		return ', '.join(['<abbr title="%s">%s</abbr>' % (name,''.join([s[0] for s in name.split(' ') if s[0].isalpha()])) for name in self['author']])
+		return ', '.join(['<abbr title="%s">%s</abbr>' % (name,''.join([s[0] for s in name.replace('-',' ').split(' ') if s[0].isalpha()])) for name in self['author']])
 	def getAuthorsHTML(self):
 		if self['author']:
 			return ', '.join(self['author'])
@@ -342,28 +385,20 @@ if __name__ == '__main__':
 			lost.extend(merged[ven])
 			if ven in lost:
 				lost.remove(ven)
+	allvenues = []
 	for ven in supported.keys():
 		if ven not in merged.keys():
 			merged[ven] = [ven]
 		if ven in lost:
 			continue
+		allvenues.append(BibVenue(xs,ven))
+	for ven in allvenues:
 		f = open('html/%s.html' % ven, 'w')
-		f.write(confHTML %
-			(supported[ven],
-			ven.lower(),
-			supported[ven],
-			supported[ven],
-			'%s (%s)' % (supported[ven],ven),
-			xs.getConferenceList(merged[ven])))
+		f.write(ven.getConfHTML())
 		f.close()
-		confs.append('<div class="pic"><a href="%s.html" title="%s"><img src="../conf/%s.png" alt="%s"><br/>%s</a></div>' %
-			(ven,
-			supported[ven],
-			ven.lower(),
-			supported[ven],
-			ven
-			))
+		confs.append(ven.getNameIcon())
 	print(len(supported),'venues.')
 	f = open('html/index.html','w')
 	f.write(uberHTML % '\n'.join(sorted(confs)))
 	f.close()
+
