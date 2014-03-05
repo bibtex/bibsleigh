@@ -170,6 +170,23 @@ class BibEntry(object):
 		for k in self.args:
 			s += '<%s>%s</%s>\n' % (k,self.dict[k],k)
 		return s+'</%s>\n</dblp>\n' % self.t
+	def toJSON(self):
+		s = '''{
+	"type": "%s",
+	"dblpkey": "%s",
+	"venue": "%s"''' % (self.t, self.key, self.dict['VENUE'])
+		for k in self.args:
+			if len(self.dict[k]) >1 :
+				if k in ("booktitle","series","publisher"):
+					s += ',\n\t"%s": "%s",\n\t"%s": "%s"' % (k,self.dict[k][0],k+"short",self.dict[k][1])
+				else:
+					s += ',\n\t"%s": ["%s"]' % (k,'", "'.join(self.dict[k]))
+			elif len(self.dict[k]) ==1 :
+				if k == 'year':
+					s += ',\n\t"%s": %s' % (k,self.dict[k][0])
+				else:
+					s += ',\n\t"%s": "%s"' % (k,self.dict[k][0])
+		return s+'\n}'
 	def unloadBIB(self,fs):
 		f = open(fs,'w')
 		f.write(self.toBIB())
@@ -251,7 +268,7 @@ class BibEntry(object):
 			tmp[-1] = tmp[-1][:-2]
 		if tmp[-1]:
 			self.dict['LOCALKEY'] = tmp[-1]
-		if self['booktitle'][0].find(' ')<0:
+		if self['booktitle'] and self['booktitle'][0].find(' ')<0:
 			self.dict['VENUE'] = self['booktitle'][0].upper()
 		else:
 			self.dict['VENUE'] = tmp[1].upper()
@@ -281,9 +298,13 @@ class BibEntry(object):
 			if xref[inh]:
 				for v in xref[inh]:
 					self[inh] = v
-		self.dict['booktitle'] = [xref.dict['title'][0],xref.dict['booktitle'][0]]
+		if 'booktitle' in xref.dict.keys():
+			self.dict['booktitle'] = [xref.dict['title'][0],xref.dict['booktitle'][0]]
+		else:
+			self.dict['booktitle'] = [xref.dict['title'][0]]
 		self.sanitize()
 	def writeHTML(self,fs):
+		fs = fs.replace('/','-').replace('html-','html/')
 		h = open(fs,'w',encoding='utf-8')
 		h.write(bibHTML %
 			(self.getTitleTXT(),
@@ -296,6 +317,9 @@ class BibEntry(object):
 			self.getCodeLongShort(),
 			self.toBIB(),
 			self.contentsHTML()))
+		h.close()
+		h = open(fs.replace("html","json"),'w',encoding='utf-8')
+		h.write(self.toJSON())
 		h.close()
 	def getVenueShort(self):
 		if self['booktitle'] and self['booktitle'][-1] in supported.keys():
@@ -335,9 +359,13 @@ class BibEntry(object):
 	def getTitleHTML(self):
 		return self['title'][0]
 	def getVenueIcon(self):
-		return self['booktitle'][-1].lower()
+		if self['booktitle']:
+			return self['booktitle'][-1].lower()
+		return ''
 	def getVenueHTML(self):
-		return '%s, %s' % (self['booktitle'][0], self['year'][0])
+		if self['booktitle']:
+			return '%s, %s' % (self['booktitle'][0], self['year'][0])
+		return '???, %s' % self['year'][0]
 	def getCodeLongShort(self):
 		code = ''
 		for tag in ('title','booktitle','series','publisher'):
