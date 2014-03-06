@@ -1,0 +1,12 @@
+{
+	"type": "proceedings",
+	"dblpkey": "conf/csmr/2007",
+	"venue": "CSMR",
+	"title": "Proceedings of the 11th European Conference on Software Maintenance and Reengineering",
+	"booktitle": "CSMR",
+	"year": 2007,
+	"editor": ["René L. Krikhaar", "Chris Verhoef", "Giuseppe A. Di Lucca"],
+	"publisher": "IEEE Computer Society",
+	"publishershort": "IEEE",
+	"isbn": "0-7695-2802-3"
+}

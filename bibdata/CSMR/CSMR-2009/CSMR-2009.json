@@ -1,0 +1,10 @@
+{
+	"type": "proceedings",
+	"dblpkey": "conf/csmr/2009",
+	"venue": "CSMR",
+	"title": "Proceedings of the 13th European Conference on Software Maintenance and Reengineering",
+	"booktitle": "CSMR",
+	"year": 2009,
+	"editor": ["Andreas Winter", "Rudolf Ferenc", "Jens Knodel"],
+	"publisher": "IEEE"
+}

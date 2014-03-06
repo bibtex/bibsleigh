@@ -1,0 +1,12 @@
+{
+	"type": "proceedings",
+	"dblpkey": "conf/csmr/2011",
+	"venue": "CSMR",
+	"title": "Proceedings of the 15th European Conference on Software Maintenance and Reengineering",
+	"booktitle": "CSMR",
+	"year": 2011,
+	"editor": ["Tom Mens", "Yiannis Kanellopoulos", "Andreas Winter"],
+	"isbn": "978-0-7695-4343-7",
+	"publisher": "IEEE Computer Society",
+	"publishershort": "IEEE"
+}

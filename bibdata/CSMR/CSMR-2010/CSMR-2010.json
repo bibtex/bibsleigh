@@ -1,0 +1,10 @@
+{
+	"type": "proceedings",
+	"dblpkey": "conf/csmr/2010",
+	"venue": "CSMR",
+	"title": "Proceedings of the 14th European Conference on Software Maintenance and Reengineering",
+	"booktitle": "CSMR",
+	"year": 2010,
+	"editor": ["Rafael Capilla", "Rudolf Ferenc", "Juan C. Dueñas"],
+	"publisher": "IEEE"
+}
