@@ -1,5 +1,7 @@
 #!/usr/local/bin/python3
 
+import os
+
 header = '''<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
@@ -56,12 +58,12 @@ bibHTML = header+'''
 
 confHTML = header+'''
 	<!-- (a link to bibSLEIGH)<br/> -->
-	<a href="index.html"><img src="../conf/%s.png" alt="%s" title="%s" class="pad"/></a><br/>
+	<a href="index.html"><img src="%s" alt="%s" title="%s" class="pad"/></a><br/>
 	<!-- (a link to edit)<br/> -->
-	<a href="http://creativecommons.org/licenses/by-sa/3.0/" title="CC-BY-SA"><img src="../www/cc-by-sa.png" alt="CC-BY-SA"/></a><br/>
-	<a href="http://creativecommons.org/licenses/by-sa/3.0/" title="Open Knowledge"><img src="../www/open-knowledge.png" alt="Open Knowledge" class="pad" /></a><br/>
-	<a href="http://validator.w3.org/check/referer" title="XHTML 1.0 W3C Rec"><img src="../www/xhtml10.png" alt="XHTML 1.0 W3C Rec" /></a><br/>
-	<a href="http://jigsaw.w3.org/css-validator/check/referer" title="CSS 2.1 W3C CanRec"><img src="../www/css21.png" alt="CSS 2.1 W3C CanRec" class="pad" /></a><br/>
+	<a href="http://creativecommons.org/licenses/by-sa/3.0/" title="CC-BY-SA"><img src="www/cc-by-sa.png" alt="CC-BY-SA"/></a><br/>
+	<a href="http://creativecommons.org/licenses/by-sa/3.0/" title="Open Knowledge"><img src="www/open-knowledge.png" alt="Open Knowledge" class="pad" /></a><br/>
+	<a href="http://validator.w3.org/check/referer" title="XHTML 1.0 W3C Rec"><img src="www/xhtml10.png" alt="XHTML 1.0 W3C Rec" /></a><br/>
+	<a href="http://jigsaw.w3.org/css-validator/check/referer" title="CSS 2.1 W3C CanRec"><img src="www/css21.png" alt="CSS 2.1 W3C CanRec" class="pad" /></a><br/>
 	<div>[<a href="mailto:vadim@grammarware.net">Complain!</a>]</div>
 </div>
 <div class="main">
@@ -69,6 +71,18 @@ confHTML = header+'''
 <h3>Editions:</h3>
 <dl>%s</dl>
 '''+footer
+
+def hyper_series(ser, lng, eds):
+	return confHTML % (
+		ser,
+		('brand/%s.png' % ser)
+			if os.path.exists('deploy/brand/%s.png' % ser)
+			else 'www/bibsleigh.png',
+		ser,
+		ser,
+		('%s (%s)' % (lng,ser)),
+		''.join(eds)
+		)
 
 uberHTML = (header % 'Bibliography of Software Language Engineering in Generated Hypertext')+'''
 	<a href="index.html"><img src="../www/bibsleigh.png" alt="BibSLEIGH" title="BibSLEIGH" class="pad"/></a><br/>
