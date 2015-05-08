@@ -294,6 +294,17 @@ venuesMap = {
 	'Proceedings of the 26th International Conference on Software Maintenance',
 '28th IEEE International Conference on Software Maintenance, ICSM 2012, Trento, Italy, September 23-28, 2012':
 	'Proceedings of the 28th International Conference on Software Maintenance',
+'IEEE 27th International Conference on Software Maintenance, ICSM 2011, Williamsburg, VA, USA, September 25-30, 2011':
+	'Proceedings of the 27th Conference on Software Maintenance',
+'Proceedings of the Conference on Software Maintenance, ICSM 1993, Montréal, Quebec, Canada, September 1993':
+	'Proceedings of the Ninth Conference on Software Maintenance',
+'Proceedings of the International Conference on Software Maintenance, ICSM 1994, Victoria, BC, Canada, September 1994':
+	'Proceedings of the Tenth International Conference on Software Maintenance',
+'Proceedings of the International Conference on Software Maintenance, ICSM 1995, Opio (Nice), France, October 17-20, 1995':
+	'Proceedings of the 11th International Conference on Software Maintenance',
+# Venue: ECOOP
+'Object-Oriented Programming, Proceedings of the 8th European Conference, ECOOP \'94, Bologna, Italy, July 4-8, 1994':
+	'Proceedings of the Eighth European Conference on Object-Oriented Programming',
 'ECOOP \'89: Proceedings of the Third European Conference on Object-Oriented Programming, Nottingham, UK, July 10-14, 1989':
 	'Proceedings of the Third European Conference on Object-Oriented Programming',
 'ECOOP \'92, European Conference on Object-Oriented Programming, Utrecht, The Netherlands, June 29 - July 3, 1992, Proceedings':
@@ -342,16 +353,9 @@ venuesMap = {
 	'Proceedings of the 12th European Conference on Object-Oriented Programming',
 'ECOOP\'99 - Object-Oriented Programming, 13th European Conference, Lisbon, Portugal, June 14-18, 1999, Proceedings':
 	'Proceedings of the 13th European Conference on Object-Oriented Programming',
-'IEEE 27th International Conference on Software Maintenance, ICSM 2011, Williamsburg, VA, USA, September 25-30, 2011':
-	'Proceedings of the 27th Conference on Software Maintenance',
-'Object-Oriented Programming, Proceedings of the 8th European Conference, ECOOP \'94, Bologna, Italy, July 4-8, 1994':
-	'Proceedings of the Eighth European Conference on Object-Oriented Programming',
-'Proceedings of the Conference on Software Maintenance, ICSM 1993, Montréal, Quebec, Canada, September 1993':
-	'Proceedings of the Ninth Conference on Software Maintenance',
-'Proceedings of the International Conference on Software Maintenance, ICSM 1994, Victoria, BC, Canada, September 1994':
-	'Proceedings of the Tenth International Conference on Software Maintenance',
-'Proceedings of the International Conference on Software Maintenance, ICSM 1995, Opio (Nice), France, October 17-20, 1995':
-	'Proceedings of the 11th International Conference on Software Maintenance',
+# Venue: SCAM
+'14th IEEE International Working Conference on Source Code Analysis and Manipulation, SCAM 2014, Victoria, BC, Canada, September 28-29, 2014':
+	'Proceedings of the 14th Working Conference on Source Code Analysis and Manipulation',
 '11th IEEE Working Conference on Source Code Analysis and Manipulation, SCAM 2011, Williamsburg, VA, USA, September 25-26, 2011':
 	'Proceedings of the 11th Working Conference on Source Code Analysis and Manipulation',
 '12th IEEE International Working Conference on Source Code Analysis and Manipulation, SCAM 2012, Riva del Garda, Italy, September 23-24, 2012':
@@ -378,10 +382,12 @@ venuesMap = {
 	'Proceedings of the Sixth International Workshop on Source Code Analysis and Manipulation',
 'Tenth IEEE International Working Conference on Source Code Analysis and Manipulation, SCAM 2010, Timisoara, Romania, 12-13 September 2010':
 	'Proceedings of the Tenth International Working Conference on Source Code Analysis and Manipulation',
+# Venue: RTA
 '23rd International Conference on Rewriting Techniques and Applications (RTA\'12) , RTA 2012, May 28 - June 2, 2012, Nagoya, Japan':
 	'Proceedings of the 23rd International Conference on Rewriting Techniques and Applications',
 '24th International Conference on Rewriting Techniques and Applications, RTA 2013, June 24-26, 2013, Eindhoven, The Netherlands':
 	'Proceedings of the 24th International Conference on Rewriting Techniques and Applications',
+# Venue: ESOP
 'ESOP \'88, 2nd European Symposium on Programming, Nancy, France, March 21-24, 1988, Proceedings':
 	'Proceedings of the Second European Symposium on Programming',
 'ESOP \'92, 4th European Symposium on Programming, Rennes, France, February 26-28, 1992, Proceedings':

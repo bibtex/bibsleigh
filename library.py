@@ -51,7 +51,9 @@ class BibVenue(object):
 		for y in sorted(self.byY.keys()):
 			s += '<dt>%s</dt>' % y
 			for x in self.byY[y]:
-				s += '<dd><span class="icn" title="main venue">(c)</span><a href="%s.html">%s</a> (%s %s)</dd>' % (x['key'],x.getTitleHTML(), x['VENUE'], x['YEAR'])
+				# TODO: try to remember what it was for?!
+				# <span class="icn" title="main venue">(c)</span>
+				s += '<dd><a href="%s.html">%s</a> (%s %s)</dd>' % (x['key'],x.getTitleHTML(), x['VENUE'], x['YEAR'])
 		return s
 	def getConfHTML(self):
 		return confHTML % (
@@ -69,6 +71,8 @@ class BibVenue(object):
 			self.sup,
 			self.ven
 			)
+	def __text__(self):
+		return self.ven
 
 class BibLib(object):
 	def __init__(self):
@@ -305,7 +309,7 @@ class BibEntry(object):
 			self.dict['booktitle'] = [xref.dict['title'][0]]
 		self.sanitize()
 	def writeHTML(self,fs):
-		fs = fs.replace('/','-').replace('html-','html/')
+		fs = fs.replace('/','-').replace('..-bibsleigh.github.io-','../bibsleigh.github.io/')
 		h = open(fs,'w',encoding='utf-8')
 		h.write(bibHTML %
 			(self.getTitleTXT(),
@@ -319,9 +323,9 @@ class BibEntry(object):
 			self.toBIB(),
 			self.contentsHTML()))
 		h.close()
-		h = open(fs.replace("html","json"),'w',encoding='utf-8')
-		h.write(self.toJSON())
-		h.close()
+		# h = open(fs.replace("html","json").replace("../bibsleigh.github.io","json"),'w',encoding='utf-8')
+		# h.write(self.toJSON())
+		# h.close()
 	def getVenueShort(self):
 		if self['booktitle'] and self['booktitle'][-1] in supported.keys():
 			return supported[self['booktitle'][-1]]
@@ -422,7 +426,8 @@ if __name__ == '__main__':
 			continue
 		allvenues.append(BibVenue(xs, ven))
 	for ven in allvenues:
-		f = open('../bibsleigh.github.io/%s.html' % ven, 'w')
+		print('Writing venue %s' % ven.ven)
+		f = open('../bibsleigh.github.io/%s.html' % ven.ven, 'w')
 		f.write(ven.getConfHTML())
 		f.close()
 		confs.append(ven.getNameIcon())

@@ -89,12 +89,12 @@ def hyper_entry(title, vshort, authors, venue, code, bib, lst):
 
 confHTML = header+'''
 	<!-- (a link to bibSLEIGH)<br/> -->
-	<a href="index.html"><img src="%s" alt="%s" title="%s" class="pad"/></a><br/>
+	<a href="index.html"><img src="stuff/%s.png" alt="%s" title="%s" class="pad"/></a><br/>
 	<!-- (a link to edit)<br/> -->
-	<a href="http://creativecommons.org/licenses/by-sa/3.0/" title="CC-BY-SA"><img src="www/cc-by-sa.png" alt="CC-BY-SA"/></a><br/>
-	<a href="http://creativecommons.org/licenses/by-sa/3.0/" title="Open Knowledge"><img src="www/open-knowledge.png" alt="Open Knowledge" class="pad" /></a><br/>
-	<a href="http://validator.w3.org/check/referer" title="XHTML 1.0 W3C Rec"><img src="www/xhtml10.png" alt="XHTML 1.0 W3C Rec" /></a><br/>
-	<a href="http://jigsaw.w3.org/css-validator/check/referer" title="CSS 2.1 W3C CanRec"><img src="www/css21.png" alt="CSS 2.1 W3C CanRec" class="pad" /></a><br/>
+	<a href="http://creativecommons.org/licenses/by-sa/3.0/" title="CC-BY-SA"><img src="stuff/cc-by-sa.png" alt="CC-BY-SA"/></a><br/>
+	<a href="http://creativecommons.org/licenses/by-sa/3.0/" title="Open Knowledge"><img src="stuff/open-knowledge.png" alt="Open Knowledge" class="pad" /></a><br/>
+	<a href="http://validator.w3.org/check/referer" title="XHTML 1.0 W3C Rec"><img src="stuff/xhtml10.png" alt="XHTML 1.0 W3C Rec" /></a><br/>
+	<a href="http://jigsaw.w3.org/css-validator/check/referer" title="CSS 2.1 W3C CanRec"><img src="stuff/css21.png" alt="CSS 2.1 W3C CanRec" class="pad" /></a><br/>
 	<div>[<a href="mailto:vadim@grammarware.net">Complain!</a>]</div>
 </div>
 <div class="main">
