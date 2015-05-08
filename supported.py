@@ -32,4 +32,6 @@ supported = {
 merged = {
 	'MoDELS': ['MoDELS', 'UML'],
 	'ESEC-FSE': ['ESEC', 'SIGSOFT'],
+	'ICSME': ['ICSM', 'ICSME'],
+	'SANER': ['SANER', 'CSMR-WCRE']
 }

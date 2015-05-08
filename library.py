@@ -1,4 +1,5 @@
 #!/usr/local/bin/python3
+# -*- coding: utf-8 -*-
 
 from template import bibHTML, confHTML, uberHTML
 from venues import venuesMap
@@ -10,10 +11,10 @@ unk = []
 
 locations = []
 
-secretkeys = ('LOCALKEY','VENUE','YEAR')
+secretkeys = ('LOCALKEY', 'VENUE', 'YEAR')
 
 def purenum(a):
-	num = int(''.join([x for x in a if x.isdigit()]))
+	num = int(''.join([z for z in a if z.isdigit()]))
 	if num < 10:
 		return '200%s' % num
 	elif num < 40:
@@ -23,7 +24,7 @@ def purenum(a):
 	else:
 		return str(num)
 
-def findall(x,ys):
+def findall(x, ys):
 	for y in ys:
 		if x.find('conf/%s/' % y.lower()) > -1:
 			return True
@@ -61,7 +62,7 @@ class BibVenue(object):
 			'%s (%s)' % (self.sup, self.ven),
 			ven.getHTML())
 	def getNameIcon(self):
-		return '<div class="pic"><a href="%s.html" title="%s"><img src="../conf/%s.png" alt="%s"><br/>%s</a></div>' % (
+		return '<div class="pic"><a href="%s.html" title="%s"><img src="stuff/%s.png" alt="%s"><br/>%s</a></div>' % (
 			self.ven,
 			self.sup,
 			self.ven.lower(),
@@ -72,7 +73,7 @@ class BibVenue(object):
 class BibLib(object):
 	def __init__(self):
 		self.xs = []
-	def __iadd__(self,other):
+	def __iadd__(self, other):
 		b = BibEntry()
 		b.loadXMLe(other)
 		b.sanitize()
@@ -80,12 +81,12 @@ class BibLib(object):
 		print('Added:', b.key)
 		other.clear()
 		return self
-	def __getitem__(self,key):
+	def __getitem__(self, key):
 		for x in self.xs:
 			if x.key == key:
 				return x
 		return None
-	def getConferenceList(self,keys):
+	def getConferenceList(self, keys):
 		byY = {}
 		for x in self.xs:
 			if x.t == 'proceedings' and findall(x.key, keys):
@@ -105,7 +106,7 @@ class BibLib(object):
 		return self.xs.__iter__()
 	def writeHTML(self):
 		for x in self.xs:
-			fn = 'html/%s.html' % x['key']
+			fn = '../bibsleigh.github.io/%s.html' % x['key']
 			x.writeHTML(fn)
 
 class BibEntry(object):
@@ -351,11 +352,11 @@ class BibEntry(object):
 		elif self['editor']:
 			return ', '.join(self['editor'])+' (editors)'
 		else:
-			print('ERROR: neither authors nor editor in',self.key)
+			print('ERROR: neither authors nor editor in', self.key)
 			return ''
 	def getTitleTXT(self):
 		# TODO: not exhaustive
-		return self['title'][0].replace('<i>','').replace('</i>','')
+		return self['title'][0].replace('<i>', '').replace('</i>', '')
 	def getTitleHTML(self):
 		return self['title'][0]
 	def getVenueIcon(self):
@@ -368,14 +369,14 @@ class BibEntry(object):
 		return '???, %s' % self['year'][0]
 	def getCodeLongShort(self):
 		code = ''
-		for tag in ('title','booktitle','series','publisher'):
-			if self[tag] and len(self[tag])==2:
+		for tag in ('title', 'booktitle', 'series', 'publisher'):
+			if self[tag] and len(self[tag]) == 2:
 				code += "$('#"+tag+"').text(this.checked?'%s':'%s');" % tuple(self[tag])
 		return code
 
 
 if __name__ == '__main__':
-	f = open('locations.lst','r')
+	f = open('locations.lst', 'r')
 	locations = f.read().split('\n')
 	f.close()
 	xs = BibLib()
@@ -387,7 +388,7 @@ if __name__ == '__main__':
 			xs += elem
 		elif 'key' in elem.attrib:
 			ks = elem.attrib['key'].split('/')
-			if len(ks)>=3 and ks[0] == 'conf' and ks[1] in map(lambda x:x.lower(),supported.keys()):
+			if len(ks) >= 3 and ks[0] == 'conf' and ks[1] in [z.lower() for z in supported.keys()]:
 				xs += elem
 	for x in xs:
 		# print('I got', x.key)
@@ -395,13 +396,13 @@ if __name__ == '__main__':
 			x.updatewith(xs[x['crossref'][0]])
 			unk.append(xs[x['crossref'][0]]['title'][0])
 	xs.writeHTML()
-	print(len(xs),'bib entries processed.')
+	print(len(xs), 'bib entries processed.')
 	un = []
 	for x in unk:
 		if x not in venuesMap.keys() and x not in venuesMap.values():
 			un.append(x)
-	print(len(un),'unknown venue names.')
-	f = open('venues.lst','w')
+	print(len(un), 'unknown venue names.')
+	f = open('venues.lst', 'w')
 	f.write('\n'.join(un))
 	f.close()
 	confs = []
@@ -419,14 +420,13 @@ if __name__ == '__main__':
 			merged[ven] = [ven]
 		if ven in lost:
 			continue
-		allvenues.append(BibVenue(xs,ven))
+		allvenues.append(BibVenue(xs, ven))
 	for ven in allvenues:
-		f = open('html/%s.html' % ven, 'w')
+		f = open('../bibsleigh.github.io/%s.html' % ven, 'w')
 		f.write(ven.getConfHTML())
 		f.close()
 		confs.append(ven.getNameIcon())
-	print(len(supported),'venues.')
-	f = open('html/index.html','w')
+	print(len(supported), 'venues.')
+	f = open('../bibsleigh.github.io/index.html', 'w')
 	f.write(uberHTML % '\n'.join(sorted(confs)))
 	f.close()
-

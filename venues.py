@@ -1,44 +1,56 @@
 #!/usr/local/bin/python3
+# -*- coding: utf-8 -*-
 
 venuesMap = {
+# Venue: SANER
+'22nd IEEE International Conference on Software Analysis, Evolution, and Reengineering, SANER 2015, Montreal, QC, Canada, March 2-6, 2015':
+	'Proceedings of the 22nd International Conference on Software Analysis, Evolution and Reengineering',
+'2014 Software Evolution Week - IEEE Conference on Software Maintenance, Reengineering, and Reverse Engineering, CSMR-WCRE 2014, Antwerp, Belgium, February 3-6, 2014':
+	'Proceedings of the International Conference on Software Maintenance, Reengineering and Reverse Engineering',
+# Venue: WCRE
 '10th  Working Conference on Reverse Engineering (WCRE 2003), 13-16 November 2003, Victoria, Canada':
 	'Proceedings of the 10th Working Conference on Reverse Engineering',
-'10th European Conference on Software Maintenance and Reengineering (CSMR 2006), 22-24 March 2006, Bari, Italy':
-	'Proceedings of the 10th European Conference on Software Maintenance and Reengineering',
-'11th European Conference on Software Maintenance and Reengineering, Software Evolution in Complex Software Intensive Systems, CSMR 2007, 21-23 March 2007, Amsterdam, The Netherlands':
-	'Proceedings of the 11th European Conference on Software Maintenance and Reengineering',
 '11th Working Conference on Reverse Engineering (WCRE 2004), 8-12 November 2004, Delft, The Netherlands':
 	'Proceedings of the 11th Working Conference on Reverse Engineering',
-'12th European Conference on Software Maintenance and Reengineering, CSMR 2008, April 1-4, 2008, Athens, Greece':
-	'Proceedings of the 12th European Conference on Software Maintenance and Reengineering',
 '12th Working Conference on Reverse Engineering (WCRE 2005), 7-11 November 2005, Pittsburgh, PA, USA':
 	'Proceedings of the 12th Working Conference on Reverse Engineering',
-'13th European Conference on Software Maintenance and Reengineering, CSMR 2009, Architecture-Centric Maintenance of Large-SCale Software Systems, Kaiserslautern, Germany, 24-27 March 2009':
-	'Proceedings of the 13th European Conference on Software Maintenance and Reengineering',
 '13th Working Conference on Reverse Engineering (WCRE 2006), 23-27 October 2006, Benevento, Italy':
 	'Proceedings of the 13th Working Conference on Reverse Engineering',
-'14th European Conference on Software Maintenance and Reengineering, CSMR 2010, 15-18 March 2010, Madrid, Spain':
-	'Proceedings of the 14th European Conference on Software Maintenance and Reengineering',
 '14th Working Conference on Reverse Engineering (WCRE 2007), 28-31 October 2007, Vancouver, BC, Canada':
 	'Proceedings of the 14th Working Conference on Reverse Engineering',
-'15th European Conference on Software Maintenance and Reengineering, CSMR 2011, 1-4 March 2011, Oldenburg, Germany':
-	'Proceedings of the 15th European Conference on Software Maintenance and Reengineering',
-'16th European Conference on Software Maintenance and Reengineering, CSMR 2012, Szeged, Hungary, March 27-30, 2012':
-	'Proceedings of the 16th European Conference on Software Maintenance and Reengineering',
 '16th Working Conference on Reverse Engineering, WCRE 2009, 13-16 October 2009, Lille, France':
 	'Proceedings of the 16th Working Conference on Reverse Engineering',
-'17th European Conference on Software Maintenance and Reengineering, CSMR 2013, Genova, Italy, March 5-8, 2013':
-	'Proceedings of the 17th European Conference on Software Maintenance and Reengineering',
 '17th Working Conference on Reverse Engineering, WCRE 2010, 13-16 October 2010, Beverly, MA, USA':
 	'Proceedings of the 17th Working Conference on Reverse Engineering',
 '18th Working Conference on Reverse Engineering, WCRE 2011, Limerick, Ireland, October 17-20, 2011':
 	'Proceedings of the 18th Working Conference on Reverse Engineering',
 '19th Working Conference on Reverse Engineering, WCRE 2012, Kingston, ON, Canada, October 15-18, 2012':
 	'Proceedings of the 19th Working Conference on Reverse Engineering',
-'1st Euromicro Working Conference on Software Maintenance and Reengineering (CSMR \'97), 17-19 March 1997, Berlin, Germany':
-	'Proceedings of the First Euromicro Working Conference on Software Maintenance and Reengineering',
 '20th Working Conference on Reverse Engineering, WCRE 2013, Koblenz, Germany, October 14-17, 2013':
 	'Proceedings of the 20th Working Conference on Reverse Engineering',
+'9th Working Conference on Reverse Engineering (WCRE 2002), 28 October - 1 November 2002, Richmond, VA, USA':
+	'Proceedings of the Ninth Working Conference on Reverse Engineering',
+'WCRE 2008, Proceedings of the 15th Working Conference on Reverse Engineering, Antwerp, Belgium, October 15-18, 2008':
+	'Proceedings of the 15th Working Conference on Reverse Engineering',
+# Venue: CSMR
+'10th European Conference on Software Maintenance and Reengineering (CSMR 2006), 22-24 March 2006, Bari, Italy':
+	'Proceedings of the 10th European Conference on Software Maintenance and Reengineering',
+'11th European Conference on Software Maintenance and Reengineering, Software Evolution in Complex Software Intensive Systems, CSMR 2007, 21-23 March 2007, Amsterdam, The Netherlands':
+	'Proceedings of the 11th European Conference on Software Maintenance and Reengineering',
+'12th European Conference on Software Maintenance and Reengineering, CSMR 2008, April 1-4, 2008, Athens, Greece':
+	'Proceedings of the 12th European Conference on Software Maintenance and Reengineering',
+'13th European Conference on Software Maintenance and Reengineering, CSMR 2009, Architecture-Centric Maintenance of Large-SCale Software Systems, Kaiserslautern, Germany, 24-27 March 2009':
+	'Proceedings of the 13th European Conference on Software Maintenance and Reengineering',
+'14th European Conference on Software Maintenance and Reengineering, CSMR 2010, 15-18 March 2010, Madrid, Spain':
+	'Proceedings of the 14th European Conference on Software Maintenance and Reengineering',
+'15th European Conference on Software Maintenance and Reengineering, CSMR 2011, 1-4 March 2011, Oldenburg, Germany':
+	'Proceedings of the 15th European Conference on Software Maintenance and Reengineering',
+'16th European Conference on Software Maintenance and Reengineering, CSMR 2012, Szeged, Hungary, March 27-30, 2012':
+	'Proceedings of the 16th European Conference on Software Maintenance and Reengineering',
+'17th European Conference on Software Maintenance and Reengineering, CSMR 2013, Genova, Italy, March 5-8, 2013':
+	'Proceedings of the 17th European Conference on Software Maintenance and Reengineering',
+'1st Euromicro Working Conference on Software Maintenance and Reengineering (CSMR \'97), 17-19 March 1997, Berlin, Germany':
+	'Proceedings of the First Euromicro Working Conference on Software Maintenance and Reengineering',
 '2nd Euromicro Conference on Software Maintenance and Reengineering (CSMR \'98), 8-11 March 1998, Florence, Italy':
 	'Proceedings of the Second Euromicro Conference on Software Maintenance and Reengineering',
 '3rd European Conference on Software Maintenance and Reengineering (CSMR \'99), 3-5 March 1999, Amsterdam, The Netherlands':
@@ -51,8 +63,11 @@ venuesMap = {
 	'Proceedings of the Eighth European Conference on Software Maintenance and Reengineering',
 '9th European Conference on Software Maintenance and Reengineering (CSMR 2005), 21-23 March 2005, Manchester, UK, Proceedings':
 	'Proceedings of the Ninth European Conference on Software Maintenance and Reengineering',
-'9th Working Conference on Reverse Engineering (WCRE 2002), 28 October - 1 November 2002, Richmond, VA, USA':
-	'Proceedings of the Ninth Working Conference on Reverse Engineering',
+# Venue: POPL
+'The 40th Annual ACM SIGPLAN-SIGACT Symposium on Principles of Programming Languages, POPL \'13, Rome, Italy - January 23 - 25, 2013':
+	'Proceedings of the 40th Annual Symposium on Principles of Programming Languages',
+'The 41st Annual ACM SIGPLAN-SIGACT Symposium on Principles of Programming Languages, POPL \'14, San Diego, CA, USA, January 20-21, 2014':
+	'Proceedings of the 41st Symposium on Principles of Programming Languages',
 'Conference Record of POPL 2001: The 28th ACM SIGPLAN-SIGACT Symposium on Principles of Programming Languages, London, UK, January 17-19, 2001':
 	'Conference Record of the 28th Symposium on Principles of Programming Languages',
 'Conference Record of POPL 2002: The 29th SIGPLAN-SIGACT Symposium on Principles of Programming Languages, Portland, OR, USA, January 16-18, 2002':
@@ -107,6 +122,13 @@ venuesMap = {
 	'Conference Record of the 12th Annual Symposium on Principles of Programming Languages',
 'Conference Record of the Twentieth Annual ACM SIGPLAN-SIGACT Symposium on Principles of Programming Languages, Charleston, South Carolina, USA, January 1993':
 	'Conference Record of the 20th Annual Symposium on Principles of Programming Languages',
+'POPL \'98, Proceedings of the 25th ACM SIGPLAN-SIGACT Symposium on Principles of Programming Languages, San Diego, CA, USA, January 19-21, 1998':
+	'Proceedings of the 25th Symposium on Principles of Programming Languages',
+'POPL \'99, Proceedings of the 26th ACM SIGPLAN-SIGACT Symposium on Principles of Programming Languages, San Antonio, TX, USA, January 20-22, 1999':
+	'Proceedings of the 26th Symposium on Principles of Programming Languages',
+'POPL 2000, Proceedings of the 27th ACM SIGPLAN-SIGACT Symposium on Principles of Programming Languages, Boston, Massachusetts, USA, January 19-21, 2000':
+	'Proceedings of the 27th Symposium on Principles of Programming Languages',
+# Venue: GTTSE
 'Generative and Transformational Techniques in Software Engineering II, International Summer School, GTTSE 2007, Braga, Portugal, July 2-7, 2007. Revised Papers':
 	'Revised Papers of the Second International Summer School on Generative and Transformational Techniques in Software Engineering',
 'Generative and Transformational Techniques in Software Engineering III - International Summer School, GTTSE 2009, Braga, Portugal, July 6-11, 2009. Revised Papers':
@@ -115,6 +137,9 @@ venuesMap = {
 	'Revised Papers of the Fourth International Summer School on Generative and Transformational Techniques in Software Engineering',
 'Generative and Transformational Techniques in Software Engineering, International Summer School, GTTSE 2005, Braga, Portugal, July 4-8, 2005. Revised Papers':
 	'Revised Papers of the First International Summer School on Generative and Transformational Techniques in Software Engineering',
+# Venue: MoDELS
+'Model-Driven Engineering Languages and Systems - 17th International Conference, MODELS 2014, Valencia, Spain, September 28 - October 3, 2014. Proceedings':
+	'Proceedings of the 17th International Conference on Model Driven Engineering Languages and Systems',
 'Model Driven Engineering Languages and Systems - 15th International Conference, MODELS 2012, Innsbruck, Austria, September 30-October 5, 2012. Proceedings':
 	'Proceedings of the 15th International Conference on Model Driven Engineering Languages and Systems',
 'Model Driven Engineering Languages and Systems, 10th International Conference, MoDELS 2007, Nashville, USA, September 30 - October 5, 2007, Proceedings':
@@ -131,12 +156,7 @@ venuesMap = {
 	'Proceedings of the Ninth International Conference on Model Driven Engineering Languages and Systems',
 'Model-Driven Engineering Languages and Systems - 16th International Conference, MODELS 2013, Miami, FL, USA, September 29 - October 4, 2013. Proceedings':
 	'Proceedings of the 16th International Conference on Model Driven Engineering Languages and Systems',
-'POPL \'98, Proceedings of the 25th ACM SIGPLAN-SIGACT Symposium on Principles of Programming Languages, San Diego, CA, USA, January 19-21, 1998':
-	'Proceedings of the 25th Symposium on Principles of Programming Languages',
-'POPL \'99, Proceedings of the 26th ACM SIGPLAN-SIGACT Symposium on Principles of Programming Languages, San Antonio, TX, USA, January 20-22, 1999':
-	'Proceedings of the 26th Symposium on Principles of Programming Languages',
-'POPL 2000, Proceedings of the 27th ACM SIGPLAN-SIGACT Symposium on Principles of Programming Languages, Boston, Massachusetts, USA, January 19-21, 2000':
-	'Proceedings of the 27th Symposium on Principles of Programming Languages',
+# Venue: SAC
 'Proceedings of the 2003 ACM Symposium on Applied Computing (SAC), March 9-12, 2003, Melbourne, FL, USA':
 	'Proceedings of the 18th Symposium on Applied Computing',
 'Proceedings of the 2004 ACM Symposium on Applied Computing (SAC), Nicosia, Cyprus, March 14-17, 2004':
@@ -177,6 +197,9 @@ venuesMap = {
 	'Proceedings of the 39th Symposium on Principles of Programming Languages',
 'Proceedings of the ACM Symposium on Applied Computing, SAC 2012, Riva, Trento, Italy, March 26-30, 2012':
 	'Proceedings of the 27th Symposium on Applied Computing',
+# Venue: SLE
+'Software Language Engineering - 7th International Conference, SLE 2014, Västerås, Sweden, September 15-16, 2014. Proceedings':
+	'Proceedings of the Seventh International Conference on Software Language Engineering',
 'Software Language Engineering - 4th International Conference, SLE 2011, Braga, Portugal, July 3-4, 2011, Revised Selected Papers':
 	'Revised Selected Papers of the Fourth International Conference on Software Language Engineering',
 'Software Language Engineering - 6th International Conference, SLE 2013, Indianapolis, IN, USA, October 26-28, 2013. Proceedings':
@@ -189,12 +212,7 @@ venuesMap = {
 	'Revised Selected Papers of the First International Conference on Software Language Engineering',
 'Software Language Engineering, Second International Conference, SLE 2009, Denver, CO, USA, October 5-6, 2009, Revised Selected Papers':
 	'Revised Selected Papers of the Second International Conference on Software Language Engineering',
-'The 40th Annual ACM SIGPLAN-SIGACT Symposium on Principles of Programming Languages, POPL \'13, Rome, Italy - January 23 - 25, 2013':
-	'Proceedings of the 40th Annual Symposium on Principles of Programming Languages',
-'The 41st Annual ACM SIGPLAN-SIGACT Symposium on Principles of Programming Languages, POPL \'14, San Diego, CA, USA, January 20-21, 2014':
-	'Proceedings of the 41st Symposium on Principles of Programming Languages',
-'WCRE 2008, Proceedings of the 15th Working Conference on Reverse Engineering, Antwerp, Belgium, October 15-18, 2008':
-	'Proceedings of the 15th Working Conference on Reverse Engineering',
+# Venue: OOPSLA
 'Conference on Object-Oriented Programming Systems, Languages, and Applications (OOPSLA\'86), Portland, Oregon, Proceedings':
 	'Proceedings of the First Conference on Object-Oriented Programming Systems, Languages, and Applications',
 'Conference on Object-Oriented Programming Systems, Languages, and Applications (OOPSLA\'87), Orlando, Florida, USA, October 4-8, 1987, Proceedings':
@@ -249,6 +267,7 @@ venuesMap = {
 	'Proceedings of the 26th Annual Conference on Object-Oriented Programming, Systems, Languages, and Applications',
 'Proceedings of the 27th Annual ACM SIGPLAN Conference on Object-Oriented Programming, Systems, Languages, and Applications, OOPSLA 2012, part of SPLASH 2012, Tucson, AZ, USA, October 21-25, 2012':
 	'Proceedings of the 27th Annual Conference on Object-Oriented Programming, Systems, Languages, and Applications',
+# Venue: ICSME
 '18th International Conference on Software Maintenance (ICSM 2002), Maintaining Distributed Heterogeneous Systems, 3-6 October 2002, Montreal, Quebec, Canada':
 	'Proceedings of the 18th International Conference on Software Maintenance',
 '1996 International Conference on Software Maintenance (ICSM \'96), 4-8 November 1996, Monterey, CA, USA, Proceedings':

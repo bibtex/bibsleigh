@@ -6,6 +6,9 @@ run:
 	./newvenues.py
 	rm -f venues.unq
 
+prep: dblp.xml
+	./deentitify dblp.xml
+
 clean:
 	rm -rf html
 	mkdir html
