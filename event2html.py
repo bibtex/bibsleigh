@@ -1,4 +1,5 @@
 #!/usr/local/bin/python3
+# -*- coding: utf-8 -*-
 
 import os, sys, glob
 from template import uberHTML, confHTML, bibHTML, hyper_series
@@ -59,16 +60,20 @@ def getAllOfTypeS(t,dct):
 def json2bib(d):
 	s = '@%s{%s,\n' % (d['type'], d['FILE'].split('/')[-1].replace('.json',''))
 	for k in d.keys():
-		if k == k.upper():
+		if k == k.upper() or k.endswith('short'):
 			# secret key
 			continue
 		if k in ('author', 'editor'):
-			s += '\t%-10s = "%s",\n' % (k,' and '.join(d[k]))
-		elif k in ('title', 'booktitle', 'series', 'publisher'):
-			if len(d[k])==1:
-				s += '\t%-10s = "{%s}",\n' % (k,d[k])
+			if type(d[k]) == type([]):
+				l = d[k]
 			else:
-				s += '\t%-10s = "{<span id="%s">%s</span>}",\n' % (k,k,d[k])
+				l = [d[k]]
+			s += '\t%-10s = "%s",\n' % (k,' and '.join(l))
+		elif k in ('title', 'booktitle', 'series', 'publisher'):
+			if k+'short' not in d.keys():
+				s += '\t%-10s = "{%s}",\n' % (k, d[k])
+			else:
+				s += '\t%-10s = "{<span id="%s">%s</span>}",\n' % (k, k, d[k])
 		elif k in ('ee','crossref','key'):
 			pass
 		elif k == 'doi':
@@ -81,20 +86,48 @@ def json2bib(d):
 	return s.replace('<i>','\\emph{').replace('</i>','}')
 
 def json2authors(d):
-	if 'author' in d.keys() and d['author']:
-		return ', '.join(d['author'])
-	elif 'editor' in d.keys() and d['editor']:
-		return ', '.join(d['editor'])+' (editors)'
+	e = ''
+	if 'author' in d.keys():
+		if type(d['author']) == type([]):
+			l = d['author']
+		else:
+			l = [d['author']]
+	elif 'editor' in d.keys():
+		if type(d['editor']) == type([]):
+			l = d['editor']
+			e = ' (editors)'
+		else:
+			l = [d['editor']]
+			e = ' (editor)'
 	else:
 		print('ERROR: neither authors nor editor in', d)
-		return ''
+		l = []
+		e = '(ERROR)'
+	return ', '.join(l) + e
 
 def json2codelong(d):
 	code = ''
 	for tag in ('title', 'booktitle', 'series', 'publisher'):
-		if tag in d.keys() and len(d[tag]) == 2:
-			code += "$('#"+tag+"').text(this.checked?'%s':'%s');" % tuple(d[tag])
+		if tag in d.keys() and tag+'short' in d.keys():
+			code += "$('#"+tag+"').text(this.checked?'%s':'%s');" % (d[tag], d[tag+'short'])
 	return code
+
+def json2contents(d):
+	# if not self.linked:
+	# 	return ''
+	items = {}
+	for link in d.linked:
+		if link['pages'] and link['pages'][0].split('-')[0].isdigit():
+			p = int(link['pages'][0].split('-')[0])
+			pp = ', pp. ' + link['pages'][0].replace('--','–')
+		else:
+			p = 0
+			pp = ''
+			while p in items.keys():
+				p -= 1
+		items[p] = '<dt><a href="%s.html">%s</a></dt><dd>%s (%s)%s.</dd>' % (link['key'], link['key'], link.getTitleHTML(), link.getAuthorsShortHTML(), pp)
+	return ('<h3>Contents (%s items)</h3><dl class="toc">' % len(items))+ ''.join([items[i] for i in sorted(items.keys())]) + '</dl>'
+
 
 def json2html(d):
 	if 'booktitle' in d.keys() and d['booktitle']:
@@ -139,6 +172,7 @@ if __name__ == "__main__":
 				gcx += 1
 				eddict[last(pub)] = parseJSON(pub)
 			procs = {}
+			linked = {}
 			for json in getAllOfType('proceedings', eddict):
 				# print('Candidate name:',json['title'])
 				procs[json['title']] = last(json['FILE'])
