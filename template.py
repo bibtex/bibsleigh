@@ -33,8 +33,8 @@ bibHTML = header+'''
 	<!-- (a link to bibSLEIGH)<br/> -->
 	<a href="index.html"><img src="stuff/%s.png" alt="%s" title="%s" class="pad"/></a><br/>
 	<!-- (a link to edit)<br/> -->
-	<a href="http://creativecommons.org/licenses/by-sa/3.0/" title="CC-BY-SA"><img src="stuff/cc-by-sa.png" alt="CC-BY-SA"/></a><br/>
-	<a href="http://creativecommons.org/licenses/by-sa/3.0/" title="Open Knowledge"><img src="stuff/open-knowledge.png" alt="Open Knowledge" class="pad" /></a><br/>
+	<a href="http://creativecommons.org/licenses/by/4.0/" title="CC-BY"><img src="stuff/cc-by.png" alt="CC-BY"/></a><br/>
+	<a href="http://opendatacommons.org/licenses/by/summary/" title="Open Knowledge"><img src="stuff/open-knowledge.png" alt="Open Knowledge" class="pad" /></a><br/>
 	<a href="http://validator.w3.org/check/referer" title="XHTML 1.0 W3C Rec"><img src="stuff/xhtml10.png" alt="XHTML 1.0 W3C Rec" /></a><br/>
 	<a href="http://jigsaw.w3.org/css-validator/check/referer" title="CSS 2.1 W3C CanRec"><img src="stuff/css21.png" alt="CSS 2.1 W3C CanRec" class="pad" /></a><br/>
 	<div>[<a href="mailto:vadim@grammarware.net">Complain!</a>]</div>
@@ -69,11 +69,11 @@ bibHTML = header+'''
 # 	self.toBIB(),
 # 	self.contentsHTML()))
 def hyper_entry(title, vshort, authors, venue, code, bib, lst):
-	if os.path.exists('deploy/brand/'+vshort+'.png'):
-		icon = 'deploy/brand/'+vshort+'.png'
+	if os.path.exists('../frontend2/stuff/'+vshort+'.png'):
+		icon = 'stuff/'+vshort+'.png'
 	else:
 		# TODO: more steps back in this heuristic
-		icon = 'deploy/www/bibsleigh.png'
+		icon = 'stuff/bibsleigh.png'
 	return bibHTML % (
 		title.replace('<i>','').replace('</i>',''),
 		icon,
@@ -91,8 +91,8 @@ confHTML = header+'''
 	<!-- (a link to bibSLEIGH)<br/> -->
 	<a href="index.html"><img src="stuff/%s.png" alt="%s" title="%s" class="pad"/></a><br/>
 	<!-- (a link to edit)<br/> -->
-	<a href="http://creativecommons.org/licenses/by-sa/3.0/" title="CC-BY-SA"><img src="stuff/cc-by-sa.png" alt="CC-BY-SA"/></a><br/>
-	<a href="http://creativecommons.org/licenses/by-sa/3.0/" title="Open Knowledge"><img src="stuff/open-knowledge.png" alt="Open Knowledge" class="pad" /></a><br/>
+	<a href="http://creativecommons.org/licenses/by/4.0/" title="CC-BY"><img src="stuff/cc-by.png" alt="CC-BY"/></a><br/>
+	<a href="http://opendatacommons.org/licenses/by/summary/" title="Open Knowledge"><img src="stuff/open-knowledge.png" alt="Open Knowledge" class="pad" /></a><br/>
 	<a href="http://validator.w3.org/check/referer" title="XHTML 1.0 W3C Rec"><img src="stuff/xhtml10.png" alt="XHTML 1.0 W3C Rec" /></a><br/>
 	<a href="http://jigsaw.w3.org/css-validator/check/referer" title="CSS 2.1 W3C CanRec"><img src="stuff/css21.png" alt="CSS 2.1 W3C CanRec" class="pad" /></a><br/>
 	<div>[<a href="mailto:vadim@grammarware.net">Complain!</a>]</div>
@@ -106,9 +106,9 @@ confHTML = header+'''
 def hyper_series(ser, lng, eds):
 	return confHTML % (
 		ser,
-		('brand/%s.png' % ser)
-			if os.path.exists('deploy/brand/%s.png' % ser)
-			else 'www/bibsleigh.png',
+		ser.lower()
+			if os.path.exists('../frontend2/stuff/%s.png' % ser)
+			else 'stuff/bibsleigh.png',
 		ser,
 		lng,
 		('%s (%s)' % (lng,ser)),
@@ -117,8 +117,8 @@ def hyper_series(ser, lng, eds):
 
 uberHTML = (header % 'Bibliography of Software Language Engineering in Generated Hypertext')+'''
 	<a href="index.html"><img src="stuff/bibsleigh.png" alt="BibSLEIGH" title="BibSLEIGH" class="pad"/></a><br/>
-	<a href="http://creativecommons.org/licenses/by-sa/3.0/" title="CC-BY-SA"><img src="stuff/cc-by-sa.png" alt="CC-BY-SA"/></a><br/>
-	<a href="http://creativecommons.org/licenses/by-sa/3.0/" title="Open Knowledge"><img src="stuff/open-knowledge.png" alt="Open Knowledge" class="pad" /></a><br/>
+	<a href="http://creativecommons.org/licenses/by/4.0/" title="CC-BY"><img src="stuff/cc-by.png" alt="CC-BY"/></a><br/>
+	<a href="http://opendatacommons.org/licenses/by/summary/" title="Open Knowledge"><img src="stuff/open-knowledge.png" alt="Open Knowledge" class="pad" /></a><br/>
 	<a href="http://validator.w3.org/check/referer" title="XHTML 1.0 W3C Rec"><img src="stuff/xhtml10.png" alt="XHTML 1.0 W3C Rec" /></a><br/>
 	<a href="http://jigsaw.w3.org/css-validator/check/referer" title="CSS 2.1 W3C CanRec"><img src="stuff/css21.png" alt="CSS 2.1 W3C CanRec" class="pad" /></a><br/>
 	<div>[<a href="mailto:vadim@grammarware.net">Complain!</a>]</div>

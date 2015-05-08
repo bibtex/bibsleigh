@@ -110,7 +110,7 @@ class BibLib(object):
 		return self.xs.__iter__()
 	def writeHTML(self):
 		for x in self.xs:
-			fn = '../bibsleigh.github.io/%s.html' % x['key']
+			fn = '../frontend/%s.html' % x['key']
 			x.writeHTML(fn)
 
 class BibEntry(object):
@@ -309,7 +309,7 @@ class BibEntry(object):
 			self.dict['booktitle'] = [xref.dict['title'][0]]
 		self.sanitize()
 	def writeHTML(self,fs):
-		fs = fs.replace('/','-').replace('..-bibsleigh.github.io-','../bibsleigh.github.io/')
+		fs = fs.replace('/','-').replace('..-frontend-','../frontend/')
 		h = open(fs,'w',encoding='utf-8')
 		h.write(bibHTML %
 			(self.getTitleTXT(),
@@ -323,9 +323,9 @@ class BibEntry(object):
 			self.toBIB(),
 			self.contentsHTML()))
 		h.close()
-		# h = open(fs.replace("html","json").replace("../bibsleigh.github.io","json"),'w',encoding='utf-8')
-		# h.write(self.toJSON())
-		# h.close()
+		h = open(fs.replace("../frontend/","json/").replace(".html",".json"),'w',encoding='utf-8')
+		h.write(self.toJSON())
+		h.close()
 	def getVenueShort(self):
 		if self['booktitle'] and self['booktitle'][-1] in supported.keys():
 			return supported[self['booktitle'][-1]]

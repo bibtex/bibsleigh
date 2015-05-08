@@ -108,7 +108,7 @@ if __name__ == "__main__":
 				if json['booktitle'] in procs.keys():
 					pass
 				else:
-					print('	(Unexprected name: %s)'%json['booktitle'])
+					print('	(Unexpected name: %s)'%json['booktitle'])
 					procs[json['booktitle']] = ''
 					if json['year'] not in eds.keys():
 						eds[json['year']] = []
@@ -117,13 +117,13 @@ if __name__ == "__main__":
 				if not procs[tit]:
 					print('		Orphaned all papers of ',tit)
 					continue
-				f = open('deploy/'+procs[tit]+'.html','w')
+				f = open('../frontend2/'+procs[tit]+'.html','w')
 				f.write('NOT GENERATED')
 				f.close()
 			# for k in eds.keys():
 			# 	eds[k] = '\n'.join(['<dd>%s</dd>' % e for e in eds[k]])
 			print('	%s: %s papers' % (last(run),cx))
-			# f = open('deploy/'+conf.lower()+'/'+last(run)+'.html','w')
+			# f = open('frontend2/'+conf.lower()+'/'+last(run)+'.html','w')
 			# f.write(confHTML % (
 			# 	conf,
 			# 	conf.lower(),
@@ -132,7 +132,7 @@ if __name__ == "__main__":
 			# 	'%s (%s)' % ('Full venue name', conf),
 			# 	'papers be here'))
 			# f.close()
-		f = open('deploy/'+conf+'.html','w')
+		f = open('../frontend2/'+conf+'.html', 'w')
 		f.write(hyper_series(conf,supported[conf],
 			'\n'.join(['<dt>%s</dt>%s' % (y,'\n'.join(['<dd>%s</dd>' % e for e in eds[y]])) for y in sorted(eds.keys())])
 		))
@@ -144,9 +144,9 @@ if __name__ == "__main__":
 			GCX += gcx
 	if GCX:
 		print('[%s papers total]' % GCX)
-	f = open('deploy/index.html','w')
+	f = open('../frontend2/index.html', 'w')
 	f.write(uberHTML % '\n'.join([
-		'<div class="pic"><a href="%s.html" title="%l"><img src="brand/%s.png" alt="%s"><br/>%s</a></div>'.replace('%s',conf).replace('%l',supported[conf])
+		'<div class="pic"><a href="%s.html" title="%l"><img src="stuff/%s.png" alt="%s"><br/>%s</a></div>'.replace('%s',conf).replace('%l',supported[conf])
 		for conf in allconfs]))
 	f.close()
 	sys.exit(0)
