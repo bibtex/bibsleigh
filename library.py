@@ -56,13 +56,8 @@ class BibVenue(object):
 				s += '<dd><a href="%s.html">%s</a> (%s %s)</dd>' % (x['key'],x.getTitleHTML(), x['VENUE'], x['YEAR'])
 		return s
 	def getConfHTML(self):
-		return confHTML % (
-			self.sup,
-			self.ven.lower(),
-			self.sup,
-			self.sup,
-			'%s (%s)' % (self.sup, self.ven),
-			ven.getHTML())
+		cname = '%s (%s)' % (self.sup, self.ven)
+		return confHTML.format(img=self.ven.lower(), title=self.sup, fname=cname, dl=ven.getHTML())
 	def getNameIcon(self):
 		return '<div class="pic"><a href="%s.html" title="%s"><img src="stuff/%s.png" alt="%s"><br/>%s</a></div>' % (
 			self.ven,
@@ -323,9 +318,9 @@ class BibEntry(object):
 			self.toBIB(),
 			self.contentsHTML()))
 		h.close()
-		h = open(fs.replace("../frontend/","json/").replace(".html",".json"),'w',encoding='utf-8')
-		h.write(self.toJSON())
-		h.close()
+		# h = open(fs.replace("../frontend/","json/").replace(".html",".json"),'w',encoding='utf-8')
+		# h.write(self.toJSON())
+		# h.close()
 	def getVenueShort(self):
 		if self['booktitle'] and self['booktitle'][-1] in supported.keys():
 			return supported[self['booktitle'][-1]]

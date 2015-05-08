@@ -1,7 +1,7 @@
 #!/usr/local/bin/python3
 
 import os, sys, glob
-from template import uberHTML, confHTML, hyper_series
+from template import uberHTML, confHTML, bibHTML, hyper_series
 from supported import supported
 
 def last(x):
@@ -57,25 +57,66 @@ def getAllOfTypeS(t,dct):
 	return [dct[k][j] for k in dct.keys() for j in dct[k].keys() if "type" in dct[k][j].keys() and dct[k][j]["type"]==t]
 
 def json2bib(d):
-		s = '@%s{%s,\n' % (d['type'], d['FILE'].replace('.json',''))
-		for k in d.keys():
-			if k in ('author', 'editor'):
-				s += '\t%-10s = "%s",\n' % (k,' and '.join(self.dict[k]))
-			elif k in ('title', 'booktitle', 'series', 'publisher'):
-				if len(self.dict[k])==1:
-					s += '\t%-10s = "{%s}",\n' % (k,self.dict[k][0])
-				else:
-					s += '\t%-10s = "{<span id="%s">%s</span>}",\n' % (k,k,self.dict[k][0])
-			elif k in ('ee','crossref','key'):
-				pass
-			elif k == 'doi':
-				s += '<span id="doi">\t%-10s = "<a href="http://dx.doi.org/%s">%s</a>",\n</span>' % (k,self.dict[k][0],self.dict[k][0])
-			elif k == 'isbn':
-				s += '<span id="isbn">\t%-10s = "%s",\n</span>' % (k,self.dict[k][0])
+	s = '@%s{%s,\n' % (d['type'], d['FILE'].split('/')[-1].replace('.json',''))
+	for k in d.keys():
+		if k == k.upper():
+			# secret key
+			continue
+		if k in ('author', 'editor'):
+			s += '\t%-10s = "%s",\n' % (k,' and '.join(d[k]))
+		elif k in ('title', 'booktitle', 'series', 'publisher'):
+			if len(d[k])==1:
+				s += '\t%-10s = "{%s}",\n' % (k,d[k])
 			else:
-				s += '\t%-10s = "%s",\n' % (k,self.dict[k][0])
-		s += '}'
-		return s.replace('<i>','\\emph{').replace('</i>','}')
+				s += '\t%-10s = "{<span id="%s">%s</span>}",\n' % (k,k,d[k])
+		elif k in ('ee','crossref','key'):
+			pass
+		elif k == 'doi':
+			s += '<span id="doi">\t%-10s = "<a href="http://dx.doi.org/%s">%s</a>",\n</span>' % (k,d[k],d[k])
+		elif k == 'isbn':
+			s += '<span id="isbn">\t%-10s = "%s",\n</span>' % (k,d[k])
+		else:
+			s += '\t%-10s = "%s",\n' % (k,d[k])
+	s += '}'
+	return s.replace('<i>','\\emph{').replace('</i>','}')
+
+def json2authors(d):
+	if 'author' in d.keys() and d['author']:
+		return ', '.join(d['author'])
+	elif 'editor' in d.keys() and d['editor']:
+		return ', '.join(d['editor'])+' (editors)'
+	else:
+		print('ERROR: neither authors nor editor in', d)
+		return ''
+
+def json2codelong(d):
+	code = ''
+	for tag in ('title', 'booktitle', 'series', 'publisher'):
+		if tag in d.keys() and len(d[tag]) == 2:
+			code += "$('#"+tag+"').text(this.checked?'%s':'%s');" % tuple(d[tag])
+	return code
+
+def json2html(d):
+	if 'booktitle' in d.keys() and d['booktitle']:
+		if d['booktitle'][-1] in supported.keys():
+			vshort = supported[d['booktitle'][-1]]
+		else:
+			vshort = '%s, %s' % (d['booktitle'], d['year'])
+	else:
+		vshort = '???, %s' % d['year']
+	return bibHTML % \
+		(
+			d['title'].replace('<i>', '').replace('</i>', ''),
+			d['booktitle'].lower() if 'booktitle' in d.keys() else '',
+			vshort,
+			vshort,
+			json2authors(d),
+			d['title'],
+			'%s, %s' % (d['booktitle'], d['year']) if 'booktitle' in d.keys() else '',
+			json2codelong(d),
+			json2bib(d),
+			'NOT GENERATED' #self.contentsHTML())
+		)
 
 if __name__ == "__main__":
 	GCX = 0
@@ -98,13 +139,13 @@ if __name__ == "__main__":
 				gcx += 1
 				eddict[last(pub)] = parseJSON(pub)
 			procs = {}
-			for json in getAllOfType('proceedings',eddict):
+			for json in getAllOfType('proceedings', eddict):
 				# print('Candidate name:',json['title'])
 				procs[json['title']] = last(json['FILE'])
 				if json['year'] not in eds.keys():
 					eds[json['year']] = []
 				eds[json['year']].append('<a href="%s.html">%s</a> (%s)' % (last(json['FILE']),json['title'],last(json['FILE']).replace('-',' ') ))
-			for json in getAllOfType('inproceedings',eddict):
+			for json in getAllOfType('inproceedings', eddict):
 				if json['booktitle'] in procs.keys():
 					pass
 				else:
@@ -115,10 +156,13 @@ if __name__ == "__main__":
 					eds[json['year']].append(json['booktitle'])
 			for tit in procs.keys():
 				if not procs[tit]:
-					print('		Orphaned all papers of ',tit)
+					print('		Orphaned all papers of ', tit)
 					continue
-				f = open('../frontend2/'+procs[tit]+'.html','w')
-				f.write('NOT GENERATED')
+				f = open('../frontend2/'+procs[tit]+'.html', 'w')
+				# f.write('NOT GENERATED of %s | %s | %s' % (tit, procs[tit], eddict[procs[tit]]))
+				f.write(json2html(eddict[procs[tit]]))
+				# cname = '%s (%s)' % (self.sup, self.ven)
+				# f.write(confHTML.format(img=self.ven.lower(), title=self.sup, fname=cname, dl=ven.getHTML()))
 				f.close()
 			# for k in eds.keys():
 			# 	eds[k] = '\n'.join(['<dd>%s</dd>' % e for e in eds[k]])
@@ -134,7 +178,7 @@ if __name__ == "__main__":
 			# f.close()
 		f = open('../frontend2/'+conf+'.html', 'w')
 		f.write(hyper_series(conf,supported[conf],
-			'\n'.join(['<dt>%s</dt>%s' % (y,'\n'.join(['<dd>%s</dd>' % e for e in eds[y]])) for y in sorted(eds.keys())])
+			'\n'.join(['<dt>%s</dt>%s' % (y,'\n'.join(['<dd>%s</dd>' % e for e in eds[y]])) for y in reversed(sorted(eds.keys()))])
 		))
 		f.close()
 		if ocx:

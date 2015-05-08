@@ -87,9 +87,9 @@ def hyper_entry(title, vshort, authors, venue, code, bib, lst):
 		lst
 		)
 
-confHTML = header+'''
+confHTML = header.replace('%s','{title}')+'''
 	<!-- (a link to bibSLEIGH)<br/> -->
-	<a href="index.html"><img src="stuff/%s.png" alt="%s" title="%s" class="pad"/></a><br/>
+	<a href="index.html"><img src="stuff/{img}.png" alt="{title}" title="{title}" class="pad"/></a><br/>
 	<!-- (a link to edit)<br/> -->
 	<a href="http://creativecommons.org/licenses/by/4.0/" title="CC-BY"><img src="stuff/cc-by.png" alt="CC-BY"/></a><br/>
 	<a href="http://opendatacommons.org/licenses/by/summary/" title="Open Knowledge"><img src="stuff/open-knowledge.png" alt="Open Knowledge" class="pad" /></a><br/>
@@ -98,22 +98,25 @@ confHTML = header+'''
 	<div>[<a href="mailto:vadim@grammarware.net">Complain!</a>]</div>
 </div>
 <div class="main">
-<h2>%s</h2>
+<h2>{fname}</h2>
 <h3>Editions:</h3>
-<dl>%s</dl>
+<dl>{dl}</dl>
 '''+footer
 
 def hyper_series(ser, lng, eds):
-	return confHTML % (
-		ser,
-		ser.lower()
-			if os.path.exists('../frontend2/stuff/%s.png' % ser)
-			else 'stuff/bibsleigh.png',
-		ser,
-		lng,
-		('%s (%s)' % (lng,ser)),
-		''.join(eds)
-		)
+	# ltitle=lng
+	img = ser.lower() if os.path.exists('../frontend2/stuff/%s.png' % ser) else 'stuff/bibsleigh.png'
+	return confHTML.format(title=ser, img=img, fname=('{} ({})'.format(lng, ser)), dl=''.join(eds))
+	# return confHTML % (
+	# 	ser,
+	# 	ser.lower()
+	# 		if os.path.exists('../frontend2/stuff/%s.png' % ser)
+	# 		else 'stuff/bibsleigh.png',
+	# 	ser,
+	# 	lng,
+	# 	('%s (%s)' % (lng,ser)),
+	# 	''.join(eds)
+	# 	)
 
 uberHTML = (header % 'Bibliography of Software Language Engineering in Generated Hypertext')+'''
 	<a href="index.html"><img src="stuff/bibsleigh.png" alt="BibSLEIGH" title="BibSLEIGH" class="pad"/></a><br/>
