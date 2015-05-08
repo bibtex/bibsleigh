@@ -56,6 +56,36 @@ bibHTML = header+'''
 %s
 '''+footer
 
+# h.write(bibHTML %
+# 	(self.getTitleTXT(),
+# 	self.getVenueIcon(),
+# 	self.getVenueShort(),
+# 	self.getVenueShort(),
+# 	self.getAuthorsHTML(),
+# 	self.getTitleHTML(),
+# 	self.getVenueHTML(),
+# 	self.getCodeLongShort(),
+# 	self.toBIB(),
+# 	self.contentsHTML()))
+def hyper_entry(title, vshort, authors, venue, code, bib, lst):
+	if os.path.exists('deploy/brand/'+vshort+'.png'):
+		icon = 'deploy/brand/'+vshort+'.png'
+	else:
+		# TODO: more steps back in this heuristic
+		icon = 'deploy/www/bibsleigh.png'
+	return bibHTML % (
+		title.replace('<i>','').replace('</i>','')
+		icon,
+		vshort,
+		vshort,
+		authors,
+		title,
+		venue,
+		code,
+		bib,
+		lst
+		)
+
 confHTML = header+'''
 	<!-- (a link to bibSLEIGH)<br/> -->
 	<a href="index.html"><img src="%s" alt="%s" title="%s" class="pad"/></a><br/>
@@ -79,13 +109,13 @@ def hyper_series(ser, lng, eds):
 			if os.path.exists('deploy/brand/%s.png' % ser)
 			else 'www/bibsleigh.png',
 		ser,
-		ser,
+		lng,
 		('%s (%s)' % (lng,ser)),
 		''.join(eds)
 		)
 
 uberHTML = (header % 'Bibliography of Software Language Engineering in Generated Hypertext')+'''
-	<a href="index.html"><img src="../www/bibsleigh.png" alt="BibSLEIGH" title="BibSLEIGH" class="pad"/></a><br/>
+	<a href="index.html"><img src="www/bibsleigh.png" alt="BibSLEIGH" title="BibSLEIGH" class="pad"/></a><br/>
 	<a href="http://creativecommons.org/licenses/by-sa/3.0/" title="CC-BY-SA"><img src="../www/cc-by-sa.png" alt="CC-BY-SA"/></a><br/>
 	<a href="http://creativecommons.org/licenses/by-sa/3.0/" title="Open Knowledge"><img src="../www/open-knowledge.png" alt="Open Knowledge" class="pad" /></a><br/>
 	<a href="http://validator.w3.org/check/referer" title="XHTML 1.0 W3C Rec"><img src="../www/xhtml10.png" alt="XHTML 1.0 W3C Rec" /></a><br/>

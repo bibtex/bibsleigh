@@ -1,7 +1,7 @@
 #!/usr/local/bin/python3
 
 import os, sys, glob
-from template import confHTML, hyper_series
+from template import uberHTML, confHTML, hyper_series
 from supported import supported
 
 def last(x):
@@ -56,11 +56,34 @@ def getAllOfType(t,dct):
 def getAllOfTypeS(t,dct):
 	return [dct[k][j] for k in dct.keys() for j in dct[k].keys() if "type" in dct[k][j].keys() and dct[k][j]["type"]==t]
 
+def json2bib(d):
+		s = '@%s{%s,\n' % (d['type'], d['FILE'].replace('.json',''))
+		for k in d.keys():
+			if k in ('author', 'editor'):
+				s += '\t%-10s = "%s",\n' % (k,' and '.join(self.dict[k]))
+			elif k in ('title', 'booktitle', 'series', 'publisher'):
+				if len(self.dict[k])==1:
+					s += '\t%-10s = "{%s}",\n' % (k,self.dict[k][0])
+				else:
+					s += '\t%-10s = "{<span id="%s">%s</span>}",\n' % (k,k,self.dict[k][0])
+			elif k in ('ee','crossref','key'):
+				pass
+			elif k == 'doi':
+				s += '<span id="doi">\t%-10s = "<a href="http://dx.doi.org/%s">%s</a>",\n</span>' % (k,self.dict[k][0],self.dict[k][0])
+			elif k == 'isbn':
+				s += '<span id="isbn">\t%-10s = "%s",\n</span>' % (k,self.dict[k][0])
+			else:
+				s += '\t%-10s = "%s",\n' % (k,self.dict[k][0])
+		s += '}'
+		return s.replace('<i>','\\emph{').replace('</i>','}')
+
 if __name__ == "__main__":
 	GCX = 0
+	allconfs = []
 	for top in glob.glob('bibdata/*'):
 		conf = last(top)
 		print('%s conference found' % conf)
+		allconfs.append(conf)
 		ocx = 0
 		gcx = 0
 		eds = {}
@@ -76,7 +99,7 @@ if __name__ == "__main__":
 				eddict[last(pub)] = parseJSON(pub)
 			procs = {}
 			for json in getAllOfType('proceedings',eddict):
-				print('Candidate name:',json['title'])
+				# print('Candidate name:',json['title'])
 				procs[json['title']] = last(json['FILE'])
 				if json['year'] not in eds.keys():
 					eds[json['year']] = []
@@ -85,11 +108,18 @@ if __name__ == "__main__":
 				if json['booktitle'] in procs.keys():
 					pass
 				else:
-					print('Alt. candidate name:',json['booktitle'])
+					print('	(Unexprected name: %s)'%json['booktitle'])
 					procs[json['booktitle']] = ''
 					if json['year'] not in eds.keys():
 						eds[json['year']] = []
-					eds[json['year']].append(json['title'])
+					eds[json['year']].append(json['booktitle'])
+			for tit in procs.keys():
+				if not procs[tit]:
+					print('		Orphaned all papers of ',tit)
+					continue
+				f = open('deploy/'+procs[tit]+'.html','w')
+				f.write('NOT GENERATED')
+				f.close()
 			# for k in eds.keys():
 			# 	eds[k] = '\n'.join(['<dd>%s</dd>' % e for e in eds[k]])
 			print('	%s: %s papers' % (last(run),cx))
@@ -114,4 +144,9 @@ if __name__ == "__main__":
 			GCX += gcx
 	if GCX:
 		print('[%s papers total]' % GCX)
+	f = open('deploy/index.html','w')
+	f.write(uberHTML % '\n'.join([
+		'<div class="pic"><a href="%s.html" title="%l"><img src="brand/%s.png" alt="%s"><br/>%s</a></div>'.replace('%s',conf).replace('%l',supported[conf])
+		for conf in allconfs]))
+	f.close()
 	sys.exit(0)
