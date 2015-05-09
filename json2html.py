@@ -1,21 +1,26 @@
 #!/usr/local/bin/python3
 # -*- coding: utf-8 -*-
 
-import os, sys, glob
-from template import uberHTML, confHTML, bibHTML, hyper_series
-from supported import supported
+import os.path, glob
+from template import confHTML
+# import os, sys, glob
+# from template import uberHTML, confHTML, bibHTML, hyper_series
+# from supported import supported
 
-def last(x):
-	return x.split('/')[-1].replace('.json', '')
+inputdir  = '../bibtest'
+outputdir = '../frontend3'
 
-def parent(x):
-	return x[:x.rfind('/')]
-	# return x.split('/')[-1].replace('.json', '')
+def last(xx):
+	return xx.split('/')[-1].replace('.json', '')
+
+def parent(xx):
+	return xx[:xx.rfind('/')]
+	# return xx.split('/')[-1].replace('.json', '')
 
 def parseJSON(fn):
 	dct = {}
-	f = open(fn, 'r')
-	for line in f.readlines():
+	f1 = open(fn, 'r')
+	for line in f1.readlines():
 		line = line.strip()
 		if line in ('{', '}', ''):
 			continue
@@ -25,16 +30,16 @@ def parseJSON(fn):
 		elif len(perq) == 3 and perq[1] == 'year':
 			dct[perq[1]] = int(perq[-1][2:-1])
 		elif len(perq) > 5:
-			dct[perq[1]] = [x for x in perq[3:-1] if x != ', ']
+			dct[perq[1]] = [z for z in perq[3:-1] if z != ', ']
 		else:
 			print('Skipped line', line, 'in', fn)
-	f.close()
+	f1.close()
 	dct['FILE'] = fn
 	return dct
 
 def traverseDir(d, s, b):
 	for f in glob.glob(d+'/*'):
-		cnf = last(f)
+		# cnf = last(f)
 		if os.path.isdir(f):
 			# print('{}{} conference found'.format(s, cnf))
 			b[f] = {'FILE':f}
@@ -47,17 +52,45 @@ if __name__ == "__main__":
 	GCX = 0
 	# allconfs = []
 	bib = {}
-	traverseDir('bibdata', '', bib)
+	traverseDir(inputdir, '', bib)
 	print('[Total: {} entries]'.format(len(bib)))
 	print('-'*100)
 	for k in bib.keys():
 		j = bib[k]
 		pr = 1 if parent(k) in bib.keys() else 0
 		children = [kk for kk in bib.keys() if kk.startswith(k) and kk[len(k):] != '' and kk[len(k)+1:].find('/') < 0]
-		# children = [kk[len(k)+1:].find('/')<0 for kk in bib.keys() if kk.startswith(k) and kk[len(k):] != '']
 		types = [bib[x]['type'] for x in children if 'type' in bib[x].keys()]
-		print('{}: {} parents, {} children, types {}'.format(k, pr, len(children), types))
-
+		if len(children)>1:
+			print('{}: {} parents, {} children'.format(k, pr, len(children)))
+		editions = contents = bibfield = text = ''
+		if 'proceedings' in types:
+			byY = {}
+			for x in children:
+				if bib[x]['year'] not in byY.keys():
+					byY[bib[x]['year']] = []
+				byY[bib[x]['year']].append(x)
+			ys = ''
+			for y in reversed(sorted(byY.keys())):
+				ys += '<dt>{}</dt>'.format(y)
+				for p in byY[y]:
+					if 'booktitle' in bib[p].keys():
+						bt = bib[p]['booktitle']
+					elif 'title' in bib[p].keys():
+						bt = bib[p]['title']
+					else:
+						bt = '???'
+					ys += '<dd><a href="{}.html">{}</a> ({} {})</dd>'.format(p, bt, bib[p]['venue'], bib[p]['year'])
+			editions = '<h3>Editions:</h3><dl>{}</dl>'.format(ys)
+		if 'article' in types or 'inproceedings' in types:
+			contents = '...'
 		if pr == 0:
 			# TODO: save for index.html
 			pass
+		f = open(last(k).replace(inputdir, outputdir), 'w')
+		html = text + bibfield + editions + contents
+		if 'title' not in bib[k] or not isinstance(bib[k]['title'], str):
+			print('ERROR:', bib[k])
+			continue
+		cname = '%s (%s)' % (bib[k]['title'], bib[k]['year'])
+		f.write(confHTML.format(img=bib[k]['title'].lower(), title=bib[k]['title'], fname=cname, dl=html))
+		f.close()
