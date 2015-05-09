@@ -148,7 +148,7 @@ class Conf(Unser):
 	def getItem(self):
 		return '<dd><a href="{}.html">{}</a> ({} {})</dd>'.format(self.get('name'), self.get('title'), self.get('venue') , self.get('year'))
 	def getPage(self):
-		return bibHTML.format(
+		return bibHTML.format(\
 			title=self.get('title'),
 			img=self.get('venue').lower(), # geticon?
 			authors=self.getAuthors(),
@@ -158,7 +158,8 @@ class Conf(Unser):
 			short='{}, {}'.format(self.get('venue'), self.get('year')),
 			code=self.getCode(), #code
 			bib=self.getBib(), #bib
-			contents='\n'.join([p.getItem() for p in self.papers])
+			contents='<h3>Contents ({} items)</h3><dl class="toc">'.format(len(self.papers))+\
+				'\n'.join([p.getItem() for p in sorted(self.papers, key=sortbypages)])+'</dl>'\
 			)
 	def getAuthors(self):
 		if 'author' in self.json.keys():
@@ -174,9 +175,36 @@ class Conf(Unser):
 		else:
 			return ''
 
+def sortbypages(z):
+	return int(z.get('pages').split('-')[0]) if 'pages' in z.json.keys() else 0
+
 class Paper(Unser):
 	def __init__(self, f):
 		super(Paper, self).__init__(f)
 		self.json = parseJSON(f)
 	def getItem(self):
-		return '?'
+		# <dt><a href="CSMR-2010-Koschke.html">CSMR-2010-Koschke</a></dt><dd>Incremental Reflexion Analysis (<abbr title="Rainer Koschke">RK</abbr>), pp. 1–10.</dd>
+		return '<dt><a href="{0}.html">{0}</a></dt><dd>{1}{2}{3}.</dd>'.format(\
+			self.getKey(), self.get('title'), self.getAbbrAuthors(), self.getPages())
+	def getAbbrAuthors(self):
+		# <abbr title="Rainer Koschke">RK</abbr>
+		if 'author' not in self.json.keys():
+			return ''
+		aus = self.json['author']
+		if not isinstance(aus, list):
+			aus = [aus]
+		return ' ('+', '.join(['<abbr title="{0}">{1}</abbr>'.format(a,\
+			''.join([w[0] for w in a.split(' ') if w]))\
+			for a in aus])+')'
+	def getPages(self):
+		if 'pages' not in self.json.keys():
+			return ''
+		ps = self.json['pages'].split('-')
+		if len(ps) == 3 and ps[1] == '':
+			ps = [ps[0], ps[2]]
+		if len(ps) != 2:
+			return ', pp. {}???'.format(self.json['pages'])
+		elif ps[0] == ps[1]:
+			return ', p. {}'.format(ps[0])
+		else:
+			return ', pp. {}–{}'.format(*ps)
