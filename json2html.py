@@ -16,9 +16,10 @@ if __name__ == "__main__":
 	venues = []
 	for d in glob.glob(inputdir+'/*'):
 		venues.append(Venue(d))
-	print('{} venues, {} papers'.format(len(venues), sum([v.numOfPapers() for v in venues])))
+	cx = sum([v.numOfPapers() for v in venues])
+	print('{} venues, {} papers'.format(len(venues), cx))
 	f = open(outputdir+'/index.html', 'w')
-	f.write(uberHTML.format('\n'.join([v.getItem() for v in venues])))
+	f.write(uberHTML.format(cx, '\n'.join([v.getItem() for v in venues])))
 	f.close()
 	for v in venues:
 		print(v.getKey(), end=' => ')

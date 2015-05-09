@@ -42,7 +42,7 @@ licenses+'''
 </div>
 <div class="main">
 <h2>Bibliography of Software Language Engineering in Generated Hypertext (BibSLEIGH)</h2>
-<p>Work in progress!</p>
+<p>Work in progress! <strong>{}</strong> papers in the database</p>
 {}
 '''+footer
 
@@ -67,7 +67,7 @@ bibHTML = header+'''
 <div class="pre">
 	<form>
 		<input type="checkbox" checked="true" onClick="{code}"/> Full names
-		<input type="checkbox" checked="true" onClick="(this.checked)?$('#uri').show():$('#uri').hide();"/> Links
+		<input type="checkbox" checked="true" onClick="(this.checked)?$('.uri').show():$('.uri').hide();"/> Links
 		<input type="checkbox" checked="true" onClick="(this.checked)?$('#isbn').show():$('#isbn').hide();"/> ISxN
 	</form>
 	<pre>{bib}</pre>

@@ -10,6 +10,9 @@ def sortbypages(z):
 def last(xx):
 	return xx.split('/')[-1].replace('.json', '')
 
+def listify(y):
+	return y if isinstance(y, list) else [y]
+
 def parseJSON(fn):
 	dct = {}
 	f1 = open(fn, 'r')
@@ -47,26 +50,23 @@ class Unser(object):
 				# secret key
 				continue
 			if k in ('author', 'editor'):
-				if isinstance(self.json[k], list):
-					l = self.json[k]
-				else:
-					l = [self.json[k]]
-				s += '\t%-10s = "%s",\n' % (k, ' and '.join(l))
+				s += '\t{:<10} = "{}",\n'.format(k, ' and '.join(listify(self.json[k])))
 			elif k in ('title', 'booktitle', 'series', 'publisher'):
 				if k+'short' not in self.json.keys():
 					s += '\t{0:<10} = "{{{1}}}",\n'.format(k, self.json[k])
 				else:
 					s += '\t{0:<10} = "{{<span id="{0}">{1}</span>}}",\n'.format(k, self.json[k])
-			elif k in ('crossref', 'key', 'type'):
+			elif k in ('crossref', 'key', 'type', 'venue'):
 				pass
 			elif k == 'doi':
-				s += '<span id="uri">\t{0:<10} = "<a href="http://dx.doi.org/{1}">{1}</a>",\n</span>'.format(k, self.json[k])
+				s += '<span class="uri">\t{0:<10} = "<a href="http://dx.doi.org/{1}">{1}</a>",\n</span>'.format(k, self.json[k])
 			elif k == 'dblpkey':
 				s += '\t{0:<10} = "<a href="http://dblp.uni-trier.de/db/{1}">{1}</a>",\n</span>'.format(k, self.json[k])
 			elif k == 'isbn':
 				s += '<span id="isbn">\t{:<10} = "{}",\n</span>'.format(k, self.json[k])
 			elif k in ('ee', 'url'):
-				s += '<span id="uri">\t{0:<10} = "<a href=\"{1}\">{1}</a>",\n</span>'.format(k, self.json[k])
+				for e in listify(self.json[k]):
+					s += '<span class="uri">\t{0:<10} = "<a href=\"{1}\">{1}</a>",\n</span>'.format(k, e)
 			else:
 				s += '\t{0:<10} = "{1}",\n'.format(k, self.json[k])
 		s += '}'
@@ -79,15 +79,9 @@ class Unser(object):
 		return code
 	def getAuthors(self):
 		if 'author' in self.json.keys():
-			if isinstance(self.json['author'], list):
-				return ', '.join(self.json['author'])
-			else:
-				return self.json['author']
+			return ', '.join(listify(self.json['author']))
 		elif 'editor' in self.json.keys():
-			if isinstance(self.json['editor'], list):
-				return ', '.join(self.json['editor'])+' (editors)'
-			else:
-				return self.json['editor']+' (editor)'
+			return ', '.join(listify(self.json['editor']))
 		else:
 			return ''
 
@@ -159,7 +153,7 @@ class Conf(Unser):
 			title=self.get('title'),
 			img=self.get('venue').lower(), # geticon?
 			authors=self.getAuthors(),
-			short='{}, {}'.format(self.get('venue'), self.get('year')),
+			short='{}, {}'.format(self.get('booktitle'), self.get('year')),
 			code=self.getCode(),
 			bib=self.getBib(),
 			contents='<h3>Contents ({} items)</h3><dl class="toc">'.format(len(self.papers))+\
@@ -177,12 +171,9 @@ class Paper(Unser):
 		# <abbr title="Rainer Koschke">RK</abbr>
 		if 'author' not in self.json.keys():
 			return ''
-		aus = self.json['author']
-		if not isinstance(aus, list):
-			aus = [aus]
 		return ' ('+', '.join(['<abbr title="{0}">{1}</abbr>'.format(a,\
-			''.join([w[0] for w in a.split(' ') if w]))\
-			for a in aus])+')'
+			''.join([w[0] for w in a.replace('-',' ').split(' ') if w]))\
+			for a in listify(self.json['author'])])+')'
 	def getPages(self):
 		if 'pages' not in self.json.keys():
 			return ''
