@@ -42,7 +42,7 @@ licenses+'''
 </div>
 <div class="main">
 <h2>Bibliography of Software Language Engineering in Generated Hypertext (BibSLEIGH)</h2>
-<p>Description TBD</p>
+<p>Work in progress!</p>
 {}
 '''+footer
 
@@ -63,11 +63,7 @@ bibHTML = header+'''
 	<!-- (a link to edit)<br/> -->'''+licenses+'''
 </div>
 <div class="main">
-<h2>
-	{authors}<br/>
-	<em>{title}</em>.<br/>
-	{short}.
-</h2>
+<h2>{authors}<br/><em>{title}</em>.<br/>{short}.</h2>
 <div class="pre">
 	<form>
 		<input type="checkbox" checked="true" onClick="{code}"/> Full names

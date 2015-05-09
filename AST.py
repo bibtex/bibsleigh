@@ -4,14 +4,8 @@
 import glob, os.path
 from Templates import confHTML, bibHTML
 
-# SANER
-# 	2012
-# 		CSMR-2012.json (bibtex on the conf page)
-# 		CSMR-2012 (conf page with the list of papers)
-# 			CSMR-2012-*.json (each a paper page with bibtex, each a list item on the conf page)
-# 		WCRE-2012.json
-# 		WCRE-2012
-# 			WCRE-2012-*.json
+def sortbypages(z):
+	return int(z.get('pages').split('-')[0]) if 'pages' in z.json.keys() else 0
 
 def last(xx):
 	return xx.split('/')[-1].replace('.json', '')
@@ -83,6 +77,19 @@ class Unser(object):
 			if tag in self.json.keys() and tag+'short' in self.json.keys():
 				code += "$('#"+tag+"').text(this.checked?'%s':'%s');" % (self.json[tag], self.json[tag+'short'])
 		return code
+	def getAuthors(self):
+		if 'author' in self.json.keys():
+			if isinstance(self.json['author'], list):
+				return ', '.join(self.json['author'])
+			else:
+				return self.json['author']
+		elif 'editor' in self.json.keys():
+			if isinstance(self.json['editor'], list):
+				return ', '.join(self.json['editor'])+' (editors)'
+			else:
+				return self.json['editor']+' (editor)'
+		else:
+			return ''
 
 class Venue(Unser):
 	def __init__(self, d):
@@ -152,38 +159,18 @@ class Conf(Unser):
 			title=self.get('title'),
 			img=self.get('venue').lower(), # geticon?
 			authors=self.getAuthors(),
-			# self.getKey(),
-			# self.getKey(),
-			# fulltitle=self.get('title'),
 			short='{}, {}'.format(self.get('venue'), self.get('year')),
-			code=self.getCode(), #code
-			bib=self.getBib(), #bib
+			code=self.getCode(),
+			bib=self.getBib(),
 			contents='<h3>Contents ({} items)</h3><dl class="toc">'.format(len(self.papers))+\
 				'\n'.join([p.getItem() for p in sorted(self.papers, key=sortbypages)])+'</dl>'\
 			)
-	def getAuthors(self):
-		if 'author' in self.json.keys():
-			if isinstance(self.json['author'], list):
-				return ', '.join(self.json['author'])
-			else:
-				return self.json['author']
-		elif 'editor' in self.json.keys():
-			if isinstance(self.json['editor'], list):
-				return ', '.join(self.json['editor'])+' (editors)'
-			else:
-				return self.json['editor']+' (editor)'
-		else:
-			return ''
-
-def sortbypages(z):
-	return int(z.get('pages').split('-')[0]) if 'pages' in z.json.keys() else 0
 
 class Paper(Unser):
 	def __init__(self, f):
 		super(Paper, self).__init__(f)
 		self.json = parseJSON(f)
 	def getItem(self):
-		# <dt><a href="CSMR-2010-Koschke.html">CSMR-2010-Koschke</a></dt><dd>Incremental Reflexion Analysis (<abbr title="Rainer Koschke">RK</abbr>), pp. 1–10.</dd>
 		return '<dt><a href="{0}.html">{0}</a></dt><dd>{1}{2}{3}.</dd>'.format(\
 			self.getKey(), self.get('title'), self.getAbbrAuthors(), self.getPages())
 	def getAbbrAuthors(self):
@@ -208,3 +195,13 @@ class Paper(Unser):
 			return ', p. {}'.format(ps[0])
 		else:
 			return ', pp. {}–{}'.format(*ps)
+	def getPage(self):
+		return bibHTML.format(\
+			title=self.get('title'),
+			img=self.get('venue').lower(), # geticon?
+			authors=self.getAuthors(),
+			short='{}, {}'.format(self.get('venue'), self.get('year')),
+			code=self.getCode(),
+			bib=self.getBib(),
+			contents=''\
+			)
