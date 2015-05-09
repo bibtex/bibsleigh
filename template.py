@@ -107,16 +107,6 @@ def hyper_series(ser, lng, eds):
 	# ltitle=lng
 	img = ser.lower() if os.path.exists('../frontend2/stuff/%s.png' % ser) else 'stuff/bibsleigh.png'
 	return confHTML.format(title=ser, img=img, fname=('{} ({})'.format(lng, ser)), dl=''.join(eds))
-	# return confHTML % (
-	# 	ser,
-	# 	ser.lower()
-	# 		if os.path.exists('../frontend2/stuff/%s.png' % ser)
-	# 		else 'stuff/bibsleigh.png',
-	# 	ser,
-	# 	lng,
-	# 	('%s (%s)' % (lng,ser)),
-	# 	''.join(eds)
-	# 	)
 
 uberHTML = (header % 'Bibliography of Software Language Engineering in Generated Hypertext')+'''
 	<a href="index.html"><img src="stuff/bibsleigh.png" alt="BibSLEIGH" title="BibSLEIGH" class="pad"/></a><br/>
