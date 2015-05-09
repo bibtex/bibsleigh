@@ -27,6 +27,10 @@ if __name__ == "__main__":
 	f = open(outputdir+'/index.html', 'w')
 	f.write(uberHTML % '\n'.join([v.getItem() for v in venues]))
 	f.close()
+	for v in venues:
+		f = open(outputdir+'/'+v.get('name')+'.html', 'w')
+		f.write(v.getPage())
+		f.close()
 	sys.exit(0)
 	GCX = 0
 	# allconfs = []

@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 
 import glob, os.path
+from template import confHTML
 
 # SANER (venue page)
 # 	2012 (section on the venue page)
@@ -39,18 +40,20 @@ class Unser(object):
 	def __init__(self, d):
 		self.filename = d
 		self.json = {}
+	def get(self, name):
+		return self.json[name] if name in self.json.keys() else last(self.filename)
+	# def getABBR(self):
+	# 	return self.json['name'] if 'name' in self.json.keys() else last(self.filename)
+	# def getTitle(self):
+	# 	return self.json['title'] if 'title' in self.json.keys() else self.filename
 
 class Venue(Unser):
-	# def __init__(self, args):
-	# 	self.years = args
-	# 	self.json = {}
 	def __init__(self, d):
 		super(Venue, self).__init__(d)
 		self.years = []
 		for f in glob.glob(d+'/*'):
 			if f.endswith('.json'):
 				self.json = parseJSON(f)
-				print('Venue has a JSON! %s' % self.json)
 			elif os.path.isdir(f):
 				self.years.append(Year(f))
 			else:
@@ -58,9 +61,16 @@ class Venue(Unser):
 	def numOfPapers(self):
 		return sum([y.numOfPapers() for y in self.years])
 	def getItem(self):
-		ABBR = self.json['name'] if 'name' in self.json.keys() else last(self.filename)
-		title = self.json['title'] if 'title' in self.json.keys() else self.filename
+		ABBR = self.get('name')
+		title = self.get('title')
+		# TO-DO: check if img exists
 		return '<div class="pic"><a href="{ABBR}.html" title="{title}"><img src="stuff/{abbr}.png" alt="{title}"><br/>{ABBR}</a></div>'.format(ABBR=ABBR, abbr=ABBR.lower(), title=title)
+	def getPage(self):
+		ABBR = self.get('name')
+		title = self.get('title')
+		img = ABBR.lower()
+		eds = [y.getItem() for y in sorted(self.years, reverse=True, key=lambda x:x.year)]
+		return confHTML.format(title=ABBR, img=img, fname=('{} ({})'.format(title, ABBR)), dl=''.join(eds))
 
 class Year(Unser):
 	def __init__(self, d):
@@ -70,10 +80,17 @@ class Year(Unser):
 		for f in glob.glob(d+'/*'):
 			if os.path.isdir(f):
 				self.confs.append(Conf(f))
+				if os.path.exists(f+'.json'):
+					self.confs[-1].json = parseJSON(f+'.json')
+					# print('Conf has a JSON! %s' % self.confs[-1].json)
+			elif f.endswith('.json'):
+				pass
 			else:
 				print('File out of place:', f)
 	def numOfPapers(self):
 		return sum([c.numOfPapers() for c in self.confs])
+	def getItem(self):
+		return '<dt>{}</dt>{}'.format(self.year, '\n'.join([c.getItem() for c in self.confs]))
 
 class Conf(Unser):
 	def __init__(self, d):
@@ -86,6 +103,8 @@ class Conf(Unser):
 				print('File or directory out of place:', f)
 	def numOfPapers(self):
 		return len(self.papers)
+	def getItem(self):
+		return '<dd><a href="{}.html">{}</a> ({} {})</dd>'.format(self.get('name'), self.get('title'), self.get('venue') , self.get('year'))
 
 class Paper(Unser):
 	def __init__(self, f):
