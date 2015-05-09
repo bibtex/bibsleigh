@@ -2,7 +2,8 @@
 # -*- coding: utf-8 -*-
 
 import os.path, glob, sys
-from template import confHTML, uberHTML
+# from template import confHTML, uberHTML
+from Templates import uberHTML
 from AST import *
 
 # import os, sys, glob
@@ -25,12 +26,17 @@ if __name__ == "__main__":
 		venues.append(Venue(d))
 	print('{} venues, {} papers'.format(len(venues), sum([v.numOfPapers() for v in venues])))
 	f = open(outputdir+'/index.html', 'w')
-	f.write(uberHTML % '\n'.join([v.getItem() for v in venues]))
+	f.write(uberHTML.format('\n'.join([v.getItem() for v in venues])))
 	f.close()
 	for v in venues:
-		f = open(outputdir+'/'+v.get('name')+'.html', 'w')
+		f = open(outputdir+'/'+v.getKey()+'.html', 'w')
 		f.write(v.getPage())
 		f.close()
+		for c in v.getConfs():
+			print('Conf:', c.getKey())
+			f = open(outputdir+'/'+c.getKey()+'.html', 'w')
+			f.write(c.getPage())
+			f.close()
 	sys.exit(0)
 	GCX = 0
 	# allconfs = []
