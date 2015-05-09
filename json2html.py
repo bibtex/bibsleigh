@@ -1,8 +1,10 @@
 #!/usr/local/bin/python3
 # -*- coding: utf-8 -*-
 
-import os.path, glob
+import os.path, glob, sys
 from template import confHTML
+from AST import *
+
 # import os, sys, glob
 # from template import uberHTML, confHTML, bibHTML, hyper_series
 # from supported import supported
@@ -17,38 +19,12 @@ def parent(xx):
 	return xx[:xx.rfind('/')]
 	# return xx.split('/')[-1].replace('.json', '')
 
-def parseJSON(fn):
-	dct = {}
-	f1 = open(fn, 'r')
-	for line in f1.readlines():
-		line = line.strip()
-		if line in ('{', '}', ''):
-			continue
-		perq = line.split('"')
-		if len(perq) == 5:
-			dct[perq[1]] = perq[3]
-		elif len(perq) == 3 and perq[1] == 'year':
-			dct[perq[1]] = int(perq[-1][2:-1])
-		elif len(perq) > 5:
-			dct[perq[1]] = [z for z in perq[3:-1] if z != ', ']
-		else:
-			print('Skipped line', line, 'in', fn)
-	f1.close()
-	dct['FILE'] = fn
-	return dct
-
-def traverseDir(d, s, b):
-	for f in glob.glob(d+'/*'):
-		# cnf = last(f)
-		if os.path.isdir(f):
-			# print('{}{} conference found'.format(s, cnf))
-			b[f] = {'FILE':f}
-			traverseDir(f, s+'\t', b)
-		else:
-			# print('{}{} file found as a parent of {}'.format(s, cnf, parent(cnf)))
-			b[f] = parseJSON(f)
-
 if __name__ == "__main__":
+	venues = []
+	for d in glob.glob(inputdir+'/*'):
+		venues.append(Venue(d))
+	print('{} venues, {} papers'.format(len(venues), sum([v.numOfPapers() for v in venues])))
+	sys.exit(0)
 	GCX = 0
 	# allconfs = []
 	bib = {}
