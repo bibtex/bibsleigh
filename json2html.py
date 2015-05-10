@@ -15,7 +15,7 @@ outputdir = '../frontend3'
 if __name__ == "__main__":
 	venues = []
 	for d in glob.glob(inputdir+'/*'):
-		venues.append(Venue(d))
+		venues.append(Venue(d, inputdir))
 	cx = sum([v.numOfPapers() for v in venues])
 	print('{} venues, {} papers'.format(len(venues), cx))
 	f = open(outputdir+'/index.html', 'w')

@@ -49,7 +49,8 @@ licenses+'''
 confHTML = header+'''
 	<!-- (a link to bibSLEIGH)<br/> -->
 	<a href="index.html"><img src="stuff/{img}.png" alt="{title}" title="{title}" class="pad"/></a><br/>
-	<!-- (a link to edit)<br/> -->'''+licenses+'''
+	<div class="pad"><a href="https://github.com/slebok/bibsleigh/tree/master/{filename}">EDIT</a></div></br/>
+'''+licenses+'''
 </div>
 <div class="main">
 <h2>{fname}</h2>
@@ -60,10 +61,11 @@ confHTML = header+'''
 bibHTML = header+'''
 	<!-- (a link to bibSLEIGH)<br/> -->
 	<a href="index.html"><img src="stuff/{img}.png" alt="{title}" title="{title}" class="pad"/></a><br/>
-	<!-- (a link to edit)<br/> -->'''+licenses+'''
+	<div class="pad"><a href="https://github.com/slebok/bibsleigh/edit/master/{filename}">EDIT</a></div></br/>
+'''+licenses+'''
 </div>
 <div class="main">
-<h2>{authors}<br/><em>{title}</em>.<br/>{short}.</h2>
+<h2>{authors}<br/><em>{title}</em><br/>{short}.</h2>
 <div class="pre">
 	<form>
 		<input type="checkbox" checked="true" onClick="{code}"/> Full names

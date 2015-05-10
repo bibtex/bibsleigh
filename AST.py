@@ -37,9 +37,16 @@ def parseJSON(fn):
 	return dct
 
 class Unser(object):
-	def __init__(self, d):
+	def __init__(self, d, hdir):
 		self.filename = d
+		self.homedir = hdir
 		self.json = {}
+	def getPureName(self):
+		# +1 for the slash
+		return self.filename[len(self.homedir)+1:]
+	def getJsonName(self):
+		s = self.getPureName()
+		return s if s.endswith('.json') else s+'.json'
 	def get(self, name):
 		return self.json[name] if name in self.json.keys() else self.getKey()
 	def getKey(self):
@@ -59,12 +66,13 @@ class Unser(object):
 					s += '\t{0:<10} = "{{{1}}}",\n'.format(k, self.json[k])
 				else:
 					s += '\t{0:<10} = "{{<span id="{0}">{1}</span>}}",\n'.format(k, self.json[k])
-			elif k in ('crossref', 'key', 'type', 'venue'):
+			elif k in ('crossref', 'key', 'type', 'venue', 'eventtitle'):
 				pass
 			elif k == 'doi':
 				s += '<span class="uri">\t{0:<10} = "<a href="http://dx.doi.org/{1}">{1}</a>",\n</span>'.format(k, self.json[k])
 			elif k == 'dblpkey':
-				s += '\t{0:<10} = "<a href="http://dblp.uni-trier.de/db/{1}">{1}</a>",\n</span>'.format(k, self.json[k])
+				# s += '\t{0:<10} = "<a href="http://dblp.uni-trier.de/db/{1}">{1}</a>",\n</span>'.format(k, self.json[k])
+				s += '\t{0:<10} = "<a href="http://dblp.uni-trier.de/rec/html/{1}">{1}</a>",\n</span>'.format(k, self.json[k])
 			elif k == 'isbn':
 				s += '<span id="isbn">\t{:<10} = "{}",\n</span>'.format(k, self.json[k])
 			elif k in ('ee', 'url'):
@@ -89,14 +97,14 @@ class Unser(object):
 			return ''
 
 class Venue(Unser):
-	def __init__(self, d):
-		super(Venue, self).__init__(d)
+	def __init__(self, d, hdir):
+		super(Venue, self).__init__(d, hdir)
 		self.years = []
 		for f in glob.glob(d+'/*'):
 			if f.endswith('.json'):
 				self.json = parseJSON(f)
 			elif os.path.isdir(f):
-				self.years.append(Year(f))
+				self.years.append(Year(f, self.homedir))
 			else:
 				print('File out of place:', f)
 	def numOfPapers(self):
@@ -110,8 +118,13 @@ class Venue(Unser):
 		ABBR = self.get('name')
 		title = self.get('title')
 		img = ABBR.lower()
-		eds = [y.getItem() for y in sorted(self.years, reverse=True, key=lambda x:x.year)]
-		return confHTML.format(title=ABBR, img=img, fname=('{} ({})'.format(title, ABBR)), dl=''.join(eds))
+		eds = [y.getItem() for y in sorted(self.years, reverse=True, key=lambda x: x.year)]
+		return confHTML.format(\
+			filename=self.getPureName(),\
+			title=ABBR,\
+			img=img,\
+			fname=('{} ({})'.format(title, ABBR)),\
+			dl=''.join(eds))
 	def getConfs(self):
 		res = []
 		for y in self.years:
@@ -119,16 +132,17 @@ class Venue(Unser):
 		return res
 
 class Year(Unser):
-	def __init__(self, d):
-		super(Year, self).__init__(d)
+	def __init__(self, d, hdir):
+		super(Year, self).__init__(d, hdir)
 		self.year = last(d)
 		self.confs = []
 		for f in glob.glob(d+'/*'):
 			if os.path.isdir(f):
-				self.confs.append(Conf(f))
+				self.confs.append(Conf(f, self.homedir))
 				if os.path.exists(f+'.json'):
 					self.confs[-1].json = parseJSON(f+'.json')
 					# print('Conf has a JSON! %s' % self.confs[-1].json)
+				self.confs[-1].year = self.year
 			elif f.endswith('.json'):
 				pass
 			else:
@@ -139,20 +153,31 @@ class Year(Unser):
 		return '<dt>{}</dt>{}'.format(self.year, '\n'.join([c.getItem() for c in self.confs]))
 
 class Conf(Unser):
-	def __init__(self, d):
-		super(Conf, self).__init__(d)
+	def __init__(self, d, hdir):
+		super(Conf, self).__init__(d, hdir)
 		self.papers = []
+		self.year = 0
 		for f in glob.glob(d+'/*'):
 			if os.path.isfile(f) and f.endswith('.json'):
-				self.papers.append(Paper(f))
+				self.papers.append(Paper(f, self.homedir))
 			else:
 				print('File or directory out of place:', f)
 	def numOfPapers(self):
 		return len(self.papers)
+	def getEventTitle(self):
+		if 'eventtitle' in self.json.keys():
+			return self.json['eventtitle']
+		elif 'booktitle' in self.json.keys():
+			return '{} {}'.format(self.json['booktitle'], self.year)
+		elif 'venue' in self.json.keys():
+			return '{} {}'.format(self.json['venue'], self.year)
+		else:
+			return self.getKey().replace('-', ' ')
 	def getItem(self):
-		return '<dd><a href="{}.html">{}</a> ({} {})</dd>'.format(self.get('name'), self.get('title'), self.get('venue') , self.get('year'))
+		return '<dd><a href="{}.html">{}</a> ({})</dd>'.format(self.get('name'), self.get('title'), self.getEventTitle())
 	def getPage(self):
 		return bibHTML.format(\
+			filename=self.getJsonName(),
 			title=self.get('title'),
 			img=self.get('venue').lower(), # geticon?
 			authors=self.getAuthors(),
@@ -164,8 +189,8 @@ class Conf(Unser):
 			)
 
 class Paper(Unser):
-	def __init__(self, f):
-		super(Paper, self).__init__(f)
+	def __init__(self, f, hdir):
+		super(Paper, self).__init__(f, hdir)
 		self.json = parseJSON(f)
 	def getItem(self):
 		return '<dt><a href="{0}.html">{0}</a></dt><dd>{1}{2}{3}.</dd>'.format(\
@@ -191,6 +216,7 @@ class Paper(Unser):
 			return ', pp. {}–{}'.format(*ps)
 	def getPage(self):
 		return bibHTML.format(\
+			filename=self.getJsonName(),
 			title=self.get('title'),
 			img=self.get('venue').lower(), # geticon?
 			authors=self.getAuthors(),
