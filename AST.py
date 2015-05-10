@@ -5,7 +5,10 @@ import glob, os.path
 from Templates import confHTML, bibHTML
 
 def sortbypages(z):
-	return int(z.get('pages').split('-')[0]) if 'pages' in z.json.keys() else 0
+	try:
+		return int(z.get('pages').split('-')[0])
+	except:
+		return 0
 
 def last(xx):
 	return xx.split('/')[-1].replace('.json', '')
