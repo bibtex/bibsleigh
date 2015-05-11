@@ -9,12 +9,12 @@ header = '''<?xml version="1.0" encoding="UTF-8"?>
 	<meta name="keywords" content="software linguistics, software language engineering, book of knowledge, glossary, Russian; иньекция; English; inject"/>
 	<title>SLEBoK — bibSLEIGH — {title}</title>
 	<link href="stuff/bib.css" rel="stylesheet" type="text/css"/>
-	<script src="stuff/jquery.min.js"></script>
+	<script src="stuff/jquery.min.js" type="text/javascript"></script>
 </head>
 <body>
 <div class="left">'''
 
-footer = '''
+footer = '''</div>
 <div style="clear:both"/><hr />
 <div class="last">
 	<em>
@@ -49,7 +49,7 @@ licenses+'''
 confHTML = header+'''
 	<!-- (a link to bibSLEIGH)<br/> -->
 	<a href="index.html"><img src="stuff/{img}.png" alt="{title}" title="{title}" class="pad"/></a><br/>
-	<div class="pad"><a href="https://github.com/slebok/bibsleigh/tree/master/{filename}">EDIT</a></div></br/>
+	<div class="pad"><a href="https://github.com/slebok/bibsleigh/tree/master/{filename}">EDIT</a></div><br/>
 '''+licenses+'''
 </div>
 <div class="main">
@@ -61,16 +61,16 @@ confHTML = header+'''
 bibHTML = header+'''
 	<!-- (a link to bibSLEIGH)<br/> -->
 	<a href="index.html"><img src="stuff/{img}.png" alt="{title}" title="{title}" class="pad"/></a><br/>
-	<div class="pad"><a href="https://github.com/slebok/bibsleigh/edit/master/{filename}">EDIT</a></div></br/>
+	<div class="pad"><a href="https://github.com/slebok/bibsleigh/edit/master/{filename}">EDIT</a></div><br/>
 '''+licenses+'''
 </div>
 <div class="main">
 <h2>{authors}<br/><em>{title}</em><br/>{short}.</h2>
 <div class="pre">
-	<form>
-		<input type="checkbox" checked="true" onClick="{code}"/> Full names
-		<input type="checkbox" checked="true" onClick="(this.checked)?$('.uri').show():$('.uri').hide();"/> Links
-		<input type="checkbox" checked="true" onClick="(this.checked)?$('#isbn').show():$('#isbn').hide();"/> ISxN
+	<form action="#">
+		<input type="checkbox" checked="checked" onClick="{code}"/> Full names
+		<input type="checkbox" checked="checked" onClick="(this.checked)?$('.uri').show():$('.uri').hide();"/> Links
+		<input type="checkbox" checked="checked" onClick="(this.checked)?$('#isbn').show():$('#isbn').hide();"/> ISxN
 	</form>
 	<pre>{bib}</pre>
 </div>

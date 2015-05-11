@@ -15,6 +15,8 @@ outputdir = '../frontend'
 if __name__ == "__main__":
 	venues = []
 	for d in glob.glob(inputdir+'/*'):
+		if d.endswith('.md'):
+			continue
 		venues.append(Venue(d, inputdir))
 	cx = sum([v.numOfPapers() for v in venues])
 	print('{} venues, {} papers'.format(len(venues), cx))

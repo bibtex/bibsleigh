@@ -1,7 +1,7 @@
 #!/usr/local/bin/python3
 # -*- coding: utf-8 -*-
 
-from template import bibHTML, confHTML, uberHTML
+# from template import bibHTML, confHTML, uberHTML
 from venues import venuesMap
 from short import contractions
 from supported import supported, merged
@@ -162,9 +162,11 @@ class BibEntry(object):
 				newval += '<%s>%s</%s>%s' % (subel.tag,subel.text,subel.tag,tail)
 			self.dict[e.tag].append(newval)
 	def unloadXML(self,fs):
-		f = open(fs,'w')
-		f.write(self.toXML())
-		f.close()
+		pass
+		# CANNIBALISM
+		# f = open(fs,'w')
+		# f.write(self.toXML())
+		# f.close()
 	def toXML(self):
 		s = '<?xml version="1.0"?>\n<dblp>\n<%s key="%s">\n' % (self.t, self.key)
 		for k in self.args:
@@ -188,9 +190,11 @@ class BibEntry(object):
 					s += ',\n\t"%s": "%s"' % (k,self.dict[k][0])
 		return s+'\n}'
 	def unloadBIB(self,fs):
-		f = open(fs,'w')
-		f.write(self.toBIB())
-		f.close()
+		pass
+		# CANNIBALISM
+		# f = open(fs,'w')
+		# f.write(self.toBIB())
+		# f.close()
 	def getKeyHTML(self):
 		# TODO: update to hidden attributes
 		if self['booktitle'] and self['year']:
@@ -305,22 +309,23 @@ class BibEntry(object):
 		self.sanitize()
 	def writeHTML(self,fs):
 		fs = fs.replace('/','-').replace('..-frontend-','../frontend/')
-		h = open(fs,'w',encoding='utf-8')
-		h.write(bibHTML %
-			(self.getTitleTXT(),
-			self.getVenueIcon(),
-			self.getVenueShort(),
-			self.getVenueShort(),
-			self.getAuthorsHTML(),
-			self.getTitleHTML(),
-			self.getVenueHTML(),
-			self.getCodeLongShort(),
-			self.toBIB(),
-			self.contentsHTML()))
-		h.close()
-		# h = open(fs.replace("../frontend/","json/").replace(".html",".json"),'w',encoding='utf-8')
-		# h.write(self.toJSON())
+		# CANNIBALISM
+		# h = open(fs,'w',encoding='utf-8')
+		# h.write(bibHTML %
+		# 	(self.getTitleTXT(),
+		# 	self.getVenueIcon(),
+		# 	self.getVenueShort(),
+		# 	self.getVenueShort(),
+		# 	self.getAuthorsHTML(),
+		# 	self.getTitleHTML(),
+		# 	self.getVenueHTML(),
+		# 	self.getCodeLongShort(),
+		# 	self.toBIB(),
+		# 	self.contentsHTML()))
 		# h.close()
+		h = open(fs.replace("../frontend/","json/").replace(".html",".json"),'w',encoding='utf-8')
+		h.write(self.toJSON())
+		h.close()
 	def getVenueShort(self):
 		if self['booktitle'] and self['booktitle'][-1] in supported.keys():
 			return supported[self['booktitle'][-1]]
@@ -394,6 +399,7 @@ if __name__ == '__main__':
 		if x['crossref'] and xs[x['crossref'][0]]:
 			x.updatewith(xs[x['crossref'][0]])
 			unk.append(xs[x['crossref'][0]]['title'][0])
+	# CANNIBALISM
 	xs.writeHTML()
 	print(len(xs), 'bib entries processed.')
 	un = []
@@ -401,9 +407,10 @@ if __name__ == '__main__':
 		if x not in venuesMap.keys() and x not in venuesMap.values():
 			un.append(x)
 	print(len(un), 'unknown venue names.')
-	f = open('venues.lst', 'w')
-	f.write('\n'.join(un))
-	f.close()
+	# CANNIBALISM
+	# f = open('venues.lst', 'w')
+	# f.write('\n'.join(un))
+	# f.close()
 	confs = []
 	lost = []
 	for ven in supported.keys():
@@ -421,12 +428,14 @@ if __name__ == '__main__':
 			continue
 		allvenues.append(BibVenue(xs, ven))
 	for ven in allvenues:
-		print('Writing venue %s' % ven.ven)
-		f = open('../bibsleigh.github.io/%s.html' % ven.ven, 'w')
-		f.write(ven.getConfHTML())
-		f.close()
+		# CANNIBALISM
+		# print('Writing venue %s' % ven.ven)
+		# f = open('../bibsleigh.github.io/%s.html' % ven.ven, 'w')
+		# f.write(ven.getConfHTML())
+		# f.close()
 		confs.append(ven.getNameIcon())
 	print(len(supported), 'venues.')
-	f = open('../bibsleigh.github.io/index.html', 'w')
-	f.write(uberHTML % '\n'.join(sorted(confs)))
-	f.close()
+	# CANNIBALISM
+	# f = open('../bibsleigh.github.io/index.html', 'w')
+	# f.write(uberHTML % '\n'.join(sorted(confs)))
+	# f.close()

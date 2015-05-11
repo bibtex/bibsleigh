@@ -113,7 +113,11 @@ class Venue(Unser):
 		ABBR = self.get('name')
 		title = self.get('title')
 		# TO-DO: check if img exists
-		return '<div class="pic"><a href="{ABBR}.html" title="{title}"><img src="stuff/{abbr}.png" alt="{title}"><br/>{ABBR}</a></div>'.format(ABBR=ABBR, abbr=ABBR.lower(), title=title)
+		return ('<div class="pic"><a href="{ABBR}.html" title="{title}">'+\
+			'<img src="stuff/{abbr}.png" alt="{title}"/><br/>{ABBR}</a></div>').format(\
+				ABBR=ABBR,\
+				abbr=ABBR.lower(),\
+				title=title)
 	def getPage(self):
 		ABBR = self.get('name')
 		title = self.get('title')
