@@ -1,4 +1,5 @@
 all:
+	time ./json2html.py
 
 run:
 	time ./library.py

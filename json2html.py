@@ -9,8 +9,8 @@ from AST import *
 # from template import uberHTML, confHTML, bibHTML, hyper_series
 # from supported import supported
 
-inputdir  = '../bibtest'
-outputdir = '../frontend3'
+inputdir  = '../json'
+outputdir = '../frontend'
 
 if __name__ == "__main__":
 	venues = []
