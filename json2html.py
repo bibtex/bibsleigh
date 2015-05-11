@@ -5,10 +5,6 @@ import glob
 from Templates import uberHTML
 from AST import *
 
-# import os, sys, glob
-# from template import uberHTML, confHTML, bibHTML, hyper_series
-# from supported import supported
-
 inputdir  = '../json'
 outputdir = '../frontend'
 

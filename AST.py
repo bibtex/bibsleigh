@@ -21,7 +21,7 @@ def parseJSON(fn):
 	f1 = open(fn, 'r')
 	for line in f1.readlines():
 		line = line.strip()
-		if line in ('{', '}', ''):
+		if line in ('{', '}', '') or line.startswith('//'):
 			continue
 		perq = line.split('"')
 		if len(perq) == 5:
@@ -72,7 +72,7 @@ class Unser(object):
 				s += '<span class="uri">\t{0:<10} = "<a href="http://dx.doi.org/{1}">{1}</a>",\n</span>'.format(k, self.json[k])
 			elif k == 'dblpkey':
 				# s += '\t{0:<10} = "<a href="http://dblp.uni-trier.de/db/{1}">{1}</a>",\n</span>'.format(k, self.json[k])
-				s += '\t{0:<10} = "<a href="http://dblp.uni-trier.de/rec/html/{1}">{1}</a>",\n</span>'.format(k, self.json[k])
+				s += '\t{0:<10} = "<a href="http://dblp.uni-trier.de/rec/html/{1}">{1}</a>",\n'.format(k, self.json[k])
 			elif k == 'isbn':
 				s += '<span id="isbn">\t{:<10} = "{}",\n</span>'.format(k, self.json[k])
 			elif k in ('ee', 'url'):

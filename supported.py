@@ -5,9 +5,11 @@
 # TODO: TCS, SCP, SPE, EMSE, SoSyM, JFP, TSE, TOPLAS, TOSEM
 
 supported = {
-	'ICPC': 'International Conference on Program Comprehension',
-	'IWPC': 'International Workshop on Program Comprehension',
-	'WPC': 'Workshop on Program Comprehension'
+	# ??? http://dblp1.uni-trier.de/db/conf/ecmdafa/
+	'ICMT': 'International Conference on Model Transformation',
+	'ICGT': 'International Conference on Graph Transformation',
+	'TAGT': 'Theory and Application of Graph Transformations',
+	'GG': 'Graph Grammars',
 	# 'CSMR': 'Conference on Software Maintenance and Reengineering',
 	# 'ECOOP': 'European Conference on Object-Oriented Programming',
 	# 'ESEC': 'European Software Engineering Conference',
@@ -33,7 +35,7 @@ supported = {
 }
 
 merged = {
-	'ICPC': ['ICPC', 'IWPC', 'WPC']
+	'ICGT': ['ICGT', 'TAGT', 'GG']
 	# 'MoDELS': ['MoDELS', 'UML'],
 	# 'ESEC-FSE': ['ESEC', 'SIGSOFT'],
 	# 'ICSME': ['ICSM', 'ICSME'],
