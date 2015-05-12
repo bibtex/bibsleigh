@@ -41,7 +41,7 @@ licenses+'''
 </div>
 <div class="main">
 <h2>Bibliography of Software Language Engineering in Generated Hypertext (BibSLEIGH)</h2>
-<p>Work in progress! <strong>{}</strong> papers in the database</p>
+<p>Work in progress! <strong>{}</strong> venues and <strong>{}</strong> papers currently in the database.</p>
 {}
 '''+footer
 
@@ -65,6 +65,9 @@ bibHTML = header+'''
 </div>
 <div class="main">
 <h2>{authors}<br/><em>{title}</em><br/>{short}.</h2>
+<div class="rbox">
+{boxlinks}
+</div>
 <div class="pre"><form action="#">
 	<input type="checkbox" checked="checked" onClick="{code}"/> Full names
 	<input type="checkbox" checked="checked" onClick="(this.checked)?$('.uri').show():$('.uri').hide();"/> Links

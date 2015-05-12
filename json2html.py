@@ -1,26 +1,23 @@
 #!/usr/local/bin/python3
 # -*- coding: utf-8 -*-
 
-import glob
-from Templates import uberHTML
 from AST import *
+from Fancy import colours
 
 inputdir  = '../json'
 outputdir = '../frontend'
+sleigh = Sleigh(inputdir)
+C = colours()
 
 if __name__ == "__main__":
-	venues = []
-	for d in glob.glob(inputdir+'/*'):
-		if d.endswith('.md'):
-			continue
-		venues.append(Venue(d, inputdir))
-	cx = sum([v.numOfPapers() for v in venues])
-	print('{} venues, {} papers'.format(len(venues), cx))
+	cx = sum([v.numOfPapers() for v in sleigh.venues])
+	cv = len(sleigh.venues)
+	print('{} venues, {} papers'.format(C.purple('BibSLEIGH'), C.red(cv), C.red(cx)))
 	f = open(outputdir+'/index.html', 'w')
-	f.write(uberHTML.format(cx, '\n'.join([v.getItem() for v in venues])))
+	f.write(sleigh.getPage())
 	f.close()
-	for v in venues:
-		print(v.getKey(), end=' => ')
+	for v in sleigh.venues:
+		print(C.blue(v.getKey()), end=' => ')
 		f = open(outputdir+'/'+v.getKey()+'.html', 'w')
 		f.write(v.getPage())
 		f.close()
@@ -33,5 +30,6 @@ if __name__ == "__main__":
 				f = open(outputdir+'/'+p.getKey()+'.html', 'w')
 				f.write(p.getPage())
 				f.close()
-			print('{} [{}], '.format(c.getKey(), len(c.papers)), end='')
+			purekey = c.getKey().replace(v.getKey(),'').replace('-',' ').strip()
+			print('{} [{}], '.format(purekey, C.yellow(len(c.papers))), end='')
 		print()

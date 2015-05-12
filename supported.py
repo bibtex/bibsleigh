@@ -1,15 +1,16 @@
 #!/usr/local/bin/python3
 
-# TODO: WICSA? ECSA? ICPC! ICFP! ICMT! ICGT! PPDP! LOPSTR! ECMFA TOOLS! DSL IFM!
+# TODO: WICSA? ECSA? PPDP! LOPSTR! ECMFA TOOLS! DSL IFM!
 # TODO: DYLA SQM LDTA! XM MPM MoDEVVa DSM ME?
 # TODO: TCS, SCP, SPE, EMSE, SoSyM, JFP, TSE, TOPLAS, TOSEM
 
 supported = {
 	# ??? http://dblp1.uni-trier.de/db/conf/ecmdafa/
-	'ICMT': 'International Conference on Model Transformation',
-	'ICGT': 'International Conference on Graph Transformation',
-	'TAGT': 'Theory and Application of Graph Transformations',
-	'GG': 'Graph Grammars',
+	'ICFP': 'International Conference on Functional Programming'
+	# 'ICMT': 'International Conference on Model Transformation',
+	# 'ICGT': 'International Conference on Graph Transformation',
+	# 'TAGT': 'Theory and Application of Graph Transformations',
+	# 'GG': 'Graph Grammars',
 	# 'CSMR': 'Conference on Software Maintenance and Reengineering',
 	# 'ECOOP': 'European Conference on Object-Oriented Programming',
 	# 'ESEC': 'European Software Engineering Conference',

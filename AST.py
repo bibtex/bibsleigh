@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 import glob, os.path
-from Templates import confHTML, bibHTML
+from Templates import confHTML, bibHTML, uberHTML
 
 def sortbypages(z):
 	try:
@@ -66,11 +66,12 @@ class Unser(object):
 					s += '\t{0:<10} = "{{{1}}}",\n'.format(k, self.json[k])
 				else:
 					s += '\t{0:<10} = "{{<span id="{0}">{1}</span>}}",\n'.format(k, self.json[k])
-			elif k in ('crossref', 'key', 'type', 'venue', 'eventtitle'):
+			elif k in ('crossref', 'key', 'type', 'venue', 'eventtitle', 'dblpkey', 'dblpurl'):
 				pass
 			elif k == 'doi':
 				s += '<span class="uri">\t{0:<10} = "<a href="http://dx.doi.org/{1}">{1}</a>",\n</span>'.format(k, self.json[k])
 			elif k == 'dblpkey':
+				# Legacy!
 				# s += '\t{0:<10} = "<a href="http://dblp.uni-trier.de/db/{1}">{1}</a>",\n</span>'.format(k, self.json[k])
 				s += '\t{0:<10} = "<a href="http://dblp.uni-trier.de/rec/html/{1}">{1}</a>",\n'.format(k, self.json[k])
 			elif k == 'isbn':
@@ -95,6 +96,34 @@ class Unser(object):
 			return ', '.join(listify(self.json['editor']))
 		else:
 			return ''
+	def getBoxLinks(self):
+		links = []
+		# Crossref to the parent
+		links.append('no Xref')
+		# DBLP
+		if 'dblpkey' in self.json.keys():
+			links.append('<a href="http://dblp.uni-trier.de/rec/html/{}">DBLP</a>'.format(self.json['dblpkey']))
+		elif 'dblpurl' in self.json.keys():
+			links.append('<a href="{}">DBLP</a>'.format(self.json['dblpurl']))
+		else:
+			links.append('no DBLP info')
+		# Scholar
+		links.append('no Scholar')
+		return '<br/>'.join(links)
+
+class Sleigh(Unser):
+	def __init__(self, idir):
+		super(Sleigh, self).__init__('', idir)
+		self.venues = []
+		for d in glob.glob(idir+'/*'):
+			if d.endswith('.md'):
+				continue
+			self.venues.append(Venue(d, idir))
+	def getPage(self):
+		cx = sum([v.numOfPapers() for v in self.venues])
+		cv = len(self.venues)
+		return uberHTML.format(cv, cx, '\n'.join([v.getItem() for v in self.venues]))
+		
 
 class Venue(Unser):
 	def __init__(self, d, hdir):
@@ -188,6 +217,7 @@ class Conf(Unser):
 			short='{}, {}'.format(self.get('booktitle'), self.get('year')),
 			code=self.getCode(),
 			bib=self.getBib(),
+			boxlinks=self.getBoxLinks(),
 			contents='<h3>Contents ({} items)</h3><dl class="toc">'.format(len(self.papers))+\
 				'\n'.join([p.getItem() for p in sorted(self.papers, key=sortbypages)])+'</dl>'\
 			)
@@ -227,5 +257,6 @@ class Paper(Unser):
 			short='{}, {}'.format(self.get('venue'), self.get('year')),
 			code=self.getCode(),
 			bib=self.getBib(),
+			boxlinks=self.getBoxLinks(),
 			contents=''\
 			)
