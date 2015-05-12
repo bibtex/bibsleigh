@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 import glob, os.path
-from Templates import confHTML, bibHTML, uberHTML
+import Templates
 
 def sortbypages(z):
 	try:
@@ -99,7 +99,7 @@ class Unser(object):
 		else:
 			return ''
 	def getBoxLinks(self):
-		links = []
+		links = [[],[],[]]
 		# Crossref to the parent
 		# DOC: real crossrefs are nice, but all the global searches slows the engine down
 		# DOC: (running time 5m11.559s vs 0m7.396s is 42x)
@@ -114,31 +114,35 @@ class Unser(object):
 		# else:
 		# 	links.append('no Xref')
 		# DOC: instead, we just link to the parent!
-		links.append('<strong><a href="{}.html">{}</a></strong>'.format(\
+		links[0].append('<strong><a href="{}.html">{}</a></strong>'.format(\
 			self.up().getKey(),
 			self.up().getKey().replace('-', ' ')))
 		# DBLP
 		if 'dblpkey' in self.json.keys():
-			links.append('<a href="http://dblp.uni-trier.de/rec/html/{}">DBLP</a>'.format(\
+			links[1].append('<a href="http://dblp.uni-trier.de/rec/html/{}">DBLP</a>'.format(\
 				self.json['dblpkey']))
 		elif 'dblpurl' in self.json.keys():
-			links.append('<a href="{}">DBLP</a>'.format(self.json['dblpurl']))
+			links[1].append('<a href="{}">DBLP</a>'.format(self.json['dblpurl']))
 		else:
-			links.append('no DBLP info')
+			links[1].append('no DBLP info')
 		# Scholar
 		if 'title' in self.json.keys():
-			links.append('<a href="https://scholar.google.com/scholar?q=%22{}%22">Scholar</a>'.format(\
+			links[1].append('<a href="https://scholar.google.com/scholar?q=%22{}%22">Scholar</a>'.format(\
 				str(self.json['title']).replace(' ', '+')))
 		# Some publishers
 		if 'ee' in self.json.keys():
 			for e in listify(self.json['ee']):
 				if e.find('dl.acm.org') > 0 or e.find('doi.acm.org') > 0:
-					links.append('<a href="{}">ACM DL</a>'.format(e))
+					links[2].append('<a href="{}">ACM DL</a>'.format(e))
 				elif e.find('ieeexplore.ieee.org') > 0:
-					links.append('<a href="{}">IEEE</a>'.format(e))
+					links[2].append('<a href="{}">IEEE</a>'.format(e))
+				elif e.find('dagstuhl.de') > 0:
+					links[2].append('<a href="{}">Dagstuhl</a>'.format(e))
 				else:
-					links.append('<a href="{}">?EE?</a>'.format(e))
-		return '<br/>'.join(links)
+					links[2].append('<a href="{}">?EE?</a>'.format(e))
+		if 'doi' in self.json.keys():
+			links[2].append('<a href="http://dx.doi.org/{}">DOI</a>'.format(self.json['doi']))
+		return '<hr/>'.join(['<br/>\n'.join(lb) for lb in links if lb])
 	def up(self):
 		return self.back
 	def top(self):
@@ -158,9 +162,10 @@ class Sleigh(Unser):
 				continue
 			self.venues.append(Venue(d, idir, self))
 	def getPage(self):
-		cx = sum([v.numOfPapers() for v in self.venues])
-		cv = len(self.venues)
-		return uberHTML.format(cv, cx, '\n'.join([v.getItem() for v in self.venues]))
+		return Templates.uberHTML.format(\
+			len(self.venues),
+			self.numOfPapers(),
+			'\n'.join([v.getItem() for v in self.venues]))
 	def seek(self, key):
 		f = None
 		for v in self.venues:
@@ -168,6 +173,8 @@ class Sleigh(Unser):
 			if f:
 				return f
 		return f
+	def numOfPapers(self):
+		return sum([v.numOfPapers() for v in self.venues])
 		
 
 class Venue(Unser):
@@ -198,7 +205,7 @@ class Venue(Unser):
 		title = self.get('title')
 		img = ABBR.lower()
 		eds = [y.getItem() for y in sorted(self.years, reverse=True, key=lambda x: x.year)]
-		return confHTML.format(\
+		return Templates.confHTML.format(\
 			filename=self.getPureName(),\
 			title=ABBR,\
 			img=img,\
@@ -273,7 +280,7 @@ class Conf(Unser):
 	def getItem(self):
 		return '<dd><a href="{}.html">{}</a> ({})</dd>'.format(self.get('name'), self.get('title'), self.getEventTitle())
 	def getPage(self):
-		return bibHTML.format(\
+		return Templates.bibHTML.format(\
 			filename=self.getJsonName(),
 			title=self.get('title'),
 			img=self.get('venue').lower(), # geticon?
@@ -325,7 +332,7 @@ class Paper(Unser):
 		else:
 			return ', pp. {}–{}'.format(*ps)
 	def getPage(self):
-		return bibHTML.format(\
+		return Templates.bibHTML.format(\
 			filename=self.getJsonName(),
 			title=self.get('title'),
 			img=self.get('venue').lower(), # geticon?

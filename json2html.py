@@ -1,23 +1,24 @@
 #!/usr/local/bin/python3
 # -*- coding: utf-8 -*-
 
-from AST import *
-from Fancy import colours
+import Fancy, AST
 
-inputdir  = '../json'
+ienputdir = '../json'
 outputdir = '../frontend'
-sleigh = Sleigh(inputdir)
-C = colours()
+sleigh = AST.Sleigh(ienputdir)
+C = Fancy.colours()
 
 if __name__ == "__main__":
-	cx = sum([v.numOfPapers() for v in sleigh.venues])
-	cv = len(sleigh.venues)
-	print('{} venues, {} papers'.format(C.purple('BibSLEIGH'), C.red(cv), C.red(cx)))
+	print('{}: {} venues, {} papers\n{}'.format(\
+		C.purple('BibSLEIGH'),
+		C.red(len(sleigh.venues)),
+		C.red(sleigh.numOfPapers()),
+		C.purple('='*42)))
 	f = open(outputdir+'/index.html', 'w')
 	f.write(sleigh.getPage())
 	f.close()
 	for v in sleigh.venues:
-		print(C.blue(v.getKey()), end=' => ')
+		r = C.blue(v.getKey()) + ' => '
 		f = open(outputdir+'/'+v.getKey()+'.html', 'w')
 		f.write(v.getPage())
 		f.close()
@@ -26,10 +27,9 @@ if __name__ == "__main__":
 			f.write(c.getPage())
 			f.close()
 			for p in c.papers:
-				# print(p.json)
 				f = open(outputdir+'/'+p.getKey()+'.html', 'w')
 				f.write(p.getPage())
 				f.close()
-			purekey = c.getKey().replace(v.getKey(),'').replace('-',' ').strip()
-			print('{} [{}], '.format(purekey, C.yellow(len(c.papers))), end='')
-		print()
+			purekey = c.getKey().replace(v.getKey(), '').replace('-', ' ').strip()
+			r += '{} [{}], '.format(purekey, C.yellow(len(c.papers)))
+		print(r)
