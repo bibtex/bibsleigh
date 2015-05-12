@@ -41,6 +41,7 @@ class Unser(object):
 		self.filename = d
 		self.homedir = hdir
 		self.json = {}
+		self.back = self
 	def getPureName(self):
 		# +1 for the slash
 		return self.filename[len(self.homedir)+1:]
@@ -67,6 +68,7 @@ class Unser(object):
 				else:
 					s += '\t{0:<10} = "{{<span id="{0}">{1}</span>}}",\n'.format(k, self.json[k])
 			elif k in ('crossref', 'key', 'type', 'venue', 'eventtitle', 'dblpkey', 'dblpurl'):
+				# TODO: ban 'ee' as well
 				pass
 			elif k == 'doi':
 				s += '<span class="uri">\t{0:<10} = "<a href="http://dx.doi.org/{1}">{1}</a>",\n</span>'.format(k, self.json[k])
@@ -99,17 +101,53 @@ class Unser(object):
 	def getBoxLinks(self):
 		links = []
 		# Crossref to the parent
-		links.append('no Xref')
+		# DOC: real crossrefs are nice, but all the global searches slows the engine down
+		# DOC: (running time 5m11.559s vs 0m7.396s is 42x)
+		# if 'crossref' in self.json.keys():
+		# 	xref = self.top().seek(self.json['crossref'])
+		# 	if xref:
+		# 		links.append('<strong><a href="{}.html">{}</a></strong>'.format(\
+		# 			xref.getKey(),
+		# 			xref.getKey().replace('-', ' ')))
+		# 	else:
+		# 		links.append('Xref not found')
+		# else:
+		# 	links.append('no Xref')
+		# DOC: instead, we just link to the parent!
+		links.append('<strong><a href="{}.html">{}</a></strong>'.format(\
+			self.up().getKey(),
+			self.up().getKey().replace('-', ' ')))
 		# DBLP
 		if 'dblpkey' in self.json.keys():
-			links.append('<a href="http://dblp.uni-trier.de/rec/html/{}">DBLP</a>'.format(self.json['dblpkey']))
+			links.append('<a href="http://dblp.uni-trier.de/rec/html/{}">DBLP</a>'.format(\
+				self.json['dblpkey']))
 		elif 'dblpurl' in self.json.keys():
 			links.append('<a href="{}">DBLP</a>'.format(self.json['dblpurl']))
 		else:
 			links.append('no DBLP info')
 		# Scholar
-		links.append('no Scholar')
+		if 'title' in self.json.keys():
+			links.append('<a href="https://scholar.google.com/scholar?q=%22{}%22">Scholar</a>'.format(\
+				str(self.json['title']).replace(' ', '+')))
+		# Some publishers
+		if 'ee' in self.json.keys():
+			for e in listify(self.json['ee']):
+				if e.find('dl.acm.org') > 0 or e.find('doi.acm.org') > 0:
+					links.append('<a href="{}">ACM DL</a>'.format(e))
+				elif e.find('ieeexplore.ieee.org') > 0:
+					links.append('<a href="{}">IEEE</a>'.format(e))
+				else:
+					links.append('<a href="{}">?EE?</a>'.format(e))
 		return '<br/>'.join(links)
+	def up(self):
+		return self.back
+	def top(self):
+		if self == self.back:
+			return self
+		else:
+			return self.back.top()
+	def seek(self, key):
+		return None
 
 class Sleigh(Unser):
 	def __init__(self, idir):
@@ -118,24 +156,32 @@ class Sleigh(Unser):
 		for d in glob.glob(idir+'/*'):
 			if d.endswith('.md'):
 				continue
-			self.venues.append(Venue(d, idir))
+			self.venues.append(Venue(d, idir, self))
 	def getPage(self):
 		cx = sum([v.numOfPapers() for v in self.venues])
 		cv = len(self.venues)
 		return uberHTML.format(cv, cx, '\n'.join([v.getItem() for v in self.venues]))
+	def seek(self, key):
+		f = None
+		for v in self.venues:
+			f = v.seek(key)
+			if f:
+				return f
+		return f
 		
 
 class Venue(Unser):
-	def __init__(self, d, hdir):
+	def __init__(self, d, hdir, parent):
 		super(Venue, self).__init__(d, hdir)
 		self.years = []
 		for f in glob.glob(d+'/*'):
 			if f.endswith('.json'):
 				self.json = parseJSON(f)
 			elif os.path.isdir(f):
-				self.years.append(Year(f, self.homedir))
+				self.years.append(Year(f, self.homedir, self))
 			else:
 				print('File out of place:', f)
+		self.back = parent
 	def numOfPapers(self):
 		return sum([y.numOfPapers() for y in self.years])
 	def getItem(self):
@@ -163,38 +209,56 @@ class Venue(Unser):
 		for y in self.years:
 			res.extend(y.confs)
 		return res
+	def seek(self, key):
+		if key == self.get('dblpkey'):
+			return self
+		f = None
+		for y in self.years:
+			f = y.seek(key)
+			if f:
+				return f
+		return f
+
 
 class Year(Unser):
-	def __init__(self, d, hdir):
+	def __init__(self, d, hdir, parent):
 		super(Year, self).__init__(d, hdir)
 		self.year = last(d)
 		self.confs = []
 		for f in glob.glob(d+'/*'):
 			if os.path.isdir(f):
-				self.confs.append(Conf(f, self.homedir))
+				self.confs.append(Conf(f, self.homedir, self))
 				if os.path.exists(f+'.json'):
 					self.confs[-1].json = parseJSON(f+'.json')
 					# print('Conf has a JSON! %s' % self.confs[-1].json)
-				self.confs[-1].year = self.year
 			elif f.endswith('.json'):
 				pass
 			else:
 				print('File out of place:', f)
+		self.back = parent
 	def numOfPapers(self):
 		return sum([c.numOfPapers() for c in self.confs])
 	def getItem(self):
 		return '<dt>{}</dt>{}'.format(self.year, '\n'.join([c.getItem() for c in self.confs]))
+	def seek(self, key):
+		f = None
+		for c in self.confs:
+			f = c.seek(key)
+			if f:
+				return f
+		return f
 
 class Conf(Unser):
-	def __init__(self, d, hdir):
+	def __init__(self, d, hdir, parent):
 		super(Conf, self).__init__(d, hdir)
 		self.papers = []
-		self.year = 0
+		self.year = parent.year
 		for f in glob.glob(d+'/*'):
 			if os.path.isfile(f) and f.endswith('.json'):
-				self.papers.append(Paper(f, self.homedir))
+				self.papers.append(Paper(f, self.homedir, self))
 			else:
 				print('File or directory out of place:', f)
+		self.back = parent
 	def numOfPapers(self):
 		return len(self.papers)
 	def getEventTitle(self):
@@ -221,11 +285,23 @@ class Conf(Unser):
 			contents='<h3>Contents ({} items)</h3><dl class="toc">'.format(len(self.papers))+\
 				'\n'.join([p.getItem() for p in sorted(self.papers, key=sortbypages)])+'</dl>'\
 			)
+	def up(self):
+		return self.back.up()
+	def seek(self, key):
+		if key == self.get('dblpkey'):
+			return self
+		f = None
+		for p in self.papers:
+			f = p.seek(key)
+			if f:
+				return f
+		return f
 
 class Paper(Unser):
-	def __init__(self, f, hdir):
+	def __init__(self, f, hdir, parent):
 		super(Paper, self).__init__(f, hdir)
 		self.json = parseJSON(f)
+		self.back = parent
 	def getItem(self):
 		return '<dt><a href="{0}.html">{0}</a></dt><dd>{1}{2}{3}.</dd>'.format(\
 			self.getKey(), self.get('title'), self.getAbbrAuthors(), self.getPages())
@@ -260,3 +336,8 @@ class Paper(Unser):
 			boxlinks=self.getBoxLinks(),
 			contents=''\
 			)
+	def seek(self, key):
+		if key == self.get('dblpkey'):
+			return self
+		else:
+			return None
