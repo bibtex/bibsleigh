@@ -6,7 +6,10 @@ from urllib.request import urlopen
 
 def jsonify(s):
 	if isinstance(s, str):
-		return '"'+s+'"'
+		if s.isdigit():
+			return s
+		else:
+			return '"'+s+'"'
 	elif isinstance(s, list):
 		return '[' + ', '.join([jsonify(x) for x in s]) + ']'
 	else:
@@ -39,7 +42,8 @@ def xml2json(x):
 		jsonmap['title'] = jsonmap['title'].strip()
 		if jsonmap['title'].endswith('.'):
 			jsonmap['title'] = jsonmap['title'][:-1]
-		jsonmap['title'] = '{' + jsonmap['title'] + '}'
+		if jsonmap['title'].find('roceedings') < 0:
+			jsonmap['title'] = '{' + jsonmap['title'] + '}'
 	return '{\n\t'+',\n\t'.join([jsonkv(k, jsonmap[k]) for k in jsonmap])[:-1]+'\n}'
 
 def safelyLoadURL(url):
@@ -77,7 +81,7 @@ if __name__ == "__main__":
 			lname = ldir + '.json'
 		else:
 			qname = ldir.split('/')[-1]
-			lname = ldir + '/' + qname + '-' + xmlname.split('/')[-1].replace('.xml', '.json')
+			lname = ldir + '/' + qname + '-' + xmlname.split('/').replace('.xml', '.json')
 		while os.path.isfile(lname):
 			lname += '_'
 		# now write!
