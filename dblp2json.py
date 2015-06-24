@@ -4,6 +4,18 @@ import sys, time, socket, os, os.path, random
 import bs4
 from urllib.request import urlopen
 
+def jsonify(s):
+	if isinstance(s, str):
+		return '"'+s+'"'
+	elif isinstance(s, list):
+		return '[' + ', '.join([jsonify(x) for x in s]) + ']'
+	else:
+		print('Unknown JSON type in', s)
+		return '"'+s+'"'
+
+def jsonkv(k, v):
+	return jsonify(k) + ': ' + jsonify(v)
+
 def xml2json(x):
 	jsonmap = {}
 	s = bs4.BeautifulSoup(x)
@@ -28,15 +40,13 @@ def xml2json(x):
 		if jsonmap['title'].endswith('.'):
 			jsonmap['title'] = jsonmap['title'][:-1]
 		jsonmap['title'] = '{' + jsonmap['title'] + '}'
-	return '{\n\t'+'\n\t'.join(['{}: "{}",'.format(k, jsonmap[k]) for k in jsonmap])[:-1]+'\n}'
+	return '{\n\t'+',\n\t'.join([jsonkv(k, jsonmap[k]) for k in jsonmap])[:-1]+'\n}'
 
 def safelyLoadURL(url):
 	time.sleep(random.randint(1, 3))
 	errors = 0
 	while errors < 3:
 		try:
-			# s = urlopen(url).read().decode('utf-8')
-			# print(type(s))
 			return urlopen(url).read().decode('utf-8')
 		except IOError:
 			print('Warning: failed to load URL, retrying...')
@@ -50,6 +60,7 @@ def safelyLoadURL(url):
 if __name__ == "__main__":
 	if len(sys.argv) != 3:
 		print('Usage:\n\tdblp2json.py <URI> <DIR>')
+		print('e.g.: ./dblp2json.py http://dblp.uni-trier.de/db/conf/sigplan/sigplan82.html ../json/PLDI/1982/SCC-1982')
 		sys.exit(1)
 	dblp = safelyLoadURL(sys.argv[1])
 	ldir = sys.argv[2]
@@ -61,7 +72,6 @@ if __name__ == "__main__":
 		print('\tFetching ' + xmlname)
 		ps += 1
 		xml = safelyLoadURL(xmlname)
-		# avoid IO trouble
 		if xmlname.split('/')[-1].split('.')[0].isdigit():
 			print('\t\tAssumed to be the boss record!')
 			lname = ldir + '.json'
