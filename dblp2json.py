@@ -3,21 +3,7 @@
 import sys, time, socket, os, os.path, random
 import bs4
 from urllib.request import urlopen
-
-def jsonify(s):
-	if isinstance(s, str):
-		if s.isdigit():
-			return s
-		else:
-			return '"'+s+'"'
-	elif isinstance(s, list):
-		return '[' + ', '.join([jsonify(x) for x in s]) + ']'
-	else:
-		print('Unknown JSON type in', s)
-		return '"'+s+'"'
-
-def jsonkv(k, v):
-	return jsonify(k) + ': ' + jsonify(v)
+from JSON import jsonify, jsonkv
 
 def xml2json(x):
 	jsonmap = {}
@@ -44,7 +30,7 @@ def xml2json(x):
 			jsonmap['title'] = jsonmap['title'][:-1]
 		if jsonmap['title'].find('roceedings') < 0:
 			jsonmap['title'] = '{' + jsonmap['title'] + '}'
-	return '{\n\t'+',\n\t'.join([jsonkv(k, jsonmap[k]) for k in jsonmap])[:-1]+'\n}'
+	return '{\n\t'+',\n\t'.join([jsonkv(k, jsonmap[k]) for k in jsonmap])+'\n}'
 
 def safelyLoadURL(url):
 	time.sleep(random.randint(1, 3))

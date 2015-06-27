@@ -3,6 +3,7 @@
 
 import glob, os.path
 import Templates
+from JSON import jsonify, jsonkv
 
 def sortbypages(z):
 	try:
@@ -23,11 +24,17 @@ def parseJSON(fn):
 		line = line.strip()
 		if line in ('{', '}', '') or line.startswith('//'):
 			continue
+		if line.endswith(','):
+			line = line[:-1]
 		perq = line.split('"')
 		if len(perq) == 5:
 			dct[perq[1]] = perq[3]
 		elif len(perq) == 3 and perq[1] == 'year':
-			dct[perq[1]] = int(perq[-1][2:-1])
+			dct[perq[1]] = int(perq[-1][2:])
+		elif len(perq) !=5 and perq[1] in ('title', 'booktitle'):
+			# tolerance to quotes in titles
+			rawtail = line.replace('"'+perq[1]+'": ', '')
+			dct[perq[1]] = rawtail[rawtail.index('"')+1 : rawtail.rindex('"')]
 		elif len(perq) > 5:
 			dct[perq[1]] = [z for z in perq[3:-1] if z != ', ']
 		else:
@@ -152,6 +159,10 @@ class Unser(object):
 			return self.back.top()
 	def seek(self, key):
 		return None
+	def getJSON(self):
+		goodkeys = sorted(self.json)
+		goodkeys.remove('FILE')
+		return '{\n' + ',\n\t'.join([jsonkv(k, self.json[k]) for k in goodkeys]) + '\n}'
 
 class Sleigh(Unser):
 	def __init__(self, idir):
@@ -175,7 +186,7 @@ class Sleigh(Unser):
 		return f
 	def numOfPapers(self):
 		return sum([v.numOfPapers() for v in self.venues])
-		
+
 
 class Venue(Unser):
 	def __init__(self, d, hdir, parent):
