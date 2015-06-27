@@ -28,8 +28,8 @@ def xml2json(x):
 		jsonmap['title'] = jsonmap['title'].strip()
 		if jsonmap['title'].endswith('.'):
 			jsonmap['title'] = jsonmap['title'][:-1]
-		if jsonmap['title'].find('roceedings') < 0:
-			jsonmap['title'] = '{' + jsonmap['title'] + '}'
+		# if jsonmap['title'].find('roceedings') < 0:
+		# 	jsonmap['title'] = '{' + jsonmap['title'] + '}'
 	return '{\n\t'+',\n\t'.join([jsonkv(k, jsonmap[k]) for k in jsonmap])+'\n}'
 
 def safelyLoadURL(url):
@@ -67,7 +67,7 @@ if __name__ == "__main__":
 			lname = ldir + '.json'
 		else:
 			qname = ldir.split('/')[-1]
-			lname = ldir + '/' + qname + '-' + xmlname.split('/').replace('.xml', '.json')
+			lname = ldir + '/' + qname + '-' + xmlname.split('/')[-1].replace('.xml', '.json')
 		while os.path.isfile(lname):
 			lname += '_'
 		# now write!
