@@ -40,7 +40,9 @@ def checkon(fn, o):
 def checkreport(fn, o):
 	statuses = (C.blue('PASS'), C.red('FAIL'), C.yellow('FIXD'))
 	r = checkon(fn, o)
-	print('[ {} ] {}'.format(statuses[r], fn))
+	# non-verbose mode by default
+	if r != 0:
+		print('[ {} ] {}'.format(statuses[r], fn))
 	return r
 
 if __name__ == "__main__":

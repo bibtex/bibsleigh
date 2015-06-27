@@ -335,6 +335,8 @@ class Paper(Unser):
 	def getPages(self):
 		if 'pages' not in self.json.keys():
 			return ''
+		elif isinstance(self.json['pages'], int):
+			return ', p. {}'.format(self.json['pages'])
 		ps = self.json['pages'].split('-')
 		if len(ps) == 3 and ps[1] == '':
 			ps = [ps[0], ps[2]]
