@@ -1,15 +1,16 @@
-all:
-	time ./json2html.py
+all: AST.py Templates.py JSON.py Fancy.py
 
-run:
-	time ./library.py
-	sort venues.lst | uniq > venues.unq
-	./newvenues.py
-	rm -f venues.unq
+AST.py:
+	cp ../engine/AST.py .
 
-prep: dblp.xml
-	./deentitify dblp.xml
+JSON.py:
+	cp ../engine/JSON.py .
+
+Fancy.py:
+	cp ../engine/Fancy.py .
+
+Templates.py:
+	cp ../engine/Templates.py .
 
 clean:
-	rm -rf html
-	mkdir html
+	rm -f AST.py Templates.py JSON.py Fancy.py

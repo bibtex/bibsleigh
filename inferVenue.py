@@ -20,22 +20,19 @@ def checkon(fn, o):
 	lines = f.readlines()[1:-1]
 	f.close()
 	flines = [strictstrip(s) for s in lines]
-	plines = sorted([strictstrip(s) for s in o.getJSON().split('\n')[1:-1]])
-	# find numeric values, turn them into proper integers
-	for k in o.json.keys():
-		if isinstance(o.json[k], str) and o.json[k].isdigit():
-			o.json[k] = int(o.json[k])
-	nlines = sorted([strictstrip(s) for s in o.getJSON().split('\n')[1:-1]])
-	if flines != plines:
-		return 1
-	elif plines != nlines:
-		f = open(fn, 'w')
-		f.write('{\n')
-		for line in nlines:
-			f.write('\t'+line+'\n')
-		f.write('}')
-		f.close()
-		return 2
+	if 'venue' not in o.json.keys():
+		if 'venue' in o.up().json.keys():
+			o.json['venue'] = o.up().json['venue']
+			plines = sorted([strictstrip(s) for s in o.getJSON().split('\n')[1:-1]])
+			f = open(fn, 'w')
+			f.write('{\n')
+			for line in plines:
+				f.write('\t'+line+'\n')
+			f.write('}')
+			f.close()
+			return 2
+		else:
+			return 1
 	else:
 		return 0
 
