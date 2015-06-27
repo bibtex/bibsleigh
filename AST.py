@@ -3,7 +3,7 @@
 
 import glob, os.path
 import Templates
-from JSON import jsonify, jsonkv
+from JSON import jsonkv
 
 def sortbypages(z):
 	try:
@@ -29,9 +29,9 @@ def parseJSON(fn):
 		perq = line.split('"')
 		if len(perq) == 5:
 			dct[perq[1]] = perq[3]
-		elif len(perq) == 3 and perq[1] == 'year':
+		elif len(perq) == 3:
 			dct[perq[1]] = int(perq[-1][2:])
-		elif len(perq) !=5 and perq[1] in ('title', 'booktitle'):
+		elif len(perq) != 5 and perq[1] in ('title', 'booktitle'):
 			# tolerance to quotes in titles
 			rawtail = line.replace('"'+perq[1]+'": ', '')
 			dct[perq[1]] = rawtail[rawtail.index('"')+1 : rawtail.rindex('"')]
@@ -88,6 +88,8 @@ class Unser(object):
 			elif k in ('ee', 'url'):
 				for e in listify(self.json[k]):
 					s += '<span class="uri">\t{0:<10} = "<a href=\"{1}\">{1}</a>",\n</span>'.format(k, e)
+			elif k in ('year', 'volume', 'issue', 'number') and isinstance(self.json[k], int):
+				s += '\t{0:<10} = {1},\n'.format(k, self.json[k])
 			else:
 				s += '\t{0:<10} = "{1}",\n'.format(k, self.json[k])
 		s += '}'
@@ -106,7 +108,7 @@ class Unser(object):
 		else:
 			return ''
 	def getBoxLinks(self):
-		links = [[],[],[]]
+		links = [[], [], []]
 		# Crossref to the parent
 		# DOC: real crossrefs are nice, but all the global searches slows the engine down
 		# DOC: (running time 5m11.559s vs 0m7.396s is 42x)
@@ -328,7 +330,7 @@ class Paper(Unser):
 		if 'author' not in self.json.keys():
 			return ''
 		return ' ('+', '.join(['<abbr title="{0}">{1}</abbr>'.format(a,\
-			''.join([w[0] for w in a.replace('-',' ').split(' ') if w]))\
+			''.join([w[0] for w in a.replace('-', ' ').split(' ') if w]))\
 			for a in listify(self.json['author'])])+')'
 	def getPages(self):
 		if 'pages' not in self.json.keys():
