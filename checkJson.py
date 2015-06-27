@@ -47,4 +47,4 @@ if __name__ == "__main__":
 	print('{} files checked, {} ok, {} failed'.format(\
 		C.bold(cx[True] + cx[False]),
 		C.blue(cx[True]),
-		C.red(cx[False]) ))
+		C.red(cx[False])))

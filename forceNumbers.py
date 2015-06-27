@@ -60,4 +60,4 @@ if __name__ == "__main__":
 		C.bold(cx[0] + cx[1] + cx[2]),
 		C.blue(cx[0]),
 		C.yellow(cx[2]),
-		C.red(cx[1]) ))
+		C.red(cx[1])))
