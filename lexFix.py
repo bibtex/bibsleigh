@@ -17,22 +17,22 @@ def checkon(fn, o):
 	if os.path.isdir(fn):
 		fn = fn + '.json'
 	f = open(fn, 'r')
-	lines = f.readlines()[1:-1]
+	flines = f.readlines()[1:-1]
 	f.close()
-	flines = [strictstrip(s) for s in lines]
-	plines = sorted([strictstrip(s) for s in o.getJSON().split('\n')[1:-1]])
-	# find numeric values, turn them into proper integers
-	for k in o.json.keys():
-		if isinstance(o.json[k], str) and o.json[k].isdigit():
-			o.json[k] = int(o.json[k])
-	nlines = sorted([strictstrip(s) for s in o.getJSON().split('\n')[1:-1]])
-	if flines != plines:
+	sflines = [strictstrip(s) for s in flines]
+	sjlines = sorted([strictstrip(s) for s in o.getJSON().split('\n')[1:-1]])
+	jlines = ['\t{},\n'.format(s) for s in sjlines]
+	jlines[-1] = jlines[-1][:-2] + '\n' # remove the last comma
+	if sflines != sjlines:
 		return 1
-	elif plines != nlines:
+	elif jlines != flines:
+		# f1 = [s for s in jlines if s not in flines]
+		# f2 = [s for s in flines if s not in jlines]
+		# print('∆:', f1, '\nvs', f2)
 		f = open(fn, 'w')
 		f.write('{\n')
-		for line in nlines:
-			f.write('\t'+line+'\n')
+		for line in jlines:
+			f.write(line)
 		f.write('}')
 		f.close()
 		return 2
