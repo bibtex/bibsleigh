@@ -32,15 +32,16 @@ def checkon(fn, o):
 				o.json[k] = o.json[k][1:-1]
 			elif o.json[k].find(' "') > -1 and o.json[k].find('" ') > -1:
 				o.json[k] = o.json[k].replace(' "', ' “').replace('" ', '” ')
+			elif o.json[k].find(' "') > -1 and o.json[k].endswith('"'):
+				o.json[k] = o.json[k].replace(' "', ' “').replace('"', '”')
+			elif o.json[k].find('" ') > -1 and o.json[k].startswith('"'):
+				o.json[k] = o.json[k].replace('" ', '” ').replace('"', '“')
 	nlines = sorted([strictstrip(s) for s in o.getJSON().split('\n')[1:-1]])
 	if flines != plines:
 		return 1
 	elif plines != nlines:
 		f = open(fn, 'w')
-		f.write('{\n')
-		for line in nlines:
-			f.write('\t'+line+'\n')
-		f.write('}')
+		f.write(o.getJSON())
 		f.close()
 		return 2
 	else:
