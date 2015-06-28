@@ -164,7 +164,7 @@ class Unser(object):
 	def getJSON(self):
 		goodkeys = sorted(self.json)
 		goodkeys.remove('FILE')
-		return '{\n' + ',\n\t'.join([jsonkv(k, self.json[k]) for k in goodkeys]) + '\n}'
+		return '{\n\t' + ',\n\t'.join([jsonkv(k, self.json[k]) for k in goodkeys]) + '\n}'
 
 class Sleigh(Unser):
 	def __init__(self, idir):
