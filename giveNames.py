@@ -22,18 +22,28 @@ def checkon(fn, o):
 	f.close()
 	flines = [strictstrip(s) for s in lines]
 	plines = sorted([strictstrip(s) for s in o.getJSON().split('\n')[1:-1]])
+	# long names
+	if o.get('journal') == 'Sci. Comput. Program.':
+		o.json['journal'] = 'Science of Computer Programming'
+	if o.get('journal') == 'Electr. Notes Theor. Comput. Sci.':
+		o.json['journal'] = 'Electronic Notes in Theoretical Computer Science'
+	if o.get('series') == 'LNCS':
+		o.json['series'] = 'Lecture Notes in Computer Science'
+	# short names
+	if o.get('journal') == 'Science of Computer Programming':
+		o.json['journalshort'] = 'SCP'
+	if o.get('series') == 'Lecture Notes in Computer Science':
+		o.json['seriesshort'] = 'LNCS'
+	if o.get('journal') == 'Electronic Notes in Theoretical Computer Science':
+		o.json['journalshort'] = 'ENTCS'
+	nlines = sorted([strictstrip(s) for s in o.getJSON().split('\n')[1:-1]])
 	if flines != plines:
-		f1 = [line for line in flines if line not in plines]
-		f2 = [line for line in plines if line not in flines]
-		if f1 or f2:
-			if verbose:
-				print('∆:', f1, 'vs', f2)
-			return 1
-		else:
-			f = open(fn, 'w')
-			f.write(o.getJSON())
-			f.close()
-			return 2
+		return 1
+	elif plines != nlines:
+		f = open(fn, 'w')
+		f.write(o.getJSON())
+		f.close()
+		return 2
 	else:
 		return 0
 

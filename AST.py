@@ -71,7 +71,7 @@ class Unser(object):
 				continue
 			if k in ('author', 'editor'):
 				s += '\t{:<10} = "{}",\n'.format(k, ' and '.join(listify(self.json[k])))
-			elif k in ('title', 'booktitle', 'series', 'publisher'):
+			elif k in ('title', 'booktitle', 'series', 'publisher', 'journal'):
 				if k+'short' not in self.json.keys():
 					s += '\t{0:<10} = "{{{1}}}",\n'.format(k, self.json[k])
 				else:
@@ -98,7 +98,7 @@ class Unser(object):
 		return s.replace('<i>', '\\emph{').replace('</i>', '}')
 	def getCode(self):
 		code = ''
-		for tag in ('title', 'booktitle', 'series', 'publisher'):
+		for tag in ('title', 'booktitle', 'series', 'publisher', 'journal'):
 			if tag in self.json.keys() and tag+'short' in self.json.keys():
 				code += "$('#"+tag+"').text(this.checked?'%s':'%s');" % (self.json[tag], self.json[tag+'short'])
 		return code
@@ -295,6 +295,10 @@ class Conf(Unser):
 	def getItem(self):
 		return '<dd><a href="{}.html">{}</a> ({})</dd>'.format(self.get('name'), self.get('title'), self.getEventTitle())
 	def getPage(self):
+		if 'eventuri' in self.json.keys():
+			ev = '<h3>Event page: <a href="{uri}">{uri}</a></h3'.format(uri=self.json['eventuri'])
+		else:
+			ev = ''
 		return Templates.bibHTML.format(\
 			filename=self.getJsonName(),
 			title=self.get('title'),
@@ -304,7 +308,7 @@ class Conf(Unser):
 			code=self.getCode(),
 			bib=self.getBib(),
 			boxlinks=self.getBoxLinks(),
-			contents='<h3>Contents ({} items)</h3><dl class="toc">'.format(len(self.papers))+\
+			contents=ev+'<h3>Contents ({} items)</h3><dl class="toc">'.format(len(self.papers))+\
 				'\n'.join([p.getItem() for p in sorted(self.papers, key=sortbypages)])+'</dl>'\
 			)
 	def up(self):
