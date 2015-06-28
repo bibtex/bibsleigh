@@ -6,10 +6,12 @@ import Templates
 from JSON import jsonkv
 
 def sortbypages(z):
-	try:
-		return int(z.get('pages').split('-')[0])
-	except:
+	if 'pages' not in z.json.keys():
 		return 0
+	elif isinstance(z.json['pages'], int):
+		return z.json['pages']
+	else:
+		return int(z.get('pages').split('-')[0])
 
 def last(xx):
 	return xx.split('/')[-1].replace('.json', '')
