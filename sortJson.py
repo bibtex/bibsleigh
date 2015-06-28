@@ -1,11 +1,12 @@
 #!/usr/local/bin/python3
 # -*- coding: utf-8 -*-
 
-import Fancy, AST, os.path
+import Fancy, AST, os.path, sys
 
 ienputdir = '../json'
 sleigh = AST.Sleigh(ienputdir)
 C = Fancy.colours()
+verbose = False
 
 def strictstrip(s):
 	s = s.strip()
@@ -41,11 +42,13 @@ def checkreport(fn, o):
 	statuses = (C.blue('PASS'), C.red('FAIL'), C.yellow('FIXD'))
 	r = checkon(fn, o)
 	# non-verbose mode by default
-	if r != 0:
+	if verbose or r != 0:
 		print('[ {} ] {}'.format(statuses[r], fn))
 	return r
 
 if __name__ == "__main__":
+	if len(sys.argv) > 1:
+		verbose = sys.argv[1] == '-v'
 	print('{}: {} venues, {} papers\n{}'.format(\
 		C.purple('BibSLEIGH'),
 		C.red(len(sleigh.venues)),

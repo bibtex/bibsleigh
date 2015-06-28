@@ -1,11 +1,12 @@
 #!/usr/local/bin/python3
 # -*- coding: utf-8 -*-
 
-import Fancy, AST, os.path
+import Fancy, AST, os.path, sys
 
 ienputdir = '../json'
 sleigh = AST.Sleigh(ienputdir)
 C = Fancy.colours()
+verbose = False
 
 def strictstrip(s):
 	s = s.strip()
@@ -25,26 +26,34 @@ def checkon(fn, o):
 		f1 = [line for line in flines if line not in plines]
 		f2 = [line for line in plines if line not in flines]
 		print('∆:', f1, '\nvs', f2)
-	return flines == plines
+	if flines == plines:
+		return 0
+	else:
+		return 1
 
 def checkreport(fn, o):
+	statuses = (C.blue('PASS'), C.red('FAIL'), C.yellow('FIXD'))
 	r = checkon(fn, o)
-	print('[ {} ] {}'.format(C.blue('PASS') if r else C.red('FAIL'), fn))
+	# non-verbose mode by default
+	if verbose or r != 0:
+		print('[ {} ] {}'.format(statuses[r], fn))
 	return r
 
 if __name__ == "__main__":
+	if len(sys.argv) > 1:
+		verbose = sys.argv[1] == '-v'
 	print('{}: {} venues, {} papers\n{}'.format(\
 		C.purple('BibSLEIGH'),
 		C.red(len(sleigh.venues)),
 		C.red(sleigh.numOfPapers()),
 		C.purple('='*42)))
-	cx = {True: 0, False: 0}
+	cx = {0: 0, 1: 0, 2: 0}
 	for v in sleigh.venues:
 		for c in v.getConfs():
 			cx[checkreport(c.filename, c)] += 1
 			for p in c.papers:
 				cx[checkreport(p.filename, p)] += 1
 	print('{} files checked, {} ok, {} failed'.format(\
-		C.bold(cx[True] + cx[False]),
-		C.blue(cx[True]),
-		C.red(cx[False])))
+		C.bold(cx[0] + cx[1] + cx[2]),
+		C.blue(cx[0]),
+		C.red(cx[1])))
