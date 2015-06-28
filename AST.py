@@ -296,7 +296,7 @@ class Conf(Unser):
 		return '<dd><a href="{}.html">{}</a> ({})</dd>'.format(self.get('name'), self.get('title'), self.getEventTitle())
 	def getPage(self):
 		if 'eventuri' in self.json.keys():
-			ev = '<h3>Event page: <a href="{uri}">{uri}</a></h3'.format(uri=self.json['eventuri'])
+			ev = '<h3>Event page: <a href="{uri}">{uri}</a></h3>'.format(uri=self.json['eventuri'])
 		else:
 			ev = ''
 		return Templates.bibHTML.format(\

@@ -34,7 +34,7 @@ def heurichoose(k, v1, v2):
 	if k == 'year':
 		# updated year always gets precedence
 		return v1
-	print(C.red('\tUndecided ' + k) + ': ' + v1 + ' vs ' + v2)
+	print('{}: {} vs {}'.format(C.red('\tUndecided ' + k), v1, v2))
 	# if undecided, stick to the old one
 	return v2
 

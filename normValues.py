@@ -36,6 +36,10 @@ def checkon(fn, o):
 				o.json[k] = o.json[k].replace(' "', ' “').replace('"', '”')
 			elif o.json[k].find('" ') > -1 and o.json[k].startswith('"'):
 				o.json[k] = o.json[k].replace('" ', '” ').replace('"', '“')
+		elif isinstance(o.json[k], list):
+			# inline trivial lists
+			if len(o.json[k]) == 1:
+				o.json[k] = o.json[k][0]
 	nlines = sorted([strictstrip(s) for s in o.getJSON().split('\n')[1:-1]])
 	if flines != plines:
 		return 1
