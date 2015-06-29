@@ -40,15 +40,17 @@ if __name__ == "__main__":
 		lst = [x.getItem() for x in ts[k]]
 		# TODO: sort by venues!
 		dl = '<dl><dt>All venues</dt><dd><dl class="toc">' + '\n'.join(sorted(lst)) + '</dl></dd></dl>'
+		# hack to get from tags to papers
+		dl = dl.replace('href="', 'href="../')
 		f.write(Templates.tagHTML.format(
 			title=k+' tag',
 			tag=k,
 			idx='',
-			listname='Papers',
+			listname='{} papers'.format(len(lst)),
 			dl=dl))
 		f.close()
 	f = open(outputdir+'/tag/index.html', 'w')
-	lst = ['<li><a href="{0}.html">{0}</a></li>'.format(t) for t in ts.keys()]
+	lst = ['<li><a href="{0}.html">{0}</a> ({1})</li>'.format(t, len(ts[t])) for t in ts.keys()]
 	ul = '<ul class="tag">' + '\n'.join(sorted(lst)) + '</ul>'
 	f.write(Templates.tagHTML.format(
 		title='All known tags',

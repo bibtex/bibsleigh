@@ -183,9 +183,15 @@ class Unser(object):
 	def seek(self, key):
 		return None
 	def getJSON(self):
-		goodkeys = sorted(self.json)
+		# 'tag' is there, but also it isn’t
+		if self.tags:
+			self.json['tag'] = self.tags
+		goodkeys = sorted(self.json.keys())
 		goodkeys.remove('FILE')
-		return '{\n\t' + ',\n\t'.join([jsonkv(k, self.json[k]) for k in goodkeys]) + '\n}'
+		s = '{\n\t' + ',\n\t'.join([jsonkv(k, self.json[k]) for k in goodkeys]) + '\n}'
+		if 'tag' in goodkeys:
+			del self.json['tag']
+		return s
 	def numOfTags(self):
 		return len(self.getTags())
 	def getTags(self):
@@ -392,7 +398,10 @@ class Paper(Unser):
 		self.json = parseJSON(f)
 		# NB: self.tags is a list in Paper, but a dict in all other classes
 		if 'tag' in self.json.keys():
-			self.tags = self.json['tag']
+			if isinstance(self.json['tag'], list):
+				self.tags = self.json['tag']
+			else:
+				self.tags = [self.json['tag']]
 			del self.json['tag']
 		self.back = parent
 	def getItem(self):
