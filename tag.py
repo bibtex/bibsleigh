@@ -85,7 +85,8 @@ if __name__ == "__main__":
 	cx = {0: 0, 1: 0, 2: 0}
 	for v in sleigh.venues:
 		for c in v.getConfs():
-			cx[checkreport(c.filename, c)] += 1
+			# NB: We don’t tag conferences. Should we?
+			# cx[checkreport(c.filename, c)] += 1
 			for p in c.papers:
 				cx[checkreport(p.filename, p)] += 1
 	print('{} files checked, {} ok, {} fixed, {} failed'.format(\

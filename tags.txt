@@ -1,3 +1,4 @@
+ada
 algol
 ansi c
 assembly
@@ -5,50 +6,79 @@ c#
 c++
 clojure
 cobol
+coffeescript
+css
 erlang
 f#
 fortran
+groovy
 haskell
 java
 javascript
 lisp
+lua
+markdown
 matlab
+modula
 oberon
 pascal
 perl
+php
 prolog
 python
+ruby
 scala
+smalltalk
+sql
+tex
+typescript
 
+ajax
+arduino
 asf+sdf
 eclipse
+emacs
+git
 gll
 jit
 ocl
+oop
 rascal
 sglr
 spoofax
 stratego
 txl
 uml
+wiki
 
+abstract syntax tree
 attribute grammar
+bytecode
 context-free grammar
+database
 design pattern
 domain model
 domain-specific language
 feature model
+file system
+goto
 layout
 memory leak
+network
+parse tree
 program dependence graph
 regular expressions
 runtime
+security
 semantics
 state machine
+statechart
 syntax
 test coverage
+usability
 variability
 
+abstract interpretation
 clone detection
 control flow analysis
 cost analysis
@@ -57,19 +87,30 @@ encapsulation
 garbage collection
 generalised parsing
 inheritance
+live programming
 mining
 model checking
 model transformation
 parsing
+partial evaluation
 performance
 points-to analysis
 polymorphism
 refactoring
 slicing
+supercompilation
 theorem proving
+type checking
+type inference
 verification
 
+concurrent
 declarative
+distributed
+empirical
 enterprise
 functional
 imperative
+in a broad sense
+in the cloud
+parallel
