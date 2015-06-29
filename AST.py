@@ -51,12 +51,18 @@ class Unser(object):
 		self.homedir = hdir
 		self.json = {}
 		self.back = self
+		self.tags = None
 	def getPureName(self):
 		# +1 for the slash
 		return self.filename[len(self.homedir)+1:]
 	def getJsonName(self):
 		s = self.getPureName()
 		return s if s.endswith('.json') else s+'.json'
+	def getHtmlName(self):
+		s = self.getPureName().split('/')[-1]
+		if s.endswith('.json'):
+			s = s[:-5]
+		return s if s.endswith('.html') else s+'.html'
 	def get(self, name):
 		return self.json[name] if name in self.json.keys() else self.getKey()
 	def getKey(self):
@@ -180,6 +186,10 @@ class Unser(object):
 		goodkeys = sorted(self.json)
 		goodkeys.remove('FILE')
 		return '{\n\t' + ',\n\t'.join([jsonkv(k, self.json[k]) for k in goodkeys]) + '\n}'
+	def numOfTags(self):
+		return len(self.getTags())
+	def getTags(self):
+		return {}
 
 class Sleigh(Unser):
 	def __init__(self, idir):
@@ -203,8 +213,16 @@ class Sleigh(Unser):
 		return f
 	def numOfPapers(self):
 		return sum([v.numOfPapers() for v in self.venues])
-	def numOfTags(self):
-		return 0
+	def getTags(self):
+		if not self.tags:
+			self.tags = {}
+			for v in self.venues:
+				ts = v.getTags()
+				for k in ts.keys():
+					if k not in self.tags.keys():
+						self.tags[k] = []
+					self.tags[k].extend(ts[k])
+		return self.tags
 
 
 class Venue(Unser):
@@ -255,6 +273,16 @@ class Venue(Unser):
 			if f:
 				return f
 		return f
+	def getTags(self):
+		if not self.tags:
+			self.tags = {}
+			for y in self.years:
+				ts = y.getTags()
+				for k in ts.keys():
+					if k not in self.tags.keys():
+						self.tags[k] = []
+					self.tags[k].extend(ts[k])
+		return self.tags
 
 
 class Year(Unser):
@@ -284,6 +312,16 @@ class Year(Unser):
 			if f:
 				return f
 		return f
+	def getTags(self):
+		if not self.tags:
+			self.tags = {}
+			for c in self.confs:
+				ts = c.getTags()
+				for k in ts.keys():
+					if k not in self.tags.keys():
+						self.tags[k] = []
+					self.tags[k].extend(ts[k])
+		return self.tags
 
 class Conf(Unser):
 	def __init__(self, d, hdir, parent):
@@ -337,11 +375,25 @@ class Conf(Unser):
 			if f:
 				return f
 		return f
+	def getTags(self):
+		if not self.tags:
+			self.tags = {}
+			for p in self.papers:
+				ts = p.getTags()
+				for k in ts.keys():
+					if k not in self.tags.keys():
+						self.tags[k] = []
+					self.tags[k].append(ts[k])
+		return self.tags
 
 class Paper(Unser):
 	def __init__(self, f, hdir, parent):
 		super(Paper, self).__init__(f, hdir)
 		self.json = parseJSON(f)
+		# NB: self.tags is a list in Paper, but a dict in all other classes
+		if 'tag' in self.json.keys():
+			self.tags = self.json['tag']
+			del self.json['tag']
 		self.back = parent
 	def getItem(self):
 		return '<dt><a href="{0}.html">{0}</a></dt><dd>{1}{2}{3}.</dd>'.format(\
@@ -368,9 +420,9 @@ class Paper(Unser):
 		else:
 			return ', pp. {}–{}'.format(*ps)
 	def getPage(self):
-		if 'tag' in self.json.keys():
+		if self.getTags():
 			cnt = '<h3>Tags:</h3><ul class="tag"><li>'
-			cnt += '</li><li>'.join(['<a href="tag/{0}.html">{0}'.format(t) for t in self.json['tag']])
+			cnt += '</li><li>'.join(['<a href="tag/{0}.html">{0}'.format(t) for t in self.tags])
 			cnt += '</ul><hr/>'
 		else:
 			cnt = ''
@@ -390,3 +442,9 @@ class Paper(Unser):
 			return self
 		else:
 			return None
+	def getTags(self):
+		if self.tags:
+			myname = self.getHtmlName()
+			return {k:myname for k in self.tags}
+		else:
+			return {}

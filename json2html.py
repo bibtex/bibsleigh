@@ -38,3 +38,4 @@ if __name__ == "__main__":
 		C.red(len(sleigh.venues)),
 		C.red(sleigh.numOfPapers()),
 		C.red(sleigh.numOfTags())))
+	# print(sleigh.getTags())
