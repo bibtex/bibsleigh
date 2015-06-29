@@ -1,6 +1,7 @@
 ada
 ajax
 algol
+	algol-like
 ansi c
 api
 arduino
@@ -24,6 +25,10 @@ git
 gll
 groovy
 haskell
+integrated development environment
+	integrated environment
+	ides
+	ide
 jastadd
 java
 javascript
@@ -52,6 +57,7 @@ spoofax
 sql
 stratego
 tex
+	latex
 txl
 typescript
 uml
@@ -65,6 +71,7 @@ attribute grammar
 bytecode
 context-free grammar
 database
+	databases
 design pattern
 domain model
 domain-specific language
@@ -75,45 +82,68 @@ goto
 graph grammar
 higher-order
 layout
+legacy
 memory leak
 network
 parse tree
 product line
 program dependence graph
-regular expressions
+programming language
+regular expression
 runtime
+	run time
+	run-time
 security
 semantics
+source code
+	source-code
 state machine
 statechart
 syntax
-technical space
+technological space
+	technical space
 test coverage
 traversal
+	traversals
+	traversing
 usability
 variability
 
 abstract interpretation
+action semantics
 clone detection
 compilation
 control flow analysis
+	control-flow analysis
 cost analysis
 data flow analysis
+	data-flow analysis
+	dataflow
 debugging
+deforestation
 disambiguation
 documentation
 encapsulation
 fact extraction
 garbage collection
 generalised parsing
+	generalized parsing
 graph rewriting
 inheritance
 live programming
-maintenance
+megamodel
+	megamodelling
+	megamodeling
+	megamodels
+	macromodel
+	macromodels
+memory management
+	memory allocation
 mining
 model checking
 model transformation
 modelling
+	modeling
 optimisation
 parsing
 partial evaluation
@@ -121,30 +151,78 @@ performance
 points-to analysis
 polymorphism
 pretty-printing
-programming
+	pretty-printer
+	pretty-printers
+	pretty printing
+	pretty printer
+	pretty printers
 re-engineering
+	reengineering
+	re engineering
 refactoring
 reverse engineering
+scrap your boilerplate
+	syb
 slicing
 supercompilation
 term rewriting
 termination
 theorem proving
+	theorem prover
 type checking
 type inference
 validation
+	validator
+	validators
 verification
 visualisation
+	visualization
+	visualise
+	visualize
+	visualised
+	visualized
 
+aspect-oriented
+	aspect oriented
+	aop
+	aosd
 concurrent
+	concurrency
 declarative
 distributed
 embedded
 empirical
+	experiment
 enterprise
 functional
+human-computer
 imperative
 in a broad sense
 in the cloud
+in the large
+	in-the-large
+in the small
+	in-the-small
+multi-threaded
+object-oriented
+	object oriented
+	oop
+	ooa
+	oosd
+	ood
+orthogonal
+	orthogonality
 parallel
+	parallelism
+	parallelisation
+	parallelization
 projectional
+relational
+
+design
+maintenance
+development
+programming
+testing
+requirements
+deployment

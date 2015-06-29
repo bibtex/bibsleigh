@@ -9,8 +9,8 @@ ienputdir = '../json'
 sleigh = AST.Sleigh(ienputdir)
 C = Fancy.colours()
 verbose = False
-# TODO: support tag aliases
 tagz = []
+tagliases = {}
 
 def strictstrip(s):
 	s = s.strip()
@@ -39,16 +39,17 @@ def checkon(fn, o):
 	f.close()
 	flines = [strictstrip(s) for s in lines]
 	plines = sorted([strictstrip(s) for s in o.getJSON().split('\n')[1:-1]])
-	ts = []
-	for t in tagz:
-		if tagpositive(t, o.get('title')):
-			ts.append(t)
+	ts = [tagliases[t] for t in tagliases.keys() if tagpositive(t, o.get('title'))]
 	if ts:
 		if not o.tags:
 			o.tags = []
 		for t in ts:
 			if t not in o.tags:
 				o.tags.append(t)
+		# uncomment the following one line to overwrite all tags
+		# o.tags = ts[:]
+		# let’s keep tags clean and sorted
+		o.tags = sorted(o.tags)
 	nlines = sorted([strictstrip(s) for s in o.getJSON().split('\n')[1:-1]])
 	if flines != plines:
 		return 1
@@ -73,10 +74,17 @@ if __name__ == "__main__":
 		verbose = sys.argv[1] == '-v'
 	f = open('tags.txt', 'r')
 	for line in f.readlines():
-		line = line.strip()
-		if line:
-			tagz.append(line)
+		if not line.strip():
+			continue
+		if line.startswith('\t'):
+			tagliases[line.strip()] = tagz[-1]
+		else:
+			tagz.append(line.strip())
 	f.close()
+	for t in tagz:
+		if t in tagliases.keys():
+			print('ERROR: double definition of the tag', t)
+		tagliases[t] = t
 	print('{}: {} tags, {} venues, {} papers\n{}'.format(\
 		C.purple('BibSLEIGH'),
 		C.red(len(tagz)),
