@@ -20,7 +20,8 @@ def strictstrip(s):
 
 def tagpositive(what, where):
 	# tags without spaces in them are more reliable
-	for x in ',.:!./\“”‘’-_=':
+	for x in ',.:!?;./\“”‘’–—_=@$%^&()[]\{\}§±`~<>|\'':
+		# we still need # (because C# and F#) and + (do you have to ask?)
 		where = where.replace(x, ' ')
 	where = where.strip().lower()
 	while where.find('  ') > -1:

@@ -1,57 +1,66 @@
 ada
+ajax
 algol
 ansi c
+api
+arduino
+asf+sdf
 assembly
 c#
 c++
 clojure
 cobol
 coffeescript
+coq
 css
+delphi
+eclipse
+emacs
+emf
 erlang
 f#
 fortran
+git
+gll
 groovy
 haskell
+jastadd
 java
 javascript
+jit
 lisp
 lua
 markdown
 matlab
+maude
 modula
 oberon
+ocl
+oop
+owl
 pascal
 perl
 php
 prolog
 python
+rascal
 ruby
 scala
-smalltalk
-sql
-tex
-typescript
-
-ajax
-arduino
-asf+sdf
-eclipse
-emacs
-git
-gll
-jit
-ocl
-oop
-rascal
 sglr
+smalltalk
 spoofax
+sql
 stratego
+tex
 txl
+typescript
 uml
 wiki
+xml
 
 abstract syntax tree
+algorithm
+architecture
 attribute grammar
 bytecode
 context-free grammar
@@ -61,11 +70,15 @@ domain model
 domain-specific language
 feature model
 file system
+formal method
 goto
+graph grammar
+higher-order
 layout
 memory leak
 network
 parse tree
+product line
 program dependence graph
 regular expressions
 runtime
@@ -74,39 +87,59 @@ semantics
 state machine
 statechart
 syntax
+technical space
 test coverage
+traversal
 usability
 variability
 
 abstract interpretation
 clone detection
+compilation
 control flow analysis
 cost analysis
 data flow analysis
+debugging
+disambiguation
+documentation
 encapsulation
+fact extraction
 garbage collection
 generalised parsing
+graph rewriting
 inheritance
 live programming
+maintenance
 mining
 model checking
 model transformation
+modelling
+optimisation
 parsing
 partial evaluation
 performance
 points-to analysis
 polymorphism
+pretty-printing
+programming
+re-engineering
 refactoring
+reverse engineering
 slicing
 supercompilation
+term rewriting
+termination
 theorem proving
 type checking
 type inference
+validation
 verification
+visualisation
 
 concurrent
 declarative
 distributed
+embedded
 empirical
 enterprise
 functional
@@ -114,3 +147,4 @@ imperative
 in a broad sense
 in the cloud
 parallel
+projectional
