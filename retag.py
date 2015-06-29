@@ -48,7 +48,8 @@ def checkon(fn, o):
 			print(C.red('ERROR:'), 'no name for tag from tile', t['FILE'])
 			continue
 		if 'matchword' not in t.keys() and 'matchsub' not in t.keys() and \
-		'matchwordexact' not in t.keys() and 'matchsubexact' not in t.keys():
+		'matchwordexact' not in t.keys() and 'matchsubexact' not in t.keys() and\
+		'matchend' not in t.keys():
 			print(C.red('ERROR:'), 'no match rules for tag', t['name'])
 			continue
 		if 'matchword' in t.keys():
@@ -59,6 +60,8 @@ def checkon(fn, o):
 			ts.extend([t['name'] for s in listify(t['matchsub']) if mis.find(s) > -1])
 		if 'matchsubexact' in t.keys():
 			ts.extend([t['name'] for s in listify(t['matchsubexact']) if mes.find(s) > -1])
+		if 'matchend' in t.keys():
+			ts.extend([t['name'] for s in listify(t['matchend']) if mes.endswith(s)])
 	# second pass: check reliefs
 	for t in tags:
 		if 'relieves' in t.keys():
