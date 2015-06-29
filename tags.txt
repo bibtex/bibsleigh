@@ -1,42 +1,75 @@
 algol
 ansi c
+assembly
+c#
 c++
+clojure
 cobol
+erlang
+f#
 fortran
 haskell
 java
 javascript
+lisp
 matlab
 oberon
 pascal
+perl
 prolog
+python
 scala
 
 asf+sdf
 eclipse
 gll
 jit
+ocl
 rascal
 sglr
 spoofax
 stratego
 txl
+uml
 
+attribute grammar
 context-free grammar
+design pattern
+domain model
+domain-specific language
+feature model
+layout
+memory leak
 program dependence graph
+regular expressions
 runtime
+semantics
+state machine
+syntax
+test coverage
+variability
 
 clone detection
 control flow analysis
+cost analysis
 data flow analysis
 encapsulation
 garbage collection
 generalised parsing
 inheritance
 mining
+model checking
+model transformation
 parsing
+performance
 points-to analysis
 polymorphism
 refactoring
 slicing
+theorem proving
 verification
+
+declarative
+enterprise
+functional
+imperative
