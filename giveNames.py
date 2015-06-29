@@ -1,7 +1,9 @@
 #!/usr/local/bin/python3
 # -*- coding: utf-8 -*-
 
-import Fancy, AST, os.path, sys
+import sys, os
+sys.path.append(os.getcwd()+'/../engine')
+import Fancy, AST, os.path
 
 ienputdir = '../json'
 sleigh = AST.Sleigh(ienputdir)

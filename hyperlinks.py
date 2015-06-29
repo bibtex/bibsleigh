@@ -1,7 +1,9 @@
 #!/usr/local/bin/python3
 # -*- coding: utf-8 -*-
 
-import Fancy, AST, os.path, sys
+import sys, os
+sys.path.append(os.getcwd()+'/../engine')
+import Fancy, AST, os.path
 
 ienputdir = '../json'
 sleigh = AST.Sleigh(ienputdir)
@@ -23,8 +25,12 @@ def checkon(fn, o):
 	flines = [strictstrip(s) for s in lines]
 	plines = sorted([strictstrip(s) for s in o.getJSON().split('\n')[1:-1]])
 	# "url" from DBLP are useless
-	if 'url' in o.json.keys() and o.json['url'].startswith('db/conf/'):
-		del o.json['url']
+	if 'url' in o.json.keys():
+		o.json['url'] = [link for link in AST.listify(o.json['url']) if not link.startswith('db/conf/')]
+		if not o.json['url']:
+			del o.json['url']
+		elif len(o.json['url']) == 1:
+			o.json['url'] = o.json['url'][0]
 	if 'ee' in o.json.keys() and 'doi' not in o.json.keys():
 		if isinstance(o.json['ee'], list):
 			if verbose:
