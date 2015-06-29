@@ -33,3 +33,8 @@ if __name__ == "__main__":
 			purekey = c.getKey().replace(v.getKey(), '').replace('-', ' ').strip()
 			r += '{} [{}], '.format(purekey, C.yellow(len(c.papers)))
 		print(r)
+	print('{}\nDone with {} venues, {} papers, {} tags.'.format(\
+		C.purple('='*42),
+		C.red(len(sleigh.venues)),
+		C.red(sleigh.numOfPapers()),
+		C.red(sleigh.numOfTags())))

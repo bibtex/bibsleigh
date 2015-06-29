@@ -6,10 +6,12 @@ import Templates
 from JSON import jsonkv
 
 def sortbypages(z):
-	try:
-		return int(z.get('pages').split('-')[0])
-	except:
+	if 'pages' not in z.json.keys():
 		return 0
+	elif isinstance(z.json['pages'], int):
+		return z.json['pages']
+	else:
+		return int(z.get('pages').split('-')[0])
 
 def last(xx):
 	return xx.split('/')[-1].replace('.json', '')
@@ -64,21 +66,23 @@ class Unser(object):
 			return '@misc{EMPTY,}'
 		s = '@%s{%s,\n' % (self.get('type'), self.getKey())
 		for k in sorted(self.json.keys()):
-			if k == k.upper() or k.endswith('short'):
+			if k == k.upper() or k.endswith('short') or k == 'tag':
 				# secret key
 				continue
 			if k in ('author', 'editor'):
 				s += '\t{:<10} = "{}",\n'.format(k, ' and '.join(listify(self.json[k])))
-			elif k in ('title', 'booktitle', 'series', 'publisher'):
+			elif k in ('title', 'booktitle', 'series', 'publisher', 'journal'):
 				if k+'short' not in self.json.keys():
 					s += '\t{0:<10} = "{{{1}}}",\n'.format(k, self.json[k])
 				else:
 					s += '\t{0:<10} = "{{<span id="{0}">{1}</span>}}",\n'.format(k, self.json[k])
-			elif k in ('crossref', 'key', 'type', 'venue', 'eventtitle', 'dblpkey', 'dblpurl'):
+			elif k in ('crossref', 'key', 'type', 'venue', 'eventtitle', 'nondblpkey', 'dblpkey', 'dblpurl'):
 				# TODO: ban 'ee' as well
 				pass
 			elif k == 'doi':
 				s += '<span class="uri">\t{0:<10} = "<a href="http://dx.doi.org/{1}">{1}</a>",\n</span>'.format(k, self.json[k])
+			elif k == 'acmid':
+				s += '<span class="uri">\t{0:<10} = "<a href="http://dl.acm.org/citation.cfm?id={1}">{1}</a>",\n</span>'.format(k, self.json[k])
 			elif k == 'dblpkey':
 				# Legacy!
 				# s += '\t{0:<10} = "<a href="http://dblp.uni-trier.de/db/{1}">{1}</a>",\n</span>'.format(k, self.json[k])
@@ -87,6 +91,13 @@ class Unser(object):
 				s += '<span id="isbn">\t{:<10} = "{}",\n</span>'.format(k, self.json[k])
 			elif k in ('ee', 'url'):
 				for e in listify(self.json[k]):
+					# VVZ: eventually would like to get rid of EE completely
+					# VVZ: limiting it for now to possibly interesting cases
+					if k == 'ee' and (e.startswith('http://dx.doi.org') or \
+						e.startswith('http://dl.acm.org') or\
+						e.startswith('http://doi.ieeecomputersociety.org')\
+					):
+						continue
 					s += '<span class="uri">\t{0:<10} = "<a href=\"{1}\">{1}</a>",\n</span>'.format(k, e)
 			elif k in ('year', 'volume', 'issue', 'number') and isinstance(self.json[k], int):
 				s += '\t{0:<10} = {1},\n'.format(k, self.json[k])
@@ -96,7 +107,7 @@ class Unser(object):
 		return s.replace('<i>', '\\emph{').replace('</i>', '}')
 	def getCode(self):
 		code = ''
-		for tag in ('title', 'booktitle', 'series', 'publisher'):
+		for tag in ('title', 'booktitle', 'series', 'publisher', 'journal'):
 			if tag in self.json.keys() and tag+'short' in self.json.keys():
 				code += "$('#"+tag+"').text(this.checked?'%s':'%s');" % (self.json[tag], self.json[tag+'short'])
 		return code
@@ -144,9 +155,13 @@ class Unser(object):
 				if e.find('dl.acm.org') > 0 or e.find('doi.acm.org') > 0:
 					links[2].append('<a href="{}">ACM DL</a>'.format(e))
 				elif e.find('ieeexplore.ieee.org') > 0:
-					links[2].append('<a href="{}">IEEE</a>'.format(e))
+					links[2].append('<a href="{}">IEEE Xplore</a>'.format(e))
+				elif e.find('ieeecomputersociety.org') > 0:
+					links[2].append('<a href="{}">IEEE CS</a>'.format(e))
 				elif e.find('dagstuhl.de') > 0:
 					links[2].append('<a href="{}">Dagstuhl</a>'.format(e))
+				elif e.find('dx.doi.org') > 0:
+					pass
 				else:
 					links[2].append('<a href="{}">?EE?</a>'.format(e))
 		if 'doi' in self.json.keys():
@@ -164,7 +179,7 @@ class Unser(object):
 	def getJSON(self):
 		goodkeys = sorted(self.json)
 		goodkeys.remove('FILE')
-		return '{\n' + ',\n\t'.join([jsonkv(k, self.json[k]) for k in goodkeys]) + '\n}'
+		return '{\n\t' + ',\n\t'.join([jsonkv(k, self.json[k]) for k in goodkeys]) + '\n}'
 
 class Sleigh(Unser):
 	def __init__(self, idir):
@@ -188,6 +203,8 @@ class Sleigh(Unser):
 		return f
 	def numOfPapers(self):
 		return sum([v.numOfPapers() for v in self.venues])
+	def numOfTags(self):
+		return 0
 
 
 class Venue(Unser):
@@ -293,6 +310,10 @@ class Conf(Unser):
 	def getItem(self):
 		return '<dd><a href="{}.html">{}</a> ({})</dd>'.format(self.get('name'), self.get('title'), self.getEventTitle())
 	def getPage(self):
+		if 'eventuri' in self.json.keys():
+			ev = '<h3>Event page: <a href="{uri}">{uri}</a></h3>'.format(uri=self.json['eventuri'])
+		else:
+			ev = ''
 		return Templates.bibHTML.format(\
 			filename=self.getJsonName(),
 			title=self.get('title'),
@@ -302,7 +323,7 @@ class Conf(Unser):
 			code=self.getCode(),
 			bib=self.getBib(),
 			boxlinks=self.getBoxLinks(),
-			contents='<h3>Contents ({} items)</h3><dl class="toc">'.format(len(self.papers))+\
+			contents=ev+'<h3>Contents ({} items)</h3><dl class="toc">'.format(len(self.papers))+\
 				'\n'.join([p.getItem() for p in sorted(self.papers, key=sortbypages)])+'</dl>'\
 			)
 	def up(self):
@@ -347,6 +368,12 @@ class Paper(Unser):
 		else:
 			return ', pp. {}–{}'.format(*ps)
 	def getPage(self):
+		if 'tag' in self.json.keys():
+			cnt = '<h3>Tags:</h3><ul class="tag"><li>'
+			cnt += '</li><li>'.join(['<a href="tag/{0}.html">{0}'.format(t) for t in self.json['tag']])
+			cnt += '</ul><hr/>'
+		else:
+			cnt = ''
 		return Templates.bibHTML.format(\
 			filename=self.getJsonName(),
 			title=self.get('title'),
@@ -356,7 +383,7 @@ class Paper(Unser):
 			code=self.getCode(),
 			bib=self.getBib(),
 			boxlinks=self.getBoxLinks(),
-			contents=''\
+			contents=cnt\
 			)
 	def seek(self, key):
 		if key == self.get('dblpkey'):
