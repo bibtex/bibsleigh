@@ -1,27 +1,42 @@
-javascript
-fortran
 algol
-cobol
-pascal
-oberon
-java
+ansi c
 c++
+cobol
+fortran
 haskell
+java
+javascript
+matlab
+oberon
+pascal
 prolog
+scala
 
 asf+sdf
-rascal
-txl
-stratego
-spoofax
+eclipse
 gll
+jit
+rascal
 sglr
+spoofax
+stratego
+txl
 
 context-free grammar
+program dependence graph
+runtime
 
-points-to analysis
+clone detection
 control flow analysis
 data flow analysis
-clone detection
-parsing
+encapsulation
+garbage collection
 generalised parsing
+inheritance
+mining
+parsing
+points-to analysis
+polymorphism
+refactoring
+slicing
+verification

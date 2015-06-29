@@ -20,10 +20,15 @@ def strictstrip(s):
 
 def tagpositive(what, where):
 	# tags without spaces in them are more reliable
+	for x in ',.:!./\“”‘’-_=':
+		where = where.replace(x, ' ')
+	where = where.strip().lower()
+	while where.find('  ') > -1:
+		where = where.replace('  ', ' ')
 	if what.find(' ') < 0:
-		return what in where.lower().split(' ')
+		return what in where.split(' ')
 	else:
-		return where.lower().find(what) > -1
+		return where.find(what) > -1
 
 def checkon(fn, o):
 	if os.path.isdir(fn):
