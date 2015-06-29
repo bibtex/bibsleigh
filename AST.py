@@ -421,8 +421,8 @@ class Paper(Unser):
 			return ', pp. {}–{}'.format(*ps)
 	def getPage(self):
 		if self.getTags():
-			cnt = '<h3>Tags:</h3><ul class="tag"><li>'
-			cnt += '</li><li>'.join(['<a href="tag/{0}.html">{0}'.format(t) for t in self.tags])
+			cnt = '<h3>Tags:</h3><ul class="tag">'
+			cnt += '\n'.join(['<li><a href="tag/{0}.html">{0}</a></li>'.format(t) for t in self.tags])
 			cnt += '</ul><hr/>'
 		else:
 			cnt = ''
@@ -445,6 +445,6 @@ class Paper(Unser):
 	def getTags(self):
 		if self.tags:
 			myname = self.getHtmlName()
-			return {k:myname for k in self.tags}
+			return {k:self for k in self.tags}
 		else:
 			return {}

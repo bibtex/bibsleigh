@@ -36,7 +36,8 @@ licenses = '''
 
 uberHTML = \
 header.format(title='Bibliography of Software Language Engineering in Generated Hypertext')+\
-'<a href="index.html"><img src="stuff/bibsleigh.png" alt="BibSLEIGH" title="BibSLEIGH" class="pad"/></a><br/>'+\
+'''<a href="index.html"><img src="stuff/bibsleigh.png" alt="BibSLEIGH" title="BibSLEIGH" class="pad"/></a><br/>
+   <div class="pad"><a href="tag/index.html">Tag index</a></div><br/>'''+\
 licenses+'''
 </div>
 <div class="main">
@@ -55,6 +56,18 @@ confHTML = header+'''
 <h2>{fname}</h2>
 <h3>Editions:</h3>
 <dl>{dl}</dl>
+'''+footer
+
+tagHTML = header.replace('stuff/', '../stuff/')+'''
+	<!-- (a link to bibSLEIGH)<br/> -->
+	<a href="../index.html"><img src="../stuff/bibsleigh.png" alt="BibSLEIGH" title="BibSLEIGH" class="pad"/></a><br/>
+	<div class="pad"><a href="index.html">Tag index</a></div><br/>
+'''+licenses.replace('stuff/', '../stuff/')+'''
+</div>
+<div class="main">
+<h2><span class="ttl">Tag{idx}</span> {tag}</h2>
+<h3>{listname}:</h3>
+{dl}
 '''+footer
 
 bibHTML = header+'''

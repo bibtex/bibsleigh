@@ -1,7 +1,7 @@
 #!/usr/local/bin/python3
 # -*- coding: utf-8 -*-
 
-import Fancy, AST
+import Fancy, AST, Templates
 
 ienputdir = '../json'
 outputdir = '../frontend'
@@ -33,6 +33,30 @@ if __name__ == "__main__":
 			purekey = c.getKey().replace(v.getKey(), '').replace('-', ' ').strip()
 			r += '{} [{}], '.format(purekey, C.yellow(len(c.papers)))
 		print(r)
+	ts = sleigh.getTags()
+	for k in ts.keys():
+		f = open('{}/tag/{}.html'.format(outputdir, k), 'w')
+		# lst = ['<dt><a href="../{}">'.format(x.getHtmlName()) for x in ts[k]]
+		lst = [x.getItem() for x in ts[k]]
+		# TODO: sort by venues!
+		dl = '<dl><dt>All venues</dt><dd><dl class="toc">' + '\n'.join(sorted(lst)) + '</dl></dd></dl>'
+		f.write(Templates.tagHTML.format(
+			title=k+' tag',
+			tag=k,
+			idx='',
+			listname='Papers',
+			dl=dl))
+		f.close()
+	f = open(outputdir+'/tag/index.html', 'w')
+	lst = ['<li><a href="{0}.html">{0}</a></li>'.format(t) for t in ts.keys()]
+	ul = '<ul class="tag">' + '\n'.join(sorted(lst)) + '</ul>'
+	f.write(Templates.tagHTML.format(
+		title='All known tags',
+		tag='',
+		idx=' index',
+		listname='{} tags known'.format(len(ts.keys())),
+		dl=ul))
+	f.close()
 	print('{}\nDone with {} venues, {} papers, {} tags.'.format(\
 		C.purple('='*42),
 		C.red(len(sleigh.venues)),
