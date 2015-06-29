@@ -11,6 +11,7 @@ C = Fancy.colours()
 verbose = False
 tagz = []
 tagliases = {}
+tagkillz = {}
 
 def strictstrip(s):
 	s = s.strip()
@@ -40,6 +41,9 @@ def checkon(fn, o):
 	flines = [strictstrip(s) for s in lines]
 	plines = sorted([strictstrip(s) for s in o.getJSON().split('\n')[1:-1]])
 	ts = [tagliases[t] for t in tagliases.keys() if tagpositive(t, o.get('title'))]
+	for t in tagkillz.keys():
+		if t in ts and tagkillz[t] in ts:
+			ts.remove(tagkillz[t])
 	if ts:
 		if not o.tags:
 			o.tags = []
@@ -77,7 +81,12 @@ if __name__ == "__main__":
 		if not line.strip():
 			continue
 		if line.startswith('\t'):
-			tagliases[line.strip()] = tagz[-1]
+			if line.strip().startswith('-'):
+				if tagz[-1] not in tagkillz.keys():
+					tagkillz[tagz[-1]] = []
+				tagkillz[tagz[-1]].append(line.strip()[1:])
+			else:
+				tagliases[line.strip()] = tagz[-1]
 		else:
 			tagz.append(line.strip())
 	f.close()

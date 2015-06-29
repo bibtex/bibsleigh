@@ -89,6 +89,7 @@ parse tree
 product line
 program dependence graph
 programming language
+	-programming
 regular expression
 runtime
 	run time
@@ -163,6 +164,7 @@ refactoring
 reverse engineering
 scrap your boilerplate
 	syb
+	scrap more boilerplate
 slicing
 supercompilation
 term rewriting
