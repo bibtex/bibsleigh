@@ -9,12 +9,21 @@ ienputdir = '../json'
 sleigh = AST.Sleigh(ienputdir)
 C = Fancy.colours()
 verbose = False
+# TODO: support tag aliases
+tagz = []
 
 def strictstrip(s):
 	s = s.strip()
 	if s.endswith(','):
 		s = s[:-1]
 	return s
+
+def tagpositive(what, where):
+	# tags without spaces in them are more reliable
+	if what.find(' ') < 0:
+		return what in where.lower().split(' ')
+	else:
+		return where.lower().find(what) > -1
 
 def checkon(fn, o):
 	if os.path.isdir(fn):
@@ -24,29 +33,20 @@ def checkon(fn, o):
 	f.close()
 	flines = [strictstrip(s) for s in lines]
 	plines = sorted([strictstrip(s) for s in o.getJSON().split('\n')[1:-1]])
-	for k in o.json.keys():
-		if isinstance(o.json[k], str):
-			# find numeric values, turn them into proper integers
-			if o.json[k].isdigit():
-				o.json[k] = int(o.json[k])
-			# remove confix curlies
-			elif o.json[k].startswith('{') and o.json[k].endswith('}'):
-				o.json[k] = o.json[k][1:-1]
-			elif o.json[k].find(' "') > -1 and o.json[k].find('" ') > -1:
-				o.json[k] = o.json[k].replace(' "', ' “').replace('" ', '” ')
-			elif o.json[k].find(' "') > -1 and o.json[k].endswith('"'):
-				o.json[k] = o.json[k].replace(' "', ' “').replace('"', '”')
-			elif o.json[k].find('" ') > -1 and o.json[k].startswith('"'):
-				o.json[k] = o.json[k].replace('" ', '” ').replace('"', '“')
-		elif isinstance(o.json[k], list):
-			# inline trivial lists
-			if len(o.json[k]) == 1:
-				o.json[k] = o.json[k][0]
+	ts = []
+	for t in tagz:
+		if tagpositive(t, o.get('title')):
+			ts.append(t)
+	if ts:
+		if not o.tags:
+			o.tags = []
+		for t in ts:
+			if t not in o.tags:
+				o.tags.append(t)
 	nlines = sorted([strictstrip(s) for s in o.getJSON().split('\n')[1:-1]])
-	# The next case should not happen, but could if we have trivial lists
-	# if flines != plines:
-	# 	return 1
-	if plines != nlines:
+	if flines != plines:
+		return 1
+	elif plines != nlines:
 		f = open(fn, 'w')
 		f.write(o.getJSON())
 		f.close()
@@ -65,8 +65,15 @@ def checkreport(fn, o):
 if __name__ == "__main__":
 	if len(sys.argv) > 1:
 		verbose = sys.argv[1] == '-v'
-	print('{}: {} venues, {} papers\n{}'.format(\
+	f = open('tags.txt', 'r')
+	for line in f.readlines():
+		line = line.strip()
+		if line:
+			tagz.append(line)
+	f.close()
+	print('{}: {} tags, {} venues, {} papers\n{}'.format(\
 		C.purple('BibSLEIGH'),
+		C.red(len(tagz)),
 		C.red(len(sleigh.venues)),
 		C.red(sleigh.numOfPapers()),
 		C.purple('='*42)))

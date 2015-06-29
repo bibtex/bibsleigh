@@ -1,0 +1,27 @@
+javascript
+fortran
+algol
+cobol
+pascal
+oberon
+java
+c++
+haskell
+prolog
+
+asf+sdf
+rascal
+txl
+stratego
+spoofax
+gll
+sglr
+
+context-free grammar
+
+points-to analysis
+control flow analysis
+data flow analysis
+clone detection
+parsing
+generalised parsing
