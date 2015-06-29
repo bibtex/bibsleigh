@@ -50,8 +50,10 @@ if __name__ == "__main__":
 			dl=dl))
 		f.close()
 	f = open(outputdir+'/tag/index.html', 'w')
-	lst = ['<li><a href="{0}.html">{0}</a> ({1})</li>'.format(t, len(ts[t])) for t in ts.keys()]
-	ul = '<ul class="tag">' + '\n'.join(sorted(lst)) + '</ul>'
+	keyz = [k for k in ts.keys() if len(ts[k]) > 1]
+	keyz = sorted(keyz, key=lambda t:len(ts[t]), reverse=True)
+	lst = ['<li><a href="{0}.html">{0}</a> ({1})</li>'.format(t, len(ts[t])) for t in keyz]
+	ul = '<ul class="tag mul">' + '\n'.join(lst) + '</ul>'
 	f.write(Templates.tagHTML.format(
 		title='All known tags',
 		tag='',
