@@ -23,6 +23,10 @@ f#
 fortran
 git
 gll
+glr
+	sglr
+	riglr
+	brnglr
 groovy
 haskell
 integrated development environment
@@ -31,6 +35,7 @@ integrated development environment
 	ide
 jastadd
 java
+	javabeans
 javascript
 jit
 lisp
@@ -41,7 +46,6 @@ maude
 modula
 oberon
 ocl
-oop
 owl
 pascal
 perl
@@ -51,7 +55,6 @@ python
 rascal
 ruby
 scala
-sglr
 smalltalk
 spoofax
 sql
@@ -63,6 +66,7 @@ typescript
 uml
 wiki
 xml
+	xml-interface
 
 abstract syntax tree
 algorithm
@@ -80,17 +84,31 @@ file system
 formal method
 goto
 graph grammar
+guidelines
 higher-order
+interpreter
 layout
 legacy
 memory leak
+middleware
+	middleware-induced
+	middleware-centric
+	middleware-based
+mvc
+	model view controller
+	model-view-controller
 network
 parse tree
 product line
 program dependence graph
 programming language
 	-programming
+query
+recognition
+	recogniser
 regular expression
+repository
+	repositories
 runtime
 	run time
 	run-time
@@ -100,6 +118,7 @@ source code
 	source-code
 state machine
 statechart
+survey
 syntax
 technological space
 	technical space
@@ -109,11 +128,15 @@ traversal
 	traversing
 usability
 variability
+visitor
 
 abstract interpretation
 action semantics
 clone detection
 compilation
+configuration management
+	configuration manager
+content management
 control flow analysis
 	control-flow analysis
 cost analysis
@@ -126,9 +149,13 @@ disambiguation
 documentation
 encapsulation
 fact extraction
+	extracting facts
 garbage collection
 generalised parsing
 	generalized parsing
+	generalised regular parsers
+	generalised recursive descent parsing
+	generalised reduction modified lr parsing
 graph rewriting
 inheritance
 live programming
@@ -140,6 +167,9 @@ megamodel
 	macromodels
 memory management
 	memory allocation
+migration
+	migrating
+	porting
 mining
 model checking
 model transformation
@@ -147,6 +177,7 @@ modelling
 	modeling
 optimisation
 parsing
+	parser
 partial evaluation
 performance
 points-to analysis
@@ -165,6 +196,25 @@ reverse engineering
 scrap your boilerplate
 	syb
 	scrap more boilerplate
+semiparsing
+	island grammar
+	island parsing
+	island parser
+	bounded seas
+	robust parsing
+	robust parser
+	agile parsing
+	agile parser
+	permissive grammar
+	skeleton grammar
+	tolerant grammar
+	tolerant parsing
+	tolerant parser
+	fuzzy parsing
+	fuzzy parser
+	bridge grammar
+	bridge parsing
+	bridge parser
 slicing
 supercompilation
 term rewriting
@@ -177,6 +227,8 @@ validation
 	validator
 	validators
 verification
+version control
+	versioning
 visualisation
 	visualization
 	visualise
@@ -199,6 +251,7 @@ enterprise
 functional
 human-computer
 imperative
+industrial
 in a broad sense
 in the cloud
 in the large
@@ -206,6 +259,9 @@ in the large
 in the small
 	in-the-small
 multi-threaded
+nondeterminism
+	non-determinism
+	uncertainty
 object-oriented
 	object oriented
 	oop
@@ -220,6 +276,7 @@ parallel
 	parallelization
 projectional
 relational
+tool support
 
 design
 maintenance

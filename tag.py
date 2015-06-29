@@ -77,6 +77,8 @@ if __name__ == "__main__":
 	if len(sys.argv) > 1:
 		verbose = sys.argv[1] == '-v'
 	f = open('tags.txt', 'r')
+	# throwaway
+	tft = {}
 	for line in f.readlines():
 		if not line.strip():
 			continue
@@ -87,9 +89,40 @@ if __name__ == "__main__":
 				tagkillz[tagz[-1]].append(line.strip()[1:])
 			else:
 				tagliases[line.strip()] = tagz[-1]
+				# throwaway
+				if tagz[-1] not in tft.keys():
+					tft[tagz[-1]] = []
+				tft[tagz[-1]].append(line.strip())
 		else:
 			tagz.append(line.strip())
 	f.close()
+	# throwaway
+	for t in tagz:
+		f = open('tags/'+t+'.json', 'w')
+		f.write('{' + '\n\t"name": "{}"'.format(t))
+		m1 = []
+		m2 = []
+		if t in tft.keys():
+			ts = AST.listify(tft[t])
+		else:
+			ts = []
+		ts.append(t)
+		for t in ts:
+			if t.find(' ') < 0:
+				# no space
+				m1.append(t)
+			else:
+				m2.append(t)
+		if m1:
+			f.write(',\n\t"matchword": [{}]'.format(\
+				', '.join(['"{}"'.format(z) for z in m1])))
+		if m2:
+			f.write(',\n\t"matchsub": [{}]'.format(\
+				', '.join(['"{}"'.format(z) for z in m2])))
+		if t in tagkillz.keys():
+			f.write(',\n\t"relieves": "{}"'.format(tagkillz[t][0]))
+		f.write('\n}')
+		f.close()
 	for t in tagz:
 		if t in tagliases.keys():
 			print('ERROR: double definition of the tag', t)
