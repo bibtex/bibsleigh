@@ -1,9 +1,12 @@
 #!/usr/local/bin/python3
 # -*- coding: utf-8 -*-
+#
+# a module with classes forming the abstract syntax of BibSLEIGH
 
 import glob, os.path
 import Templates
 from JSON import jsonkv, parseJSON
+from LP import listify
 
 def sortbypages(z):
 	if 'pages' not in z.json.keys():
@@ -15,9 +18,6 @@ def sortbypages(z):
 
 def last(xx):
 	return xx.split('/')[-1].replace('.json', '')
-
-def listify(y):
-	return y if isinstance(y, list) else [y]
 
 class Unser(object):
 	def __init__(self, d, hdir):

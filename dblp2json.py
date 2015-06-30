@@ -1,4 +1,7 @@
 #!/usr/local/bin/python3
+# -*- coding: utf-8 -*-
+#
+# a module for importing DBLP data straight from the pages into LRJs
 
 import sys, time, socket, os, os.path, random
 import bs4

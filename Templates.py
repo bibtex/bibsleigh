@@ -1,5 +1,7 @@
 #!/usr/local/bin/python3
 # -*- coding: utf-8 -*-
+#
+# a module with hypertextual templates
 
 header = '''<!DOCTYPE html>
 <html>
@@ -75,7 +77,7 @@ tagHTML = header.replace('stuff/', '../stuff/')+'''
 '''+licenses.replace('stuff/', '../stuff/')+'''
 </div>
 <div class="main">
-<h2><span class="ttl">Tag</span> {tag}</h2>
+<h2><span class="ttl">Tag</span> {tag}</h2>{above}
 <h3>{listname}:</h3>
 {dl}
 '''+footer

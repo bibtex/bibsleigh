@@ -1,5 +1,7 @@
 #!/usr/local/bin/python3
 # -*- coding: utf-8 -*-
+#
+# a module for colourful console output
 
 class colours:
 	def __init__(self):
