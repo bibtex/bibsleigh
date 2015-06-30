@@ -7,8 +7,8 @@ import sys, os
 sys.path.append(os.getcwd()+'/../engine')
 import Fancy, AST, os.path, glob
 from JSON import parseJSON
-from LP import listify
-from NLP import strictstrip, uniq, baretext, superbaretext
+from LP import listify, uniq
+from NLP import strictstrip, baretext, superbaretext
 
 ienputdir = '../json'
 sleigh = AST.Sleigh(ienputdir)
