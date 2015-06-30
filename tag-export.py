@@ -5,13 +5,36 @@
 
 import Fancy, AST, Templates, sys, os
 sys.path.append(os.getcwd()+'/../beauty')
-from NLP import superbaretext, baretext
+from NLP import superbaretext, baretext, trash
+from JSON import parseJSON
+from LP import listify
 
 ienputdir = '../json'
 outputdir = '../frontend'
 sleigh = AST.Sleigh(ienputdir)
 C = Fancy.colours()
-trash = ('on', 'an', 'for', 'of', 'a', 'the', '-', 'to', 'from', 'by', 'in', 'with', 's', 'as', 'at', 'via', 'how', 'towards')
+
+def kv2link(k, v):
+	# TODO: icons instead of text prefixes
+	if k == 'g':
+		r = 'G: <a href="https://www.google.com/search?q={0}">{0}</a>'.format(v)
+	elif k.endswith('.wp'):
+		lang = k.split('.')[0]
+		r = 'WP: <a href="https://{0}.wikipedia.org/wiki/{1}">{1}</a>'.format(k.split('.')[0], v)
+	elif k == 'wd':
+		r = 'WD: <a href="https://www.wikidata.org/wiki/{0}">{0}</a>'.format(v)
+	elif k == 'www':
+		if not v.startswith('http'):
+			w = v
+			v = 'http://'+v
+		else:
+			w = v.replace('http://', '').replace('https://', '')
+		r = '<a href="{0}">{1}</a>'.format(v, w)
+	elif k == 'aka':
+		r = '<br/>'.join(['a.k.a.: “{}”'.format(x) for x in listify(v)])
+	else:
+		r = '?{}?{}?'.format(k, v)
+	return r + '<br/>'
 
 if __name__ == "__main__":
 	print('{}: {} venues, {} papers\n{}'.format(\
@@ -19,27 +42,6 @@ if __name__ == "__main__":
 		C.red(len(sleigh.venues)),
 		C.red(sleigh.numOfPapers()),
 		C.purple('='*42)))
-	f = open(outputdir+'/index.html', 'w')
-	f.write(sleigh.getPage())
-	f.close()
-	for v in sleigh.venues:
-		r = C.blue(v.getKey()) + ' => '
-		f = open(outputdir+'/'+v.getKey()+'.html', 'w')
-		f.write(v.getPage())
-		f.close()
-		for c in v.getConfs():
-			f = open(outputdir+'/'+c.getKey()+'.html', 'w')
-			f.write(c.getPage())
-			f.close()
-			for p in c.papers:
-				f = open(outputdir+'/'+p.getKey()+'.html', 'w')
-				f.write(p.getPage())
-				f.close()
-			purekey = c.getKey().replace(v.getKey(), '').replace('-', ' ').strip()
-			r += '{} [{}], '.format(purekey, C.yellow(len(c.papers)))
-		print(r)
-	# now for tags
-	print(C.purple('='*42))
 	ts = sleigh.getTags()
 	tagged = []
 	for k in ts.keys():
@@ -49,6 +51,13 @@ if __name__ == "__main__":
 		for x in ts[k]:
 			if x not in tagged:
 				tagged.append(x)
+		# read tag definition
+		tagdef = parseJSON('../beauty/tags/{}.json'.format(k))
+		links = [kv2link('g', tagdef['namefull'] if 'namefull' in tagdef.keys() else k)]
+		links.extend([kv2link(jk, tagdef[jk]) for jk in tagdef.keys()\
+				if not jk.isupper() and not jk.startswith('match') and not jk.startswith('name')])
+		title = tagdef['namefull'] if 'namefull' in tagdef.keys() else tagdef['name']
+		links = '<strong>' + title + '</strong><hr/>' + '\n'.join(sorted(links))
 		# TODO: sort by venues!
 		dl = '<dl><dt>All venues</dt><dd><dl class="toc">' + '\n'.join(sorted(lst)) + '</dl></dd></dl>'
 		# hack to get from tags to papers
@@ -57,6 +66,7 @@ if __name__ == "__main__":
 			title=k+' tag',
 			tag=k,
 			above='',
+			boxlinks=links,
 			listname='{} papers'.format(len(lst)),
 			dl=dl))
 		f.close()
@@ -105,6 +115,7 @@ if __name__ == "__main__":
 		title='All untagged papers',
 		tag='untagged',
 		above=bag,
+		boxlinks='',
 		listname='{} papers still untagged'.format(CX),
 		dl=dl.replace('href="', 'href="../')))
 	f.close()

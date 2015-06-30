@@ -1,5 +1,8 @@
-all:
-	time ./json2html.py
+tag:
+	time ./tag-export.py
+
+web:
+	time ./html-export.py
 
 run:
 	time ./library.py

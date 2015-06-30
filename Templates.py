@@ -77,6 +77,9 @@ tagHTML = header.replace('stuff/', '../stuff/')+'''
 '''+licenses.replace('stuff/', '../stuff/')+'''
 </div>
 <div class="main">
+<div class="tagbox">
+{boxlinks}
+</div>
 <h2><span class="ttl">Tag</span> {tag}</h2>{above}
 <h3>{listname}:</h3>
 {dl}
