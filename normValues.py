@@ -52,6 +52,16 @@ def checkon(fn, o):
 			# inline trivial lists
 			if len(o.json[k]) == 1:
 				o.json[k] = o.json[k][0]
+			# remove DBLP disambiguation: we might later regret it
+			# but the information can be always re-retrieved
+			if k in ('author', 'editor'):
+				nas = []
+				for a in o.json[k]:
+					ws = a.split(' ')
+					if ws[-1].isdigit():
+						ws = ws[:-1]
+					nas.append(' '.join(ws))
+				o.json[k] = nas
 	nlines = sorted([strictstrip(s) for s in o.getJSON().split('\n')[1:-1]])
 	# The next case should not happen, but could if we have trivial lists
 	# if flines != plines:
