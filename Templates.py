@@ -58,14 +58,27 @@ confHTML = header+'''
 <dl>{dl}</dl>
 '''+footer
 
-tagHTML = header.replace('stuff/', '../stuff/')+'''
+taglistHTML = header.replace('stuff/', '../stuff/')+'''
 	<!-- (a link to bibSLEIGH)<br/> -->
 	<a href="../index.html"><img src="../stuff/bibsleigh.png" alt="BibSLEIGH" title="BibSLEIGH" class="pad"/></a><br/>
 	<div class="pad"><a href="index.html">Tag index</a></div><br/>
 '''+licenses.replace('stuff/', '../stuff/')+'''
 </div>
 <div class="main">
-<h2><span class="ttl">Tag{idx}</span> {tag}</h2>
+<h2><span class="ttl">Tag index</span></h2>
+<h3>{listname}:</h3>
+{dl}
+'''+footer
+
+tagHTML = header.replace('stuff/', '../stuff/')+'''
+	<!-- (a link to bibSLEIGH)<br/> -->
+	<a href="../index.html"><img src="../stuff/bibsleigh.png" alt="BibSLEIGH" title="BibSLEIGH"/></a><br/>
+	<div class="pad"><a href="index.html">Tag index</a></div><br/>
+	<div class="pad"><a href="https://github.com/bibtex/bibeauty/edit/master/tags/{tag}.json">EDIT</a></div><br/>
+'''+licenses.replace('stuff/', '../stuff/')+'''
+</div>
+<div class="main">
+<h2><span class="ttl">Tag</span> {tag}</h2>
 <h3>{listname}:</h3>
 {dl}
 '''+footer
