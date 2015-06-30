@@ -19,6 +19,13 @@ def strictstrip(s):
 		s = s[:-1]
 	return s
 
+def uniq(xs):
+	rs = []
+	for x in xs:
+		if x not in rs:
+			rs.append(x)
+	return rs
+
 def checkon(fn, o):
 	if os.path.isdir(fn):
 		fn = fn + '.json'
@@ -34,7 +41,7 @@ def checkon(fn, o):
 	mew = mes.split(' ')
 	# imprecise match for substrings
 	mis = mes[:]
-	for x in '},.:!?;./\“”‘’–—_=@$%^&()[]§±`~<>|\'':#+#1234567890{':
+	for x in '},.:!?;./\“”‘’–—_=@$%^&()[]§±`~<>|\'#+1234567890{':
 		mis = mis.replace(x, ' ')
 	while mis.find('  ') > -1:
 		mis = mis.replace('  ', ' ')
@@ -75,7 +82,7 @@ def checkon(fn, o):
 			if t not in o.tags:
 				o.tags.append(t)
 		# uncomment the following one line to overwrite all tags
-		o.tags = ts[:]
+		o.tags = uniq(ts)
 		# let’s keep tags clean and sorted
 		o.tags = sorted(o.tags)
 	nlines = sorted([strictstrip(s) for s in o.getJSON().split('\n')[1:-1]])
