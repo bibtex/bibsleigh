@@ -47,7 +47,6 @@ licenses+'''
 '''+footer
 
 confHTML = header+'''
-	<!-- (a link to bibSLEIGH)<br/> -->
 	<a href="index.html"><img src="stuff/{img}.png" alt="{title}" title="{title}" class="pad"/></a><br/>
 	<div class="pad"><a href="https://github.com/slebok/bibsleigh/tree/master/{filename}">EDIT</a></div><br/>
 '''+licenses+'''
@@ -59,7 +58,6 @@ confHTML = header+'''
 '''+footer
 
 taglistHTML = header.replace('stuff/', '../stuff/')+'''
-	<!-- (a link to bibSLEIGH)<br/> -->
 	<a href="../index.html"><img src="../stuff/bibsleigh.png" alt="BibSLEIGH" title="BibSLEIGH" class="pad"/></a><br/>
 	<div class="pad"><a href="index.html">Tag index</a></div><br/>
 '''+licenses.replace('stuff/', '../stuff/')+'''
@@ -71,7 +69,6 @@ taglistHTML = header.replace('stuff/', '../stuff/')+'''
 '''+footer
 
 tagHTML = header.replace('stuff/', '../stuff/')+'''
-	<!-- (a link to bibSLEIGH)<br/> -->
 	<a href="../index.html"><img src="../stuff/bibsleigh.png" alt="BibSLEIGH" title="BibSLEIGH"/></a><br/>
 	<div class="pad"><a href="index.html">Tag index</a></div><br/>
 	<div class="pad"><a href="https://github.com/bibtex/bibeauty/edit/master/tags/{tag}.json">EDIT</a></div><br/>
@@ -84,7 +81,6 @@ tagHTML = header.replace('stuff/', '../stuff/')+'''
 '''+footer
 
 bibHTML = header+'''
-	<!-- (a link to bibSLEIGH)<br/> -->
 	<a href="index.html"><img src="stuff/{img}.png" alt="{title}" title="{title}" class="pad"/></a><br/>
 	<div class="pad"><a href="https://github.com/slebok/bibsleigh/edit/master/{filename}">EDIT</a></div><br/>
 '''+licenses+'''

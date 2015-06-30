@@ -140,6 +140,8 @@ class Unser(object):
 					links[2].append('<a href="{}">IEEE CS</a>'.format(e))
 				elif e.find('dagstuhl.de') > 0:
 					links[2].append('<a href="{}">Dagstuhl</a>'.format(e))
+				elif e.find('computer.org/csdl/proceedings') > 0:
+					links[2].append('<a href="{}">CSDL</a>'.format(e))
 				elif e.find('dx.doi.org') > 0:
 					pass
 				else:
