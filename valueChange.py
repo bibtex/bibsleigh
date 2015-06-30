@@ -34,7 +34,10 @@ def checkon(fn, o):
 		else:
 			return 0
 	else:
-		return 0
+		if not v2i:
+			o.json[k2r] = v2o
+		else:
+			return 1
 	nlines = sorted([strictstrip(s) for s in o.getJSON().split('\n')[1:-1]])
 	if plines != nlines:
 		f = open(fn, 'w')

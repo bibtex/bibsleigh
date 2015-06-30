@@ -10,6 +10,10 @@ sleigh = AST.Sleigh(ienputdir)
 C = Fancy.colours()
 verbose = False
 
+nrs = {'1st': 'First', '2nd': 'Second', '3rd': 'Third', '4th': 'Fourth',
+'5th': 'Fifth', '6th': 'Sixth', '7th': 'Seventh', '8th': 'Eighth',
+'9th': 'Ninth', 'Tenth': '10th', 'Eleventh': '11th', 'Twelfth': '12th'}
+
 def strictstrip(s):
 	s = s.strip()
 	if s.endswith(','):
@@ -25,13 +29,19 @@ def checkon(fn, o):
 	flines = [strictstrip(s) for s in lines]
 	plines = sorted([strictstrip(s) for s in o.getJSON().split('\n')[1:-1]])
 	for k in o.json.keys():
-		if isinstance(o.json[k], str):
+		if (o.json['type'] == 'proceedings' and k == 'title') or\
+		   (o.json['type'] == 'inproceedings' and k == 'booktitle'):
+			for nr in nrs.keys():
+				if o.json[k].find(' '+nr+' ') > -1:
+					o.json[k] = o.json[k].replace(' '+nr+' ', ' '+nrs[nr]+' ')
+		elif isinstance(o.json[k], str):
 			# find numeric values, turn them into proper integers
 			if o.json[k].isdigit():
 				o.json[k] = int(o.json[k])
 			# remove confix curlies
 			elif o.json[k].startswith('{') and o.json[k].endswith('}'):
 				o.json[k] = o.json[k][1:-1]
+			# fancify quotes
 			elif o.json[k].find(' "') > -1 and o.json[k].find('" ') > -1:
 				o.json[k] = o.json[k].replace(' "', ' “').replace('" ', '” ')
 			elif o.json[k].find(' "') > -1 and o.json[k].endswith('"'):
