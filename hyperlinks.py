@@ -26,7 +26,9 @@ def checkon(fn, o):
 	plines = sorted([strictstrip(s) for s in o.getJSON().split('\n')[1:-1]])
 	# "url" from DBLP are useless
 	if 'url' in o.json.keys():
-		o.json['url'] = [link for link in AST.listify(o.json['url']) if not link.startswith('db/conf/')]
+		o.json['url'] = [link for link in AST.listify(o.json['url'])\
+		 				if not link.startswith('db/conf/')\
+						and not link.startswith('db/journals/')]
 		if not o.json['url']:
 			del o.json['url']
 		elif len(o.json['url']) == 1:
