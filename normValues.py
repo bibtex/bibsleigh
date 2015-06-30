@@ -1,24 +1,17 @@
 #!/usr/local/bin/python3
 # -*- coding: utf-8 -*-
+#
+# a module for normalising values: numbers become proper integers, quotes — proper fancy ones, etc
 
 import sys, os
 sys.path.append(os.getcwd()+'/../engine')
 import Fancy, AST, os.path
+from NLP import nrs, strictstrip
 
 ienputdir = '../json'
 sleigh = AST.Sleigh(ienputdir)
 C = Fancy.colours()
 verbose = False
-
-nrs = {'1st': 'First', '2nd': 'Second', '3rd': 'Third', '4th': 'Fourth',
-'5th': 'Fifth', '6th': 'Sixth', '7th': 'Seventh', '8th': 'Eighth',
-'9th': 'Ninth', 'Tenth': '10th', 'Eleventh': '11th', 'Twelfth': '12th'}
-
-def strictstrip(s):
-	s = s.strip()
-	if s.endswith(','):
-		s = s[:-1]
-	return s
 
 def checkon(fn, o):
 	if os.path.isdir(fn):

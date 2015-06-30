@@ -1,20 +1,18 @@
 #!/usr/local/bin/python3
 # -*- coding: utf-8 -*-
+#
+# a module for simply traversing all the LRJs and reading them in
+# if you run this and it fails, you’re in big trouble
 
 import sys, os
 sys.path.append(os.getcwd()+'/../engine')
 import Fancy, AST, os.path
+from NLP import strictstrip
 
 ienputdir = '../json'
 sleigh = AST.Sleigh(ienputdir)
 C = Fancy.colours()
 verbose = False
-
-def strictstrip(s):
-	s = s.strip()
-	if s.endswith(','):
-		s = s[:-1]
-	return s
 
 def checkon(fn, o):
 	if os.path.isdir(fn):
@@ -42,8 +40,7 @@ def checkreport(fn, o):
 	return r
 
 if __name__ == "__main__":
-	if len(sys.argv) > 1:
-		verbose = sys.argv[1] == '-v'
+	verbose = sys.argv[-1] == '-v'
 	print('{}: {} venues, {} papers\n{}'.format(\
 		C.purple('BibSLEIGH'),
 		C.red(len(sleigh.venues)),

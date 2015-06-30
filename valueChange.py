@@ -1,9 +1,12 @@
 #!/usr/local/bin/python3
 # -*- coding: utf-8 -*-
+#
+# a module for sorting the key-value pairs within each LRJ
 
 import sys, os
 sys.path.append(os.getcwd()+'/../engine')
 import Fancy, AST, os.path
+from NLP import strictstrip
 
 ienputdir = '../json'
 sleigh = AST.Sleigh(ienputdir)
@@ -11,16 +14,9 @@ C = Fancy.colours()
 verbose = False
 d2r = k2r = v2i = v2o = ''
 
-def strictstrip(s):
-	s = s.strip()
-	if s.endswith(','):
-		s = s[:-1]
-	return s
-
 def checkon(fn, o):
 	if os.path.isdir(fn):
 		fn = fn + '.json'
-	# if d2r and not o.json['FILE'].startswith(d2r):
 	if d2r and (not o.filename.startswith(d2r) or o.filename == d2r):
 		return 0
 	f = open(fn, 'r')
@@ -66,8 +62,6 @@ if __name__ == "__main__":
 	v2o = sys.argv[3]
 	if len(sys.argv) > 4:
 		d2r = sys.argv[4]
-	# v2i = input('From:  ')
-	# v2o = input('To:    ')
 	print('{}: {} venues, {} papers\n{}'.format(\
 		C.purple('BibSLEIGH'),
 		C.red(len(sleigh.venues)),

@@ -1,5 +1,7 @@
 #!/usr/local/bin/python3
 # -*- coding: utf-8 -*-
+#
+# a module for finding tangled venues (more than one crossref per directory)
 
 import sys, os
 sys.path.append(os.getcwd()+'/../engine')

@@ -1,44 +1,17 @@
 #!/usr/local/bin/python3
 # -*- coding: utf-8 -*-
+#
+# a module for lifting information common within papers from the same venue, to the venue itself
 
 import sys, os
 sys.path.append(os.getcwd()+'/../engine')
 import Fancy, AST, os.path
+from NLP import heurichoose
 
 ienputdir = '../json'
 sleigh = AST.Sleigh(ienputdir)
 C = Fancy.colours()
 verbose = False
-
-def strictstrip(s):
-	s = s.strip()
-	if s.endswith(','):
-		s = s[:-1]
-	return s
-
-def heurichoose(k, v1, v2):
-	if k == 'title':
-		# title without spaces if bad
-		if v1.find(' ') < 0 and v2.find(' ') >= 0:
-			return v2
-		if v2.find(' ') < 0 and v1.find(' ') >= 0:
-			return v1
-		# proceedings are always good
-		if v1.startswith('Proceedings') and not v2.startswith('Proceedings'):
-			return v1
-		if v2.startswith('Proceedings') and not v1.startswith('Proceedings'):
-			return v2
-		if v1.startswith('Proceedings') and v2.startswith('Proceedings'):
-			if v1.count(',') > v2.count(','):
-				return v2
-			else:
-				return v1
-	if k == 'year':
-		# updated year always gets precedence
-		return v1
-	print('{}: {} vs {}'.format(C.red('\tUndecided ' + k), v1, v2))
-	# if undecided, stick to the old one
-	return v2
 
 def checkon(m, o):
 	# if no common model found, we failed

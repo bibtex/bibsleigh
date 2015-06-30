@@ -1,37 +1,20 @@
 #!/usr/local/bin/python3
 # -*- coding: utf-8 -*-
+#
+# a module for retagging LRJs in the adjacent repository
 
 import sys, os
 sys.path.append(os.getcwd()+'/../engine')
 import Fancy, AST, os.path, glob
 from JSON import parseJSON
-from AST import listify
+from LP import listify
+from NLP import strictstrip, uniq, baretext, superbaretext
 
 ienputdir = '../json'
 sleigh = AST.Sleigh(ienputdir)
 C = Fancy.colours()
 verbose = False
 tags = []
-
-def strictstrip(s):
-	s = s.strip()
-	if s.endswith(','):
-		s = s[:-1]
-	return s
-
-def uniq(xs):
-	rs = []
-	for x in xs:
-		if x not in rs:
-			rs.append(x)
-	return rs
-
-def baretext(s):
-	s = s.strip().lower()
-	for tag in ('i', 'sub', 'sup'):
-		s = s.replace('<'+tag+'>', '')
-		s = s.replace('</'+tag+'>', '')
-	return s
 
 def checkon(fn, o):
 	if os.path.isdir(fn):
@@ -47,12 +30,7 @@ def checkon(fn, o):
 	# precise match for words
 	mew = mes.split(' ')
 	# imprecise match for substrings
-	mis = mes[:]
-	for x in '},.:!?;./\“”‘’–—_=@$%^&()[]§±`~<>|\'#+1234567890{':
-		mis = mis.replace(x, ' ')
-	while mis.find('  ') > -1:
-		mis = mis.replace('  ', ' ')
-	mis = mis.strip()
+	mis = superbaretext(mes)
 	# imprecise match for words
 	miw = mis.split(' ')
 	# now match!

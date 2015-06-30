@@ -1,21 +1,18 @@
 #!/usr/local/bin/python3
 # -*- coding: utf-8 -*-
+#
+# a module for pushing the title of a proceedings to booktitles of its papers
 
 import sys, os
 sys.path.append(os.getcwd()+'/../engine')
 import Fancy, AST, os.path
+from NLP import strictstrip
 
 ienputdir = '../json'
 sleigh = AST.Sleigh(ienputdir)
 C = Fancy.colours()
 verbose = False
 d2r = k2r = v2o = ''
-
-def strictstrip(s):
-	s = s.strip()
-	if s.endswith(','):
-		s = s[:-1]
-	return s
 
 def checkon(fn, o):
 	global k2r, v2o

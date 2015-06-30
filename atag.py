@@ -1,5 +1,7 @@
 #!/usr/local/bin/python3
 # -*- coding: utf-8 -*-
+#
+# a module for creating a simplistic tag definition
 
 import sys
 
