@@ -31,6 +31,7 @@ def checkon(fn, o):
 	for k in o.json.keys():
 		if (o.json['type'] == 'proceedings' and k == 'title') or\
 		   (o.json['type'] == 'inproceedings' and k == 'booktitle'):
+			# fix numbers
 			for nr in nrs.keys():
 				if o.json[k].find(' '+nr+' ') > -1:
 					o.json[k] = o.json[k].replace(' '+nr+' ', ' '+nrs[nr]+' ')

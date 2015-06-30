@@ -26,6 +26,13 @@ def uniq(xs):
 			rs.append(x)
 	return rs
 
+def baretext(s):
+	s = s.strip().lower()
+	for tag in ('i', 'sub', 'sup'):
+		s = s.replace('<'+tag+'>', '')
+		s = s.replace('</'+tag+'>', '')
+	return s
+
 def checkon(fn, o):
 	if os.path.isdir(fn):
 		fn = fn + '.json'
@@ -36,7 +43,7 @@ def checkon(fn, o):
 	plines = sorted([strictstrip(s) for s in o.getJSON().split('\n')[1:-1]])
 	ts = []
 	# precise match for substrings
-	mes = o.get('title').strip().lower()
+	mes = baretext(o.get('title'))
 	# precise match for words
 	mew = mes.split(' ')
 	# imprecise match for substrings
