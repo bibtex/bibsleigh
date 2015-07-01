@@ -236,7 +236,7 @@ class Venue(Unser):
 		img = ABBR.lower()
 		eds = [y.getItem() for y in sorted(self.years, reverse=True, key=lambda x: x.year)]
 		return Templates.confHTML.format(\
-			filename=self.getPureName(),\
+			filename='{0}/{0}.json'.format(self.getPureName()),\
 			title=ABBR,\
 			img=img,\
 			fname=('{} ({})'.format(title, ABBR)),\

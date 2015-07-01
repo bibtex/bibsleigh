@@ -28,7 +28,16 @@ footer = '''</div>
 </body>
 </html>'''
 
-licenses = '''
+editLink = '<br/>\n<a href="{edit}"><img src="stuff/edit.png" alt="EDIT!" title="EDIT!" width="80px"/></a>'
+editBokBib = 'https://github.com/slebok/bibsleigh/tree/master/{filename}'
+editBibBea = 'https://github.com/bibtex/bibeauty/edit/master/tags/{tag}.json'
+
+leftLinks = '''
+	<div class="pad">
+		<a href="index.html"><img src="stuff/bar-corpus.png" alt="BibSLEIGH corpus" title="All papers in the corpus" width="80px"/></a><br/>
+		<a href="tag/index.html"><img src="stuff/bar-tags.png" alt="BibSLEIGH tags" title="All known tags" width="80px"/></a><br/>
+		<a href="bundle/index.html"><img src="stuff/bar-bundles.png" alt="BibSLEIGH bundles" title="All selected bundles" width="80px"/></a>{elink}
+	</div>
 	<a href="http://creativecommons.org/licenses/by/4.0/" title="CC-BY"><img src="stuff/cc-by.png" alt="CC-BY"/></a><br/>
 	<a href="http://opendatacommons.org/licenses/by/summary/" title="Open Knowledge"><img src="stuff/open-knowledge.png" alt="Open Knowledge" /></a><br/>
 	<a href="http://validator.w3.org/check/referer" title="XHTML 1.0 W3C Rec"><img src="stuff/xhtml.png" alt="XHTML 1.0 W3C Rec" /></a><br/>
@@ -38,9 +47,8 @@ licenses = '''
 
 uberHTML = \
 header.format(title='Bibliography of Software Language Engineering in Generated Hypertext')+\
-'''<a href="index.html"><img src="stuff/bibsleigh.png" alt="BibSLEIGH" title="BibSLEIGH" class="pad"/></a><br/>
-   <div class="pad"><a href="tag/index.html">Tag index</a></div><br/>'''+\
-licenses+'''
+'<a href="index.html"><img src="stuff/bibsleigh.png" alt="BibSLEIGH" title="BibSLEIGH" class="pad"/></a><br/>'+\
+leftLinks.format(elink='')+'''
 </div>
 <div class="main">
 <h2>Bibliography of Software Language Engineering in Generated Hypertext (BibSLEIGH)</h2>
@@ -49,9 +57,8 @@ licenses+'''
 '''+footer
 
 confHTML = header+'''
-	<a href="index.html"><img src="stuff/{img}.png" alt="{title}" title="{title}" class="pad"/></a><br/>
-	<div class="pad"><a href="https://github.com/slebok/bibsleigh/tree/master/{filename}">EDIT</a></div><br/>
-'''+licenses+'''
+	<a href="index.html"><img src="stuff/{img}.png" alt="{title}" title="{title}" class="pad"/></a>
+'''+leftLinks.format(elink=editLink).format(edit=editBokBib)+'''
 </div>
 <div class="main">
 <h2>{fname}</h2>
@@ -59,10 +66,12 @@ confHTML = header+'''
 <dl>{dl}</dl>
 '''+footer
 
+def movein(s):
+	return s.replace('stuff/', '../stuff/').replace('href="', 'href="../').replace('href="../http', 'href="http')
+
 taglistHTML = header.replace('stuff/', '../stuff/')+'''
-	<a href="../index.html"><img src="../stuff/bibsleigh.png" alt="BibSLEIGH" title="BibSLEIGH" class="pad"/></a><br/>
-	<div class="pad"><a href="index.html">Tag index</a></div><br/>
-'''+licenses.replace('stuff/', '../stuff/')+'''
+	<a href="../index.html"><img src="../stuff/bibsleigh.png" alt="BibSLEIGH" title="BibSLEIGH" class="pad"/></a>
+'''+movein(leftLinks.format(elink=''))+'''
 </div>
 <div class="main">
 <h2><span class="ttl">Tag index</span></h2>
@@ -71,10 +80,8 @@ taglistHTML = header.replace('stuff/', '../stuff/')+'''
 '''+footer
 
 tagHTML = header.replace('stuff/', '../stuff/')+'''
-	<a href="../index.html"><img src="../stuff/bibsleigh.png" alt="BibSLEIGH" title="BibSLEIGH"/></a><br/>
-	<div class="pad"><a href="index.html">Tag index</a></div><br/>
-	<div class="pad"><a href="https://github.com/bibtex/bibeauty/edit/master/tags/{tag}.json">EDIT</a></div><br/>
-'''+licenses.replace('stuff/', '../stuff/')+'''
+	<a href="../index.html"><img src="../stuff/bibsleigh.png" alt="BibSLEIGH" title="BibSLEIGH"/></a>
+'''+movein(leftLinks.format(elink=editLink).format(edit=editBibBea))+'''
 </div>
 <div class="main">
 <div class="tagbox">
@@ -86,9 +93,8 @@ tagHTML = header.replace('stuff/', '../stuff/')+'''
 '''+footer
 
 bibHTML = header+'''
-	<a href="index.html"><img src="stuff/{img}.png" alt="{title}" title="{title}" class="pad"/></a><br/>
-	<div class="pad"><a href="https://github.com/slebok/bibsleigh/edit/master/{filename}">EDIT</a></div><br/>
-'''+licenses+'''
+	<a href="index.html"><img src="stuff/{img}.png" alt="{title}" title="{title}" class="pad"/></a>
+'''+leftLinks.format(elink=editLink).format(edit=editBokBib)+'''
 </div>
 <div class="main">
 <h2>{authors}<br/><em>{title}</em><br/>{short}.</h2>
