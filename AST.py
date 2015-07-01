@@ -380,9 +380,25 @@ class Paper(Unser):
 				self.tags = [self.json['tag']]
 			del self.json['tag']
 		self.back = parent
+	def getItemWTags(self, tgz):
+		return '<dt><a href="{0}.html">{0}</a>{4}</dt><dd>{1}{2}{3}.</dd>'.format(\
+			self.getKey(),\
+			self.get('title'),\
+			self.getAbbrAuthors(),\
+			self.getPages(),
+			tgz)
 	def getItem(self):
-		return '<dt><a href="{0}.html">{0}</a></dt><dd>{1}{2}{3}.</dd>'.format(\
-			self.getKey(), self.get('title'), self.getAbbrAuthors(), self.getPages())
+		return self.getItemWTags(self.getFancyTags(self.tags) if self.tags else '')
+	def getRestrictedItem(self, t):
+		if not self.tags:
+			return self.getItemWTags('')
+		else:
+			ts = self.tags[:]
+			if t in ts:
+				ts.remove(t)
+			return self.getItemWTags(self.getFancyTags(ts))
+	def getFancyTags(self, ts):
+		return ' ' + ' '.join(['<span class="tag"><a href="tag/{0}.html" title="{0}">&nbsp;T&nbsp;</a></span>'.format(t) for t in ts])
 	def getAbbrAuthors(self):
 		# <abbr title="Rainer Koschke">RK</abbr>
 		if 'author' not in self.json.keys():

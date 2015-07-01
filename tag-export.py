@@ -14,16 +14,29 @@ outputdir = '../frontend'
 sleigh = AST.Sleigh(ienputdir)
 C = Fancy.colours()
 
+def makeimg(fn, alt):
+	return '<img src="../stuff/ico-{}.png" alt="{}"/>'.format(fn, alt)
+
 def kv2link(k, v):
 	# TODO: icons instead of text prefixes
 	if k == 'g':
-		r = 'G: <a href="https://www.google.com/search?q={0}">{0}</a>'.format(v)
+		ico = makeimg('g', 'Google')
+		r = '<a href="https://www.google.com/search?q={0}">{0}</a>'.format(v)
 	elif k.endswith('.wp'):
+		ico = makeimg('wp', 'Wikipedia')
 		lang = k.split('.')[0]
-		r = 'WP: <a href="https://{0}.wikipedia.org/wiki/{1}">{1}</a>'.format(k.split('.')[0], v)
+		r = '<a href="https://{0}.wikipedia.org/wiki/{1}">{1}</a>'.format(k.split('.')[0], v)
 	elif k == 'wd':
-		r = 'WD: <a href="https://www.wikidata.org/wiki/{0}">{0}</a>'.format(v)
+		ico = makeimg('wd', 'Wikidata')
+		r = '<a href="https://www.wikidata.org/wiki/{0}">{0}</a>'.format(v)
+	elif k == 'hwiki':
+		ico = makeimg('h', 'Haskell Wiki')
+		r = '<a href="https://wiki.haskell.org/{0}">{0}</a>'.format(v)
+	elif k == 'so':
+		ico = makeimg('so', 'Stack Overflow')
+		r = '<a href="http://stackoverflow.com/questions/tagged?tagnames={0}">{0}</a>'.format(v)
 	elif k == 'www':
+		ico = ''#makeimg('www', 'Homepage')
 		if not v.startswith('http'):
 			w = v
 			v = 'http://'+v
@@ -31,10 +44,12 @@ def kv2link(k, v):
 			w = v.replace('http://', '').replace('https://', '')
 		r = '<a href="{0}">{1}</a>'.format(v, w)
 	elif k == 'aka':
+		ico = ''
 		r = '<br/>'.join(['a.k.a.: “{}”'.format(x) for x in listify(v)])
 	else:
+		ico = ''
 		r = '?{}?{}?'.format(k, v)
-	return r + '<br/>'
+	return ico + ' ' + r + '<br/>'
 
 if __name__ == "__main__":
 	print('{}: {} venues, {} papers\n{}'.format(\
@@ -46,7 +61,7 @@ if __name__ == "__main__":
 	tagged = []
 	for k in ts.keys():
 		f = open('{}/tag/{}.html'.format(outputdir, k), 'w')
-		lst = [x.getItem() for x in ts[k]]
+		lst = [x.getRestrictedItem(k) for x in ts[k]]
 		# no comprehension possible for this case
 		for x in ts[k]:
 			if x not in tagged:
@@ -57,7 +72,8 @@ if __name__ == "__main__":
 		links.extend([kv2link(jk, tagdef[jk]) for jk in tagdef.keys()\
 				if not jk.isupper() and not jk.startswith('match') and not jk.startswith('name')])
 		title = tagdef['namefull'] if 'namefull' in tagdef.keys() else tagdef['name']
-		links = '<strong>' + title + '</strong><hr/>' + '\n'.join(sorted(links))
+		subt = ('<br/><em>'+tagdef['namelong']+'</em>') if 'namelong' in tagdef.keys() else ''
+		links = '<strong>{}</strong>{}<hr/>'.format(title, subt) + '\n'.join(sorted(links))
 		# TODO: sort by venues!
 		dl = '<dl><dt>All venues</dt><dd><dl class="toc">' + '\n'.join(sorted(lst)) + '</dl></dd></dl>'
 		# hack to get from tags to papers

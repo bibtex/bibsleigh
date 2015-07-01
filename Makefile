@@ -4,6 +4,10 @@ tag:
 web:
 	time ./html-export.py
 
+all:
+	make web
+	make tag
+
 run:
 	time ./library.py
 	sort venues.lst | uniq > venues.unq
