@@ -8,6 +8,11 @@ import Templates
 from JSON import jsonkv, parseJSON
 from LP import listify
 
+def escape(s):
+	for k,v in ((' ', '%20'), ('+', '%2B'), ('#', '%23')):
+		s = s.replace(k,v)
+	return s
+
 def sortbypages(z):
 	if 'pages' not in z.json.keys():
 		return 0
@@ -225,8 +230,8 @@ class Venue(Unser):
 		ABBR = self.get('name')
 		title = self.get('title')
 		# TO-DO: check if img exists
-		return ('<div class="pic"><a href="{ABBR}.html" title="{title}">'+\
-			'<img src="stuff/{abbr}.png" alt="{title}"/><br/>{ABBR}</a></div>').format(\
+		return ('<div class="picx"><a href="{ABBR}.html" title="{title}">'+\
+			'<img src="stuff/{abbr}.png" alt="{title}"/><h2>{ABBR}</h2></a></div>').format(\
 				ABBR=ABBR,\
 				abbr=ABBR.lower(),\
 				title=title)
@@ -398,7 +403,7 @@ class Paper(Unser):
 				ts.remove(t)
 			return self.getItemWTags(self.getFancyTags(ts))
 	def getFancyTags(self, ts):
-		return ' ' + ' '.join(['<span class="tag"><a href="tag/{0}.html" title="{0}">&nbsp;T&nbsp;</a></span>'.format(t) for t in ts])
+		return ' ' + ' '.join(['<span class="tag"><a href="tag/{}.html" title="{}">&nbsp;T&nbsp;</a></span>'.format(escape(t), t) for t in ts])
 	def getAbbrAuthors(self):
 		# <abbr title="Rainer Koschke">RK</abbr>
 		if 'author' not in self.json.keys():
@@ -423,7 +428,7 @@ class Paper(Unser):
 	def getPage(self):
 		if self.getTags():
 			cnt = '<h3>Tags:</h3><ul class="tag">'
-			cnt += '\n'.join(['<li><a href="tag/{0}.html">{0}</a></li>'.format(t) for t in self.tags])
+			cnt += '\n'.join(['<li><a href="tag/{}.html">{}</a></li>'.format(escape(t), t) for t in self.tags])
 			cnt += '</ul><hr/>'
 		else:
 			cnt = ''

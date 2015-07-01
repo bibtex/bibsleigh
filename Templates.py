@@ -3,6 +3,7 @@
 #
 # a module with hypertextual templates
 
+# https://www.google.com/fonts#UsePlace:use/Collection:Exo+2
 header = '''<!DOCTYPE html>
 <html>
 <head>
@@ -10,6 +11,7 @@ header = '''<!DOCTYPE html>
 	<meta name="keywords" content="software linguistics, software language engineering, book of knowledge, glossary, Russian; иньекция; English; inject"/>
 	<title>SLEBoK — bibSLEIGH — {title}</title>
 	<link href="stuff/bib.css" rel="stylesheet" type="text/css"/>
+	<link href='http://fonts.googleapis.com/css?family=Exo+2:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
 	<script src="stuff/jquery.min.js" type="text/javascript"></script>
 </head>
 <body>
@@ -28,27 +30,33 @@ footer = '''</div>
 </body>
 </html>'''
 
-editLink = '<br/>\n<a href="{edit}"><img src="stuff/edit.png" alt="EDIT!" title="EDIT!" width="80px"/></a>'
+editLink = '<br/>\n<a href="{edit}"><img src="stuff/edit.png" alt="EDIT!" title="EDIT!"/></a>'
 editBokBib = 'https://github.com/slebok/bibsleigh/tree/master/{filename}'
 editBibBea = 'https://github.com/bibtex/bibeauty/edit/master/tags/{tag}.json'
 
-leftLinks = '''
+leftLinksT = '''
 	<div class="pad">
-		<a href="index.html"><img src="stuff/bar-corpus.png" alt="BibSLEIGH corpus" title="All papers in the corpus" width="80px"/></a><br/>
-		<a href="tag/index.html"><img src="stuff/bar-tags.png" alt="BibSLEIGH tags" title="All known tags" width="80px"/></a><br/>
-		<a href="bundle/index.html"><img src="stuff/bar-bundles.png" alt="BibSLEIGH bundles" title="All selected bundles" width="80px"/></a>{elink}
+		<a href="index.html"><img src="stuff/{statusC}-corpus.png" alt="BibSLEIGH corpus" title="All papers in the corpus"/></a><br/>
+		<a href="tag/index.html"><img src="stuff/{statusT}-tags.png" alt="BibSLEIGH tags" title="All known tags"/></a><br/>
+		<a href="bundle/index.html"><img src="stuff/{statusB}-bundles.png" alt="BibSLEIGH bundles" title="All selected bundles"/></a>{elink}
 	</div>
 	<a href="http://creativecommons.org/licenses/by/4.0/" title="CC-BY"><img src="stuff/cc-by.png" alt="CC-BY"/></a><br/>
 	<a href="http://opendatacommons.org/licenses/by/summary/" title="Open Knowledge"><img src="stuff/open-knowledge.png" alt="Open Knowledge" /></a><br/>
 	<a href="http://validator.w3.org/check/referer" title="XHTML 1.0 W3C Rec"><img src="stuff/xhtml.png" alt="XHTML 1.0 W3C Rec" /></a><br/>
 	<a href="http://jigsaw.w3.org/css-validator/check/referer" title="CSS 2.1 W3C CanRec"><img src="stuff/css.png" alt="CSS 2.1 W3C CanRec" class="pad" /></a><br/>
-	<div>[<a href="mailto:vadim@grammarware.net">Complain!</a>]</div>
+	<div class="sm">
+		<a href="mailto:vadim@grammarware.net"><img src="stuff/email.png" alt="email" title="Complain!" /></a>
+		<a href="https://twitter.com/intent/tweet?screen_name=grammarware"><img src="stuff/twitter.png" alt="twitter" title="Mention!" /></a>
+	</div>
 '''
+
+def leftLinks(stat, edit):
+	return leftLinksT.format(statusC=stat[0], statusT=stat[1], statusB=stat[2], elink=edit)
 
 uberHTML = \
 header.format(title='Bibliography of Software Language Engineering in Generated Hypertext')+\
 '<a href="index.html"><img src="stuff/bibsleigh.png" alt="BibSLEIGH" title="BibSLEIGH" class="pad"/></a><br/>'+\
-leftLinks.format(elink='')+'''
+leftLinks('app', '')+'''
 </div>
 <div class="main">
 <h2>Bibliography of Software Language Engineering in Generated Hypertext (BibSLEIGH)</h2>
@@ -58,7 +66,7 @@ leftLinks.format(elink='')+'''
 
 confHTML = header+'''
 	<a href="index.html"><img src="stuff/{img}.png" alt="{title}" title="{title}" class="pad"/></a>
-'''+leftLinks.format(elink=editLink).format(edit=editBokBib)+'''
+'''+leftLinks('app', editLink).format(edit=editBokBib)+'''
 </div>
 <div class="main">
 <h2>{fname}</h2>
@@ -71,7 +79,7 @@ def movein(s):
 
 taglistHTML = header.replace('stuff/', '../stuff/')+'''
 	<a href="../index.html"><img src="../stuff/bibsleigh.png" alt="BibSLEIGH" title="BibSLEIGH" class="pad"/></a>
-'''+movein(leftLinks.format(elink=''))+'''
+'''+movein(leftLinks('pap', ''))+'''
 </div>
 <div class="main">
 <h2><span class="ttl">Tag index</span></h2>
@@ -80,8 +88,8 @@ taglistHTML = header.replace('stuff/', '../stuff/')+'''
 '''+footer
 
 tagHTML = header.replace('stuff/', '../stuff/')+'''
-	<a href="../index.html"><img src="../stuff/bibsleigh.png" alt="BibSLEIGH" title="BibSLEIGH"/></a>
-'''+movein(leftLinks.format(elink=editLink).format(edit=editBibBea))+'''
+	<a href="../index.html"><img src="../stuff/bibsleigh.png" alt="BibSLEIGH" title="BibSLEIGH" class="pad"/></a>
+'''+movein(leftLinks('pap', editLink).format(edit=editBibBea))+'''
 </div>
 <div class="main">
 <div class="tagbox">
@@ -94,7 +102,7 @@ tagHTML = header.replace('stuff/', '../stuff/')+'''
 
 bibHTML = header+'''
 	<a href="index.html"><img src="stuff/{img}.png" alt="{title}" title="{title}" class="pad"/></a>
-'''+leftLinks.format(elink=editLink).format(edit=editBokBib)+'''
+'''+leftLinks('app', editLink).format(edit=editBokBib)+'''
 </div>
 <div class="main">
 <h2>{authors}<br/><em>{title}</em><br/>{short}.</h2>
