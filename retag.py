@@ -15,6 +15,7 @@ sleigh = AST.Sleigh(ienputdir)
 C = Fancy.colours()
 verbose = False
 tags = []
+relieved = {}
 
 def checkon(fn, o):
 	if os.path.isdir(fn):
@@ -60,6 +61,9 @@ def checkon(fn, o):
 			for r in listify(t['relieves']):
 				if t['name'] in ts and r in ts:
 					ts.remove(r)
+					if t['name'] not in relieved.keys():
+						relieved[t['name']] = 0
+					relieved[t['name']] += 1
 	if ts:
 		if not o.tags:
 			o.tags = []
@@ -106,6 +110,8 @@ if __name__ == "__main__":
 			# cx[checkreport(c.filename, c)] += 1
 			for p in c.papers:
 				cx[checkreport(p.filename, p)] += 1
+	for t in relieved.keys():
+		print('[ {} ] {} relieved {} markings'.format(C.purple('√'), t, relieved[t]))
 	print('{} files checked, {} ok, {} fixed, {} failed'.format(\
 		C.bold(cx[0] + cx[1] + cx[2]),
 		C.blue(cx[0]),
