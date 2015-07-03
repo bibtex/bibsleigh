@@ -14,7 +14,12 @@ sleigh = AST.Sleigh(ienputdir + '/corpus')
 C = Fancy.colours()
 
 def matchfromsleigh(sleigh, pattern):
-	path = pattern.split('/')
+	if isinstance(pattern, list):
+		path = pattern[0].split('/')
+		path[3] = [p.split('/')[-1] for p in pattern]
+		# NB: this assumes all papers come from the same conference
+	else:
+		path = pattern.split('/')
 	# NB: could have been a simple bruteforce search with a getPureName check,
 	# but that is too slow; this way the code is somewhat uglier but we skip
 	# over entire venues and years that are of no interest to us
@@ -33,6 +38,13 @@ def matchfromsleigh(sleigh, pattern):
 				# TODO or NOTTODO: implement other ways of matching
 				if path[3] == '*':
 					return c.papers
+				else:
+					ps = []
+					wanted = path[3] #.split(',')
+					for p in c.papers:
+						if p.getKey() in wanted:
+							ps.append(p)
+					return ps
 	return []
 
 if __name__ == "__main__":
@@ -50,7 +62,10 @@ if __name__ == "__main__":
 		for ven in bun['contents']:
 			vname = list(ven.keys())[0]
 			vconfs = ven[vname]
-			vlst = '<dl><dt>{}</dt><dd>'.format(vname)
+			if os.path.isfile(outputdir + '/stuff/' + vname.lower() + '.png'):
+				vlst = '<dl><dt><img src="../stuff/{1}.png" alt="{0}" width="30px"/> {0}</dt><dd>'.format(vname, vname.lower())
+			else:
+				vlst = '<dl><dt>{0}</dt><dd>'.format(vname)
 			clsts = []
 			for con in ven[vname]:
 				cname = list(con.keys())[0]
@@ -66,6 +81,7 @@ if __name__ == "__main__":
 			vlst += '</dd></dl>'
 			uberlist += vlst
 		uberlist = '<h2>{} papers from {} sources</h2>{}'.format(pcx, scx, uberlist)
+		uberlist = uberlist.replace('href="', 'href="../').replace('../mailto', 'mailto')
 		f = open(outputdir + '/bundle/' + purename + '.html', 'w')
 		f.write(Templates.bunHTML.format(
 			title=purename+' bundle',
