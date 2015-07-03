@@ -10,7 +10,7 @@ import Fancy, AST, os.path
 from NLP import strictstrip
 
 ienputdir = '../json'
-sleigh = AST.Sleigh(ienputdir)
+sleigh = AST.Sleigh(ienputdir + '/corpus')
 C = Fancy.colours()
 verbose = False
 

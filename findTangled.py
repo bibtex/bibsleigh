@@ -8,7 +8,7 @@ sys.path.append(os.getcwd()+'/../engine')
 import Fancy, AST
 
 ienputdir = '../json'
-sleigh = AST.Sleigh(ienputdir)
+sleigh = AST.Sleigh(ienputdir + '/corpus')
 C = Fancy.colours()
 verbose = False
 
