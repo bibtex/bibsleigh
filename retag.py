@@ -11,7 +11,7 @@ from LP import listify, uniq
 from NLP import strictstrip, baretext, superbaretext
 
 ienputdir = '../json'
-sleigh = AST.Sleigh(ienputdir)
+sleigh = AST.Sleigh(ienputdir + '/corpus')
 C = Fancy.colours()
 verbose = False
 tags = []
@@ -96,7 +96,7 @@ def checkreport(fn, o):
 if __name__ == "__main__":
 	if len(sys.argv) > 1:
 		verbose = sys.argv[1] == '-v'
-	tags = [parseJSON(tfn) for tfn in glob.glob('tags/*.json')]
+	tags = [parseJSON(tfn) for tfn in glob.glob(ienputdir + '/tags/*.json')]
 	print('{}: {} tags, {} venues, {} papers\n{}'.format(\
 		C.purple('BibSLEIGH'),
 		C.red(len(tags)),

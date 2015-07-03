@@ -1,5 +1,0 @@
-{
-	"name": "garbage collection",
-	"matchword": ["gc"],
-	"matchsub": ["garbage collection", "garbage collecting"]
-}

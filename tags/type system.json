@@ -1,5 +1,0 @@
-{
-	"name": "type system",
-	"matchword": ["typestate", "typestates", "typeable", "typing", "subtyping", "subtype", "subtypes", "type-system", "type-based", "type-oriented", "formulae-as-types"],
-	"matchsub": ["type system", "type theory"]
-}

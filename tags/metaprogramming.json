@@ -1,5 +1,0 @@
-{
-	"name": "metaprogramming",
-	"matchword": ["macro", "macros", "demacrofier", "macro-by-example"],
-	"matchsub": ["metaprogram", "meta-program", "meta program"]
-}

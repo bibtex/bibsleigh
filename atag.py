@@ -6,7 +6,7 @@
 import sys
 
 tag = ' '.join(sys.argv[1:])
-f = open('tags/'+tag+'.json', 'w')
+f = open('../json/tags/'+tag+'.json', 'w')
 if tag.find(' ') < 0:
 	m = 'matchword'
 else:
