@@ -1,10 +1,14 @@
 tag:
 	time ./tag-export.py
 
+bun:
+	time ./bundle-export.py
+
 web:
 	time ./html-export.py
 
 all:
+	make bun
 	make web
 	make tag
 

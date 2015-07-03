@@ -53,6 +53,7 @@ if __name__ == "__main__":
 		C.red(len(sleigh.venues)),
 		C.red(sleigh.numOfPapers()),
 		C.purple('='*42)))
+	bundles = {}
 	for b in glob.glob(ienputdir + '/bundles/*.json'):
 		purename = b.split('/')[-1][:-5]
 		bun = json.load(open(b, 'r'))
@@ -89,6 +90,16 @@ if __name__ == "__main__":
 			ebundle=AST.escape(purename),
 			dl=uberlist))
 		f.close()
+		bundles[purename] = pcx
+	# now for the index
+	f = open(outputdir+'/bundle/index.html', 'w')
+	lst = ['<li><a href="{}.html">{}</a> ({})</li>'.format(AST.escape(b), b, bundles[b]) for b in sorted(bundles.keys())]
+	ul = '<ul class="tri">' + '\n'.join(lst) + '</ul>'
+	f.write(Templates.bunListHTML.format(
+		title='All specified bundles',
+		listname='{} bundles known with {} papers'.format(len(bundles), sum(bundles.values())),
+		ul='<ul class="tri">' + '\n'.join(lst) + '</ul>'))
+	f.close()
 	print('{}\nDone with {} venues, {} papers, {} tags.'.format(\
 		C.purple('='*42),
 		C.red(len(sleigh.venues)),

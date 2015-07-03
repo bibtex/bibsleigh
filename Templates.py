@@ -85,7 +85,7 @@ taglistHTML = header.replace('stuff/', '../stuff/')+'''
 <div class="main">
 <h2><span class="ttl">Tag index</span></h2>
 <h3>{listname}:</h3>
-{dl}
+{ul}
 '''+footer
 
 tagHTML = header.replace('stuff/', '../stuff/')+'''
@@ -127,4 +127,13 @@ bunHTML = header.replace('stuff/', '../stuff/')+'''
 <div class="main">
 <h2><span class="ttl">Bundle</span> {bundle}</h2>
 {dl}
+'''+footer
+
+bunListHTML = header.replace('stuff/', '../stuff/')+'''
+	<a href="../index.html"><img src="../stuff/bibsleigh.png" alt="BibSLEIGH" title="BibSLEIGH" class="pad"/></a>
+'''+movein(leftLinks('ppa', ''))+'''
+</div>
+<div class="main">
+<h2><span class="ttl">Bundle index</span></h2>
+{ul}
 '''+footer

@@ -100,12 +100,12 @@ if __name__ == "__main__":
 	keyz = [k for k in ts.keys() if len(ts[k]) > 2]
 	keyz = sorted(keyz, key=lambda t:len(ts[t]), reverse=True)
 	lst = ['<li><a href="{}.html">{}</a> ({})</li>'.format(AST.escape(t), t, len(ts[t])) for t in keyz]
-	ul = '<ul class="tag mul">' + '\n'.join(lst) + '</ul>'
+	ul = '<ul class="tri mul">' + '\n'.join(lst) + '</ul>'
 	CX = sum([len(ts[t]) for t in ts.keys()])
 	f.write(Templates.taglistHTML.format(
 		title='All known tags',
 		listname='{} tags known from {} markings'.format(len(ts.keys()), CX),
-		dl=ul))
+		ul=ul))
 	f.close()
 	print('Tag index:', C.blue('created'))
 	# untagged papers
