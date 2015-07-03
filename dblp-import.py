@@ -53,10 +53,11 @@ def safelyLoadURL(url):
 if __name__ == "__main__":
 	if len(sys.argv) != 3:
 		print('Usage:\n\tdblp2json.py <URI> <DIR>')
-		print('e.g.: ./dblp2json.py http://dblp.uni-trier.de/db/conf/sigplan/sigplan82.html ../json/PLDI/1982/SCC-1982')
+		print('e.g.: ./dblp2json.py http://dblp.uni-trier.de/db/conf/sigplan/sigplan82.html ../json/corpus/PLDI/1982/SCC-1982')
 		sys.exit(1)
 	dblp = safelyLoadURL(sys.argv[1])
 	ldir = sys.argv[2]
+	year = ldir.split('/')[3]
 	allxmls = [xmlname for xmlname in dblp.split('"') if xmlname.endswith('.xml')]
 	if not os.path.exists(ldir):
 		os.makedirs(ldir)
@@ -71,10 +72,15 @@ if __name__ == "__main__":
 		else:
 			qname = ldir.split('/')[-1]
 			lname = ldir + '/' + qname + '-' + xmlname.split('/')[-1].replace('.xml', '.json')
+			if lname[:-5].endswith(year):
+				lname = lname[:-5-len(year)] + '.json'
+			if lname[:-5].endswith(year[-2:]):
+				lname = lname[:-7] + '.json'
 		while os.path.isfile(lname):
-			lname += '_'
+			lname = lname.replace('.json', '_.json')
 		# now write!
 		g = open(lname, 'w')
 		g.write(xml2json(xml))
 		g.close()
+		print('\t\t->',lname)
 	print('Imported {} papers.'.format(ps))

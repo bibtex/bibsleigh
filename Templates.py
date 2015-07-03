@@ -31,8 +31,8 @@ footer = '''</div>
 </html>'''
 
 editLink = '<br/>\n<a href="{edit}"><img src="stuff/edit.png" alt="EDIT!" title="EDIT!"/></a>'
-editBokBib = 'https://github.com/slebok/bibsleigh/tree/master/{filename}'
-editBibBea = 'https://github.com/bibtex/bibeauty/edit/master/tags/{tag}.json'
+editBokBib = 'https://github.com/slebok/bibsleigh/edit/master/corpus/{filename}'
+editBibBea = 'https://github.com/slebok/bibsleigh/edit/master/tags/{tag}.json'
 
 leftLinksT = '''
 	<div class="pad">

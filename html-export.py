@@ -8,7 +8,7 @@ sys.path.append(os.getcwd()+'/../beauty')
 
 ienputdir = '../json'
 outputdir = '../frontend'
-sleigh = AST.Sleigh(ienputdir)
+sleigh = AST.Sleigh(ienputdir + '/corpus')
 C = Fancy.colours()
 
 if __name__ == "__main__":
@@ -40,4 +40,3 @@ if __name__ == "__main__":
 		C.purple('='*42),
 		C.red(len(sleigh.venues)),
 		C.red(sleigh.numOfPapers())))
-	# print(sleigh.getTags())

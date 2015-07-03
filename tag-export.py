@@ -11,21 +11,22 @@ from LP import listify
 
 ienputdir = '../json'
 outputdir = '../frontend'
-sleigh = AST.Sleigh(ienputdir)
+sleigh = AST.Sleigh(ienputdir + '/corpus')
 C = Fancy.colours()
 
 def makeimg(fn, alt):
 	return '<img src="../stuff/ico-{}.png" alt="{}"/>'.format(fn, alt)
 
 def kv2link(k, v):
-	# TODO: icons instead of text prefixes
 	if k == 'g':
 		ico = makeimg('g', 'Google')
 		r = '<a href="https://www.google.com/search?q={0}">{0}</a>'.format(v)
 	elif k.endswith('.wp'):
-		ico = makeimg('wp', 'Wikipedia')
 		lang = k.split('.')[0]
-		r = '<a href="https://{0}.wikipedia.org/wiki/{1}">{1}</a>'.format(k.split('.')[0], v)
+		# TODO: make a dictionary of language names
+		ico = makeimg('wp', 'Wikipedia') + makeimg(lang, 'Language')
+		lang = k.split('.')[0]
+		r = '<a href="https://{0}.wikipedia.org/wiki/{1}">{1}</a>'.format(lang, v)
 	elif k == 'wd':
 		ico = makeimg('wd', 'Wikidata')
 		r = '<a href="https://www.wikidata.org/wiki/{0}">{0}</a>'.format(v)
@@ -67,10 +68,16 @@ if __name__ == "__main__":
 			if x not in tagged:
 				tagged.append(x)
 		# read tag definition
-		tagdef = parseJSON('../beauty/tags/{}.json'.format(k))
-		links = [kv2link('g', tagdef['namefull'] if 'namefull' in tagdef.keys() else k)]
+		tagdef = parseJSON(ienputdir + '/tags/{}.json'.format(k))
+		# what to google?
+		links = []
+		if 'g' not in tagdef.keys():
+			links.append(kv2link('g', tagdef['namefull'] if 'namefull' in tagdef.keys() else k))
 		links.extend([kv2link(jk, tagdef[jk]) for jk in tagdef.keys()\
-				if not jk.isupper() and not jk.startswith('match') and not jk.startswith('name')])
+				if not jk.isupper()
+				and not jk.startswith('match')
+				and not jk.startswith('name')
+				and jk != 'relieves'])
 		title = tagdef['namefull'] if 'namefull' in tagdef.keys() else tagdef['name']
 		subt = ('<br/><em>'+tagdef['namelong']+'</em>') if 'namelong' in tagdef.keys() else ''
 		links = '<strong>{}</strong>{}<hr/>'.format(title, subt) + '\n'.join(sorted(links))
