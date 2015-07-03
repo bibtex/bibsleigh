@@ -28,7 +28,9 @@ def checkon(fn, o):
 			for nr in nrs.keys():
 				if o.json[k].find(' '+nr+' ') > -1:
 					o.json[k] = o.json[k].replace(' '+nr+' ', ' '+nrs[nr]+' ')
-		elif isinstance(o.json[k], str):
+		if isinstance(o.json[k], str):
+			# add emdashes for fancier titles
+			o.json[k] = o.json[k].replace(' - ', ' — ')
 			# find numeric values, turn them into proper integers
 			if o.json[k].isdigit():
 				o.json[k] = int(o.json[k])
