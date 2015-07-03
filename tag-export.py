@@ -87,6 +87,7 @@ if __name__ == "__main__":
 		dl = dl.replace('href="', 'href="../')
 		f.write(Templates.tagHTML.format(
 			title=k+' tag',
+			etag=AST.escape(k),
 			tag=k,
 			above='',
 			boxlinks=links,
@@ -103,7 +104,6 @@ if __name__ == "__main__":
 	CX = sum([len(ts[t]) for t in ts.keys()])
 	f.write(Templates.taglistHTML.format(
 		title='All known tags',
-		tag='',
 		listname='{} tags known from {} markings'.format(len(ts.keys()), CX),
 		dl=ul))
 	f.close()
@@ -137,6 +137,7 @@ if __name__ == "__main__":
 	f.write(Templates.tagHTML.format(
 		title='All untagged papers',
 		tag='untagged',
+		etag='untagged', # TODO: figure out a way to remove the edit link from here
 		above=bag,
 		boxlinks='',
 		listname='{} papers still untagged'.format(CX),

@@ -31,8 +31,9 @@ footer = '''</div>
 </html>'''
 
 editLink = '<br/>\n<a href="{edit}"><img src="stuff/edit.png" alt="EDIT!" title="EDIT!"/></a>'
-editBokBib = 'https://github.com/slebok/bibsleigh/edit/master/corpus/{filename}'
-editBibBea = 'https://github.com/slebok/bibsleigh/edit/master/tags/{tag}.json'
+editCorpus = 'https://github.com/slebok/bibsleigh/edit/master/corpus/{filename}'
+editTag = 'https://github.com/slebok/bibsleigh/edit/master/tags/{etag}.json'
+editBundle = 'https://github.com/slebok/bibsleigh/edit/master/bundles/{ebundle}.json'
 
 leftLinksT = '''
 	<div class="pad">
@@ -66,7 +67,7 @@ leftLinks('app', '')+'''
 
 confHTML = header+'''
 	<a href="index.html"><img src="stuff/{img}.png" alt="{title}" title="{title}" class="pad"/></a>
-'''+leftLinks('app', editLink).format(edit=editBokBib)+'''
+'''+leftLinks('app', editLink).format(edit=editCorpus)+'''
 </div>
 <div class="main">
 <h2>{fname}</h2>
@@ -89,7 +90,7 @@ taglistHTML = header.replace('stuff/', '../stuff/')+'''
 
 tagHTML = header.replace('stuff/', '../stuff/')+'''
 	<a href="../index.html"><img src="../stuff/bibsleigh.png" alt="BibSLEIGH" title="BibSLEIGH" class="pad"/></a>
-'''+movein(leftLinks('pap', editLink).format(edit=editBibBea))+'''
+'''+movein(leftLinks('pap', editLink).format(edit=editTag))+'''
 </div>
 <div class="main">
 <div class="tagbox">
@@ -102,7 +103,7 @@ tagHTML = header.replace('stuff/', '../stuff/')+'''
 
 bibHTML = header+'''
 	<a href="index.html"><img src="stuff/{img}.png" alt="{title}" title="{title}" class="pad"/></a>
-'''+leftLinks('app', editLink).format(edit=editBokBib)+'''
+'''+leftLinks('app', editLink).format(edit=editCorpus)+'''
 </div>
 <div class="main">
 <h2>{authors}<br/><em>{title}</em><br/>{short}.</h2>
@@ -117,4 +118,13 @@ bibHTML = header+'''
 </div>
 <hr/>
 {contents}
+'''+footer
+
+bunHTML = header.replace('stuff/', '../stuff/')+'''
+	<a href="../index.html"><img src="../stuff/bibsleigh.png" alt="BibSLEIGH" title="BibSLEIGH" class="pad"/></a>
+'''+movein(leftLinks('ppa', editLink).format(edit=editBundle))+'''
+</div>
+<div class="main">
+<h2><span class="ttl">Bundle</span> {bundle}</h2>
+{dl}
 '''+footer
