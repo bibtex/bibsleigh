@@ -1,0 +1,78 @@
+A Survey of Knowledge-Based Software Engineering (Tutorial)
+W. Lewis Johnson
+
+KIDS: An Algorithm Synthesis System (Tutorial)
+Douglas R. Smith
+
+A Knowledge-Based Approach To Software Process Engineering (Tutorial)
+Walt Scacchi
+  
+A researcher's view of life in a large software development environment (Keynote)
+Eric Sumner Jr.
+
+Knowledge Requirements for the Automatic Generation of Project Management Reports
+Tanya Korelsky, Daryl McCullough, Owen Rambow
+
+Diagrams for Software Synthesis
+Richard Jullig, Yellamraju Srinivas
+
+Towards Supporting Design Phase Synthesis
+Tobiah E. Smith, D. E. Setliff
+
+Validation of Rule-based Reactive Systems by Sound Scenario Generalization
+Robert J. Hall
+
+The ARIES Simulation Component (ASC)
+Kevin M. Benner
+
+A Knowledge Base for Software Test Refinement
+Steven J. Zeil, Christian Wild
+
+Modeling Processes (Keynote)
+John Myloupolos
+
+Transformational Approach to Transportation Scheduling
+Douglas Smith, Eduardo A. Parra
+
+A Knowledge Based Framework for Developing and Customizing Schedulers
+Venkatesh Srinivasan, Leon Sterling
+
+Articulation: An Integrated Approach to the Diagnosis, Replanning, and Rescheduling of Software Process Failures
+Peiwei Mi, Walt Scacchi
+
+The Knowledge Base Maintenace Assistant
+Ernst Lutz
+
+Interactive Elaboration of Generic Designs
+W. Lewis Johnson, K. Narayanaswamy, Robert Balzer
+
+Operation for Evolving Specifications
+Sudin Bhat, Kanth Miriyala
+
+An Implementation of Bounded Obligations
+Martin S. Feather
+
+GRIT - An Extended Refine for More Executable Specifications
+Paul Bailes, Murrsy Chapman, Ming Gong, Ian Peake
+
+A Common Architecture to Encourage Reuse of Natural Language/Text Processing Tools
+T. Richard MacMillan, Martha Farinacci, Sharon Laskowski, Elaine P. Lusher, Leonard J. Seligman
+
+INQUIRE: Predicate-Based Use and Reuse
+Dewayne E. Perry, Steven S. Popovich
+
+An Analogy-Based Retrieval Mechanism for Software Design Reuse
+Hing-Yan Lee, Mehdi T. Harandi
+
+Accelerating Browsing By Automatically Inferring A User's Search Goal
+Chris Drummond, Robert Holte, Dan Ionescu
+
+Observations on Using Empirical Studies in Developing a Knowledge-Based Software Engineering Tool
+David F. Redmiles
+
+An Experiment in Applying Knowledge-Based Software Engineering Technology
+Paul D. Bailor, Frank C. D. Young, Kim Kanzaki
+
+Development of an Expert Assistant for Software Evaluation using a Hybrid Approach
+Gina Kingston, Rudi Vernik, Philip Dart
+

@@ -1,0 +1,105 @@
+Knowledge Based Software Reuse Methods and Tools: DoD STARS RLF Technology (Tutorial)
+James Solderitsch, Don Yu
+
+Automatic Programming (Tutorial)
+Dorothy E. Setliff
+
+Knowledge Based Support for Scientific Programming (Keynote)
+Elaine Kant
+
+A Code Synthesis Experiment
+Henson Graves, Joe Louie, Tracy Mullen
+
+Knowledge-Based Constraint-Driven Software Synthesis
+Dorothy E. Setliff, Tobiah E. Smith
+
+Software Synthesis Shell SOFTEX/S
+Toru Yamanouchi, Akiyoshi Sato, Minoru Tomobe, Hiroshi Takeuchi, Jun Takamura, Masanobu Watanabe
+
+Transformation of a Semi-formal Specification to VDM
+J. D'Almeida, A. Ramesh, T. Radhakrishnan, V.S. Alagar
+
+Prototyping VDM Specifications with KIDS
+Yves Ledru, Marie-Helene Liegeois
+
+Track Assignment in an Air Traffic Control System: A Rational Reconstruction of System Design
+Douglas Smith
+
+MARVEL: A Multiuser Knowledge-Based Environment (Demonstration)
+George Heineman
+
+Acquisition of Requirements and Incremental Evolution into Specifications (Demonstration)
+W. Lewis Johnson
+
+The KBSA Concept Demonstration System (Demonstration)
+Michael Debellis, Kanth Miriyala, William C. Sasso
+
+Prototypes of Domain-Oriented Design Environments (Demonstration)
+Gerhard Fischer, David Redmiles
+
+Comet (Demonstration)
+William Mark
+
+Software Reuse through View Type Clusters
+Gordon S. Novak
+
+Reusing Database Queries in Analogical Domains
+Stan Matwin, Hamid Ould-Brahim
+
+Caesar: A System for CAse basEd SoftwAre Reuse
+Gilles Fouque, Stan Matwin
+
+Software Design by Reusing Architectures
+Sanjay Bhansali, H. Penny Nii
+
+Domain Abstractions in Requirements Engineering: A Exemplar Approach
+N.A.M. Maiden, A.G. Sutcliffe
+
+A Knowledge-based Software Process Library for Process-driven Software Development
+Peiwei Mi, Ming-June Lee, Walt Scacchi
+
+Towards a Logic-Based Reconstruction of Software Configuration Management
+Matthias Jarke
+
+Simulating the Gries/Dijkstra Design Process
+Robert B. Terwilliger
+
+Explorations on the Formal Frontier of Distributed  System Design
+Martin S. Feather
+
+Managing Design Knowledge to Provide Assistance to Large-Scale Software Development
+Peter G. Selfridge
+
+On Efficiently Computing Derived Performance Data of Program  Execution
+Yingsha Liao
+
+Automatic Composition of Data Structures to Represent Relations
+Donald Cohen, Neil Campbell
+
+A Knowledge-based Software Development Environment for Scientific  Model-building
+Richard Keller, Michal Rimon
+
+Automatic Software Technology for GN&C Applications (Demonstration)
+John J. Turkovich
+
+KIDS: A Knowledge-Based Software Development System (Demonstration)
+Douglas R. Smith
+
+ARIES Simulation Component (ASC) Demonstration (Demonstration)
+Kevin Benner
+
+Knowledge-Based Software Reengineering Tools
+Gordon Kotik, Lawrence Markosian
+
+Domain Oriented Design Environments (Keynote)
+Gerhard Fischer
+
+Program Concept Recognition
+Woitek Kozaczynski, Jim Ning, Tom Sarver
+
+Educating Knowledge-Based Software Engineers
+Major Paul D. Bailor
+
+Neural Networks as a Software Engineering Technology
+Derek Partridge, Noel Sharkey
+
