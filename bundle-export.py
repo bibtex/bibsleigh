@@ -91,6 +91,7 @@ if __name__ == "__main__":
 			dl=uberlist))
 		f.close()
 		bundles[purename] = pcx
+	print('Bundle pages:', C.yellow('{}'.format(len(bundles))), C.blue('generated'))
 	# now for the index
 	f = open(outputdir+'/bundle/index.html', 'w')
 	lst = ['<li><a href="{}.html">{}</a> ({})</li>'.format(AST.escape(b), b, bundles[b]) for b in sorted(bundles.keys())]
@@ -100,8 +101,8 @@ if __name__ == "__main__":
 		listname='{} bundles known with {} papers'.format(len(bundles), sum(bundles.values())),
 		ul='<ul class="tri">' + '\n'.join(lst) + '</ul>'))
 	f.close()
-	print('{}\nDone with {} venues, {} papers, {} tags.'.format(\
+	print('Bundle index:', C.blue('created'))
+	print('{}\nDone with {} venues, {} papers.'.format(\
 		C.purple('='*42),
 		C.red(len(sleigh.venues)),
-		C.red(sleigh.numOfPapers()),
-		C.red(sleigh.numOfTags())))
+		C.red(sleigh.numOfPapers())))

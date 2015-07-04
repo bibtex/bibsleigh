@@ -20,19 +20,22 @@ def makeimg(fn, alt):
 def kv2link(k, v):
 	if k == 'g':
 		ico = makeimg('g', 'Google')
-		r = '<a href="https://www.google.com/search?q={0}">{0}</a>'.format(v)
+		r = '<a href="https://www.google.com/search?q={}">{}</a>'.format(AST.escape(v), v)
 	elif k.endswith('.wp'):
 		lang = k.split('.')[0]
 		# TODO: make a dictionary of language names
 		ico = makeimg('wp', 'Wikipedia') + makeimg(lang, 'Language')
 		lang = k.split('.')[0]
-		r = '<a href="https://{0}.wikipedia.org/wiki/{1}">{1}</a>'.format(lang, v)
+		r = '<a href="https://{}.wikipedia.org/wiki/{}">{}</a>'.format(\
+			lang, \
+			AST.escape(v).replace('%20', '_'), \
+			v)
 	elif k == 'wd':
 		ico = makeimg('wd', 'Wikidata')
 		r = '<a href="https://www.wikidata.org/wiki/{0}">{0}</a>'.format(v)
 	elif k == 'hwiki':
 		ico = makeimg('h', 'Haskell Wiki')
-		r = '<a href="https://wiki.haskell.org/{0}">{0}</a>'.format(v)
+		r = '<a href="https://wiki.haskell.org/{}">{}</a>'.format(AST.escape(v), v)
 	elif k == 'so':
 		ico = makeimg('so', 'Stack Overflow')
 		r = '<a href="http://stackoverflow.com/questions/tagged?tagnames={0}">{0}</a>'.format(v)
@@ -94,7 +97,7 @@ if __name__ == "__main__":
 			listname='{} papers'.format(len(lst)),
 			dl=dl))
 		f.close()
-	print('Tag pages:', C.blue('generated'))
+	print('Tag pages:', C.yellow('{}'.format(len(ts))), C.blue('generated'))
 	# tag index
 	f = open(outputdir+'/tag/index.html', 'w')
 	keyz = [k for k in ts.keys() if len(ts[k]) > 2]

@@ -70,7 +70,7 @@ confHTML = header+'''
 '''+leftLinks('app', editLink).format(edit=editCorpus)+'''
 </div>
 <div class="main">
-<h2>{fname}</h2>
+<h2>{fname}</h2>{venpage}
 <h3>Editions:</h3>
 <dl>{dl}</dl>
 '''+footer

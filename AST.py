@@ -86,6 +86,8 @@ class Unser(object):
 					s += '<span class="uri">\t{0:<10} = "<a href=\"{1}\">{1}</a>",\n</span>'.format(k, e)
 			elif k in ('year', 'volume', 'issue', 'number') and isinstance(self.json[k], int):
 				s += '\t{0:<10} = {1},\n'.format(k, self.json[k])
+			elif k == 'pages':
+				s += '\t{0:<10} = "{1}",\n'.format(k, self.getPagesBib())
 			else:
 				s += '\t{0:<10} = "{1}",\n'.format(k, self.json[k])
 		s += '}'
@@ -177,6 +179,34 @@ class Unser(object):
 		return len(self.getTags())
 	def getTags(self):
 		return {}
+	def getPagesString(self):
+		p1, p2 = self.getPagesTuple()
+		if p1 == p2:
+			return ', p. {}'.format(p1)
+		else:
+			return ', pp. {}–{}'.format(p1, p2)
+	def getPagesBib(self):
+		p1, p2 = self.getPagesTuple()
+		if p1 == p2:
+			return '{}'.format(p1)
+		else:
+			return '{}--{}'.format(p1, p2)
+	def getPagesTuple(self):
+		if 'pages' not in self.json.keys():
+			p1 = p2 = None
+		elif isinstance(self.json['pages'], int):
+			p1 = p2 = self.json['pages']
+		else:
+			ps = self.json['pages'].split('-')
+			if ps[0]:
+				p1 = int(ps[0])
+			else:
+				p1 = None
+			if ps[-1]:
+				p2 = int(ps[-1])
+			else:
+				p2 = None
+		return (p1, p2)
 
 class Sleigh(Unser):
 	def __init__(self, idir):
@@ -236,6 +266,10 @@ class Venue(Unser):
 				abbr=ABBR.lower(),\
 				title=title)
 	def getPage(self):
+		if 'eventuri' in self.json.keys():
+			ev = '<h3>Event series page: <a href="{uri}">{uri}</a></h3>'.format(uri=self.json['eventuri'])
+		else:
+			ev = ''
 		ABBR = self.get('name')
 		title = self.get('title')
 		img = ABBR.lower()
@@ -245,6 +279,7 @@ class Venue(Unser):
 			title=ABBR,\
 			img=img,\
 			fname=('{} ({})'.format(title, ABBR)),\
+			venpage=ev,\
 			dl=''.join(eds))
 	def getConfs(self):
 		res = []
@@ -388,9 +423,9 @@ class Paper(Unser):
 	def getItemWTags(self, tgz):
 		return '<dt><a href="{0}.html">{0}</a>{4}</dt><dd>{1}{2}{3}.</dd>'.format(\
 			self.getKey(),\
-			self.get('title'),\
+			self.get('title').replace('&', '&amp;'),\
 			self.getAbbrAuthors(),\
-			self.getPages(),
+			self.getPagesString(),
 			tgz)
 	def getItem(self):
 		return self.getItemWTags(self.getFancyTags(self.tags) if self.tags else '')
@@ -411,20 +446,6 @@ class Paper(Unser):
 		return ' ('+', '.join(['<abbr title="{0}">{1}</abbr>'.format(a,\
 			''.join([w[0] for w in a.replace('-', ' ').split(' ') if w]))\
 			for a in listify(self.json['author'])])+')'
-	def getPages(self):
-		if 'pages' not in self.json.keys():
-			return ''
-		elif isinstance(self.json['pages'], int):
-			return ', p. {}'.format(self.json['pages'])
-		ps = self.json['pages'].split('-')
-		if len(ps) == 3 and ps[1] == '':
-			ps = [ps[0], ps[2]]
-		if len(ps) != 2:
-			return ', pp. {}???'.format(self.json['pages'])
-		elif ps[0] == ps[1]:
-			return ', p. {}'.format(ps[0])
-		else:
-			return ', pp. {}–{}'.format(*ps)
 	def getPage(self):
 		if self.getTags():
 			cnt = '<h3>Tags:</h3><ul class="tri">'
