@@ -1,0 +1,75 @@
+Introduction to Knowledge-Based Software Engineering (Tutorial)
+Michael Lowry, W. Lewis Johnson
+
+SPECWARE: Formal Support for Software Composition (Tutorial)
+Richard Jullig
+
+Developing Collaborative Applications Using the World Wide Web "Shell" (Tutorial)
+Alison Lee, Andreas Girgensohn
+
+A 15 Year Perspective on Reuse and Generation (Keynote)
+Ted Biggerstaff
+
+Deductive Synthesis of Numerical Simulation Programs from Networks of Algebraic and Ordinary Differential Equations
+Thomas Ellman, Takahiro Murata
+http://www.ase-conferences.org/ase/past/abstracts-96/ellman.txt
+
+Synthesis of Schedulers for Planned Shutdowns of Power Plants
+Carla P. Gomes, Douglas R. Smith, Stephen J. Westfold
+http://www.ase-conferences.org/ase/past/abstracts-96/gomes.txt
+
+Synthesis of Local Search Algorithms by Algebraic Means
+Robert P. Graham Jr., Paul D. Bailor
+http://www.ase-conferences.org/ase/past/abstracts-96/graham.txt
+
+Constructing Transition Models of AI Planner Behavior
+Adele E. Howe, Larry D. Pyeatt
+http://www.ase-conferences.org/ase/past/abstracts-96/howe.txt
+
+Trusting Your Assistant
+Robert J. Hall
+http://www.ase-conferences.org/ase/past/abstracts-96/hall.txt
+
+Complementing semi-formal specifications with Z
+Yves Ledru
+http://www.ase-conferences.org/ase/past/abstracts-96/ledru.txt
+
+The Truth about KIDS (Keynote)
+Doug Smith
+
+Extending Design Environments to Software Architecture Design
+Jason E. Robbins, David M. Hilbert, David F. Redmiles
+http://www.ase-conferences.org/ase/past/abstracts-96/robbins.txt
+
+Addressing Complexity, Coordination, and Automation in Software Development with the KBSA/ADM
+Kevin Benner
+http://www.ase-conferences.org/ase/past/abstracts-96/benner.txt
+
+Integrating Software Process Models and Design Rationales
+Barbara Dellen, Kirstin Kohler, Frank Maurer
+http://www.ase-conferences.org/ase/past/abstracts-96/dellen.txt
+
+Applying Plan Recognition Algorithms to Program Understanding
+Alex Quilici, Qiang Yang, Steve Woods
+http://www.ase-conferences.org/ase/past/abstracts-96/quilici.txt
+
+Knowledge-Based Re-engineering of Legacy Programs for Robustness in Automated Design
+J. Keane, T. Ellman
+http://www.ase-conferences.org/ase/past/abstracts-96/keane.txt
+
+Using Knowledge-Based Transformations to Reverse-Engineer COBOL Programs
+Terence J. Harmer, Patrick J. McParland, James M. Boyle
+http://www.ase-conferences.org/ase/past/abstracts-96/harmer.txt
+
+A Knowledge-Based Toolkit For Software Visualisation
+Diana Sidarkeviciute, Enn Tyugu, Ago Kuusik
+http://www.ase-conferences.org/ase/past/abstracts-96/sidar.txt
+
+Set Differentiation: A Method for the Automatic Generation of Filtering Algorithms
+Fawzia Derrough Darche
+http://www.ase-conferences.org/ase/past/abstracts-96/darche.txt
+
+Software Synthesis for Trade-off Design
+Akiyoshi Sato, Masato Miki, Toru Yamanouchi, Masanobu Watanabe
+http://www.ase-conferences.org/ase/past/abstracts-96/sato.txt
+

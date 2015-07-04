@@ -12,12 +12,22 @@ ienputdir = '../json'
 outputdir = '../frontend'
 sleigh = AST.Sleigh(ienputdir + '/corpus')
 C = Fancy.colours()
+pcx = 0
 
 def matchfromsleigh(sleigh, pattern):
 	if isinstance(pattern, list):
-		path = pattern[0].split('/')
-		path[3] = [p.split('/')[-1] for p in pattern]
-		# NB: this assumes all papers come from the same conference
+		paths = []
+		cur = '???'
+		for p in pattern:
+			if p.find('/') < 0:
+				paths.append(cur + '/' + p)
+			else:
+				paths.append(p)
+			cur = paths[-1][:paths[-1].rindex('/')]
+		res = []
+		for p in paths:
+			res.extend(matchfromsleigh(sleigh, p))
+		return res
 	else:
 		path = pattern.split('/')
 	# NB: could have been a simple bruteforce search with a getPureName check,
@@ -39,13 +49,35 @@ def matchfromsleigh(sleigh, pattern):
 				if path[3] == '*':
 					return c.papers
 				else:
-					ps = []
-					wanted = path[3] #.split(',')
-					for p in c.papers:
-						if p.getKey() in wanted:
-							ps.append(p)
-					return ps
+					return [p for p in c.papers if p.getKey() in path[3]]
 	return []
+
+def processSortedRel(r):
+	# [ {"x" : Y } ] where Y can be a string or a sorted rel
+	global pcx
+	acc = []
+	for el in r:
+		ename = list(el.keys())[0]
+		evals = el[ename]
+		if os.path.isfile(outputdir + '/stuff/' + ename.lower() + '.png'):
+			img = '<img src="../stuff/{1}.png" alt="{0}" width="30px"/> '.format(ename, ename.lower())
+		else:
+			img = ''
+		if isinstance(evals, str):
+			plst = sorted(matchfromsleigh(sleigh, evals), key=AST.sortbypages)
+			pcx += len(plst)
+			ptxt = '<dl class="toc">'+'\n'.join([p.getItem() for p in plst])+'</dl>'
+		elif isinstance(evals, list) and isinstance(evals[0], str):
+			plst = sorted(matchfromsleigh(sleigh, evals), key=AST.sortbypages)
+			pcx += len(plst)
+			ptxt = '<dl class="toc">'+'\n'.join([p.getItem() for p in plst])+'</dl>'
+		elif isinstance(evals, list) and isinstance(evals[0], dict):
+			ptxt = processSortedRel(evals)
+			clss = ''
+		else:
+			print(C.red('ERROR:'), 'unrecornised bundle structure', evals)
+		acc.append('<dl><dt>{}{}</dt><dd>{}</dl>'.format(img, ename, ptxt))
+	return '\n'.join(acc)
 
 if __name__ == "__main__":
 	print('{}: {} venues, {} papers\n{}'.format(\
@@ -57,38 +89,13 @@ if __name__ == "__main__":
 	for b in glob.glob(ienputdir + '/bundles/*.json'):
 		purename = b.split('/')[-1][:-5]
 		bun = json.load(open(b, 'r'))
-		dl = '{}'.format(bun)
-		uberlist = ''
-		pcx = scx = 0
-		for ven in bun['contents']:
-			vname = list(ven.keys())[0]
-			vconfs = ven[vname]
-			if os.path.isfile(outputdir + '/stuff/' + vname.lower() + '.png'):
-				vlst = '<dl><dt><img src="../stuff/{1}.png" alt="{0}" width="30px"/> {0}</dt><dd>'.format(vname, vname.lower())
-			else:
-				vlst = '<dl><dt>{0}</dt><dd>'.format(vname)
-			clsts = []
-			for con in ven[vname]:
-				cname = list(con.keys())[0]
-				cpapers = con[cname]
-				clst = '<dl><dt>{}</dt><dd><dl class="toc">'.format(cname)
-				plst = sorted(matchfromsleigh(sleigh, cpapers), key=AST.sortbypages)
-				pcx += len(plst)
-				clst += '\n'.join([p.getItem() for p in plst])
-				clst += '</dl></dd></dl>'
-				clsts.append(clst)
-				scx += 1
-			vlst += '\n'.join(clsts)
-			vlst += '</dd></dl>'
-			uberlist += vlst
-		uberlist = '<h2>{} papers from {} sources</h2>{}'.format(pcx, scx, uberlist)
-		uberlist = uberlist.replace('href="', 'href="../').replace('../mailto', 'mailto')
+		uberlist = '<h2>{1} papers</h2>{0}'.format(processSortedRel(bun['contents']), pcx)
 		f = open(outputdir + '/bundle/' + purename + '.html', 'w')
 		f.write(Templates.bunHTML.format(
 			title=purename+' bundle',
 			bundle=bun['name'],
 			ebundle=AST.escape(purename),
-			dl=uberlist))
+			dl=uberlist.replace('href="', 'href="../').replace('../mailto', 'mailto')))
 		f.close()
 		bundles[purename] = pcx
 	print('Bundle pages:', C.yellow('{}'.format(len(bundles))), C.blue('generated'))

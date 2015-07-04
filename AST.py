@@ -13,13 +13,11 @@ def escape(s):
 		s = s.replace(k,v)
 	return s
 
+# Sort first by year, then by pages
 def sortbypages(z):
-	if 'pages' not in z.json.keys():
-		return 0
-	elif isinstance(z.json['pages'], int):
-		return z.json['pages']
-	else:
-		return int(z.get('pages').split('-')[0])
+	p1, p2 = z.getPagesTuple()
+	y = z.get('year')
+	return (y + p1 / 10000.) if p1 else y
 
 def last(xx):
 	return xx.split('/')[-1].replace('.json', '')
@@ -61,7 +59,8 @@ class Unser(object):
 					s += '\t{0:<10} = "{{{1}}}",\n'.format(k, self.json[k])
 				else:
 					s += '\t{0:<10} = "{{<span id="{0}">{1}</span>}}",\n'.format(k, self.json[k])
-			elif k in ('crossref', 'key', 'type', 'venue', 'eventtitle', 'nondblpkey', 'dblpkey', 'dblpurl'):
+			elif k in ('crossref', 'key', 'type', 'venue', 'twitter', \
+				'eventtitle', 'eventuri', 'nondblpkey', 'dblpkey', 'dblpurl'):
 				# TODO: ban 'ee' as well
 				pass
 			elif k == 'doi':
@@ -181,7 +180,14 @@ class Unser(object):
 		return {}
 	def getPagesString(self):
 		p1, p2 = self.getPagesTuple()
-		if p1 == p2:
+		if not p1 and not p2:
+			return ''
+		elif p1 and not p2:
+			return ', p. {}–?'.format(p1)
+		elif p2 and not p1:
+			# weird
+			return ', p. ?–{}'.format(p2)
+		elif p1 == p2:
 			return ', p. {}'.format(p1)
 		else:
 			return ', pp. {}–{}'.format(p1, p2)
@@ -267,7 +273,10 @@ class Venue(Unser):
 				title=title)
 	def getPage(self):
 		if 'eventuri' in self.json.keys():
-			ev = '<h3>Event series page: <a href="{uri}">{uri}</a></h3>'.format(uri=self.json['eventuri'])
+			if 'twitter' in self.json.keys():
+				ev = '<h3>Event series page: <a href="{uri}">{uri}</a> (<a href="https://twitter.com/{twi}">@{twi}</a>)</h3>'.format(uri=self.json['eventuri'], twi=self.json['twitter'])
+			else:
+				ev = '<h3>Event series page: <a href="{uri}">{uri}</a></h3>'.format(uri=self.json['eventuri'])
 		else:
 			ev = ''
 		ABBR = self.get('name')
@@ -312,16 +321,24 @@ class Year(Unser):
 		super(Year, self).__init__(d, hdir)
 		self.year = last(d)
 		self.confs = []
+		jsonsfound = []
+		jsonsused = []
 		for f in glob.glob(d+'/*'):
 			if os.path.isdir(f):
 				self.confs.append(Conf(f, self.homedir, self))
 				if os.path.exists(f+'.json'):
 					self.confs[-1].json = parseJSON(f+'.json')
+					jsonsused.append(f+'.json')
 					# print('Conf has a JSON! %s' % self.confs[-1].json)
 			elif f.endswith('.json'):
-				pass
+				jsonsfound.append(f)
 			else:
 				print('File out of place:', f)
+		for f in jsonsfound:
+			if f not in jsonsused:
+				# print('Houston, we have a JSON:', f)
+				self.confs.append(Conf(f[:f.rindex('.')], self.homedir, self))
+				self.confs[-1].json = parseJSON(f)
 		self.back = parent
 	def numOfPapers(self):
 		return sum([c.numOfPapers() for c in self.confs])
@@ -371,7 +388,10 @@ class Conf(Unser):
 		return '<dd><a href="{}.html">{}</a> ({})</dd>'.format(self.get('name'), self.get('title'), self.getEventTitle())
 	def getPage(self):
 		if 'eventuri' in self.json.keys():
-			ev = '<h3>Event page: <a href="{uri}">{uri}</a></h3>'.format(uri=self.json['eventuri'])
+			if 'twitter' in self.json.keys():
+				ev = '<h3>Event page: <a href="{uri}">{uri}</a> (<a href="https://twitter.com/{twi}">@{twi}</a>)</h3>'.format(uri=self.json['eventuri'], twi=self.json['twitter'])
+			else:
+				ev = '<h3>Event page: <a href="{uri}">{uri}</a></h3>'.format(uri=self.json['eventuri'])
 		else:
 			ev = ''
 		return Templates.bibHTML.format(\
@@ -438,6 +458,7 @@ class Paper(Unser):
 				ts.remove(t)
 			return self.getItemWTags(self.getFancyTags(ts))
 	def getFancyTags(self, ts):
+		# TODO: do the same backlinks for bundles
 		return ' ' + ' '.join(['<span class="tag"><a href="tag/{}.html" title="{}">&nbsp;T&nbsp;</a></span>'.format(escape(t), t) for t in ts])
 	def getAbbrAuthors(self):
 		# <abbr title="Rainer Koschke">RK</abbr>

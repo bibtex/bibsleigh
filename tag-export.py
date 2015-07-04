@@ -30,6 +30,15 @@ def kv2link(k, v):
 			lang, \
 			AST.escape(v).replace('%20', '_'), \
 			v)
+	elif k.endswith('.wb'):
+		lang = k.split('.')[0]
+		# TODO: make a dictionary of language names
+		ico = makeimg('wb', 'Wikibooks') + makeimg(lang, 'Language')
+		lang = k.split('.')[0]
+		r = '<a href="https://{}.wikibooks.org/wiki/{}">{}</a>'.format(\
+			lang, \
+			AST.escape(v).replace('%20', '_'), \
+			v)
 	elif k == 'wd':
 		ico = makeimg('wd', 'Wikidata')
 		r = '<a href="https://www.wikidata.org/wiki/{0}">{0}</a>'.format(v)
@@ -135,7 +144,7 @@ if __name__ == "__main__":
 	bag='\n'
 	for w in bow.keys():
 		if bow[w] > 40:
-			bag += '<span style="border:1px solid black;margin:5px">'+w+'</span> '
+			bag += '<span style="border:1px solid black;margin:5px">{}</span> ({}) '.format(w, bow[w])
 	dl += '</dl>'
 	f.write(Templates.tagHTML.format(
 		title='All untagged papers',
