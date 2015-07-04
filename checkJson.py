@@ -15,7 +15,7 @@ C = Fancy.colours()
 verbose = False
 
 def checkon(fn, o):
-	if os.path.isdir(fn):
+	if not os.path.exists(fn) or os.path.isdir(fn):
 		fn = fn + '.json'
 	f = open(fn, 'r')
 	lines = f.readlines()[1:-1]

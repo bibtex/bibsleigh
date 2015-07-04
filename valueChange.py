@@ -15,7 +15,7 @@ verbose = False
 d2r = k2r = v2i = v2o = ''
 
 def checkon(fn, o):
-	if os.path.isdir(fn):
+	if not os.path.exists(fn) or os.path.isdir(fn):
 		fn = fn + '.json'
 	if d2r and (not o.filename.startswith(d2r) or o.filename == d2r):
 		return 0

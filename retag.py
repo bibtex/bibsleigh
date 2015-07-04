@@ -26,8 +26,10 @@ def checkon(fn, o):
 	flines = [strictstrip(s) for s in lines]
 	plines = sorted([strictstrip(s) for s in o.getJSON().split('\n')[1:-1]])
 	ts = []
+	# precise case-sensitive match
+	mcs = o.get('title')
 	# precise match for substrings
-	mes = baretext(o.get('title'))
+	mes = baretext(mcs)
 	# precise match for words
 	mew = mes.split(' ')
 	# imprecise match for substrings
@@ -42,9 +44,11 @@ def checkon(fn, o):
 			continue
 		if 'matchword' not in t.keys() and 'matchsub' not in t.keys() and \
 		'matchwordexact' not in t.keys() and 'matchsubexact' not in t.keys() and\
-		'matchend' not in t.keys():
+		'matchend' not in t.keys() and 'matchsensitive' not in t.keys():
 			print(C.red('ERROR:'), 'no match rules for tag', t['name'])
 			continue
+		if 'matchsensitive' in t.keys():
+			ts.extend([t['name'] for s in listify(t['matchsensitive']) if mcs.find(s) > -1])
 		if 'matchword' in t.keys():
 			ts.extend([t['name'] for w in listify(t['matchword']) if w in miw])
 		if 'matchwordexact' in t.keys():

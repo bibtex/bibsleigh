@@ -16,7 +16,7 @@ d2r = k2r = v2o = ''
 
 def checkon(fn, o):
 	global k2r, v2o
-	if os.path.isdir(fn):
+	if not os.path.exists(fn) or os.path.isdir(fn):
 		fn = fn + '.json'
 	if o.filename.startswith(d2r):
 		# if we find a proceedings volume, take its title to all descendant booktitles
