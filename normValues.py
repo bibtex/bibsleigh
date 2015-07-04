@@ -41,6 +41,13 @@ def checkon(fn, o):
 			# remove confix curlies
 			elif o.json[k].startswith('{') and o.json[k].endswith('}'):
 				o.json[k] = o.json[k][1:-1]
+			# single quotes to double quotes
+			elif o.json[k].find(" '") > -1 and o.json[k].find("' ") > -1:
+				o.json[k] = o.json[k].replace(" '", ' "').replace("' ", '" ')
+			elif o.json[k].find(" '") > -1 and o.json[k].endswith("'"):
+				o.json[k] = o.json[k].replace(" '", ' "').replace("'", '"')
+			elif o.json[k].find("' ") > -1 and o.json[k].startswith("'"):
+				o.json[k] = o.json[k].replace("' ", '" ').replace("'", '"')
 			# fancify quotes
 			elif o.json[k].find(' "') > -1 and o.json[k].find('" ') > -1:
 				o.json[k] = o.json[k].replace(' "', ' “').replace('" ', '” ')
