@@ -3,7 +3,7 @@
 #
 # a module for retagging LRJs in the adjacent repository
 
-import sys, os
+import sys, os, re
 sys.path.append(os.getcwd()+'/../engine')
 import Fancy, AST, os.path, glob
 from JSON import parseJSON
@@ -16,6 +16,12 @@ C = Fancy.colours()
 verbose = False
 tags = []
 relieved = {}
+
+def hcre(s):
+	if s.find(': ') < 0:
+		return False
+	xs = s.strip().split(': ')
+	return len(xs) == 2 and xs[0].isalpha() and xs[1] != ''
 
 def checkon(fn, o):
 	if os.path.isdir(fn):
@@ -44,6 +50,7 @@ def checkon(fn, o):
 			continue
 		if 'matchword' not in t.keys() and 'matchsub' not in t.keys() and \
 		'matchwordexact' not in t.keys() and 'matchsubexact' not in t.keys() and\
+		'matchre' not in t.keys() and\
 		'matchend' not in t.keys() and 'matchsensitive' not in t.keys():
 			print(C.red('ERROR:'), 'no match rules for tag', t['name'])
 			continue
@@ -59,6 +66,10 @@ def checkon(fn, o):
 			ts.extend([t['name'] for s in listify(t['matchsubexact']) if mes.find(s) > -1])
 		if 'matchend' in t.keys():
 			ts.extend([t['name'] for s in listify(t['matchend']) if mes.endswith(s)])
+		if 'matchre' in t.keys():
+			# r = re.compile('^' + t['matchre'] + '$')
+			# ts.extend([t['name'] for r in listify(t['matchre']) if re.match('^' + r + '$', mes)])
+			ts.extend([t['name'] for r in listify(t['matchre']) if hcre(mes)])
 	# second pass: check reliefs
 	for t in tags:
 		if 'relieves' in t.keys():

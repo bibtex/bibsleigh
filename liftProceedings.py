@@ -46,6 +46,8 @@ def checkon(m, o):
 	if r == 2 and not n:
 		# nothing to fix?!
 		return 0
+	if not os.path.exists(o.filename):
+		return 0
 	if os.path.isdir(o.filename):
 		fn = o.filename + '.json'
 	else:
