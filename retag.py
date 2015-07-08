@@ -17,7 +17,19 @@ verbose = False
 tags = []
 relieved = {}
 
+matchModes = {
+'matchsensitive': lambda s,mcs,mes,mew,mis,miw:mcs.find(s) > -1,
+'matchword':      lambda s,mcs,mes,mew,mis,miw:s in miw,
+'matchwordexact': lambda s,mcs,mes,mew,mis,miw:s in mew,
+'matchsub':       lambda s,mcs,mes,mew,mis,miw:mis.find(s) > -1,
+'matchsubexact':  lambda s,mcs,mes,mew,mis,miw:mes.find(s) > -1,
+'matchstart':     lambda s,mcs,mes,mew,mis,miw:mes.startswith(s),
+'matchend':       lambda s,mcs,mes,mew,mis,miw:mes.endswith(s),
+'matchre':        lambda s,mcs,mes,mew,mis,miw:re.match('^'+s+'$', mes)
+}
+
 def checkon(fn, o):
+	global matchModes
 	if os.path.isdir(fn):
 		fn = fn + '.json'
 	f = open(fn, 'r')
@@ -42,26 +54,12 @@ def checkon(fn, o):
 		if 'name' not in t.keys():
 			print(C.red('ERROR:'), 'no name for tag from tile', t['FILE'])
 			continue
-		if 'matchword' not in t.keys() and 'matchsub' not in t.keys() and \
-		'matchwordexact' not in t.keys() and 'matchsubexact' not in t.keys() and\
-		'matchre' not in t.keys() and\
-		'matchend' not in t.keys() and 'matchsensitive' not in t.keys():
+		if all([not k.startswith('match') for k in t.keys()]):
 			print(C.red('ERROR:'), 'no match rules for tag', t['name'])
 			continue
-		if 'matchsensitive' in t.keys():
-			ts.extend([t['name'] for s in listify(t['matchsensitive']) if mcs.find(s) > -1])
-		if 'matchword' in t.keys():
-			ts.extend([t['name'] for w in listify(t['matchword']) if w in miw])
-		if 'matchwordexact' in t.keys():
-			ts.extend([t['name'] for w in listify(t['matchwordexact']) if w in mew])
-		if 'matchsub' in t.keys():
-			ts.extend([t['name'] for s in listify(t['matchsub']) if mis.find(s) > -1])
-		if 'matchsubexact' in t.keys():
-			ts.extend([t['name'] for s in listify(t['matchsubexact']) if mes.find(s) > -1])
-		if 'matchend' in t.keys():
-			ts.extend([t['name'] for s in listify(t['matchend']) if mes.endswith(s)])
-		if 'matchre' in t.keys():
-			ts.extend([t['name'] for r in listify(t['matchre']) if re.match('^' + r + '$', mes)])
+		for k in t.keys():
+			if k.startswith('match'):
+				ts += [t['name'] for s in listify(t[k]) if matchModes[k](s,mcs,mes,mew,mis,miw)]
 	# second pass: check reliefs
 	for t in tags:
 		if 'relieves' in t.keys():
@@ -117,8 +115,8 @@ if __name__ == "__main__":
 			# cx[checkreport(c.filename, c)] += 1
 			for p in c.papers:
 				cx[checkreport(p.filename, p)] += 1
-	for t in relieved.keys():
-		print('[ {} ] {} relieved {} markings'.format(C.purple('√'), t, relieved[t]))
+	for rt in relieved.keys():
+		print('[ {} ] {} relieved {} markings'.format(C.purple('√'), rt, relieved[rt]))
 	print('{} files checked, {} ok, {} fixed, {} failed'.format(\
 		C.bold(cx[0] + cx[1] + cx[2]),
 		C.blue(cx[0]),
