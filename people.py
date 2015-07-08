@@ -8,7 +8,7 @@ sys.path.append(os.getcwd()+'/../engine')
 import Fancy, AST, os.path
 from NLP import nrs, strictstrip
 from LP import listify
-from JSON import parseJSON
+from JSON import parseJSON, jsonify
 
 ienputdir = '../json'
 sleigh = AST.Sleigh(ienputdir + '/corpus')
@@ -106,6 +106,14 @@ def checkreport(fn, o):
 if __name__ == "__main__":
 	if len(sys.argv) > 1:
 		verbose = sys.argv[1] == '-v'
+	# Data from the conferenceMetrics repo
+	csv = []
+	f = open('../conferenceMetrics/data/SE-conf-roles.csv', 'r')
+	for line in f.readlines():
+		# Conference;Year;First Name;Last Name;Sex;Role
+		csv.append(line.strip().split(';'))
+	f.close()
+	# All known contributors
 	people = []
 	for fn in glob.glob(ienputdir + '/people/*.json'):
 		p = parseJSON(fn)
@@ -116,6 +124,7 @@ if __name__ == "__main__":
 		C.red(sleigh.numOfPapers()),
 		C.purple('='*42)))
 	cx = {0: 0, 1: 0, 2: 0}
+	# All people who ever contributed
 	names = []
 	for v in sleigh.venues:
 		for c in v.getConfs():
@@ -123,26 +132,46 @@ if __name__ == "__main__":
 				for k in ('author', 'editor'):
 					if k in p.json.keys():
 						names += [a for a in listify(p.json[k]) if a not in names]
-	print(people)
+	# print(people)
 	for i, name in enumerate(names):
 		idx = -1
 		for p in people:
 			if p['name'] == name:
 				idx = i
+				break
 		if idx == -1:
 			p = {'name': name,\
 				 'FILE': ienputdir + '/people/' + fileify(name) + '.json',\
 				'dblp': dblpify(name)}
 			people.append(p)
-		if p['FILE']:
-			f = open(p['FILE'], 'w')
-			f.write('{\n' + ',\n'.join(['\t"{k}": "{v}"'.format(k=k, v=p[k]) for k in sorted(p.keys())]) + '\n}\n')
-			f.close()
+	# Conference;Year;First Name;Last Name;Sex;Role
+	for i, line in enumerate(csv):
+		idx = jdx = -1
+		name = line[2] + ' ' + line[3]
+		for j, p in enumerate(people):
+			if p['name'] == name:
+				idx = i
+				jdx = j
+				break
+		if idx < 0 or jdx < 0:
+			print('Don’t know no', name)
 		else:
-			print('How can that be?')
+			if 'sex' not in people[jdx].keys():
+				people[jdx]['sex'] = line[4]
+			if 'roles' not in people[jdx].keys():
+				people[jdx]['roles'] = []
+			# excessive!
+			people[jdx]['roles'].append([line[0], line[1], line[5]])
 	print('\t{} people properly specified,\n\t{} people contributed to the corpus'.format(\
 		C.red(len(people)),
 		C.red(len(names))))
+	for p in people:
+		if p['FILE']:
+			f = open(p['FILE'], 'w')
+			f.write(jsonify(p))
+			f.close()
+		else:
+			print('How can that be?')
 	print('{} files checked, {} ok, {} fixed, {} failed'.format(\
 		C.bold(cx[0] + cx[1] + cx[2]),
 		C.blue(cx[0]),
