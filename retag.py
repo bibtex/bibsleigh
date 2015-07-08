@@ -17,12 +17,6 @@ verbose = False
 tags = []
 relieved = {}
 
-def hcre(s):
-	if s.find(': ') < 0:
-		return False
-	xs = s.strip().split(': ')
-	return len(xs) == 2 and xs[0].isalpha() and xs[1] != ''
-
 def checkon(fn, o):
 	if os.path.isdir(fn):
 		fn = fn + '.json'
@@ -67,9 +61,7 @@ def checkon(fn, o):
 		if 'matchend' in t.keys():
 			ts.extend([t['name'] for s in listify(t['matchend']) if mes.endswith(s)])
 		if 'matchre' in t.keys():
-			# r = re.compile('^' + t['matchre'] + '$')
-			# ts.extend([t['name'] for r in listify(t['matchre']) if re.match('^' + r + '$', mes)])
-			ts.extend([t['name'] for r in listify(t['matchre']) if hcre(mes)])
+			ts.extend([t['name'] for r in listify(t['matchre']) if re.match('^' + r + '$', mes)])
 	# second pass: check reliefs
 	for t in tags:
 		if 'relieves' in t.keys():
