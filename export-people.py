@@ -8,15 +8,16 @@ from fancy.ANSI import C
 from fancy.Languages import ISONames
 from fancy.Templates import personHTML, peoplistHTML
 from lib.AST import Sleigh, escape
-# from lib.JSON import parseJSON
-# from lib.LP import listify
-# from lib.NLP import baretext, superbaretext, trash
 
-# import Fancy, AST, Templates, sys, os, glob, json
-# sys.path.append(os.getcwd()+'/../beauty')
-# from NLP import superbaretext, baretext, trash
-# from JSON import parseJSON
-# from LP import listify
+# The idea is to generate a colour between FFFDE7 (for 'a') and F57F17 (for 'z')
+# FFFDE7 is Yellow/50 and F57F17 is Yellow/900 in Material Design
+def genColour(az):
+	# get something between 0 and 25
+	i = ord(az) - ord('a')
+	r = 0xFF - (0xFF - 0xF5)*i//26
+	g = 0xFD - (0xFD - 0x7F)*i//26
+	b = 0xE7 - (0xE7 - 0x17)*i//26
+	return hex(r)[-2:] + hex(g)[-2:] + hex(b)[-2:]
 
 ienputdir = '../json'
 outputdir = '../frontend'
@@ -154,18 +155,44 @@ if __name__ == "__main__":
 			dl=dl))
 		f.close()
 	print('Person pages:', C.yellow('{}'.format(len(ps))), C.blue('generated'))
-	# tag index
-	f = open(outputdir+'/person/index.html', 'w')
+	# person index
 	# keyz = [k for k in ps.keys() if len(ts[k]) > 2]
 	# keyz = sorted(keyz, key=lambda t:len(ts[t]), reverse=True)
 	keyz = ps#sorted(ps.keys())
-	lst = ['<li><a href="{}.html">{}</a></li>'.format(escape(t), t) for t in keyz]
-	ul = '<ul class="mul">' + '\n'.join(lst) + '</ul>'
+	letters = [chr(x) for x in range(ord('a'), ord('z')+1)]
+	indices = {x:[] for x in letters}
+	for t in keyz:
+		letter = t.split('_')[-1][0].lower()
+		if not letter.isalpha():
+			print(C.red('ERROR')+':', 'wrong name', t)
+			continue
+		indices[letter].append('<li><a href="{}.html">{}</a></li>'.format(escape(t), t))
+	# lst = ['<li><a href="{}.html">{}</a></li>'.format(escape(t), t) for t in keyz]
+	# f = open(outputdir+'/person/index.html', 'w')
+	for letter in letters:
+		# CX = sum([len(ts[t]) for t in ts.keys()])
+		# ul = '<ul class="mul">' + '\n'.join(indices[letter]) + '</ul>'
+		f = open('{}/person/index.html'.format(outputdir), 'w')
+		f.write(peoplistHTML.format(\
+			title='All {}* contributors'.format(letter.upper()),
+			listname='{} people known'.format(len(indices[letter])),
+			ul='<ul class="tri mul">' + '\n'.join(indices[letter]) + '</ul>'\
+		))
+		f.close()
 	# CX = sum([len(ts[t]) for t in ts.keys()])
+	# ul = '<ul class="mul">' + '\n'.join(indices[letter]) + '</ul>'
+	# links = ['<li><a href="index-{}.html">{}</a></li>'.format(letter, letter.upper()) for letter in letters]
+	links = \
+	['<div class="abc" style="background:#{col}"><a href="index-{low}.html">{up}</a></div>'.format(\
+		col=genColour(letter),
+		low=letter,
+		up=letter.upper()) for letter in letters]
+	f = open('{}/person/index.html'.format(outputdir), 'w')
 	f.write(peoplistHTML.format(\
 		title='All contributors',
 		listname='{} people known'.format(len(ps)),
-		ul=ul))
+		ul='\n'.join(links)
+	))
 	f.close()
 	print('People index:', C.blue('created'))
 	print('{}\nDone with {} venues, {} papers, {} tags.'.format(\

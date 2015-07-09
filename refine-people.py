@@ -86,13 +86,15 @@ if __name__ == "__main__":
 			if 'roles' not in people[jdx].keys():
 				people[jdx]['roles'] = []
 			# excessive!
-			people[jdx]['roles'].append([line[0], line[1], line[5]])
+			if [line[0], line[1], line[5]] not in people[jdx]['roles']:
+				people[jdx]['roles'].append([line[0], line[1], line[5]])
 	print('\t{} people properly specified,\n\t{} people contributed to the corpus'.format(\
 		C.red(len(people)),
 		C.red(len(names))))
 	for p in people:
 		if p['FILE']:
 			f = open(p['FILE'], 'w')
+			del p['FILE']
 			f.write(jsonify(p))
 			f.close()
 		else:
