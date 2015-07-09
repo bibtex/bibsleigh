@@ -3,22 +3,30 @@
 #
 # a module for exporting LRJs to the HTML frontpages
 
-import Fancy, AST, Templates, sys, os, glob, json
-sys.path.append(os.getcwd()+'/../beauty')
-from NLP import superbaretext, baretext, trash
-from JSON import parseJSON
-from LP import listify
+import os.path, json, glob
+from fancy.ANSI import C
+from fancy.Languages import ISONames
+from fancy.Templates import personHTML, peoplistHTML
+from lib.AST import Sleigh, escape
+# from lib.JSON import parseJSON
+# from lib.LP import listify
+# from lib.NLP import baretext, superbaretext, trash
+
+# import Fancy, AST, Templates, sys, os, glob, json
+# sys.path.append(os.getcwd()+'/../beauty')
+# from NLP import superbaretext, baretext, trash
+# from JSON import parseJSON
+# from LP import listify
 
 ienputdir = '../json'
 outputdir = '../frontend'
-sleigh = AST.Sleigh(ienputdir + '/corpus')
-C = Fancy.colours()
+sleigh = Sleigh(ienputdir + '/corpus')
 
-def makeimg(fn, alt, w=''):
+def makeimg(ifn, alt, w=''):
 	if w:
-		return '<img src="../stuff/{}.png" alt="{}" width="{}px"/>'.format(fn, alt, w)
+		return '<img src="../stuff/{}.png" alt="{}" width="{}px"/>'.format(ifn, alt, w)
 	else:
-		return '<img src="../stuff/{}.png" alt="{}"/>'.format(fn, alt)
+		return '<img src="../stuff/{}.png" alt="{}"/>'.format(ifn, alt)
 
 def dict2links(d):
 	rs = []
@@ -28,29 +36,29 @@ def dict2links(d):
 		v = d[k]
 		if k == 'g':
 			rs.append(\
-				(makeimg('ico-g', 'Google'),
-				'<a href="https://www.google.com/search?q={}">{}</a>'.format(AST.escape(v), v)))
+				(makeimg('ico-g', 'Google'),\
+				'<a href="https://www.google.com/search?q={}">{}</a>'.format(escape(v), v)))
 		elif k.endswith('.wp'):
 			lang = k.split('.')[0]
-			# TODO: make a dictionary of language names
-			ico = makeimg('ico-wp', 'Wikipedia') + makeimg('ico-'+lang, 'Language')
+			# Using ISO 639-1 language names
+			ico = makeimg('ico-wp', 'Wikipedia') + makeimg('ico-'+lang, ISONames[lang])
 			lang = k.split('.')[0]
 			r = '<a href="https://{}.wikipedia.org/wiki/{}">{}</a>'.format(\
 				lang, \
-				AST.escape(v).replace('%20', '_'), \
+				escape(v).replace('%20', '_'), \
 				v)
-			rs.append((ico,r))
+			rs.append((ico, r))
 		elif k == 'wd':
 			rs.append(\
-				(makeimg('ico-wd', 'Wikidata'),
+				(makeimg('ico-wd', 'Wikidata'),\
 				'<a href="https://www.wikidata.org/wiki/{0}">{0}</a>'.format(v)))
 		elif k == 'dblp':
 			# http://dblp.uni-trier.de/pers/hd/m/Major:Elaine
 			rs.append(\
-				(makeimg('ico-dblp', 'DBLP'),
+				(makeimg('ico-dblp', 'DBLP'),\
 				'<a href="http://dblp.uni-trier.de/pers/hd/{}/{}">DBLP: {}</a>'.format(\
 				v[0].lower(),
-				AST.escape(v),
+				escape(v),
 				v)))
 		elif k == 'www':
 			if not v.startswith('http'):
@@ -66,7 +74,6 @@ def dict2links(d):
 			for role in v:
 				if os.path.exists(outputdir + '/stuff/' + role[0].lower() + '.png'):
 					ico = makeimg(role[0].lower(), role[0], 30)
-					# r = '<img src="../stuff/{l}.png" alt="{u}" width="30px"> '.format(l=role[0].lower(), u=role[0])
 				else:
 					ico = ''
 				if os.path.exists(outputdir + '/' + role[0] + '-' + role[1] + '.html'):
@@ -77,11 +84,11 @@ def dict2links(d):
 		else:
 			rs.append(('', '{}: {}'.format(k, v)))
 	# print(rs)
-	return '\n'.join(['<h3>{} {}</h3>'.format(r[0],r[1]) for r in rs])
+	return '\n'.join(['<h3>{} {}</h3>'.format(r[0], r[1]) for r in rs])
 
-def myparsejson(fn):
-	j = json.load(open(fn, 'r'))
-	j['FILE'] = fn
+def myparsejson(jfn):
+	j = json.load(open(jfn, 'r'))
+	j['FILE'] = jfn
 	return j
 
 if __name__ == "__main__":
@@ -136,10 +143,10 @@ if __name__ == "__main__":
 		# links = '\n'.join(links)
 		links = dict2links(persondef)
 
-		f.write(Templates.personHTML.format(
+		f.write(personHTML.format(\
 			title=k,
 			gender=gender,
-			eperson=AST.escape(k),
+			eperson=escape(k),
 			person=k.replace('_', ' '),
 			# boxlinks=links
 			above=links,
@@ -152,10 +159,10 @@ if __name__ == "__main__":
 	# keyz = [k for k in ps.keys() if len(ts[k]) > 2]
 	# keyz = sorted(keyz, key=lambda t:len(ts[t]), reverse=True)
 	keyz = ps#sorted(ps.keys())
-	lst = ['<li><a href="{}.html">{}</a></li>'.format(AST.escape(t), t) for t in keyz]
+	lst = ['<li><a href="{}.html">{}</a></li>'.format(escape(t), t) for t in keyz]
 	ul = '<ul class="mul">' + '\n'.join(lst) + '</ul>'
 	# CX = sum([len(ts[t]) for t in ts.keys()])
-	f.write(Templates.peoplistHTML.format(
+	f.write(peoplistHTML.format(\
 		title='All contributors',
 		listname='{} people known'.format(len(ps)),
 		ul=ul))

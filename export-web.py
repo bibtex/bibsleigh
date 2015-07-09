@@ -3,13 +3,12 @@
 #
 # a module for exporting LRJs to the HTML frontpages
 
-import Fancy, AST, Templates, sys, os
-sys.path.append(os.getcwd()+'/../beauty')
+from fancy.ANSI import C
+from lib.AST import Sleigh
 
 ienputdir = '../json'
 outputdir = '../frontend'
-sleigh = AST.Sleigh(ienputdir + '/corpus')
-C = Fancy.colours()
+sleigh = Sleigh(ienputdir + '/corpus')
 
 if __name__ == "__main__":
 	print('{}: {} venues, {} papers\n{}'.format(\

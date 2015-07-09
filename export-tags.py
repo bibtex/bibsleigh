@@ -3,16 +3,17 @@
 #
 # a module for exporting LRJs to the HTML frontpages
 
-import Fancy, AST, Templates, sys, os
-sys.path.append(os.getcwd()+'/../beauty')
-from NLP import superbaretext, baretext, trash
-from JSON import parseJSON
-from LP import listify
+from fancy.ANSI import C
+from fancy.Languages import ISONames
+from fancy.Templates import taglistHTML, tagHTML
+from lib.AST import Sleigh, escape
+from lib.JSON import parseJSON
+from lib.LP import listify
+from lib.NLP import baretext, superbaretext, trash
 
 ienputdir = '../json'
 outputdir = '../frontend'
-sleigh = AST.Sleigh(ienputdir + '/corpus')
-C = Fancy.colours()
+sleigh = Sleigh(ienputdir + '/corpus')
 
 def makeimg(fn, alt):
 	return '<img src="../stuff/ico-{}.png" alt="{}"/>'.format(fn, alt)
@@ -20,31 +21,31 @@ def makeimg(fn, alt):
 def kv2link(k, v):
 	if k == 'g':
 		ico = makeimg('g', 'Google')
-		r = '<a href="https://www.google.com/search?q={}">{}</a>'.format(AST.escape(v), v)
+		r = '<a href="https://www.google.com/search?q={}">{}</a>'.format(escape(v), v)
 	elif k.endswith('.wp'):
 		lang = k.split('.')[0]
-		# TODO: make a dictionary of language names
-		ico = makeimg('wp', 'Wikipedia') + makeimg(lang, 'Language')
+		# Using ISO 639-1 language names
+		ico = makeimg('wp', 'Wikipedia') + makeimg(lang, ISONames[lang])
 		lang = k.split('.')[0]
 		r = '<a href="https://{}.wikipedia.org/wiki/{}">{}</a>'.format(\
 			lang, \
-			AST.escape(v).replace('%20', '_'), \
+			escape(v).replace('%20', '_'), \
 			v)
 	elif k.endswith('.wb'):
 		lang = k.split('.')[0]
-		# TODO: make a dictionary of language names
-		ico = makeimg('wb', 'Wikibooks') + makeimg(lang, 'Language')
+		# Using ISO 639-1 language names
+		ico = makeimg('wb', 'Wikibooks') + makeimg(lang, ISONames[lang])
 		lang = k.split('.')[0]
 		r = '<a href="https://{}.wikibooks.org/wiki/{}">{}</a>'.format(\
 			lang, \
-			AST.escape(v).replace('%20', '_'), \
+			escape(v).replace('%20', '_'), \
 			v)
 	elif k == 'wd':
 		ico = makeimg('wd', 'Wikidata')
 		r = '<a href="https://www.wikidata.org/wiki/{0}">{0}</a>'.format(v)
 	elif k == 'hwiki':
 		ico = makeimg('h', 'Haskell Wiki')
-		r = '<a href="https://wiki.haskell.org/{}">{}</a>'.format(AST.escape(v), v)
+		r = '<a href="https://wiki.haskell.org/{}">{}</a>'.format(escape(v), v)
 	elif k == 'so':
 		ico = makeimg('so', 'Stack Overflow')
 		r = '<a href="http://stackoverflow.com/questions/tagged?tagnames={0}">{0}</a>'.format(v)
@@ -86,9 +87,9 @@ if __name__ == "__main__":
 		if 'g' not in tagdef.keys():
 			links.append(kv2link('g', tagdef['namefull'] if 'namefull' in tagdef.keys() else k))
 		links.extend([kv2link(jk, tagdef[jk]) for jk in tagdef.keys()\
-				if not jk.isupper()
-				and not jk.startswith('match')
-				and not jk.startswith('name')
+				if not jk.isupper() \
+				and not jk.startswith('match') \
+				and not jk.startswith('name') \
 				and jk != 'relieves'])
 		title = tagdef['namefull'] if 'namefull' in tagdef.keys() else tagdef['name']
 		subt = ('<br/><em>'+tagdef['namelong']+'</em>') if 'namelong' in tagdef.keys() else ''
@@ -97,9 +98,9 @@ if __name__ == "__main__":
 		dl = '<dl><dt>All venues</dt><dd><dl class="toc">' + '\n'.join(sorted(lst)) + '</dl></dd></dl>'
 		# hack to get from tags to papers
 		dl = dl.replace('href="', 'href="../')
-		f.write(Templates.tagHTML.format(
+		f.write(tagHTML.format(\
 			title=k+' tag',
-			etag=AST.escape(k),
+			etag=escape(k),
 			tag=k,
 			above='',
 			boxlinks=links,
@@ -110,11 +111,11 @@ if __name__ == "__main__":
 	# tag index
 	f = open(outputdir+'/tag/index.html', 'w')
 	keyz = [k for k in ts.keys() if len(ts[k]) > 2]
-	keyz = sorted(keyz, key=lambda t:len(ts[t]), reverse=True)
-	lst = ['<li><a href="{}.html">{}</a> ({})</li>'.format(AST.escape(t), t, len(ts[t])) for t in keyz]
+	keyz = sorted(keyz, key=lambda t: len(ts[t]), reverse=True)
+	lst = ['<li><a href="{}.html">{}</a> ({})</li>'.format(escape(t), t, len(ts[t])) for t in keyz]
 	ul = '<ul class="tri mul">' + '\n'.join(lst) + '</ul>'
 	CX = sum([len(ts[t]) for t in ts.keys()])
-	f.write(Templates.taglistHTML.format(
+	f.write(taglistHTML.format(\
 		title='All known tags',
 		listname='{} tags known from {} markings'.format(len(ts.keys()), CX),
 		ul=ul))
@@ -141,12 +142,12 @@ if __name__ == "__main__":
 					else:
 						bow[w] = 1
 	print('Tag candidates:', C.blue('found'))
-	bag='\n'
+	bag = '\n'
 	for w in bow.keys():
 		if bow[w] > 40:
 			bag += '<span style="border:1px solid black;margin:5px">{}</span> ({}) '.format(w, bow[w])
 	dl += '</dl>'
-	f.write(Templates.tagHTML.format(
+	f.write(tagHTML.format(\
 		title='All untagged papers',
 		tag='untagged',
 		etag='untagged', # TODO: figure out a way to remove the edit link from here
