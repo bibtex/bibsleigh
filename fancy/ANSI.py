@@ -2,8 +2,11 @@
 # -*- coding: utf-8 -*-
 #
 # a module for colourful console output
-# 
+#
 # The pun in “from ANSI import C” is intended.
+
+def colour(c, s):
+	return '{}{}{}'.format(c, s, '\033[0m')
 
 class colours:
 	def __init__(self):
@@ -17,18 +20,18 @@ class colours:
 	BLUE = '\033[94m'
 	PURPLE = '\033[95m'
 	def bold(self, s):
-		return '{}{}{}'.format(self.BOLD, s, self.ENDC)
+		return colour(self.BOLD, s)
 	def uline(self, s):
-		return '{}{}{}'.format(self.ULINE, s, self.ENDC)
+		return colour(self.ULINE, s)
 	def red(self, s):
-		return '{}{}{}'.format(self.RED, s, self.ENDC)
+		return colour(self.RED, s)
 	def green(self, s):
-		return '{}{}{}'.format(self.GREEN, s, self.ENDC)
+		return colour(self.GREEN, s)
 	def yellow(self, s):
-		return '{}{}{}'.format(self.YELLOW, s, self.ENDC)
+		return colour(self.YELLOW, s)
 	def blue(self, s):
-		return '{}{}{}'.format(self.BLUE, s, self.ENDC)
+		return colour(self.BLUE, s)
 	def purple(self, s):
-		return '{}{}{}'.format(self.PURPLE, s, self.ENDC)
+		return colour(self.PURPLE, s)
 
 C = colours()

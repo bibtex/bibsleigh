@@ -4,13 +4,13 @@
 # a module for cleaning up links
 
 import sys, os, os.path
-sys.path.append(os.getcwd()+'/../engine')
-import Fancy, AST
-from NLP import strictstrip
+from fancy.ANSI import C
+from lib.AST import Sleigh
+from lib.NLP import strictstrip
+from lib.LP import listify
 
 ienputdir = '../json'
-sleigh = AST.Sleigh(ienputdir + '/corpus')
-C = Fancy.colours()
+sleigh = Sleigh(ienputdir + '/corpus')
 verbose = False
 
 def checkon(fn, o):
@@ -23,7 +23,7 @@ def checkon(fn, o):
 	plines = sorted([strictstrip(s) for s in o.getJSON().split('\n')[1:-1]])
 	# "url" from DBLP are useless
 	if 'url' in o.json.keys():
-		o.json['url'] = [link for link in AST.listify(o.json['url'])\
+		o.json['url'] = [link for link in listify(o.json['url'])\
 		 				if not link.startswith('db/conf/')\
 						and not link.startswith('db/journals/')]
 		if not o.json['url']:
@@ -46,6 +46,9 @@ def checkon(fn, o):
 			o.json['acmid'] = o.json['ee'][38:]
 		elif verbose:
 			print(C.yellow('Opportunity:'), o.json['ee'])
+	if 'eventuri' in o.json.keys():
+		o.json['eventurl'] = o.json['eventuri']
+		del o.json['eventuri']
 	nlines = sorted([strictstrip(s) for s in o.getJSON().split('\n')[1:-1]])
 	if flines != plines:
 		return 1

@@ -3,33 +3,31 @@
 #
 # a module for retagging LRJs in the adjacent repository
 
-import sys, os, re
-sys.path.append(os.getcwd()+'/../engine')
-import Fancy, AST, os.path, glob
-from JSON import parseJSON
-from LP import listify, uniq
-from NLP import strictstrip, baretext, superbaretext
+import sys, os.path, re, glob
+from fancy.ANSI import C
+from lib.AST import Sleigh
+from lib.JSON import parseJSON
+from lib.LP import listify, uniq
+from lib.NLP import strictstrip, baretext, superbaretext
 
 ienputdir = '../json'
-sleigh = AST.Sleigh(ienputdir + '/corpus')
-C = Fancy.colours()
+sleigh = Sleigh(ienputdir + '/corpus')
 verbose = False
 tags = []
 relieved = {}
 
-matchModes = {
-'matchsensitive': lambda s,mcs,mes,mew,mis,miw:mcs.find(s) > -1,
-'matchword':      lambda s,mcs,mes,mew,mis,miw:s in miw,
-'matchwordexact': lambda s,mcs,mes,mew,mis,miw:s in mew,
-'matchsub':       lambda s,mcs,mes,mew,mis,miw:mis.find(s) > -1,
-'matchsubexact':  lambda s,mcs,mes,mew,mis,miw:mes.find(s) > -1,
-'matchstart':     lambda s,mcs,mes,mew,mis,miw:mes.startswith(s),
-'matchend':       lambda s,mcs,mes,mew,mis,miw:mes.endswith(s),
-'matchre':        lambda s,mcs,mes,mew,mis,miw:re.match('^'+s+'$', mes)
+matchModes = {\
+'matchsensitive': lambda s, mcs, mes, mew, mis, miw: mcs.find(s) > -1,
+'matchword':      lambda s, mcs, mes, mew, mis, miw: s in miw,
+'matchwordexact': lambda s, mcs, mes, mew, mis, miw: s in mew,
+'matchsub':       lambda s, mcs, mes, mew, mis, miw: mis.find(s) > -1,
+'matchsubexact':  lambda s, mcs, mes, mew, mis, miw: mes.find(s) > -1,
+'matchstart':     lambda s, mcs, mes, mew, mis, miw: mes.startswith(s),
+'matchend':       lambda s, mcs, mes, mew, mis, miw: mes.endswith(s),
+'matchre':        lambda s, mcs, mes, mew, mis, miw: re.match('^'+s+'$', mes)\
 }
 
 def checkon(fn, o):
-	global matchModes
 	if os.path.isdir(fn):
 		fn = fn + '.json'
 	f = open(fn, 'r')
@@ -59,7 +57,7 @@ def checkon(fn, o):
 			continue
 		for k in t.keys():
 			if k.startswith('match'):
-				ts += [t['name'] for s in listify(t[k]) if matchModes[k](s,mcs,mes,mew,mis,miw)]
+				ts += [t['name'] for s in listify(t[k]) if matchModes[k](s, mcs, mes, mew, mis, miw)]
 	# second pass: check reliefs
 	for t in tags:
 		if 'relieves' in t.keys():

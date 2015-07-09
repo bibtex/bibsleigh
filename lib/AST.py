@@ -60,7 +60,7 @@ class Unser(object):
 				else:
 					s += '\t{0:<10} = "{{<span id="{0}">{1}</span>}}",\n'.format(k, self.json[k])
 			elif k in ('crossref', 'key', 'type', 'venue', 'twitter', \
-				'eventtitle', 'eventuri', 'nondblpkey', 'dblpkey', 'dblpurl', \
+				'eventtitle', 'eventurl', 'nondblpkey', 'dblpkey', 'dblpurl', \
 				'programchair', 'generalchair'):
 				# TODO: ban 'ee' as well
 				pass
@@ -273,11 +273,11 @@ class Venue(Unser):
 				abbr=ABBR.lower(),\
 				title=title)
 	def getPage(self):
-		if 'eventuri' in self.json.keys():
+		if 'eventurl' in self.json.keys():
 			if 'twitter' in self.json.keys():
-				ev = '<h3>Event series page: <a href="{uri}">{uri}</a> (<a href="https://twitter.com/{twi}">@{twi}</a>)</h3>'.format(uri=self.json['eventuri'], twi=self.json['twitter'])
+				ev = '<h3>Event series page: <a href="{uri}">{uri}</a> (<a href="https://twitter.com/{twi}">@{twi}</a>)</h3>'.format(uri=self.json['eventurl'], twi=self.json['twitter'])
 			else:
-				ev = '<h3>Event series page: <a href="{uri}">{uri}</a></h3>'.format(uri=self.json['eventuri'])
+				ev = '<h3>Event series page: <a href="{uri}">{uri}</a></h3>'.format(uri=self.json['eventurl'])
 		else:
 			ev = ''
 		ABBR = self.get('name')
@@ -388,11 +388,11 @@ class Conf(Unser):
 	def getItem(self):
 		return '<dd><a href="{}.html">{}</a> ({})</dd>'.format(self.get('name'), self.get('title'), self.getEventTitle())
 	def getPage(self):
-		if 'eventuri' in self.json.keys():
+		if 'eventurl' in self.json.keys():
 			if 'twitter' in self.json.keys():
-				ev = '<h3>Event page: <a href="{uri}">{uri}</a> (<a href="https://twitter.com/{twi}">@{twi}</a>)</h3>'.format(uri=self.json['eventuri'], twi=self.json['twitter'])
+				ev = '<h3>Event page: <a href="{uri}">{uri}</a> (<a href="https://twitter.com/{twi}">@{twi}</a>)</h3>'.format(uri=self.json['eventurl'], twi=self.json['twitter'])
 			else:
-				ev = '<h3>Event page: <a href="{uri}">{uri}</a></h3>'.format(uri=self.json['eventuri'])
+				ev = '<h3>Event page: <a href="{uri}">{uri}</a></h3>'.format(uri=self.json['eventurl'])
 		else:
 			ev = ''
 		if 'generalchair' in self.json.keys() or 'programchair' in self.json.keys():
