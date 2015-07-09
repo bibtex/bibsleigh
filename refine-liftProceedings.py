@@ -3,14 +3,13 @@
 #
 # a module for lifting information common within papers from the same venue, to the venue itself
 
-import sys, os
-sys.path.append(os.getcwd()+'/../engine')
-import Fancy, AST, os.path
-from NLP import heurichoose
+import sys, os.path
+from fancy.ANSI import C
+from lib.AST import Sleigh
+from lib.NLP import heurichoose
 
 ienputdir = '../json'
-sleigh = AST.Sleigh(ienputdir + '/corpus')
-C = Fancy.colours()
+sleigh = Sleigh(ienputdir + '/corpus')
 verbose = False
 
 def checkon(m, o):
@@ -89,8 +88,8 @@ if __name__ == "__main__":
 		C.red(sleigh.numOfPapers()),
 		C.purple('='*42)))
 	cx = {0: 0, 1: 0, 2: 0}
-	for v in sleigh.venues:
-		for c in v.getConfs():
+	for vv in sleigh.venues:
+		for c in vv.getConfs():
 			model = {'GO': 1}
 			for p in c.papers:
 				model = updatemodel(model, p)

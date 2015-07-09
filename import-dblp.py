@@ -6,7 +6,7 @@
 import sys, time, socket, os, os.path, random
 import bs4
 from urllib.request import urlopen
-from JSON import jsonify, jsonkv
+from lib.JSON import jsonkv
 
 def xml2json(x):
 	jsonmap = {}
@@ -82,5 +82,5 @@ if __name__ == "__main__":
 		g = open(lname, 'w')
 		g.write(xml2json(xml))
 		g.close()
-		print('\t\t->',lname)
+		print('\t\t->', lname)
 	print('Imported {} papers.'.format(ps))

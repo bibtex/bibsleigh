@@ -3,14 +3,18 @@
 #
 # a module for pushing the title of a proceedings to booktitles of its papers
 
-import sys, os
-sys.path.append(os.getcwd()+'/../engine')
-import Fancy, AST, os.path
-from NLP import strictstrip
+# import sys, os
+# sys.path.append(os.getcwd()+'/../engine')
+# import Fancy, AST, os.path
+# from NLP import strictstrip
+
+import sys, os.path
+from fancy.ANSI import C
+from lib.AST import Sleigh
+from lib.NLP import strictstrip
 
 ienputdir = '../json'
-sleigh = AST.Sleigh(ienputdir + '/corpus')
-C = Fancy.colours()
+sleigh = Sleigh(ienputdir + '/corpus')
 verbose = False
 d2r = k2r = v2o = ''
 
@@ -29,10 +33,10 @@ def checkon(fn, o):
 			return 0
 	else:
 		return 0
-	f = open(fn, 'r')
-	lines = f.readlines()[1:-1]
-	f.close()
-	flines = [strictstrip(s) for s in lines]
+	# f = open(fn, 'r')
+	# lines = f.readlines()[1:-1]
+	# f.close()
+	# flines = [strictstrip(s) for s in lines]
 	plines = sorted([strictstrip(s) for s in o.getJSON().split('\n')[1:-1]])
 	if k2r in o.json.keys():
 		o.json[k2r] = v2o

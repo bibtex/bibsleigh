@@ -3,23 +3,18 @@
 #
 # a module for lowering the value for venue from a conference to all its papers
 
-import sys, os
-sys.path.append(os.getcwd()+'/../engine')
-import Fancy, AST, os.path
-from NLP import strictstrip
+import sys, os.path
+from fancy.ANSI import C
+from lib.AST import Sleigh
+from lib.NLP import strictstrip
 
 ienputdir = '../json'
-sleigh = AST.Sleigh(ienputdir + '/corpus')
-C = Fancy.colours()
+sleigh = Sleigh(ienputdir + '/corpus')
 verbose = False
 
 def checkon(fn, o):
 	if not os.path.exists(fn) or os.path.isdir(fn):
 		fn = fn + '.json'
-	f = open(fn, 'r')
-	lines = f.readlines()[1:-1]
-	f.close()
-	flines = [strictstrip(s) for s in lines]
 	if 'venue' not in o.json.keys():
 		if 'venue' in o.up().json.keys():
 			o.json['venue'] = o.up().json['venue']
