@@ -3,23 +3,22 @@
 #
 # a module for normalising values: numbers become proper integers, quotes — proper fancy ones, etc
 
-import sys, os
-sys.path.append(os.getcwd()+'/../engine')
-import Fancy, AST, os.path
-from NLP import nrs, strictstrip
+import sys, os.path
+from lib.AST import Sleigh
+from fancy.ANSI import C
+from lib.NLP import nrs, strictstrip
 
 ienputdir = '../json'
-sleigh = AST.Sleigh(ienputdir + '/corpus')
-C = Fancy.colours()
+sleigh = Sleigh(ienputdir + '/corpus')
 verbose = False
 
 def checkon(fn, o):
 	if not os.path.exists(fn) or os.path.isdir(fn):
 		fn = fn + '.json'
 	f = open(fn, 'r')
-	lines = f.readlines()[1:-1]
+	# lines = f.readlines()[1:-1]
 	f.close()
-	flines = [strictstrip(s) for s in lines]
+	# flines = [strictstrip(s) for s in lines]
 	plines = sorted([strictstrip(s) for s in o.getJSON().split('\n')[1:-1]])
 	for k in o.json.keys():
 		if (o.json['type'] == 'proceedings' and k == 'title') or\

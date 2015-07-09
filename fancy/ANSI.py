@@ -2,6 +2,8 @@
 # -*- coding: utf-8 -*-
 #
 # a module for colourful console output
+# 
+# The pun in “from ANSI import C” is intended.
 
 class colours:
 	def __init__(self):
@@ -28,3 +30,5 @@ class colours:
 		return '{}{}{}'.format(self.BLUE, s, self.ENDC)
 	def purple(self, s):
 		return '{}{}{}'.format(self.PURPLE, s, self.ENDC)
+
+C = colours()

@@ -4,14 +4,13 @@
 # a module for simply traversing all the LRJs and reading them in
 # if you run this and it fails, you’re in big trouble
 
-import sys, os
-sys.path.append(os.getcwd()+'/../engine')
-import Fancy, AST, os.path
-from NLP import strictstrip
+import sys, os.path
+from lib.AST import Sleigh
+from lib.NLP import strictstrip
+from fancy.ANSI import C
 
 ienputdir = '../json'
-sleigh = AST.Sleigh(ienputdir + '/corpus')
-C = Fancy.colours()
+sleigh = Sleigh(ienputdir + '/corpus')
 verbose = False
 
 def checkon(fn, o):

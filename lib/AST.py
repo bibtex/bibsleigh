@@ -4,18 +4,18 @@
 # a module with classes forming the abstract syntax of BibSLEIGH
 
 import glob, os.path
-import Templates
-from JSON import jsonkv, parseJSON
-from LP import listify
+from fancy.Templates import uberHTML, confHTML, bibHTML
+from lib.JSON import jsonkv, parseJSON
+from lib.LP import listify
 
 def escape(s):
-	for k,v in ((' ', '%20'), ('+', '%2B'), ('#', '%23')):
-		s = s.replace(k,v)
+	for k, v in ((' ', '%20'), ('+', '%2B'), ('#', '%23')):
+		s = s.replace(k, v)
 	return s
 
 # Sort first by year, then by pages
 def sortbypages(z):
-	p1, p2 = z.getPagesTuple()
+	p1, _ = z.getPagesTuple()
 	y = z.get('year')
 	return (y + p1 / 10000.) if p1 else y
 
@@ -224,7 +224,7 @@ class Sleigh(Unser):
 				continue
 			self.venues.append(Venue(d, idir, self))
 	def getPage(self):
-		return Templates.uberHTML.format(\
+		return uberHTML.format(\
 			len(self.venues),
 			self.numOfPapers(),
 			'\n'.join([v.getItem() for v in self.venues]))
@@ -284,7 +284,7 @@ class Venue(Unser):
 		title = self.get('title')
 		img = ABBR.lower()
 		eds = [y.getItem() for y in sorted(self.years, reverse=True, key=lambda x: x.year)]
-		return Templates.confHTML.format(\
+		return confHTML.format(\
 			filename='{0}/{0}.json'.format(self.getPureName()),\
 			title=ABBR,\
 			img=img,\
@@ -401,7 +401,7 @@ class Conf(Unser):
 			ev += '<h3>Committee: ' + ', '.join(['<a href="person/{}.html">{}</a> ({})'.format(\
 				c.replace(' ', '_'),
 				c,t) for c,t in positions]) + '</h3>'
-		return Templates.bibHTML.format(\
+		return bibHTML.format(\
 			filename=self.getJsonName(),
 			title=self.get('title'),
 			img=self.get('venue').lower(), # geticon?
@@ -481,7 +481,7 @@ class Paper(Unser):
 			cnt += '</ul><hr/>'
 		else:
 			cnt = ''
-		return Templates.bibHTML.format(\
+		return bibHTML.format(\
 			filename=self.getJsonName(),
 			title=self.get('title'),
 			img=self.get('venue').lower(), # geticon?
@@ -499,7 +499,7 @@ class Paper(Unser):
 			return None
 	def getTags(self):
 		if self.tags:
-			myname = self.getHtmlName()
+			# myname = self.getHtmlName()
 			return {k:self for k in self.tags}
 		else:
 			return {}
