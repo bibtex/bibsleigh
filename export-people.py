@@ -147,7 +147,7 @@ if __name__ == "__main__":
 			title=k,
 			gender=gender,
 			eperson=escape(k),
-			person=k.replace('_', ' '),
+			person=persondef['name'],#k.replace('_', ' '),
 			# boxlinks=links
 			above=links,
 			listname='{} papers'.format(0),#len(lst)),

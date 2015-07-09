@@ -3,20 +3,20 @@
 #
 # a module for natural language processing
 
-trash = ('-',
-	'a', 'an', 'and', 'as', 'at',
-	'by',
-	'for', 'from',
-	'how',
-	'in',
-	'of', 'on',
-	's',
-	'the', 'through', 'to', 'towards',
-	'via',
+trash = ('-', \
+	'a', 'an', 'and', 'as', 'at', \
+	'by', \
+	'for', 'from', \
+	'how', \
+	'in', \
+	'of', 'on', \
+	's', \
+	'the', 'through', 'to', 'towards', \
+	'via', \
 	'with')
 
-nrs = {'1st': 'First', '2nd': 'Second', '3rd': 'Third', '4th': 'Fourth',
-'5th': 'Fifth', '6th': 'Sixth', '7th': 'Seventh', '8th': 'Eighth',
+nrs = {'1st': 'First', '2nd': 'Second', '3rd': 'Third', '4th': 'Fourth', \
+'5th': 'Fifth', '6th': 'Sixth', '7th': 'Seventh', '8th': 'Eighth', \
 '9th': 'Ninth', 'Tenth': '10th', 'Eleventh': '11th', 'Twelfth': '12th'}
 
 def strictstrip(s):
