@@ -8,6 +8,7 @@ from fancy.ANSI import C
 from fancy.Languages import ISONames
 from fancy.Templates import personHTML, peoplistHTML
 from lib.AST import Sleigh, escape
+from lib.JSON import parseJSON
 
 # The idea is to generate a colour between FFFDE7 (for 'a') and F57F17 (for 'z')
 # FFFDE7 is Yellow/50 and F57F17 is Yellow/900 in Material Design
@@ -87,11 +88,6 @@ def dict2links(d):
 	# print(rs)
 	return '\n'.join(['<h3>{} {}</h3>'.format(r[0], r[1]) for r in rs])
 
-def myparsejson(jfn):
-	j = json.load(open(jfn, 'r'))
-	j['FILE'] = jfn
-	return j
-
 if __name__ == "__main__":
 	print('{}: {} venues, {} papers\n{}'.format(\
 		C.purple('BibSLEIGH'),
@@ -113,7 +109,7 @@ if __name__ == "__main__":
 		# 	if x not in tagged:
 		# 		tagged.append(x)
 		# read tag definition
-		persondef = myparsejson(fn)
+		persondef = parseJSON(fn)
 		# what to google?
 		# links = []
 		# if 'g' not in persondef.keys():
