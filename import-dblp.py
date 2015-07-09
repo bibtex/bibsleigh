@@ -52,8 +52,9 @@ def safelyLoadURL(url):
 
 if __name__ == "__main__":
 	if len(sys.argv) != 3:
-		print('Usage:\n\tdblp2json.py <URI> <DIR>')
-		print('e.g.: ./dblp2json.py http://dblp.uni-trier.de/db/conf/sigplan/sigplan82.html ../json/corpus/PLDI/1982/SCC-1982')
+		print('Usage:\n\t{} <URI> <DIR>'.format(sys.argv[0]))
+		print(('e.g.: {} http://dblp.uni-trier.de/db/conf/sigplan/sigplan82.html' + \
+			'../json/corpus/PLDI/1982/SCC-1982').format(sys.argv[0]))
 		sys.exit(1)
 	dblp = safelyLoadURL(sys.argv[1])
 	ldir = sys.argv[2]

@@ -3,14 +3,13 @@
 #
 # a module for assigning proper names to papers, venues and journals
 
-import sys, os
-sys.path.append(os.getcwd()+'/../engine')
-import Fancy, AST, os.path
-from NLP import strictstrip
+import sys, os.path
+from fancy.ANSI import C
+from lib.AST import Sleigh
+from lib.NLP import strictstrip
 
 ienputdir = '../json'
-sleigh = AST.Sleigh(ienputdir + '/corpus')
-C = Fancy.colours()
+sleigh = Sleigh(ienputdir + '/corpus')
 verbose = False
 
 def checkon(fn, o):
@@ -35,6 +34,8 @@ def checkon(fn, o):
 		o.json['seriesshort'] = 'LNCS'
 	if o.get('journal') == 'Electronic Notes in Theoretical Computer Science':
 		o.json['journalshort'] = 'ENTCS'
+	if o.get('publisher') == 'Schloss Dagstuhl - Leibniz-Zentrum fuer Informatik':
+		o.json['publishershort'] = 'Dagstuhl'
 	nlines = sorted([strictstrip(s) for s in o.getJSON().split('\n')[1:-1]])
 	if flines != plines:
 		return 1
