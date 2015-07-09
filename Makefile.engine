@@ -8,6 +8,7 @@ web:
 	time ./html-export.py
 
 all:
+<<<<<<< HEAD:Makefile.engine
 	make bun
 	make web
 	make tag
@@ -20,7 +21,8 @@ run:
 
 prep: dblp.xml
 	./deentitify dblp.xml
+=======
+>>>>>>> ad6f0009366d1407e7ce92739038757404781f29:Makefile
 
 clean:
-	rm -rf html
-	mkdir html
+	rm -rf __pychache__
