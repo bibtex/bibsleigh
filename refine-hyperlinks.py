@@ -46,6 +46,9 @@ def checkon(fn, o):
 			o.json['acmid'] = o.json['ee'][38:]
 		elif verbose:
 			print(C.yellow('Opportunity:'), o.json['ee'])
+		# post-processing normalisation
+		if 'acmid' in o.json.keys() and o.json['acmid'].isdigit():
+			o.json['acmid'] = int(o.json['acmid'])
 	if 'eventuri' in o.json.keys():
 		o.json['eventurl'] = o.json['eventuri']
 		del o.json['eventuri']

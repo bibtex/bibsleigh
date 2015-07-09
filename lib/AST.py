@@ -170,7 +170,8 @@ class Unser(object):
 		if self.tags:
 			self.json['tag'] = self.tags
 		goodkeys = sorted(self.json.keys())
-		goodkeys.remove('FILE')
+		if 'FILE' in goodkeys:
+			goodkeys.remove('FILE')
 		s = '{\n\t' + ',\n\t'.join([jsonkv(k, self.json[k]) for k in goodkeys]) + '\n}'
 		if 'tag' in goodkeys:
 			del self.json['tag']

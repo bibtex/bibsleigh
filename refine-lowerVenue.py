@@ -6,7 +6,8 @@
 import sys, os.path
 from fancy.ANSI import C
 from lib.AST import Sleigh
-from lib.NLP import strictstrip
+# from lib.NLP import strictstrip
+# from lib.JSON import jsonify
 
 ienputdir = '../json'
 sleigh = Sleigh(ienputdir + '/corpus')
@@ -18,12 +19,16 @@ def checkon(fn, o):
 	if 'venue' not in o.json.keys():
 		if 'venue' in o.up().json.keys():
 			o.json['venue'] = o.up().json['venue']
-			plines = sorted([strictstrip(s) for s in o.getJSON().split('\n')[1:-1]])
+			if 'FILE' in o.json.keys():
+				del o.json['FILE']
 			f = open(fn, 'w')
-			f.write('{\n')
-			for line in plines:
-				f.write('\t'+line+'\n')
-			f.write('}')
+			f.write(o.getJSON())
+			# plines = sorted([strictstrip(s) for s in o.getJSON().split('\n')[1:-1]])
+			# f = open(fn, 'w')
+			# f.write('{\n')
+			# for line in plines:
+			# 	f.write('\t'+line+'\n')
+			# f.write('}')
 			f.close()
 			return 2
 		else:

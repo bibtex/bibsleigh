@@ -1,6 +1,7 @@
 #!/usr/local/bin/python3
 
 import json
+from fancy.ANSI import C
 
 def jsonify(s):
 	if isinstance(s, int):
@@ -24,6 +25,10 @@ def jsonkv(k, v):
 
 def parseJSON(fn):
 	# print('Parsing',fn,'...')
-	j = json.load(open(fn, 'r'))
-	j['FILE'] = fn
-	return j
+	try:
+		j = json.load(open(fn, 'r'))
+		j['FILE'] = fn
+		return j
+	except ValueError:
+		print(C.red('JSON parse error'), 'on', fn)
+		return {}

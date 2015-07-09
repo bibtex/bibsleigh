@@ -34,14 +34,14 @@ editLink = '<br/>\n<a href="{edit}"><img src="stuff/edit.png" alt="EDIT!" title=
 editCorpus = 'https://github.com/slebok/bibsleigh/edit/master/corpus/{filename}'
 editTag = 'https://github.com/slebok/bibsleigh/edit/master/tags/{etag}.json'
 editBundle = 'https://github.com/slebok/bibsleigh/edit/master/bundles/{ebundle}.json'
-editPerson = 'https://github.com/slebok/bibsleigh/edit/master/people/{eperson}.json'
+editPerson = 'https://github.com/slebok/bibsleigh/edit/master/person/{eperson}.json'
 
 leftLinksT = '''
 	<div class="pad">
 		<a href="index.html"><img src="stuff/{statusC}-corpus.png" alt="BibSLEIGH corpus" title="All papers in the corpus"/></a><br/>
 		<a href="tag/index.html"><img src="stuff/{statusT}-tags.png" alt="BibSLEIGH tags" title="All known tags"/></a><br/>
 		<a href="bundle/index.html"><img src="stuff/{statusB}-bundles.png" alt="BibSLEIGH bundles" title="All selected bundles"/></a><br/>
-		<a href="people/index.html"><img src="stuff/{statusP}-people.png" alt="BibSLEIGH people" title="All contributors"/></a>{elink}
+		<a href="person/index.html"><img src="stuff/{statusP}-people.png" alt="BibSLEIGH people" title="All contributors"/></a>{elink}
 	</div>
 	<a href="http://creativecommons.org/licenses/by/4.0/" title="CC-BY"><img src="stuff/cc-by.png" alt="CC-BY"/></a><br/>
 	<a href="http://opendatacommons.org/licenses/by/summary/" title="Open Knowledge"><img src="stuff/open-knowledge.png" alt="Open Knowledge" /></a><br/>

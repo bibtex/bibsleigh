@@ -28,12 +28,16 @@ def checkon(fn, o):
 	if o.get('series') == 'LNCS':
 		o.json['series'] = 'Lecture Notes in Computer Science'
 	# short names
+	if o.get('journal') == 'Computer Languages, Systems & Structures':
+		o.json['journalshort'] = 'ComLan'
 	if o.get('journal') == 'Science of Computer Programming':
 		o.json['journalshort'] = 'SCP'
-	if o.get('series') == 'Lecture Notes in Computer Science':
-		o.json['seriesshort'] = 'LNCS'
+	if o.get('journal') == 'Theoretical Computer Science':
+		o.json['journalshort'] = 'TCS'
 	if o.get('journal') == 'Electronic Notes in Theoretical Computer Science':
 		o.json['journalshort'] = 'ENTCS'
+	if o.get('series') == 'Lecture Notes in Computer Science':
+		o.json['seriesshort'] = 'LNCS'
 	if o.get('publisher') == 'Schloss Dagstuhl - Leibniz-Zentrum fuer Informatik':
 		o.json['publishershort'] = 'Dagstuhl'
 	nlines = sorted([strictstrip(s) for s in o.getJSON().split('\n')[1:-1]])

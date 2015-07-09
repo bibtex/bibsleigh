@@ -19,9 +19,9 @@ ppl:
 norm:
 	time ./refine-sortJson.py
 	time ./refine-normValues.py
+	time ./refine-lowerVenue.py
 	time ./refine-giveNames.py
 	time ./refine-hyperlinks.py
-	time ./refine-normValues.py
 	time ./refine-retag.py
 
 run:
