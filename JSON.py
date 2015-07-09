@@ -11,6 +11,8 @@ def jsonify(s):
 			return '"{}"'.format(s)
 	elif isinstance(s, list):
 		return '[' + ', '.join([jsonify(x) for x in s]) + ']'
+	elif isinstance(s, dict):
+		return '{\n' + ',\n'.join(['\t"{k}": {v}'.format(k=k, v=jsonify(s[k])) for k in sorted(s.keys())]) + '\n}\n'
 	else:
 		print('Unknown JSON type in', s)
 		return '"{}"'.format(s)

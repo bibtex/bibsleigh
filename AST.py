@@ -60,7 +60,8 @@ class Unser(object):
 				else:
 					s += '\t{0:<10} = "{{<span id="{0}">{1}</span>}}",\n'.format(k, self.json[k])
 			elif k in ('crossref', 'key', 'type', 'venue', 'twitter', \
-				'eventtitle', 'eventuri', 'nondblpkey', 'dblpkey', 'dblpurl'):
+				'eventtitle', 'eventuri', 'nondblpkey', 'dblpkey', 'dblpurl', \
+				'programchair', 'generalchair'):
 				# TODO: ban 'ee' as well
 				pass
 			elif k == 'doi':
@@ -394,6 +395,12 @@ class Conf(Unser):
 				ev = '<h3>Event page: <a href="{uri}">{uri}</a></h3>'.format(uri=self.json['eventuri'])
 		else:
 			ev = ''
+		if 'generalchair' in self.json.keys() or 'programchair' in self.json.keys():
+			positions = [(c, 'General Chair') for c in listify(self.json['generalchair'])] \
+			          + [(c, 'Program Chair') for c in listify(self.json['programchair'])]
+			ev += '<h3>Committee: ' + ', '.join(['<a href="person/{}.html">{}</a> ({})'.format(\
+				c.replace(' ', '_'),
+				c,t) for c,t in positions]) + '</h3>'
 		return Templates.bibHTML.format(\
 			filename=self.getJsonName(),
 			title=self.get('title'),
