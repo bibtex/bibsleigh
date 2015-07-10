@@ -68,7 +68,7 @@ leftLinks('appp', '')+'''
 </div>
 <div class="main">
 <h2>Bibliography of Software Language Engineering in Generated Hypertext (BibSLEIGH)</h2>
-<p>Work in progress! <strong>{}</strong> venues and <strong>{}</strong> papers currently in the database.</p>
+<p>Work in progress! <strong>{}</strong> venues with <strong>{}</strong> papers in <strong>{}</strong> volumes currently in the database.</p>
 {}
 '''+footer
 

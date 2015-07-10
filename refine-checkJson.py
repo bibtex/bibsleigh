@@ -13,12 +13,30 @@ ienputdir = '../json'
 sleigh = Sleigh(ienputdir + '/corpus')
 verbose = False
 
+def findYear(fn):
+	return int(''.join([ch for ch in fn if ch.isdigit()]))
+
 def checkon(fn, o):
 	if not os.path.exists(fn) or os.path.isdir(fn):
 		fn = fn + '.json'
+	if not os.path.exists(fn):
+		# if it still does not exist, let us create a minimal one
+		f = open(fn, 'w')
+		f.write('{{\n\t"title": "{name}",\n\t"type": "proceedings",\n\t"year": {year}\n}}'.format(\
+			name=fn.split('/')[-1][:-5].replace('-', ' '),
+			year=findYear(fn.split('/')[-1])\
+		))
+		f.close()
+		print('[ {} ] {}'.format(C.yellow('MADE'), fn))
+		return 2
 	f = open(fn, 'r')
 	lines = f.readlines()[1:-1]
 	f.close()
+	for line in lines:
+		if line.find('"year"') > -1 and findYear(line) > 3000:
+			os.remove(fn)
+			print('[ {} ] {}'.format(C.red('KILL'), fn))
+			return 1
 	flines = sorted([strictstrip(s) for s in lines])
 	plines = sorted([strictstrip(s) for s in o.getJSON().split('\n')[1:-1]])
 	if flines != plines:
@@ -51,7 +69,8 @@ if __name__ == "__main__":
 			cx[checkreport(c.filename, c)] += 1
 			for p in c.papers:
 				cx[checkreport(p.filename, p)] += 1
-	print('{} files checked, {} ok, {} failed'.format(\
+	print('{} files checked, {} ok, {} created, {} failed'.format(\
 		C.bold(cx[0] + cx[1] + cx[2]),
 		C.blue(cx[0]),
+		C.yellow(cx[2]),
 		C.red(cx[1])))

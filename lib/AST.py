@@ -207,7 +207,10 @@ class Unser(object):
 		else:
 			ps = self.json['pages'].split('-')
 			if ps[0]:
-				p1 = int(ps[0])
+				if ':' in ps[0]:
+					p1 = int(ps[0].split(':')[-1].strip())
+				else:
+					p1 = int(ps[0])
 			else:
 				p1 = None
 			if ps[-1]:
@@ -228,6 +231,7 @@ class Sleigh(Unser):
 		return uberHTML.format(\
 			len(self.venues),
 			self.numOfPapers(),
+			self.numOfVolumes(),
 			'\n'.join([v.getItem() for v in self.venues]))
 	def seek(self, key):
 		f = None
@@ -238,6 +242,8 @@ class Sleigh(Unser):
 		return f
 	def numOfPapers(self):
 		return sum([v.numOfPapers() for v in self.venues])
+	def numOfVolumes(self):
+		return sum([v.numOfVolumes() for v in self.venues])
 	def getTags(self):
 		if not self.tags:
 			self.tags = {}
@@ -264,6 +270,8 @@ class Venue(Unser):
 		self.back = parent
 	def numOfPapers(self):
 		return sum([y.numOfPapers() for y in self.years])
+	def numOfVolumes(self):
+		return sum([y.numOfVolumes() for y in self.years])
 	def getItem(self):
 		ABBR = self.get('name')
 		title = self.get('title')
@@ -344,6 +352,8 @@ class Year(Unser):
 		self.back = parent
 	def numOfPapers(self):
 		return sum([c.numOfPapers() for c in self.confs])
+	def numOfVolumes(self):
+		return len(self.confs)
 	def getItem(self):
 		return '<dt>{}</dt>{}'.format(self.year, '\n'.join([c.getItem() for c in self.confs]))
 	def seek(self, key):

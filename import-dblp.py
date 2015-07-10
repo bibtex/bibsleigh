@@ -43,6 +43,7 @@ def safelyLoadURL(url):
 	errors = 0
 	while errors < 3:
 		try:
+			time.sleep(random.randint(10, 30))
 			return urlopen(url).read().decode('utf-8')
 		except IOError:
 			print('Warning: failed to load URL, retrying...')
