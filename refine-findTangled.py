@@ -3,13 +3,12 @@
 #
 # a module for finding tangled venues (more than one crossref per directory)
 
-import sys, os
-sys.path.append(os.getcwd()+'/../engine')
-import Fancy, AST
+import sys
+from lib.AST import Sleigh
+from fancy.ANSI import C
 
 ienputdir = '../json'
-sleigh = AST.Sleigh(ienputdir + '/corpus')
-C = Fancy.colours()
+sleigh = Sleigh(ienputdir + '/corpus')
 verbose = False
 
 def report(fn, r):
