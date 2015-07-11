@@ -1,7 +1,9 @@
 #!/usr/local/bin/python3
 # -*- coding: utf-8 -*-
 #
-# a module for lowering the value for venue from a conference to all its papers
+# a module for lowering the values of a venue, publisher, series/volume, etc
+# from a conference to all its papers
+
 
 import sys, os.path
 from fancy.ANSI import C
@@ -16,16 +18,33 @@ verbose = False
 def checkon(fn, o):
 	if not os.path.exists(fn) or os.path.isdir(fn):
 		fn = fn + '.json'
+	changed = False
+	lacking = []
+	for key in ('venue', 'series', 'volume', 'publisher', 'journal', 'number'):
+		if key not in o.json.keys():
+			lacking.append(key)
+			if key in o.up().json.keys():
+				o.json[key] = o.up().json[key]
+				changed = True
+	if not lacking:
+		return 0
+	# tricky to say what is truly lacking
+	if not changed:
+		return 1 if 'venue' in lacking else 0
+	f = open(fn, 'w')
+	f.write(o.getJSON())
+	f.close()
+	return 2
+
 	if 'venue' not in o.json.keys():
 		if 'venue' in o.up().json.keys():
-			o.json['venue'] = o.up().json['venue']
-			if 'FILE' in o.json.keys():
-				del o.json['FILE']
+			for key in ('venue', 'series', 'volume', 'publisher'):
+				if key not in o.json.keys() and key in o.up().json.keys():
+					o.json[key] = o.up().json[key]
 			f = open(fn, 'w')
 			f.write(o.getJSON())
 			f.close()
 			return 2
-			# TODO push series/volume and publisher to the papers as well
 		else:
 			return 1
 	else:

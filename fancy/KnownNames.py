@@ -8,13 +8,15 @@ contractions = (\
 	('ComLan', 'Computer Languages, Systems & Structures'),
 	('Dagstuhl', 'Schloss Dagstuhl — Leibniz-Zentrum für Informatik'),
 	('ENTCS', 'Electronic Notes in Theoretical Computer Science'),
-	('IEEE', 'IEEE Computer Society'),
+	('IEEE CS', 'IEEE Computer Society'),
+	('LIPIcs', 'Leibniz International Proceedings in Informatics'),
+	('LNBIP', 'Lecture Notes in Business Information Processing'),
 	('LNCS', 'Lecture Notes in Computer Science'),
 	('SCP', 'Science of Computer Programming'),
+	('SoSyM', 'Software and System Modeling'),
 	('Springer', 'Springer Berlin-Heidelberg'),
 	('Springer', 'Springer International Publishing'),
 	('TCS', 'Theoretical Computer Science'),
-	('SoSyM', 'Software and System Modeling'),
 )
 
 badvariants = (\
