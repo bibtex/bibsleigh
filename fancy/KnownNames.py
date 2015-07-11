@@ -14,8 +14,6 @@ contractions = (\
 	('LNCS', 'Lecture Notes in Computer Science'),
 	('SCP', 'Science of Computer Programming'),
 	('SoSyM', 'Software and System Modeling'),
-	('Springer', 'Springer Berlin-Heidelberg'),
-	('Springer', 'Springer International Publishing'),
 	('TCS', 'Theoretical Computer Science'),
 )
 
@@ -23,4 +21,6 @@ badvariants = (\
 	('Electr. Notes Theor. Comput. Sci.', 'Electronic Notes in Theoretical Computer Science'),
 	('Schloss Dagstuhl — Leibniz-Zentrum fuer Informatik', 'Schloss Dagstuhl — Leibniz-Zentrum für Informatik'),
 	('Sci. Comput. Program.', 'Science of Computer Programming'),
+	('SIGSOFT FSE', 'FSE'),
+	('Springer Berlin-Heidelberg', 'Springer-Verlag'),
 )

@@ -162,22 +162,18 @@ if __name__ == "__main__":
 		if not letter.isalpha():
 			print(C.red('ERROR')+':', 'wrong name', t)
 			continue
-		indices[letter].append('<li><a href="{}.html">{}</a></li>'.format(escape(t), t))
-	# lst = ['<li><a href="{}.html">{}</a></li>'.format(escape(t), t) for t in keyz]
-	# f = open(outputdir+'/person/index.html', 'w')
+		indices[letter].append('<li><a href="{}.html">{}</a></li>'.format(\
+			escape(t),
+			t.replace('_', ' ')))
+	# index-a, index-b, etc: one index for all is too big
 	for letter in letters:
-		# CX = sum([len(ts[t]) for t in ts.keys()])
-		# ul = '<ul class="mul">' + '\n'.join(indices[letter]) + '</ul>'
-		f = open('{}/person/index.html'.format(outputdir), 'w')
+		f = open('{}/person/index-{}.html'.format(outputdir, letter), 'w')
 		f.write(peoplistHTML.format(\
 			title='All {}* contributors'.format(letter.upper()),
 			listname='{} people known'.format(len(indices[letter])),
 			ul='<ul class="tri mul">' + '\n'.join(indices[letter]) + '</ul>'\
 		))
 		f.close()
-	# CX = sum([len(ts[t]) for t in ts.keys()])
-	# ul = '<ul class="mul">' + '\n'.join(indices[letter]) + '</ul>'
-	# links = ['<li><a href="index-{}.html">{}</a></li>'.format(letter, letter.upper()) for letter in letters]
 	links = \
 	['<div class="abc" style="background:#{col}"><a href="index-{low}.html">{up}</a></div>'.format(\
 		col=genColour(letter),

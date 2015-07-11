@@ -34,6 +34,25 @@ def checkon(fn, o):
 				o.json[key] = longer
 			if o.get(key) == longer:
 				o.json[key+'short'] = short
+	# a heuristic contraction for conference names
+	if o.get('type') == 'inproceedings' \
+	and 'booktitleshort' not in o.json.keys() \
+	and 'booktitle' in o.up().json.keys() \
+	and len(o.get('booktitle')) > len(o.up().get('booktitle')):
+		o.json['booktitleshort'] = o.up().get('booktitle')
+	# Springer name change
+	if o.get('publisher').find('Springer') > -1 and 'year' in o.json.keys():
+		if int(o.get('year')) < 2002:
+			o.json['publisher'] = 'Springer-Verlag'
+			o.json['publishershort'] = 'Springer'
+		else:
+			o.json['publisher'] = 'Springer International Publishing'
+			o.json['publishershort'] = 'Springer'
+	# superfluosness
+	for key in wheretolook:
+		if key in o.json.keys() and key+'short' in o.json.keys() \
+		and o.get(key) == o.get(key+'short'):
+			del o.json[key+'short']
 	nlines = sorted([strictstrip(s) for s in o.getJSON().split('\n')[1:-1]])
 	if flines != plines:
 		return 1
