@@ -105,20 +105,21 @@ if __name__ == "__main__":
 		C.red(sleigh.numOfPapers()),
 		C.purple('='*42)))
 	ps = []
-	# ts = sleigh.getTags()
-
+	# flatten the sleigh
+	bykey = {}
+	for v in sleigh.venues:
+		bykey[v.getKey()] = v
+		for c in v.getConfs():
+			bykey[c.getKey()] = c
+			for p in c.papers:
+				bykey[p.getKey()] = p
+	print(C.purple('BibSLEIGH flattened to {} papers'.format(len(bykey))))
 	# tagged = []
 	# for k in ts.keys():
 	for fn in glob.glob(ienputdir + '/people/*.json'):
 		k = fn.split('/')[-1][:-5]
 		ps.append(k)
 		f = open('{}/person/{}.html'.format(outputdir, k), 'w')
-		# lst = [x.getRestrictedItem(k) for x in ts[k]]
-		# no comprehension possible for this case
-		# for x in ts[k]:
-		# 	if x not in tagged:
-		# 		tagged.append(x)
-		# read tag definition
 		persondef = parseJSON(fn)
 		# what to google?
 		# links = []
@@ -132,11 +133,6 @@ if __name__ == "__main__":
 		# hack to get from tags to papers
 		# dl = dl.replace('href="', 'href="../')
 		dls = ''
-		# for k in persondef.keys():
-		# 	if persondef[k].startswith('http'):
-		# 		links += '<h2>{0}: <a href="{1}">{1}</a></h2>'.format(k, persondef[k])
-		# 	else:
-		# 		links += '<h2>{0}: {1}</h2>'.format(k, persondef[k])
 		gender = ''
 		if 'sex' in persondef.keys():
 			if persondef['sex'] == 'Male':
@@ -145,23 +141,18 @@ if __name__ == "__main__":
 			elif persondef['sex'] == 'Female':
 				gender = '♀'
 				del persondef['sex']
-		# links.extend([kv2link(jk, persondef[jk]) for jk in persondef.keys()\
-		# 		if not jk.isupper() and jk != 'name'])
-		# links = '\n'.join(links)
 		links = dict2links(persondef)
+		# TODO: flatten the sleigh before all searches
 		if 'authored' in persondef.keys():
 			curlist = '<h3>Wrote {} papers:</h3>'.format(len(persondef['authored']))
-			# for ph in persondef['authored']:
-			# 	p = sleigh.seek(ph)
-			# 	if not p:
-			# 		print(C.red('Not found:'), ph)
-			# 		sys.exit(1)
-			things = [sleigh.seekByKey(p).getItem() for p in persondef['authored']]
+			# things = [sleigh.seekByKey(p).getItem() for p in persondef['authored']]
+			things = [bykey[p].getItem() for p in persondef['authored']]
 			curlist += '<dl class="toc">' + '\n'.join(things) + '</dl>'
 			dls += curlist
 		if 'edited' in persondef.keys():
 			curlist = '<h3>Edited {} volumes:</h3>'.format(len(persondef['edited']))
-			things = [sleigh.seekByKey(p).getItem() for p in persondef['edited']]
+			# things = [sleigh.seekByKey(p).getItem() for p in persondef['edited']]
+			things = [bykey[p].getItem() for p in persondef['edited']]
 			curlist += '<dl class="toc">' + '\n'.join(things) + '</dl>'
 			dls += curlist
 		f.write(personHTML.format(\
@@ -188,25 +179,28 @@ if __name__ == "__main__":
 		indices[letter].append('<li><a href="{}.html">{}</a></li>'.format(\
 			escape(t),
 			t.replace('_', ' ')))
+	# fancy yellow A-Z link array
+	links = \
+	['<div class="abc" style="background:#{col}"><a href="index-{low}.html">{up}</a></div>'.format(\
+		col=genColour(letter),
+		low=letter,
+		up=letter.upper()) for letter in letters]
+	azlist = '\n'.join(links)
 	# index-a, index-b, etc: one index for all is too big
 	for letter in letters:
 		f = open('{}/person/index-{}.html'.format(outputdir, letter), 'w')
 		f.write(peoplistHTML.format(\
 			title='All {}* contributors'.format(letter.upper()),
 			listname='{} people known'.format(len(indices[letter])),
-			ul='<ul class="tri mul">' + '\n'.join(indices[letter]) + '</ul>'\
+			ul=azlist+'<ul class="tri mul">' + '\n'.join(indices[letter]) + '</ul>'\
 		))
 		f.close()
-	links = \
-	['<div class="abc" style="background:#{col}"><a href="index-{low}.html">{up}</a></div>'.format(\
-		col=genColour(letter),
-		low=letter,
-		up=letter.upper()) for letter in letters]
+	# the main index only contains links to A-Z indices
 	f = open('{}/person/index.html'.format(outputdir), 'w')
 	f.write(peoplistHTML.format(\
 		title='All contributors',
 		listname='{} people known'.format(len(ps)),
-		ul='\n'.join(links)
+		ul=azlist
 	))
 	f.close()
 	print('People index:', C.blue('created'))
