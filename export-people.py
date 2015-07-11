@@ -6,7 +6,7 @@
 import os.path, json, glob
 from fancy.ANSI import C
 from fancy.Languages import ISONames
-from fancy.Templates import personHTML, peoplistHTML
+from fancy.Templates import personHTML, peoplistHTML, movein
 from lib.AST import Sleigh, escape
 from lib.JSON import parseJSON
 
@@ -147,13 +147,13 @@ if __name__ == "__main__":
 			curlist = '<h3>Wrote {} papers:</h3>'.format(len(persondef['authored']))
 			# things = [sleigh.seekByKey(p).getItem() for p in persondef['authored']]
 			things = [bykey[p].getItem() for p in persondef['authored']]
-			curlist += '<dl class="toc">' + '\n'.join(things) + '</dl>'
+			curlist += '<dl class="toc">' + movein('\n'.join(things)) + '</dl>'
 			dls += curlist
 		if 'edited' in persondef.keys():
 			curlist = '<h3>Edited {} volumes:</h3>'.format(len(persondef['edited']))
 			# things = [sleigh.seekByKey(p).getItem() for p in persondef['edited']]
-			things = [bykey[p].getItem() for p in persondef['edited']]
-			curlist += '<dl class="toc">' + '\n'.join(things) + '</dl>'
+			things = [bykey[p].getIconItem() for p in persondef['edited']]
+			curlist += '<dl class="toc">' + movein('\n'.join(things)) + '</dl>'
 			dls += curlist
 		f.write(personHTML.format(\
 			title=k,
@@ -185,7 +185,7 @@ if __name__ == "__main__":
 		col=genColour(letter),
 		low=letter,
 		up=letter.upper()) for letter in letters]
-	azlist = '\n'.join(links)
+	azlist = '\n'.join(links)+'<br style="clear:both"/>\n'
 	# index-a, index-b, etc: one index for all is too big
 	for letter in letters:
 		f = open('{}/person/index-{}.html'.format(outputdir, letter), 'w')

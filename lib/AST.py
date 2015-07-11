@@ -296,7 +296,7 @@ class Venue(Unser):
 		ABBR = self.get('name')
 		title = self.get('title')
 		# TO-DO: check if img exists
-		return ('<div class="picx"><a href="{ABBR}.html" title="{title}">'+\
+		return ('<div class="pic"><a href="{ABBR}.html" title="{title}">'+\
 			'<img src="stuff/{abbr}.png" alt="{title}"/><h2>{ABBR}</h2></a></div>').format(\
 				ABBR=ABBR,\
 				abbr=ABBR.lower(),\
@@ -457,6 +457,17 @@ class Conf(Unser):
 			return '{} {}'.format(self.json['venue'], self.year)
 		else:
 			return self.getKey().replace('-', ' ')
+	def getIconItem(self):
+		if 'venue' in self.json.keys():
+			venue = self.json['venue']
+		elif 'venue' in self.up().json.keys():
+			venue = self.up().json['venue']
+		else:
+			venue = 'bibsleigh'
+		return '<a href="{name}.html" title="{title}"><img src="stuff/{img}.png" class="abc" alt="{title}"/></a>'.format(\
+			name=self.get('name'),
+			title=self.getEventTitle(),
+			img=venue)
 	def getItem(self):
 		return '<dd><a href="{}.html">{}</a> ({})</dd>'.format(self.get('name'), self.get('title'), self.getEventTitle())
 	def getPage(self):

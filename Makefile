@@ -14,6 +14,8 @@ web:
 	time ./export-web.py
 
 ppl:
+	time ./refine-people.py
+	time ./refine-whowrote.py
 	time ./export-people.py
 
 norm:

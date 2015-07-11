@@ -47,17 +47,19 @@ if __name__ == "__main__":
 						if a in people.keys():
 							if 'authored' not in people[a].keys():
 								people[a]['authored'] = []
-							people[a]['authored'].append(p.getKey())
+							if p.getKey() not in people[a]['authored']:
+								people[a]['authored'].append(p.getKey())
 						else:
 							report(C.yellow('Author not found: ') + a, 0)
-				if 'editor' in p.json.keys():
-					for e in listify(p.json['editor']):
-						if e in people.keys():
-							if 'edited' not in people[e].keys():
-								people[e]['edited'] = []
-							people[e]['edited'].append(p.getKey())
-						else:
-							report(C.yellow('Editor not found: ') + e, 0)
+			if 'editor' in c.json.keys():
+				for e in listify(c.json['editor']):
+					if e in people.keys():
+						if 'edited' not in people[e].keys():
+							people[e]['edited'] = []
+						if c.getKey() not in people[e]['edited']:
+							people[e]['edited'].append(c.getKey())
+					else:
+						report(C.yellow('Editor not found: ') + e, 0)
 	# have to read again to see who’s changed
 	for fn in glob.glob(ienputdir + '/people/*.json'):
 		p = parseJSON(fn)
