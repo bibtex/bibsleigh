@@ -1,11 +1,11 @@
 #!/usr/local/bin/python3
 # -*- coding: utf-8 -*-
 #
-# a module for normalising values: numbers become proper integers, quotes — proper fancy ones, etc
+# a module for cross-checking information on people available from different sources
 
 import sys, glob, os.path
 from fancy.ANSI import C
-from fancy.Latin import diacritics
+from fancy.Latin import simpleLatin, dblpLatin
 from lib.AST import Sleigh
 from lib.JSON import parseJSON, jsonify
 from lib.LP import listify
@@ -16,9 +16,7 @@ verbose = False
 cx = {0: 0, 1: 0, 2: 0}
 
 def fileify(s):
-	for d in diacritics.keys():
-		s = s.replace(d, diacritics[d])
-	return s.replace('.', '').replace(' ', '_')
+	return simpleLatin(s).replace('.', '').replace("'", '').replace(' ', '_')
 
 def dblpify(s):
 	# http://dblp.uni-trier.de/pers/hd/e/Elbaum:Sebastian_G=
@@ -27,7 +25,7 @@ def dblpify(s):
 		cx[1] += 1
 		return s
 	sur = s[s.rindex(' ')+1:]
-	rest = s[:s.rindex(' ')].replace(' ', '_').replace('.', '=')
+	rest = dblpLatin(s[:s.rindex(' ')]).replace(' ', '_').replace('.', '=').replace("'", '=')
 	return sur+':'+rest
 
 if __name__ == "__main__":
