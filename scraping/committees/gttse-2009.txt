@@ -1,0 +1,41 @@
+#DONE
+     http://gttse.wikidot.com/2009:committees
+     Organization committee
+     
+PrCh João M. Fernandes (Program Co-Chair), Universidade do Minho, Portugal
+PrCh Ralf Lämmel (Program Co-Chair), Universität Koblenz-Landau, Germany
+OrCo João Saraiva, Universidade do Minho, Portugal
+OrCo Joost Visser, Software Improvement Group, The Netherlands
+     Scientific committee
+     
+ScCo Jean Bézivin, Université de Nantes, France
+ScCo Charles Consel, INRIA / LaBRI, France
+ScCo Erik Ernst, University of Aarhus, Denmark
+ScCo João M. Fernandes, Universidade do Minho, Portugal
+ScCo Lidia Fuentes, University of Málaga, Spain
+ScCo Jeff Gray, University of Alabama at Birmingham, USA
+ScCo Reiko Heckel, University of Leicester, UK
+ScCo Zhenjiang Hu, National Institute of Informatics, Japan
+ScCo Ralf Lämmel, Universität Koblenz-Landau, Germany
+ScCo Juan de Lara, Universidad Autónoma de Madrid, Spain
+ScCo Julia Lawall, University of Copenhagen, Denmark
+ScCo Johan Lilius, Åbo Akademi University, Finland
+ScCo Antónia Lopes, Universidade de Lisboa, Portugal
+ScCo Marjan Mernik, University of Maribor, Slovenia
+ScCo José N. Oliveira, Universidade do Minho, Portugal
+ScCo Richard Paige, University of York, United Kingdom
+ScCo Zoltán Porkoláb, University Eötvös Loránd, Hungary
+ScCo Andreas Prinz, University of Agder, Norway
+ScCo Markus Pueschel, CMU, USA
+ScCo Awais Rashid, Lancaster University, UK
+ScCo Andy Schürr, Technical University Darmstadt, Germany
+ScCo Sérgio Soares, Universidade de Pernambuco, Brazil
+ScCo Peter Thiemann, Universität Freiburg, Germany
+ScCo Eelco Visser, Delft University of Technology, The Netherlands
+ScCo Albert Zündorf, University of Kassel, Germany
+     Local arrangements and registration
+     
+LoCh João Paulo Fernandes, Universidade do Minho, Portugal
+     Website administration and technical support
+     
+WeCh Vadim Zaytsev, Universität Koblenz-Landau, Germany

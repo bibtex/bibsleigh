@@ -1,0 +1,42 @@
+#DONE
+     http://www.seas.upenn.edu/~sweirich/types/archive/1999-2003/msg00475.html
+     Program committee
+     
+PrCo Isabelle Attali,       INRIA Sophia Antipolis
+PrCh Mark van den Brand,    CWI Amsterdam, co-chair
+PrCo Görel Hedin,           Lund University
+PrCo Jan Heering,           CWI Amsterdam
+PrCo Pierre-Etienne Moreau, LORIA Nancy
+PrCo Marjan Mernik,         University of Maribor
+PrCo Peter D. Mosses,       BRICS Aarhus
+PrCh Didier Parigot,        INRIA Sophia Antipolis, chair
+PrCo Gunter Riedewald,      University of Rostock
+PrCo Eelco Visser,          University of Utrecht
+PrCo David Watt,            University of Glasgow
+     
+     
+     
+     Organizers
+     
+OrCo Didier Parigot
+     INRIA Sophia Antipolis
+     2004 Route des Lucioles B.P 93
+     06902 Sophia Antipolis Cedex
+     France
+     Didier.Parigot@sophia.inria.fr
+     
+OrCo Mark van den Brand
+     Centrum voor Wiskunde en Informatica (CWI)
+     Interactive Software Development and Renovation (SEN1)
+     Kruislaan 413
+     NL-1098 SJ Amsterdam
+     The Netherlands
+     Mark.van.den.Brand@cwi.nl
+     
+OrCo Marjan Mernik
+     University of Maribor
+     Faculty of electrical engineering and computer science
+     Smetanova 17
+     2000 Maribor
+     Slovenia
+     marjan.mernik@uni-mb.si

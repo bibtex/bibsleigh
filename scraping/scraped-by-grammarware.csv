@@ -1,3 +1,497 @@
+ATEM;2006;Jean-Marie;Favre;;Organiser
+ATEM;2006;Dragan;Gasevic;;Organiser
+ATEM;2006;Ralf;Lammel;;Organiser
+ATEM;2006;Andreas;Winter;;Organiser
+ATEM;2007;Jean-Marie;Favre;;Organiser
+ATEM;2007;Dragan;Gasevic;;Organiser
+ATEM;2007;Ralf;Lämmel;;Organiser
+ATEM;2007;Andreas;Winter;;Organiser
+CSMR-WCRE;2014;Serge;Demeyer;;General Chair
+CSMR-WCRE;2014;Tom;Mens;;Publication Chair
+CSMR-WCRE;2014;Anthony;Cleve;;Finance Chair
+CSMR-WCRE;2014;Elliot;Chikofsky;;Organiser
+CSMR-WCRE;2014;Dave;Binkley;;Program Chair
+CSMR-WCRE;2014;Filippo;Ricca;;Program Chair
+CSMR-WCRE;2014;Andy;Zaidman;;ERA Track Chair
+CSMR-WCRE;2014;Coen;De Roover;;ERA Track Chair
+CSMR-WCRE;2014;Alexander;Serebrenik;;Workshop Chair
+CSMR-WCRE;2014;Emily;Hill;;Workshop Chair
+CSMR-WCRE;2014;Bram;Adams;;Doctoral Symposium Chair
+CSMR-WCRE;2014;Sibylle;Schupp;;Doctoral Symposium Chair
+CSMR-WCRE;2014;Dave;Binkley;;Vision Chair
+CSMR-WCRE;2014;Filippo;Ricca;;Vision Chair
+CSMR-WCRE;2014;Jens;Krinke;;Project Chair
+CSMR-WCRE;2014;Rocco;Oliveto;;Project Chair
+CSMR-WCRE;2014;Werner;Teppe;;Industrial Track Chair
+CSMR-WCRE;2014;Eric;Bouwers;;Industrial Track Chair
+CSMR-WCRE;2014;Thomas;Fritz;;Tool Track Chair
+CSMR-WCRE;2014;Jurgen;Vinju;;Tool Track Chair
+CSMR-WCRE;2014;Alessandro;Murgia;;Web Chair
+CSMR-WCRE;2014;Tim;Molderez;;Web Chair
+CSMR-WCRE;2014;Bogdan;Vasilescu;;Social Media Chair
+CSMR-WCRE;2014;Javier;Pérez;;Student Volunteers Chair
+CSMR-WCRE;2014;Tibor;Gyimothy;;Program Committee
+CSMR-WCRE;2014;Martin;Pinzger;;Program Committee
+CSMR-WCRE;2014;Giuseppe;Scanniello;;Program Committee
+CSMR-WCRE;2014;Daqing;Hou;;Program Committee
+CSMR-WCRE;2014;Zheng;Li;;Program Committee
+CSMR-WCRE;2014;Klaus;Schmid;;Program Committee
+CSMR-WCRE;2014;Marco;Gerosa;;Program Committee
+CSMR-WCRE;2014;Andy;Zaidman;;Program Committee
+CSMR-WCRE;2014;Huzefa;Kagdi;;Program Committee
+CSMR-WCRE;2014;Harald;Gall;;Program Committee
+CSMR-WCRE;2014;Emily;Hill;;Program Committee
+CSMR-WCRE;2014;Tom;Mens;;Program Committee
+CSMR-WCRE;2014;Reid;Holmes;;Program Committee
+CSMR-WCRE;2014;Rocco;Oliveto;;Program Committee
+CSMR-WCRE;2014;Bram;Adams;;Program Committee
+CSMR-WCRE;2014;Mariano;Ceccato;;Program Committee
+CSMR-WCRE;2014;Nikolaos;Tsantalis;;Program Committee
+CSMR-WCRE;2014;Andrea;De Lucia;;Program Committee
+CSMR-WCRE;2014;Dawn;Lawrie;;Program Committee
+CSMR-WCRE;2014;Francesca;Arcelli Fontana;;Program Committee
+CSMR-WCRE;2014;Andrian;Marcus;;Program Committee
+CSMR-WCRE;2014;Alexander;Chatzigeorgiou;;Program Committee
+CSMR-WCRE;2014;Alessandro;Marchetto;;Program Committee
+CSMR-WCRE;2014;Rudolf;Ferenc;;Program Committee
+CSMR-WCRE;2014;Rafael;Capilla;;Program Committee
+CSMR-WCRE;2014;Romain;Robbes;;Program Committee
+CSMR-WCRE;2014;Holger;Kienle;;Program Committee
+CSMR-WCRE;2014;Jens;Knodel;;Program Committee
+CSMR-WCRE;2014;Mark;Harman;;Program Committee
+CSMR-WCRE;2014;Lingxiao;Jiang;;Program Committee
+CSMR-WCRE;2014;Foutse;Khomh;;Program Committee
+CSMR-WCRE;2014;Mircea;Lungu;;Program Committee
+CSMR-WCRE;2014;Chanchal;Roy;;Program Committee
+CSMR-WCRE;2014;Gabriele;Bavota;;Program Committee
+CSMR-WCRE;2014;Laurence;Duchien;;Program Committee
+CSMR-WCRE;2014;Árpád;Beszédes;;Program Committee
+CSMR-WCRE;2014;Anthony;Cleve;;Program Committee
+CSMR-WCRE;2014;Zhang;Hongyu;;Program Committee
+CSMR-WCRE;2014;Massimiliano;Di Penta;;Program Committee
+CSMR-WCRE;2014;Hausi;A. Muller;;Program Committee
+CSMR-WCRE;2014;Yasutaka;Kamei;;Program Committee
+CSMR-WCRE;2014;Harry;Sneed;;Program Committee
+CSMR-WCRE;2014;Alberto;Bacchelli;;Program Committee
+CSMR-WCRE;2014;Thomas;Dean;;Program Committee
+CSMR-WCRE;2014;Jianjun;Zhao;;Program Committee
+CSMR-WCRE;2014;Jürgen;Ebert;;Program Committee
+CSMR-WCRE;2014;Collin;McMillan;;Program Committee
+CSMR-WCRE;2014;Xavier;Blanc;;Program Committee
+CSMR-WCRE;2014;Ralf;Laemmel;;Program Committee
+CSMR-WCRE;2014;Toshihiro;Kamiya;;Program Committee
+CSMR-WCRE;2014;Mircea;Trifu;;Program Committee
+CSMR-WCRE;2014;Michael;Collard;;Program Committee
+CSMR-WCRE;2014;Radu;Marinescu;;Program Committee
+CSMR-WCRE;2014;Dalila;Tamzalit;;Program Committee
+CSMR-WCRE;2014;Marco;Torchiano;;Program Committee
+CSMR-WCRE;2014;Yijun;Yu;;Program Committee
+CSMR-WCRE;2014;Ragnhild;Van Der Straeten;;Program Committee
+CSMR-WCRE;2014;Zhenchang;Xing;;Program Committee
+CSMR-WCRE;2014;Jesus;M. Gonzalez-Barahona;;Program Committee
+CSMR-WCRE;2014;Abram;Hindle;;Program Committee
+CSMR-WCRE;2014;Arie;van Deursen;;Program Committee
+CSMR-WCRE;2014;Andreas;Winter;;Program Committee
+CSMR-WCRE;2014;Marianne;Huchard;;Program Committee
+CSMR-WCRE;2014;Giuliano;Antoniol;;Program Committee
+CSMR-WCRE;2014;Jens;Krinke;;Program Committee
+CSMR-WCRE;2014;Dirk;Beyer;;Program Committee
+CSMR-WCRE;2014;Thomas;Fritz;;Program Committee
+CSMR-WCRE;2014;Rainer;Koschke;;Program Committee
+CSMR-WCRE;2014;David;Lo;;Program Committee
+CSMR-WCRE;2014;Grace;Lewis;;Program Committee
+CSMR-WCRE;2014;Spiros;Mancoridis;;Program Committee
+CSMR-WCRE;2014;Tudor;Girba;;Program Committee
+CSMR-WCRE;2014;James;Cordy;;Program Committee
+CSMR-WCRE;2014;Joost;Visser;;Program Committee
+CSMR-WCRE;2014;Juan;C. Dueñas;;Program Committee
+CSMR-WCRE;2014;Florian;Deissenboeck;;Program Committee
+CSMR-WCRE;2014;Mark;Van Den Brand;;Program Committee
+CSMR-WCRE;2014;Raghavan;Komondoor;;Program Committee
+CSMR-WCRE;2014;Dharmalingam;Ganesan;;Program Committee
+CSMR-WCRE;2014;Denys;Poshyvanyk;;Program Committee
+CSMR-WCRE;2014;Mark;Grechanik;;Program Committee
+CSMR-WCRE;2014;Ira;Baxter;;Program Committee
+CSMR-WCRE;2014;Sonia;Haiduc;;Program Committee
+CSMR-WCRE;2014;Jonathan;Maletic;;Program Committee
+CSMR-WCRE;2014;Jurgen;Vinju;;Program Committee
+GTTSE;2005;Ralf;Lämmel;;Program Chair
+GTTSE;2005;João;Saraiva;;Program Chair
+GTTSE;2005;Joost;Visser;;Organising Chair
+GTTSE;2005;Jose;Bacelar Almeida;;Organiser
+GTTSE;2005;Mark;van den Brand;;Organiser
+GTTSE;2005;Maria;João Frade;;Organiser
+GTTSE;2005;Pedro;Rangel Henriques;;Organiser
+GTTSE;2005;Ralf;Lämmel;;Organiser
+GTTSE;2005;Marjan;Mernik;;Organiser
+GTTSE;2005;João;Saraiva;;Organiser
+GTTSE;2005;Joost;Visser;;Organiser
+GTTSE;2005;Paulo;Borba;;Scientific Committee
+GTTSE;2005;Mark;van den Brand;;Scientific Committee
+GTTSE;2005;Jim;Cordy;;Scientific Committee
+GTTSE;2005;Krzysztof;Czarnecki;;Scientific Committee
+GTTSE;2005;Andrea;DeLucia;;Scientific Committee
+GTTSE;2005;Jean-Luc;Dekeyser;;Scientific Committee
+GTTSE;2005;José;Fiadeiro;;Scientific Committee
+GTTSE;2005;Stephen;Freund;;Scientific Committee
+GTTSE;2005;Jeff;Gray;;Scientific Committee
+GTTSE;2005;Reiko;Heckel;;Scientific Committee
+GTTSE;2005;Görel;Hedin;;Scientific Committee
+GTTSE;2005;Pedro;Rangel Henriques;;Scientific Committee
+GTTSE;2005;Y.;Annie Liu;;Scientific Committee
+GTTSE;2005;Cristina;Lopes;;Scientific Committee
+GTTSE;2005;Ralf;Lämmel;;Scientific Committee
+GTTSE;2005;Marjan;Mernik;;Scientific Committee
+GTTSE;2005;Pierre-Etienne;Moreau;;Scientific Committee
+GTTSE;2005;Peter;Mosses;;Scientific Committee
+GTTSE;2005;Oege;de Moor;;Scientific Committee
+GTTSE;2005;José;Nuno Oliveira;;Scientific Committee
+GTTSE;2005;Jens;Palsberg;;Scientific Committee
+GTTSE;2005;João;Saraiva;;Scientific Committee
+GTTSE;2005;Andy;Schürr;;Scientific Committee
+GTTSE;2005;Anthony;Sloane;;Scientific Committee
+GTTSE;2005;Peter;Thiemann;;Scientific Committee
+GTTSE;2005;Simon;Thompson;;Scientific Committee
+GTTSE;2005;Eelco;Visser;;Scientific Committee
+GTTSE;2005;Joost;Visser;;Scientific Committee
+GTTSE;2005;Eric;Van Wyk;;Scientific Committee
+GTTSE;2007;Ralf;Lämmel;;Tutorials Chair
+GTTSE;2007;João;Saraiva;;Organising Chair
+GTTSE;2007;Joost;Visser;;Tutorials Chair
+GTTSE;2007;Alcino;Cunha;;Organiser
+GTTSE;2007;João;Saraiva;;Organiser
+GTTSE;2007;Ricardo;Vilaça;;Organiser
+GTTSE;2007;Joost;Visser;;Organiser
+GTTSE;2007;Uwe;Aßmann;;Scientific Committee
+GTTSE;2007;Paulo;Borba;;Scientific Committee
+GTTSE;2007;Mark;van den Brand;;Scientific Committee
+GTTSE;2007;Charles;Consel;;Scientific Committee
+GTTSE;2007;Jim;Cordy;;Scientific Committee
+GTTSE;2007;Alcino;Cunha;;Scientific Committee
+GTTSE;2007;Jean-Luc;Dekeyser;;Scientific Committee
+GTTSE;2007;Andrea;DeLucia;;Scientific Committee
+GTTSE;2007;Stephen;Freund;;Scientific Committee
+GTTSE;2007;Jeff;Gray;;Scientific Committee
+GTTSE;2007;Jean-Luc;Hainaut;;Scientific Committee
+GTTSE;2007;Reiko;Heckel;;Scientific Committee
+GTTSE;2007;Görel;Hedin;;Scientific Committee
+GTTSE;2007;Dirk;Heuzeroth;;Scientific Committee
+GTTSE;2007;Zhenjiang;Hu;;Scientific Committee
+GTTSE;2007;Ralf;Lämmel;;Scientific Committee
+GTTSE;2007;Julia;Lawall;;Scientific Committee
+GTTSE;2007;Cristina;Lopes;;Scientific Committee
+GTTSE;2007;Tom;Mens;;Scientific Committee
+GTTSE;2007;Marjan;Mernik;;Scientific Committee
+GTTSE;2007;Klaus;Ostermann;;Scientific Committee
+GTTSE;2007;Jens;Palsberg;;Scientific Committee
+GTTSE;2007;Benjamin;C. Pierce;;Scientific Committee
+GTTSE;2007;João;Saraiva;;Scientific Committee
+GTTSE;2007;Andy;Schürr;;Scientific Committee
+GTTSE;2007;Anthony;Sloane;;Scientific Committee
+GTTSE;2007;Perdita;Stevens;;Scientific Committee
+GTTSE;2007;Peter;Thiemann;;Scientific Committee
+GTTSE;2007;Simon;Thompson;;Scientific Committee
+GTTSE;2007;Joost;Visser;;Scientific Committee
+GTTSE;2007;Victor;Winter;;Scientific Committee
+GTTSE;2007;Eric;Van Wyk;;Scientific Committee
+GTTSE;2007;Albert;Zündorf;;Scientific Committee
+GTTSE;2009;João;M. Fernandes;;Program Chair
+GTTSE;2009;Ralf;Lämmel;;Program Chair
+GTTSE;2009;João;Saraiva;;Organiser
+GTTSE;2009;Joost;Visser;;Organiser
+GTTSE;2009;Jean;Bézivin;;Scientific Committee
+GTTSE;2009;Charles;Consel;;Scientific Committee
+GTTSE;2009;Erik;Ernst;;Scientific Committee
+GTTSE;2009;João;M. Fernandes;;Scientific Committee
+GTTSE;2009;Lidia;Fuentes;;Scientific Committee
+GTTSE;2009;Jeff;Gray;;Scientific Committee
+GTTSE;2009;Reiko;Heckel;;Scientific Committee
+GTTSE;2009;Zhenjiang;Hu;;Scientific Committee
+GTTSE;2009;Ralf;Lämmel;;Scientific Committee
+GTTSE;2009;Juan;de Lara;;Scientific Committee
+GTTSE;2009;Julia;Lawall;;Scientific Committee
+GTTSE;2009;Johan;Lilius;;Scientific Committee
+GTTSE;2009;Antónia;Lopes;;Scientific Committee
+GTTSE;2009;Marjan;Mernik;;Scientific Committee
+GTTSE;2009;José;N. Oliveira;;Scientific Committee
+GTTSE;2009;Richard;Paige;;Scientific Committee
+GTTSE;2009;Zoltán;Porkoláb;;Scientific Committee
+GTTSE;2009;Andreas;Prinz;;Scientific Committee
+GTTSE;2009;Markus;Pueschel;;Scientific Committee
+GTTSE;2009;Awais;Rashid;;Scientific Committee
+GTTSE;2009;Andy;Schürr;;Scientific Committee
+GTTSE;2009;Sérgio;Soares;;Scientific Committee
+GTTSE;2009;Peter;Thiemann;;Scientific Committee
+GTTSE;2009;Eelco;Visser;;Scientific Committee
+GTTSE;2009;Albert;Zündorf;;Scientific Committee
+GTTSE;2009;João;Paulo Fernandes;;Local Chair
+GTTSE;2009;Vadim;Zaytsev;;Web Chair
+GTTSE;2011;Ralf;Lämmel;;Organiser
+GTTSE;2011;João;Saraiva;;Organiser
+GTTSE;2011;Joost;Visser;;Organiser
+GTTSE;2011;Sven;Apel;;Scientific Committee
+GTTSE;2011;Arpad;Beszedes;;Scientific Committee
+GTTSE;2011;Mark;van den Brand;;Scientific Committee
+GTTSE;2011;Thomas;Dean;;Scientific Committee
+GTTSE;2011;Erik;Ernst;;Scientific Committee
+GTTSE;2011;Anne;Etien;;Scientific Committee
+GTTSE;2011;Jean-Marie;Favre;;Scientific Committee
+GTTSE;2011;Bernd;Fischer;;Scientific Committee
+GTTSE;2011;Dragan;Gašević;;Scientific Committee
+GTTSE;2011;Jeff;Gray;;Scientific Committee
+GTTSE;2011;Yann-Gaël;Guéhéneuc;;Scientific Committee
+GTTSE;2011;Martin;Horauer;;Scientific Committee
+GTTSE;2011;Nigel;Horspool;;Scientific Committee
+GTTSE;2011;Zhenjiang;Hu;;Scientific Committee
+GTTSE;2011;Jan;Jürjens;;Scientific Committee
+GTTSE;2011;Christian;Lengauer;;Scientific Committee
+GTTSE;2011;Andrea;De Lucia;;Scientific Committee
+GTTSE;2011;Marjan;Mernik;;Scientific Committee
+GTTSE;2011;Oscar;Nierstrasz;;Scientific Committee
+GTTSE;2011;Klaus;Ostermann;;Scientific Committee
+GTTSE;2011;Jens;Palsberg;;Scientific Committee
+GTTSE;2011;Jeff;Z. Pan;;Scientific Committee
+GTTSE;2011;Massimiliano;Di Penta;;Scientific Committee
+GTTSE;2011;Alfonso;Pierantonio;;Scientific Committee
+GTTSE;2011;Zoltan;Porkolab;;Scientific Committee
+GTTSE;2011;Markus;Püschel;;Scientific Committee
+GTTSE;2011;Andreas;Prinz;;Scientific Committee
+GTTSE;2011;Davide;Di Ruscio;;Scientific Committee
+GTTSE;2011;Bran;Selic;;Scientific Committee
+GTTSE;2011;Olaf;Spinczyk;;Scientific Committee
+GTTSE;2011;Perdita;Stevens;;Scientific Committee
+GTTSE;2011;Tarja;Systä;;Scientific Committee
+GTTSE;2011;Walid;Taha;;Scientific Committee
+GTTSE;2011;Peter;Thiemann;;Scientific Committee
+GTTSE;2011;Simon;Thompson;;Scientific Committee
+GTTSE;2011;Laurence;Tratt;;Scientific Committee
+GTTSE;2011;Eric;Van Wyk;;Scientific Committee
+GTTSE;2011;Dániel;Varró;;Scientific Committee
+GTTSE;2011;Andreas;Winter;;Scientific Committee
+GTTSE;2011;Steffen;Zschaler;;Scientific Committee
+GTTSE;2011;Joost;Visser;;Workshop Chair
+GTTSE;2011;Eric;Van Wyk;;Workshop Chair
+GTTSE;2011;Jácome;Cunha;;Local Chair
+GTTSE;2011;Vadim;Zaytsev;;Publicity Chair
+GTTSE;2015;Jácome;Cunha;;Organising Chair
+GTTSE;2015;João;Paulo Fernandes;;Program Chair
+GTTSE;2015;Ralf;Lämmel;;Briefings Chair
+GTTSE;2015;João;Saraiva;;General Chair
+GTTSE;2015;Joost;Visser;;Industrial Track Chair
+GTTSE;2015;Vadim;Zaytsev;;Publication Chair
+GTTSE;2015;Bram;Adams;;Scientific Committee
+GTTSE;2015;Benoit;Baudry;;Scientific Committee
+GTTSE;2015;Xavier;Blanc;;Scientific Committee
+GTTSE;2015;Darius;Blasband;;Scientific Committee
+GTTSE;2015;Paulo;Borba;;Scientific Committee
+GTTSE;2015;Mark;van den Brand;;Scientific Committee
+GTTSE;2015;Martin;Bravenboer;;Scientific Committee
+GTTSE;2015;Jordi;Cabot;;Scientific Committee
+GTTSE;2015;João;Cardoso;;Scientific Committee
+GTTSE;2015;Michel;Chaudron;;Scientific Committee
+GTTSE;2015;Anthony;Cleve;;Scientific Committee
+GTTSE;2015;Benoît;Combemale;;Scientific Committee
+GTTSE;2015;Alcino;Cunha;;Scientific Committee
+GTTSE;2015;Jácome;Cunha;;Scientific Committee
+GTTSE;2015;Juan;De Lara;;Scientific Committee
+GTTSE;2015;Andrea;De Lucia;;Scientific Committee
+GTTSE;2015;Coen;De Roover;;Scientific Committee
+GTTSE;2015;Davide;Di Ruscio;;Scientific Committee
+GTTSE;2015;Zinovy;Diskin;;Scientific Committee
+GTTSE;2015;Rudolf;Ferenc;;Scientific Committee
+GTTSE;2015;João;M. Fernandes;;Scientific Committee
+GTTSE;2015;João;Paulo Fernandes;;Scientific Committee
+GTTSE;2015;João;Saraiva;;Scientific Committee
+GTTSE;2015;Mike;Godfrey;;Scientific Committee
+GTTSE;2015;Martin;Gogolla;;Scientific Committee
+GTTSE;2015;Jeff;Gray;;Scientific Committee
+GTTSE;2015;Mark;Grechanik;;Scientific Committee
+GTTSE;2015;Yann-Gaël;Guéhéneuc;;Scientific Committee
+GTTSE;2015;Gorel;Hedin;;Scientific Committee
+GTTSE;2015;Florian;Heidenreich;;Scientific Committee
+GTTSE;2015;Pedro;Rangel Henriques;;Scientific Committee
+GTTSE;2015;Felienne;Hermans;;Scientific Committee
+GTTSE;2015;Dirk;Heuzeroth;;Scientific Committee
+GTTSE;2015;Robert;Hirschfeld;;Scientific Committee
+GTTSE;2015;Zhenjiang;Hu;;Scientific Committee
+GTTSE;2015;Marianne;Huchard;;Scientific Committee
+GTTSE;2015;Jean-Marc;Jézéquel;;Scientific Committee
+GTTSE;2015;Foutse;Khomh;;Scientific Committee
+GTTSE;2015;Holger;Kienle;;Scientific Committee
+GTTSE;2015;Dimitris;Kolovos;;Scientific Committee
+GTTSE;2015;Nicholas;A. Kraft;;Scientific Committee
+GTTSE;2015;Jens;Krinke;;Scientific Committee
+GTTSE;2015;Christian;Kästner;;Scientific Committee
+GTTSE;2015;Paul;Klint;;Scientific Committee
+GTTSE;2015;Ralf;Lämmel;;Scientific Committee
+GTTSE;2015;Michele;Lanza;;Scientific Committee
+GTTSE;2015;Timothy;Lethbridge;;Scientific Committee
+GTTSE;2015;David;Lo;;Scientific Committee
+GTTSE;2015;Tiziana;Margaria;;Scientific Committee
+GTTSE;2015;Erik;Meijer;;Scientific Committee
+GTTSE;2015;Marjan;Mernik;;Scientific Committee
+GTTSE;2015;Ana;Moreira;;Scientific Committee
+GTTSE;2015;José;Nuno Oliveira;;Scientific Committee
+GTTSE;2015;Rocco;Oliveto;;Scientific Committee
+GTTSE;2015;Richard;Paige;;Scientific Committee
+GTTSE;2015;Alfonso;Pierantonio;;Scientific Committee
+GTTSE;2015;Juergen;Rilling;;Scientific Committee
+GTTSE;2015;Sibylle;Schupp;;Scientific Committee
+GTTSE;2015;Bran;Selic;;Scientific Committee
+GTTSE;2015;Alexander;Serebrenik;;Scientific Committee
+GTTSE;2015;Tony;Sloane;;Scientific Committee
+GTTSE;2015;Simão;Melo de Sousa;;Scientific Committee
+GTTSE;2015;Tijs;van der Storm;;Scientific Committee
+GTTSE;2015;James;Terwilliger;;Scientific Committee
+GTTSE;2015;Laurence;Tratt;;Scientific Committee
+GTTSE;2015;Antonio;Vallecillo;;Scientific Committee
+GTTSE;2015;Eric;Van Wyk;;Scientific Committee
+GTTSE;2015;Jurgen;Vinju;;Scientific Committee
+GTTSE;2015;Joost;Visser;;Scientific Committee
+GTTSE;2015;Markus;Völter;;Scientific Committee
+GTTSE;2015;Tanja;E. J. Vos;;Scientific Committee
+GTTSE;2015;Andreas;Winter;;Scientific Committee
+GTTSE;2015;Victor;Winter;;Scientific Committee
+GTTSE;2015;Andy;Zaidman;;Scientific Committee
+GTTSE;2015;Vadim;Zaytsev;;Scientific Committee
+GTTSE;2015;Ralf;Lämmel;;Steering Committee
+GTTSE;2015;João;Saraiva;;Steering Committee
+GTTSE;2015;Joost;Visser;;Steering Committee
+LDTA;2001;Isabelle;Attali;;Program Committee
+LDTA;2001;Mark;van den Brand;;Program Chair
+LDTA;2001;Görel;Hedin;;Program Committee
+LDTA;2001;Jan;Heering;;Program Committee
+LDTA;2001;Pierre-Etienne;Moreau;;Program Committee
+LDTA;2001;Marjan;Mernik;;Program Committee
+LDTA;2001;Peter;D. Mosses;;Program Committee
+LDTA;2001;Didier;Parigot;;Program Chair
+LDTA;2001;Gunter;Riedewald;;Program Committee
+LDTA;2001;Eelco;Visser;;Program Committee
+LDTA;2001;David;Watt;;Program Committee
+LDTA;2001;Didier;Parigot;;Organiser
+LDTA;2001;Mark;van den Brand;;Organiser
+LDTA;2001;Marjan;Mernik;;Organiser
+LDTA;2002;Mark;van den Brand;;Program Chair
+LDTA;2002;Barrett;Bryant;;Program Committee
+LDTA;2002;Katsuhiko;Gondow;;Program Committee
+LDTA;2002;Jan;Heering;;Program Committee
+LDTA;2002;Ralf;Lämmel;;Program Chair
+LDTA;2002;Oege;de Moor;;Program Committee
+LDTA;2002;Pierre-Etienne;Moreau;;Program Committee
+LDTA;2002;Peter;D. Mosses;;Program Committee
+LDTA;2002;Joao;Saraiva;;Program Committee
+LDTA;2002;David;Watt;;Program Committee
+LDTA;2002;Görel;Hedin;;Organiser
+LDTA;2002;Marjan;Mernik;;Organiser
+LDTA;2002;Didier;Parigot;;Organiser
+LDTA;2003;Isabelle;Attali;;Organiser
+LDTA;2003;Mark;van den Brand;;Organiser
+LDTA;2003;Pierre-Etienne;Moreau;;Organiser
+LDTA;2003;Barrett;R. Bryant;;Program Chair
+LDTA;2003;Joao;Saraiva;;Program Chair
+LDTA;2003;Don;Batory;;Program Committee
+LDTA;2003;Uwe;Glaesser;;Program Committee
+LDTA;2003;Katsuhiko;Gondow;;Program Committee
+LDTA;2003;Uwe;Kastens;;Program Committee
+LDTA;2003;Paul;Klint;;Program Committee
+LDTA;2003;Jan;Madey;;Program Committee
+LDTA;2003;Marjan;Mernik;;Program Committee
+LDTA;2003;Thomas;Noll;;Program Committee
+LDTA;2003;Oege;de Moor;;Program Committee
+LDTA;2003;Peter;D. Mosses;;Program Committee
+LDTA;2003;Eelco;Visser;;Program Committee
+LDTA;2004;Isabelle;Attali;;Organiser
+LDTA;2004;Thomas;Noll;;Organiser
+LDTA;2004;Joao;Saraiva;;Organiser
+LDTA;2004;Gorel;Hedin;;Program Chair
+LDTA;2004;Eric;Van Wyk;;Program Chair
+LDTA;2004;John;Boyland;;Program Committee
+LDTA;2004;Olivier;Danvy;;Program Committee
+LDTA;2004;Jose;Labra Gayo;;Program Committee
+LDTA;2004;Paul;Klint;;Program Committee
+LDTA;2004;Jens;Knoop;;Program Committee
+LDTA;2004;Erik;Meijer;;Program Committee
+LDTA;2004;Didier;Parigot;;Program Committee
+LDTA;2004;Paul;Roe;;Program Committee
+LDTA;2004;Ganesh;Sittampalam;;Program Committee
+LDTA;2004;Anthony;Sloane;;Program Committee
+LDTA;2004;Yannis;Smaragdakis;;Program Committee
+LDTA;2004;Doaitse;Swierstra;;Program Committee
+LDTA;2004;Kris;de Volder;;Program Committee
+LDTA;2005;Erik;Meijer;;Keynote Speaker
+LDTA;2005;John;Boyland;;Program Chair
+LDTA;2005;G?rel;Hedin;;Program Chair
+LDTA;2005;Shigero;Chiba;;Program Committee
+LDTA;2005;Jim;Cordy;;Program Committee
+LDTA;2005;Susan;L. Graham;;Program Committee
+LDTA;2005;Adrian;Johnstone;;Program Committee
+LDTA;2005;Paul;Klint;;Program Committee
+LDTA;2005;Jens;Knoop;;Program Committee
+LDTA;2005;Eric;Madeleine;;Program Committee
+LDTA;2005;Arnd;Poetzsch-Heffter;;Program Committee
+LDTA;2005;Ganesh;Sittampalam;;Program Committee
+LDTA;2005;Anthony;Sloane;;Program Committee
+LDTA;2005;Doaitse;Swierstra;;Program Committee
+LDTA;2005;Kris;de Volder;;Program Committee
+LDTA;2005;Andrew;Wendelborn;;Program Committee
+LDTA;2005;Thomas;Noll;;Organiser
+LDTA;2005;Joost;Visser;;Organiser
+LDTA;2005;Eric;van Wyk;;Organiser
+LDTA;2006;Uwe;Assmann;;Program Committee
+LDTA;2006;John;Tang Boyland;;Program Chair
+LDTA;2006;Jim;Cordy;;Program Committee
+LDTA;2006;Jan;Heering;;Program Committee
+LDTA;2006;Nigel;Horspool;;Program Committee
+LDTA;2006;Johan;Jeuring;;Program Committee
+LDTA;2006;Adrian;Johnstone;;Program Committee
+LDTA;2006;Steven;Klusener;;Program Committee
+LDTA;2006;David;Lacey;;Program Committee
+LDTA;2006;Brian;Malloy;;Program Committee
+LDTA;2006;Paul;Roe;;Program Committee
+LDTA;2006;Michael;Schwartzbach;;Program Committee
+LDTA;2006;Tony;Sloane;;Program Chair
+LDTA;2006;Yannis;Smaragdakis;;Program Committee
+LDTA;2006;David;Watt;;Program Committee
+LDTA;2006;David;Wile;;Program Committee
+LDTA;2006;Eric;Van Wyk;;Organiser
+LDTA;2006;Joost;Visser;;Organiser
+LDTA;2007;Judith;Bishop;;Program Committee
+LDTA;2007;Claus;Brabrand;;Program Committee
+LDTA;2007;Nigel;Horspool;;Program Committee
+LDTA;2007;Johan;Jeuring;;Program Committee
+LDTA;2007;Adrian;Johnstone;;Program Chair
+LDTA;2007;Steven;Klusener;;Program Committee
+LDTA;2007;Kent;Lee;;Program Committee
+LDTA;2007;Brian;Malloy;;Program Committee
+LDTA;2007;Terence;Parr;;Program Committee
+LDTA;2007;Michael;Schwartzbach;;Program Committee
+LDTA;2007;Tony;Sloane;;Program Chair
+LDTA;2007;Jurgen;Vinju;;Program Committee
+LDTA;2007;Thomas;Noll;;Organiser
+LDTA;2007;Alcino;Cunha;;Organiser
+LDTA;2008;Adrian;Johnstone;;Program Chair
+LDTA;2008;Jurgen;Vinju;;Program Chair
+LDTA;2009;Jurgen;Vinju;;Program Chair
+LDTA;2009;Torbjoern;Ekman;;Program Chair
+LDTA;2009;Erik;Meijer;;Program Committee
+LDTA;2009;Walid;Taha;;Program Committee
+LDTA;2009;Bob;Fuhrer;;Program Committee
+LDTA;2009;Susan;Eisenbach;;Program Committee
+LDTA;2009;Jean-Marie;Jacquet;;Program Committee
+LDTA;2009;Sibylle;Schuppe;;Program Committee
+LDTA;2009;Elizabeth;Scott;;Program Committee
+LDTA;2009;Robert;Grimm;;Program Committee
+LDTA;2009;Judith;Bishop;;Program Committee
+LDTA;2009;Tudor;Girba;;Program Committee
+LDTA;2009;Marjan;Mernik;;Program Committee
+LDTA;2009;Thomas;Dean;;Program Committee
+LDTA;2009;Martin;Bravenboer;;Program Committee
+LDTA;2009;Pierre-Etienne;Moreau;;Program Committee
+LDTA;2009;Gabi;Taentzer;;Program Committee
+LDTA;2009;Joao;Saraiva;;Program Committee
+LDTA;2009;Tijs;van der Storm;;Program Committee
+LDTA;2009;Stephen;Edwards;;Program Committee
+LDTA;2009;Peter;Thiemann;;Program Committee
 LDTA;2010;Claus;Brabrand;;Program Chair
 LDTA;2010;Pierre-Etienne;Moreau;;Program Chair
 LDTA;2010;Emilie;Balland;;Program Committee
@@ -66,6 +560,131 @@ LDTA;2012;Mark;van den Brand;;Steering Committee
 LDTA;2012;Görel;Hedin;;Steering Committee
 LDTA;2012;Tony;Sloane;;Steering Committee
 LDTA;2012;Eric;Van Wyk;;Steering Committee
+SANER;2015;Ira;Baxter;;Steering Committee
+SANER;2015;Dave;Binkley;;Steering Committee
+SANER;2015;Elliot;Chikofsky;;Steering Committee
+SANER;2015;Serge;Demeyer;;Steering Committee
+SANER;2015;Rainer;Koschke;;Steering Chair
+SANER;2015;Ralf;Lämmel;;Steering Committee
+SANER;2015;David;Lo;;Steering Committee
+SANER;2015;Andreas;Winter;;Steering Committee
+SANER;2015;Yann-Gaël;Guéhéneuc;;General Chair
+SANER;2015;Giuliano;Antoniol;;Local Chair
+SANER;2015;Ghizlane;El Boussaidi;;Local Chair
+SANER;2015;Yann-Gaël;Guéhéneuc;;Publication Chair
+SANER;2015;Bram;Adams;;Publication Chair
+SANER;2015;Alexander;Serebrenik;;Publication Chair
+SANER;2015;Veronika;Bauer;;Publicity Chair
+SANER;2015;Vincent;Boisselle;;Web Chair
+SANER;2015;Ségla;Kpodjedo;;Student Volunteers Chair
+SANER;2015;Elliot;J. Chikofsky;;Finance Chair
+SANER;2015;Hausi;A. Müller;;Finance Chair
+SANER;2015;Bram;Adams;;Program Chair
+SANER;2015;Alexander;Serebrenik;;Program Chair
+SANER;2015;Naouel;Moha;;ERA Track Chair
+SANER;2015;Nikolaos;Tsantalis;;ERA Track Chair
+SANER;2015;Ralf;Lämmel;;Doctoral Symposium Chair
+SANER;2015;Peter;C. Rigby;;Doctoral Symposium Chair
+SANER;2015;Jens;Krinke;;Tutorials Chair
+SANER;2015;Bonita;Sharif;;Tutorials Chair
+SANER;2015;Jane;Hayes;;Panel Chair
+SANER;2015;Marianne;Huchard;;Panel Chair
+SANER;2015;Foutse;Khomh;;Satellite Events Chair
+SANER;2015;Wahab;Hamou-Lhadj;;Industrial Track Chair
+SANER;2015;Francesca;Arcelli Fontana;;Workshop Chair
+SANER;2015;Emily;Hill;;Tool Track Chair
+SANER;2015;Bram;Adams;;Program Committee
+SANER;2015;Nicolas;Anquetil;;Program Committee
+SANER;2015;Alberto;Bacchelli;;Program Committee
+SANER;2015;Gabriele;Bavota;;Program Committee
+SANER;2015;Olga;Baysal;;Program Committee
+SANER;2015;Alexandre;Bergel;;Program Committee
+SANER;2015;Árpád;Beszédes;;Program Committee
+SANER;2015;Dave;Binkley;;Program Committee
+SANER;2015;Christian;Bird;;Program Committee
+SANER;2015;Andrea;Capiluppi;;Program Committee
+SANER;2015;Jean-Rémy;Falleri;;Program Committee
+SANER;2015;Keith;Brian Gallagher;;Program Committee
+SANER;2015;Harald;Gall;;Program Committee
+SANER;2015;Daniel;German;;Program Committee
+SANER;2015;Nils;Göde;;Program Committee
+SANER;2015;Mike;Godfrey;;Program Committee
+SANER;2015;Yann-Gaël;Guéhéneuc;;Program Committee
+SANER;2015;Latifa;Guerrouj;;Program Committee
+SANER;2015;Sonia;Haiduc;;Program Committee
+SANER;2015;Jane;Hayes;;Program Committee
+SANER;2015;Emily;Hill;;Program Committee
+SANER;2015;Abram;Hindle;;Program Committee
+SANER;2015;Daqing;Hou;;Program Committee
+SANER;2015;Marianne;Huchard;;Program Committee
+SANER;2015;Akinori;Ihara;;Program Committee
+SANER;2015;Katsuro;Inoue;;Program Committee
+SANER;2015;Daniel;Izquierdo-Cortazar;;Program Committee
+SANER;2015;Yasutaka;Kamei;;Program Committee
+SANER;2015;Siim;Karus;;Program Committee
+SANER;2015;Takashi;Kobayashi;;Program Committee
+SANER;2015;Patricia;Lago;;Program Committee
+SANER;2015;Ralf;Lämmel;;Program Committee
+SANER;2015;David;Lo;;Program Committee
+SANER;2015;Angela;Lozano;;Program Committee
+SANER;2015;Mircea;Lungu;;Program Committee
+SANER;2015;Mika;Mäntylä;;Program Committee
+SANER;2015;Alessandro;Marchetto;;Program Committee
+SANER;2015;Cristina;Marinescu;;Program Committee
+SANER;2015;Ali;Mesbah;;Program Committee
+SANER;2015;Mehdi;Mirakhorli;;Program Committee
+SANER;2015;Audris;Mockus;;Program Committee
+SANER;2015;Leon;Moonen;;Program Committee
+SANER;2015;Tukaram;Muske;;Program Committee
+SANER;2015;Meiyappan;Nagappan;;Program Committee
+SANER;2015;Iulian;Neamtiu;;Program Committee
+SANER;2015;Ipek;Ozkaya;;Program Committee
+SANER;2015;Ekaterina;Pek;;Program Committee
+SANER;2015;Lori;Pollock;;Program Committee
+SANER;2015;Jochen;Quante;;Program Committee
+SANER;2015;Gregorio;Robles;;Program Committee
+SANER;2015;Giuseppe;Scanniello;;Program Committee
+SANER;2015;Sibylle;Schupp;;Program Committee
+SANER;2015;Alexander;Serebrenik;;Program Committee
+SANER;2015;Weiyi;Shang;;Program Committee
+SANER;2015;Bonita;Sharif;;Program Committee
+SANER;2015;David;Shepherd;;Program Committee
+SANER;2015;Emad;Shihab;;Program Committee
+SANER;2015;Vibha;Sinha;;Program Committee
+SANER;2015;Diomidis;Spinellis;;Program Committee
+SANER;2015;Ashish;Sureka;;Program Committee
+SANER;2015;Lin;Tan;;Program Committee
+SANER;2015;Marco;Tulio Valente;;Program Committee
+SANER;2015;Bogdan;Vasilescu;;Program Committee
+SANER;2015;Jurgen;Vinju;;Program Committee
+SANER;2015;Michel;Wermelinger;;Program Committee
+SANER;2015;Zhenchang;Xing;;Program Committee
+SANER;2015;Dongmei;Zhang;;Program Committee
+SANER;2015;Hongyu;Zhang;;Program Committee
+SANER;2015;Thomas;Zimmermann;;Program Committee
+SANER;2015;Ying;Zou;;Program Committee
+SANER;2015;Foutse;Khomh;;Tool Track Program Committee
+SANER;2015;Emily;Hill;;Tool Track Program Committee
+SANER;2015;Stéphane;Vaucher;;Tool Track Program Committee
+SANER;2015;Sonia;Haiduc;;Tool Track Program Committee
+SANER;2015;Nasir;Ali;;Tool Track Program Committee
+SANER;2015;David;Shepherd;;Tool Track Program Committee
+SANER;2015;Felienne;Hermans;;Tool Track Program Committee
+SANER;2015;David;Lo;;Tool Track Program Committee
+SANER;2015;Gabriele;Bavota;;Tool Track Program Committee
+SANER;2015;Iman;Keivanloo;;Tool Track Program Committee
+SANER;2015;Venera;Arnaoudova;;Tool Track Program Committee
+SANER;2015;Foutse;Khomh;;Industrial Track Program Committee
+SANER;2015;Wahab;Hamou-Lhadj;;Industrial Track Program Committee
+SANER;2015;Josef;Pichler;;Industrial Track Program Committee
+SANER;2015;Weiyi;Shang;;Industrial Track Program Committee
+SANER;2015;Vassilios;Tzerpos;;Industrial Track Program Committee
+SANER;2015;Sigrid;Eldh;;Industrial Track Program Committee
+SANER;2015;Alf;Larsson;;Industrial Track Program Committee
+SANER;2015;Mark;Van Den Brand;;Industrial Track Program Committee
+SANER;2015;Mark;Grechanik;;Industrial Track Program Committee
+SANER;2015;Radu;Marinescu;;Industrial Track Program Committee
+SANER;2015;Juergen;Rilling;;Industrial Track Program Committee
 SLE;2008;Mark;van den Brand;;Keynote Speaker
 SLE;2008;Anneke;Kleppe;;Keynote Speaker
 SLE;2008;Mark;van den Brand;;Steering Committee

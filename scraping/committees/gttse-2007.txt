@@ -1,0 +1,45 @@
+#DONE
+     http://wiki.di.uminho.pt/twiki/bin/view/Events/GTTSE2007/Organisers
+     Summer school chairs
+TuCh Ralf Lämmel (Tutorials Chair), Microsoft Corporation, USA.
+OrCh João Saraiva (Organizing Chair), Universidade do Minho, Braga, Portugal.
+TuCh Joost Visser (Tutorials Chair), Software Improvement Group, The Netherlands.
+     Organizing committee
+OrCo Alcino Cunha, Universidade do Minho, Braga, Portugal.
+OrCo João Saraiva, Universidade do Minho, Braga, Portugal.
+OrCo Ricardo Vilaça, Universidade do Minho, Braga, Portugal.
+OrCo Joost Visser, Software Improvement Group, The Netherlands.
+     Scientific committee
+ScCo Uwe Aßmann, TU Dresden, Germany.
+ScCo Paulo Borba, Universidade Federal de Pernambuco, Brasil.
+ScCo Mark van den Brand, Technical University of Eindhoven, The Netherlands.
+ScCo Charles Consel, LaBRI / INRIA, France.
+ScCo Jim Cordy, Queen's University, Canada.
+ScCo Alcino Cunha, Universidade do Minho, Portugal.
+ScCo Jean-Luc Dekeyser, Université des Sciences et Technologies de Lille, France.
+ScCo Andrea DeLucia, Università di Salerno, Italy.
+ScCo Stephen Freund, Williams College, USA.
+ScCo Jeff Gray, University of Alabama at Birmingham, USA.
+ScCo Jean-Luc Hainaut, University of Namur, Belgium.
+ScCo Reiko Heckel, University of Leicester, UK.
+ScCo Görel Hedin, Lund Institute of Technology, Sweden.
+ScCo Dirk Heuzeroth, IBM Deutschland Entwicklung GmbH, Germany.
+ScCo Zhenjiang Hu, The University of Tokyo, Japan.
+ScCo Ralf Lämmel, Microsoft Corporation, USA.
+ScCo Julia Lawall, University of Copenhagen, Denmark.
+ScCo Cristina Lopes, University of California at Irvine, USA.
+ScCo Tom Mens, University of Mons-Hainaut, Belgium.
+ScCo Marjan Mernik, University of Maribor, Slovenia.
+ScCo Klaus Ostermann, Technical University Darmstadt, Germany.
+ScCo Jens Palsberg, UCLA, USA.
+ScCo Benjamin C. Pierce, University of Pennsylvania, USA.
+ScCo João Saraiva, Universidade do Minho, Portugal.
+ScCo Andy Schürr, Technical University Darmstadt, Germany.
+ScCo Anthony Sloane, Macquarie University, Australia.
+ScCo Perdita Stevens, University of Edinburgh, UK.
+ScCo Peter Thiemann, Universität Freiburg, Germany.
+ScCo Simon Thompson, University of Kent, UK.
+ScCo Joost Visser, Software Improvement Group, The Netherlands.
+ScCo Victor Winter, University of Nebraska at Omaha, USA.
+ScCo Eric Van Wyk, University of Minnesota, USA.
+ScCo Albert Zündorf, University of Kassel, Germany.

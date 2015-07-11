@@ -1,24 +1,25 @@
-http://people.cs.kuleuven.be/~dirk/ada-belgium/events/09/090328-etaps-ldta.html
-==Program Committee==
-
-Jurgen Vinju, CWI, Amsterdam (co-chair)
-Torbjoern Ekman, Oxford, UK (co-chair)
-Erik Meijer, Microsoft, Redmond, USA
-Walid Taha, Rice University, Houston USA
-Bob Fuhrer, IBM TJ Watson, USA
-Susan Eisenbach, Imperial College, UK
-Jean-Marie Jacquet, FUNDP, Namur, Belgium
-Sibylle Schuppe, Chalmers, Sweden
-Elizabeth Scott, RHUL, UK
-Robert Grimm, NYU, USA
-Judith Bishop, Pretoria, South Africa
-Tudor Girba, Univ of Berne, Switzerland
-Marjan Mernik, University of Maribor, Slovenia
-Thomas Dean, Fondazione Bruno Kessler - IRST, Italy
-Martin Bravenboer, Univ. of Oregon, USA
-Pierre-Etienne Moreau, INRIA-LORIA, France
-Gabi Taentzer, Philipps-Universitaet Marburg, Germany
-Joao Saraiva, Universidade do Minho, Braga, Portugal
-Tijs van der Storm, CWI, The Netherlands
-Stephen Edwards, Columbia University, USA
-Peter Thiemann, Universitaet Freiburg, Germany
+#DONE
+     http://people.cs.kuleuven.be/~dirk/ada-belgium/events/09/090328-etaps-ldta.html
+     ==Program Committee==
+     
+PrCh Jurgen Vinju, CWI, Amsterdam (co-chair)
+PrCh Torbjoern Ekman, Oxford, UK (co-chair)
+PrCo Erik Meijer, Microsoft, Redmond, USA
+PrCo Walid Taha, Rice University, Houston USA
+PrCo Bob Fuhrer, IBM TJ Watson, USA
+PrCo Susan Eisenbach, Imperial College, UK
+PrCo Jean-Marie Jacquet, FUNDP, Namur, Belgium
+PrCo Sibylle Schuppe, Chalmers, Sweden
+PrCo Elizabeth Scott, RHUL, UK
+PrCo Robert Grimm, NYU, USA
+PrCo Judith Bishop, Pretoria, South Africa
+PrCo Tudor Girba, Univ of Berne, Switzerland
+PrCo Marjan Mernik, University of Maribor, Slovenia
+PrCo Thomas Dean, Fondazione Bruno Kessler - IRST, Italy
+PrCo Martin Bravenboer, Univ. of Oregon, USA
+PrCo Pierre-Etienne Moreau, INRIA-LORIA, France
+PrCo Gabi Taentzer, Philipps-Universitaet Marburg, Germany
+PrCo Joao Saraiva, Universidade do Minho, Braga, Portugal
+PrCo Tijs van der Storm, CWI, The Netherlands
+PrCo Stephen Edwards, Columbia University, USA
+PrCo Peter Thiemann, Universitaet Freiburg, Germany

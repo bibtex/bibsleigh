@@ -1,0 +1,104 @@
+#DONE
+     http://gttse.wikidot.com/2015:committees
+     Committees
+     Fold
+     Table of Contents
+     Organization committee
+     Scientific committee
+     Steering committee
+     Organization committee
+     
+     The role of the organization committee is to organize the current edition of GTTSE. This includes adjustment of the scope for the current edition, selection of dates and place (the latter being always the same hotel in Braga so far), identification of overall topics and invitation of appropriate speakers, advertisement, financial administration, provision of help to the speakers regarding various matters, running the actual event, and guidance of all work towards the post-proceedings published with Springer.
+     
+OrCh Jácome Cunha (Universidade Nova de Lisboa, Portugal) - Organization Chair
+PrCh João Paulo Fernandes (Universidade da Beira Interior, Portugal) - Program Chair
+BrCh Ralf Lämmel (Universität Koblenz-Landau, Germany) - Briefings Chair
+GeCh João Saraiva (Universidade do Minho, Portugal) - General Chair
+InCh Joost Visser (Software Improvement Group, The Netherlands) - Industry Chair
+PuCh Vadim Zaytsev (Universiteit van Amsterdam, The Netherlands) - Publicity Chair
+     Scientific committee
+     
+     The scientific committee of GTTSE plays a key role in the success of this event. Its members are expected to communicate the event within their schools or organizations and among their peers and students. In this manner, GTTSE is broadly communicated across the computer science areas that are thought to be connected and advanced by GTTSE. Where applicable, committee members are encouraged to identify suitable PhD or MSc students and encourage them to join GTTSE and actively participate in the school. The scientific committee is also involved in post-school reviewing of the briefings by renowned researchers. The reviewing process is not selective, as it is instead meant to ensure quality and readability for the invited briefings to be published with Springer. Given that briefings (as defined by GTTSE) are relatively short publications and given the size the GTTSE scientific committee, this workload is small: we predict that up to 2 briefings will need to be revised per committee member. In addition to reviewing briefings, the committee may also be involved in shepherding short participants' contributions to the post-proceedings.
+     
+ScCo Bram Adams (École Polytechnique de Montréal)
+ScCo Benoit Baudry (INRIA)
+ScCo Xavier Blanc (Bordeaux 1 University)
+ScCo Darius Blasband (RainCode)
+ScCo Paulo Borba (Federal University of Pernambuco)
+ScCo Mark van den Brand (Eindhoven University of Technology)
+ScCo Martin Bravenboer (LogicBlox Inc.)
+ScCo Jordi Cabot (INRIA-École des Mines de Nantes)
+ScCo João Cardoso (FEUP/Universidade do Porto)
+ScCo Michel Chaudron (Chalmers & Gothenborg University)
+ScCo Anthony Cleve (University of Namur)
+ScCo Benoît Combemale (Université de Rennes 1)
+ScCo Alcino Cunha (Universidade de Minho)
+ScCo Jácome Cunha (Universidade Nova de Lisboa)
+ScCo Juan De Lara (Universidad Autonoma de Madrid)
+ScCo Andrea De Lucia (University of Salerno)
+ScCo Coen De Roover (Vrije Universiteit Brussel)
+ScCo Davide Di Ruscio (Università degli Studi dell'Aquila)
+ScCo Zinovy Diskin (McMaster University / University of Waterloo)
+ScCo Rudolf Ferenc (University of Szeged)
+ScCo João M. Fernandes (Universidade do Minho)
+ScCo João Paulo Fernandes (Universidade da Beira Interior)
+ScCo João Saraiva (Universidade do Minho)
+ScCo Mike Godfrey (University of Waterloo)
+ScCo Martin Gogolla (University of Bremen)
+ScCo Jeff Gray (University of Alabama)
+ScCo Mark Grechanik (University of Illinois at Chicago)
+ScCo Yann-Gaël Guéhéneuc (École Polytechnique de Montréal)
+ScCo Gorel Hedin (Lund University)
+ScCo Florian Heidenreich (DevBoost GmbH)
+ScCo Pedro Rangel Henriques (Universidade do Minho)
+ScCo Felienne Hermans (Delft University of Technology)
+ScCo Dirk Heuzeroth (Hochschule Heilbronn)
+ScCo Robert Hirschfeld (Hasso-Plattner-Institut)
+ScCo Zhenjiang Hu (NII)
+ScCo Marianne Huchard (Université Montpellier 2 et CNRS)
+ScCo Jean-Marc Jézéquel (University of Rennes 1)
+ScCo Foutse Khomh (École Polytechnique de Montréal)
+ScCo Holger Kienle (Freier Informatiker)
+ScCo Dimitris Kolovos (University of York)
+ScCo Nicholas A. Kraft (ABB Corporate Research)
+ScCo Jens Krinke (University College London)
+ScCo Christian Kästner (Carnegie Mellon University)
+ScCo Paul Klint (Centrum Wiskunde & Informatica)
+ScCo Ralf Lämmel (Universität Koblenz-Landau)
+ScCo Michele Lanza (University of Lugano)
+ScCo Timothy Lethbridge (University of Ottawa)
+ScCo David Lo (Singapore Management University)
+ScCo Tiziana Margaria (Lero)
+ScCo Erik Meijer (Delft University of Technology)
+ScCo Marjan Mernik (University of Maribor)
+ScCo Ana Moreira (Universidade Nova de Lisboa)
+ScCo José Nuno Oliveira (Universidade do Minho)
+ScCo Rocco Oliveto (University of Molise)
+ScCo Richard Paige (University of York)
+ScCo Alfonso Pierantonio (Università degli Studi dell'Aquila)
+ScCo Juergen Rilling (Concordia University)
+ScCo Sibylle Schupp (Hamburg University of Technology)
+ScCo Bran Selic (Malina Software Corp.)
+ScCo Alexander Serebrenik (Eindhoven University of Technology)
+ScCo Tony Sloane (Macquarie University)
+ScCo Simão Melo de Sousa (Universidade da Beira Interior)
+ScCo Tijs van der Storm (Centrum Wiskunde & Informatica)
+ScCo James Terwilliger (Microsoft Corporation)
+ScCo Laurence Tratt (King's College London)
+ScCo Antonio Vallecillo (Universidad de Málaga)
+ScCo Eric Van Wyk (University of Minnesota)
+ScCo Jurgen Vinju (Centrum Wiskunde & Informatica)
+ScCo Joost Visser (Radboud University Nijmegen)
+ScCo Markus Völter (independent)
+ScCo Tanja E. J. Vos (Universidad Politécnica de Valencia)
+ScCo Andreas Winter (Carl von Ossietzky University)
+ScCo Victor Winter (University of Nebraska at Omaha)
+ScCo Andy Zaidman (Delft University of Technology)
+ScCo Vadim Zaytsev (Universiteit van Amsterdam)
+     Steering committee
+     
+     The role of the steering committee is to guarantee the long term continuity of GTTSE. At this point, the founders of GTTSE equal the steering committee.
+     
+StCo Ralf Lämmel (Universität Koblenz-Landau, Germany)
+StCo João Saraiva (Universidade do Minho, Portugal)
+StCo Joost Visser (Software Improvement Group, The Netherlands)

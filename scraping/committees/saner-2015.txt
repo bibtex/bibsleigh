@@ -1,0 +1,247 @@
+#DONE
+     http://saner.soccerlab.polymtl.ca/doku.php?id=en:committees
+     Steering Committee
+StCo Ira Baxter	Semantic Designs	Web
+StCo Dave Binkley	Loyola University Maryland	Web
+StCo Elliot Chikofsky	PathBridge	Web
+StCo Serge Demeyer	University of Antwerp	Web
+StCh Rainer Koschke (chair)	Universität Bremen	Web
+StCo Ralf Lämmel	Universität Koblenz-Landau	Web
+StCo David Lo	Singapore Management University	Web
+StCo Andreas Winter	Carl von Ossietzky University Oldenburg	Web
+     
+     Organisation Committee
+     General Chair
+     
+     http://www.ptidej.net/Members/guehene
+GeCh Yann-Gaël Guéhéneuc
+     
+     Local Co-chairs
+     
+     http://www.antoniol.net/
+LoCh Giuliano Antoniol
+     
+     http://etsmtl.ca/Professeurs/gelboussaidi/Accueil?lang=en-CA
+LoCh Ghizlane El Boussaidi
+     
+     
+     Proceedings Co-chairs
+     
+     http://www.ptidej.net/Members/guehene
+PuCh Yann-Gaël Guéhéneuc
+     http://mcis.polymtl.ca/~bram/
+PuCh Bram Adams
+     
+     http://www.win.tue.nl/~aserebre/
+PuCh Alexander Serebrenik
+     
+     
+     Publicity Chair
+     
+     http://www4.in.tum.de/~bauerv/
+PbCh Veronika Bauer
+     joined the chair for Software & Systems Engineering at Technische Universität München in March 2011 as a research assistant and PhD candidate. Veronika'S current research goal is to close the gap between research on software reuse in academia and reuse practices in industry. Therefore, she is currently conducting empirical studies with several companies to collect success factors, as well as hindrances and challenges of conducting beneficial reuse.
+     
+     Web Chair
+     
+     http://ca.linkedin.com/pub/vincent-boisselle/22/3a6/874
+WeCh Vincent Boisselle
+     is doing knife-edge research on new software-maintenance approaches and working closely with the Montreal aerospace industry to design and develop new software and products life cycle tools. Vincent's interests include: developing tools for software modifications propagation analysis and developing tools for data mining and classification.
+     
+     Student-volunteer Chair
+     
+     http://web.soccerlab.polymtl.ca/~sekpo/
+SVCh Ségla Kpodjedo
+     completed in August 2011 his Ph.D. in the Department of Computer and Software Engineering of the École Polytechnique de Montréal. He received a Diploma in computer engineering (equivalent to a B.Sc.) in 2005 from UTBM (France) and a M.Sc.A in 2007 from École Polytechnique de Montréal. His Ph.D. work, completed under the supervision of Professors Philippe Galinier and Giuliano Antoniol, was dedicated to graph matching and search-based techniques for software engineering, with notable applications in software evolution and defect prediction. Ségla's main research interests include search-based software engineering, software evolution, defect prediction in software systems, empirical software engineering, combinatorial optimisation, and meta-heuristics.
+     
+     Finance Co-chairs
+     
+     http://pathbridge.net/chikofsky/
+FiCh Elliot J. Chikofsky
+     
+     http://webhome.cs.uvic.ca/~hausi/
+FiCh Hausi A. Müller
+     is a Professor in the Department of Computer Science and Associate Dean of Research in the Faculty of Engineering at University of Victoria, Canada. He is Chair of the IEEE Computer Society Technical Council on Software Engineering (TCSE). His research interests include software engineering, software evolution, smarter commerce, self-adaptive and self-managing systems, situation-aware systems, context-aware systems, service-oriented systems, reverse engineering, software reengineering, program understanding, and visualization. He is a principal investigator in the NSERC Strategic Research Network for Smart Applications on Virtual Infrastructure (SAVI). The main research goal of the SAVI Network is to address the design of future applications platforms built on a flexible, versatile and evolvable infrastructure that can readily deploy, maintain, and retire the large-scale, possibly short-lived, distributed applications that will be typical in the future applications marketplace. The SAVI partnership involves investigators from nine Canadian universities and 13 companies bringing together expertise in networking, cloud computing, applications, and business. In 2011 Dr. Müller’s research team won the IBM Canada CAS Research Project of the Year Award. In 2006 he received the IBM CAS Faculty Fellow of the Year Award, the CSER Outstanding Leadership Award, and a Stevens Citation for his many contributions to the software reverse engineering community. He was the founding Director of BSEng, a CEAB accredited Bachelor of Software Engineering degree program in the Faculty of Engineering. He serves on the Editorial Board of Software Maintenance and Evolution and Software Process: Improvement and Practice (JSME). He served on the Editorial Board of IEEE Transactions on Software Engineering (TSE).
+     
+     
+     
+     Scientific Committee
+     Research Track Co-chairs
+     
+     http://mcis.polymtl.ca/~bram/
+PrCh Bram Adams
+     is an assistant professor at the École Polytechnique de Montréal, where he heads the MCIS lab. on Maintenance, Construction, and Intelligence of Software. He obtained his Ph.D. at Ghent University (Belgium) and was a postdoctoral fellow at Queen's University (Ontario, Canada) from October 2008 to December 2011. His research interests include software release engineering in general, and software integration, software build systems, software modularity, and software maintenance in particular. His work has been published at premier software engineering venues such as TSE, ICSE, FSE, ASE, EMSE, MSR and ICSM. In addition to reviewing for (amongst others) ICSM, MSR, WCRE, CSMR, EMSE and JSS, he co-organized the PLATE, ACP4IS, MUD, MISS and RELENG workshops, the MSR Vision 2020 Summer School and a technical briefing on release engineering at ICSE 2012. He has been program co-chair of the Early Research Achievements track at ICSM 2013 and the 2013 Working Conference on Source Code Analysis and Manipulation.
+     
+     http://www.win.tue.nl/~aserebre/
+PrCh Alexander Serebrenik
+     is an associate professor Software Evolution at Eindhoven University of Technology (The Netherlands). His research interests include software evolution and maintenance, human/social aspects of software engineering, and software measurement. Serebrenik recently served as the general chair of IEEE ICSM 2013, workshops chair of CSMW-WCRE in 2014 and as a program committee member of a number of software engineering conferences (ICSM, MSR data track, ICPC, CSMR ERA). He is a member of the ICSM Steering Committee, IEEE and the European Research Consortium for Informatics and Mathematics Working Group on Software Evolution. Contact him on Twitter @aserebrenik.
+     
+     ERA Track Co-chairs
+     
+     http://www.naouelmoha.net/
+ERCh Naouel Moha
+     is currently associate professor at the department of Informatics at the University of Québec in Montréal (UQAM) and adjunct director of the institutional research centre LATECE (Laboratory for Research on Technology for E-commerce). Her research works focus on software quality, maintenance and evolution. In particular, she is interested in the detection of patterns and anti-patterns in object and service oriented systems. Naouel Moha was also assistant professor at the University of Rennes within the INRIA’s Triskell project-team after doing a postdoctoral fellowship in the same team. She received a Ph.D. from the University of Montreal (Canada) and the University of Lille (France) as well as a master from the University Joseph Fourier (Grenoble, France).
+     
+     
+     http://users.encs.concordia.ca/~nikolaos/
+ERCh Nikolaos Tsantalis
+     is Assistant Professor at the department of Computer Science & Software Engineering, Concordia University. From January 2011 until May 2012, Nikolaos was a Postdoctoral Fellow at the Department of Computing Science, University of Alberta, Edmonton, Canada working with Professor Eleni Stroulia and students from the Service Systems Research Group. In September 2010, Nikolaos received a Ph.D. degree from the department of Applied Informatics, University of Macedonia, Thessaloniki, Greece under the supervision of Dr Alexander Chatzigeorgiou. Nikolaos's research interests include design pattern detection, identification of refactoring opportunities, and design evolution analysis. He is a member of the IEEE and IEEE Computer Society.
+     
+     Doctoral Symposium Track Co-chairs
+     
+     http://softlang.wikidot.com/rlaemmel:home
+DSCh Ralf Lämmel
+     is Professor of Computer Science at the Department of Computer Science at the University of Koblenz-Landau since July 2007. Since 2011 he is the executive director of the Institute for CS at the department. In the past, he held positions at Microsoft Corp., Free University of Amsterdam, CWI (Dutch Center for Mathematics and Computer Science), and the University of Rostock, Germany. Ralf Lämmel's speciality is “software language engineering”, but he is generally interested in themes that combine software engineering and programming languages. His research and teaching interests include program transformation, software re-engineering, grammar-based methods as well as model-driven and model-based methods. Ralf Lämmel is a committed member of the research community; he is one of the founding fathers of the international summer school series on Generative and Transformational Techniques on Software Engineering (GTTSE), the international conference on Software Language Engineering (SLE), and the 101companies project.
+     
+     http://users.encs.concordia.ca/~pcr/
+DSCh Peter C. Rigby
+     is an assistant professor in Software Engineering at Concordia University in Montreal. His overarching research interest is in understanding how developers collaborate to produce successful software systems. His research program is driven by a desire to determine empirically the factors that lead to the development of successful software and to adapt, apply, and validate these techniques in different settings. Empirical Software Engineering involves mining large data sets to provide an empirical basis for software engineering practices. Software Analytics is then used to provide statistical predictions of, for example, the areas of the system that would benefit from increased developer attention. Grounded, empirical findings are necessary to advance software development as an engineering discipline. He is currently focusing on three research areas: extracting salient code elements (e.g., classes, methods) from informal documentation (e.g., StackOverflow), lightweight industrial software peer review techniques (at Microsoft, AMD, and DND), and the impact of disruptive events on software products. He currently holds two grants to fund this research: an NSERC Discovery Grant and a DND/NSERC Research Partnership Grant.
+     
+     
+     Tutorials Co-chairs
+     
+     http://www0.cs.ucl.ac.uk/staff/J.Krinke/
+TuCh Jens Krinke
+     is Senior Lecturer in the Software Systems Engineering Group at the University College London, where he is Deputy Director of the CREST centre. He is well known for his work on program slicing; current research topics include program analysis for software engineering purposes, in particular dependence analysis for software security, and clone detection and its use in code provenance. Before joining the University College London, he was at King's College London and the FernUniversitaet in Hagen, Germany, where he worked on aspect mining and e-learning applications for distant teaching of software engineering. Jens Krinke received his Ph.D. in computer science from the University of Passau, Germany.
+     
+     
+     http://www.csis.ysu.edu/~bsharif/index.php
+TuCh Bonita Sharif
+     is an Assistant Professor in the Department of Computer Science and Information Systems at Youngstown State University in Ohio, U.S.A. where she directs the Usability Lab and the Software Engineering Research and Empirical Studies Lab (SERESL). Her research interests are in program comprehension, empirical software engineering, software traceability, software visualization to support maintenance of large systems, and eye-tracking research related to software engineering and computing education. She received her Ph.D. in 2010 and MS in 2003 in Computer Science from Kent State University, U.S.A. and BS in Computer Science from Cyprus College, Nicosia Cyprus.
+     
+     International Research Project Panel Co-chairs
+     
+     http://selab.netlab.uky.edu/homepage/
+PaCh Jane Hayes
+     is a Professor in Computer Science at the University of Kentucky. Previously, she was a Corporate Vice President and the Manager of the Integrated System Technologies Operation of Science Applications International Corporation (SAIC). She has over 16 years of experience in the field of verification and validation, testing, software development, and process improvement. She has been the verification and validation technical lead and-or program manager on numerous trusted software development efforts. She has led and participated in numerous management process/product audits and assessments of large projects. She has assisted with process, plan, and procedure development for testing and verification and validation, including assisting with the development of a Y2K testing standard for a commercial initiative. Jane holds a M.S. in Computer Science from the University of Southern Mississippi and a Ph.D. in Information Technology from George Mason University (GMU). She is the founding President of the Alumni Club of the Information Software Engineering Department at GMU, as well as a founding Member of their Industrial Advisory Board. She is a member of ACM and the IEEE Computer Society. She was a Certified Software Test Engineer through the Quality Assurance Institute. Jane has published numerous articles related to software verification, validation, and testing.
+     
+     http://www.lirmm.fr/~huchard/
+PaCh Marianne Huchard
+     obtained its PhD in 1992 and is currently Professor of computer science at University Montpellier 2 since 2004. She is currently Deputy Director of the LIRMM laboratory (Laboratoire d’Informatique, de Robotique, de Micro-Electronique in Montpellier) and she recently served as general chair of the join conferences ECMFA-ECOOP-ECSA 2013 in Montpellier. Her main areas of interest are Formal Concept Analysis (Galois lattice / Concept lattices), in its theoretical aspects as well as in its applications mainly to the domain of software engineering (Model-Driven Engineering, Component-based software engineering and Service-Oriented Architectures).
+     
+     Satellite Events
+     
+     
+SaCh Foutse Khomh
+     is an Assistant Professor at the Ecole Polytechnique de Montréal (Canada) where he leads the SWAT team on software analytics and cloud engineering research. Prior to this position, he was a Research Fellow at Queen's University (Canada), working with the Software Reengineering Research Group and the NSERC/RIM Industrial Research Chair in Software Engineering of Ultra Large Scale Systems. He received a Ph.D in Computer Science in 2010, from the University of Montreal, under the supervision of Yann-Gaël Guéhéneuc, with the Award of Excellence. He also received a Master's degree in Software Engineering from the National Advanced School of Engineering (Cameroon) and a Master's degree (D.E.A) in Mathematics from the University of Yaounde I (Cameroon). His research interests include software maintenance and evolution, cloud engineering, service-centric software engineering, empirical software engineering, and software analytics. His work has been published in top international conferences and journals, including ICSM, MSR, WCRE, ICWS, JSS, JSP, and EMSE. He has served on the program committees of several international conferences including ICSM, WCRE, MSR, ICPC, and has reviewed for top international journals such as SQJ, EMSE, and TSE. He was program co-chair of the Workshops track at the 20th Working Conference on Reverse Engineering (WCRE) and program chair of the Tool track at the 2013 International Working Conference on Source Code Analysis and Manipulation (SCAM).
+     
+     Industrial Track Co-chair
+     
+     http://users.encs.concordia.ca/~abdelw/
+InCh Wahab Hamou-Lhadj
+     leads the Software Behaviour Analysis (SBA) Research Lab to investigate techniques and tools to help software analysts understand and analyze the behaviour of complex software systems. The term 'software behaviour' includes the interactions that occur within the software itself (micro interactions) and between software and its environment (macro interactions). Wahab looks at software from the ecosystem perspective. The outcome of our research can help with a variety of applications: software comprehension, software maintenance and evolution, performance analysis, anomaly detection, software compliance and certification, etc.
+     
+     Workshops Co-chair
+     
+     http://essere.disco.unimib.it/
+WoCh Francesca Arcelli Fontana
+     worked in Italy at University of Milano, University of Salerno and University of Sannio. Currently, she is Associate Professor of software engineering at the Department of Computer Science of the University of Milano Bicocca, where she works in the area of software evolution and reverse engineering and she leads the Evolution of Software SystEms and Reverse Engineering Lab. (ESSeRE). The actual research activity principally concerns software quality assessment, software maintenance and evolution, program comprehension, design patterns detection for reverse engineering, code smell detection through machine learning techniques and empirical analysis in software engineering. She also interested in exploiting complex network analysis in software evolution. She is a member of IEEE Computer Society.
+     
+     Tools Track Co-chair
+     
+     http://msuweb.montclair.edu/~hillem/
+TTCh Emily Hill
+     Today's software is large and complex, with systems consisting of millions of lines of code. New developers to a software project face significant challenges in locating code related to their maintenance tasks of fixing bugs or adding new features. Developers can simply be assigned a bug and told to fix it—even when they have no idea where to begin. In fact, research has shown that a developer typically spends more time locating and understanding code during maintenance than modifying it. Emily Hill works to significantly reduce the cost of software maintenance by reducing the time and effort to find and understand the code relevant to a software maintenance task. Emily's primary research interests are in software engineering; specifically, her work focuses on reducing software maintenance costs through building intuitive software engineering and program comprehension tools. Her research is inter-disciplinary and combines aspects of software engineering, program analysis, natural language processing, computational linguistics, information retrieval, text mining, and machine learning.
+     
+     Program Committee
+PrCo Bram Adams	École Polytechnique de Montréal	Web
+PrCo Nicolas Anquetil	University of Lille-1	Web
+PrCo Alberto Bacchelli	Delft University of Technology	Web
+PrCo Gabriele Bavota	Free University of Bozen-Bolzano, Italy	Web
+PrCo Olga Baysal	University of Montreal, Canada	Web
+PrCo Alexandre Bergel	University of Chile	Web
+PrCo Árpád Beszédes	Department of Software Engineering, University of Szeged	Web
+PrCo Dave Binkley	Loyola University Maryland	Web
+PrCo Christian Bird	Microsoft Research	Web
+PrCo Andrea Capiluppi	Brunel University	Web
+PrCo Jean-Rémy Falleri	Institut Polytechnique de Bordeaux	Web
+PrCo Keith Brian Gallagher	Florida Institute of Technology	Web
+PrCo Harald Gall	University of Zurich	Web
+PrCo Daniel German	University of Victoria	Web
+PrCo Nils Göde	CQSE GmbH	Web
+PrCo Mike Godfrey	University of Waterloo	Web
+PrCo Yann-Gaël Guéhéneuc	École Polytechnique de Montréal	Web
+PrCo Latifa Guerrouj	Concordia University	Web
+PrCo Sonia Haiduc	Florida State University	Web
+PrCo Jane Hayes	University of Kentucky	Web
+PrCo Emily Hill	Drew University	Web
+PrCo Abram Hindle	University of Alberta	Web
+PrCo Daqing Hou	Clarkson University	Web
+PrCo Marianne Huchard	LIRMM, Université Montpellier 2 et CNRS	Web
+PrCo Akinori Ihara	Nara Institute of Science and Technology	Web
+PrCo Katsuro Inoue	Osaka University	Web
+PrCo Daniel Izquierdo-Cortazar	Bitergia	Web
+PrCo Yasutaka Kamei	Kyushu University	Web
+PrCo Siim Karus	University of Tartu	Web
+PrCo Takashi Kobayashi	Tokyo Institute of Technology	Web
+PrCo Patricia Lago	VU University Amsterdam	Web
+PrCo Ralf Lämmel	Universität Koblenz-Landau	Web
+PrCo David Lo	Singapore Management University	Web
+PrCo Angela Lozano	Vrije Universiteit Brussel	Web
+PrCo Mircea Lungu	University of Bern	Web
+PrCo Mika Mäntylä	Aalto University	Web
+PrCo Alessandro Marchetto	Independent Researcher	Web
+PrCo Cristina Marinescu	Politehnica University of Timisoara	Web
+PrCo Ali Mesbah	University of British Columbia	Web
+PrCo Mehdi Mirakhorli	Rochester Institute of Technology	Web
+PrCo Audris Mockus	University of Tennessee	Web
+PrCo Leon Moonen	Simula Research Laboratory	Web
+PrCo Tukaram Muske	Tata Consultancy Services Ltd	Web
+PrCo Meiyappan Nagappan	Rochester Institute of Technology	Web
+PrCo Iulian Neamtiu	University of California, Riverside	Web
+PrCo Ipek Ozkaya	Carnegie Mellon Software Engineering Institute	Web
+PrCo Ekaterina Pek	Google Germany GmbH	Web
+PrCo Lori Pollock	University of Delaware	Web
+PrCo Jochen Quante	Robert Bosch GmbH	Web
+PrCo Gregorio Robles	Universidad Rey Juan Carlos	Web
+PrCo Giuseppe Scanniello	University of Basilicata	Web
+PrCo Sibylle Schupp	Institute for Software Systems, Hamburg Univ. of Technology, Germany	Web
+PrCo Alexander Serebrenik	Eindhoven University of Technology	Web
+PrCo Weiyi Shang	SAIL, Queen's University	Web
+PrCo Bonita Sharif	Youngstown State University	Web
+PrCo David Shepherd	ABB, Inc	Web
+PrCo Emad Shihab	Concordia University	Web
+PrCo Vibha Sinha	IBM Research Lab, India	Web
+PrCo Diomidis Spinellis	Athens University of Economics and Business	Web
+PrCo Ashish Sureka	Indraprastha Institute of Information Technology (IIIT)	Web
+PrCo Lin Tan	University of Waterloo	Web
+PrCo Marco Tulio Valente	UFMG	Web
+PrCo Bogdan Vasilescu	University of California, Davis	Web
+PrCo Jurgen Vinju	Centrum Wiskunde & Informatica	Web
+PrCo Michel Wermelinger	The Open University	Web
+PrCo Zhenchang Xing	Nanyang Technological University	Web
+PrCo Dongmei Zhang	Microsoft Research	Web
+PrCo Hongyu Zhang	Tsinghua University	Web
+PrCo Thomas Zimmermann	Microsoft Research	Web
+PrCo Ying Zou	Queen's University
+     
+     
+     Tool track program committee
+     
+     Name	email	Web site	organization	role
+TTPC Foutse Khomh	foutse.khomh@polymtl.ca	Web	DGIGL, École Polytechnique de Montréal	track chair
+TTPC Emily Hill	emhill@drew.edu	Web	Montclair State University	track chair
+TTPC Stéphane Vaucher	svaucher@benchmarkcanada.com	Web
+TTPC Sonia Haiduc	shaiduc@cs.fsu.edu	Web	Florida State University
+TTPC Nasir Ali	nasir.ali08@gmail.com
+TTPC David Shepherd	davidshepherd@gmail.com	Web
+TTPC Felienne Hermans	felienne@gmail.com	Web
+TTPC David Lo	davidlo@smu.edu.sg	Web	Singapore Management University
+TTPC Gabriele Bavota	gabriele.bavota@unibz.it
+TTPC Iman Keivanloo	imanmahsa@gmail.com		Queen's University
+TTPC Venera Arnaoudova	venera.arnaoudova@gmail.com	Web	École Polytechnique de Montréal
+     
+     
+     Industry track program committee
+     name	email	Web site	organization	role
+ITPC Foutse Khomh	foutse.khomh@polymtl.ca	Web	DGIGL, École Polytechnique de Montréal	track chair
+ITPC Wahab Hamou-Lhadj	abdelw@ece.concordia.ca	Web	Concordia University	track chair
+ITPC Josef Pichler	josef.pichler@scch.at	Web	Software Competence Center Hagenberg GmbH
+ITPC Weiyi Shang	swy@cs.queensu.ca	Web	SAIL, Queen's University
+ITPC Vassilios Tzerpos	bil@cse.yorku.ca	Webl	York University
+ITPC Sigrid Eldh	sigrid.eldh@ericsson.com	Web	Ericsson AB
+ITPC Alf Larsson	alf.larsson@ericsson.com
+ITPC Mark Van Den Brand	m.g.j.v.d.brand@tue.nl	Web	Eindhoven University of Technology
+ITPC Mark Grechanik	drmark@uic.edu	Web
+ITPC Radu Marinescu	radu.marinescu@cs.upt.ro	Web	Politehnica University of Timisoara
+ITPC Juergen Rilling	juergen.rilling@concordia.ca	Web	Concordia University

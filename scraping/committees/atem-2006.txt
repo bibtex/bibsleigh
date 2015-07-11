@@ -1,0 +1,9 @@
+#DONE
+     http://www.dbs.uni-hannover.de/emisa/OLDA06/msg00160.html
+     Workshop Organizers
+     ==================
+     
+OrCo Jean-Marie Favre   University of Grenoble, France
+OrCo Dragan Gasevic     Simon Fraser University, Canada
+OrCo Ralf Lammel        Microsoft Corp., USA
+OrCo Andreas Winter     University of Mainz, Germany

@@ -52,60 +52,107 @@ f.close()
 
 
 ignored = (\
-	'SLE Workshops are handled through SPLASH'\
+	'SLE Workshops are handled through SPLASH',
+	'Name	email	Web site	organization	role',
+	'name	email	Web site	organization	role'\
 )
 
 ignopatterns = (\
 	'Universidade', 'CWI', 'University', 'Dresden', 'Macquarie', 'Eindhoven', 'Clemson', 'Lancaster',
-	'INRIA', '-----', 'Organization'\
+	'INRIA', '-----', '=====', 'Organization', 'Netherlands', 'Centrum voor Wiskunde en Informatica',
+	'France', 'Interactive Software Development', 'Kruislaan', 'NL-1098', 'The Netherlands', 'Faculty', 
+	'Smetanova', 'Slovenia', 'http://' \
 )
 BLANK = '     '
 mode = BLANK
 for i in range(0, len(lines)):
 	status, line = lines[i]
-	if match(line, 'General chair'):
+	if len(line) > 200 or len(line)<2:
+		status = BLANK
+	elif line.startswith('???'):
+		status = BLANK
+	elif match(line, 'General chair'):
 		status, mode = BLANK, 'GeCh '
-	elif matchs(line, ('PC co-chairs', 'Program co-chairs', 'Program Committee Co-chairs')):
+	elif matchs(line, ('PC co-chairs', 'Program co-chairs', 'Program Committee Co-chairs', 'Research Track Co-chairs', 'Program Chairs')):
 		status, mode = BLANK, 'PrCh '
 	elif match(line, 'Publicity chair') and not match(line, 'Publicity chair, '):
 		status, mode = BLANK, 'PbCh '
-	elif match(line, 'Local organization chair'):
+	elif matchs(line, ('Local organization chair', 'Local arrangements and registration', 'Local Co-chairs')):
 		status, mode = BLANK, 'LoCh '
-	elif match(line, 'Panel organization chair'):
+	elif matchs(line, ('Panel organization chair', 'Panel Co-chairs')):
 		status, mode = BLANK, 'PaCh '
-	elif match(line, 'DOCTORAL SYMPOSIUM CHAIR'):
+	elif matchs(line, ('DOCTORAL SYMPOSIUM CHAIR', 'Doctoral Symposium Track Co-chairs')):
 		status, mode = BLANK, 'DSCh '
-	elif matchs(line, ('Invited Speakers', 'Keynote Speakers')):
+	elif matchs(line, ('Student-volunteer Chair', 'Student volunteers coordinator')):
+		status, mode = BLANK, 'SVCh '
+	elif matchs(line, ('Finance Co-chairs', 'Liaison Chairs - Finances')):
+		status, mode = BLANK, 'FiCh '
+	elif matchs(line, ('ERA Track Co-chairs', 'ERA Chairs')):
+		status, mode = BLANK, 'ERCh '
+	elif match(line, 'Tutorials Co-chairs'):
+		status, mode = BLANK, 'TuCh '
+	elif match(line, 'Satellite Events'):
+		status, mode = BLANK, 'SaCh '
+	elif match(line, 'Vision Papers'):
+		status, mode = BLANK, 'ViCh '
+	elif match(line, 'Project Track'):
+		status, mode = BLANK, 'PjCh '
+	elif matchs(line, ('Proceedings Co-chairs', 'Liaison Chairs - Publications')):
+		status, mode = BLANK, 'PuCh ' # == Publication Chair
+	elif matchs(line, ('Invited Speaker', 'Keynote Speaker')):
 		status, mode = BLANK, 'KN   '
 	elif match(line, 'Important Dates'):
 		status, mode = BLANK, BLANK
+	elif match(line, 'Tool track program committee'):
+		status, mode = BLANK, 'TTPC '
+	elif match(line, 'Tool Demonstrations Chairs'):
+		status, mode = BLANK, 'TTCh '
+	elif match(line, 'Industry track program committee'):
+		status, mode = BLANK, 'ITPC '
+	elif match(line, 'Industry Track'):
+		status, mode = BLANK, 'InCh '
 	elif matchs(line, ('Program committee', 'PROGRAM COMITTEE')):
 		status, mode = BLANK, 'PrCo '
+	elif match(line, 'Scientific committee'):
+		status, mode = BLANK, 'ScCo '
 	elif match(line, 'Steering committee'):
 		status, mode = BLANK, 'StCo '
-	elif matchs(line, ('ORGANIZATION COMMITTEE', 'organizing committee')):
+	elif match(line, 'Publicity-chair - Social media-chair'):
+		status, mode = BLANK, 'SMCh '
+	elif matchs(line, ('ORGANIZATION COMMITTEE', 'organizing committee', 'Organizers', 'Organisation Committee')):
 		status, mode = BLANK, 'OrCo '
-	elif match(line, 'Workshop organization chair'):
+	elif matchs(line, ('Workshop organization chair', 'Workshop co-Chairs', 'Workshops Co-chair', 'Workshops')):
 		status, mode = BLANK, 'WoCh '
-	elif matchbeg(line, ignopatterns):
+	elif matchs(line, ('Website administration', 'Web Chair')):
+		status, mode = BLANK, 'WeCh '
+	# elif matchbeg(line, ignopatterns):
+	# 	status = BLANK
+	elif line.split(' ')[0].isdigit():
 		status = BLANK
 	elif line in ignored:
 		status = BLANK
-	elif ' ' not in line and '@' in line:
+	elif (' ' not in line and '@' in line) or \
+		(line.find(' at ') > -1 and ' ' not in line.replace(' at ', '')):
 		status = BLANK
 	else:
 		# 
 		if mode != BLANK:
 			status = mode
-		if matchs(line, ('(chair)', '(co-chair)')):
+		if matchs(line, ('(chair)', '(co-chair)', ', chair', ', co-chair')):
 			# line = line.replace('(chair)', '').strip()
 			status = status.replace('Co', 'Ch')
 		elif match(line, '(Finance Chair)'):
 			status = 'FiCh '
-		elif matchs(line, ('Publicity co-Chair)', 'Publicity Chair, ')):
+		elif matchs(line, ('Publicity co-Chair)', 'Publicity Chair, ', ' - Publicity Chair')):
 			status = 'PuCh '
 		elif match(line, '(Workshop Selection Chair)'):
 			status = 'WoCh '
+		elif matchs(line, ('(Program Chair)', '(Program co-Chair)')):
+			status = 'PrCh '
+		elif match(line, '(Organizing Chair)'):
+			status = 'OrCh '
+		elif match(line, '(Tutorials Chair)'):
+			status = 'TuCh '
 		elif match(line, '(Web Chair)'):
 			status = 'WeCh '
 	lines[i] = [status, line]

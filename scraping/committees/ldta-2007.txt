@@ -1,0 +1,24 @@
+#DONE
+     https://urchin.earth.li/pipermail/sts/2006-October/000048.html
+     Program Committee:
+     
+PrCo - Judith Bishop, University of Pretoria, South Africa
+PrCo - Claus Brabrand, BRICS, University of Aarhus, Denmark
+PrCo - Nigel Horspool, University of Victoria, Canada
+PrCo - Johan Jeuring, Utrecht University, The Netherlands
+PrCh - Adrian Johnstone, Royal Holloway, University of London, UK (co-chair), adrian at cs.rhul.ac.uk
+PrCo - Steven Klusener, Vrije Universiteit, The Netherlands
+PrCo - Kent Lee, Luther College, USA
+PrCo - Brian Malloy, Clemson University, USA
+PrCo - Terence Parr, University of San Francisco, USA
+PrCo - Michael Schwartzbach, BRICS, University of Aarhus, Denmark
+PrCh - Tony Sloane, Macquarie University, Australia (co-chair),
+     asloane at ics.mq.edu.au
+PrCo - Jurgen Vinju, CWI, The Netherlands
+     
+     Organizing Committee:
+     
+OrCo - Thomas Noll, RWTH Aachen University, Germany,
+     noll at cs.rwth-aachen.de
+OrCo - Alcino Cunha, University of Minho, Braga, Portugal,
+     alcino at di.uminho.pt

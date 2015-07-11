@@ -1,0 +1,34 @@
+#DONE
+     https://mail.haskell.org/pipermail/haskell/2004-September/014529.html
+     INVITED SPEAKER:
+     
+KN   Erik Meijer
+     
+     PROGRAM COMMITTEE:
+     
+PrCh John Boyland, University of Wisconsin-Milwaukee, USA (co-chair)
+     <Boyland at cs.uwm.edu>
+PrCh G?rel Hedin, Lund Institute of Technology, Sweden (co-chair)
+     <Gorel.Hedin at cs.lth.se>
+     
+PrCo Shigero Chiba, Tokyo Institute of Technology, Japan
+PrCo Jim Cordy, Queen's University, Kingston, Canada
+PrCo Susan L. Graham, University of California, Berkeley, USA
+PrCo Adrian Johnstone, University of London, UK
+PrCo Paul Klint, CWI, Amsterdam, The Netherlands
+PrCo Jens Knoop, Vienna University of Technology, Austria
+PrCo Eric Madeleine, INRIA, Sophia Antipolis, France
+PrCo Arnd Poetzsch-Heffter, University of Kaiserslautern, Germany
+PrCo Ganesh Sittampalam, Oxford University, UK
+PrCo Anthony Sloane, Macquarie University, Sydney, Australia
+PrCo Doaitse Swierstra, Utrecht University, The Netherlands
+PrCo Kris de Volder, University of British Columbia, Vancouver, Canada
+PrCo Andrew Wendelborn, University of Adelaide, Australia
+     
+     
+     ORGANIZING COMMITTEE:
+     
+OrCo Thomas Noll, RWTH Aachen University, Germany
+OrCo Joost Visser, University of Minho, Braga, Portugal
+OrCo Eric van Wyk, University of Minnesota, Minneapolis, USA
+     

@@ -1,0 +1,59 @@
+#DONE
+     http://gttse.wikidot.com/2011:committees
+     Organization committee
+     
+OrCo Ralf Lämmel (Universität Koblenz-Landau, Germany)
+OrCo João Saraiva (Universidade do Minho, Portugal)
+OrCo Joost Visser (Software Improvement Group, The Netherlands)
+     Scientific committee
+     
+ScCo Sven Apel (University of Passau, Germany)
+ScCo Arpad Beszedes (University of Szeged, Hungary)
+ScCo Mark van den Brand (TU Eindhoven, NL)
+ScCo Thomas Dean (Queen's University, Canada)
+ScCo Erik Ernst (University of Aarhus)
+ScCo Anne Etien (Polytech'Lille, France)
+ScCo Jean-Marie Favre (OneTree Technologies, Luxembourg)
+ScCo Bernd Fischer (University of Southampton, UK)
+ScCo Dragan Gašević (Athabasca University, Canada)
+ScCo Jeff Gray (University of Alabama, USA)
+ScCo Yann-Gaël Guéhéneuc (École Polytechnique de Montréal, Canada)
+ScCo Martin Horauer (University of Applied Sciences Technikum Wien)
+ScCo Nigel Horspool (University of Victoria, Canada)
+ScCo Zhenjiang Hu (National Institute of Informatics, Japan)
+ScCo Jan Jürjens (TU Dortmund, Germany)
+ScCo Christian Lengauer (University of Passau, Germany)
+ScCo Andrea De Lucia (University of Salerno, Italy)
+ScCo Marjan Mernik (University of Maribor, Slovenia)
+ScCo Oscar Nierstrasz (University of Bern, Switzerland)
+ScCo Klaus Ostermann (University of Marburg, Germany)
+ScCo Jens Palsberg (UCLA, USA)
+ScCo Jeff Z. Pan (The University of Aberdeen, UK)
+ScCo Massimiliano Di Penta (University of Sannio, Italy)
+ScCo Alfonso Pierantonio (University of L'Aquila, Italy)
+ScCo Zoltan Porkolab (Eötvös Loránd University)
+ScCo Markus Püschel (ETH Zürich, Switzerland)
+ScCo Andreas Prinz (University of Agder, Norway)
+ScCo Davide Di Ruscio (University of L'Aquila, Italy)
+ScCo Bran Selic (Malina Software Corp.)
+ScCo Olaf Spinczyk (TU Dortmund)
+ScCo Perdita Stevens (University of Edinburgh, UK)
+ScCo Tarja Systä (Tampere University of Technology)
+ScCo Walid Taha (Halmstad University, Sweden)
+ScCo Peter Thiemann (University of Freiburg, Germany)
+ScCo Simon Thompson (University of Kent, UK)
+ScCo Laurence Tratt (Middlesex University, UK)
+ScCo Eric Van Wyk (University of Minnesota, USA)
+ScCo Dániel Varró (Budapest University of Technology and Economics, Hungary)
+ScCo Andreas Winter (Carl von Ossietzky University Oldenburg, Germany)
+ScCo Steffen Zschaler (King's College London, UK)
+     Students' Workshop co-Chairs
+     
+WoCh Joost Visser (Software Improvement Group, The Netherlands)
+WoCh Eric Van Wyk (University of Minnesota, USA)
+     Local arrangements and registration
+     
+LoCh Jácome Cunha (Universidade do Minho, Portugal)
+     Publicity chair
+     
+PbCh Vadim Zaytsev (Centrum Wiskunde & Informatica, The Netherlands)

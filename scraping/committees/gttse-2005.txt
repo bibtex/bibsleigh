@@ -1,0 +1,45 @@
+#DONE
+     http://wiki.di.uminho.pt/twiki/bin/view/Events/GTTSE/Organisers
+     Summer school chairs
+PrCh Ralf Lämmel (Program Chair), Microsoft Corporation, USA.
+PrCh João Saraiva (Program Chair), Universidade do Minho, Braga, Portugal.
+OrCh Joost Visser (Organizing Chair), Universidade do Minho, Braga, Portugal.
+     Organizing committee
+OrCo Jose Bacelar Almeida, Universidade do Minho, Braga, Portugal.
+OrCo Mark van den Brand, CWI & HvA, Amsterdam, The Netherlands.
+OrCo Maria João Frade, Universidade do Minho, Braga, Portugal.
+OrCo Pedro Rangel Henriques, Universidade do Minho, Braga, Portugal.
+OrCo Ralf Lämmel, Microsoft Corporation, USA.
+OrCo Marjan Mernik, Maribor University, Maribor, Slovenia.
+OrCo João Saraiva, Universidade do Minho, Braga, Portugal.
+OrCo Joost Visser, Universidade do Minho, Braga, Portugal.
+     Scientific committee
+ScCo Paulo Borba, Universidade Federal de Pernambuco, Brasil.
+ScCo Mark van den Brand, CWI & Hogeschool van Amsterdam, The Netherlands.
+ScCo Jim Cordy, Queen's University, Canada.
+ScCo Krzysztof Czarnecki, University of Waterloo, Canada.
+ScCo Andrea DeLucia, Università di Salerno, Italy.
+ScCo Jean-Luc Dekeyser, Université des Sciences et Technologies de Lille, France.
+ScCo José Fiadeiro, University of Leicester, UK.
+ScCo Stephen Freund, Williams College, USA.
+ScCo Jeff Gray, University of Alabama at Birmingham, USA.
+ScCo Reiko Heckel, University of Leicester, UK.
+ScCo Görel Hedin, Lund Institute of Technology, Sweden.
+ScCo Pedro Rangel Henriques, Universidade do Minho, Portugal.
+ScCo Y. Annie Liu, State University of New York at Stony Brook, USA.
+ScCo Cristina Lopes, University of California at Irvine, USA.
+ScCo Ralf Lämmel, Microsoft Corporation, USA.
+ScCo Marjan Mernik, University of Maribor, Slovenia.
+ScCo Pierre-Etienne Moreau, INRIA Lorraine & LORIA, France.
+ScCo Peter Mosses, Univ of Wales Swansea, UK.
+ScCo Oege de Moor, Oxford University, UK.
+ScCo José Nuno Oliveira, Universidade do Minho, Portugal.
+ScCo Jens Palsberg, UCLA, USA.
+ScCo João Saraiva, Universidade do Minho, Portugal.
+ScCo Andy Schürr, Technical University Darmstadt, Germany.
+ScCo Anthony Sloane, Macquarie University, Australia.
+ScCo Peter Thiemann, Universität Freiburg, Germany.
+ScCo Simon Thompson, University of Kent, UK.
+ScCo Eelco Visser, Utrecht University, The Netherlands.
+ScCo Joost Visser, Universidade do Minho, Portugal.
+ScCo Eric Van Wyk, University of Minnesota, USA.
