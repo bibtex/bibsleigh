@@ -1,7 +1,7 @@
 #!/usr/local/bin/python3
 # -*- coding: utf-8 -*-
 #
-# a module for exporting LRJs to the HTML frontpages
+# a module for exporting LRJ definitions of tags to the HTML frontpages
 
 from fancy.ANSI import C
 from fancy.Languages import ISONames

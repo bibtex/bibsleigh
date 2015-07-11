@@ -5,7 +5,6 @@
 
 import sys, glob
 from fancy.ANSI import C
-from fancy.Latin import diacritics
 from lib.AST import Sleigh
 from lib.JSON import parseJSON, jsonify
 from lib.LP import listify

@@ -15,9 +15,9 @@ verbose = False
 def checkon(fn, o):
 	if not os.path.exists(fn) or os.path.isdir(fn):
 		fn = fn + '.json'
-	f = open(fn, 'r')
+	# f = open(fn, 'r')
 	# lines = f.readlines()[1:-1]
-	f.close()
+	# f.close()
 	# flines = [strictstrip(s) for s in lines]
 	plines = sorted([strictstrip(s) for s in o.getJSON().split('\n')[1:-1]])
 	for k in o.json.keys():

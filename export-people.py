@@ -1,7 +1,7 @@
 #!/usr/local/bin/python3
 # -*- coding: utf-8 -*-
 #
-# a module for exporting LRJs to the HTML frontpages
+# a module for exporting LRJ definitions of people to the HTML frontpages
 
 import os.path, json, glob
 from fancy.ANSI import C
