@@ -1,0 +1,31 @@
+#DONE
+     http://ldta.info/2012/committees.html
+     program committee
+     
+PrCo Suzana Andova, Eindhoven University of Technology, The Netherlands (co-chair)
+PrCo Anya Helene Bagge, University of Bergen, Norway
+PrCo Kyung-Goo Doh, Hanyang University, Ansan, South Korea
+PrCo Jeff Gray, University of Alabama, USA
+PrCo Görel Hedin, Lund University, Sweden
+PrCo Zoltán Horváth, Eötvös Loránd University, Budapest, Hungary
+PrCo Zhenjiang Hu, National Institute of Informatics, Japan
+PrCo Roberto Ierusalimschy, Pontifícia Universidade Católica do Rio de Janeiro, Brazil
+PrCo Ivan Kurtev, University of Twente, The Netherlands
+PrCo Marjan Mernik, University of Maribor, Slovenia
+PrCo Nate Nystrom, University of Lugano, Switzerland
+PrCo João Saraiva, Universidade do Minho, Braga, Portugal
+PrCo Sylvain Schmitz, Ecole Normale Supérieure de Cachan, France
+PrCo Tony Sloane, Macquarie University, Australia (co-chair)
+PrCo Robert Tairas, Inria, France
+PrCo Laurence Tratt, King's College London, UK
+PrCo Vadim Zaytsev, Centre for Mathematics & Computer Science, The Netherlands
+     organizing committee
+     
+OrCo Anya Helene Bagge, University of Bergen, Norway
+OrCo Emilie Balland, INRIA, France
+     steering committee
+     
+StCo Mark van den Brand, Eindhoven University of Technology, The Netherlands
+StCo Görel Hedin, Lund University, Sweden
+StCo Tony Sloane, Macquarie University, Australia
+StCo Eric Van Wyk, University of Minnesota, United States

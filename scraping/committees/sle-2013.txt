@@ -1,0 +1,47 @@
+#DONE
+     http://www.sleconf.org/2013/Committees.html
+     Committees
+     General Chair
+GeCh Eric Van Wyk, University of Minnesota, USA
+     Program Committee Co-chairs
+PrCh Martin Erwig, Oregon State University, USA
+PrCh Richard Paige, University of York, UK
+     Program Committee
+PrCo Emilie Balland, INRIA, France
+PrCo Olaf Chitil, University of Kent, UK
+PrCo James R. Cordy, Queen's University, Canada
+PrCo Davide Di Ruscio, Università degli Studi dell'Aquila, Italy
+PrCo Iavor Diatchki, Galois Inc., USA
+PrCo Anne Etien, LIFL - University of Lille 1, Fance
+PrCo Jean-Marie Favre, University of Grenoble, Fance
+PrCo Dragan Gasevic, Athabasca University, Canada
+PrCo Andy Gill, University of Kansas, USA
+PrCo Jeff Gray, University of Alabama, USA
+PrCo Giancarlo Guizzardi, Federal University of Espirito Santo, Brazil
+PrCo Gorel Hedin, Lund University, Sweden
+PrCo Markus Herrmannsdoerfer, Technische Universität München, Germany
+PrCo Zhenjiang Hu, NII, Japan
+PrCo Oleg Kiselyov, USA
+PrCo Paul Klint, Centrum Wiskunde & Informatica, The Netherlands
+PrCo Thomas Kuehne, Victoria University of Wellington, New Zealand
+PrCo Kim Mens, UC Louvain, Belgium
+PrCo Pierre-Etienne Moreau, Ecole des Mines Nancy, France
+PrCo Klaus Ostermann, Marburg University, Germany
+PrCo Arnd Poetzsch-Heffter, University of Kaiserslautern, Germany
+PrCo Fiona Polack, Dept of Computer Science, University of York, UK
+PrCo Lukas Renggli, University of Bern, Switzerland
+PrCo Bernhard Rumpe, RWTH Aachen University, Germany
+PrCo João Saraiva, Universidade do Minho, Portugal
+PrCo Friedrich Steimann, Fernuniversität in Hagen, Germany
+PrCo Gabriele Taentzer, Marburg University, Germany
+PrCo Mark Van Den Brand, TU/e, The Netherlands
+PrCo Jurgen Vinju, Centrum Wiskunde & Informatica, The Netherlands
+     Steering Committee
+StCo Mark van den Brand, Eindhoven University of Technology, The Netherlands
+StCo James Cordy, Queen's University, Canada
+StCo Jean-Marie Favre, University of Grenoble, France
+StCo Dragan Gašević, Athabasca University, Canada
+StCo Görel Hedin, Lund University, Sweden
+StCo Eric Van Wyk, University of Minnesota, USA
+StCo Jurgen Vinju, CWI, The Netherlands
+StCo Kim Mens, Université catholique de Louvain, Belgium

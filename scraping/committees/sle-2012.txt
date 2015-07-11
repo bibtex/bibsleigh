@@ -1,0 +1,42 @@
+#DONE
+     http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=20977&copyownerid=420
+     
+     General chair:
+GeCh Uwe Assmann, Dresden University of Technology, Germany
+     Program co-chairs:
+PrCh Krzysztof Czarnecki, Waterloo University, Canada
+PrCh Görel Hedin, Lund University, Sweden
+     
+     PROGRAM COMMITTEE
+     
+PrCo Emilie Balland, INRIA Bordeaux - Sud-Ouest, France
+PrCo Paulo Borba, Federal University of Pernambuco, Brazil
+PrCo Claus Brabrand, IT University of Copenhagen, Denmark
+PrCo Jordi Cabot, École des Mines de Nantes, France
+PrCo Krzysztof Czarnecki, University of Waterloo, Canada (co-chair)
+PrCo Dragan Gasevic, Athabasca University, Canada
+PrCo Jeremy Gibbons, University of Oxford, UK
+PrCo Jeff Gray, University of Alabama, USA
+PrCo Görel Hedin, Lund University, Sweden (co-chair)
+PrCo Markus Herrmannsdoerfer, Technische Universität München, Germany
+PrCo Zhenjiang Hu, National Institute of Informatics, Japan
+PrCo Paul Klint, CWI, Amsterdam, The Netherlands
+PrCo Julia Lawall, INRIA/LIP6, France
+PrCo Kim Mens, Université catholique de Louvain, Belgium
+PrCo Mira Mezini, Technische Universität Darmstadt, Germany
+PrCo Daniel Moody, Ozemantics Pty Ltd, Sydney, Australia
+PrCo Pierre-Etienne Moreau, Ecole de Mines de Nancy, France
+PrCo Peter Mosses, Swansea University, UK
+PrCo Ralf Möller, Hamburg University of Technology, Germany
+PrCo Klaus Ostermann, University of Marburg, Germany
+PrCo Bijan Parsia, University of Manchester, UK
+PrCo Arnd Poetzsch-Heffter, Technische Universität Kaiserslautern, Germany
+PrCo Lukas Renggli, Google, Zurich, Switzerland
+PrCo Bernhard Rumpe, Aachen University, Germany
+PrCo Joao Saraiva, Universidade do Minho, Portugal
+PrCo Michael Schwartzbach, University of Aarhus, Denmark
+PrCo Friedrich Steimann, Fernuniversität in Hagen, Germany
+PrCo Mark van den Brand, Eindhoven University of Technology, The Netherlands
+PrCo Eric Van Wyk, University of Minnesota, USA
+PrCo Jeff Z. Pan, University of Aberdeen, UK
+PrCo Steffen Zschaler, King's College, London, UK

@@ -1,0 +1,24 @@
+#DONE
+     http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=6585&copyownerid=3264
+     ==Program Committee==
+     
+PrCh Claus Brabrand, IT University of Copenhagen, Denmark (co-chair)
+PrCh Pierre-Etienne Moreau, Nancy-Université & LORIA, France (co-chair)
+     
+PrCo Emilie Balland, INRIA, France
+PrCo John Boyland, University of Wisconsin, USA
+PrCo Giorgios Robert Economopoulos, University of Southampton, UK
+PrCo Magne Haveraaen, University of Bergen, Norway
+PrCo Nigel Horspool, University of Victoria, Canada
+PrCo Shan Shan Huang, Logic Blox, USA
+PrCo Johan Jeuring, Utrecht University, The Netherlands
+PrCo Ondrej Lhotak, University of Waterloo, Canada
+PrCo Shane Markstrum, University of California, USA
+PrCo Peter D. Mosses, Swansea University, UK
+PrCo Klaus Ostermann, Philipps-Universität Marburg, Germany
+PrCo Marc Pantel, University of Toulouse, France
+PrCo Elizabeth Scott, Royal Holloway, University of London, UK
+PrCo Eli Tilevich, Virginia Tech, USA
+PrCo Eelco Visser, Delft University of Technology, The Netherlands
+PrCo Joost Visser, Software Improvement Group, The Netherlands
+PrCo Tobias Wrigstad, Purdue, USA

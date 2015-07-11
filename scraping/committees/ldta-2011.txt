@@ -1,0 +1,35 @@
+#DONE
+     http://ldta.info/2011/committees.html
+     
+     program committee
+     
+PrCo Emilie Balland, INRIA, France
+PrCo Anya Helene Bagge, University of Bergen, Norway
+PrCo Paulo Borba, Federal University of Pernambuco, Brazil
+PrCo John Boyland, University of Wisconsin, United States
+PrCo Claus Brabrand, IT University of Copenhagen, Denmark (co-chair), brabrand@itu.dk
+PrCo Jim Cordy, Queen's University, Canada
+PrCo Kyung-Goo Doh, Hanyang University, Ansan, South Korea
+PrCo Giorgios Robert Economopoulos, University of Southampton, UK
+PrCo Laurie Hendren, McGill University, Canada
+PrCo Nigel Horspool, University of Victoria, Canada
+PrCo Roberto Ierusalimschy, Pontifícia Universidade Católica do Rio de Janeiro, Brazil
+PrCo Johan Jeuring, Utrecht University, The Netherlands
+PrCo Shane Markstrum, Bucknell University, United States
+PrCo Sukyoung Ryu, Korea Advanced Institute of Science and Technology, Korea
+PrCo João Saraiva, Universidade do Minho, Portugal
+PrCo Sylvain Schmitz, Ecole Normale Supérieure de Cachan, France
+PrCo Sibylle Schupp, Hamburg University of Technology, Germany
+PrCo Eli Tilevich, Virginia Tech, United States
+PrCo Eric Van Wyk, University of Minnesota, United States (co-chair), evw@cs.umn.edu
+PrCo Eelco Visser, Delft University of Technology, The Netherlands
+     organizing committee
+     
+OrCo Emilie Balland, INRIA, France
+OrCo Giorgios Robert Economopoulos, University of Southampton, UK
+     steering committee
+     
+StCo Mark van den Brand, Eindhoven University of Technology, The Netherlands
+StCo Görel Hedin, Lund University, Sweden
+StCo Tony Sloane, Macquarie University, Australia
+StCo Eric Van Wyk, University of Minnesota, United States

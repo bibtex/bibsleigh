@@ -1,0 +1,84 @@
+#DONE
+     http://lambda-the-ultimate.org/node/3827
+     GENERAL CHAIR
+     
+GeCh Mark van den Brand
+     Eindhoven University of Technology, The Netherlands
+     m.g.j.v.d.brand@tue.nl
+     
+     PROGRAM CO-CHAIRS
+     
+PrCh Brian Malloy
+     Clemson University, USA
+     malloy@cs.clemson.edu
+     
+PrCh Steffen Staab
+     University of Koblenz-Landau, Germany
+     staab@uni-koblenz.de
+     
+     DOCTORAL SYMPOSIUM CHAIRS
+     
+DSCh Eric van Wyk
+     University of Minnesota, USA
+     evw@cs.umn.edu
+     
+DSCh Steffen Zschaler
+     Lancaster University, UK
+     szschaler@acm.org
+     
+     ORGANIZATION COMMITTEE
+     
+PuCh Anthony Cleve (Publicity Co-Chair)
+     INRIA Lille, France
+     
+PuCh Nicholas Kraft (Publicity Co-Chair)
+     University of Alabama, USA
+     
+WeCh Arjan van der Meer (Web Chair)
+     Eindhoven University of Technology, The Netherlands
+     
+FiCh Alexander Serebrenik (Finance Chair)
+     Eindhoven University of Technology, The Netherlands
+     
+     PROGRAM COMMITTEE
+     
+PrCo Uwe Assmann, Dresden University of Technology, Germany
+PrCo Colin Atkinson, University of Mannheim , Germany
+PrCo Sonia Bergamaschi, University of Modena and Reggio Emilia, Italy
+PrCo John Boyland, University of Wisconsin-Milwaukee, USA
+PrCo Jordi Cabot, University of Toronto, Canada
+PrCo Silvana Castano, University of Milan, Italy
+PrCo Anthony Cleve, INRIA Lille, France
+PrCo Michael Collard, University of Akron, USA
+PrCo Charles Consel, LaBRI / INRIA, France
+PrCo Stephen Edwards, Columbia University, USA
+PrCo Gregor Engels, University of Paderborn, Germany
+PrCo Aldo Gangemi, Semantic Technology Laboratory, Italy
+PrCo Chiara Ghidini, FBK-irst, Italy
+PrCo Jeff Gray, University of Alabama, USA
+PrCo Peter Haase, University of Karlsruhe, Germany
+PrCo Gorel Hedin, Lund University, Sweden
+PrCo Geert-Jan Houben, Delft University of Technology, The Netherlands
+PrCo Adrian Johnstone, University of London, UK
+PrCo Nicholas Kraft, University of Alabama, USA
+PrCo Ivan Kurtev, University of Twente, The Netherlands
+PrCo Julia Lawall, University of Copenhagen, Denmark
+PrCo Marjan Mernik, University of Maribor, Slovenia
+PrCo Pierre-Etienne Moreau, Ecole des Mines in Nancy, France
+PrCo Peter Mosses, Swansea University, UK
+PrCo Ralf Möller, Hamburg University of Technolog, Germany
+PrCo Istvan Nagy, ASML, The Netherlands
+PrCo Daniel Oberle, SAP Research, Germany
+PrCo Richard Paige, University of York, UK
+PrCo Jeff Z. Pan, University of Aberdeen, UK
+PrCo Bijan Parsia, University of Manchester, UK
+PrCo James Power, National University of Ireland, Ireland
+PrCo Alexander Serebrenik, Eindhoven University of Technology, The Netherlands
+PrCo Fernando Silva Parreiras, University of Koblenz-Landau, Germany
+PrCo Anthony Sloane, Macquarie University, Australia
+PrCo Eleni Stroulia, University of Alberta, Canada
+PrCo York Sure, University of Koblenz-Landau, Germany
+PrCo Gabriele Taentzer, Technical University of Berlin, Germany
+PrCo Jurgen Vinju, CWI, The Netherlands
+PrCo Eelco Visser, Delft University of Technology, The Netherlands
+PrCo Steffen Zschaler, Lancaster University, UK

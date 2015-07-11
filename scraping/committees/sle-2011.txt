@@ -1,0 +1,86 @@
+#DONE
+     https://groups.google.com/forum/#!topic/scala-user/rTKHjal9CLo
+     GENERAL CHAIR
+     
+GeCh João Saraiva
+     Universidade do Minho, Portugal
+     j...@di.uminho.pt
+     
+     PROGRAM CO-CHAIRS
+     
+PrCh Uwe Aßmann
+     Dresden University of Technology, Germany
+     uwe.a...@tu-dresden.de
+     
+PrCh Anthony Sloane
+     Macquarie University, Australia
+     anthony...@mq.edu.au
+     
+     DOCTORAL SYMPOSIUM CHAIRS
+     
+DSCh Perdita Stevens
+     University of Edinburgh, UK
+     perdita...@ed.ac.uk
+     
+DSCh Eric Van Wyk
+     University of Minnesota, USA
+     e...@cs.umn.edu
+     
+     PROGRAM COMITTEE
+     
+PrCo Adrian Johnstone, University of London, UK
+PrCo Aldo Gangemi, Semantic Technology Laboratory, Italy
+PrCo Alexander Serebrenik, Eindhoven University of Technology, Netherlands
+PrCo Ana Moreira, FCT/UNL, Portugal
+PrCo Anthony Cleve, University of Namur, Belgium
+PrCo Anya Helene Bagge, University of Bergen, Norway
+PrCo Bernhard Rumpe, Aachen University, Germany
+PrCo Bijan Parsia, University of Manchester, UK
+PrCo Brian Malloy, Clemson University, USA
+PrCo Bruno Oliveira, Seoul National University, Korea
+PrCo Chiara Ghidini, FBK-irst, Italy
+PrCo Daniel Oberle, SAP Research, Germany
+PrCo Eelco Visser, Delft University of Technology, Netherlands
+PrCo Eric Van Wyk, University of Minnesota, USA
+PrCo Fernando Pereira, Federal University of Minas Gerais, Brasil
+PrCo Fernando Silva Parreiras, University of Koblenz-Landau, Germany
+PrCo Friedrich Steimann, University of Hannover, Germany
+PrCo Görel Hedin, Lund University, USA
+PrCo Ivan Kurtev, University of Twente, Netherlands
+PrCo James Power, National University of Ireland, Ireland
+PrCo Jean-Marie Favre, OneTree Technologies, France
+PrCo Jeff Gray, University of Alabama, USA
+PrCo Jeff Z. Pan, University of Aberdeen, UK
+PrCo João Paulo Fernandes, Univ. of Minho&  Univ. of Porto, Portugal
+PrCo John Boyland, University of Wisconsin-Milwaukee, USA
+PrCo John Grundy, Swinburne University of Technology, Australia
+PrCo Jordi Cabot, University of Toronto, Canada
+PrCo Jurgen Vinju, CWI, Netherlands
+PrCo Laurence Tratt, Middlesex University, UK
+PrCo Marjan Mernik, University of Maribor, Slovenia
+PrCo Mark van den Brand, Eindhoven University of Technology, Netherlands
+PrCo Michael Collard, University of Akron, USA
+PrCo Nicholas Kraft, University of Alabama, USA
+PrCo Paul Klint, CWI, Netherlands
+PrCo Paulo Borba, Federal University of Pernambuco, Brazil
+PrCo Peter Haase, University of Karlsruhe, Germany
+PrCo Peter Mosses, Swansea University, UK
+PrCo Ralf Möller, Hamburg University of Technology, Germany
+PrCo Silvana Castano, University of Milan, Italy
+PrCo Steffen Zschaler, Lancaster University, UK
+PrCo York Sure, University of Koblenz-Landau, Germany
+PrCo Zhenjiang Hu, National Institute of Informatics, Japan
+     
+     ORGANIZATION COMMITTEE
+     
+FiCh José Creissac Campos (Finance Chair)
+     Universidade do Minho, Portugal
+     
+PuCh João Paulo Fernandes (Web and Publicity co-Chair)
+     Universidade do Porto&  Universidade do Minho, Portugal
+     
+WoCh Jurgen Vinju (Workshop Selection Chair)
+     CWI, The Netherlands
+     
+PuCh Vadim Zaytsev (Publicity co-Chair)
+     CWI, The Netherlands
