@@ -240,6 +240,13 @@ class Sleigh(Unser):
 			if f:
 				return f
 		return f
+	def seekByKey(self, key):
+		f = None
+		for v in self.venues:
+			f = v.seekByKey(key)
+			if f:
+				return f
+		return f
 	def numOfPapers(self):
 		return sum([v.numOfPapers() for v in self.venues])
 	def numOfVolumes(self):
@@ -314,6 +321,13 @@ class Venue(Unser):
 			if f:
 				return f
 		return f
+	def seekByKey(self, key):
+		f = None
+		for y in self.years:
+			f = y.seekByKey(key)
+			if f:
+				return f
+		return f
 	def getTags(self):
 		if not self.tags:
 			self.tags = {}
@@ -360,6 +374,13 @@ class Year(Unser):
 		f = None
 		for c in self.confs:
 			f = c.seek(key)
+			if f:
+				return f
+		return f
+	def seekByKey(self, key):
+		f = None
+		for c in self.confs:
+			f = c.seekByKey(key)
 			if f:
 				return f
 		return f
@@ -435,6 +456,15 @@ class Conf(Unser):
 			if f:
 				return f
 		return f
+	def seekByKey(self, key):
+		if key == self.getKey():
+			return self
+		f = None
+		for p in self.papers:
+			f = p.seekByKey(key)
+			if f:
+				return f
+		return f
 	def getTags(self):
 		if not self.tags:
 			self.tags = {}
@@ -505,6 +535,11 @@ class Paper(Unser):
 			)
 	def seek(self, key):
 		if key == self.get('dblpkey'):
+			return self
+		else:
+			return None
+	def seekByKey(self, key):
+		if key == self.getKey():
 			return self
 		else:
 			return None

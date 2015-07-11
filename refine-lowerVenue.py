@@ -8,8 +8,6 @@
 import sys, os.path
 from fancy.ANSI import C
 from lib.AST import Sleigh
-# from lib.NLP import strictstrip
-# from lib.JSON import jsonify
 
 ienputdir = '../json'
 sleigh = Sleigh(ienputdir + '/corpus')
@@ -36,20 +34,6 @@ def checkon(fn, o):
 	f.close()
 	return 2
 
-	if 'venue' not in o.json.keys():
-		if 'venue' in o.up().json.keys():
-			for key in ('venue', 'series', 'volume', 'publisher'):
-				if key not in o.json.keys() and key in o.up().json.keys():
-					o.json[key] = o.up().json[key]
-			f = open(fn, 'w')
-			f.write(o.getJSON())
-			f.close()
-			return 2
-		else:
-			return 1
-	else:
-		return 0
-
 def checkreport(fn, o):
 	statuses = (C.blue('PASS'), C.red('FAIL'), C.yellow('FIXD'))
 	r = checkon(fn, o)
@@ -59,8 +43,7 @@ def checkreport(fn, o):
 	return r
 
 if __name__ == "__main__":
-	if len(sys.argv) > 1:
-		verbose = sys.argv[1] == '-v'
+	verbose = sys.argv[-1] == '-v'
 	print('{}: {} venues, {} papers\n{}'.format(\
 		C.purple('BibSLEIGH'),
 		C.red(len(sleigh.venues)),

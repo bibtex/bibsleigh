@@ -33,7 +33,7 @@ def makeimg(ifn, alt, w=''):
 def dict2links(d):
 	rs = []
 	for k in sorted(d.keys()):
-		if k.isupper() or k == 'name':
+		if k.isupper() or k in ('name', 'authored', 'edited'):
 			continue
 		v = d[k]
 		if k == 'g':
@@ -88,6 +88,16 @@ def dict2links(d):
 	# print(rs)
 	return '\n'.join(['<h3>{} {}</h3>'.format(r[0], r[1]) for r in rs])
 
+def countAllPapers(ad, ed):
+	if ad == 0 and ed == 0:
+		return 'No papers'
+	if ad == 0 and ed != 0:
+		return 'Edited {} volumes edited'.format(ed)
+	if ad != 0 and ed == 0:
+		return 'Authored {} papers'.format(ad)
+	if ad != 0 and ed == 0:
+		return 'Authored {} papers'.format(ad)
+
 if __name__ == "__main__":
 	print('{}: {} venues, {} papers\n{}'.format(\
 		C.purple('BibSLEIGH'),
@@ -121,7 +131,7 @@ if __name__ == "__main__":
 		# dl = '<dl><dt>All venues</dt><dd><dl class="toc">' + '\n'.join(sorted(lst)) + '</dl></dd></dl>'
 		# hack to get from tags to papers
 		# dl = dl.replace('href="', 'href="../')
-		dl = ''
+		dls = ''
 		# for k in persondef.keys():
 		# 	if persondef[k].startswith('http'):
 		# 		links += '<h2>{0}: <a href="{1}">{1}</a></h2>'.format(k, persondef[k])
@@ -139,7 +149,21 @@ if __name__ == "__main__":
 		# 		if not jk.isupper() and jk != 'name'])
 		# links = '\n'.join(links)
 		links = dict2links(persondef)
-
+		if 'authored' in persondef.keys():
+			curlist = '<h3>Wrote {} papers:</h3>'.format(len(persondef['authored']))
+			# for ph in persondef['authored']:
+			# 	p = sleigh.seek(ph)
+			# 	if not p:
+			# 		print(C.red('Not found:'), ph)
+			# 		sys.exit(1)
+			things = [sleigh.seekByKey(p).getItem() for p in persondef['authored']]
+			curlist += '<dl class="toc">' + '\n'.join(things) + '</dl>'
+			dls += curlist
+		if 'edited' in persondef.keys():
+			curlist = '<h3>Edited {} volumes:</h3>'.format(len(persondef['edited']))
+			things = [sleigh.seekByKey(p).getItem() for p in persondef['edited']]
+			curlist += '<dl class="toc">' + '\n'.join(things) + '</dl>'
+			dls += curlist
 		f.write(personHTML.format(\
 			title=k,
 			gender=gender,
@@ -147,8 +171,7 @@ if __name__ == "__main__":
 			person=persondef['name'],#k.replace('_', ' '),
 			# boxlinks=links
 			above=links,
-			listname='{} papers'.format(0),#len(lst)),
-			dl=dl))
+			namedlists=dls))
 		f.close()
 	print('Person pages:', C.yellow('{}'.format(len(ps))), C.blue('generated'))
 	# person index

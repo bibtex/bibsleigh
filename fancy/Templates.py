@@ -124,8 +124,7 @@ personHTML = header.replace('stuff/', '../stuff/')+'''
 </div>
 <div class="main">
 <h2><span class="ttl">{gender} Person:</span> {person}</h2>{above}
-<h3>{listname}:</h3>
-{dl}
+{namedlists}
 '''+footer
 
 bibHTML = header+'''
