@@ -7,6 +7,7 @@ import glob, os.path
 from fancy.Templates import uberHTML, confHTML, bibHTML
 from lib.JSON import jsonkv, parseJSON
 from lib.LP import listify
+from fancy.ANSI import C
 
 def escape(s):
 	for k, v in ((' ', '%20'), ('+', '%2B'), ('#', '%23')):
@@ -242,6 +243,18 @@ class Sleigh(Unser):
 		return f
 	def seekByKey(self, key):
 		f = None
+		# trying a shortcut
+		hv = key.split('-')[0]
+		for v in self.venues:
+			if v.getKey() == hv:
+				# print('\tShortcut to', hv)
+				f = v.seekByKey(key)
+				if f:
+					return f
+				# else:
+				# 	print('\t', C.red('...failed'))
+		# bruteforce search
+		# print('\tBrute force searching for', key)
 		for v in self.venues:
 			f = v.seekByKey(key)
 			if f:
@@ -323,7 +336,23 @@ class Venue(Unser):
 		return f
 	def seekByKey(self, key):
 		f = None
+		# trying a shortcut
+		hy = ''.join([ch for ch in key if ch.isdigit()])
+		tried = []
 		for y in self.years:
+			if y.year == hy:
+				# print('\t\tShortcut to', hy)
+				f = y.seekByKey(key)
+				if f:
+					return f
+				else:
+					# print('\t\t', C.red('...failed'))
+					tried.append(y)
+		# bruteforce search
+		for y in self.years:
+			if y in tried:
+				# already sought there in an attempted shortcut
+				continue
 			f = y.seekByKey(key)
 			if f:
 				return f
@@ -379,6 +408,17 @@ class Year(Unser):
 		return f
 	def seekByKey(self, key):
 		f = None
+		# trying a shortcut
+		hc = key[:key.rindex('-')]
+		for c in self.confs:
+			if c.getKey() == hc:
+				# print('\t\t\tShortcut to', hc)
+				f = c.seekByKey(key)
+				if f:
+					return f
+				# else:
+				# 	print('\t\t\t', C.red('...failed'))
+		# bruteforce search
 		for c in self.confs:
 			f = c.seekByKey(key)
 			if f:
