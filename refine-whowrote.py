@@ -60,6 +60,15 @@ if __name__ == "__main__":
 							people[e]['edited'].append(c.getKey())
 					else:
 						report(C.yellow('Editor not found: ') + e, 0)
+	# now unfold
+	for p in people.keys():
+		if 'edited' in people[p].keys():
+			if 'roles' not in people[p].keys():
+				people[p]['roles'] = []
+			for e in people[p]['edited']:
+				if [e, "Editor"] not in people[p]['roles']:
+					people[p]['roles'].append([e, "Editor"])
+			del people[p]['edited']
 	# have to read again to see who’s changed
 	for fn in glob.glob(ienputdir + '/people/*.json'):
 		p = parseJSON(fn)

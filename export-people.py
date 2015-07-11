@@ -33,7 +33,7 @@ def makeimg(ifn, alt, w=''):
 def dict2links(d):
 	rs = []
 	for k in sorted(d.keys()):
-		if k.isupper() or k in ('name', 'authored', 'edited'):
+		if k.isupper() or k in ('name', 'authored', 'roles'):
 			continue
 		v = d[k]
 		if k == 'g':
@@ -132,7 +132,6 @@ if __name__ == "__main__":
 		# dl = '<dl><dt>All venues</dt><dd><dl class="toc">' + '\n'.join(sorted(lst)) + '</dl></dd></dl>'
 		# hack to get from tags to papers
 		# dl = dl.replace('href="', 'href="../')
-		dls = ''
 		gender = ''
 		if 'sex' in persondef.keys():
 			if persondef['sex'] == 'Male':
@@ -141,18 +140,18 @@ if __name__ == "__main__":
 			elif persondef['sex'] == 'Female':
 				gender = '♀'
 				del persondef['sex']
-		links = dict2links(persondef)
-		# TODO: flatten the sleigh before all searches
+		dls = dict2links(persondef)
+		if 'roles' in persondef.keys():
+			curlist = '<h3>Facilitated {} volumes:</h3>'.format(len(persondef['roles']))
+			# things = [sleigh.seekByKey(p).getItem() for p in persondef['edited']]
+			things = [bykey[r[0]].getIconItem(r[1]) for r in persondef['roles']]
+			# curlist += '<dl class="toc">' + movein('\n'.join(things)) + '</dl>'
+			curlist += '<div class="minibar">' + movein('\n'.join(things)) + '<br style="clear:both"/></div>'
+			dls += curlist
 		if 'authored' in persondef.keys():
 			curlist = '<h3>Wrote {} papers:</h3>'.format(len(persondef['authored']))
 			# things = [sleigh.seekByKey(p).getItem() for p in persondef['authored']]
 			things = [bykey[p].getItem() for p in persondef['authored']]
-			curlist += '<dl class="toc">' + movein('\n'.join(things)) + '</dl>'
-			dls += curlist
-		if 'edited' in persondef.keys():
-			curlist = '<h3>Edited {} volumes:</h3>'.format(len(persondef['edited']))
-			# things = [sleigh.seekByKey(p).getItem() for p in persondef['edited']]
-			things = [bykey[p].getIconItem() for p in persondef['edited']]
 			curlist += '<dl class="toc">' + movein('\n'.join(things)) + '</dl>'
 			dls += curlist
 		f.write(personHTML.format(\
@@ -161,7 +160,6 @@ if __name__ == "__main__":
 			eperson=escape(k),
 			person=persondef['name'],#k.replace('_', ' '),
 			# boxlinks=links
-			above=links,
 			namedlists=dls))
 		f.close()
 	print('Person pages:', C.yellow('{}'.format(len(ps))), C.blue('generated'))

@@ -3,7 +3,7 @@
 #
 # a module for normalising values: numbers become proper integers, quotes — proper fancy ones, etc
 
-import sys, glob
+import sys, glob, os.path
 from fancy.ANSI import C
 from fancy.Latin import diacritics
 from lib.AST import Sleigh
@@ -13,6 +13,7 @@ from lib.LP import listify
 ienputdir = '../json'
 sleigh = Sleigh(ienputdir + '/corpus')
 verbose = False
+cx = {0: 0, 1: 0, 2: 0}
 
 def fileify(s):
 	for d in diacritics.keys():
@@ -22,15 +23,15 @@ def fileify(s):
 def dblpify(s):
 	# http://dblp.uni-trier.de/pers/hd/e/Elbaum:Sebastian_G=
 	if s.find(' ') < 0:
-		print('Unknown:', s)
+		print('[', C.red('NAME'), ']', 'Unconventional full name:', s)
+		cx[1] += 1
 		return s
 	sur = s[s.rindex(' ')+1:]
 	rest = s[:s.rindex(' ')].replace(' ', '_').replace('.', '=')
 	return sur+':'+rest
 
 if __name__ == "__main__":
-	if len(sys.argv) > 1:
-		verbose = sys.argv[1] == '-v'
+	verbose = sys.argv[-1] == '-v'
 	# Data from the conferenceMetrics repo
 	csv = []
 	f = open('../conferenceMetrics/data/SE-conf-roles.csv', 'r')
@@ -48,7 +49,6 @@ if __name__ == "__main__":
 		C.red(len(sleigh.venues)),
 		C.red(sleigh.numOfPapers()),
 		C.purple('='*42)))
-	cx = {0: 0, 1: 0, 2: 0}
 	# All people who ever contributed
 	names = []
 	for v in sleigh.venues:
@@ -69,6 +69,16 @@ if __name__ == "__main__":
 				 'FILE': ienputdir + '/people/' + fileify(name) + '.json',\
 				'dblp': dblpify(name)}
 			people.append(p)
+	# flatten conferences for easy lookup
+	# confByKey = {}
+	knownConfs = []
+	for v in sleigh.venues:
+		for c in v.getConfs():
+			# confByKey[c.getKey()] = c
+			knownConfs.append(c.getKey())
+	print(knownConfs)
+	# compressed error output
+	dunno = []
 	# Conference;Year;First Name;Last Name;Sex;Role
 	for i, line in enumerate(csv):
 		idx = jdx = -1
@@ -79,27 +89,44 @@ if __name__ == "__main__":
 				jdx = j
 				break
 		if idx < 0 or jdx < 0:
-			print('Don’t know no', name)
+			if name in dunno:
+				continue
+			print('[', C.red('PERS'), ']', 'Unacquainted with', name)
+			dunno.append(name)
 		else:
 			if 'sex' not in people[jdx].keys():
 				people[jdx]['sex'] = line[4]
 			if 'roles' not in people[jdx].keys():
 				people[jdx]['roles'] = []
-			# excessive!
-			if [line[0], line[1], line[5]] not in people[jdx]['roles']:
-				people[jdx]['roles'].append([line[0], line[1], line[5]])
-	print('\t{} people properly specified,\n\t{} people contributed to the corpus'.format(\
-		C.red(len(people)),
-		C.red(len(names))))
+			# slashes replaced by dashes (ESEC/FSE becomes ESEC-FSE)
+			myconf = line[0].replace('/', '-') + '-' + line[1]
+			if myconf not in knownConfs:
+				print('[', C.red('CONF'), ']', 'No conference', myconf, 'found')
+				continue
+			if [myconf, line[5]] not in people[jdx]['roles']:
+				people[jdx]['roles'].append([myconf, line[5]])
+	print('\t', C.blue(len(people)), 'people properly specified')
+	print('\t', C.blue(len(names)), 'people contributed to the corpus')
+	print('\t', C.red(len(dunno)), 'people with too much info on')
 	for p in people:
 		if p['FILE']:
+			if os.path.exists(p['FILE']):
+				cur = parseJSON(p['FILE'])
+				if cur == p:
+					cx[0] += 1
+					if verbose:
+						print('[', C.green('FIXD'), ']', p['name'])
+					continue
+			print('[', C.yellow('FIXD'), ']', p['name'])
+			cx[2] += 1
 			f = open(p['FILE'], 'w')
 			del p['FILE']
 			f.write(jsonify(p))
 			f.close()
 		else:
 			print('How can that be?')
-	print('{} files checked, {} ok, {} fixed, {} failed'.format(\
+	cx[1] = len(dunno)
+	print('{} people checked, {} ok, {} fixed, {} failed'.format(\
 		C.bold(cx[0] + cx[1] + cx[2]),
 		C.blue(cx[0]),
 		C.yellow(cx[2]),

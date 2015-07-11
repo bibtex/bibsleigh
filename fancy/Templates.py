@@ -123,7 +123,7 @@ personHTML = header.replace('stuff/', '../stuff/')+'''
 '''+movein(leftLinks('papp', editLink).format(edit=editPerson))+'''
 </div>
 <div class="main">
-<h2><span class="ttl">{gender} Person:</span> {person}</h2>{above}
+<h2><span class="ttl">{gender} Person:</span> {person}</h2>
 {namedlists}
 '''+footer
 

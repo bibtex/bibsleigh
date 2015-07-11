@@ -301,6 +301,18 @@ class Venue(Unser):
 				ABBR=ABBR,\
 				abbr=ABBR.lower(),\
 				title=title)
+	def getIconItem(self):
+		return self.getIconItem(self.get('title'))
+	def getIconItem(self, desc):
+		if 'venue' in self.json.keys():
+			venue = self.json['venue']
+		else:
+			venue = self.json['name'].lower()
+		return '<a href="{name}.html" title="{hover}"><img src="stuff/{img}.png" class="abc" alt="{title}"/></a>'.format(\
+			name=self.get('name'),
+			title=self.get('title'),
+			hover=desc,
+			img=venue)
 	def getPage(self):
 		if 'eventurl' in self.json.keys():
 			if 'twitter' in self.json.keys():
@@ -457,16 +469,29 @@ class Conf(Unser):
 			return '{} {}'.format(self.json['venue'], self.year)
 		else:
 			return self.getKey().replace('-', ' ')
-	def getIconItem(self):
+	def getIconItem0(self):
+		return self.getIconItem1(self.getEventTitle())
+	def getIconItem(self, desc):
+		shorter = desc.replace(' ', '').replace('Organiser', 'OrganizationChair')
+		shorter = shorter.replace('Committee', 'Co').replace('Chair', 'Ch')\
+			.replace('Program', 'Pr').replace('Organization', 'O')\
+			.replace('Steering', 'S').replace('Publicity', 'Pub')\
+			.replace('Editor', 'Ed').replace('Publication', 'Pbl')\
+			.replace('Finance', 'Fin').replace('Challenge', 'Cha')\
+			.replace('SocialMedia', 'SM')
+		return self.getIconItem2(desc, shorter)
+	def getIconItem2(self, longdesc, shortdesc):
 		if 'venue' in self.json.keys():
 			venue = self.json['venue']
 		elif 'venue' in self.up().json.keys():
 			venue = self.up().json['venue']
 		else:
 			venue = 'bibsleigh'
-		return '<a href="{name}.html" title="{title}"><img src="stuff/{img}.png" class="abc" alt="{title}"/></a>'.format(\
+		return '<div><a href="{name}.html" title="{title}"><img src="stuff/{img}.png" class="abc" alt="{title}"/></a><abbr title="{hover}">{abbr}</abbr></div>'.format(\
 			name=self.get('name'),
 			title=self.getEventTitle(),
+			hover=longdesc,
+			abbr=shortdesc,
 			img=venue)
 	def getItem(self):
 		return '<dd><a href="{}.html">{}</a> ({})</dd>'.format(self.get('name'), self.get('title'), self.getEventTitle())
