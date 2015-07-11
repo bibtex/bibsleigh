@@ -9,6 +9,7 @@ from fancy.Languages import ISONames
 from fancy.Templates import personHTML, peoplistHTML, movein
 from lib.AST import Sleigh, escape
 from lib.JSON import parseJSON
+from lib.LP import uniq
 
 # The idea is to generate a colour between FFFDE7 (for 'a') and F57F17 (for 'z')
 # FFFDE7 is Yellow/50 and F57F17 is Yellow/900 in Material Design
@@ -113,7 +114,7 @@ if __name__ == "__main__":
 			bykey[c.getKey()] = c
 			for p in c.papers:
 				bykey[p.getKey()] = p
-	print(C.purple('BibSLEIGH flattened to {} papers'.format(len(bykey))))
+	print(C.purple('BibSLEIGH flattened to {} entries'.format(len(bykey))))
 	# tagged = []
 	# for k in ts.keys():
 	for fn in glob.glob(ienputdir + '/people/*.json'):
@@ -144,11 +145,17 @@ if __name__ == "__main__":
 		if 'roles' in persondef.keys():
 			curlist = '<h3>Facilitated {} volumes:</h3>'.format(len(persondef['roles']))
 			# things = [sleigh.seekByKey(p).getItem() for p in persondef['edited']]
-			things = [bykey[r[0]].getIconItem(r[1]) for r in persondef['roles']]
+			things = [bykey[r[0]].getIconItem1(r[1]) for r in persondef['roles']]
 			# curlist += '<dl class="toc">' + movein('\n'.join(things)) + '</dl>'
 			curlist += '<div class="minibar">' + movein('\n'.join(things)) + '<br style="clear:both"/></div>'
 			dls += curlist
 		if 'authored' in persondef.keys():
+			# List of contributions
+			curlist = '<h3>Contributed to:</h3>'
+			things = [bykey[p].up().getIconItem1(bykey[p].get('year')) for p in persondef['authored']]
+			curlist += '<div class="minibar">' + movein('\n'.join(uniq(things))) + '<br style="clear:both"/></div>'
+			dls += curlist
+			# List of papers
 			curlist = '<h3>Wrote {} papers:</h3>'.format(len(persondef['authored']))
 			# things = [sleigh.seekByKey(p).getItem() for p in persondef['authored']]
 			things = [bykey[p].getItem() for p in persondef['authored']]

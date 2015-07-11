@@ -471,8 +471,8 @@ class Conf(Unser):
 			return self.getKey().replace('-', ' ')
 	def getIconItem0(self):
 		return self.getIconItem1(self.getEventTitle())
-	def getIconItem(self, desc):
-		shorter = desc.replace(' ', '').replace('Organiser', 'OrganizationChair')
+	def getIconItem1(self, desc):
+		shorter = '{}'.format(desc).replace(' ', '').replace('Organiser', 'OrganizationChair')
 		shorter = shorter.replace('Committee', 'Co').replace('Chair', 'Ch')\
 			.replace('Program', 'Pr').replace('Organization', 'O')\
 			.replace('Steering', 'S').replace('Publicity', 'Pub')\
