@@ -17,10 +17,11 @@ cx = {0: 0, 1: 0, 2: 0}
 renameto = {}
 
 def nomidnames(s):
-	ns = s.split(' ')
-	while len(ns) > 1 and len(ns[1]) == 2 and ns[1][0].isupper() and ns[1][1] == '.':
-		del ns[1]
-	return ' '.join(ns)
+	# ns = s.split(' ')
+	# while len(ns) > 1 and len(ns[1]) == 2 and ns[1][0].isupper() and ns[1][1] == '.':
+	# 	del ns[1]
+	# return ' '.join(ns)
+	return ' '.join([n for n in s.split(' ') if len(n)!=2 or not n[0].isupper() or n[1]!='.'])
 
 def fileify(s):
 	return simpleLatin(s).replace('.', '').replace("'", '').replace(' ', '_')
@@ -49,6 +50,10 @@ if __name__ == "__main__":
 		# Conference;Year;First Name;Last Name;Sex;Role
 		csv.append(line.strip().split(';'))
 	f.close()
+	f = open('scraping/scraped-by-grammarware.csv', 'r')
+	for line in f.readlines():
+		csv.append(line.strip().split(';'))
+	f.close()
 	# All known contributors
 	people = {}
 	for fn in glob.glob(ienputdir + '/people/*.json'):
@@ -71,10 +76,13 @@ if __name__ == "__main__":
 				for k in ('author', 'editor'):
 					if k in p.json.keys():
 						names += [a for a in listify(p.json[k]) if a not in names]
+	# caching
+	peoplekeys = people.keys()
+	established = {}
 	# print(people)
 	CXread = len(people)
 	for name in names:
-		if name not in people.keys():
+		if name not in peoplekeys:
 			p = {'name': name,\
 				 'FILE': ienputdir + '/people/' + fileify(name) + '.json',\
 				'dblp': dblpify(name)}
@@ -84,48 +92,55 @@ if __name__ == "__main__":
 	for v in sleigh.venues:
 		for c in v.getConfs():
 			knownConfs.append(c.getKey())
-	print(knownConfs)
+	# print(knownConfs)
+	print(C.purple('BibSLEIGH flattened to {} entities'.format(len(knownConfs))))
 	# compressed error output
 	dunno = []
 	# Conference;Year;First Name;Last Name;Sex;Role
-	for i, line in enumerate(csv):
-		idx = jdx = -1
+	for line in csv:
 		name = (line[2] + ' ' + line[3]).strip()
+		if name in established.keys():
+			name = established[name]
 		if name in renameto.keys():
 			print('[', C.yellow('ALIA'), ']', 'Treating', name, 'as', renameto[name])
+			established[name] = renameto[name]
 			name = renameto[name]
-		if name not in people.keys():
+		if name not in peoplekeys:
 			# not really needed, but just for the sake of wider applicability in the future
-			ndl = nomidnames(nodiaLatin(name))
+			ndl = nomidnames(nodiaLatin(name)).lower()
 			f = None
-			for k in people.keys():
-				if nomidnames(nodiaLatin(k)) == ndl:
+			for k in peoplekeys:
+				if nomidnames(nodiaLatin(k)).lower() == ndl:
 					f = k
 					break
 			if not f:
-				print('[', C.red('PERS'), ']', 'Unacquainted with', name)
-				dunno.append(name)
+				if name not in dunno:
+					print('[', C.red('PERS'), ']', 'Unacquainted with', name)
+					dunno.append(name)
 				continue
 			else:
 				print('[', C.yellow('ALIA'), ']', 'Treating', name, 'as', k)
+				established[name] = k
 				name = k
-		else:
-			if 'sex' not in people[name].keys():
-				people[name]['sex'] = line[4]
-			if 'roles' not in people[name].keys():
-				people[name]['roles'] = []
-			# slashes replaced by dashes (ESEC/FSE becomes ESEC-FSE)
-			myconf = line[0].replace('/', '-') + '-' + line[1]
-			if myconf not in knownConfs:
+		# renamed or not, here we come!
+		if 'sex' not in people[name].keys():
+			people[name]['sex'] = line[4]
+		if 'roles' not in people[name].keys():
+			people[name]['roles'] = []
+		# slashes replaced by dashes (ESEC/FSE becomes ESEC-FSE)
+		myconf = line[0].replace('/', '-') + '-' + line[1]
+		if myconf not in knownConfs:
+			if myconf not in dunno:
 				print('[', C.red('CONF'), ']', 'No conference', myconf, 'found')
-				continue
-			if [myconf, line[5]] not in people[name]['roles']:
-				people[name]['roles'].append([myconf, line[5]])
+				dunno.append(myconf)
+			continue
+		if [myconf, line[5]] not in people[name]['roles']:
+			people[name]['roles'].append([myconf, line[5]])
 	print('\t', C.blue(CXread), 'people found in LRJs')
 	print('\t', C.blue(len(people)), 'people properly specified')
 	print('\t', C.blue(len(names)), 'people contributed to the corpus')
 	print('\t', C.red(len(dunno)), 'people with too much info on')
-	for k in people.keys():
+	for k in peoplekeys:
 		p = people[k]
 		if p['FILE']:
 			if os.path.exists(p['FILE']):

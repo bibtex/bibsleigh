@@ -1,0 +1,444 @@
+LDTA;2010;Claus;Brabrand;;Program Chair
+LDTA;2010;Pierre-Etienne;Moreau;;Program Chair
+LDTA;2010;Emilie;Balland;;Program Committee
+LDTA;2010;John;Boyland;;Program Committee
+LDTA;2010;Giorgios;Robert Economopoulos;;Program Committee
+LDTA;2010;Magne;Haveraaen;;Program Committee
+LDTA;2010;Nigel;Horspool;;Program Committee
+LDTA;2010;Shan;Shan Huang;;Program Committee
+LDTA;2010;Johan;Jeuring;;Program Committee
+LDTA;2010;Ondrej;Lhotak;;Program Committee
+LDTA;2010;Shane;Markstrum;;Program Committee
+LDTA;2010;Peter;D. Mosses;;Program Committee
+LDTA;2010;Klaus;Ostermann;;Program Committee
+LDTA;2010;Marc;Pantel;;Program Committee
+LDTA;2010;Elizabeth;Scott;;Program Committee
+LDTA;2010;Eli;Tilevich;;Program Committee
+LDTA;2010;Eelco;Visser;;Program Committee
+LDTA;2010;Joost;Visser;;Program Committee
+LDTA;2010;Tobias;Wrigstad;;Program Committee
+LDTA;2011;Emilie;Balland;;Program Committee
+LDTA;2011;Anya;Helene Bagge;;Program Committee
+LDTA;2011;Paulo;Borba;;Program Committee
+LDTA;2011;John;Boyland;;Program Committee
+LDTA;2011;Claus;Brabrand;;Program Committee
+LDTA;2011;Jim;Cordy;;Program Committee
+LDTA;2011;Kyung-Goo;Doh;;Program Committee
+LDTA;2011;Giorgios;Robert Economopoulos;;Program Committee
+LDTA;2011;Laurie;Hendren;;Program Committee
+LDTA;2011;Nigel;Horspool;;Program Committee
+LDTA;2011;Roberto;Ierusalimschy;;Program Committee
+LDTA;2011;Johan;Jeuring;;Program Committee
+LDTA;2011;Shane;Markstrum;;Program Committee
+LDTA;2011;Sukyoung;Ryu;;Program Committee
+LDTA;2011;João;Saraiva;;Program Committee
+LDTA;2011;Sylvain;Schmitz;;Program Committee
+LDTA;2011;Sibylle;Schupp;;Program Committee
+LDTA;2011;Eli;Tilevich;;Program Committee
+LDTA;2011;Eric;Van Wyk;;Program Committee
+LDTA;2011;Eelco;Visser;;Program Committee
+LDTA;2011;Emilie;Balland;;Organiser
+LDTA;2011;Giorgios;Robert Economopoulos;;Organiser
+LDTA;2011;Mark;van den Brand;;Steering Committee
+LDTA;2011;Görel;Hedin;;Steering Committee
+LDTA;2011;Tony;Sloane;;Steering Committee
+LDTA;2011;Eric;Van Wyk;;Steering Committee
+LDTA;2012;Suzana;Andova;;Program Committee
+LDTA;2012;Anya;Helene Bagge;;Program Committee
+LDTA;2012;Kyung-Goo;Doh;;Program Committee
+LDTA;2012;Jeff;Gray;;Program Committee
+LDTA;2012;Görel;Hedin;;Program Committee
+LDTA;2012;Zoltán;Horváth;;Program Committee
+LDTA;2012;Zhenjiang;Hu;;Program Committee
+LDTA;2012;Roberto;Ierusalimschy;;Program Committee
+LDTA;2012;Ivan;Kurtev;;Program Committee
+LDTA;2012;Marjan;Mernik;;Program Committee
+LDTA;2012;Nate;Nystrom;;Program Committee
+LDTA;2012;João;Saraiva;;Program Committee
+LDTA;2012;Sylvain;Schmitz;;Program Committee
+LDTA;2012;Tony;Sloane;;Program Committee
+LDTA;2012;Robert;Tairas;;Program Committee
+LDTA;2012;Laurence;Tratt;;Program Committee
+LDTA;2012;Vadim;Zaytsev;;Program Committee
+LDTA;2012;Anya;Helene Bagge;;Organiser
+LDTA;2012;Emilie;Balland;;Organiser
+LDTA;2012;Mark;van den Brand;;Steering Committee
+LDTA;2012;Görel;Hedin;;Steering Committee
+LDTA;2012;Tony;Sloane;;Steering Committee
+LDTA;2012;Eric;Van Wyk;;Steering Committee
+SLE;2008;Mark;van den Brand;;Keynote Speaker
+SLE;2008;Anneke;Kleppe;;Keynote Speaker
+SLE;2008;Mark;van den Brand;;Steering Committee
+SLE;2008;James;Cordy;;Steering Committee
+SLE;2008;Jean-Marie;Favre;;Steering Committee
+SLE;2008;Dragan;Gasevic;;Steering Committee
+SLE;2008;Gorel;Hedin;;Steering Committee
+SLE;2008;Ralf;Laemmel;;Steering Committee
+SLE;2008;Eric;Van Wyk;;Steering Committee
+SLE;2008;Andreas;Winter;;Steering Committee
+SLE;2008;Ralf;Laemmel;;General Chair
+SLE;2008;Dragan;Gasevic;;Program Chair
+SLE;2008;Eric;Van Wyk;;Program Chair
+SLE;2008;Jean-Marie;Favre;;Organiser
+SLE;2008;Jean-Sebastien;Sottet;;Organiser
+SLE;2008;Andreas;Winter;;Organiser
+SLE;2008;Steffen;Zschaler;;Publication Chair
+SLE;2008;Uwe;Aßmann;;Program Committee
+SLE;2008;Colin;Atkinson;;Program Committee
+SLE;2008;Jean;Bezivin;;Program Committee
+SLE;2008;Judith;Bishop;;Program Committee
+SLE;2008;Marco;Brambilla;;Program Committee
+SLE;2008;Martin;Bravenboer;;Program Committee
+SLE;2008;Charles;Consel;;Program Committee
+SLE;2008;Torbjörn;Ekman;;Program Committee
+SLE;2008;Gregor;Engels;;Program Committee
+SLE;2008;Robert;Fuhrer;;Program Committee
+SLE;2008;Dragan;Gasevic;;Program Committee
+SLE;2008;Martin;Gogolla;;Program Committee
+SLE;2008;Jeff;Gray;;Program Committee
+SLE;2008;Klaus;Havelund;;Program Committee
+SLE;2008;Reiko;Heckel;;Program Committee
+SLE;2008;Nigel;Horspool;;Program Committee
+SLE;2008;Joe;Kiniry;;Program Committee
+SLE;2008;Paul;Klint;;Program Committee
+SLE;2008;Mitch;Kokar;;Program Committee
+SLE;2008;Thomas;Kuehne;;Program Committee
+SLE;2008;Julia;Lawall;;Program Committee
+SLE;2008;Oege;de Moor;;Program Committee
+SLE;2008;Pirre-Etienne;Moreau;;Program Committee
+SLE;2008;Pierre-Alain;Muller;;Program Committee
+SLE;2008;Richard;Paige;;Program Committee
+SLE;2008;Jeff;Pan;;Program Committee
+SLE;2008;João;Saraiva;;Program Committee
+SLE;2008;Micael;Schwartzbach;;Program Committee
+SLE;2008;Anthony;Sloane;;Program Committee
+SLE;2008;Steffen;Staab;;Program Committee
+SLE;2008;Laurence;Tratt;;Program Committee
+SLE;2008;Walid;Taha;;Program Committee
+SLE;2008;Eli;Tilevich;;Program Committee
+SLE;2008;Juha-Pekka;Tolvanen;;Program Committee
+SLE;2008;Eric;Van Wyk;;Program Committee
+SLE;2008;Jurgen;Vinju;;Program Committee
+SLE;2008;Mike;Whalen;;Program Committee
+SLE;2008;Steffen;Zschaler;;Program Committee
+SLE;2009;James;Cordy;;Keynote Speaker
+SLE;2009;Jean;Bezivin;;Keynote Speaker
+SLE;2009;Dragan;Gasevic;;General Chair
+SLE;2009;Mark;van den Brand;;Program Chair
+SLE;2009;Jeff;Gray;;Program Chair
+SLE;2009;Colin;Atkinson;;Program Committee
+SLE;2009;Don;Batory;;Program Committee
+SLE;2009;Paulo;Borba;;Program Committee
+SLE;2009;John;Boyland;;Program Committee
+SLE;2009;Marco;Brambilla;;Program Committee
+SLE;2009;Shigeru;Chiba;;Program Committee
+SLE;2009;Charles;Consel;;Program Committee
+SLE;2009;Gregor;Engels;;Program Committee
+SLE;2009;Stephen;A. Edwards;;Program Committee
+SLE;2009;Robert;Fuhrer;;Program Committee
+SLE;2009;Martin;Gogolla;;Program Committee
+SLE;2009;Giancarlo;Guizzardi;;Program Committee
+SLE;2009;Reiko;Heckel;;Program Committee
+SLE;2009;Frédéric;Jouault;;Program Committee
+SLE;2009;Nicholas;Kraft;;Program Committee
+SLE;2009;Thomas;Kühne;;Program Committee
+SLE;2009;Julia;Lawall;;Program Committee
+SLE;2009;Timothy;Lethbridge;;Program Committee
+SLE;2009;Brian;Malloy;;Program Committee
+SLE;2009;Kim;Mens;;Program Committee
+SLE;2009;Marjan;Mernik;;Program Committee
+SLE;2009;Todd;Millstein;;Program Committee
+SLE;2009;Pierre-Etienne;Moreau;;Program Committee
+SLE;2009;Pierre-Alain;Muller;;Program Committee
+SLE;2009;Daniel;Oberle;;Program Committee
+SLE;2009;Richard;Paige;;Program Committee
+SLE;2009;James;Power;;Program Committee
+SLE;2009;João;Saraiva;;Program Committee
+SLE;2009;Mary;Lou Soffa;;Program Committee
+SLE;2009;Juha-Pekka;Tolvanen;;Program Committee
+SLE;2009;Alexander;Serebrenik;;Program Committee
+SLE;2009;Tony;Sloane;;Program Committee
+SLE;2009;Steffen;Staab;;Program Committee
+SLE;2009;Jun;Suzuki;;Program Committee
+SLE;2009;Walid;Taha;;Program Committee
+SLE;2009;Eli;Tilevich;;Program Committee
+SLE;2009;Jurgen;Vinju;;Program Committee
+SLE;2009;Eelco;Visser;;Program Committee
+SLE;2009;René;Witte;;Program Committee
+SLE;2009;Bardia;Mohabbati;;Web Chair
+SLE;2009;Alexander;Serebrenik;;Publication Chair
+SLE;2009;James;Hill;;Publication Chair
+SLE;2010;Mark;van den Brand;;General Chair
+SLE;2010;Brian;Malloy;;Program Chair
+SLE;2010;Steffen;Staab;;Program Chair
+SLE;2010;Eric;van Wyk;;Doctoral Symposium Chair
+SLE;2010;Steffen;Zschaler;;Doctoral Symposium Chair
+SLE;2010;Anthony;Cleve;;Publication Chair
+SLE;2010;Nicholas;Kraft;;Publication Chair
+SLE;2010;Arjan;van der Meer;;Web Chair
+SLE;2010;Alexander;Serebrenik;;Finance Chair
+SLE;2010;Uwe;Assmann;;Program Committee
+SLE;2010;Colin;Atkinson;;Program Committee
+SLE;2010;Sonia;Bergamaschi;;Program Committee
+SLE;2010;John;Boyland;;Program Committee
+SLE;2010;Jordi;Cabot;;Program Committee
+SLE;2010;Silvana;Castano;;Program Committee
+SLE;2010;Anthony;Cleve;;Program Committee
+SLE;2010;Michael;Collard;;Program Committee
+SLE;2010;Charles;Consel;;Program Committee
+SLE;2010;Stephen;Edwards;;Program Committee
+SLE;2010;Gregor;Engels;;Program Committee
+SLE;2010;Aldo;Gangemi;;Program Committee
+SLE;2010;Chiara;Ghidini;;Program Committee
+SLE;2010;Jeff;Gray;;Program Committee
+SLE;2010;Peter;Haase;;Program Committee
+SLE;2010;Gorel;Hedin;;Program Committee
+SLE;2010;Geert-Jan;Houben;;Program Committee
+SLE;2010;Adrian;Johnstone;;Program Committee
+SLE;2010;Nicholas;Kraft;;Program Committee
+SLE;2010;Ivan;Kurtev;;Program Committee
+SLE;2010;Julia;Lawall;;Program Committee
+SLE;2010;Marjan;Mernik;;Program Committee
+SLE;2010;Pierre-Etienne;Moreau;;Program Committee
+SLE;2010;Peter;Mosses;;Program Committee
+SLE;2010;Ralf;Möller;;Program Committee
+SLE;2010;Istvan;Nagy;;Program Committee
+SLE;2010;Daniel;Oberle;;Program Committee
+SLE;2010;Richard;Paige;;Program Committee
+SLE;2010;Jeff;Z. Pan;;Program Committee
+SLE;2010;Bijan;Parsia;;Program Committee
+SLE;2010;James;Power;;Program Committee
+SLE;2010;Alexander;Serebrenik;;Program Committee
+SLE;2010;Fernando;Silva Parreiras;;Program Committee
+SLE;2010;Anthony;Sloane;;Program Committee
+SLE;2010;Eleni;Stroulia;;Program Committee
+SLE;2010;York;Sure;;Program Committee
+SLE;2010;Gabriele;Taentzer;;Program Committee
+SLE;2010;Jurgen;Vinju;;Program Committee
+SLE;2010;Eelco;Visser;;Program Committee
+SLE;2010;Steffen;Zschaler;;Program Committee
+SLE;2011;João;Saraiva;;General Chair
+SLE;2011;Uwe;Aßmann;;Program Chair
+SLE;2011;Anthony;Sloane;;Program Chair
+SLE;2011;Perdita;Stevens;;Doctoral Symposium Chair
+SLE;2011;Eric;Van Wyk;;Doctoral Symposium Chair
+SLE;2011;Adrian;Johnstone;;Program Committee
+SLE;2011;Aldo;Gangemi;;Program Committee
+SLE;2011;Alexander;Serebrenik;;Program Committee
+SLE;2011;Ana;Moreira;;Program Committee
+SLE;2011;Anthony;Cleve;;Program Committee
+SLE;2011;Anya;Helene Bagge;;Program Committee
+SLE;2011;Bernhard;Rumpe;;Program Committee
+SLE;2011;Bijan;Parsia;;Program Committee
+SLE;2011;Brian;Malloy;;Program Committee
+SLE;2011;Bruno;Oliveira;;Program Committee
+SLE;2011;Chiara;Ghidini;;Program Committee
+SLE;2011;Daniel;Oberle;;Program Committee
+SLE;2011;Eelco;Visser;;Program Committee
+SLE;2011;Eric;Van Wyk;;Program Committee
+SLE;2011;Fernando;Pereira;;Program Committee
+SLE;2011;Fernando;Silva Parreiras;;Program Committee
+SLE;2011;Friedrich;Steimann;;Program Committee
+SLE;2011;Görel;Hedin;;Program Committee
+SLE;2011;Ivan;Kurtev;;Program Committee
+SLE;2011;James;Power;;Program Committee
+SLE;2011;Jean-Marie;Favre;;Program Committee
+SLE;2011;Jeff;Gray;;Program Committee
+SLE;2011;Jeff;Z. Pan;;Program Committee
+SLE;2011;João;Paulo Fernandes;;Program Committee
+SLE;2011;John;Boyland;;Program Committee
+SLE;2011;John;Grundy;;Program Committee
+SLE;2011;Jordi;Cabot;;Program Committee
+SLE;2011;Jurgen;Vinju;;Program Committee
+SLE;2011;Laurence;Tratt;;Program Committee
+SLE;2011;Marjan;Mernik;;Program Committee
+SLE;2011;Mark;van den Brand;;Program Committee
+SLE;2011;Michael;Collard;;Program Committee
+SLE;2011;Nicholas;Kraft;;Program Committee
+SLE;2011;Paul;Klint;;Program Committee
+SLE;2011;Paulo;Borba;;Program Committee
+SLE;2011;Peter;Haase;;Program Committee
+SLE;2011;Peter;Mosses;;Program Committee
+SLE;2011;Ralf;Möller;;Program Committee
+SLE;2011;Silvana;Castano;;Program Committee
+SLE;2011;Steffen;Zschaler;;Program Committee
+SLE;2011;York;Sure;;Program Committee
+SLE;2011;Zhenjiang;Hu;;Program Committee
+SLE;2011;José;Creissac Campos;;Finance Chair
+SLE;2011;João;Paulo Fernandes;;Publication Chair
+SLE;2011;Jurgen;Vinju;;Workshop Chair
+SLE;2011;Vadim;Zaytsev;;Publication Chair
+SLE;2012;Uwe;Assmann;;General Chair
+SLE;2012;Krzysztof;Czarnecki;;Program Chair
+SLE;2012;Görel;Hedin;;Program Chair
+SLE;2012;Emilie;Balland;;Program Committee
+SLE;2012;Paulo;Borba;;Program Committee
+SLE;2012;Claus;Brabrand;;Program Committee
+SLE;2012;Jordi;Cabot;;Program Committee
+SLE;2012;Krzysztof;Czarnecki;;Program Committee
+SLE;2012;Dragan;Gasevic;;Program Committee
+SLE;2012;Jeremy;Gibbons;;Program Committee
+SLE;2012;Jeff;Gray;;Program Committee
+SLE;2012;Görel;Hedin;;Program Committee
+SLE;2012;Markus;Herrmannsdoerfer;;Program Committee
+SLE;2012;Zhenjiang;Hu;;Program Committee
+SLE;2012;Paul;Klint;;Program Committee
+SLE;2012;Julia;Lawall;;Program Committee
+SLE;2012;Kim;Mens;;Program Committee
+SLE;2012;Mira;Mezini;;Program Committee
+SLE;2012;Daniel;Moody;;Program Committee
+SLE;2012;Pierre-Etienne;Moreau;;Program Committee
+SLE;2012;Peter;Mosses;;Program Committee
+SLE;2012;Ralf;Möller;;Program Committee
+SLE;2012;Klaus;Ostermann;;Program Committee
+SLE;2012;Bijan;Parsia;;Program Committee
+SLE;2012;Arnd;Poetzsch-Heffter;;Program Committee
+SLE;2012;Lukas;Renggli;;Program Committee
+SLE;2012;Bernhard;Rumpe;;Program Committee
+SLE;2012;Joao;Saraiva;;Program Committee
+SLE;2012;Michael;Schwartzbach;;Program Committee
+SLE;2012;Friedrich;Steimann;;Program Committee
+SLE;2012;Mark;van den Brand;;Program Committee
+SLE;2012;Eric;Van Wyk;;Program Committee
+SLE;2012;Jeff;Z. Pan;;Program Committee
+SLE;2012;Steffen;Zschaler;;Program Committee
+SLE;2013;Eric;Van Wyk;;General Chair
+SLE;2013;Martin;Erwig;;Program Chair
+SLE;2013;Richard;Paige;;Program Chair
+SLE;2013;Emilie;Balland;;Program Committee
+SLE;2013;Olaf;Chitil;;Program Committee
+SLE;2013;James;R. Cordy;;Program Committee
+SLE;2013;Davide;Di Ruscio;;Program Committee
+SLE;2013;Iavor;Diatchki;;Program Committee
+SLE;2013;Anne;Etien;;Program Committee
+SLE;2013;Jean-Marie;Favre;;Program Committee
+SLE;2013;Dragan;Gasevic;;Program Committee
+SLE;2013;Andy;Gill;;Program Committee
+SLE;2013;Jeff;Gray;;Program Committee
+SLE;2013;Giancarlo;Guizzardi;;Program Committee
+SLE;2013;Gorel;Hedin;;Program Committee
+SLE;2013;Markus;Herrmannsdoerfer;;Program Committee
+SLE;2013;Zhenjiang;Hu;;Program Committee
+SLE;2013;Oleg;Kiselyov;;Program Committee
+SLE;2013;Paul;Klint;;Program Committee
+SLE;2013;Thomas;Kuehne;;Program Committee
+SLE;2013;Kim;Mens;;Program Committee
+SLE;2013;Pierre-Etienne;Moreau;;Program Committee
+SLE;2013;Klaus;Ostermann;;Program Committee
+SLE;2013;Arnd;Poetzsch-Heffter;;Program Committee
+SLE;2013;Fiona;Polack;;Program Committee
+SLE;2013;Lukas;Renggli;;Program Committee
+SLE;2013;Bernhard;Rumpe;;Program Committee
+SLE;2013;João;Saraiva;;Program Committee
+SLE;2013;Friedrich;Steimann;;Program Committee
+SLE;2013;Gabriele;Taentzer;;Program Committee
+SLE;2013;Mark;Van Den Brand;;Program Committee
+SLE;2013;Jurgen;Vinju;;Program Committee
+SLE;2013;Mark;van den Brand;;Steering Committee
+SLE;2013;James;Cordy;;Steering Committee
+SLE;2013;Jean-Marie;Favre;;Steering Committee
+SLE;2013;Dragan;Gašević;;Steering Committee
+SLE;2013;Görel;Hedin;;Steering Committee
+SLE;2013;Eric;Van Wyk;;Steering Committee
+SLE;2013;Jurgen;Vinju;;Steering Committee
+SLE;2013;Kim;Mens;;Steering Committee
+SLE;2014;Benoît;Combemale;;Program Chair
+SLE;2014;David;J. Pearce;;Program Chair
+SLE;2014;Emilie;Balland;;Program Committee
+SLE;2014;Tony;Clark;;Program Committee
+SLE;2014;Zinovy;Diskin;;Program Committee
+SLE;2014;Martin;Erwig;;Program Committee
+SLE;2014;Anne;Etien;;Program Committee
+SLE;2014;Joerg;Evermann;;Program Committee
+SLE;2014;Jean-Marie;Favre;;Program Committee
+SLE;2014;Robert;France;;Program Committee
+SLE;2014;Andy;Gill;;Program Committee
+SLE;2014;Martin;Gogolla;;Program Committee
+SLE;2014;Pieter;Van Gorp;;Program Committee
+SLE;2014;Giancarlo;Guizzardi;;Program Committee
+SLE;2014;Görel;Hedin;;Program Committee
+SLE;2014;Markus;Herrmannsdoerfer;;Program Committee
+SLE;2014;Jean-Marc;Jézéquel;;Program Committee
+SLE;2014;Thomas;Kuehne;;Program Committee
+SLE;2014;Ralf;Laemmel;;Program Committee
+SLE;2014;Peter;Mosses;;Program Committee
+SLE;2014;Sean;Mcdirmid;;Program Committee
+SLE;2014;Kim;Mens;;Program Committee
+SLE;2014;Marjan;Mernik;;Program Committee
+SLE;2014;Pierre-Alain;Muller;;Program Committee
+SLE;2014;Nathaniel;Nystrom;;Program Committee
+SLE;2014;Klaus;Ostermann;;Program Committee
+SLE;2014;Oscar;Nierstrasz;;Program Committee
+SLE;2014;Richard;Paige;;Program Committee
+SLE;2014;Fiona;Polack;;Program Committee
+SLE;2014;Arnd;Poetzsch-Heffter;;Program Committee
+SLE;2014;Davide;Di Ruscio;;Program Committee
+SLE;2014;João;Saraiva;;Program Committee
+SLE;2014;Bran;Selic;;Program Committee
+SLE;2014;Jim;Steel;;Program Committee
+SLE;2014;Tijs;Van Der Storm;;Program Committee
+SLE;2014;Juha-Pekka;Tolvanen;;Program Committee
+SLE;2014;Michael;Whalen;;Program Committee
+SLE;2014;Eric;Van Wyk;;Program Committee
+SLE;2014;Steffen;Zschaler;;Program Committee
+SLE;2014;Eric;Van Wyk;;Workshop Chair
+SLE;2014;Ralf;Lämmel;;Panel Chair
+SLE;2014;Craig;Anslow;;Publicity Chair
+SLE;2014;Tijs;van der Storm;;Publicity Chair
+SLE;2014;Davy;Landman;;Publicity Chair
+SLE;2014;Olivier;Barais;;Publication Chair
+SLE;2014;Ivica;Crnkovic;;Local Chair
+SLE;2014;Jurgen;Vinju;;General Chair
+SLE;2014;Martin;Erwig;;Steering Committee
+SLE;2014;Richard;Paige;;Steering Committee
+SLE;2014;Jean-Marie;Favre;;Steering Committee
+SLE;2014;Tony;Sloane;;Steering Committee
+SLE;2014;Eric;Van Wyk;;Steering Committee
+SLE;2014;Gorel;Hedin;;Steering Committee
+SLE;2014;Jurgen;Vinju;;Steering Committee
+SLE;2014;Kim;Mens;;Steering Committee
+SLE;2014;Krzysztof;Czarnecki;;Steering Committee
+SLE;2014;Mark;van den Brand;;Steering Chair
+SLE;2015;Richard;Paige;;General Chair
+SLE;2015;Davide;di Ruscio;;Program Chair
+SLE;2015;Markus;Voelter;;Program Chair
+SLE;2015;Emilie;Balland;;Program Committee
+SLE;2015;Anya;Helene Bagge;;Program Committee
+SLE;2015;Marco;Brambilla;;Program Committee
+SLE;2015;Jordi;Cabot;;Program Committee
+SLE;2015;Benoit;Combemale;;Program Committee
+SLE;2015;Zinovy;Diskin;;Program Committee
+SLE;2015;Sebastian;Erdweg;;Program Committee
+SLE;2015;Jean-Marie;Favre;;Program Committee
+SLE;2015;Holger;Giese;;Program Committee
+SLE;2015;Martin;Gogolla;;Program Committee
+SLE;2015;Thomas;Goldschmidt;;Program Committee
+SLE;2015;Jeff;Gray;;Program Committee
+SLE;2015;Angelo;Hulshout;;Program Committee
+SLE;2015;Zhenjiang;Hu;;Program Committee
+SLE;2015;Adrian;Johnstone;;Program Committee
+SLE;2015;Paul;Klint;;Program Committee
+SLE;2015;Dimitris;Kolovos;;Program Committee
+SLE;2015;Juan;de Lara;;Program Committee
+SLE;2015;Terence;Parr;;Program Committee
+SLE;2015;David;J. Pearce;;Program Committee
+SLE;2015;Alfonso;Pierantonio;;Program Committee
+SLE;2015;Daniel;Ratiu;;Program Committee
+SLE;2015;Tijs;van der Storm;;Program Committee
+SLE;2015;Eugene;Syriani;;Program Committee
+SLE;2015;Juha-Pekka;Tolvanen;;Program Committee
+SLE;2015;Guido;Wachsmuth;;Program Committee
+SLE;2015;Manuel;Wimmer;;Program Committee
+SLE;2015;Daniel;Varro;;Program Committee
+SLE;2015;Vadim;Zaytsev;;Program Committee
+SLE;2015;Anya;Helene Bagge;;Publicity Chair
+SLE;2015;David;Pearce;;Steering Committee
+SLE;2015;Benoit;Combemale;;Steering Committee
+SLE;2015;Martin;Erwig;;Steering Committee
+SLE;2015;Richard;Paige;;Steering Committee
+SLE;2015;Tony;Sloane;;Steering Committee
+SLE;2015;Eric;Van Wyk;;Steering Committee
+SLE;2015;Gorel;Hedin;;Steering Committee
+SLE;2015;Jurgen;Vinju;;Steering Committee
+SLE;2015;Krzysztof;Czarnecki;;Steering Committee
+SLE;2015;Mark;van den Brand;;Steering Chair

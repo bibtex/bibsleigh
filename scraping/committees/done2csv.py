@@ -37,11 +37,13 @@ for line in lines:
 		name = name.split(',')[0]
 	if '(' in name:
 		name = name.split('(')[0]
+	if name.startswith('* '):
+		name = name[2:].strip()
 	# Conference;Year;First Name;Last Name;Sex;Role
 	conf = fn.split('-')[0].upper()
 	year = fn.split('-')[1].split('.')[0]
-	fname = name.split(' ')[0]
-	lname = ' '.join(name.split(' ')[1:])
+	fname = name.split(' ')[0].strip()
+	lname = ' '.join(name.split(' ')[1:]).strip()
 	role = ROLEZ[status.strip()]
 	# line = fn, status, name
 	# print(line)
