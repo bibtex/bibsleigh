@@ -7,10 +7,12 @@ import sys, os.path
 from fancy.ANSI import C
 from lib.AST import Sleigh
 from lib.NLP import strictstrip
+from fancy.KnownNames import badvariants, contractions
 
 ienputdir = '../json'
 sleigh = Sleigh(ienputdir + '/corpus')
 verbose = False
+wheretolook = ('journal', 'series', 'booktitle', 'publisher')
 
 def checkon(fn, o):
 	if not os.path.exists(fn) or os.path.isdir(fn):
@@ -20,26 +22,18 @@ def checkon(fn, o):
 	f.close()
 	flines = [strictstrip(s) for s in lines]
 	plines = sorted([strictstrip(s) for s in o.getJSON().split('\n')[1:-1]])
-	# long names
-	if o.get('journal') == 'Sci. Comput. Program.':
-		o.json['journal'] = 'Science of Computer Programming'
-	if o.get('journal') == 'Electr. Notes Theor. Comput. Sci.':
-		o.json['journal'] = 'Electronic Notes in Theoretical Computer Science'
-	if o.get('series') == 'LNCS':
-		o.json['series'] = 'Lecture Notes in Computer Science'
-	# short names
-	if o.get('journal') == 'Computer Languages, Systems & Structures':
-		o.json['journalshort'] = 'ComLan'
-	if o.get('journal') == 'Science of Computer Programming':
-		o.json['journalshort'] = 'SCP'
-	if o.get('journal') == 'Theoretical Computer Science':
-		o.json['journalshort'] = 'TCS'
-	if o.get('journal') == 'Electronic Notes in Theoretical Computer Science':
-		o.json['journalshort'] = 'ENTCS'
-	if o.get('series') == 'Lecture Notes in Computer Science':
-		o.json['seriesshort'] = 'LNCS'
-	if o.get('publisher') == 'Schloss Dagstuhl - Leibniz-Zentrum fuer Informatik':
-		o.json['publishershort'] = 'Dagstuhl'
+	# bad variants
+	for bad, good in badvariants:
+		for key in wheretolook:
+			if o.get(key) == bad:
+				o.json[key] = good
+	# contractions
+	for short, longer in contractions:
+		for key in wheretolook:
+			if o.get(key) == short:
+				o.json[key] = longer
+			if o.get(key) == longer:
+				o.json[key+'short'] = short
 	nlines = sorted([strictstrip(s) for s in o.getJSON().split('\n')[1:-1]])
 	if flines != plines:
 		return 1

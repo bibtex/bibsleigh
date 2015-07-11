@@ -23,14 +23,9 @@ def checkon(fn, o):
 				del o.json['FILE']
 			f = open(fn, 'w')
 			f.write(o.getJSON())
-			# plines = sorted([strictstrip(s) for s in o.getJSON().split('\n')[1:-1]])
-			# f = open(fn, 'w')
-			# f.write('{\n')
-			# for line in plines:
-			# 	f.write('\t'+line+'\n')
-			# f.write('}')
 			f.close()
 			return 2
+			# TODO push series/volume and publisher to the papers as well
 		else:
 			return 1
 	else:
