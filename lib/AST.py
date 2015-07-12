@@ -54,6 +54,7 @@ class Unser(object):
 				# secret key
 				continue
 			if k in ('author', 'editor'):
+				# TODO: add (correct!) links
 				s += '\t{:<13} = "{}",\n'.format(k, ' and '.join(listify(self.json[k])))
 			elif k in ('title', 'booktitle', 'series', 'publisher', 'journal'):
 				if k+'short' not in self.json.keys():

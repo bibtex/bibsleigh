@@ -117,11 +117,14 @@ if __name__ == "__main__":
 	print(C.purple('BibSLEIGH flattened to {} entries'.format(len(bykey))))
 	# tagged = []
 	# for k in ts.keys():
+	peoples = {}
 	for fn in glob.glob(ienputdir + '/people/*.json'):
 		k = fn.split('/')[-1][:-5]
 		ps.append(k)
+		# TODO: get rid of ps in favour of peoples
 		f = open('{}/person/{}.html'.format(outputdir, k), 'w')
 		persondef = parseJSON(fn)
+		peoples[k] = persondef
 		# what to google?
 		# links = []
 		# if 'g' not in persondef.keys():
@@ -173,16 +176,19 @@ if __name__ == "__main__":
 						clist[a] += 1
 					else:
 						clist[a] = 1
-				adds = '<div class="rbox"><strong>Travelled to:</strong><hr/>' \
-					 + '<br/>\n'.join(['{} × {}'.format(clist[a], a) for a in sorted(clist.keys())]) \
-					 + '</div>'
-				boxlinks = adds
+				adds = '<strong>Travelled to:</strong><hr/>' \
+					 + '<br/>\n'.join(['{} × {}'.format(clist[a], a) for a in sorted(clist.keys())])
+				boxlinks += adds
+			# TODO: collaborated with...
+			# combine boxlinks
+			if boxlinks:
+				boxlinks = '<div class="rbox">' + boxlinks + '</div>'
 		f.write(personHTML.format(\
 			title=k,
 			gender=gender,
 			boxlinks=boxlinks,
 			eperson=escape(k),
-			person=persondef['name'],#k.replace('_', ' '),
+			person=persondef['name'],
 			# boxlinks=links
 			namedlists=dls))
 		f.close()
@@ -194,13 +200,17 @@ if __name__ == "__main__":
 	letters = [chr(x) for x in range(ord('a'), ord('z')+1)]
 	indices = {x:[] for x in letters}
 	for t in keyz:
-		letter = t.split('_')[-1][0].lower()
+		ws = t.split('_')
+		i = -1
+		if ws[i] == 'Jr':
+			i -= 1
+		letter = ws[i][0].lower()
 		if not letter.isalpha():
 			print(C.red('ERROR')+':', 'wrong name', t)
-			continue
+			letter = ws[i-1][0].lower()
 		indices[letter].append('<li><a href="{}.html">{}</a></li>'.format(\
 			escape(t),
-			t.replace('_', ' ')))
+			peoples[t]['name']))
 	# fancy yellow A-Z link array
 	links = \
 	['<div class="abc" style="background:#{col}"><a href="index-{low}.html">{up}</a></div>'.format(\

@@ -15,6 +15,7 @@ sleigh = Sleigh(ienputdir + '/corpus')
 verbose = False
 cx = {0: 0, 1: 0, 2: 0}
 renameto = {}
+dis = {}
 
 def nomidnames(s):
 	# ns = s.split(' ')
@@ -29,17 +30,26 @@ def fileify(s):
 
 def dblpify(s):
 	# http://dblp.uni-trier.de/pers/hd/e/Elbaum:Sebastian_G=
+	if s in dis.keys():
+		return dis[s]
 	if s.find(' ') < 0:
 		print('[', C.red('NAME'), ']', 'Unconventional full name:', s)
 		cx[1] += 1
 		return dblpLatin(s)+':'
-	sur = dblpLatin(s[s.rindex(' ')+1:])
-	rest = dblpLatin(s[:s.rindex(' ')]).replace(' ', '_').replace('.', '=').replace("'", '=')
+	ws = s.split(' ')
+	i = -1
+	if ws[i] in ('Jr', 'Jr.'):
+		i -= 1
+	sur = dblpLatin(' '.join(ws[i:]))
+	rest = dblpLatin(' '.join(ws[:i])).replace(' ', '_')
+	for c in ".'-":
+		rest = rest.replace(c, '=')
 	return sur+':'+rest
 
 if __name__ == "__main__":
 	verbose = sys.argv[-1] == '-v'
 	aka = parseJSON(ienputdir + '/aliases.json')
+	dis = parseJSON(ienputdir + '/disambig.json')
 	# invert aliasing
 	for akey in aka.keys():
 		for aval in aka[akey]:
