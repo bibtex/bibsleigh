@@ -5,8 +5,10 @@
 
 import sys, os.path
 from fancy.ANSI import C
+from fancy.Latin import nodiaLatin, simpleLatin
 from lib.AST import Sleigh
 from lib.JSON import parseJSON
+from lib.LP import uniq
 from lib.NLP import strictstrip
 
 ienputdir = '../json'
@@ -59,6 +61,33 @@ if __name__ == "__main__":
 		C.red(sleigh.numOfPapers()),
 		C.purple('='*42)))
 	aka = parseJSON(ienputdir + '/aliases.json')
+	CX = sum([len(aka[a]) for a in aka.keys()])
+	# self-adaptation heuristic:
+	#  if a manual rule does the same as the other heuristic, it’s dumb
+	for a in sorted(aka.keys()):
+		if len(aka[a]) == 1 and aka[a][0] in (nodiaLatin(a), simpleLatin(a)):
+			print('[ {} ]'.format(C.blue('DUMB')), a, 'aliasing was unnecessary manual work')
+		elif len(aka[a]) == 2 and (aka[a] == [nodiaLatin(a), simpleLatin(a)] or aka[a] == [simpleLatin(a), nodiaLatin(a)]):
+			print('[ {} ]'.format(C.blue('DUMB')), a, 'aliasing was a lot of unnecessary manual work')
+		elif nodiaLatin(a) in aka[a] or simpleLatin(a) in aka[a]:
+			print('[ {} ]'.format(C.blue('DUMB')), a, 'aliasing contains some unnecessary manual work')
+	# auto-aliasing heuristic:
+	#  for each author with diacritics, its non-diacritic twin is considered harmful
+	people = []
+	for v in sleigh.venues:
+		for c in v.getConfs():
+			if 'editor' in c.json.keys():
+				people += c.get('editor')
+			for p in c.papers:
+				if 'author' in p.json.keys():
+					people += p.get('author')
+	people = uniq(people)
+	for a in people:
+		for na in (nodiaLatin(a), simpleLatin(a)):
+			if na != a:
+				if a not in aka.keys():
+					aka[a] = []
+				aka[a].append(na)
 	# invert aliasing
 	for akey in aka.keys():
 		for aval in aka[akey]:
@@ -69,6 +98,7 @@ if __name__ == "__main__":
 			cx[checkreport(c.filename, c)] += 1
 			for p in c.papers:
 				cx[checkreport(p.filename, p)] += 1
+	print('{} aliasing rules, {} of them manual.'.format(len(renameto), CX))
 	print('{} files checked, {} ok, {} fixed, {} failed'.format(\
 		C.bold(cx[0] + cx[1] + cx[2]),
 		C.blue(cx[0]),

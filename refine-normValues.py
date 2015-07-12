@@ -54,6 +54,9 @@ def checkon(fn, o):
 				o.json[k] = o.json[k].replace(' "', ' “').replace('"', '”')
 			elif o.json[k].find('" ') > -1 and o.json[k].startswith('"'):
 				o.json[k] = o.json[k].replace('" ', '” ').replace('"', '“')
+			# the case of "Jr" vs "Jr."
+			if o.json[k].endswith('Jr'):
+				o.json[k] += '.'
 		elif isinstance(o.json[k], list):
 			# inline trivial lists
 			if len(o.json[k]) == 1:
@@ -68,6 +71,8 @@ def checkon(fn, o):
 						ws = ws[:-1]
 					nas.append(' '.join(ws))
 				o.json[k] = nas
+				# the case of "Jr" vs "Jr."
+				o.json[k] = [a+'.' if a.endswith(' Jr') else a for a in o.json[k]]
 	nlines = sorted([strictstrip(s) for s in o.getJSON().split('\n')[1:-1]])
 	# The next case should not happen, but could if we have trivial lists
 	# if flines != plines:
