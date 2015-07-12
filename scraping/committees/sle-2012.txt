@@ -13,11 +13,11 @@ PrCo Emilie Balland, INRIA Bordeaux - Sud-Ouest, France
 PrCo Paulo Borba, Federal University of Pernambuco, Brazil
 PrCo Claus Brabrand, IT University of Copenhagen, Denmark
 PrCo Jordi Cabot, École des Mines de Nantes, France
-PrCo Krzysztof Czarnecki, University of Waterloo, Canada (co-chair)
+PrCh Krzysztof Czarnecki, University of Waterloo, Canada (co-chair)
 PrCo Dragan Gasevic, Athabasca University, Canada
 PrCo Jeremy Gibbons, University of Oxford, UK
 PrCo Jeff Gray, University of Alabama, USA
-PrCo Görel Hedin, Lund University, Sweden (co-chair)
+PrCh Görel Hedin, Lund University, Sweden (co-chair)
 PrCo Markus Herrmannsdoerfer, Technische Universität München, Germany
 PrCo Zhenjiang Hu, National Institute of Informatics, Japan
 PrCo Paul Klint, CWI, Amsterdam, The Netherlands

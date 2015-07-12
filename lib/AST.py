@@ -478,7 +478,9 @@ class Conf(Unser):
 			.replace('Steering', 'S').replace('Publicity', 'Pub')\
 			.replace('Editor', 'Ed').replace('Publication', 'Pbl')\
 			.replace('Finance', 'Fin').replace('Challenge', 'Cha')\
-			.replace('SocialMedia', 'SM').replace('General', 'G')
+			.replace('SocialMedia', 'SM').replace('General', 'G')\
+			.replace('Panel', 'Pa').replace('DoctoralSymposium', 'DS')\
+			.replace('Scientific', 'Sci').replace('Tutorial', 'Tu')
 		return self.getIconItem2(desc, shorter)
 	def getIconItem2(self, longdesc, shortdesc):
 		if 'venue' in self.json.keys():

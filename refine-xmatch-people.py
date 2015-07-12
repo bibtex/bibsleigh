@@ -21,6 +21,7 @@ def nomidnames(s):
 	# while len(ns) > 1 and len(ns[1]) == 2 and ns[1][0].isupper() and ns[1][1] == '.':
 	# 	del ns[1]
 	# return ' '.join(ns)
+	s = s.replace('.', '. ').replace('  ', ' ')
 	return ' '.join([n for n in s.split(' ') if len(n)!=2 or not n[0].isupper() or n[1]!='.'])
 
 def fileify(s):
@@ -123,7 +124,7 @@ if __name__ == "__main__":
 				established[name] = k
 				name = k
 		# renamed or not, here we come!
-		if 'sex' not in people[name].keys():
+		if 'sex' not in people[name].keys() and line[4]:
 			people[name]['sex'] = line[4]
 		if 'roles' not in people[name].keys():
 			people[name]['roles'] = []

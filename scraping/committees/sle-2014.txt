@@ -47,8 +47,8 @@ WoCh Eric Van Wyk, University of Minnesota, USA
 PaCh Ralf Lämmel, Universität Koblenz-Landau, Germany
      Publicity chairs
 PbCh Craig Anslow, University of Calgary, Canada (general publicity)
-PbCh Tijs van der Storm, Centrum Wiskunde & Informatica, The Netherlands (social media)
-PbCh Davy Landman, Centrum Wiskunde & Informatica, The Netherlands (web)
+SMCh Tijs van der Storm, Centrum Wiskunde & Informatica, The Netherlands (social media)
+WeCh Davy Landman, Centrum Wiskunde & Informatica, The Netherlands (web)
      Publication chair
 PuCh Olivier Barais, Université de Rennes 1 / IRISA, France
      Local organization chair

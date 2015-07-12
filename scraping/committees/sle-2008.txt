@@ -29,9 +29,9 @@ PrCh * Eric Van Wyk, University of Minnesota, USA
      
      Organization Committee
 OrCo * Jean-Marie Favre, University of Grenoble, France
-OrCo * Jean-Sebastien Sottet, Web Chair, University of Grenoble, France
+WeCh * Jean-Sebastien Sottet, Web Chair, University of Grenoble, France
 OrCo * Andreas Winter, Johannes Gutenberg-Universitat Mainz, Germany
-PuCh * Steffen Zschaler, Publicity Chair, TU Dresden, Germany
+PbCh * Steffen Zschaler, Publicity Chair, TU Dresden, Germany
      
      Program Committee
 PrCo * Uwe Aßmann, Technische Universitaet Dresden, Germany
@@ -44,7 +44,7 @@ PrCo * Charles Consel, Uinversity of Paris VI, France
 PrCo * Torbjörn Ekman, Oxford University, England
 PrCo * Gregor Engels, Universität Paderborn, Germany
 PrCo * Robert Fuhrer, IBM, USA
-PrCo * Dragan Gasevic, co-chair, Athabasca University, Canada
+PrCh * Dragan Gasevic, co-chair, Athabasca University, Canada
 PrCo * Martin Gogolla, University of Bremen, Germany
 PrCo * Jeff Gray, University of Alabama at Birmingham, USA
 PrCo * Klaus Havelund, NASA Jet Propulsion Labs, USA
@@ -68,7 +68,7 @@ PrCo * Laurence Tratt, Bournemouth University, England
 PrCo * Walid Taha, Rice University, USA
 PrCo * Eli Tilevich, Virginia Tech, USA
 PrCo * Juha-Pekka Tolvanen, MetaCase, Finland
-PrCo * Eric Van Wyk, co-chair, University of Minnesota, USA
+PrCh * Eric Van Wyk, co-chair, University of Minnesota, USA
 PrCo * Jurgen Vinju, CWI, The Netherlands
 PrCo * Mike Whalen, Rockwell Collins, USA
 PrCo * Steffen Zschaler, Technische Universitaet Dresden, Germany

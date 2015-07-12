@@ -7,7 +7,7 @@ PrCo Emilie Balland, INRIA, France
 PrCo Anya Helene Bagge, University of Bergen, Norway
 PrCo Paulo Borba, Federal University of Pernambuco, Brazil
 PrCo John Boyland, University of Wisconsin, United States
-PrCo Claus Brabrand, IT University of Copenhagen, Denmark (co-chair), brabrand@itu.dk
+PrCh Claus Brabrand, IT University of Copenhagen, Denmark (co-chair), brabrand@itu.dk
 PrCo Jim Cordy, Queen's University, Canada
 PrCo Kyung-Goo Doh, Hanyang University, Ansan, South Korea
 PrCo Giorgios Robert Economopoulos, University of Southampton, UK
@@ -21,7 +21,7 @@ PrCo João Saraiva, Universidade do Minho, Portugal
 PrCo Sylvain Schmitz, Ecole Normale Supérieure de Cachan, France
 PrCo Sibylle Schupp, Hamburg University of Technology, Germany
 PrCo Eli Tilevich, Virginia Tech, United States
-PrCo Eric Van Wyk, University of Minnesota, United States (co-chair), evw@cs.umn.edu
+PrCh Eric Van Wyk, University of Minnesota, United States (co-chair), evw@cs.umn.edu
 PrCo Eelco Visser, Delft University of Technology, The Netherlands
      organizing committee
      

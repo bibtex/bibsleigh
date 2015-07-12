@@ -109,7 +109,7 @@ for i in range(0, len(lines)):
 		status, mode = BLANK, 'TTCh '
 	elif match(line, 'Industry track program committee'):
 		status, mode = BLANK, 'ITPC '
-	elif match(line, 'Industry Track'):
+	elif matchs(line, ('Industry Track', 'Industrial Track Co-chair')):
 		status, mode = BLANK, 'InCh '
 	elif matchs(line, ('Program committee', 'PROGRAM COMITTEE')):
 		status, mode = BLANK, 'PrCo '
@@ -125,8 +125,8 @@ for i in range(0, len(lines)):
 		status, mode = BLANK, 'WoCh '
 	elif matchs(line, ('Website administration', 'Web Chair')):
 		status, mode = BLANK, 'WeCh '
-	# elif matchbeg(line, ignopatterns):
-	# 	status = BLANK
+	elif matchbeg(line, ignopatterns):
+		status = BLANK
 	elif line.split(' ')[0].isdigit():
 		status = BLANK
 	elif line in ignored:
@@ -143,8 +143,8 @@ for i in range(0, len(lines)):
 			status = status.replace('Co', 'Ch')
 		elif match(line, '(Finance Chair)'):
 			status = 'FiCh '
-		elif matchs(line, ('Publicity co-Chair)', 'Publicity Chair, ', ' - Publicity Chair')):
-			status = 'PuCh '
+		elif matchs(line, ('Publicity Chair, ', ' - Publicity Chair')):
+			status = 'PbCh '
 		elif match(line, '(Workshop Selection Chair)'):
 			status = 'WoCh '
 		elif matchs(line, ('(Program Chair)', '(Program co-Chair)')):
@@ -153,7 +153,7 @@ for i in range(0, len(lines)):
 			status = 'OrCh '
 		elif match(line, '(Tutorials Chair)'):
 			status = 'TuCh '
-		elif match(line, '(Web Chair)'):
+		elif matchs(line, ('(Web Chair)', '(Web and Publicity co-Chair')):
 			status = 'WeCh '
 	lines[i] = [status, line]
 

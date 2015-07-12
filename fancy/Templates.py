@@ -110,7 +110,7 @@ tagHTML = header.replace('stuff/', '../stuff/')+'''
 
 peoplistHTML = header.replace('stuff/', '../stuff/')+'''
 	<a href="../index.html"><img src="../stuff/bibsleigh.png" alt="BibSLEIGH" title="BibSLEIGH" class="pad"/></a>
-'''+movein(leftLinks('papp', ''))+'''
+'''+movein(leftLinks('pppa', ''))+'''
 </div>
 <div class="main">
 <h2><span class="ttl">People index</span></h2>
@@ -120,7 +120,7 @@ peoplistHTML = header.replace('stuff/', '../stuff/')+'''
 
 personHTML = header.replace('stuff/', '../stuff/')+'''
 	<a href="../index.html"><img src="../stuff/bibsleigh.png" alt="BibSLEIGH" title="BibSLEIGH" class="pad"/></a>
-'''+movein(leftLinks('papp', editLink).format(edit=editPerson))+'''
+'''+movein(leftLinks('pppa', editLink).format(edit=editPerson))+'''
 </div>
 <div class="main">
 <h2><span class="ttl">{gender} Person:</span> {person}</h2>

@@ -2,7 +2,7 @@
      http://ldta.info/2012/committees.html
      program committee
      
-PrCo Suzana Andova, Eindhoven University of Technology, The Netherlands (co-chair)
+PrCh Suzana Andova, Eindhoven University of Technology, The Netherlands (co-chair)
 PrCo Anya Helene Bagge, University of Bergen, Norway
 PrCo Kyung-Goo Doh, Hanyang University, Ansan, South Korea
 PrCo Jeff Gray, University of Alabama, USA
@@ -15,7 +15,7 @@ PrCo Marjan Mernik, University of Maribor, Slovenia
 PrCo Nate Nystrom, University of Lugano, Switzerland
 PrCo João Saraiva, Universidade do Minho, Braga, Portugal
 PrCo Sylvain Schmitz, Ecole Normale Supérieure de Cachan, France
-PrCo Tony Sloane, Macquarie University, Australia (co-chair)
+PrCh Tony Sloane, Macquarie University, Australia (co-chair)
 PrCo Robert Tairas, Inria, France
 PrCo Laurence Tratt, King's College London, UK
 PrCo Vadim Zaytsev, Centre for Mathematics & Computer Science, The Netherlands

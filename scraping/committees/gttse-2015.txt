@@ -15,7 +15,7 @@ PrCh João Paulo Fernandes (Universidade da Beira Interior, Portugal) - Program 
 BrCh Ralf Lämmel (Universität Koblenz-Landau, Germany) - Briefings Chair
 GeCh João Saraiva (Universidade do Minho, Portugal) - General Chair
 InCh Joost Visser (Software Improvement Group, The Netherlands) - Industry Chair
-PuCh Vadim Zaytsev (Universiteit van Amsterdam, The Netherlands) - Publicity Chair
+PbCh Vadim Zaytsev (Universiteit van Amsterdam, The Netherlands) - Publicity Chair
      Scientific committee
      
      The scientific committee of GTTSE plays a key role in the success of this event. Its members are expected to communicate the event within their schools or organizations and among their peers and students. In this manner, GTTSE is broadly communicated across the computer science areas that are thought to be connected and advanced by GTTSE. Where applicable, committee members are encouraged to identify suitable PhD or MSc students and encourage them to join GTTSE and actively participate in the school. The scientific committee is also involved in post-school reviewing of the briefings by renowned researchers. The reviewing process is not selective, as it is instead meant to ensure quality and readability for the invited briefings to be published with Springer. Given that briefings (as defined by GTTSE) are relatively short publications and given the size the GTTSE scientific committee, this workload is small: we predict that up to 2 briefings will need to be revised per committee member. In addition to reviewing briefings, the committee may also be involved in shepherding short participants' contributions to the post-proceedings.

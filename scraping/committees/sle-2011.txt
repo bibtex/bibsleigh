@@ -76,11 +76,11 @@ PrCo Zhenjiang Hu, National Institute of Informatics, Japan
 FiCh José Creissac Campos (Finance Chair)
      Universidade do Minho, Portugal
      
-PuCh João Paulo Fernandes (Web and Publicity co-Chair)
+WeCh João Paulo Fernandes (Web and Publicity co-Chair)
      Universidade do Porto&  Universidade do Minho, Portugal
      
 WoCh Jurgen Vinju (Workshop Selection Chair)
      CWI, The Netherlands
      
-PuCh Vadim Zaytsev (Publicity co-Chair)
+PbCo Vadim Zaytsev (Publicity co-Chair)
      CWI, The Netherlands

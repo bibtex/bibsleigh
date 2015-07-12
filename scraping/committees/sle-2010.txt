@@ -28,10 +28,10 @@ DSCh Steffen Zschaler
      
      ORGANIZATION COMMITTEE
      
-PuCh Anthony Cleve (Publicity Co-Chair)
+PbCh Anthony Cleve (Publicity Co-Chair)
      INRIA Lille, France
      
-PuCh Nicholas Kraft (Publicity Co-Chair)
+PbCh Nicholas Kraft (Publicity Co-Chair)
      University of Alabama, USA
      
 WeCh Arjan van der Meer (Web Chair)
@@ -66,7 +66,7 @@ PrCo Julia Lawall, University of Copenhagen, Denmark
 PrCo Marjan Mernik, University of Maribor, Slovenia
 PrCo Pierre-Etienne Moreau, Ecole des Mines in Nancy, France
 PrCo Peter Mosses, Swansea University, UK
-PrCo Ralf Möller, Hamburg University of Technolog, Germany
+PrCo Ralf Möller, Hamburg University of Technology, Germany
 PrCo Istvan Nagy, ASML, The Netherlands
 PrCo Daniel Oberle, SAP Research, Germany
 PrCo Richard Paige, University of York, UK
