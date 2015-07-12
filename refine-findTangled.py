@@ -3,7 +3,7 @@
 #
 # a module for finding tangled venues (more than one crossref per directory)
 
-import sys
+import sys, os.path
 from lib.AST import Sleigh
 from fancy.ANSI import C
 

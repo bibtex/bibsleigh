@@ -100,7 +100,7 @@ tagHTML = header.replace('stuff/', '../stuff/')+'''
 '''+movein(leftLinks('papp', editLink).format(edit=editTag))+'''
 </div>
 <div class="main">
-<div class="tagbox">
+<div class="tbox">
 {boxlinks}
 </div>
 <h2><span class="ttl">Tag</span> {tag}</h2>{above}

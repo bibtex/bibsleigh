@@ -3,6 +3,7 @@
 #
 # a module for exporting LRJ definitions of tags to the HTML frontpages
 
+import os.path
 from fancy.ANSI import C
 from fancy.Languages import ISONames
 from fancy.Templates import taglistHTML, tagHTML

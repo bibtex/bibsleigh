@@ -9,7 +9,7 @@ from fancy.Languages import ISONames
 from fancy.Templates import personHTML, peoplistHTML, movein
 from lib.AST import Sleigh, escape
 from lib.JSON import parseJSON
-from lib.LP import uniq
+from lib.LP import uniq, listify
 
 # The idea is to generate a colour between FFFDE7 (for 'a') and F57F17 (for 'z')
 # FFFDE7 is Yellow/50 and F57F17 is Yellow/900 in Material Design
@@ -178,13 +178,29 @@ if __name__ == "__main__":
 						clist[a] += 1
 					else:
 						clist[a] = 1
-				adds = '<strong>Travelled to:</strong><hr/>' \
+				adds = '<code>Travelled to:</code><hr/>' \
 					 + '<br/>\n'.join(['{} × {}'.format(clist[a], a) for a in sorted(clist.keys())])
 				boxlinks += adds
 			# TODO: collaborated with...
+			coas = []
+			for p in persondef['authored']:
+				if 'author' in bykey[p].json.keys():
+					coas += listify(bykey[p].get('author'))
+					coas.remove(persondef['name'])
+			if coas:
+				clist = {}
+				for a in coas:
+					if a in clist.keys():
+						clist[a] += 1
+					else:
+						clist[a] = 1
+				adds = '<hr/><code>Collaborated with:</code><hr/>' \
+					 + '<br/>\n'.join(['<a href="{}">{}</a> ({})'.format(name2file[a], a, clist[a])\
+						 	for a in sorted(clist.keys(), key=lambda x:-clist[x])])
+				boxlinks += movein(adds)
 			# combine boxlinks
 			if boxlinks:
-				boxlinks = '<div class="rbox">' + boxlinks + '</div>'
+				boxlinks = '<div class="tbox">' + boxlinks + '</div>'
 		f.write(personHTML.format(\
 			title=k,
 			gender=gender,

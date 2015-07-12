@@ -4,7 +4,6 @@
 # a module for lowering the values of a venue, publisher, series/volume, etc
 # from a conference to all its papers
 
-
 import sys, os.path
 from fancy.ANSI import C
 from lib.AST import Sleigh

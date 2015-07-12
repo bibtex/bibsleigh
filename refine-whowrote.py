@@ -3,7 +3,7 @@
 #
 # a module for matching authors/editors with people entries
 
-import sys, glob
+import sys, glob, os.path
 from fancy.ANSI import C
 from lib.AST import Sleigh
 from lib.JSON import parseJSON, jsonify
