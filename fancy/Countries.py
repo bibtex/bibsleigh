@@ -71,6 +71,7 @@ knownCountries = (\
 	'Estonia',
 	'Ethiopia',
 	'Faroe Islands',
+	'Federal Republic of Germany',
 	'Federated States of Micronesia',
 	'Fiji',
 	'Finland',
@@ -236,7 +237,7 @@ knownCountries = (\
 	'Zimbabwe',\
 )
 
-stateNames = (\
+usaStateNames = (\
 	'Alabama',
 	'Alaska',
 	'Arizona',
@@ -244,6 +245,7 @@ stateNames = (\
 	'California',
 	'Colorado',
 	'Connecticut',
+	'District of Columbia',
 	'Delaware',
 	'Florida',
 	'Georgia',
@@ -289,7 +291,7 @@ stateNames = (\
 	'Wyoming',\
 )
 
-stateAB = (\
+usaStateAB = (\
 	'AL',
 	'AK',
 	'AZ',
@@ -297,6 +299,7 @@ stateAB = (\
 	'CA',
 	'CO',
 	'CT',
+	'DC',
 	'DE',
 	'FL',
 	'GA',
@@ -341,3 +344,44 @@ stateAB = (\
 	'WI',
 	'WY',\
 )
+
+canStateNames = (\
+	'Ontario',
+	'Quebec',
+	'Nova Scotia',
+	'New Brunswick',
+	'Manitoba',
+	'British Columbia',
+	'Prince Edward Island',
+	'Saskatchewan',
+	'Alberta',
+	'Newfoundland and Labrador',\
+)
+
+canStateAB = (\
+	'ON',
+	'QC',
+	'NS',
+	'NB',
+	'MB',
+	'BC',
+	'PE',
+	'SK',
+	'AB',
+	'NL',\
+)
+
+countryMap = {\
+	'GDR': 'Germany',
+	'Netherlands': 'The Netherlands',
+	'UK': 'United Kingdom',
+	'U.K.': 'United Kingdom',
+	'Federal Republic of Germany': 'Germany',
+}
+
+desperateSolutions = {\
+	'Limerick Ireland': ('Limerick', '?', 'Ireland'),
+	'Bad Honnef': ('Bad Honnef', '?', 'Germany'),
+	'Melbourne 1993': ('Melbourne', '?', 'Australia'),
+	'Berlin GDR': ('Berlin', '?', 'Germany'),
+}

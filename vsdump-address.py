@@ -11,7 +11,7 @@ import xml.etree.cElementTree as ET
 # from lib.JSON import jsonify
 # from lib.JSON import parseJSON
 import json
-from fancy.Countries import knownCountries
+from fancy.Countries import *
 
 ienputdir = '../json'
 sleigh = Sleigh(ienputdir + '/corpus')
@@ -24,6 +24,12 @@ procs = {}
 # 'Cyprus', 'Italy', 'Romania', 'Estonia', 'Portugal', 'Netherlands', 'Hungary',
 # 'Belgium', 'Ireland', 'Greece', 'Finland', 'Norway')
 
+def findOneIn(tries, arr):
+	for t in tries:
+		if t in arr:
+			return t
+	return None
+
 def checkon(fn, o):
 	if 'dblpkey' not in o.json.keys():
 		print('[ {} ] {}'.format(C.red('DONT'), 'DBLP key not found on the entry'))
@@ -35,12 +41,65 @@ def checkon(fn, o):
 	title = procs[mykey]
 	if title.endswith('.'):
 		title = title[:-1]
-	ws = title.replace(' - ', ', ').split(', ')
-	for country in knownCountries:
-		if country in ws:
-			print('[ {} ] {}'.format(C.blue('KNOW'), country))
-			return 0
-	print('[ {} ] {}'.format(C.yellow('????'), title))
+	ws = title.replace(' - ', ', ').replace(' (', ', ').split(', ')
+	country = findOneIn(knownCountries, ws)
+	state = findOneIn(usaStateNames, ws)
+	found = False
+	if country:
+		town = ws[ws.index(country)-1]
+		state = '?'
+		# what if "town" is an USA state? (full)
+		if country == 'USA' and town in usaStateNames:
+			state = town
+			town = ws[ws.index(town)-1]
+		# what if "town" is an USA state? (abbreviated)
+		if country == 'USA' and town in usaStateAB:
+			state = usaStateNames[usaStateAB.index(town)]
+			town = ws[ws.index(town)-1]
+		# what if "town" is a Canadian state? (full)
+		if country == 'Canada' and town in canStateNames:
+			state = town
+			town = ws[ws.index(town)-1]
+		# what if "town" is a Canadian state? (abbreviated)
+		if country == 'Canada' and town in canStateAB:
+			state = canStateNames[canStateAB.index(town)]
+			town = ws[ws.index(town)-1]
+		# the same can happen in the UK
+		if country in ('UK', 'United Kingdom') and town in ('Scotland', 'Scottland'):
+			state = town
+			town = ws[ws.index(town)-1]
+		# Georgia the country vs Georgia the state
+		if country == 'Georgia' and town == 'Atlanta':
+			state = country
+			country = 'USA'
+		found = True
+	elif state:
+		country = 'USA'
+		town = ws[ws.index(state)-1]
+		found = True
+	else:
+		# desperate times
+		for sol in desperateSolutions.keys():
+			if sol in ws:
+				town, state, country = desperateSolutions[sol]
+				found = True
+	# normalise
+	if country in countryMap.keys():
+		country = countryMap[country]
+	if country == 'United Kingdom' and state == '?':
+		if town.endswith('London') or town in ('Birmingham', 'York',\
+		'Coventry', 'Nottingham', 'Lancaster', 'Oxford', 'Manchester',\
+		'Southampton', 'Norwich', 'Leicester', 'Canterbury'):
+			state = 'England'
+		elif town in ('Edinburgh', 'Glasgow'):
+			state = 'Scotland'
+	# report
+	if found:
+		print('[ {} ] {}'.format(C.blue('KNOW'), country))
+		print('[ {} ] {}'.format(C.blue('AD||'), title))
+		print('[ {} ] {:30} || {:30} || {:20}'.format(C.blue('AD->'), C.yellow(town), C.yellow(state), C.yellow(country)))
+		return 0
+	print('[ {} ] {}'.format(C.yellow('AD??'), title))
 	return 2
 	if not os.path.exists(fn) or os.path.isdir(fn):
 		fn = fn + '.json'
