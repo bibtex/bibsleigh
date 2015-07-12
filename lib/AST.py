@@ -89,6 +89,12 @@ class Unser(object):
 				s += '\t{0:<10} = {1},\n'.format(k, self.json[k])
 			elif k == 'pages':
 				s += '\t{0:<10} = "{1}",\n'.format(k, self.getPagesBib())
+			elif k == 'address':
+				if self.json[k][1]:
+					a = ', '.join(self.json[k])
+				else:
+					a = self.json[k][0] + ', ' + self.json[k][2]
+				s += '\t{0:<10} = "{1}",\n'.format(k, a)
 			else:
 				s += '\t{0:<10} = "{1}",\n'.format(k, self.json[k])
 		s += '}'
@@ -321,6 +327,16 @@ class Venue(Unser):
 				ev = '<h3>Event series page: <a href="{uri}">{uri}</a></h3>'.format(uri=self.json['eventurl'])
 		else:
 			ev = ''
+		ads = [c.json['address'][-1] for c in self.getConfs() if 'address' in c.json.keys()]
+		if ads:
+			clist = {}
+			for a in ads:
+				if a in clist.keys():
+					clist[a] += 1
+				else:
+					clist[a] = 1
+			adds = '<div class="rbox">' + '<br/>\n'.join(['{} × {}'.format(clist[a], a) for a in sorted(clist.keys())]) + '</div>'
+			ev = adds + ev
 		ABBR = self.get('name')
 		title = self.get('title')
 		img = ABBR.lower()

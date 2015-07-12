@@ -376,12 +376,12 @@ countryMap = {\
 	'Netherlands': 'The Netherlands',
 	'UK': 'United Kingdom',
 	'U.K.': 'United Kingdom',
-	'Federal Republic of Germany': 'Germany',
+	'Federal Republic of Germany': 'Germany',\
 }
 
 desperateSolutions = {\
 	'Limerick Ireland': ('Limerick', '?', 'Ireland'),
 	'Bad Honnef': ('Bad Honnef', '?', 'Germany'),
 	'Melbourne 1993': ('Melbourne', '?', 'Australia'),
-	'Berlin GDR': ('Berlin', '?', 'Germany'),
+	'Berlin GDR': ('Berlin', '?', 'Germany'),\
 }
