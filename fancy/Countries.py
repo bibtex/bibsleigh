@@ -376,6 +376,8 @@ countryMap = {\
 	'Netherlands': 'The Netherlands',
 	'UK': 'United Kingdom',
 	'U.K.': 'United Kingdom',
+	'Republic of Korea': 'South Korea',
+	'Russian Federation': 'Russia',
 	'Federal Republic of Germany': 'Germany',\
 }
 

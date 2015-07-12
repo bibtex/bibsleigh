@@ -54,27 +54,27 @@ class Unser(object):
 				# secret key
 				continue
 			if k in ('author', 'editor'):
-				s += '\t{:<10} = "{}",\n'.format(k, ' and '.join(listify(self.json[k])))
+				s += '\t{:<13} = "{}",\n'.format(k, ' and '.join(listify(self.json[k])))
 			elif k in ('title', 'booktitle', 'series', 'publisher', 'journal'):
 				if k+'short' not in self.json.keys():
-					s += '\t{0:<10} = "{{{1}}}",\n'.format(k, self.json[k])
+					s += '\t{0:<13} = "{{{1}}}",\n'.format(k, self.json[k])
 				else:
-					s += '\t{0:<10} = "{{<span id="{0}">{1}</span>}}",\n'.format(k, self.json[k])
+					s += '\t{0:<13} = "{{<span id="{0}">{1}</span>}}",\n'.format(k, self.json[k])
 			elif k in ('crossref', 'key', 'type', 'venue', 'twitter', \
 				'eventtitle', 'eventurl', 'nondblpkey', 'dblpkey', 'dblpurl', \
 				'programchair', 'generalchair'):
 				# TODO: ban 'ee' as well
 				pass
 			elif k == 'doi':
-				s += '<span class="uri">\t{0:<10} = "<a href="http://dx.doi.org/{1}">{1}</a>",\n</span>'.format(k, self.json[k])
+				s += '<span class="uri">\t{0:<13} = "<a href="http://dx.doi.org/{1}">{1}</a>",\n</span>'.format(k, self.json[k])
 			elif k == 'acmid':
-				s += '<span class="uri">\t{0:<10} = "<a href="http://dl.acm.org/citation.cfm?id={1}">{1}</a>",\n</span>'.format(k, self.json[k])
+				s += '<span class="uri">\t{0:<13} = "<a href="http://dl.acm.org/citation.cfm?id={1}">{1}</a>",\n</span>'.format(k, self.json[k])
 			elif k == 'dblpkey':
 				# Legacy!
-				# s += '\t{0:<10} = "<a href="http://dblp.uni-trier.de/db/{1}">{1}</a>",\n</span>'.format(k, self.json[k])
-				s += '\t{0:<10} = "<a href="http://dblp.uni-trier.de/rec/html/{1}">{1}</a>",\n'.format(k, self.json[k])
+				# s += '\t{0:<13} = "<a href="http://dblp.uni-trier.de/db/{1}">{1}</a>",\n</span>'.format(k, self.json[k])
+				s += '\t{0:<13} = "<a href="http://dblp.uni-trier.de/rec/html/{1}">{1}</a>",\n'.format(k, self.json[k])
 			elif k == 'isbn':
-				s += '<span id="isbn">\t{:<10} = "{}",\n</span>'.format(k, self.json[k])
+				s += '<span id="isbn">\t{:<13} = "{}",\n</span>'.format(k, self.json[k])
 			elif k in ('ee', 'url'):
 				for e in listify(self.json[k]):
 					# VVZ: eventually would like to get rid of EE completely
@@ -84,19 +84,21 @@ class Unser(object):
 						e.startswith('http://doi.ieeecomputersociety.org')\
 					):
 						continue
-					s += '<span class="uri">\t{0:<10} = "<a href=\"{1}\">{1}</a>",\n</span>'.format(k, e)
+					s += '<span class="uri">\t{0:<13} = "<a href=\"{1}\">{1}</a>",\n</span>'.format(k, e)
 			elif k in ('year', 'volume', 'issue', 'number') and isinstance(self.json[k], int):
-				s += '\t{0:<10} = {1},\n'.format(k, self.json[k])
+				s += '\t{0:<13} = {1},\n'.format(k, self.json[k])
 			elif k == 'pages':
-				s += '\t{0:<10} = "{1}",\n'.format(k, self.getPagesBib())
+				s += '\t{0:<13} = "{1}",\n'.format(k, self.getPagesBib())
 			elif k == 'address':
-				if self.json[k][1]:
+				if isinstance(self.json[k], str):
+					a = self.json[k]
+				elif self.json[k][1]:
 					a = ', '.join(self.json[k])
 				else:
 					a = self.json[k][0] + ', ' + self.json[k][2]
-				s += '\t{0:<10} = "{1}",\n'.format(k, a)
+				s += '\t{0:<13} = "{1}",\n'.format(k, a)
 			else:
-				s += '\t{0:<10} = "{1}",\n'.format(k, self.json[k])
+				s += '\t{0:<13} = "{1}",\n'.format(k, self.json[k])
 		s += '}'
 		return s.replace('<i>', '\\emph{').replace('</i>', '}')
 	def getCode(self):
@@ -496,7 +498,7 @@ class Conf(Unser):
 			.replace('Finance', 'Fin').replace('Challenge', 'Cha')\
 			.replace('SocialMedia', 'SM').replace('General', 'G')\
 			.replace('Panel', 'Pa').replace('DoctoralSymposium', 'DS')\
-			.replace('Scientific', 'Sci').replace('Tutorial', 'Tu')\
+			.replace('Scientific', 'Sci').replace('Tutorials', 'Tu')\
 			.replace('Workshop', 'Wo').replace('Satellite', 'Sa')
 		return self.getIconItem2(desc, shorter)
 	def getIconItem2(self, longdesc, shortdesc):

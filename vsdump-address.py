@@ -94,8 +94,9 @@ def checkon(fn, o):
 		print('[ {} ] {}'.format(C.blue('AD||'), title))
 		print('[ {} ] {:30} || {:30} || {:20}'.format(C.blue('AD->'), C.yellow(town), C.yellow(state), C.yellow(country)))
 		# TODO: perhaps later we can act more aggressively
-		if 'address' not in o.json.keys():
-			o.json['address'] = [town, '' if state=='?' else state, country]
+		newaddr = [town, '' if state=='?' else state, country]
+		if 'address' not in o.json.keys() or newaddr != o.json['address']:
+			o.json['address'] = newaddr
 			f = open(o.json['FILE'], 'w')
 			f.write(o.getJSON())
 			f.close()

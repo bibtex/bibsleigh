@@ -122,7 +122,7 @@ personHTML = header.replace('stuff/', '../stuff/')+'''
 	<a href="../index.html"><img src="../stuff/bibsleigh.png" alt="BibSLEIGH" title="BibSLEIGH" class="pad"/></a>
 '''+movein(leftLinks('pppa', editLink).format(edit=editPerson))+'''
 </div>
-<div class="main">
+<div class="main">{boxlinks}
 <h2><span class="ttl">{gender} Person:</span> {person}</h2>
 {namedlists}
 '''+footer

@@ -142,18 +142,19 @@ if __name__ == "__main__":
 				gender = '♀'
 				del persondef['sex']
 		dls = dict2links(persondef)
+		boxlinks = ''
 		if 'roles' in persondef.keys():
 			curlist = '<h3>Facilitated {} volumes:</h3>'.format(len(persondef['roles']))
 			# things = [sleigh.seekByKey(p).getItem() for p in persondef['edited']]
 			things = [bykey[r[0]].getIconItem1(r[1]) for r in persondef['roles']]
 			# curlist += '<dl class="toc">' + movein('\n'.join(things)) + '</dl>'
-			curlist += '<div class="minibar">' + movein('\n'.join(things)) + '<br style="clear:both"/></div>'
+			curlist += '<div class="minibar">' + movein('\n'.join(things)) + '<br style="clear:left"/></div>'
 			dls += curlist
 		if 'authored' in persondef.keys():
 			# List of contributions
 			curlist = '<h3>Contributed to:</h3>'
 			things = [bykey[p].up().getIconItem1(bykey[p].get('year')) for p in persondef['authored']]
-			curlist += '<div class="minibar">' + movein('\n'.join(uniq(things))) + '<br style="clear:both"/></div>'
+			curlist += '<div class="minibar">' + movein('\n'.join(uniq(things))) + '<br style="clear:left"/></div>'
 			dls += curlist
 			# List of papers
 			curlist = '<h3>Wrote {} papers:</h3>'.format(len(persondef['authored']))
@@ -161,9 +162,25 @@ if __name__ == "__main__":
 			things = [bykey[p].getItem() for p in persondef['authored']]
 			curlist += '<dl class="toc">' + movein('\n'.join(things)) + '</dl>'
 			dls += curlist
+			# travelled to...
+			# NB: code clone of AST::Venue
+			cs = uniq([bykey[p].up() for p in persondef['authored']])
+			ads = [c.json['address'][-1] for c in cs if 'address' in c.json.keys()]
+			if ads:
+				clist = {}
+				for a in ads:
+					if a in clist.keys():
+						clist[a] += 1
+					else:
+						clist[a] = 1
+				adds = '<div class="rbox"><strong>Travelled to:</strong><hr/>' \
+					 + '<br/>\n'.join(['{} × {}'.format(clist[a], a) for a in sorted(clist.keys())]) \
+					 + '</div>'
+				boxlinks = adds
 		f.write(personHTML.format(\
 			title=k,
 			gender=gender,
+			boxlinks=boxlinks,
 			eperson=escape(k),
 			person=persondef['name'],#k.replace('_', ' '),
 			# boxlinks=links
