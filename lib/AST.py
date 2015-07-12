@@ -491,7 +491,9 @@ class Conf(Unser):
 	def getIconItem0(self):
 		return self.getIconItem1(self.getEventTitle())
 	def getIconItem1(self, desc):
-		shorter = '{}'.format(desc).replace(' ', '').replace('Organiser', 'OrganizationChair')
+		shorter = '{}'.format(desc).replace(' ', '')\
+			.replace('Organiser', 'OrganizationCommittee')\
+			.replace('Organising Chair', 'OrganizationChair')
 		shorter = shorter.replace('Committee', 'Co').replace('Chair', 'Ch')\
 			.replace('Program', 'Pr').replace('Organization', 'O')\
 			.replace('Steering', 'S').replace('Publicity', 'Pub')\
@@ -500,7 +502,12 @@ class Conf(Unser):
 			.replace('SocialMedia', 'SM').replace('General', 'G')\
 			.replace('Panel', 'Pa').replace('DoctoralSymposium', 'DS')\
 			.replace('Scientific', 'Sci').replace('Tutorials', 'Tu')\
-			.replace('Workshop', 'Wo').replace('Satellite', 'Sa')
+			.replace('Workshop', 'Wo').replace('Satellite', 'Sa')\
+			.replace('IndustrialTrack', 'In').replace('ToolTrack', 'To')\
+			.replace('Briefings', 'Br').replace('ERATrack', 'ERA')\
+			.replace('InPrCo', 'InCo').replace('ToPrCo', 'ToCo')\
+			.replace('KeynoteSpeaker', 'KN').replace('Local', 'Lo')
+		# ⌥♪?
 		return self.getIconItem2(desc, shorter)
 	def getIconItem2(self, longdesc, shortdesc):
 		if 'venue' in self.json.keys():
@@ -587,12 +594,15 @@ class Paper(Unser):
 			del self.json['tag']
 		self.back = parent
 	def getItemWTags(self, tgz):
-		return '<dt><a href="{0}.html">{0}</a>{4}</dt><dd>{1}{2}{3}.</dd>'.format(\
+		p1,p2 = self.getPagesTuple()
+		bar = '<div class="pagevis" style="width:{}px"></div>'.format(p2-p1) if p1 and p2 else ''
+		return '<dt><a href="{0}.html">{0}</a>{4}</dt><dd>{1}{2}{3}.</dd>{5}'.format(\
 			self.getKey(),\
 			self.get('title').replace('&', '&amp;'),\
 			self.getAbbrAuthors(),\
 			self.getPagesString(),
-			tgz)
+			tgz,
+			' '+bar)
 	def getItem(self):
 		return self.getItemWTags(self.getFancyTags(self.tags) if self.tags else '')
 	def getRestrictedItem(self, t):

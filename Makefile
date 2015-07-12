@@ -2,7 +2,7 @@ ex:
 	make bun
 	make web
 	make tag
-	make ppl
+	time ./export-people.py
 
 tag:
 	time ./export-tags.py
