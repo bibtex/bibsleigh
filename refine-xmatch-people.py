@@ -48,12 +48,12 @@ def dblpify(s):
 
 if __name__ == "__main__":
 	verbose = sys.argv[-1] == '-v'
-	aka = parseJSON(ienputdir + '/aliases.json')
+	if not os.path.exists('_renameto.json'):
+		print('Run', C.blue('refine-aliases.py'), 'to build the aliasing/renaming relation and cache it.')
+		sys.exit(1)
+	# aka = parseJSON(ienputdir + '/aliases.json')
 	dis = parseJSON(ienputdir + '/disambig.json')
-	# invert aliasing
-	for akey in aka.keys():
-		for aval in aka[akey]:
-			renameto[aval] = akey
+	renameto = parseJSON('_renameto.json')
 	# Data from the conferenceMetrics repo
 	csv = []
 	f = open('../conferenceMetrics/data/SE-conf-roles.csv', 'r')

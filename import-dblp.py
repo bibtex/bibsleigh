@@ -6,7 +6,7 @@
 import sys, time, socket, os, os.path, random
 import bs4
 from urllib.request import urlopen
-from lib.JSON import jsonkv
+from lib.JSON import jsonkv, jsonify
 
 def xml2json(x):
 	jsonmap = {}
@@ -33,7 +33,8 @@ def xml2json(x):
 			jsonmap['title'] = jsonmap['title'][:-1]
 		# if jsonmap['title'].find('roceedings') < 0:
 		# 	jsonmap['title'] = '{' + jsonmap['title'] + '}'
-	return '{\n\t'+',\n\t'.join([jsonkv(k, jsonmap[k]) for k in jsonmap])+'\n}'
+	# return '{\n\t'+',\n\t'.join([jsonkv(k, jsonmap[k]) for k in jsonmap])+'\n}'
+	return jsonify(jsonmap)
 
 def purenameof(f):
 	return f.split('/')[-1][:-4]
@@ -43,13 +44,13 @@ def safelyLoadURL(url):
 	errors = 0
 	while errors < 3:
 		try:
-			time.sleep(random.randint(10, 30))
 			return urlopen(url).read().decode('utf-8')
 		except IOError:
 			print('Warning: failed to load URL, retrying...')
 			errors += 1
 		except socket.error:
 			print('Warning: connection reset by peer, retrying...')
+			time.sleep(random.randint(10, 30))
 			errors += 1
 	print('Error fetching URL: ' + url)
 	return ''

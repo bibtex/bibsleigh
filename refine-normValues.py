@@ -55,7 +55,7 @@ def checkon(fn, o):
 			elif o.json[k].find('" ') > -1 and o.json[k].startswith('"'):
 				o.json[k] = o.json[k].replace('" ', '” ').replace('"', '“')
 			# the case of "Jr" vs "Jr."
-			if o.json[k].endswith('Jr'):
+			if k in ('author', 'editor') and o.json[k].endswith('Jr'):
 				o.json[k] += '.'
 		elif isinstance(o.json[k], list):
 			# inline trivial lists

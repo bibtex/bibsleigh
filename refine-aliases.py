@@ -3,7 +3,7 @@
 #
 # a module for enforcing aliases
 
-import sys, os.path
+import sys, os.path, json
 from fancy.ANSI import C
 from fancy.Latin import nodiaLatin, simpleLatin
 from lib.AST import Sleigh
@@ -90,8 +90,13 @@ if __name__ == "__main__":
 				aka[a].append(na)
 	# invert aliasing
 	for akey in aka.keys():
+		if akey in ('ZZZZZZZZZZ', 'FILE'):
+			continue
 		for aval in aka[akey]:
 			renameto[aval] = akey
+	f = open('_renameto.json', 'w', encoding='utf8')
+	f.write(json.dumps(renameto, sort_keys=True, separators=(',\n\t', ': '), ensure_ascii=False))
+	f.close()
 	cx = {0: 0, 1: 0, 2: 0}
 	for v in sleigh.venues:
 		for c in v.getConfs():

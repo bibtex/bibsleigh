@@ -1,7 +1,8 @@
 #!/usr/local/bin/python3
 # -*- coding: utf-8 -*-
 #
-# a module for renaming conferences (with papers inside)
+# a module for normalising conferences (with papers inside)
+# basically a reflexive version of refine-confname
 
 import sys, os.path, glob
 from fancy.ANSI import C

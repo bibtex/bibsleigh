@@ -521,7 +521,7 @@ class Conf(Unser):
 			title=self.getEventTitle(),
 			hover=longdesc,
 			abbr=shortdesc,
-			img=venue)
+			img=venue.lower())
 	def getItem(self):
 		return '<dd><a href="{}.html">{}</a> ({})</dd>'.format(self.get('name'), self.get('title'), self.getEventTitle())
 	def getPage(self):
