@@ -3,12 +3,16 @@
 #
 # a module for exporting LRJs to the HTML frontpages
 
+import os.path
 from fancy.ANSI import C
 from lib.AST import Sleigh
+from lib.JSON import parseJSON
 
 ienputdir = '../json'
 outputdir = '../frontend'
-sleigh = Sleigh(ienputdir + '/corpus')
+n2f_name = '_name2file.json'
+name2file = parseJSON(n2f_name) if os.path.exists(n2f_name) else {}
+sleigh = Sleigh(ienputdir + '/corpus', name2file)
 
 if __name__ == "__main__":
 	print('{}: {} venues, {} papers\n{}'.format(\

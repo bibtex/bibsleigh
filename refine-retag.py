@@ -11,7 +11,9 @@ from lib.LP import listify, uniq
 from lib.NLP import strictstrip, baretext, superbaretext
 
 ienputdir = '../json'
-sleigh = Sleigh(ienputdir + '/corpus')
+n2f_name = '_name2file.json'
+name2file = parseJSON(n2f_name) if os.path.exists(n2f_name) else {}
+sleigh = Sleigh(ienputdir + '/corpus', name2file)
 verbose = False
 tags = []
 relieved = {}

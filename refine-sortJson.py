@@ -10,7 +10,9 @@ from lib.JSON import parseJSON, jsonify
 from lib.NLP import strictstrip
 
 ienputdir = '../json'
-sleigh = Sleigh(ienputdir + '/corpus')
+n2f_name = '_name2file.json'
+name2file = parseJSON(n2f_name) if os.path.exists(n2f_name) else {}
+sleigh = Sleigh(ienputdir + '/corpus', name2file)
 verbose = False
 
 def guessYear(p):

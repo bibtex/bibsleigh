@@ -8,10 +8,12 @@ import xml.etree.cElementTree as ET
 from fancy.ANSI import C
 from fancy.Countries import *
 from lib.AST import Sleigh
-from lib.NLP import nrs, strictstrip
+# from lib.NLP import nrs, strictstrip
 
 ienputdir = '../json'
-sleigh = Sleigh(ienputdir + '/corpus')
+n2f_name = '_name2file.json'
+name2file = parseJSON(n2f_name) if os.path.exists(n2f_name) else {}
+sleigh = Sleigh(ienputdir + '/corpus', name2file)
 verbose = False
 procs = {}
 
@@ -124,18 +126,18 @@ if __name__ == "__main__":
 		C.purple('='*42)))
 	cx = {0: 0, 1: 0, 2: 0}
 	# now read in the proceedings entries from the dump
-	# parser = ET.XMLParser(encoding="utf-8")
-	# for event, elem in ET.iterparse('../dblp.xml', events=("end",), parser=parser):
-	# 	if elem.tag == 'proceedings':
-	# 		dblpkey = elem.attrib['key']
-	# 		# <title>Constraint Programming: Basics and Trends, Châtillon Spring School, Châtillon-sur-Seine, France, May 16 - 20, 1994, Selected Papers</title>
-	# 		title = elem.findtext('title')
-	# 		# procs.append(elem)
-	# 		procs[dblpkey] = title
-	# f = open('procs.json', 'w')
-	# f.write(json.dumps(procs, sort_keys=True, separators=(',\n\t', ': ')))
-	# f.close()
-	procs = json.load(open('procs.json', 'r'))
+	if os.path.exists('_procs.json'):
+		procs = json.load(open('_procs.json', 'r'))
+	else:
+		parser = ET.XMLParser(encoding="utf-8")
+		for event, elem in ET.iterparse('../dblp.xml', events=("end",), parser=parser):
+			if elem.tag == 'proceedings':
+				dblpkey = elem.attrib['key']
+				title = elem.findtext('title')
+				procs[dblpkey] = title
+		f = open('_procs.json', 'w', encoding='utf8')
+		f.write(json.dumps(procs, sort_keys=True, separators=(',\n\t', ': '), ensure_ascii=False))
+		f.close()
 	print('{} proceedings volumes found.'.format(len(procs)))
 	for v in sleigh.venues:
 		for c in v.getConfs():

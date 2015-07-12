@@ -3,7 +3,7 @@
 #
 # a module for cross-checking information on people available from different sources
 
-import sys, glob, os.path
+import sys, glob, os.path, json
 from fancy.ANSI import C
 from fancy.Latin import simpleLatin, dblpLatin, nodiaLatin
 from lib.AST import Sleigh
@@ -11,7 +11,9 @@ from lib.JSON import parseJSON, jsonify
 from lib.LP import listify
 
 ienputdir = '../json'
-sleigh = Sleigh(ienputdir + '/corpus')
+n2f_name = '_name2file.json'
+name2file = parseJSON(n2f_name) if os.path.exists(n2f_name) else {}
+sleigh = Sleigh(ienputdir + '/corpus', name2file)
 verbose = False
 cx = {0: 0, 1: 0, 2: 0}
 renameto = {}
@@ -89,7 +91,10 @@ if __name__ == "__main__":
 						names += [a for a in listify(p.json[k]) if a not in names]
 	# caching
 	peoplekeys = people.keys()
-	established = {}
+	if os.path.exists('_established.json'):
+		established = json.load(open('_established.json', 'r'))
+	else:
+		established = {}
 	# print(people)
 	CXread = len(people)
 	for name in names:
@@ -147,12 +152,22 @@ if __name__ == "__main__":
 			continue
 		if [myconf, line[5]] not in people[name]['roles']:
 			people[name]['roles'].append([myconf, line[5]])
+	# ensure fast load time next time
+	f = open('_established.json', 'w')
+	f.write(json.dumps(established, sort_keys=True, separators=(',\n\t', ': '), ensure_ascii=False))
+	f.close()
 	print('\t', C.blue(CXread), 'people found in LRJs')
 	print('\t', C.blue(len(people)), 'people properly specified')
 	print('\t', C.blue(len(names)), 'people contributed to the corpus')
 	print('\t', C.red(len(dunno)), 'people with too much info on')
+	# should we build it?
+	maken2f = not os.path.exists(n2f_name)
+	if maken2f:
+		name2file = {}
 	for k in peoplekeys:
 		p = people[k]
+		if maken2f:
+			name2file[k] = 'person/' + p['FILE'].split('/')[-1].replace('.json', '.html')
 		if p['FILE']:
 			if os.path.exists(p['FILE']):
 				cur = parseJSON(p['FILE'])
@@ -169,6 +184,11 @@ if __name__ == "__main__":
 			f.close()
 		else:
 			print('How can that be?')
+	# caching to be used later (in other scripts mostly)
+	if maken2f:
+		f = open(n2f_name, 'w', encoding='utf8')
+		f.write(json.dumps(name2file, sort_keys=True, separators=(',\n\t', ': '), ensure_ascii=False))
+		f.close()
 	cx[1] = len(dunno)
 	print('{} people checked, {} ok, {} fixed, {} failed'.format(\
 		C.bold(cx[0] + cx[1] + cx[2]),

@@ -5,11 +5,8 @@
 
 import sys, os.path, glob
 from fancy.ANSI import C
-# sys.path.append(os.getcwd()+'/../engine')
-# import Fancy, AST
 
 ienputdir = '../json'
-# sleigh = Sleigh(ienputdir + '/corpus')
 verbose = False
 
 def report(fn1, fn2, r):

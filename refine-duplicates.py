@@ -11,7 +11,6 @@ from lib.JSON import parseJSON, jsonify
 from lib.LP import listify
 
 ienputdir = '../json'
-# sleigh = Sleigh(ienputdir + '/corpus')
 verbose = False
 cx = {0: 0, 1: 0, 2: 0}
 

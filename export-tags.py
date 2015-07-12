@@ -13,7 +13,9 @@ from lib.NLP import baretext, superbaretext, trash
 
 ienputdir = '../json'
 outputdir = '../frontend'
-sleigh = Sleigh(ienputdir + '/corpus')
+n2f_name = '_name2file.json'
+name2file = parseJSON(n2f_name) if os.path.exists(n2f_name) else {}
+sleigh = Sleigh(ienputdir + '/corpus', name2file)
 
 def makeimg(fn, alt):
 	return '<img src="../stuff/ico-{}.png" alt="{}"/>'.format(fn, alt)

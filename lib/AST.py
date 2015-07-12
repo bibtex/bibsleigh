@@ -30,6 +30,7 @@ class Unser(object):
 		self.json = {}
 		self.back = self
 		self.tags = None
+		self.n2f = {}
 	def getPureName(self):
 		# +1 for the slash
 		return self.filename[len(self.homedir)+1:]
@@ -49,13 +50,20 @@ class Unser(object):
 		if len(self.json) < 1:
 			return '@misc{EMPTY,}'
 		s = '@%s{%s,\n' % (self.get('type'), self.getKey())
+		n2f = self.back.n2f
 		for k in sorted(self.json.keys()):
 			if k == k.upper() or k.endswith('short') or k == 'tag':
 				# secret key
 				continue
 			if k in ('author', 'editor'):
 				# TODO: add (correct!) links
-				s += '\t{:<13} = "{}",\n'.format(k, ' and '.join(listify(self.json[k])))
+				aelinks = [\
+					'<a href="{}">{}</a>'.format(n2f[ae], ae)
+						if ae in n2f.keys()
+						else ae
+					for ae in listify(self.json[k])
+				]
+				s += '\t{:<13} = "{}",\n'.format(k, ' and '.join(aelinks))
 			elif k in ('title', 'booktitle', 'series', 'publisher', 'journal'):
 				if k+'short' not in self.json.keys():
 					s += '\t{0:<13} = "{{{1}}}",\n'.format(k, self.json[k])
@@ -230,13 +238,14 @@ class Unser(object):
 		return (p1, p2)
 
 class Sleigh(Unser):
-	def __init__(self, idir):
+	def __init__(self, idir, name2file):
 		super(Sleigh, self).__init__('', idir)
 		self.venues = []
+		self.n2f = name2file
 		for d in glob.glob(idir+'/*'):
 			if d.endswith('.md'):
 				continue
-			self.venues.append(Venue(d, idir, self))
+			self.venues.append(Venue(d, idir, name2file, self))
 	def getPage(self):
 		return uberHTML.format(\
 			len(self.venues),
@@ -286,14 +295,15 @@ class Sleigh(Unser):
 
 
 class Venue(Unser):
-	def __init__(self, d, hdir, parent):
+	def __init__(self, d, hdir, name2file, parent):
 		super(Venue, self).__init__(d, hdir)
 		self.years = []
+		self.n2f = name2file
 		for f in glob.glob(d+'/*'):
 			if f.endswith('.json'):
 				self.json = parseJSON(f)
 			elif os.path.isdir(f):
-				self.years.append(Year(f, self.homedir, self))
+				self.years.append(Year(f, self.homedir, name2file, self))
 			else:
 				print('File out of place:', f)
 		self.back = parent
@@ -401,7 +411,7 @@ class Venue(Unser):
 
 
 class Year(Unser):
-	def __init__(self, d, hdir, parent):
+	def __init__(self, d, hdir, name2file, parent):
 		super(Year, self).__init__(d, hdir)
 		self.year = last(d)
 		self.confs = []
@@ -409,7 +419,7 @@ class Year(Unser):
 		jsonsused = []
 		for f in glob.glob(d+'/*'):
 			if os.path.isdir(f):
-				self.confs.append(Conf(f, self.homedir, self))
+				self.confs.append(Conf(f, self.homedir, name2file, self))
 				if os.path.exists(f+'.json'):
 					self.confs[-1].json = parseJSON(f+'.json')
 					jsonsused.append(f+'.json')
@@ -421,7 +431,7 @@ class Year(Unser):
 		for f in jsonsfound:
 			if f not in jsonsused:
 				# print('Houston, we have a JSON:', f)
-				self.confs.append(Conf(f[:f.rindex('.')], self.homedir, self))
+				self.confs.append(Conf(f[:f.rindex('.')], self.homedir, name2file, self))
 				self.confs[-1].json = parseJSON(f)
 		self.back = parent
 	def numOfPapers(self):
@@ -467,10 +477,11 @@ class Year(Unser):
 		return self.tags
 
 class Conf(Unser):
-	def __init__(self, d, hdir, parent):
+	def __init__(self, d, hdir, name2file, parent):
 		super(Conf, self).__init__(d, hdir)
 		self.papers = []
 		self.year = parent.year
+		self.n2f = name2file
 		for f in glob.glob(d+'/*'):
 			if os.path.isfile(f) and f.endswith('.json'):
 				self.papers.append(Paper(f, self.homedir, self))
