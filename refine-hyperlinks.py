@@ -6,8 +6,9 @@
 import sys, os, os.path
 from fancy.ANSI import C
 from lib.AST import Sleigh
-from lib.NLP import strictstrip
+from lib.JSON import parseJSON
 from lib.LP import listify
+from lib.NLP import strictstrip
 
 ienputdir = '../json'
 n2f_name = '_name2file.json'

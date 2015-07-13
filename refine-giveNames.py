@@ -5,9 +5,10 @@
 
 import sys, os.path
 from fancy.ANSI import C
-from lib.AST import Sleigh
-from lib.NLP import strictstrip
 from fancy.KnownNames import badvariants, contractions
+from lib.AST import Sleigh
+from lib.JSON import parseJSON
+from lib.NLP import strictstrip
 
 ienputdir = '../json'
 n2f_name = '_name2file.json'

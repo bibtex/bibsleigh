@@ -8,6 +8,7 @@ import xml.etree.cElementTree as ET
 from fancy.ANSI import C
 from fancy.Countries import *
 from lib.AST import Sleigh
+from lib.JSON import parseJSON
 # from lib.NLP import nrs, strictstrip
 
 ienputdir = '../json'
@@ -28,6 +29,10 @@ def checkon(fn, o):
 		print('[ {} ] {}'.format(C.red('DONT'), 'DBLP key not found on the entry'))
 		return 1
 	mykey = o.get('dblpkey')
+	# for the rare case of multiple dblpkeys
+	# (can happen as a DBLP error or when same proceedings span over multiple volumes)
+	if isinstance(mykey, list):
+		mykey = mykey[0]
 	if mykey not in procs.keys():
 		print('[ {} ] {}'.format(C.red('DONT'), 'DBLP key not found in the dump'))
 		return 1

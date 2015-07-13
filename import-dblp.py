@@ -63,7 +63,7 @@ if __name__ == "__main__":
 		sys.exit(1)
 	dblp = safelyLoadURL(sys.argv[1])
 	ldir = sys.argv[2]
-	year = ldir.split('/')[3]
+	year = ldir.split('/')[4]
 	allxmls = [xmlname for xmlname in dblp.split('"') if xmlname.endswith('.xml')]
 	if len(sys.argv) == 5:
 		entry1 = sys.argv[3].split('/')[-1]
@@ -94,6 +94,7 @@ if __name__ == "__main__":
 		else:
 			qname = ldir.split('/')[-1]
 			lname = ldir + '/' + qname + '-' + xmlname.split('/')[-1].replace('.xml', '.json')
+			# print('NB: match "{}" vs "{}"'.format(lname[:-5], year))
 			if lname[:-5].endswith(year):
 				lname = lname[:-5-len(year)] + '.json'
 			if lname[:-5].endswith(year[-2:]):

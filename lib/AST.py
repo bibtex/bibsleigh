@@ -552,7 +552,10 @@ class Conf(Unser):
 			          + [(c, 'Program Chair') for c in listify(self.json['programchair'])]
 			ev += '<h3>Committee: ' + ', '.join(['<a href="person/{}.html">{}</a> ({})'.format(\
 				c.replace(' ', '_'),
-				c,t) for c,t in positions]) + '</h3>'
+				c, t) for c, t in positions]) + '</h3>'
+		if self.papers:
+			ev += '<h3>Contents ({} items)</h3><dl class="toc">'.format(len(self.papers))+\
+				  '\n'.join([p.getItem() for p in sorted(self.papers, key=sortbypages)])+'</dl>'
 		return bibHTML.format(\
 			filename=self.getJsonName(),
 			title=self.get('title'),
@@ -562,8 +565,7 @@ class Conf(Unser):
 			code=self.getCode(),
 			bib=self.getBib(),
 			boxlinks=self.getBoxLinks(),
-			contents=ev+'<h3>Contents ({} items)</h3><dl class="toc">'.format(len(self.papers))+\
-				'\n'.join([p.getItem() for p in sorted(self.papers, key=sortbypages)])+'</dl>'\
+			contents=ev \
 			)
 	def up(self):
 		return self.back.up()
