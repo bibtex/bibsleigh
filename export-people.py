@@ -10,6 +10,7 @@ from fancy.Templates import personHTML, peoplistHTML, movein
 from lib.AST import Sleigh, escape
 from lib.JSON import parseJSON
 from lib.LP import uniq, listify
+from lib.NLP import shorten
 
 # The idea is to generate a colour between FFFDE7 (for 'a') and F57F17 (for 'z')
 # FFFDE7 is Yellow/50 and F57F17 is Yellow/900 in Material Design
@@ -182,22 +183,36 @@ if __name__ == "__main__":
 					 + '<br/>\n'.join(['{} × {}'.format(clist[a], a) for a in sorted(clist.keys())])
 				boxlinks += adds
 			# TODO: collaborated with...
-			coas = []
+			clist = {}
 			for p in persondef['authored']:
 				if 'author' in bykey[p].json.keys():
-					coas += listify(bykey[p].get('author'))
-					coas.remove(persondef['name'])
-			if coas:
-				clist = {}
-				for a in coas:
-					if a in clist.keys():
-						clist[a] += 1
-					else:
-						clist[a] = 1
+					coas = listify(bykey[p].get('author'))
+					D = len(coas)
+					if D == 1:
+						# solo papers count as coauthoring with yourself
+						a = '∅'
+						if a not in clist.keys():
+							clist[a] = 0
+							name2file['∅'] = name2file[persondef['name']]
+						clist[a] += 1/2
+						continue
+					for a in coas:
+						if a == persondef['name']:
+							continue
+						if a not in clist.keys():
+							clist[a] = 0
+						clist[a] += 1/D
+			if clist:
+				m = 300/max(clist.values())
 				adds = '<hr/><code>Collaborated with:</code><hr/>' \
-					 + '<br/>\n'.join(['<a href="{}">{}</a> ({})'.format(name2file[a], a, clist[a])\
-						 	for a in sorted(clist.keys(), key=lambda x:-clist[x])])
+					 + '\n'.join(['<span style="font-size:{}%"><a href="{}">{}</a></span>'.format(\
+					 		m*clist[a],
+					 		name2file[a],
+							shorten(a))\
+					 	for a in sorted(clist.keys(), key=lambda x:-clist[x])])
 				boxlinks += movein(adds)
+			# else:
+			# 	print(persondef['name'], 'is a very lonely person')
 			# combine boxlinks
 			if boxlinks:
 				boxlinks = '<div class="tbox">' + boxlinks + '</div>'
