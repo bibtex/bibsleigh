@@ -24,15 +24,21 @@ if __name__ == "__main__":
 	if len(sys.argv) < 2:
 		print('Usage:\n\t{} [<DIR>]'.format(sys.argv[0]))
 		sys.exit(1)
-	name = sys.argv[1]
 	verbose = sys.argv[-1] == '-v'
-	namem = name.split('/')[-1]
+	if sys.argv[1].startswith(ienputdir):
+		path = sys.argv[1]
+		name = path.replace(ienputdir + '/corpus/', '')
+		namem = name.split('/')[-1]
+	else:
+		name = sys.argv[1]
+		path = ienputdir + '/corpus/' + name
+		namem = name.split('/')[-1]
 	cx = {0: 0, 1: 0, 2: 0}
-	if not os.path.exists(ienputdir + '/corpus/' + name):
+	if not os.path.exists(path):
 		report(name, name, 1)
 		sys.exit(1)
 	# for all papers...
-	for fn in glob.glob(ienputdir + '/corpus/' + name + '/*.json'):
+	for fn in glob.glob(path + '/*.json'):
 		pureold = fn.split(namem+'/')[1]
 		if pureold.endswith('.json'):
 			pureold = pureold[:-5]

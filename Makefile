@@ -16,6 +16,7 @@ web:
 ppl:
 	time ./refine-xmatch-people.py
 	time ./refine-whowrote.py
+	time ./refine-sortJson.py
 	time ./export-people.py
 
 norm:

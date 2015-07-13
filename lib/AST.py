@@ -18,6 +18,10 @@ def escape(s):
 def sortbypages(z):
 	p1, _ = z.getPagesTuple()
 	y = z.get('year')
+	# a trick to have several volumes within one conference
+	v = z.get('volume')
+	if isinstance(v, int) or v.isdigit():
+		y += int(v)
 	return (y + p1 / 10000.) if p1 else y
 
 def last(xx):
@@ -50,7 +54,7 @@ class Unser(object):
 		if len(self.json) < 1:
 			return '@misc{EMPTY,}'
 		s = '@%s{%s,\n' % (self.get('type'), self.getKey())
-		n2f = self.back.n2f
+		n2f = self.n2f if self.n2f else self.back.n2f
 		for k in sorted(self.json.keys()):
 			if k == k.upper() or k.endswith('short') or k == 'tag':
 				# secret key
@@ -144,8 +148,8 @@ class Unser(object):
 			self.up().getKey().replace('-', ' ')))
 		# DBLP
 		if 'dblpkey' in self.json.keys():
-			links[1].append('<a href="http://dblp.uni-trier.de/rec/html/{}">DBLP</a>'.format(\
-				self.json['dblpkey']))
+			for dblpk in listify(self.json['dblpkey']):
+				links[1].append('<a href="http://dblp.uni-trier.de/rec/html/{}">DBLP</a>'.format(dblpk))
 		elif 'dblpurl' in self.json.keys():
 			links[1].append('<a href="{}">DBLP</a>'.format(self.json['dblpurl']))
 		else:

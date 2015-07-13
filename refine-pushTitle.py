@@ -7,11 +7,12 @@ import sys, os.path
 from fancy.ANSI import C
 from lib.AST import Sleigh
 from lib.NLP import strictstrip
+# from lib.JSON import parseJSON
 
 ienputdir = '../json'
 n2f_name = '_name2file.json'
-name2file = parseJSON(n2f_name) if os.path.exists(n2f_name) else {}
-sleigh = Sleigh(ienputdir + '/corpus', name2file)
+# name2file = parseJSON(n2f_name) if os.path.exists(n2f_name) else {}
+sleigh = Sleigh(ienputdir + '/corpus', {})
 verbose = False
 d2r = k2r = v2o = ''
 

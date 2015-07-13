@@ -11,8 +11,8 @@ from fancy.ANSI import C
 
 ienputdir = '../json'
 n2f_name = '_name2file.json'
-name2file = parseJSON(n2f_name) if os.path.exists(n2f_name) else {}
-sleigh = Sleigh(ienputdir + '/corpus', name2file)
+# name2file = parseJSON(n2f_name) if os.path.exists(n2f_name) else {}
+sleigh = Sleigh(ienputdir + '/corpus', {})
 verbose = False
 
 def findYear(fn):

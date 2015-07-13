@@ -32,9 +32,9 @@ def checkon(fn, o):
 				if o.json[ae] in renameto.keys():
 					o.json[ae] = renameto[o.json[ae]]
 			else:
-				for i, a in enumerate(o.json[ae]):
-					if a in renameto.keys():
-						o.json[ae][i] = renameto[a]
+				for i, x in enumerate(o.json[ae]):
+					if x in renameto.keys():
+						o.json[ae][i] = renameto[x]
 	nlines = sorted([strictstrip(s) for s in o.getJSON().split('\n')[1:-1]])
 	# The next case should not happen, but could if we have trivial lists
 	# if flines != plines:
@@ -69,7 +69,8 @@ if __name__ == "__main__":
 	for a in sorted(aka.keys()):
 		if len(aka[a]) == 1 and aka[a][0] in (nodiaLatin(a), simpleLatin(a)):
 			print('[ {} ]'.format(C.blue('DUMB')), a, 'aliasing was unnecessary manual work')
-		elif len(aka[a]) == 2 and (aka[a] == [nodiaLatin(a), simpleLatin(a)] or aka[a] == [simpleLatin(a), nodiaLatin(a)]):
+		elif len(aka[a]) == 2 and (aka[a] == [nodiaLatin(a), simpleLatin(a)] \
+							    or aka[a] == [simpleLatin(a), nodiaLatin(a)]):
 			print('[ {} ]'.format(C.blue('DUMB')), a, 'aliasing was a lot of unnecessary manual work')
 		elif nodiaLatin(a) in aka[a] or simpleLatin(a) in aka[a]:
 			print('[ {} ]'.format(C.blue('DUMB')), a, 'aliasing contains some unnecessary manual work')
