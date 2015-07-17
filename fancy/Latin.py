@@ -419,7 +419,9 @@ diacritics2html = {\
 	'Ü': '=Uuml=', \
 	'Ý': '=Yacute=', \
 	'Þ': '=THORN=', \
+	# NB: changed around 2013?
 	'ß': '=szlig=', \
+	# 'ß': 'ss', \
 	'à': '=agrave=', \
 	'á': '=aacute=', \
 	'â': '=acirc=', \

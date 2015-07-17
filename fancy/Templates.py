@@ -9,7 +9,7 @@ header = '''<!DOCTYPE html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 	<meta name="keywords" content="software linguistics, software language engineering, book of knowledge, glossary, Russian; иньекция; English; inject"/>
-	<title>SLEBoK — bibSLEIGH — {title}</title>
+	<title>SLEBoK — BibSLEIGH — {title}</title>
 	<link href="stuff/bib.css" rel="stylesheet" type="text/css"/>
 	<link href='http://fonts.googleapis.com/css?family=Exo+2:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
 	<script src="stuff/jquery.min.js" type="text/javascript"></script>
@@ -67,8 +67,23 @@ header.format(title='Bibliography of Software Language Engineering in Generated 
 leftLinks('appp', '')+'''
 </div>
 <div class="main">
+<div style="float:right"><a href="about.html">About the project</a></div>
 <h2>Bibliography of Software Language Engineering in Generated Hypertext (BibSLEIGH)</h2>
 <p>Work in progress! <strong>{}</strong> venues with <strong>{}</strong> papers in <strong>{}</strong> volumes currently in the database.</p>
+{}
+'''+footer
+
+aboutHTML = \
+header.format(title='Bibliography of Software Language Engineering in Generated Hypertext — About')+\
+'<a href="index.html"><img src="stuff/bibsleigh.png" alt="BibSLEIGH" title="BibSLEIGH" class="pad"/></a><br/>'+\
+leftLinks('pppp', '')+'''
+</div>
+<div class="main">
+<h2>Bibliography of Software Language Engineering in Generated Hypertext (BibSLEIGH)</h2>
+<p>This is a project on facilitated browsing of scientific knowledge objects in software language engineering. It is a work in progress.</p>
+<p>The following {} logos were recreated to represent venues.
+Most follow the original designs by the conference founders/organisers, others are improvised to create a matching feel.
+No legal or artistic rights claimed.</p>
 {}
 '''+footer
 

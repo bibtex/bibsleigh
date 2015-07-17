@@ -7,6 +7,7 @@ import os.path, json, glob
 from fancy.ANSI import C
 from fancy.Templates import bunHTML, bunListHTML
 from lib.AST import Sleigh, sortbypages, escape
+from lib.JSON import parseJSON
 
 ienputdir = '../json'
 outputdir = '../frontend'

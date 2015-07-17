@@ -23,6 +23,8 @@ def checkon(fn, o):
 	# flines = [strictstrip(s) for s in lines]
 	plines = sorted([strictstrip(s) for s in o.getJSON().split('\n')[1:-1]])
 	for k in o.json.keys():
+		if 'type' not in o.json.keys():
+			print('TERRIBLE',o.getKey())
 		if (o.json['type'] == 'proceedings' and k == 'title') or\
 		   (o.json['type'] == 'inproceedings' and k == 'booktitle'):
 			# fix numbers

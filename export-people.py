@@ -60,6 +60,8 @@ def dict2links(d):
 				'<a href="https://www.wikidata.org/wiki/{0}">{0}</a>'.format(v)))
 		elif k == 'dblp':
 			# http://dblp.uni-trier.de/pers/hd/m/Major:Elaine
+			if not isinstance(v, str):
+				print('Strange DBLP: “{}”'.format(v))
 			rs.append(\
 				(makeimg('ico-dblp', 'DBLP'),\
 				'<a href="http://dblp.uni-trier.de/pers/hd/{}/{}">DBLP: {}</a>'.format(\
