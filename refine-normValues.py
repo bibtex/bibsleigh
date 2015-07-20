@@ -35,12 +35,17 @@ def checkon(fn, o):
 			# add emdashes for fancier titles
 			if k in ('title', 'booktitle'):
 				o.json[k] = o.json[k].replace(' - ', ' — ')
+				# Nice heuristic to run from time to time, but reports too much
+				# on stuff like “eXtreme” and “jPET”
+				# if o.json[k][0].islower():
+				# 	print('[ {} ] {}: {} {}'.format(C.red('LOOK'), o.getKey(), 'title is', o.get('title')))
 			# normalised pages
 			if k == 'pages':
 				o.json[k] = o.json[k].replace('–', '-').replace('--', '-')
 			# find numeric values, turn them into proper integers
 			if o.json[k].isdigit():
 				o.json[k] = int(o.json[k])
+				continue
 			# remove confix curlies
 			elif o.json[k].startswith('{') and o.json[k].endswith('}'):
 				o.json[k] = o.json[k][1:-1]
@@ -51,16 +56,37 @@ def checkon(fn, o):
 				o.json[k] = o.json[k].replace(" '", ' "').replace("'", '"')
 			elif o.json[k].find("' ") > -1 and o.json[k].startswith("'"):
 				o.json[k] = o.json[k].replace("' ", '" ').replace("'", '"')
-			# fancify quotes
+			# fancify bland quotes
 			elif o.json[k].find(' "') > -1 and o.json[k].find('" ') > -1:
 				o.json[k] = o.json[k].replace(' "', ' “').replace('" ', '” ')
 			elif o.json[k].find(' "') > -1 and o.json[k].endswith('"'):
 				o.json[k] = o.json[k].replace(' "', ' “').replace('"', '”')
 			elif o.json[k].find('" ') > -1 and o.json[k].startswith('"'):
 				o.json[k] = o.json[k].replace('" ', '” ').replace('"', '“')
+			# fancify LaTeX quotes
+			elif o.json[k].find(' ``') > -1 and o.json[k].find("'' ") > -1:
+				o.json[k] = o.json[k].replace("'' ", '” ').replace(' ``', ' “')
+			elif o.json[k].find(' ``') > -1 and o.json[k].endswith("''"):
+				o.json[k] = o.json[k].replace("''", '”').replace(' ``', ' “')
+			elif o.json[k].find("'' ") > -1 and o.json[k].startswith('``'):
+				o.json[k] = o.json[k].replace("'' ", '” ').replace('``', '“')
+			elif o.json[k].startswith('``') and o.json[k].endswith("''"):
+				o.json[k] = '“' + o.json[k][2:-2] + '”'
+			# plural possessive
+			elif o.json[k].find("'s") > -1:
+				o.json[k] = o.json[k].replace("'s", '’s')
+			elif o.json[k].find("s' ") > -1:
+				o.json[k] = o.json[k].replace("s'", 's’')
+			# contractions
+			elif o.json[k].find("n't") > -1:
+				o.json[k] = o.json[k].replace("n't", 'n’t')
 			# the case of "Jr" vs "Jr."
 			if k in ('author', 'editor') and o.json[k].endswith('Jr'):
 				o.json[k] += '.'
+			# TODO: report remaining suspicious activity
+			for c in '`"\'': # ’ is ok
+				if c in o.json[k] and k not in ('author', 'editor'):
+					print('[ {} ] {}: {} is “{}”'.format(C.red('LOOK'), o.getKey(), k, o.json[k]))
 		elif isinstance(o.json[k], list):
 			# inline trivial lists
 			if len(o.json[k]) == 1:

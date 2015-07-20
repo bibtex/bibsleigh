@@ -67,10 +67,18 @@ header.format(title='Bibliography of Software Language Engineering in Generated 
 leftLinks('appp', '')+'''
 </div>
 <div class="main">
-<div style="float:right"><a href="about.html">About the project</a></div>
+<div class="txt">
 <h2>Bibliography of Software Language Engineering in Generated Hypertext (BibSLEIGH)</h2>
-<p>Work in progress! <strong>{}</strong> venues with <strong>{}</strong> papers in <strong>{}</strong> volumes currently in the database.</p>
-{}
+<p>work in progress</p></div>
+<div class="txt">
+<p>Facilitated browsing of scientific knowledge objects in software (language) engineering.
+<a href="about.html">Read more about this</a>.</p>
+<p>	<strong>{cxVen}</strong> venues,
+	<strong>{cxVol}</strong> volumes,
+	<strong>{cxPap}</strong> papers,
+	<strong>300</strong> tags,
+	<strong>56326</strong> markings.</p></div>
+{items}
 '''+footer
 
 aboutHTML = \

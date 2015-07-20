@@ -16,6 +16,9 @@ def escape(s):
 
 # Sort first by year, then by pages
 def sortbypages(z):
+	if 'pages' not in z.json.keys():
+		print(C.red('No pages at all in '+z.getKey()))
+		return 0
 	p1, _ = z.getPagesTuple()
 	y = z.get('year')
 	# a trick to have several volumes within one conference
@@ -252,10 +255,10 @@ class Sleigh(Unser):
 			self.venues.append(Venue(d, idir, name2file, self))
 	def getPage(self):
 		return uberHTML.format(\
-			len(self.venues),
-			self.numOfPapers(),
-			self.numOfVolumes(),
-			'\n'.join([v.getItem() for v in self.venues]))
+			cxVen=len(self.venues),
+			cxPap=self.numOfPapers(),
+			cxVol=self.numOfVolumes(),
+			items='\n'.join([v.getItem() for v in self.venues]))
 	def seek(self, key):
 		f = None
 		for v in self.venues:
@@ -318,11 +321,12 @@ class Venue(Unser):
 	def getItem(self):
 		ABBR = self.get('name')
 		title = self.get('title')
+		img = self.json['venue'].lower() if 'venue' in self.json.keys() else ABBR.lower()
 		# TO-DO: check if img exists
 		return ('<div class="pic"><a href="{ABBR}.html" title="{title}">'+\
 			'<img src="stuff/{abbr}.png" alt="{title}"/><h2>{ABBR}</h2></a></div>').format(\
 				ABBR=ABBR,\
-				abbr=ABBR.lower(),\
+				abbr=img,\
 				title=title)
 	def getIconItem(self):
 		return self.getIconItem(self.get('title'))
@@ -356,7 +360,7 @@ class Venue(Unser):
 			ev = adds + ev
 		ABBR = self.get('name')
 		title = self.get('title')
-		img = ABBR.lower()
+		img = self.json['venue'].lower() if 'venue' in self.json.keys() else ABBR.lower()
 		eds = [y.getItem() for y in sorted(self.years, reverse=True, key=lambda x: x.year)]
 		return confHTML.format(\
 			filename='{0}/{0}.json'.format(self.getPureName()),\
