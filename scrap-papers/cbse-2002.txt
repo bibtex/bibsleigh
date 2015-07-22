@@ -1,0 +1,41 @@
+@URL: "http://www.comparch-events.org/past/CBSE_2002/format.html"
+@TITLE: "Proceedings of the 5th ICSE Workshop on Component-Based Software Engineering: Benchmarks for Predictable Assembly"
+@ADDRESS: ["Orlando", "Florida", "USA"]
+@YEAR: 2002
+@VENUE: "CBSE"
+Anatomy of a Research Project in Predictable Assembly
+Ivica Crnkovic, Heinz Schmidt, Judy Stafford, Kurt Wallnau
+
+Containers for Predictable Behavior of Component-based Software
+Gary J. Vecellio, William M. Thomas, Robert M. Sanders
+ 
+Correct and automatic assembly of COTS components: an architectural approach
+Paola Inverardi, Massimo Tivoli
+ 
+Issues in Predicting the Reliability of Composed Components
+Judith A. Stafford, John D. McGregor
+
+Iterators Reconsidered
+Jason O. Hallstrom, Scott M. Pike, Nigamanth Sridhar
+ 
+Parameterised Contracts and Adapter Synthesis
+Heinz W. Schmidt, Ralf Reussner
+ 
+Performance Prediction of COTS Component-based Enterprise Applications
+Shiping Chen, Ian Gorton, Anna Liu, Yan Liu
+ 
+Probabilistic Analysis for Component Reliability Composition
+Dave Mason
+ 
+Specifying Component Method Properties for Component State Recovery in RAIC
+Chang Liu, Debra J. Richardson
+ 
+Statistical Models for Empirical Component Properties and Assembly-Level Property Predictions: Toward Standard Labeling
+Gabriel Moreno, Scott Hissam, Kurt Wallnau
+ 
+A Temporal Logic Approach to Component–Based System Specification and Reasoning
+Nazareno Aguirre, Thomas Maibaum
+ 
+Using Prediction Enabled Technologies for Embedded Product Line Architectures
+Magnus Larsson, Anders Wall, Christer Norström, Ivica Crnkovic
+

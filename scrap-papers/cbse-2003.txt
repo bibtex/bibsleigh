@@ -1,0 +1,59 @@
+@URL: "http://www.comparch-events.org/past/CBSE_2003/format.html"
+@TITLE: "Proceedings of the 6th ICSE Workshop on Component-Based Software Engineering: Automated Reasoning and Prediction"
+@ADDRESS: ["Portland", "Oregon", "USA"]
+@YEAR: 2002
+@VENUE: "CBSE"
+Towards Component-Based Software Performance Engineering
+Antonia Bertolino, Raffaela Mirandola
+ 
+Measuring Component Reliability
+John D. McGregor, Judith A. Stafford, Il-Hyung Cho
+ 
+Component Based Performance Prediction
+Xiuping Wu, David McMullan, Murray Woodside
+ 
+Scenario-Based Prediction of Run-time Resource Consumption in Component-Based Software Systems
+Merijn de Jonge, Johan Muskens, Michel Chaudron
+
+Specifying Architectural Constraints on Components
+Wayne DePrince Jr, Christine Hofmeister
+ 
+Serious Specification for Composing Components
+Mike Barnett, Wolfgang Grieskamp, Clemens Kerer, Wolfram Schulte, Clemens Szyperski, Nikolai Tillmann, Arthur Watson
+ 
+Run-Time Management of Feature Interactions
+Yinghua Jia, Joanne M. Atlee
+ 
+Verifying the Correctness of Component-Based Applications that Support Business Processes
+Remco M. Dijkman, JoãoPaulo Andrade Almeida, Dick A.C. Quartel
+ 
+Integrating Interface Assertion Checkers into Component Models
+George T. Heineman
+
+Design for Verification: Using Design Patterns to Build Reliable Systems
+Peter C. Mehlitz, John J. Penix
+ 
+Generating Configurable Containers for Component-Based Software
+Nigamanth Sridhar, Jason O. Hallstrom
+ 
+Modeling and Analysis of Architectural Styles Based on Graph Transformation
+Luciano Baresi, Reiko Heckel, Sebastian Thöne, Dániel Varró
+ 
+Infrastructure Support for Predictable Policy Enforcement
+Gary Vecellio, William Thomas
+
+Experiments with composing component properties
+Dick Hamlet, Milan Andric, Zheng Tu
+ 
+Expressiveness Issues in Compositional Performance Reasoning
+Bruce W. Weide, William F. Ogden, Murali Sitaraman
+
+Automating Service Dependency Management in a Service-Oriented Component Model
+Humberto Cervantes, Richard S. Hall
+ 
+A compositional synthesis of failure-free connectors for correct components assembly
+Paola Inverardi, Massimo Tivoli
+ 
+A Generative and Model Driven Framework for Automated Software Product Generation
+Wei Zhao, Barrett R. Bryant, Jeffrey G. Gray, Carol C. Burt, Rajeev R. Raje, Andrew M. Olson, Mikhail Auguston
+

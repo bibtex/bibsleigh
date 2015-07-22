@@ -1,0 +1,25 @@
+#DONE
+     http://www.comparch-events.org/past/CBSE_2000/format.html
+     
+     Organizing Committee
+     
+OrCo Mikio Aoyama, NIIT, Japan
+OrCo Alan Brown, Sterling Software, USA
+     
+OrCo Wojtek Kozacynski, Rational, USA
+     
+OrCo Philippe Kruchten Rational, Canada
+     
+OrCo William Lee, The Theory Center, USA
+     
+OrCo Jim Ning, Andersen Consulting, USA
+     
+OrCo Mike Sparling, Castek, Canada
+     
+OrCo David Sprott, Butler Group, UK
+     
+OrCo Kurt Wallnau, Software Engineering Institute, USA
+     
+OrCo Alan Cameron Wills, Trireme, UK
+     
+OrCo Christian Zeidler, ABB Corporate Research

@@ -1,0 +1,56 @@
+@URL: "http://www.comparch-events.org/past/CBSE_2000/format.html"
+@TITLE: "Proceedings of the 3rd International Workshop on Component-Based Software Engineering: Reflection in Practice"
+@ADDRESS: ["Limerick", "", "Ireland"]
+@YEAR: 2000
+@VENUE: "CBSE"
+Applying CBSE Theory on Corporate Resources
+Niklas Eriksson, Ted Vaalundi
+
+Case Study: Global Combat Support System - Air Force
+Robert C. Seacord
+
+A Component-Based Development Case Study
+Jim Q. Ning
+
+Component-Based Software Engineering: The KobrA Approach
+Colin Atkinson, Joachim Bayer, Oliver Laitenberger, Jörg Zettel
+
+A Component Oriented Domain Architecture for Fish Farming
+Svein Hallsteinsen, Øyvind Dragsten, Magne Johnsen, Jan Ove Ofstad
+
+Components in Financial Systems
+Hubert Matthews, Mark Collins-Cope
+
+Component Testability and Component Testing Challenges
+Jerry Gao
+
+Educational Case Study–What is the Model of an Ideal Component? Must it be an Object?
+Pat Hall
+
+Exploring a Comprehensive CBD Method: Use of CBD/e in Practice
+William D. Burg, J. Scott Hawker, David P. Hale, Kirby McInnis, Allen S. Parrish, Shane Sharpe, Richard Woolridge
+
+Impact of Software Components Characteristics Above Decision-Making Factors
+Asunción Gómez-Perez, Adolfo Lozano
+
+Issues in the Assurance of Component-Based Software
+Gary Vecellio, William M. Thomas
+
+Itacio: A Component Model for Verifying Software at Construction Time
+Agustín Cernuda del Río, Jose Emilio Labra Gayo, Juan Manuel Cueva Lovelle
+
+State of the Practice: Component-Based Software Engineering Course
+Ivica Crnkovic, Magnus Larsson, Frank Lüders
+
+Theory of System Reliability Based on Components
+Dick Hamlet, Dave Mason, Denise Woit
+
+WaterBeans: A Custom Component Model and Framework
+Kurt C. Wallnau, Daniel Plakosh
+
+Component Service Providers: An Evolution in Component Management
+Russ Bunting
+
+CLARiFi An Architecture for Component Classification and Brokerage
+Stuart Thomason, Pearl Brereton, Stephen Linkman
+

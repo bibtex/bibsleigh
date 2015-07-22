@@ -1,0 +1,48 @@
+#DONE
+     Workshop Organizers
+     
+OrCo Ivica Crnkovic, Mälardalen University, Sweden
+     
+OrCo Heinz Schmidt, Monash University, Australia
+     
+OrCo Judith Stafford, Software Engineering Institute, USA
+     
+OrCo Kurt Wallnau, Software Engineering Institute, USA
+     
+     Program Committee
+     
+PrCo Judith Bishop, University of Pretoria, South Africa
+     
+PrCo Jan Bosch, University of Groningen, The Netherlands
+     
+PrCo Ivica Crnkovic, Mälardalen University, Sweden
+     
+PrCo Jacky Estublier, LSR-IMAG, France
+     
+PrCo Kathi Fisler, WPI, USA
+     
+PrCo Dimitra Giannakopoulou, NASA Ames, USA
+     
+PrCo Richard Hall, Imag/Lsr, France
+     
+PrCo Dick Hamlet, Portland State University, USA
+     
+PrCo George T. Heineman, WPI, USA
+     
+PrCo Paola Inverardi, University of L'Aquila, Italy
+     
+PrCo Shriram Krishnamurthi, Brown University, USA
+     
+PrCo Otto Preiss, ABB/CRC, Switzerland
+     
+PrCo Heinz Schmidt, Monash University, Australia
+     
+PrCo Judith Stafford, Tufts University, USA
+     
+PrCo Clemens Szyperski, Microsoft Research, USA
+     
+PrCo Kurt Wallnau, Software Engineering Institute, Carnegie Mellon University, USA
+     
+PrCo Dave Wile, Teknowledge, Corp., USA
+     
+PrCo Christian Zeidler, ABB Research, Germany

@@ -1,0 +1,74 @@
+@URL: "http://www.comparch-events.org/past/CBSE_2001/format.html"
+@TITLE: "Proceedings of the 4th International Workshop on Component-Based Software Engineering: Component Certification and System Prediction"
+@ADDRESS: ["Toronto", "", "Canada"]
+@YEAR: 2001
+@VENUE: "CBSE"
+Component Trust and Certification (keynote)
+Jeffrey Voas
+
+Component Technology (keynote)
+Clemens Szyperski
+
+Software Architecture (keynote)
+David Garlan
+
+Certification of Distributed Component Computing Middleware and Applications
+Sudipto Ghosh, Aditya P. Mathur
+
+Is Third Party Certification Necessary?
+Judith A. Stafford, Kurt C. Wallnau
+
+Ensuring General-Purpose and Domain-Specific Properties Using Architectural Styles
+David S. Wile
+
+Experiences with Certification of Reusable Components in the GSN Project in Ericsson, Norway
+Parastoo Mohagheghi, Reidar Conradi
+
+Protective Wrapping of OTS Components
+Peter Popov, Lorenzo Strigini, Steve Riddle, Alexander Romanovsky
+
+Issues of CBD Product Quality and Process Quality
+Mark Woodman, Oddur Benediktsson, Bruno Lefever, Friedrich Stallinger
+
+Component-Based Software Engineering in Pervasive Computing Environments
+David Garlan, Bradley Schmerl
+
+Modular Regression Testing: Connections to Component-Based Software
+Bruce W. Weide
+
+Rule-driven Component Composition for Embedded Systems
+Thomas Genßler, Christian Zeidler
+
+Probability Density Functions in Program Analysis
+Dave Mason
+
+Trusted Components: Towards Automated Assembly with Predictable Properties
+Heinz W. Schmidt
+
+Component Synthesis Theory: The Problem of Scale
+Dick Hamlet
+
+Component Certification and System Prediction: Is There a Role for Formality
+Kung-Kiu Lau
+
+Verifying Component-Based Collaboration Designs
+Kathi Fisler, Shriram Krishnamurthi, Don S. Batory
+
+Towards a Composition Model Problem based on IEC61850
+Otto Preiss, Alain Wegmann
+
+Compositional Performance Reasoning
+Murali Sitaraman
+
+Third-Party Certification and Its Required Elements
+William T. Councill
+
+Documented Quality of COTS and OCM Components
+Päivi Kallio, Eila Niemelä
+
+Describing Dependencies in Component Access Points
+Marlon E. R. Vieira, Marcio S. Dias, Debra J. Richardson
+
+Component Verification and Certification in NASA Missions
+Dimitra Giannakopoulou, John Penix
+
