@@ -13,6 +13,7 @@ n2f_name = '_name2file.json'
 # name2file = parseJSON(n2f_name) if os.path.exists(n2f_name) else {}
 sleigh = Sleigh(ienputdir + '/corpus', {})
 verbose = False
+lookat = []
 
 def checkon(fn, o):
 	if not os.path.exists(fn) or os.path.isdir(fn):
@@ -87,6 +88,7 @@ def checkon(fn, o):
 			for c in '`"\'': # ’ is ok
 				if c in o.json[k] and k not in ('author', 'editor'):
 					print('[ {} ] {}: {} is “{}”'.format(C.red('LOOK'), o.getKey(), k, o.json[k]))
+					lookat.append(o.filename)
 		elif isinstance(o.json[k], list):
 			# inline trivial lists
 			if len(o.json[k]) == 1:
@@ -142,3 +144,5 @@ if __name__ == "__main__":
 		C.blue(cx[0]),
 		C.yellow(cx[2]),
 		C.red(cx[1])))
+	for f in lookat:
+		print('\t'+f)

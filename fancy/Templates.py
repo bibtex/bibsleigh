@@ -34,7 +34,7 @@ editLink = '<br/>\n<a href="{edit}"><img src="stuff/edit.png" alt="EDIT!" title=
 editCorpus = 'https://github.com/slebok/bibsleigh/edit/master/corpus/{filename}'
 editTag = 'https://github.com/slebok/bibsleigh/edit/master/tags/{etag}.json'
 editBundle = 'https://github.com/slebok/bibsleigh/edit/master/bundles/{ebundle}.json'
-editPerson = 'https://github.com/slebok/bibsleigh/edit/master/person/{eperson}.json'
+editPerson = 'https://github.com/slebok/bibsleigh/edit/master/people/{eperson}.json'
 
 leftLinksT = '''
 	<div class="pad">
