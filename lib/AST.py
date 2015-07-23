@@ -78,7 +78,7 @@ class Unser(object):
 					s += '\t{0:<13} = "{{<span id="{0}">{1}</span>}}",\n'.format(k, self.json[k])
 			elif k in ('crossref', 'key', 'type', 'venue', 'twitter', \
 				'eventtitle', 'eventurl', 'nondblpkey', 'dblpkey', 'dblpurl', \
-				'programchair', 'generalchair'):
+				'programchair', 'generalchair', 'roles'):
 				# TODO: ban 'ee' as well
 				pass
 			elif k == 'doi':
@@ -496,6 +496,11 @@ class Conf(Unser):
 			else:
 				print('File or directory out of place:', f)
 		self.back = parent
+	def hyperPerson(self, p):
+		if p in self.n2f.keys():
+			return '<a href="{}">{}</a>'.format(self.n2f[p], p)
+		else:
+			return p
 	def numOfPapers(self):
 		return len(self.papers)
 	def getEventTitle(self):
@@ -551,12 +556,25 @@ class Conf(Unser):
 				ev = '<h3>Event page: <a href="{uri}">{uri}</a></h3>'.format(uri=self.json['eventurl'])
 		else:
 			ev = ''
-		if 'generalchair' in self.json.keys() or 'programchair' in self.json.keys():
-			positions = [(c, 'General Chair') for c in listify(self.json['generalchair'])] \
-			          + [(c, 'Program Chair') for c in listify(self.json['programchair'])]
-			ev += '<h3>Committee: ' + ', '.join(['<a href="person/{}.html">{}</a> ({})'.format(\
-				c.replace(' ', '_'),
-				c, t) for c, t in positions]) + '</h3>'
+		if 'roles' in self.json.keys():
+			rolemap = {}
+			for n, r in self.json['roles']:
+				if r not in rolemap.keys():
+					rolemap[r] = []
+				rolemap[r].append(n)
+			positions = []
+			for r in rolemap.keys():
+				if len(rolemap[r]) == 1:
+					positions.append('<li><strong>{}</strong>: {}</li>'.format(r, self.hyperPerson(rolemap[r][0])))
+				else:
+					positions.append('<li><strong>{}</strong>: {}</li>'.format(r.replace('Chair', 'Chairs'), ', '.join([self.hyperPerson(p) for p in rolemap[r]])))
+			# positions = [(c, 'General Chair') for c in listify(self.json['generalchair'])] \
+			#           + [(c, 'Program Chair') for c in listify(self.json['programchair'])]
+			if positions:
+				ev += '<h3>Committee</h3>' + '\n'.join(positions)
+			# ev += '<h3>Committee: ' + ', '.join(['<a href="person/{}.html">{}</a> ({})'.format(\
+			# 	c.replace(' ', '_'),
+			# 	c, t) for c, t in positions]) + '</h3>'
 		if self.papers:
 			ev += '<h3>Contents ({} items)</h3><dl class="toc">'.format(len(self.papers))+\
 				  '\n'.join([p.getItem() for p in sorted(self.papers, key=sortbypages)])+'</dl>'

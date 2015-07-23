@@ -77,10 +77,11 @@ FiCh José Creissac Campos (Finance Chair)
      Universidade do Minho, Portugal
      
 WeCh João Paulo Fernandes (Web and Publicity co-Chair)
+PbCh João Paulo Fernandes (Web and Publicity co-Chair)
      Universidade do Porto&  Universidade do Minho, Portugal
      
 WoCh Jurgen Vinju (Workshop Selection Chair)
      CWI, The Netherlands
      
-PbCo Vadim Zaytsev (Publicity co-Chair)
+PbCh Vadim Zaytsev (Publicity co-Chair)
      CWI, The Netherlands

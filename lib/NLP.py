@@ -29,7 +29,7 @@ def shorten(n):
 	ws = n.split(' ')
 	if len(ws) == 1:
 		return n
-	return '.'.join([w[0] for w in ws[:-1]]) + '. ' + ws[-1]
+	return '.'.join([w[0] for w in ws[:-1]]) + '.' + ws[-1]
 
 def baretext(s):
 	s = s.strip().lower()

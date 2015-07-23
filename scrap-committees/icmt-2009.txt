@@ -1,0 +1,51 @@
+#DONE
+     http://www.model-transformation.org/ICMT2009/
+     Program Chair
+PrCh Richard Paige, York (UK)
+     Steering Committee
+StCo Jean Bezivin, Nantes/INRIA (France)
+StCo Jeff Gray, Alabama at Birmingham (USA)
+StCo Alfonso Pierantonio , L'Aquila (Italy)
+StCo Antonio Vallecillo, Malaga (Spain)
+     Program Committee
+PrCo Andreas Rummler
+PrCo Andreas Winter, Koblenz (D)
+PrCo Andy Schürr
+PrCo Bernhard Rumpe
+PrCo Bran Selic
+PrCo Charles Consel
+     INRIA / LaBRI (F)
+PrCo Daniel Varro, Budapest (H)
+PrCo Davide Di Ruscio, L'Aquila (I)
+PrCo Dimitrios Kolovos, York (UK)
+PrCo Ed Willink
+PrCo Esperanza Marcos
+PrCo Francisco Parisi-Presicce, Rome "La Sapienza" (I)
+PrCo Frédéric Jouault
+     INRIA (F)
+PrCo Gabriele Taentzer
+PrCo Gerti Kappel
+PrCo Gregor Engels, Paderborn (D)
+PrCo Günter Kniesel, Bonn (D)
+PrCo Hans Vangheluwe
+PrCo Howard Ho
+PrCo Ivan Kurtev, Twente (ML)
+PrCo Ivan Porres
+PrCo Jean-Marie Favre, Grenoble (F)
+PrCo Jens Weber, Victoria (CAN)
+PrCo Jesús García-Molina, Murcia (E)
+PrCo Jim Steel
+PrCo Jon Whittle, Lancaster (UK)
+PrCo Jordi Cabot
+PrCo Laurence Tratt, Bournemouth (UK)
+PrCo Luciano Baresi
+PrCo Marc Pantel, Toulouse (F)
+PrCo Martin Gogolla, Bremen (D)
+PrCo Nicolas Rouquette
+PrCo Orlando Avila-Garcia
+PrCo Piero Fraternali
+PrCo Reiko Heckel, Leicester (UK)
+PrCo Thomas Kuehne
+PrCo Vicente Pelechano
+PrCo Vinay Kulkarni
+PrCo Yasemin Topaloglu, Ege (T)

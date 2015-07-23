@@ -1,0 +1,75 @@
+#DONE
+     Symposium Organizers
+     
+     General Chair
+     
+GeCh Clemens Szyperski, Microsoft Research, USA
+     
+     Program Chair
+     
+PrCh Ivica Crnkovic, Mälardalen University, Sweden
+     
+     Organizing & Steering
+     
+          Committee
+     
+OrCo Heinz Schmidt, Monash University, Australia
+StCo Heinz Schmidt, Monash University, Australia
+     
+OrCo Judith Stafford, Tufts University, USA
+StCo Judith Stafford, Tufts University, USA
+     
+OrCo Kurt Wallnau, Software Engineering Institute, Carnegie Mellon University, USA
+StCo Kurt Wallnau, Software Engineering Institute, Carnegie Mellon University, USA
+     
+     Program Committee
+     
+PrCo Uwe Aßmann, Linköping University, Sweden
+     
+PrCo Jakob Axelsson, Volvo Car Corporation, Sweden
+     
+PrCo Mike Barnett, Microsoft Research, USA
+     
+PrCo Judith Bishop, University of Pretoria, South Africa
+     
+PrCo Jan Bosch, University of Groningen, The Netherlands
+     
+PrCo Michel Chaudron, University Eindhoven, The Netherlands
+     
+PrCo Wolfgang Emmerich, University College London, UK
+     
+PrCo Jacky Estublier, LSR-IMAG, France
+     
+PrCo Andre van der Hoek, University of California, Irvine, USA
+     
+PrCo Kathi Fisler, WPI, USA
+     
+PrCo Dimitra Giannakopoulou, NASA Ames, USA
+     
+PrCo Richard Hall, Imag/Lsr, France
+     
+PrCo Dick Hamlet, Portland State University, USA
+     
+PrCo George Heineman, WPI, USA
+     
+PrCo Paola Inverardi, University of L'Aquila, Italy
+     
+PrCo Bengt Jonsson, Uppsala University, Sweden
+     
+PrCo Shriram Krishnamurthi, Brown University, USA
+     
+PrCo Jeff Magee, Imperial College University, UK
+     
+PrCo Nenad Medvidović, University of Southern California, USA
+     
+PrCo Magnus Larsson, ABB, Sweden
+     
+PrCo Rob van Ommering, Philips, The Netherlands
+     
+PrCo Heinz Schmidt, Monash University, Australia
+     
+PrCo Judith Stafford, Tufts University
+     
+PrCo Dave Wile, Teknowledge, Corp., USA
+     
+PrCo Kurt Wallnau, SEI, Carnegie Mellon University, USA

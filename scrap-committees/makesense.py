@@ -58,6 +58,7 @@ ignored = (\
 )
 
 ignopatterns = (\
+	'Organizing',
 	'Universidade', 'CWI', 'University', 'Dresden', 'Macquarie', 'Eindhoven', 'Clemson', 'Lancaster',
 	'INRIA', '-----', '=====', 'Organization', 'Netherlands', 'Centrum voor Wiskunde en Informatica',
 	'France', 'Interactive Software Development', 'Kruislaan', 'NL-1098', 'The Netherlands', 'Faculty', 
@@ -67,17 +68,20 @@ BLANK = '     '
 mode = BLANK
 for i in range(0, len(lines)):
 	status, line = lines[i]
-	if len(line) > 200 or len(line)<2:
+	if len(line) > 200 or len(line) < 2:
 		status = BLANK
 	elif line.startswith('???'):
 		status = BLANK
-	elif match(line, 'General chair'):
+	elif matchs(line, ('General chair', 'Conference chair')):
 		status, mode = BLANK, 'GeCh '
-	elif matchs(line, ('PC co-chairs', 'Program co-chairs', 'Program Committee Co-chairs', 'Research Track Co-chairs', 'Program Chairs')):
+	elif matchs(line, ('PC co-chairs', 'Program Chair', 'Program co-chairs',\
+	'Program Committee Co-chairs', 'Research Track Co-chairs', 'Program Chairs',\
+	'PC CHAIRS', 'PC chairs')):
 		status, mode = BLANK, 'PrCh '
 	elif match(line, 'Publicity chair') and not match(line, 'Publicity chair, '):
 		status, mode = BLANK, 'PbCh '
-	elif matchs(line, ('Local organization chair', 'Local arrangements and registration', 'Local Co-chairs')):
+	elif matchs(line, ('Local organization chair', 'Local arrangements and registration',\
+		'Local Co-chairs')):
 		status, mode = BLANK, 'LoCh '
 	elif matchs(line, ('Panel organization chair', 'Panel Co-chairs')):
 		status, mode = BLANK, 'PaCh '
@@ -97,7 +101,7 @@ for i in range(0, len(lines)):
 		status, mode = BLANK, 'ViCh '
 	elif match(line, 'Project Track'):
 		status, mode = BLANK, 'PjCh '
-	elif matchs(line, ('Proceedings Co-chairs', 'Liaison Chairs - Publications')):
+	elif matchs(line, ('Proceedings Co-chairs', 'Liaison Chairs - Publications', 'Publication Chair')):
 		status, mode = BLANK, 'PuCh ' # == Publication Chair
 	elif matchs(line, ('Invited Speaker', 'Keynote Speaker')):
 		status, mode = BLANK, 'KN   '
@@ -111,13 +115,13 @@ for i in range(0, len(lines)):
 		status, mode = BLANK, 'ITPC '
 	elif matchs(line, ('Industry Track', 'Industrial Track Co-chair')):
 		status, mode = BLANK, 'InCh '
-	elif matchs(line, ('Program committee', 'PROGRAM COMITTEE')):
+	elif matchs(line, ('Program committee', 'PROGRAM COMITTEE', 'Programme Committee')):
 		status, mode = BLANK, 'PrCo '
 	elif match(line, 'Scientific committee'):
 		status, mode = BLANK, 'ScCo '
 	elif match(line, 'Steering committee'):
 		status, mode = BLANK, 'StCo '
-	elif match(line, 'Publicity-chair - Social media-chair'):
+	elif matchs(line, ('Publicity-chair - Social media-chair', 'Social Chair')):
 		status, mode = BLANK, 'SMCh '
 	elif matchs(line, ('ORGANIZATION COMMITTEE', 'organizing committee', 'Organizers', 'Organisation Committee')):
 		status, mode = BLANK, 'OrCo '
