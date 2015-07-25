@@ -1,0 +1,82 @@
+#DONE
+     http://cbse-conferences.org/2011/index.php?choice=organization
+     
+     Sunday, 25 July 2010
+     
+     Home
+     Registration
+     Conference ProgramNEW
+     Call for Papers
+     Accepted Papers
+     Important Dates
+     Submission
+     Organization
+     Previous CBSEs
+     Program Co-Chairs
+     
+     
+     
+PrCh Antonia Bertolino
+     
+PrCh Kendra M-L Cooper
+     
+     CompArch Organization Chairs
+GeCh Ivica Crnkovic
+GeCh Judith A. Stafford
+     
+     Steering Committee
+     Name Surname Affiliation Country
+StCo Ivica Crnkovic, Mälardalen University Sweden
+StCo Ian Gorton, Pacific Northwest National Laboratory USA
+StCo George Heineman, Worcester Polytechnic Institute USA
+StCo Grace A. Lewis, Software Engineering Institute USA
+StCo Heinz Schmidt, RMIT University Australia
+StCo Judith Stafford, Tufts University USA
+StCo Clemens Szyperski, Microsoft USA
+StCo Matthew Dwyer, University of Nebraska USA
+     Program Committee
+     Name Surname Affiliation Country
+PrCo Franck Barbier, University of Pau France
+PrCo Steffen Becker, University of Paderborn Germany
+PrCo Fernando Brito e Abreu, DCTI/ISCTE-IUL and CITI/FCT/UNL Portugal
+PrCo Jan Carlson Mälardalen, University Sweden
+PrCo Guglielmo De Angelis, National Research Council (CNR) Italy
+PrCo Laurence Duchien, University of Lille France
+PrCo Anthony Earl, Hewlett Packard USA
+PrCo Xavier Franch, Universitat Politècnica de Catalunya Spain
+PrCo Rose Gamble, University of Tulsa USA
+PrCo Sudipto Ghosh, Colorado State University USA
+PrCo Dimitra Giannakopoulou, NASA Ames Research Center USA
+PrCo Ian Gorton, Pacific Northwest National Lab USA
+PrCo Lars Grunske, Swinburne University of Technology Australia
+PrCo George Heineman, Worcester Polytechnic Institute USA
+PrCo Gang Huang, Peking University China
+PrCo Oliver Hummel, University of Mannheim Germany
+PrCo Sylvia Ilieva, Sofia University Bulgaria
+PrCo Joe Kiniry, University College Dublin Ireland
+PrCo Magnus Larsson, ABB AB Sweden
+PrCo Kung-Kiu Lau, University of Manchester UK
+PrCo Grace A. Lewis, Software Engineering Institute USA
+PrCo Zhiming Liu, UNIIST, Macau China
+PrCo Marija Mikic-Rakic, Google USA
+PrCo Raffaela Mirandola, Politecnico di Milano Italy
+PrCo Hausi A. Muller, University of Victoria Canada
+PrCo Cornelius Ncube, Bournemouth University UK
+PrCo Frantisek Plasil, Charles University Czech Republic
+PrCo Noel Plouzeau, IRISA - University of Rennes France
+PrCo Iman Poernomo, King's College London UK
+PrCo T V Prabhakar, IIT Kanpur India
+PrCo Ralf Reussner, Karlsruhe Institute of Technology Germany
+PrCo David S. Rosenblum, University College London UK
+PrCo Cecília M. F. Rubira, University of Campinas Brazil
+PrCo Antonino Sabetta, SAP France
+PrCo Salah Sadou, Universite de Bretagne Sud France
+PrCo Jean-Guy Schneider, Swinburne University of Technology Australia
+PrCo Clemens Szyperski, Microsoft USA
+PrCo Prabhakar Tadinada, IIT Kanpur India
+PrCo Massimo Tivoli, University of L'Aquila Italy
+PrCo Marco Torchiano, Politecnico di Torino Italy
+PrCo Kurt Wallnau, Software Engineering Institute USA
+PrCo Reishi Yokomori, Nanzan University Japan
+     Web Chair
+WeCh Hüseyin Aysan

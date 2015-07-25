@@ -1,0 +1,41 @@
+#DONE
+     http://seaa2009.vtt.fi/scbse/scbse-cfp.txt
+     ORGANISATION
+     Programme Chairs
+     
+PrCh Ivica Crnkovic, ivica.crnkovic@mdh.se, Mälardalen University, Sweden
+PrCh Tomas Bures, bures@dsrg.mff.cuni.cz, Charles University in Prague, Czech Republic
+     
+     Programme Committee
+     
+PrCo Muhammad AliBabar (Lero, Ireland)
+PrCo Eduardo Santana de Almeida (C.E.S.A.R, Brazil)
+PrCo Colin Atkinson (Mannheim U, Germany)
+PrCo Franck Barbier (University Pau, France)
+PrCo Steffen Becker (FZI Karlsruhe, Germany)
+PrCo Yolande Berbers (KU Leuven, Belgium)
+PrCo Ljerka Beus-Dukic (U Westminster, UK)
+PrCo Marcello Bonsangue (Leiden U, NL)
+PrCo Premysl Brada (U West Bohemia, Pilsen, Czech Republic)
+PrCo Jan Carlson (Mälardalen U, Sweden)
+PrCo Michel Chaudron (Leiden U, NL)
+PrCo Gerhard Chroust (U Linz Austria)
+PrCo Lars Grunske (U Queensland, Australia)
+PrCo Brahim Hamid (IRIT, France)
+PrCo Darko Huljenic (Ericsson Nikola Tesla, Croatia)
+PrCo Petr Hnetynka (Charles U in Prague, Czech Republic)
+PrCo Sylvia Ilieva (U Sofia, Bulgaria)
+PrCo Panagiotis Katsaros (Aristotle U of Thessaloniki, Greece)
+PrCo Gerald Kotonya (U Lancaster, UK)
+PrCo Christian Kreiner (Graz University of Technology, Austria)
+PrCo Kung-Kiu Lau (Manchester U, UK)
+PrCo Magnus Larsson (ABB, SE)
+PrCo Eric Madelaine (Inria, France)
+PrCo Raffaela Mirandola (Politecnico di Milano, Italy)
+PrCo Henry Muccini (L'Aquila U, Italy)
+PrCo Eila Niemelä (VTT, Finland)
+PrCo Alexander Romanovsky (U Newcastle, UK)
+PrCo Lionel Seinturier (U of Lille, France)
+PrCo Ian Sommerville (St Andrews U, UK)
+PrCo Asuman Sünbül (SAP Research, Palo Alto CA, USA)
+PrCo Rob van Ommering (Philips, NL)

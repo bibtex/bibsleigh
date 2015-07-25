@@ -1,0 +1,46 @@
+#DONE
+     http://goanna.cs.rmit.edu.au/~hws/CBSE10/cfp.shtml
+     Organization Chair
+     Judith Stafford	Tufts University, USA	jas@cs.tufts.edu
+     Program Chair
+PrCh Heinz W. Schmidt	RMIT University, Australia	Heinz.Schmidt@rmit.edu.au
+     Steering Committee
+StCo Ivica Crnkovic	Mälardalen University, Sweden	Ivica.Crnkovic@mdh.se
+StCo Ian Gorton	Pacific North West National Laboratory, USA	ian.gorton@pnl.gov
+StCo George Heineman	Worcester Polytechnic Institute, USA	heineman@cs.wpi.edu
+StCo Heinz Schmidt	RMIT University, Australia	Heinz.Schmidt@rmit.edu.au
+StCo Judith Stafford	Tufts University, USA	jas@cs.tufts.edu
+StCo Clemens Szyperski	Microsoft, USA	Clemens.Szyperski@microsoft.com
+     Program Committee
+PrCo Uwe Assmann	Dresden University of Technology, Dresden, Germany
+PrCo Mike Barnett	Microsoft Research, Redmond WA, USA
+PrCo Antonia Bertolino	CNR Research, Pisa, Italy
+PrCo Judith Bishop	University of Pretoria, Pretoria, South Africa
+PrCo Michel Chaudron	University Eindhoven, Eindhoven, The Netherlands
+PrCo Shiping Chen	CSIRO, Sydney, Australia
+PrCo Thierry Coupaye	France Telecom R&D, Grenoble, France
+PrCo Susan Eisenbach	Imperial College London, London, UK
+PrCo Dimitra Giannakopoulou	RIACS/NASA Ames, Moffet Field CA, USA
+PrCo Ian Gorton	Pacific North West National Laboratory, Richland WA, USA
+PrCo Lars Grunske	University of Queensland, Brisbane, Australia
+PrCo Richard Hall	LSR-IMAG, Grenoble, France
+PrCo Dick Hamlet	Portland State University, Portland OR, USA
+PrCo George Heineman	Worcester Polytechnic Institute, Worcester MA, USA
+PrCo Paola Inverardi	University of L'Aquila, L'Aquila, Italy
+PrCo Jean-Marc Jezequel	IRISA (INRIA & Univ. Rennes 1), Rennes, France
+PrCo Bengt Jonsson	Uppsala University, Uppsala, Sweden
+PrCo Gerald Kotonya	Lancaster University, Lancaster, UK
+PrCo Dean Kuo	University of Manchester, Manchester, UK
+PrCo Magnus Larsson	ABB Corporate Research, Västerås, Sweden
+PrCo Kung-Kiu Lau	University of Manchester, Manchester, UK
+PrCo Michael Maximilien	IBM Almaden Research Centre, San Jose CA, USA
+PrCo Nenad Medvidovic´	University of Southern California, Los Angelos CA, USA
+PrCo Henry Muccini	University of L'Aquila, L'Aquila, Italy
+PrCo Rob van Ommering	Philips Research Labs, Eindhoven, The Netherlands
+PrCo Ralf Reussner	University Karlsruhe, Karlsruhe, Germany
+PrCo Christian Salzmann	BMW Car IT, Münich, Germany
+PrCo Douglas Schmidt	Vanderbilt University, Nashville TN, USA
+PrCo Jean-Guy Schneider	Swinburne University of Technology, Melbourne, Australia
+PrCo Asuman Sünbül	SAP Research, Palo Alto CA, USA
+PrCo Wolfgang Weck	Independent Software Architect, Zürich, Switzerland
+PrCo Dave Wile

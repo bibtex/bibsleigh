@@ -43,7 +43,7 @@ lines = []
 for fn in sys.argv[1:]:
 	f = open(fn, 'r')
 	lines += [(fn, line[:5], line[5:].strip()) for line in f.readlines()\
-		if line[:5] != BLANK and not line.startswith('#DONE')]
+		if line.strip() and line[:5] != BLANK and not line.startswith('#DONE')]
 	f.close()
 
 for line in lines:

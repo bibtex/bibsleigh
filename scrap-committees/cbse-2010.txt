@@ -1,0 +1,64 @@
+#DONE
+     http://cbse2010.ipd.kit.edu/organization/
+     
+     Zur Navigation springen.Zum Content springen.Home | Search
+     Thursday, 23 July 2015
+     Home
+     Conference Program
+     Call for Papers
+     Organization
+     Sponsors
+     Program Co-Chairs
+     
+     
+PrCh Lars Grunske
+     
+     
+PrCh Ralf Reussner
+     
+     CompArch Organization Chair
+GeCh František Plášil
+     
+     Program Committee
+PrCo Steffen Becker	Forschungszentrum Informatik (FZI)	Germany
+PrCo Judith Bishop	Microsoft Research, Redmond	USA
+PrCo Barbora Buhnova	Masaryk University, Brno	Czech Republic
+PrCo Michel Chaudron	Leiden University	Netherlands
+PrCo Kendra Cooper	University of Texas at Dallas	USA
+PrCo Ivica Crnkovic	Mälardalen University	Sweden
+PrCo Xavier Franch	Universitat Politècnica de Catalunya	Spain
+PrCo Morven Gentleman	Dalhousie University	Canada
+PrCo Sudipto Ghosh	Colorado State University	USA
+PrCo Holger Giese	Hasso Plattner Institute, Potsdam	Germany
+PrCo Ian Gorto	Pacific North West National Laboratory	USA
+PrCo Lars Grunske	Swinburne University of Technology	Australia
+PrCo Richard Hall	Sun Microsystems	USA
+PrCo Jens Happe	Forschungszentrum Informatik (FZI)	Germany
+PrCo George Heineman	Worcester Polytechnic Institute	USA
+PrCo Christine Hofmeister	East Stroudsburg University	USA
+PrCo Dean Jin	University of Manitoba	Canada
+PrCo Joe Kiniry	University College Dublin	Ireland
+PrCo Magnus Larsson	ABB AB	Sweden
+PrCo Kung-Kiu Lau	The University of Manchester	UK
+PrCo Grace A. Lewis	Carnegie Mellon University	USA
+PrCo Jenny Liu	Pacific Northwest National Laboratory	USA
+PrCo Michael Maximilien	IBM	USA
+PrCo Marija Mikic-Rakic	Google Inc.	USA
+PrCo Raffaela Mirandola	Politecnico Milano	Italy
+PrCo Henry Muccini	University of L'Aquila	Italy
+PrCo Rob van Ommering	Philips Research	Netherlands
+PrCo Frantisek Plasil	Charles University	Czech Republic
+PrCo Noel Plouzeau	IRISA - University of Rennes	France
+PrCo Iman Poernomo	King's College London	UK
+PrCo Ralf Reussner	University of Karlsruhe	Germany
+PrCo Salah Sadou	Valoria, Université de Bretagne Sud	France
+PrCo Christian Salzmann	BMW Group	Germany
+PrCo Bernhard Schätz	TU München	Germany
+PrCo Douglas Schmidt	Vanderbilt University	USA
+PrCo Jean-Guy Schneider	Swinburne University of Technology	Australia
+PrCo Judith Stafford	Tufts University	USA
+PrCo Asuman Sünbül	University of Potsdam	Germany
+PrCo Clemens Szyperski	Microsoft	USA
+PrCo Kurt Wallnau	Software Engineering Institute	USA
+PrCo Dave Wile	Teknowledge Corporation	USA
+     This layout is based on © YAML | TYPO3 Template © by T3NET-Consulting

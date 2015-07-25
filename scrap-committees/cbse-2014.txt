@@ -1,0 +1,58 @@
+#DONE
+     Organization
+     CompArch Organizing Committee
+GeCh Lionel Seinturier, University Lille 1, France (General chair)
+OrCo Laurence Duchien, University Lille 1, France
+PbCh Romain Rouvoy, University Lille 1, France (Publicity chair)
+OrCo Martin Monperrus, University Lille 1, France
+     CBSE Program Co-Chairs
+PrCh Eduardo Almeida, Federal University of Bahia, Brazil
+PrCh Jan Carlson, Mälardalen University, Sweden
+     
+     CBSE Program Committee
+PrCo Franck Barbier, University of Pau (France)
+PrCo Steffen Becker, University of Paderborn (Germany)
+PrCo Domenico Bianculli, University of Luxembourg (Luxembourg)
+PrCo Etienne Borde, Telecom ParisTech (France)
+PrCo Premek Brada, University of West Bohemia (Czech Republic)
+PrCo Radu Calinescu, University of York (UK)
+PrCo Carlos Canal, University of Málaga (Spain)
+PrCo Alessandro Garcia, PUC-Rio (Brazil)
+PrCo Gregor Goessler, INRIA (France)
+PrCo Ian Gorton, CMU Software Engineering Institute (USA)
+PrCo Lars Grunske, University of Stuttgart (Germany)
+PrCo George Heineman, Worcester Polytechnic Institute (USA)
+PrCo Petr Hnetynka, Charles University in Prague (Czech Republic)
+PrCo Gang Huang, Peking University (China)
+PrCo Oliver Hummel, Karlsruhe Institute of Technology (Germany)
+PrCo Valerie Issarny, INRIA (France)
+PrCo Fabrice Kordon, LIP6/UPMC (France)
+PrCo Anne Koziolek, Karlsruhe Institute of Technology (Germany)
+PrCo Magnus Larsson, ABB (India)
+PrCo Kung-Kiu Lau, University of Manchester (UK)
+PrCo Grace A. Lewis, CMU Software Engineering Institute (USA)
+PrCo Frédéric Loiret, Institute für Informatik (Germany)
+PrCo Patricia López Martínez, University of Cantabria (Spain)
+PrCo Raffaela Mirandola, Politecnico di Milano (Italy)
+PrCo Henry Muccini, University of L'Aquila (Italy)
+PrCo Rob van Ommering, Philips Research (Netherlands)
+PrCo Noel Plouzeau, IRISA/University of Rennes 1 (France)
+PrCo Sanjai Rayadurgam, University of Minnesota (USA)
+PrCo Ralf Reussner, Karlsruhe Institute of Technology (Germany)
+PrCo Salah Sadou, IRISA/University of South Brittany (France)
+PrCo Séverine Sentilles, Malardalen University (Sweden)
+PrCo Judith Stafford, University of Colorado (USA)
+PrCo Clemens Szyperski, Microsoft Research (USA)
+PrCo Massimo Tivoli, University of L'Aquila (Italy)
+PrCo Michael Wahler, ABB Corporate Research (Switzerland)
+PrCo Claudia Maria Lima Werner, Federal University of Rio de Janeiro (Brazil)
+     CBSE Steering Committee
+StCo Ivica Crnkovic, Malardalen University (Sweden)
+StCo Ian Gorton, Software Engineering Institute (USA)
+StCo George Heineman, Worcester Polytechnic Institute (USA)
+StCo Grace A. Lewis, CMU Software Engineering Institute (USA)
+StCo Raffaela Mirandola, Politecnico di Milano (Italy)
+StCo Ralf Reussner, Karlsruhe Institute of Technology (Germany)
+StCo Heinz Schmidt, RMIT University (Australia)
+StCo Judith Stafford, University of Colorado (USA)
+StCo Clemens Szyperski, Microsoft Research (USA)
