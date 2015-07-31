@@ -1,0 +1,108 @@
+#DONE
+     http://msr.uwaterloo.ca/msr2009/index.html
+     General Chair
+     
+GeCh Katsuro Inoue
+     University of Osaka, Japan
+     Program Co-chairs
+     
+PrCh Michael W. Godfrey
+     University of Waterloo, Canada
+PrCh Jim Whitehead
+     University of California, Santa Cruz
+     Challenge Chair
+     
+ChCh Christian Bird
+     Program Committee
+     
+PrCo Giuliano Antoniol
+     (Ã‰cole Polytechnique de MontrÃ©al, Canada)
+PrCo Andrew Begel
+     (Microsoft Corp., USA)
+PrCo Geoff Clemm
+     (IBM / Rational, USA)
+PrCo Stephan Diehl
+     (U. of Trier, Germany)
+PrCo Massimiliano di Penta
+     (U. of Sannio, Italy)
+PrCo Harald Gall
+     (U. of Zurich, Switzerland)
+PrCo Daniel GermÃ¡n
+     (U. of Victoria, Canada)
+PrCo Tudor Girba
+     (U. of Bern, Switzerland)
+PrCo Jesus Gonzalez-Barahona
+     (U. Rey Juan Carlos, Spain)
+PrCo Ahmed Hassan
+     (Queen's U., Canada)
+PrCo Ric Holt
+     (U. of Waterloo, Canada)
+PrCo Huzefa Kagdi
+     (Missouri U. of Science and Technology, USA)
+PrCo Tohru Kikuno
+     (Osaka U., Japan)
+PrCo Miryung Kim
+     (U. of Texas (Austin), USA)
+PrCo Sung Kim
+     (Hong Kong University of Science and Technology, China)
+PrCo Michele Lanza
+     (U. of Lugano, Switzerland)
+PrCo Ben Liblit
+     (U. of Wisconsin (Madison), USA)
+PrCo Jonathan Maletic
+     (Kent State U., USA)
+PrCo Andrian Marcus
+     (Wayne State U., USA)
+PrCo Audris Mockus
+     (Avaya Labs, USA)
+PrCo Nachiappan Nagappan
+     (Microsoft Corp., USA)
+PrCo Dewayne Perry
+     (U. of Texas (Austin), USA)
+PrCo Martin Pinzger
+     (U. of Zurich, Switzerland)
+PrCo Lori Pollock
+     (U. of Delaware, USA)
+PrCo Martin Robillard
+     (McGill U., Canada)
+PrCo Gregorio Robles
+     (U. Rey Juan Carlos, Spain)
+PrCo Jelber Sayyad Shirabad
+     (Ottawa U., Canada)
+PrCo Walt Scacchi
+     (U. of California (Irvine), USA)
+PrCo Tao Xie
+     (North Caroline State U., USA)
+PrCo Andy Zaidman
+     (Delft Technical U., Netherlands)
+PrCo Thomas Zimmermann
+     (U. of Calgary, Canada)
+PrCo Poster Chair
+     
+PrCo Miryung Kim
+PrCo Univerity of Texas (Austin), USA
+PrCo Local Arrangement Chair
+     
+PrCo Dirk Beyer
+PrCo Simon Fraser University, Canada
+     Web Chair
+     
+WeCh Abram Hindle
+     University of Waterloo, Canada
+     
+     Steering Committee
+     
+StCo Ahmed E. Hassan
+     
+StCo Audris Mockus
+     
+StCo Ric Holt
+     University of Waterloo, Canada
+StCo Katsuro Inoue
+     
+StCo Stephan Diehl
+     University Trier, Germany
+StCo Harald Gall
+     University of Zurich, Switzerland
+StCo Michele Lanza
+     University of Lugano, Switzerland

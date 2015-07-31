@@ -1,0 +1,107 @@
+#DONE
+     http://msr.uwaterloo.ca/msr2010/
+     General Chair
+     
+GeCh Audris Mockus
+     
+     Program Co-chairs
+     
+PrCh Jim Whitehead
+     University of California, Santa Cruz
+PrCh Thomas Zimmermann
+     
+     
+     Challenge Chair
+     
+ChCh Abram Hindle
+     University of Waterloo, Canada
+     Program Committee
+     
+PrCo Giuliano Antoniol
+     (École Polytechnique de Montréal, Canada)
+PrCo Andrew Begel
+     (Microsoft Corp., USA)
+PrCo Christian Bird
+     (UC Davis, USA)
+PrCo Li-Te Cheng
+     (IBM Research, USA)
+PrCo Stephan Diehl
+     (U. of Trier, Germany)
+PrCo Massimiliano Di Penta
+     (U. of Sannio, Italy)
+PrCo Harald Gall
+     (U. of Zurich, Switzerland)
+PrCo Tudor Girba
+     (U. of Bern, Switzerland)
+PrCo Mike Godfrey
+     (U. of Waterloo, Canada)
+PrCo Jesus Gonzalez-Barahona
+     (U. Rey Juan Carlos, Spain)
+PrCo Ahmed Hassan
+     (Queen's U., Canada)
+PrCo Reid Holmes
+     (U. of Washington, USA)
+PrCo Katsuro Inoue
+     (U. of Osaka, Japan)
+PrCo Huzefa Kagdi
+     (Missouri U. of Science and Technology, USA)
+PrCo Miryung Kim
+     (U. of Texas (Austin), USA)
+PrCo Sung Kim
+     (Hong Kong U. of Science and Technology, China)
+PrCo Michele Lanza
+     (U. of Lugano, Switzerland)
+PrCo Andrian Marcus
+     (Wayne State U., USA)
+PrCo Ken-ichi Matsumoto
+     (Nara Institute of Science and Technology, Japan)
+PrCo Tim Menzies
+     (West Virginia U., USA)
+PrCo Nachiappan Nagappan
+     (Microsoft Corp., USA)
+PrCo Martin Pinzger
+     (Delft Technical U., Netherlands)
+PrCo Rahul Premraj
+     (Vrije U. Amsterdam, The Netherlands)
+PrCo Lori Pollock
+     (U. of Delaware, USA)
+PrCo Bill Pugh
+     (U. of Maryland, USA)
+PrCo Martin Robillard
+     (McGill U., Canada)
+PrCo Gregorio Robles
+     (U. Rey Juan Carlos, Spain)
+PrCo Anita Sarma
+     (U. of Nebraska, USA)
+PrCo Tao Xie
+     (North Caroline State U., USA)
+PrCo Westley Weimer
+     (U. of Virginia, USA)
+PrCo Laurie Williams
+     (North Carolina State U., USA)
+PrCo Andy Zaidman
+     (Delft Technical U., Netherlands)
+PrCo Andreas Zeller
+     (Saarland U., Germany)
+     Web Chair
+     
+WeCh Adrian Schröter
+     University of Victoria, Canada
+     
+     
+     Steering Committee
+     
+StCo Ahmed E. Hassan
+StCo Audris Mockus
+StCo Ric Holt
+     University of Waterloo, Canada
+StCo Katsuro Inoue
+     
+StCo Stephan Diehl
+     University Trier, Germany
+StCo Harald Gall
+     University of Zurich, Switzerland
+StCo Michele Lanza
+     University of Lugano, Switzerland
+StCo Michael W. Godfrey
+     University of Waterloo, Canada

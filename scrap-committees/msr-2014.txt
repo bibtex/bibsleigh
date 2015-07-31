@@ -1,0 +1,80 @@
+#DONE
+     http://2014.msrconf.org/organization.php
+     General Chair
+GeCh Prem Devanbu	Prem Devanbu
+     University of California, Davis
+     Program Co-Chairs
+PrCh Sung Kim	Sung Kim
+PrCh Martin Pinzger	Martin Pinzger
+     University of Klagenfurt
+     Data Chair
+DaCh Emad Shihab	Emad Shihab
+     Challenge Chair
+ChCh Olga Baysal	Olga Baysal
+     University of Waterloo
+     Web Chair
+WeCh Fuxiang Chen	Fuxiang Chen
+     Steering Committee
+StCo Martin Pinzger
+StCo Sung Kim
+StCo Ahmed E. Hassan
+StCo Audris Mockus
+StCo Ric Holt
+StCo Katsuro Inoue
+StCo Stephan Diehl
+StCo Massimiliano Di Penta
+StCo Harald Gall
+StCo Michele Lanza
+StCo Michael W. Godfrey
+StCo Jim Whitehead
+StCo Tao Xie
+StCo Thomas Zimmermann
+     
+     Program Committee Members
+PrCo Abram Hindle	University of Alberta, Canada
+PrCo Ahmed E. Hassan	Queen’s University, Canada
+PrCo Alberto Bacchelli	Delft University of Technology, Netherlands
+PrCo Andrew Begel	Microsoft Research, USA
+PrCo Andrian Marcus	Wayne State University, USA
+PrCo Andy Zaidman	Delft Technical University, Netherlands
+PrCo Ashish	Sureka	Indraprastha Institute of Information Technology (IIIT), India
+PrCo Bram Adams	École Polytechnique de Montréal, Canada
+PrCo Caitlin Sadowski	University of California at Santa Cruz, USA
+PrCo Chanchal K. Roy	University of Saskatchewan, Canada
+PrCo Chris Parnin	Georgia Institute of Technology, USA
+PrCo Christoph Treude	McGill University, Canada
+PrCo Daniel German	University of Victoria, Canada
+PrCo David Lo	Singapore Management University, Singapore
+PrCo Denys Poshyvanyk	College of William and Mary, USA
+PrCo Dongmei Zhang	Microsoft Research, China
+PrCo Emad Shihab	Rochester Institute of Technology, USA
+PrCo Emily Hill	Montclair State University, USA
+PrCo Foutse Khomh	DGIGL, Ecole Polytechnique de Montréal, Canada
+PrCo Gabriele Bavota	University of Sannio, Italy
+PrCo Gail Murphy	UBC, Canada
+PrCo Girish Maskeri	Infosys Technologies Limited, India
+PrCo Giuliano Antoniol	Ecole Polytechnique de Montréal, Canada
+PrCo Harald Gall	University of Zurich, Switzerland
+PrCo Hongyu Zhang	Tsinghua University, China
+PrCo Huzefa Kagdi	Wichita State University, USA
+PrCo Israel Herraiz	Universidad Politécnica de Madrid, Spain
+PrCo Jim Whitehead	University of California, Santa Cruz, USA
+PrCo J. González-Barahona	Universidad Rey Juan Carlos, Spain
+PrCo Lin Tan	University of Waterloo, Canada
+PrCo Margaret-Anne Storey	University of Victoria, Canada
+PrCo Mark Harman	University College London, London
+PrCo Martin Robillard	McGill University, Canada
+PrCo Massimiliano Di Penta	Dept. of Engineering - University of Sannio, Italy
+PrCo Meiyappan Nagappan	Queen's University, Canada
+PrCo Olga	Baysal	University of Waterloo, Canada
+PrCo Peter Rotella	Cisco Systems, USA
+PrCo Romain Robbes	University of Chile, Chile
+PrCo Sonia Haiduc	Florida State University, USA
+PrCo Stephan Diehl	University Trier, Germany
+PrCo Suresh Thummalapenta	Department of Computer Science, North Carolina State rsity, USA
+PrCo Tao Xie	University of Illinois at Urbana-Champaign, USA
+PrCo Tim Menzies	West Virginia University, USA
+PrCo Thomas Fritz	University of Zurich, Zurich
+PrCo Thomas Zimmermann	Microsoft Research, USA
+PrCo Vibha Sinha	IBM Research Lab, India
+PrCo Yossi Gil	The Technion, Israel

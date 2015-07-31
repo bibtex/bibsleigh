@@ -1,0 +1,46 @@
+#DONE
+     http://msr.uwaterloo.ca/msr2005/
+     Organizers
+     
+OrCo Ahmed E. Hassan
+OrCo Richard C. Holt
+     
+OrCo Stephan Diehl
+     
+     Program Committee
+     
+     
+PrCo Alexander Dekhtyar
+     (U. of Kentucky, USA)
+PrCo Premkumar T. Devanbu
+     (UC Davis, USA)
+PrCo Stephen G. Eick
+     (SSS Research, Inc.)
+PrCo Harald Gall
+     (U. of Zurich, Switzerland)
+PrCo Les Gasser
+     (U. of Illinois, UC, USA)
+PrCo Daniel German
+     (U. of Victoria, Canada)
+PrCo Jane Hayes
+     (U. of Kentucky, USA)
+PrCo Katsuro Inoue
+     (Osaka U., Japan)
+PrCo Philip Johnson
+     (U. of Hawaii, USA)
+PrCo Tim Lethbridge
+     (U. of Ottawa, Canada)
+PrCo Gail Murphy
+     (U. of British Columbia, Canada)
+PrCo Audris Mockus
+     (Avaya Labs Research, USA)
+PrCo Thomas J. Ostrand
+     (AT&T Research, USA)
+PrCo Dewayne Perry
+     (U. of Texas, USA)
+PrCo Jelber Sayyad Shirabad
+     (U. of Ottawa, Canada)
+PrCo Annie Ying
+     (IBM Research, USA)
+PrCo Andreas Zeller
+     (Saarland U., Germany)

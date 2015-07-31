@@ -7,9 +7,12 @@ import sys
 
 ROLEZ = {\
 	'BrCh': 'Briefings Chair',
+	'DaCh': 'Data Chair',
 	'DSCh': 'Doctoral Symposium Chair',
 	'ERCh': 'ERA Track Chair',
 	'FiCh': 'Finance Chair',
+	'ChCh': 'Challenge Chair',
+	'ChCo': 'Challenge Committee',
 	'GeCh': 'General Chair',
 	'InCh': 'Industrial Track Chair',
 	'ITPC': 'Industrial Track Program Committee',

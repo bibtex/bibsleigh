@@ -1589,6 +1589,537 @@ LDTA;2012;Mark;van den Brand;;Steering Committee
 LDTA;2012;Görel;Hedin;;Steering Committee
 LDTA;2012;Tony;Sloane;;Steering Committee
 LDTA;2012;Eric;Van Wyk;;Steering Committee
+MSR;2004;Harald;Gall;;Program Committee
+MSR;2004;Les;Gasser;;Program Committee
+MSR;2004;James;Herbsleb;;Program Committee
+MSR;2004;Katsuro;Inoue;;Program Committee
+MSR;2004;Philip;Johnson;;Program Committee
+MSR;2004;Dewayne;Perry;;Program Committee
+MSR;2004;Andreas;Zeller;;Program Committee
+MSR;2004;Ahmed;E. Hassan;;Organising Committee
+MSR;2004;Richard;C. Holt;;Organising Committee
+MSR;2004;Audris;Mockus;;Organising Committee
+MSR;2005;Ahmed;E. Hassan;;Organising Committee
+MSR;2005;Richard;C. Holt;;Organising Committee
+MSR;2005;Stephan;Diehl;;Organising Committee
+MSR;2005;Alexander;Dekhtyar;;Program Committee
+MSR;2005;Premkumar;T. Devanbu;;Program Committee
+MSR;2005;Stephen;G. Eick;;Program Committee
+MSR;2005;Harald;Gall;;Program Committee
+MSR;2005;Les;Gasser;;Program Committee
+MSR;2005;Daniel;German;;Program Committee
+MSR;2005;Jane;Hayes;;Program Committee
+MSR;2005;Katsuro;Inoue;;Program Committee
+MSR;2005;Philip;Johnson;;Program Committee
+MSR;2005;Tim;Lethbridge;;Program Committee
+MSR;2005;Gail;Murphy;;Program Committee
+MSR;2005;Audris;Mockus;;Program Committee
+MSR;2005;Thomas;J. Ostrand;;Program Committee
+MSR;2005;Dewayne;Perry;;Program Committee
+MSR;2005;Jelber;Sayyad Shirabad;;Program Committee
+MSR;2005;Annie;Ying;;Program Committee
+MSR;2005;Andreas;Zeller;;Program Committee
+MSR;2006;Stephan;Diehl;;Organising Committee
+MSR;2006;Harald;Gall;;Organising Committee
+MSR;2006;Ahmed;E. Hassan;;Organising Committee
+MSR;2006;Martin;Pinzger;;Challenge Chair
+MSR;2006;Premkumar;T. Devanbu;;Program Committee
+MSR;2006;Daniel;German;;Program Committee
+MSR;2006;Mike;Godfrey;;Program Committee
+MSR;2006;Ric;Holt;;Program Committee
+MSR;2006;Shih-Kun;Huang;;Program Committee
+MSR;2006;Jane;Huffman Hayes;;Program Committee
+MSR;2006;Katsuro;Inoue;;Program Committee
+MSR;2006;Michele;Lanza;;Program Committee
+MSR;2006;Tim;Lethbridge;;Program Committee
+MSR;2006;Jonathan;Maletic;;Program Committee
+MSR;2006;Ken-ichi;Matsumoto;;Program Committee
+MSR;2006;Audris;Mockus;;Program Committee
+MSR;2006;Leon;Moonen;;Program Committee
+MSR;2006;Thomas;J. Ostrand;;Program Committee
+MSR;2006;Dewayne;Perry;;Program Committee
+MSR;2006;Jelber;Sayyad Shirabad;;Program Committee
+MSR;2006;Alexandru;Telea;;Program Committee
+MSR;2006;Kenny;Wong;;Program Committee
+MSR;2006;Annie;Ying;;Program Committee
+MSR;2006;Thomas;Zimmermann;;Program Committee
+MSR;2007;Harald;Gall;;Program Chair
+MSR;2007;Michele;Lanza;;Program Chair
+MSR;2007;Thomas;Zimmermann;;Challenge Chair
+MSR;2007;Tsuneo;Ajisaka;;Program Committee
+MSR;2007;Serge;Demeyer;;Program Committee
+MSR;2007;Premkumar;T. Devanbu;;Program Committee
+MSR;2007;Stephan;Diehl;;Program Committee
+MSR;2007;Massimiliano;di Penta;;Program Committee
+MSR;2007;Stephane;Ducasse;;Program Committee
+MSR;2007;Daniel;German;;Program Committee
+MSR;2007;Tudor;Girba;;Program Committee
+MSR;2007;Mike;Godfrey;;Program Committee
+MSR;2007;Ahmed;Hassan;;Program Committee
+MSR;2007;Jane;Hayes;;Program Committee
+MSR;2007;Ric;Holt;;Program Committee
+MSR;2007;Shih-Kun;Huang;;Program Committee
+MSR;2007;Katsuro;Inoue;;Program Committee
+MSR;2007;Jonathan;Maletic;;Program Committee
+MSR;2007;Andrian;Marcus;;Program Committee
+MSR;2007;Radu;Marinescu;;Program Committee
+MSR;2007;Audris;Mockus;;Program Committee
+MSR;2007;Leon;Moonen;;Program Committee
+MSR;2007;Gail;Murphy;;Program Committee
+MSR;2007;David;Notkin;;Program Committee
+MSR;2007;Masao;Ohira;;Program Committee
+MSR;2007;Dewayne;Perry;;Program Committee
+MSR;2007;Martin;Pinzger;;Program Committee
+MSR;2007;Jelber;Sayyad Shirabad;;Program Committee
+MSR;2007;Alexandru;Telea;;Program Committee
+MSR;2007;Annie;Ying;;Program Committee
+MSR;2007;Jim;Whitehead;;Program Committee
+MSR;2007;Kenny;Wong;;Program Committee
+MSR;2007;Andreas;Zeller;;Program Committee
+MSR;2008;Ahmed;E. Hassan;;General Chair
+MSR;2008;Michele;Lanza;;Program Chair
+MSR;2008;Michael;W. Godfrey;;Program Chair
+MSR;2008;Sung;Kim;;Challenge Chair
+MSR;2008;Tsuneo;Ajisaka;;Program Committee
+MSR;2008;Giuliano;Antoniol;;Program Committee
+MSR;2008;Abraham;Bernstein;;Program Committee
+MSR;2008;Prem;Devanbu;;Program Committee
+MSR;2008;Stephan;Diehl;;Program Committee
+MSR;2008;Massimiliano;di Penta;;Program Committee
+MSR;2008;Harald;Gall;;Program Committee
+MSR;2008;Daniel;German;;Program Committee
+MSR;2008;Tudor;Girba;;Program Committee
+MSR;2008;Yann-Gael;Gueheneuc;;Program Committee
+MSR;2008;Ric;Holt;;Program Committee
+MSR;2008;Katsuro;Inoue;;Program Committee
+MSR;2008;Jonathan;Maletic;;Program Committee
+MSR;2008;Andrian;Marcus;;Program Committee
+MSR;2008;Radu;Marinescu;;Program Committee
+MSR;2008;Audris;Mockus;;Program Committee
+MSR;2008;Leon;Moonen;;Program Committee
+MSR;2008;David;Notkin;;Program Committee
+MSR;2008;Masao;Ohira;;Program Committee
+MSR;2008;Alex;Orso;;Program Committee
+MSR;2008;Dewayne;Perry;;Program Committee
+MSR;2008;Martin;Pinzger;;Program Committee
+MSR;2008;Gregorio;Robles;;Program Committee
+MSR;2008;Jelber;Sayyad Shirabad;;Program Committee
+MSR;2008;Alexandru;Telea;;Program Committee
+MSR;2008;Annie;Ying;;Program Committee
+MSR;2008;Jim;Whitehead;;Program Committee
+MSR;2008;Andreas;Zeller;;Program Committee
+MSR;2008;Thomas;Zimmermann;;Program Committee
+MSR;2008;Thomas;Zimmermann;;Local Chair
+MSR;2008;Marco;D'Ambros;;Web Chair
+MSR;2008;Ahmed;E. Hassan;;Steering Committee
+MSR;2008;Audris;Mockus;;Steering Committee
+MSR;2008;Ric;Holt;;Steering Committee
+MSR;2008;Katsuro;Inoue;;Steering Committee
+MSR;2008;Stephan;Diehl;;Steering Committee
+MSR;2008;Harald;Gall;;Steering Committee
+MSR;2009;Katsuro;Inoue;;General Chair
+MSR;2009;Michael;W. Godfrey;;Program Chair
+MSR;2009;Jim;Whitehead;;Program Chair
+MSR;2009;Christian;Bird;;Challenge Chair
+MSR;2009;Giuliano;Antoniol;;Program Committee
+MSR;2009;Andrew;Begel;;Program Committee
+MSR;2009;Geoff;Clemm;;Program Committee
+MSR;2009;Stephan;Diehl;;Program Committee
+MSR;2009;Massimiliano;di Penta;;Program Committee
+MSR;2009;Harald;Gall;;Program Committee
+MSR;2009;Daniel;GermÃ¡n;;Program Committee
+MSR;2009;Tudor;Girba;;Program Committee
+MSR;2009;Jesus;Gonzalez-Barahona;;Program Committee
+MSR;2009;Ahmed;Hassan;;Program Committee
+MSR;2009;Ric;Holt;;Program Committee
+MSR;2009;Huzefa;Kagdi;;Program Committee
+MSR;2009;Tohru;Kikuno;;Program Committee
+MSR;2009;Miryung;Kim;;Program Committee
+MSR;2009;Sung;Kim;;Program Committee
+MSR;2009;Michele;Lanza;;Program Committee
+MSR;2009;Ben;Liblit;;Program Committee
+MSR;2009;Jonathan;Maletic;;Program Committee
+MSR;2009;Andrian;Marcus;;Program Committee
+MSR;2009;Audris;Mockus;;Program Committee
+MSR;2009;Nachiappan;Nagappan;;Program Committee
+MSR;2009;Dewayne;Perry;;Program Committee
+MSR;2009;Martin;Pinzger;;Program Committee
+MSR;2009;Lori;Pollock;;Program Committee
+MSR;2009;Martin;Robillard;;Program Committee
+MSR;2009;Gregorio;Robles;;Program Committee
+MSR;2009;Jelber;Sayyad Shirabad;;Program Committee
+MSR;2009;Walt;Scacchi;;Program Committee
+MSR;2009;Tao;Xie;;Program Committee
+MSR;2009;Andy;Zaidman;;Program Committee
+MSR;2009;Thomas;Zimmermann;;Program Committee
+MSR;2009;Poster;Chair;;Program Committee
+MSR;2009;Miryung;Kim;;Program Committee
+MSR;2009;Univerity;of Texas;;Program Committee
+MSR;2009;Local;Arrangement Chair;;Program Committee
+MSR;2009;Dirk;Beyer;;Program Committee
+MSR;2009;Simon;Fraser University;;Program Committee
+MSR;2009;Abram;Hindle;;Web Chair
+MSR;2009;Ahmed;E. Hassan;;Steering Committee
+MSR;2009;Audris;Mockus;;Steering Committee
+MSR;2009;Ric;Holt;;Steering Committee
+MSR;2009;Katsuro;Inoue;;Steering Committee
+MSR;2009;Stephan;Diehl;;Steering Committee
+MSR;2009;Harald;Gall;;Steering Committee
+MSR;2009;Michele;Lanza;;Steering Committee
+MSR;2010;Audris;Mockus;;General Chair
+MSR;2010;Jim;Whitehead;;Program Chair
+MSR;2010;Thomas;Zimmermann;;Program Chair
+MSR;2010;Abram;Hindle;;Challenge Chair
+MSR;2010;Giuliano;Antoniol;;Program Committee
+MSR;2010;Andrew;Begel;;Program Committee
+MSR;2010;Christian;Bird;;Program Committee
+MSR;2010;Li-Te;Cheng;;Program Committee
+MSR;2010;Stephan;Diehl;;Program Committee
+MSR;2010;Massimiliano;Di Penta;;Program Committee
+MSR;2010;Harald;Gall;;Program Committee
+MSR;2010;Tudor;Girba;;Program Committee
+MSR;2010;Mike;Godfrey;;Program Committee
+MSR;2010;Jesus;Gonzalez-Barahona;;Program Committee
+MSR;2010;Ahmed;Hassan;;Program Committee
+MSR;2010;Reid;Holmes;;Program Committee
+MSR;2010;Katsuro;Inoue;;Program Committee
+MSR;2010;Huzefa;Kagdi;;Program Committee
+MSR;2010;Miryung;Kim;;Program Committee
+MSR;2010;Sung;Kim;;Program Committee
+MSR;2010;Michele;Lanza;;Program Committee
+MSR;2010;Andrian;Marcus;;Program Committee
+MSR;2010;Ken-ichi;Matsumoto;;Program Committee
+MSR;2010;Tim;Menzies;;Program Committee
+MSR;2010;Nachiappan;Nagappan;;Program Committee
+MSR;2010;Martin;Pinzger;;Program Committee
+MSR;2010;Rahul;Premraj;;Program Committee
+MSR;2010;Lori;Pollock;;Program Committee
+MSR;2010;Bill;Pugh;;Program Committee
+MSR;2010;Martin;Robillard;;Program Committee
+MSR;2010;Gregorio;Robles;;Program Committee
+MSR;2010;Anita;Sarma;;Program Committee
+MSR;2010;Tao;Xie;;Program Committee
+MSR;2010;Westley;Weimer;;Program Committee
+MSR;2010;Laurie;Williams;;Program Committee
+MSR;2010;Andy;Zaidman;;Program Committee
+MSR;2010;Andreas;Zeller;;Program Committee
+MSR;2010;Adrian;Schröter;;Web Chair
+MSR;2010;Ahmed;E. Hassan;;Steering Committee
+MSR;2010;Audris;Mockus;;Steering Committee
+MSR;2010;Ric;Holt;;Steering Committee
+MSR;2010;Katsuro;Inoue;;Steering Committee
+MSR;2010;Stephan;Diehl;;Steering Committee
+MSR;2010;Harald;Gall;;Steering Committee
+MSR;2010;Michele;Lanza;;Steering Committee
+MSR;2010;Michael;W. Godfrey;;Steering Committee
+MSR;2011;Arie;van Deursen;;General Chair
+MSR;2011;Tao;Xie;;Program Chair
+MSR;2011;Thomas;Zimmermann;;Program Chair
+MSR;2011;Mithun;Acharya;;Program Committee
+MSR;2011;Giuliano;Antoniol;;Program Committee
+MSR;2011;Sushil;Bajracharya;;Program Committee
+MSR;2011;Andrew;Begel;;Program Committee
+MSR;2011;Christian;Bird;;Program Committee
+MSR;2011;Prem;Devanbu;;Program Committee
+MSR;2011;Daniel;German;;Program Committee
+MSR;2011;Mike;Godfrey;;Program Committee
+MSR;2011;Carsten;Goerg;;Program Committee
+MSR;2011;Jesus;M. Gonzalez-Barahona;;Program Committee
+MSR;2011;Ahmed;E. Hassan;;Program Committee
+MSR;2011;Israel;Herraiz;;Program Committee
+MSR;2011;Emily;Hill;;Program Committee
+MSR;2011;Abram;Hindle;;Program Committee
+MSR;2011;Reid;Holmes;;Program Committee
+MSR;2011;Katsuro;Inoue;;Program Committee
+MSR;2011;Lingxiao;Jiang;;Program Committee
+MSR;2011;Huzefa;Kagdi;;Program Committee
+MSR;2011;Miryung;Kim;;Program Committee
+MSR;2011;Sunghun;Kim;;Program Committee
+MSR;2011;Michele;Lanza;;Program Committee
+MSR;2011;David;Lo;;Program Committee
+MSR;2011;Kenichi;Matsumoto;;Program Committee
+MSR;2011;Tim;Menzies;;Program Committee
+MSR;2011;Audris;Mockus;;Program Committee
+MSR;2011;Gail;Murphy;;Program Committee
+MSR;2011;Dewayne;E. Perry;;Program Committee
+MSR;2011;Lori;Pollock;;Program Committee
+MSR;2011;Rahul;Premraj;;Program Committee
+MSR;2011;Bill;Pugh;;Program Committee
+MSR;2011;Romain;Robbes;;Program Committee
+MSR;2011;Peter;Rotella;;Program Committee
+MSR;2011;Westley;Weimer;;Program Committee
+MSR;2011;Jim;Whitehead;;Program Committee
+MSR;2011;Laurie;Williams;;Program Committee
+MSR;2011;Andy;Zaidman;;Program Committee
+MSR;2011;Andreas;Zeller;;Program Committee
+MSR;2011;Dongmei;Zhang;;Program Committee
+MSR;2011;Adrian;Schröter;;Challenge Chair
+MSR;2011;Alberto;Bacchelli;;Challenge Committee
+MSR;2011;Giacomo;Gezzi;;Challenge Committee
+MSR;2011;Lile;Hattori;;Challenge Committee
+MSR;2011;Kim;Herzig;;Challenge Committee
+MSR;2011;Emily;Hill;;Challenge Committee
+MSR;2011;Irwin;Kwan;;Challenge Committee
+MSR;2011;Ahmed;Lamkanfi;;Challenge Committee
+MSR;2011;Erik;Linstead;;Challenge Committee
+MSR;2011;Thanh;Nguyen;;Challenge Committee
+MSR;2011;Peter;Rigby;;Challenge Committee
+MSR;2011;Emad;Shihab;;Challenge Committee
+MSR;2011;Suresh;Thummalapenta;;Challenge Committee
+MSR;2011;Annie;Ying;;Challenge Committee
+MSR;2011;Ahmed;E. Hassan;;Steering Committee
+MSR;2011;Audris;Mockus;;Steering Committee
+MSR;2011;Ric;Holt;;Steering Committee
+MSR;2011;Katsuro;Inoue;;Steering Committee
+MSR;2011;Stephan;Diehl;;Steering Committee
+MSR;2011;Harald;Gall;;Steering Committee
+MSR;2011;Michele;Lanza;;Steering Committee
+MSR;2011;Michael;W. Godfrey;;Steering Committee
+MSR;2011;Jim;Whitehead;;Steering Committee
+MSR;2012;Michele;Lanza;;General Chair
+MSR;2012;Massimiliano;Di Penta;;Program Chair
+MSR;2012;Tao;Xie;;Program Chair
+MSR;2012;Emad;Shihab;;Challenge Chair
+MSR;2012;Alberto;Bacchelli;;Web Chair
+MSR;2012;Ahmed;E. Hassan;;Steering Committee
+MSR;2012;Audris;Mockus;;Steering Committee
+MSR;2012;Ric;Holt;;Steering Committee
+MSR;2012;Katsuro;Inoue;;Steering Committee
+MSR;2012;Stephan;Diehl;;Steering Committee
+MSR;2012;Massimiliano;Di Penta;;Steering Committee
+MSR;2012;Harald;Gall;;Steering Committee
+MSR;2012;Michele;Lanza;;Steering Committee
+MSR;2012;Michael;W. Godfrey;;Steering Committee
+MSR;2012;Jim;Whitehead;;Steering Committee
+MSR;2012;Tao;Xie;;Steering Committee
+MSR;2012;Thomas;Zimmermann;;Steering Committee
+MSR;2012;Mithun;Acharya;;Program Committee
+MSR;2012;Bram;Adams;;Program Committee
+MSR;2012;Christian;Bird;;Program Committee
+MSR;2012;Gerardo;Canfora;;Program Committee
+MSR;2012;Marco;D’Ambros;;Program Committee
+MSR;2012;Daniela;Damian;;Program Committee
+MSR;2012;Prem;Devanbu;;Program Committee
+MSR;2012;Stephan;Diehl;;Program Committee
+MSR;2012;Harald;Gall;;Program Committee
+MSR;2012;Daniel;German;;Program Committee
+MSR;2012;Mike;W. Godfrey;;Program Committee
+MSR;2012;J.;González-Barahona;;Program Committee
+MSR;2012;Ahmed;E. Hassan;;Program Committee
+MSR;2012;Israel;Herraiz;;Program Committee
+MSR;2012;Emily;Hill;;Program Committee
+MSR;2012;Abram;Hindle;;Program Committee
+MSR;2012;Reid;Holmes;;Program Committee
+MSR;2012;Katsuro;Inoue;;Program Committee
+MSR;2012;Huzefa;Kagdi;;Program Committee
+MSR;2012;Miryung;Kim;;Program Committee
+MSR;2012;Sunghun;Kim;;Program Committee
+MSR;2012;David;Lo;;Program Committee
+MSR;2012;Andrian;Marcus;;Program Committee
+MSR;2012;Tim;Menzies;;Program Committee
+MSR;2012;Audris;Mockus;;Program Committee
+MSR;2012;Thomas;Ostrand;;Program Committee
+MSR;2012;Martin;Pinzger;;Program Committee
+MSR;2012;Romain;Robbes;;Program Committee
+MSR;2012;Martin;Robillard;;Program Committee
+MSR;2012;Peter;Rotella;;Program Committee
+MSR;2012;Chanchal;K. Roy;;Program Committee
+MSR;2012;Lin;Tan;;Program Committee
+MSR;2012;Suresh;Thummalapenta;;Program Committee
+MSR;2012;Jim;Whitehead;;Program Committee
+MSR;2012;Andy;Zaidman;;Program Committee
+MSR;2012;Andreas;Zeller;;Program Committee
+MSR;2012;Dongmei;Zhang;;Program Committee
+MSR;2012;Thomas;Zimmermann;;Program Committee
+MSR;2013;Thomas;Zimmermann;;General Chair
+MSR;2013;Massimiliano;Di Penta;;Program Chair
+MSR;2013;Sung;Kim;;Program Chair
+MSR;2013;Daniel;M. German;;Data Chair
+MSR;2013;Alberto;Bacchelli;;Challenge Chair
+MSR;2013;Julius;Davies;;Web Chair
+MSR;2013;Ahmed;E. Hassan;;Steering Committee
+MSR;2013;Audris;Mockus;;Steering Committee
+MSR;2013;Ric;Holt;;Steering Committee
+MSR;2013;Katsuro;Inoue;;Steering Committee
+MSR;2013;Sung;Kim;;Steering Committee
+MSR;2013;Stephan;Diehl;;Steering Committee
+MSR;2013;Massimiliano;Di Penta;;Steering Committee
+MSR;2013;Harald;Gall;;Steering Committee
+MSR;2013;Michele;Lanza;;Steering Committee
+MSR;2013;Michael;W. Godfrey;;Steering Committee
+MSR;2013;Jim;Whitehead;;Steering Committee
+MSR;2013;Tao;Xie;;Steering Committee
+MSR;2013;Thomas;Zimmermann;;Steering Committee
+MSR;2013;Mithun;Acharya;;Program Committee
+MSR;2013;Bram;Adams;;Program Committee
+MSR;2013;Giuliano;Antoniol;;Program Committee
+MSR;2013;Christian;Bird;;Program Committee
+MSR;2013;Raymond;Buse;;Program Committee
+MSR;2013;Gerardo;Canfora;;Program Committee
+MSR;2013;Andy;Chou;;Program Committee
+MSR;2013;Prem;Devanbu;;Program Committee
+MSR;2013;Stephan;Diehl;;Program Committee
+MSR;2013;Vladimir;Filkov;;Program Committee
+MSR;2013;Thomas;Fritz;;Program Committee
+MSR;2013;Harald;Gall;;Program Committee
+MSR;2013;Daniel;German;;Program Committee
+MSR;2013;Yossi;Gill;;Program Committee
+MSR;2013;Mike;W. Godfrey;;Program Committee
+MSR;2013;Mark;Harman;;Program Committee
+MSR;2013;Ahmed;E. Hassan;;Program Committee
+MSR;2013;Israel;Herraiz;;Program Committee
+MSR;2013;Emily;Hill;;Program Committee
+MSR;2013;Abram;Hindle;;Program Committee
+MSR;2013;Reid;Holmes;;Program Committee
+MSR;2013;Katsuro;Inoue;;Program Committee
+MSR;2013;Foutse;Khomh;;Program Committee
+MSR;2013;Michele;Lanza;;Program Committee
+MSR;2013;David;Lo;;Program Committee
+MSR;2013;Audris;Mockus;;Program Committee
+MSR;2013;David;Morgenthaler;;Program Committee
+MSR;2013;Thomas;Ostrand;;Program Committee
+MSR;2013;John;Penix;;Program Committee
+MSR;2013;Martin;Pinzger;;Program Committee
+MSR;2013;Denys;Poshyvanyk;;Program Committee
+MSR;2013;Romain;Robbes;;Program Committee
+MSR;2013;Peter;Rotella;;Program Committee
+MSR;2013;Chanchal;K. Roy;;Program Committee
+MSR;2013;Emad;Shihab;;Program Committee
+MSR;2013;Lin;Tan;;Program Committee
+MSR;2013;Suresh;Thummalapenta;;Program Committee
+MSR;2013;Jim;Whitehead;;Program Committee
+MSR;2013;Laurie;Williams;;Program Committee
+MSR;2013;Tao;Xie;;Program Committee
+MSR;2013;Andreas;Zeller;;Program Committee
+MSR;2013;Dongmei;Zhang;;Program Committee
+MSR;2013;Hongyu;Zhang;;Program Committee
+MSR;2014;Prem;Devanbu;;General Chair
+MSR;2014;Sung;Kim;;Program Chair
+MSR;2014;Martin;Pinzger;;Program Chair
+MSR;2014;Emad;Shihab;;Data Chair
+MSR;2014;Olga;Baysal;;Challenge Chair
+MSR;2014;Fuxiang;Chen;;Web Chair
+MSR;2014;Martin;Pinzger;;Steering Committee
+MSR;2014;Sung;Kim;;Steering Committee
+MSR;2014;Ahmed;E. Hassan;;Steering Committee
+MSR;2014;Audris;Mockus;;Steering Committee
+MSR;2014;Ric;Holt;;Steering Committee
+MSR;2014;Katsuro;Inoue;;Steering Committee
+MSR;2014;Stephan;Diehl;;Steering Committee
+MSR;2014;Massimiliano;Di Penta;;Steering Committee
+MSR;2014;Harald;Gall;;Steering Committee
+MSR;2014;Michele;Lanza;;Steering Committee
+MSR;2014;Michael;W. Godfrey;;Steering Committee
+MSR;2014;Jim;Whitehead;;Steering Committee
+MSR;2014;Tao;Xie;;Steering Committee
+MSR;2014;Thomas;Zimmermann;;Steering Committee
+MSR;2014;Abram;Hindle;;Program Committee
+MSR;2014;Ahmed;E. Hassan;;Program Committee
+MSR;2014;Alberto;Bacchelli;;Program Committee
+MSR;2014;Andrew;Begel;;Program Committee
+MSR;2014;Andrian;Marcus;;Program Committee
+MSR;2014;Andy;Zaidman;;Program Committee
+MSR;2014;Ashish;;;Program Committee
+MSR;2014;Bram;Adams;;Program Committee
+MSR;2014;Caitlin;Sadowski;;Program Committee
+MSR;2014;Chanchal;K. Roy;;Program Committee
+MSR;2014;Chris;Parnin;;Program Committee
+MSR;2014;Christoph;Treude;;Program Committee
+MSR;2014;Daniel;German;;Program Committee
+MSR;2014;David;Lo;;Program Committee
+MSR;2014;Denys;Poshyvanyk;;Program Committee
+MSR;2014;Dongmei;Zhang;;Program Committee
+MSR;2014;Emad;Shihab;;Program Committee
+MSR;2014;Emily;Hill;;Program Committee
+MSR;2014;Foutse;Khomh;;Program Committee
+MSR;2014;Gabriele;Bavota;;Program Committee
+MSR;2014;Gail;Murphy;;Program Committee
+MSR;2014;Girish;Maskeri;;Program Committee
+MSR;2014;Giuliano;Antoniol;;Program Committee
+MSR;2014;Harald;Gall;;Program Committee
+MSR;2014;Hongyu;Zhang;;Program Committee
+MSR;2014;Huzefa;Kagdi;;Program Committee
+MSR;2014;Israel;Herraiz;;Program Committee
+MSR;2014;Jim;Whitehead;;Program Committee
+MSR;2014;J.;González-Barahona;;Program Committee
+MSR;2014;Lin;Tan;;Program Committee
+MSR;2014;Margaret-Anne;Storey;;Program Committee
+MSR;2014;Mark;Harman;;Program Committee
+MSR;2014;Martin;Robillard;;Program Committee
+MSR;2014;Massimiliano;Di Penta;;Program Committee
+MSR;2014;Meiyappan;Nagappan;;Program Committee
+MSR;2014;Olga;;;Program Committee
+MSR;2014;Peter;Rotella;;Program Committee
+MSR;2014;Romain;Robbes;;Program Committee
+MSR;2014;Sonia;Haiduc;;Program Committee
+MSR;2014;Stephan;Diehl;;Program Committee
+MSR;2014;Suresh;Thummalapenta;;Program Committee
+MSR;2014;Tao;Xie;;Program Committee
+MSR;2014;Tim;Menzies;;Program Committee
+MSR;2014;Thomas;Fritz;;Program Committee
+MSR;2014;Thomas;Zimmermann;;Program Committee
+MSR;2014;Vibha;Sinha;;Program Committee
+MSR;2014;Yossi;Gil;;Program Committee
+MSR;2015;Bram;Adams;;Program Committee
+MSR;2015;Giuliano;Antoniol;;Program Committee
+MSR;2015;Alberto;Bacchelli;;Program Committee
+MSR;2015;Gabriele;Bavota;;Program Committee
+MSR;2015;Olga;Baysal;;Program Committee
+MSR;2015;Andrew;Begel;;Program Committee
+MSR;2015;Christian;Bird;;Program Committee
+MSR;2015;Stephan;Diehl;;Program Committee
+MSR;2015;Thomas;Fritz;;Program Committee
+MSR;2015;Harald;Gall;;Program Committee
+MSR;2015;Mike;Godfrey;;Program Committee
+MSR;2015;Georgios;Gousios;;Program Committee
+MSR;2015;Michaela;Greiler;;Program Committee
+MSR;2015;Sonia;Haiduc;;Program Committee
+MSR;2015;Mark;Harman;;Program Committee
+MSR;2015;Ahmed;E. Hassan;;Program Committee
+MSR;2015;Reid;Holmes;;Program Committee
+MSR;2015;Huzefa;Kagdi;;Program Committee
+MSR;2015;Yasutaka;Kamei;;Program Committee
+MSR;2015;Foutse;Khomh;;Program Committee
+MSR;2015;Sunghun;Kim;;Program Committee
+MSR;2015;Michele;Lanza;;Program Committee
+MSR;2015;Walid;Maalej;;Program Committee
+MSR;2015;Andrian;Marcus;;Program Committee
+MSR;2015;Na;Meng;;Program Committee
+MSR;2015;Tim;Menzies;;Program Committee
+MSR;2015;Ali;Mesbah;;Program Committee
+MSR;2015;Audris;Mockus;;Program Committee
+MSR;2015;Meiyappan;Nagappan;;Program Committee
+MSR;2015;Denys;Poshyvanyk;;Program Committee
+MSR;2015;Baishakhi;Ray;;Program Committee
+MSR;2015;Peter;Rigby;;Program Committee
+MSR;2015;Gregorio;Robles;;Program Committee
+MSR;2015;David;Roethlisberger;;Program Committee
+MSR;2015;Chanchal;K. Roy;;Program Committee
+MSR;2015;Caitlin;Sadowski;;Program Committee
+MSR;2015;Anita;Sarma;;Program Committee
+MSR;2015;Emad;Shihab;;Program Committee
+MSR;2015;Leif;Singer;;Program Committee
+MSR;2015;Vibha;Sinha;;Program Committee
+MSR;2015;Lin;Tan;;Program Committee
+MSR;2015;Ewan;Tempero;;Program Committee
+MSR;2015;Christoph;Treude;;Program Committee
+MSR;2015;Tao;Xie;;Program Committee
+MSR;2015;Annie;T.T. Ying;;Program Committee
+MSR;2015;Andy;Zaidman;;Program Committee
+MSR;2015;Andreas;Zeller;;Program Committee
+MSR;2015;Hongyu;Zhang;;Program Committee
+MSR;2015;Thomas;Zimmermann;;Program Committee
+MSR;2015;Massimiliano;Di Penta;;General Chair
+MSR;2015;Italy;;;General Chair
+MSR;2015;Martin;Pinzger;;Program Chair
+MSR;2015;Romain;Robbes;;Program Chair
+MSR;2015;Yasutaka;Kamei;;Data Chair
+MSR;2015;Annie;Ying;;Challenge Chair
+MSR;2015;Stefanie;Beyer;;Web Chair
+MSR;2015;Martin;Pinzger;;Steering Committee
+MSR;2015;Ric;Holt;;Steering Committee
+MSR;2015;Harald;Gall;;Steering Committee
+MSR;2015;Tao;Xie;;Steering Committee
 SANER;2015;Ira;Baxter;;Steering Committee
 SANER;2015;Dave;Binkley;;Steering Committee
 SANER;2015;Elliot;Chikofsky;;Steering Committee

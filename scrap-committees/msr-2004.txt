@@ -1,0 +1,17 @@
+#DONE
+     http://msr.uwaterloo.ca/msr2004/MSR2004ProceedingsFINAL_IEE_Acrobat4.pdf
+     Program Committee
+PrCo Harald Gall, University of Vienna, Austria
+PrCo Les Gasser, University of Illinois at Urbana Champaign, USA Daniel German, University of Victoria, Canada
+PrCo James Herbsleb, Carnegie Mellon University, USA
+PrCo Katsuro Inoue, Osaka University, Japan
+PrCo Philip Johnson, University of Hawaii, USA
+PrCo Dewayne Perry, University of Texas, USA
+PrCo Andreas Zeller, Saarland University, Germany
+     
+     Organizers
+OrCo Ahmed E. Hassan
+OrCo Richard C. Holt
+     University of Waterloo
+OrCo Audris Mockus
+

@@ -1,0 +1,3 @@
+#!/bin/sh
+./makesense.py $1
+./done2csv.py $1

@@ -1,0 +1,60 @@
+#DONE
+     http://msr.uwaterloo.ca/msr2006/
+     Organizers
+     
+OrCo Stephan Diehl
+     University Trier, Germany
+     
+OrCo Harald Gall
+     University of Zurich, Switzerland
+     
+OrCo Ahmed E. Hassan
+     University of Waterloo, Canada
+     
+     Challenge Chair
+ChCh Martin Pinzger
+     University of Zurich, Switzerland
+     
+     Program Committee
+     
+     
+PrCo Premkumar T. Devanbu
+     (U. of California -- Davis, USA)
+PrCo Daniel German
+     (U. of Victoria, Canada)
+PrCo Mike Godfrey
+     (U of Waterloo, Canada)
+PrCo Ric Holt
+     (U. of Waterloo, Canada)
+PrCo Shih-Kun Huang
+     (National Chiao Tung U., Taiwan)
+PrCo Jane Huffman Hayes
+     (U. of Kentucky, USA)
+PrCo Katsuro Inoue
+     (Osaka U., Japan)
+PrCo Michele Lanza
+     (U. Lugano, Switzerland)
+PrCo Tim Lethbridge
+     (Ottawa U., Canada)
+PrCo Jonathan Maletic
+     (Kent State U., USA)
+PrCo Ken-ichi Matsumoto
+     (NAIST, Japan)
+PrCo Audris Mockus
+     (Avaya Labs, USA)
+PrCo Leon Moonen
+     (Delft U. of Technology, Netherlands)
+PrCo Thomas J. Ostrand
+     (AT&T Labs, USA)
+PrCo Dewayne Perry
+     (U. of Texas, USA)
+PrCo Jelber Sayyad Shirabad
+     (Ottawa U., Canada)
+PrCo Alexandru Telea
+     (Eindhoven U. of Technology, Netherlands)
+PrCo Kenny Wong
+     (U. of Alberta, Canada)
+PrCo Annie Ying
+     (IBM Research, USA)
+PrCo Thomas Zimmermann
+     (Saarland U., Germany)

@@ -1,0 +1,76 @@
+#DONE
+     http://2011.msrconf.org/committees/program-committee.html
+     General Chair
+GeCh Arie van Deursen
+     Program Committee
+PrCh Tao Xie, North Carolina State University, USA (Program Co-chair)
+PrCh Thomas Zimmermann, Microsoft Research, USA (Program Co-chair)
+     
+PrCo Mithun Acharya, ABB Research, USA
+PrCo Giuliano Antoniol, École Polytechnique de Montréal, Canada
+PrCo Sushil Bajracharya, Black Duck Software, USA
+PrCo Andrew Begel, Microsoft Corp., USA
+PrCo Christian Bird, Microsoft Corp., USA
+PrCo Prem Devanbu, University of California, Davis, USA
+PrCo Daniel German, University of Victoria, Canada
+PrCo Mike Godfrey, University of Waterloo, Canada
+PrCo Carsten Goerg, Georgia Institute of Technology, USA
+PrCo Jesus M. Gonzalez-Barahona, University Rey Juan Carlos, Spain
+PrCo Ahmed E. Hassan, Queen's University, Canada
+PrCo Israel Herraiz, University Alfonso X el Sabio, Spain
+PrCo Emily Hill, Montclair State University, USA
+PrCo Abram Hindle, University of California, Davis, USA
+PrCo Reid Holmes, University of Waterloo, Canada
+PrCo Katsuro Inoue, University of Osaka, Japan
+PrCo Lingxiao Jiang, Singapore Management University, Singapore
+PrCo Huzefa Kagdi, Missouri University of Science and Technology, USA
+PrCo Miryung Kim, University of Texas at Austin, USA
+PrCo Sunghun Kim, Hong Kong University of Science and Technology, China
+PrCo Michele Lanza, University of Lugano, Switzerland
+PrCo David Lo, Singapore Management University, Singapore
+PrCo Kenichi Matsumoto, Nara Institute of Science and Technology, Japan
+PrCo Tim Menzies, West Virginia University, USA
+PrCo Audris Mockus, Avaya, USA
+PrCo Gail Murphy, University of British Columbia, Canada
+PrCo Dewayne E. Perry, University of Texas at Austin, USA
+PrCo Lori Pollock, University of Delaware, USA
+PrCo Rahul Premraj, Vrije University Amsterdam, The Netherlands
+PrCo Bill Pugh, University of Maryland, USA
+PrCo Romain Robbes, University of Chile, Chile
+PrCo Peter Rotella, Cisco, USA
+PrCo Westley Weimer, University of Virginia, USA
+PrCo Jim Whitehead, University of California, Santa Cruz, USA
+PrCo Laurie Williams, North Carolina State University, USA
+PrCo Andy Zaidman, Delft Technical University, Netherlands
+PrCo Andreas Zeller, Saarland University, Germany
+PrCo Dongmei Zhang, Microsoft Corp., China
+     
+     http://2011.msrconf.org/committees/challenge.html
+     Challenge Chair
+ChCh Adrian Schröter
+     Challenge Committee
+ChCo Alberto Bacchelli, Università della Svizzera Italiana, Switzerland
+ChCo Giacomo Gezzi, University of Zurich, Switzerland
+ChCo Lile Hattori, Università della Svizzera Italiana, Switzerland
+ChCo Kim Herzig, Saarland University
+ChCo Emily Hill, Montclair State University, USA
+ChCo Irwin Kwan, University of Victoria, Canada
+ChCo Ahmed Lamkanfi, Universiteit Antwerpen, Belgium
+ChCo Erik Linstead, Chapman Univeristy, USA
+ChCo Thanh Nguyen, Queen’s University, Canada
+ChCo Peter Rigby, University of Victoria, Canada
+ChCo Emad Shihab, Queen's Univeristy, Canada
+ChCo Suresh Thummalapenta, North Carolina State University, USA
+ChCo Annie Ying, McGill University, Canada
+     
+     http://2011.msrconf.org/committees/steering-committee.html
+     Steering Committee
+StCo Ahmed E. Hassan
+StCo Audris Mockus
+StCo Ric Holt
+StCo Katsuro Inoue
+StCo Stephan Diehl
+StCo Harald Gall
+StCo Michele Lanza
+StCo Michael W. Godfrey
+StCo Jim Whitehead

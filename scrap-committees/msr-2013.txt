@@ -1,0 +1,76 @@
+#DONE
+     http://2013.msrconf.org/organization.php
+     General Chair
+GeCh Thomas Zimmermann	Thomas Zimmermann
+     Program Co-Chairs
+PrCh Massimiliano Di Penta	Massimiliano Di Penta
+     University of Sannio
+PrCh Sung Kim	Sung Kim
+     Chief of Data
+DaCh Daniel M. German	Daniel M. German
+     University of Victoria
+     Challenge Chair
+ChCh Alberto Bacchelli	Alberto Bacchelli
+     University of Lugano
+     Web Chair
+WeCh Julius Davies	Julius Davies
+     University of British Columbia
+     Steering Committee
+StCo Ahmed E. Hassan
+StCo Audris Mockus
+StCo Ric Holt
+StCo Katsuro Inoue
+StCo Sung Kim
+StCo Stephan Diehl
+StCo Massimiliano Di Penta
+StCo Harald Gall
+StCo Michele Lanza
+StCo Michael W. Godfrey
+StCo Jim Whitehead
+StCo Tao Xie
+StCo Thomas Zimmermann
+     
+     Program Committee Members
+PrCo Mithun Acharya	ABB Research, USA
+PrCo Bram Adams	École Polytechnique de Montréal, Canada
+PrCo Giuliano Antoniol	École Polytechnique de Montréal, Canada
+PrCo Christian Bird	Microsoft Research, USA
+PrCo Raymond Buse	Google Inc., USA
+PrCo Gerardo Canfora	University of Sannio, Italy
+PrCo Andy Chou	Coverity Inc., USA
+PrCo Prem Devanbu	University of California, Davis, USA
+PrCo Stephan Diehl	University Trier, Germany
+PrCo Vladimir Filkov	University of California, Davis, USA
+PrCo Thomas Fritz	University of Zurich, Switzerland
+PrCo Harald Gall	University of Zurich, Switzerland
+PrCo Daniel German	University of Victoria, Canada
+PrCo Yossi Gill	Technion, Israel
+PrCo Mike W. Godfrey	University of Waterloo, Canada
+PrCo Mark Harman	University College London, UK
+PrCo Ahmed E. Hassan	Queen’s University, Canada
+PrCo Israel Herraiz	Universidad Politécnica de Madrid, Spain
+PrCo Emily Hill	Montclair State University, USA
+PrCo Abram Hindle	University of Alberta, Canada
+PrCo Reid Holmes	University of Waterloo, Canada
+PrCo Katsuro Inoue	University of Osaka, Japan
+PrCo Foutse Khomh	Queen’s University, Canada
+PrCo Michele Lanza	University of Lugano, Switzerland
+PrCo David Lo	Singapore Management University, Singapore
+PrCo Audris Mockus	Avaya Labs Research, USA
+PrCo David Morgenthaler	Google Inc., USA
+PrCo Thomas Ostrand	Rutgers University, USA
+PrCo John Penix	Google Inc., USA
+PrCo Martin Pinzger	Delft Technical University, Netherlands
+PrCo Denys Poshyvanyk	The College of William and Mary, USA
+PrCo Romain Robbes	University of Chile, Chile
+PrCo Peter Rotella	Cisco Systems, USA
+PrCo Chanchal K. Roy	University of Saskatchewan, Canada
+PrCo Emad Shihab	Rochester Institute of Technology, USA
+PrCo Lin Tan	University of Waterloo, Canada
+PrCo Suresh Thummalapenta	IBM Research, India
+PrCo Jim Whitehead	University of California, Santa Cruz, USA
+PrCo Laurie Williams	North Carolina State University, USA
+PrCo Tao Xie	North Carolina State University, USA
+PrCo Andreas Zeller	Saarland University, Germany
+PrCo Dongmei Zhang	Microsoft Research, China
+PrCo Hongyu Zhang	Tsinghua University, China

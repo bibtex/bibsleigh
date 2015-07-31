@@ -1,0 +1,76 @@
+#DONE
+     http://msr.uwaterloo.ca/msr2007/index.html
+     Program Co-chairs
+     
+PrCh Harald Gall
+     
+     University of Zurich, Switzerland
+PrCh Michele Lanza
+     
+     University of Lugano, Switzerland
+     Challenge Chair
+     
+ChCh Thomas Zimmermann
+     
+     Program Committee
+     
+PrCo Tsuneo Ajisaka
+     (Wakayama U., Japan)
+PrCo Serge Demeyer
+     (U. of Antwerp, Belgium)
+PrCo Premkumar T. Devanbu
+     (U. of California, USA)
+PrCo Stephan Diehl
+     (U. of Trier, Germany)
+PrCo Massimiliano di Penta
+     (U. of Sannio, Italy)
+PrCo Stephane Ducasse
+     (U. of Annecy, France)
+PrCo Daniel German
+     (U. of Victoria, Canada)
+PrCo Tudor Girba
+     (U. of Bern, Switzerland)
+PrCo Mike Godfrey
+     (U. of Waterloo, Canada)
+PrCo Ahmed Hassan
+     (U. of Victoria, Canada)
+PrCo Jane Hayes
+     (U. of Kentucky, USA)
+PrCo Ric Holt
+     (U. Waterloo, Canada)
+PrCo Shih-Kun Huang
+     (Nat. Chiao Tung U., Taiwan)
+PrCo Katsuro Inoue
+     (Osaka U., Japan)
+PrCo Jonathan Maletic
+     (Kent State U., USA)
+PrCo Andrian Marcus
+     (Wayne State U., USA)
+PrCo Radu Marinescu
+     (TU Timisoara, Romania)
+PrCo Audris Mockus
+     (Avaya Labs, USA)
+PrCo Leon Moonen
+     (Delft U. of Tech., Netherlands)
+PrCo Gail Murphy
+     (U. of British Colombia, Canada)
+PrCo David Notkin
+     (U. of Washington, USA)
+PrCo Masao Ohira
+     (NAIST, Japan)
+PrCo Dewayne Perry
+     (U. of Texas, USA)
+PrCo Martin Pinzger
+     (U. of Zurich, Switzerland)
+PrCo Jelber Sayyad Shirabad
+     (Ottawa U., Canada)
+PrCo Alexandru Telea
+     (Eindhoven TU, The Netherlands)
+PrCo Annie Ying
+     (IBM Research, USA)
+PrCo Jim Whitehead
+     (U. of California, USA)
+PrCo Kenny Wong
+     (U. of Alberta, Canada)
+PrCo Andreas Zeller
+     (Saarland U., Germany)

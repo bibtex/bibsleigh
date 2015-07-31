@@ -72,6 +72,8 @@ for i in range(0, len(lines)):
 		status = BLANK
 	elif line.startswith('???'):
 		status = BLANK
+	elif line.startswith('('):
+		status = BLANK
 	elif match(line, 'Name') and match(line, 'Surname'):
 		status = BLANK
 	elif matchs(line, ('General chair', 'Conference chair', 'Organization Chair')):
@@ -83,7 +85,7 @@ for i in range(0, len(lines)):
 	elif match(line, 'Publicity chair') and not match(line, 'Publicity chair, '):
 		status, mode = BLANK, 'PbCh '
 	elif matchs(line, ('Local organization chair', 'Local arrangements and registration',\
-		'Local Co-chairs')):
+		'Local Co-chairs', 'Local Arrangement Chair')):
 		status, mode = BLANK, 'LoCh '
 	elif matchs(line, ('Panel organization chair', 'Panel Co-chairs')):
 		status, mode = BLANK, 'PaCh '
@@ -95,8 +97,14 @@ for i in range(0, len(lines)):
 		status, mode = BLANK, 'FiCh '
 	elif matchs(line, ('ERA Track Co-chairs', 'ERA Chairs')):
 		status, mode = BLANK, 'ERCh '
+	elif match(line, 'Challenge Chair'):
+		status, mode = BLANK, 'ChCh '
+	elif match(line, 'Hackathon Chair'):
+		status, mode = BLANK, 'HaCh '
 	elif match(line, 'Tutorials Co-chairs'):
 		status, mode = BLANK, 'TuCh '
+	elif matchs(line, ('Data Chair', 'Chief of Data')):
+		status, mode = BLANK, 'DaCh '
 	elif match(line, 'Satellite Events'):
 		status, mode = BLANK, 'SaCh '
 	elif match(line, 'Vision Papers'):
@@ -123,6 +131,8 @@ for i in range(0, len(lines)):
 		status, mode = BLANK, 'ScCo '
 	elif match(line, 'Steering committee'):
 		status, mode = BLANK, 'StCo '
+	elif match(line, 'Challenge Committee'):
+		status, mode = BLANK, 'ChCo '
 	elif matchs(line, ('Publicity-chair - Social media-chair', 'Social Chair')):
 		status, mode = BLANK, 'SMCh '
 	elif matchs(line, ('ORGANIZATION COMMITTEE', 'organizing committee', 'Organizers', 'Organisation Committee', 'Organizing & Steering')):
@@ -149,6 +159,8 @@ for i in range(0, len(lines)):
 			status = status.replace('Co', 'Ch')
 		elif match(line, '(Finance Chair)'):
 			status = 'FiCh '
+		elif match(line, '(Challenge Chair)'):
+			status = 'ChCh '
 		elif matchs(line, ('Publicity Chair, ', ' - Publicity Chair')):
 			status = 'PbCh '
 		elif match(line, '(Workshop Selection Chair)'):

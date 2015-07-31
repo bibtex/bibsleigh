@@ -1,0 +1,100 @@
+#DONE
+     http://msr.uwaterloo.ca/msr2008/index.html
+     General Chair
+     
+GeCh Ahmed E. Hassan
+     
+     Program Co-chairs
+     
+PrCh Michele Lanza
+     University of Lugano, Switzerland
+PrCh Michael W. Godfrey
+     University of Waterloo, Canada
+     
+     Challenge Chair
+     
+ChCh Sung Kim
+     Program Committee
+     
+PrCo Tsuneo Ajisaka
+     (Wakayama U., Japan)
+PrCo Giuliano Antoniol
+     (École Polytechnique de Montréal, Canada)
+PrCo Abraham Bernstein
+     (U. of Zurich, Switzerland)
+PrCo Prem Devanbu
+     (U. of California, USA)
+PrCo Stephan Diehl
+     (U. of Trier, Germany)
+PrCo Massimiliano di Penta
+     (U. of Sannio, Italy)
+PrCo Harald Gall
+     (U. of Zurich, Switzerland)
+PrCo Daniel German
+     (U. of Victoria, Canada)
+PrCo Tudor Girba
+     (U. of Bern, Switzerland)
+PrCo Yann-Gael Gueheneuc
+     (U. de Montreal, Canada)
+PrCo Ric Holt
+     (U. Waterloo, Canada)
+PrCo Katsuro Inoue
+     (Osaka U., Japan)
+PrCo Jonathan Maletic
+     (Kent State U., USA)
+PrCo Andrian Marcus
+     (Wayne State U., USA)
+PrCo Radu Marinescu
+     (TU Timisoara, Romania)
+PrCo Audris Mockus
+     (Avaya Labs, USA)
+PrCo Leon Moonen
+     (Delft U. of Tech., Netherlands)
+PrCo David Notkin
+     (U. of Washington, USA)
+PrCo Masao Ohira
+     (NAIST, Japan)
+PrCo Alex Orso
+     (Georgia Tech, USA)
+PrCo Dewayne Perry
+     (U. of Texas, USA)
+PrCo Martin Pinzger
+     (U. of Zurich, Switzerland)
+PrCo Gregorio Robles
+     (U. of Rey Juan Carlos, Spain)
+PrCo Jelber Sayyad Shirabad
+     (Ottawa U., Canada)
+PrCo Alexandru Telea
+     (Eindhoven TU, The Netherlands)
+PrCo Annie Ying
+     (IBM Research, USA)
+PrCo Jim Whitehead
+     (U. of California, USA)
+PrCo Andreas Zeller
+     (Saarland U., Germany)
+PrCo Thomas Zimmermann
+     (U. of Calgary, Canada)
+     
+     Local Arrangement Chair
+     
+LoCh Thomas Zimmermann
+     University of Calgary, Canada
+     Web Chair
+     
+WeCh Marco D'Ambros
+     University of Lugano, Switzerland
+     
+     Steering Committee
+     
+StCo Ahmed E. Hassan
+
+StCo Audris Mockus
+
+StCo Ric Holt
+     University of Waterloo, Canada
+StCo Katsuro Inoue
+
+StCo Stephan Diehl
+     University Trier
+StCo Harald Gall
+     University of Zurich

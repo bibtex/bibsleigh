@@ -1,0 +1,67 @@
+#DONE
+     http://2012.msrconf.org/organization.php
+     General Chair
+GeCh Michele Lanza	Michele Lanza
+     University of Lugano
+     Program Co-Chairs
+PrCh Massimiliano Di Penta	Massimiliano Di Penta
+     University of Sannio
+PrCh Tao Xie	Tao Xie
+     Challenge Chair
+ChCh Emad Shihab	Emad Shihab
+     Web Chair
+WeCh Alberto Bacchelli	Alberto Bacchelli
+     University of Lugano
+     Steering Committee
+StCo Ahmed E. Hassan
+StCo Audris Mockus
+StCo Ric Holt
+StCo Katsuro Inoue
+StCo Stephan Diehl
+StCo Massimiliano Di Penta
+StCo Harald Gall
+StCo Michele Lanza
+StCo Michael W. Godfrey
+StCo Jim Whitehead
+StCo Tao Xie
+StCo Thomas Zimmermann
+     
+     Program Committee Members
+PrCo Mithun Acharya	ABB Research, USA
+PrCo Bram Adams	École Polytechnique de Montréal, Canada
+PrCo Christian Bird	Microsoft Research, USA
+PrCo Gerardo Canfora	University of Sannio, Italy
+PrCo Marco D’Ambros	University of Lugano, Switzerland
+PrCo Daniela Damian	University of Victoria, Canada
+PrCo Prem Devanbu	University of California, Davis, USA
+PrCo Stephan Diehl	University Trier, Germany
+PrCo Harald Gall	University of Zurich, Switzerland
+PrCo Daniel German	University of Victoria, Canada
+PrCo Mike W. Godfrey	University of Waterloo, Canada
+PrCo J. González-Barahona	Universidad Rey Juan Carlos, Spain
+PrCo Ahmed E. Hassan	Queen’s University, Canada
+PrCo Israel Herraiz	Universidad Politécnica de Madrid, Spain
+PrCo Emily Hill	Montclair State University, USA
+PrCo Abram Hindle	University of Alberta, Canada
+PrCo Reid Holmes	University of Waterloo, Canada
+PrCo Katsuro Inoue	University of Osaka, Japan
+PrCo Huzefa Kagdi	Wichita State University, USA
+PrCo Miryung Kim	University of Texas at Austin, USA
+PrCo Sunghun Kim	Hong Kong University of Science and Technology, China
+PrCo David Lo	Singapore Management University, Singapore
+PrCo Andrian Marcus	Wayne State University, USA
+PrCo Tim Menzies	West Virginia University, USA
+PrCo Audris Mockus	Avaya Labs Research, USA
+PrCo Thomas Ostrand	AT&T Labs Research, USA
+PrCo Martin Pinzger	Delft Technical University, Netherlands
+PrCo Romain Robbes	University of Chile, Chile
+PrCo Martin Robillard	McGill University, Canada
+PrCo Peter Rotella	Cisco Systems, USA
+PrCo Chanchal K. Roy	University of Saskatchewan, Canada
+PrCo Lin Tan	University of Waterloo, Canada
+PrCo Suresh Thummalapenta	IBM Research, India
+PrCo Jim Whitehead	University of California, Santa Cruz, USA
+PrCo Andy Zaidman	Delft Technical University, Netherlands
+PrCo Andreas Zeller	Saarland University, Germany
+PrCo Dongmei Zhang	Microsoft Research, China
+PrCo Thomas Zimmermann	Microsoft Research, USA
