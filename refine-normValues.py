@@ -43,6 +43,9 @@ def checkon(fn, o):
 			# normalised pages
 			if k == 'pages':
 				o.json[k] = o.json[k].replace('–', '-').replace('--', '-')
+			# double spaces
+			if o.json[k].find('  ') > -1:
+				o.json[k] = o.json[k].replace('  ', ' ').strip()
 			# find numeric values, turn them into proper integers
 			if o.json[k].isdigit():
 				o.json[k] = int(o.json[k])
@@ -98,6 +101,9 @@ def checkon(fn, o):
 			if k in ('author', 'editor'):
 				nas = []
 				for a in o.json[k]:
+					# double spaces
+					if a.find('  ') > -1:
+						a = a.replace('  ', ' ').strip()
 					ws = a.split(' ')
 					if ws[-1].isdigit():
 						ws = ws[:-1]
