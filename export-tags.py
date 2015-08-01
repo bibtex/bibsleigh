@@ -126,16 +126,16 @@ if __name__ == "__main__":
 	print('Tag index:', C.blue('created'))
 	# untagged papers
 	f = open(outputdir+'/tag/untagged.html', 'w')
-	dl = '<dl class="toc">'
 	CX = 0
 	# bag of words
 	bow = {}
+	lst = []
 	for v in sleigh.venues:
 		for c in v.getConfs():
 			for p in c.papers:
 				if p in tagged:
 					continue
-				dl += '\n' + p.getItem()
+				lst.append(p)
 				CX += 1
 				for w in superbaretext(baretext(p.get('title'))).split(' '):
 					if w in trash:
@@ -149,7 +149,8 @@ if __name__ == "__main__":
 	for w in bow.keys():
 		if bow[w] > 40:
 			bag += '<span style="border:1px solid black;margin:5px">{}</span> ({}) '.format(w, bow[w])
-	dl += '</dl>'
+	lst = [x.getRestrictedItem(None) for x in sorted(lst, key=lambda z:-z.json['year'] if 'year' in z.json.keys() else 0)]
+	dl = '<dl class="toc">' + '\n'.join(lst) + '</dl>'
 	f.write(tagHTML.format(\
 		title='All untagged papers',
 		tag='untagged',

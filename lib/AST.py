@@ -655,7 +655,7 @@ class Paper(Unser):
 		return self.getItemWTags(self.getFancyTags(self.tags) if self.tags else '', False)
 	def getRestrictedItem(self, t):
 		if not self.tags:
-			return self.getItemWTags('', False)
+			return self.getItemWTags('', True)
 		else:
 			ts = self.tags[:]
 			if t in ts:
