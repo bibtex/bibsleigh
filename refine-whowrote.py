@@ -61,6 +61,20 @@ if __name__ == "__main__":
 							people[e]['edited'].append(c.getKey())
 					else:
 						report(C.yellow('Editor not found: ') + e, 0)
+			if 'roles' in c.json.keys():
+				for name, role in listify(c.json['roles']):
+					if name in people.keys():
+						if 'roles' in people[name].keys():
+							if [c.getKey(), role] not in people[name]['roles']:
+								# new information
+								people[name]['roles'].append([c.getKey(), role])
+						else:
+							# first role ever
+							people[name]['roles'] = [ [c.getKey(), role] ]
+					else:
+						# unknown person?
+						print('[{}] Unacquainted with {} ({} of {})'.format(C.red('PERS'), name, role, c.getKey()))
+
 	# now unfold
 	for p in people.keys():
 		if 'edited' in people[p].keys():

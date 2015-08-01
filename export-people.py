@@ -94,6 +94,12 @@ def dict2links(d):
 	# print(rs)
 	return '\n'.join(['<h3>{} {}</h3>'.format(r[0], r[1]) for r in rs])
 
+def linkto(n):
+	if n in name2file.keys():
+		return '<a href="{}">{}</a>'.format(name2file[n], shorten(n))
+	else:
+		return n
+
 def countAllPapers(ad, ed):
 	if ad == 0 and ed == 0:
 		return 'No papers'
@@ -195,7 +201,10 @@ if __name__ == "__main__":
 						a = '∅'
 						if a not in clist.keys():
 							clist[a] = 0
-							name2file['∅'] = name2file[persondef['name']]
+							if persondef['name'] in name2file.keys():
+								name2file['∅'] = name2file[persondef['name']]
+							else:
+								name2file['∅'] = persondef['name']
 						clist[a] += 1/2
 						continue
 					for a in coas:
@@ -207,10 +216,9 @@ if __name__ == "__main__":
 			if clist:
 				m = 300/max(clist.values())
 				adds = '<hr/><code>Collaborated with:</code><hr/>' \
-					 + '\n'.join(['<span style="font-size:{}%"><a href="{}">{}</a></span>'.format(\
+					 + '\n'.join(['<span style="font-size:{}%">{}</span>'.format(\
 					 		m*clist[a],
-					 		name2file[a],
-							shorten(a))\
+					 		linkto(a))\
 					 	for a in sorted(clist.keys(), key=lambda x:-clist[x])])
 				boxlinks += movein(adds)
 			# else:

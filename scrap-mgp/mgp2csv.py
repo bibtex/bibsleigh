@@ -31,10 +31,7 @@ if __name__ == "__main__":
 	id2kids = {}
 	id2advs = {}
 	rel = []
-	# for mgid in range(10):
-	for mgid in range(156460, 156470):
-		# if mgid != 156462:
-		# 	continue
+	for mgid in range(0, 1000):
 		cx += 1
 		# soup = bs4.BeautifulSoup(open('../mgp.example.html', 'r'))
 		soup = bs4.BeautifulSoup(safelyLoadURL('http://www.genealogy.ams.org/id.php?id={}'.format(mgid)))
@@ -100,4 +97,5 @@ if __name__ == "__main__":
 			if (adv[0], i) not in rel:
 				rel.append((adv[0], i))
 	f.close()
+	print('=========================================================================')
 	print('Imported {} mathematicians and {} relations among them.'.format(cx, len(rel)))
