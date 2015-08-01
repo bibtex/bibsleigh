@@ -78,7 +78,8 @@ if __name__ == "__main__":
 	tagged = []
 	for k in ts.keys():
 		f = open('{}/tag/{}.html'.format(outputdir, k), 'w')
-		lst = [x.getRestrictedItem(k) for x in ts[k]]
+		# papers are displayed in reverse chronological order
+		lst = [x.getRestrictedItem(k) for x in sorted(ts[k], key=lambda z:-z.json['year'] if 'year' in z.json.keys() else 0)]
 		# no comprehension possible for this case
 		for x in ts[k]:
 			if x not in tagged:
@@ -97,8 +98,7 @@ if __name__ == "__main__":
 		title = tagdef['namefull'] if 'namefull' in tagdef.keys() else tagdef['name']
 		subt = ('<br/><em>'+tagdef['namelong']+'</em>') if 'namelong' in tagdef.keys() else ''
 		links = '<strong>{}</strong>{}<hr/>'.format(title, subt) + '\n'.join(sorted(links))
-		# TODO: sort by venues!
-		dl = '<dl><dt>All venues</dt><dd><dl class="toc">' + '\n'.join(sorted(lst)) + '</dl></dd></dl>'
+		dl = '<dl class="toc">' + '\n'.join(lst) + '</dl>'
 		# hack to get from tags to papers
 		dl = dl.replace('href="', 'href="../')
 		f.write(tagHTML.format(\

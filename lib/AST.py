@@ -636,26 +636,31 @@ class Paper(Unser):
 				self.tags = [self.json['tag']]
 			del self.json['tag']
 		self.back = parent
-	def getItemWTags(self, tgz):
+	def getItemWTags(self, tgz, doicon):
 		p1,p2 = self.getPagesTuple()
 		bar = '<div class="pagevis" style="width:{}px"></div>'.format(p2-p1) if p1 and p2 else ''
-		return '<dt><a href="{0}.html">{0}</a>{4}</dt><dd>{1}{2}{3}.</dd>{5}'.format(\
+		if doicon and 'venue' in self.json.keys():
+			ven = '<img src="../stuff/{0}.png" alt="{0}"/>'.format(self.json['venue'])
+		else:
+			ven = ''
+		return '<dt>{5}<a href="{0}.html">{0}</a>{4}</dt><dd>{1}{2}{3}.</dd>{6}'.format(\
 			self.getKey(),\
 			self.get('title').replace('&', '&amp;'),\
 			self.getAbbrAuthors(),\
 			self.getPagesString(),
 			tgz,
+			ven,
 			' '+bar)
 	def getItem(self):
-		return self.getItemWTags(self.getFancyTags(self.tags) if self.tags else '')
+		return self.getItemWTags(self.getFancyTags(self.tags) if self.tags else '', False)
 	def getRestrictedItem(self, t):
 		if not self.tags:
-			return self.getItemWTags('')
+			return self.getItemWTags('', False)
 		else:
 			ts = self.tags[:]
 			if t in ts:
 				ts.remove(t)
-			return self.getItemWTags(self.getFancyTags(ts))
+			return self.getItemWTags(self.getFancyTags(ts), True)
 	def getFancyTags(self, ts):
 		# TODO: do the same backlinks for bundles
 		return ' ' + ' '.join(['<span class="tag"><a href="tag/{}.html" title="{}">&nbsp;T&nbsp;</a></span>'.format(escape(t), t) for t in ts])
