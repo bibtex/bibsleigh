@@ -176,6 +176,8 @@ class Unser(object):
 					links[2].append('<a href="{}">CSDL</a>'.format(e))
 				elif e.find('journal.ub.tu-berlin.de/eceasst') > 0:
 					links[2].append('<a href="{}">EC-EASST</a>'.format(e))
+				elif e.find('ceur-ws.org') > 0:
+					links[2].append('<a href="{}">CEUR</a>'.format(e))
 				elif e.find('dx.doi.org') > 0:
 					pass
 				else:

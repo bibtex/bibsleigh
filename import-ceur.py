@@ -60,9 +60,9 @@ if __name__ == "__main__":
 	mainEntry = {'type': 'proceedings', 'series': 'CEUR Workshop Proceedings',\
 		'publisher': 'CEUR-WS.org', 'year': volYear, 'title': volTitles[-1],\
 		'editor': volEds, 'volume': volNr.split('-')[-1], 'urn': volUrn,\
-		'url': urlstart, 'venue': volVenue}
+		'ee': urlstart, 'venue': volVenue}
 	if volLnk:
-		mainEntry['url'] = [volLnk, urlstart]
+		mainEntry['url'] = volLnk
 	# print(jsonify(mainEntry), '-->', outputdir+'.json')
 	f = open(outputdir+'.json', 'w')
 	f.write(jsonify(mainEntry))
