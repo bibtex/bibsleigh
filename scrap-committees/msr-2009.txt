@@ -80,11 +80,11 @@ PrCo Thomas Zimmermann
 PrCo Poster Chair
      
 PrCo Miryung Kim
-PrCo Univerity of Texas (Austin), USA
-PrCo Local Arrangement Chair
      
-PrCo Dirk Beyer
-PrCo Simon Fraser University, Canada
+     Local Arrangement Chair
+     
+LoCh Dirk Beyer
+     
      Web Chair
      
 WeCh Abram Hindle

@@ -114,15 +114,15 @@ CBSE;2004;Judith;Stafford;;Program Committee
 CBSE;2004;Dave;Wile;;Program Committee
 CBSE;2004;Kurt;Wallnau;;Program Committee
 CBSE;2005;George;Heineman;;Program Chair
-CBSE;2005;Ivica;Crnkovic Mälardalen University;;Organising Committee
-CBSE;2005;Heinz;Schmidt Monash University;;Organising Committee
-CBSE;2005;Judith;Stafford Tufts University;;Organising Committee
-CBSE;2005;Clemens;Szyperski Microsoft Research;;Organising Committee
+CBSE;2005;Ivica;Crnkovic;;Organising Committee
+CBSE;2005;Heinz;Schmidt;;Organising Committee
+CBSE;2005;Judith;Stafford;;Organising Committee
+CBSE;2005;Clemens;Szyperski;;Organising Committee
 CBSE;2005;Kurt;Wallnau;;Organising Committee
-CBSE;2005;Ivica;Crnkovic Mälardalen University;;Steering Committee
-CBSE;2005;Heinz;Schmidt Monash University;;Steering Committee
-CBSE;2005;Judith;Stafford Tufts University;;Steering Committee
-CBSE;2005;Clemens;Szyperski Microsoft Research;;Steering Committee
+CBSE;2005;Ivica;Crnkovic;;Steering Committee
+CBSE;2005;Heinz;Schmidt;;Steering Committee
+CBSE;2005;Judith;Stafford;;Steering Committee
+CBSE;2005;Clemens;Szyperski;;Steering Committee
 CBSE;2005;Kurt;Wallnau;;Steering Committee
 CBSE;2005;Rob;Armstrong;;Program Committee
 CBSE;2005;Uwe;Aßmann;;Program Committee
@@ -1342,7 +1342,7 @@ ICMT;2015;Antonio;Vallecillo;;Steering Committee
 ICMT;2015;Dániel;Varró;;Steering Committee
 ICMT;2015;Eelco;Visser;;Steering Committee
 ICMT;2015;Achim;Brucker;;Program Committee
-ICMT;2015;Rubby;Casallas. University of los Andes;;Program Committee
+ICMT;2015;Rubby;Casallas;;Program Committee
 ICMT;2015;Antonio;Cicchetti;;Program Committee
 ICMT;2015;Tony;Clark;;Program Committee
 ICMT;2015;Benoit;Combemale;;Program Committee
@@ -1754,10 +1754,7 @@ MSR;2009;Andy;Zaidman;;Program Committee
 MSR;2009;Thomas;Zimmermann;;Program Committee
 MSR;2009;Poster;Chair;;Program Committee
 MSR;2009;Miryung;Kim;;Program Committee
-MSR;2009;Univerity;of Texas;;Program Committee
-MSR;2009;Local;Arrangement Chair;;Program Committee
-MSR;2009;Dirk;Beyer;;Program Committee
-MSR;2009;Simon;Fraser University;;Program Committee
+MSR;2009;Dirk;Beyer;;Local Chair
 MSR;2009;Abram;Hindle;;Web Chair
 MSR;2009;Ahmed;E. Hassan;;Steering Committee
 MSR;2009;Audris;Mockus;;Steering Committee

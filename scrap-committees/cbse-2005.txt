@@ -10,15 +10,15 @@ PrCh George Heineman, WPI, USA
      
      Committee
      
-OrCo Ivica Crnkovic Mälardalen University, Sweden     
-OrCo Heinz Schmidt Monash University, Australia
-OrCo Judith Stafford Tufts University, USA
-OrCo Clemens Szyperski Microsoft Research, USA
+OrCo Ivica Crnkovic, Mälardalen University, Sweden     
+OrCo Heinz Schmidt, Monash University, Australia
+OrCo Judith Stafford, Tufts University, USA
+OrCo Clemens Szyperski, Microsoft Research, USA
 OrCo Kurt Wallnau, Software Engineering Institute, USA
-StCo Ivica Crnkovic Mälardalen University, Sweden     
-StCo Heinz Schmidt Monash University, Australia
-StCo Judith Stafford Tufts University, USA
-StCo Clemens Szyperski Microsoft Research, USA
+StCo Ivica Crnkovic, Mälardalen University, Sweden     
+StCo Heinz Schmidt, Monash University, Australia
+StCo Judith Stafford, Tufts University, USA
+StCo Clemens Szyperski, Microsoft Research, USA
 StCo Kurt Wallnau, Software Engineering Institute, USA
      
      Program Committee

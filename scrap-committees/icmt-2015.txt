@@ -27,7 +27,7 @@ StCo Eelco Visser, Delft University of Technology (The Netherlands)
      Programme Committee
      
 PrCo Achim Brucker, SAP AG (Germany)
-PrCo Rubby Casallas. University of los Andes (Colombia)
+PrCo Rubby Casallas, University of los Andes (Colombia)
 PrCo Antonio Cicchetti, Mälardalen University (Sweden)
 PrCo Tony Clark, Middlesex University (UK)
 PrCo Benoit Combemale, IRISA, Université de Rennes 1 (France)
