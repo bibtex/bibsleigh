@@ -1,0 +1,121 @@
+@URL: "http://drops.dagstuhl.de/opus/volltexte/2011/3144/"
+@TITLE: "Proceedings of the Dagstuhl Seminar 11031 on Bidirectional Transformations"
+@ADDRESS: ["Dagstuhl", "", "Germany"]
+@EDITOR: ["Zhenjiang Hu", "Andy Schürr", "Perdita Stevens", "James Terwilliger"]
+@YEAR: 2011
+@MONTH: "jan"
+@VENUE: "BX"
+Languages for Bidirectional Transformations
+Nate Foster
+
+Complement-Based Bidirectionalization
+Janis Voigtländer
+
+Trace-based Bidirectionalization
+Zhenjiang Hu
+
+Principles of Reversible Programming Languages
+Robert Glück
+
+Bidirectional Transformations in Database Research and Practice
+James Terwilliger
+
+The transformational approach to data-intensive system engineering and evolution
+Jean-Luc Hainaut
+
+Triple Graph Grammars in a Nutshell
+Andy Schürr
+
+Analysis of Model Transformations based on TGGs
+Frank Hermann
+
+Incremental Model Synchronization
+Holger Giese
+
+Model Synchronization: Theory and Practice
+Krzysztof Czarnecki
+
+Update propagation via tiles
+Zinovy Diskin
+
+Inconsistency detection and resolution in heterogenous model-based specifications using Maude
+Artur Boronat
+
+On the role of Triple Graph Grammars Concerning Requirements for Enterprise Modeling
+Christoph Brandt
+
+Co-evolving schemas and programs using coupled transformations
+Anthony Cleve
+
+Type-safe Evolution of Spreadsheets
+Jacome Cunha
+
+From State- to Delta-Based Bidirectional Model Transformations: Unweaving Alignment and Update Propagation
+Zinovy Diskin
+
+Propagation of Constraints along Model Transformations
+Hartmut Ehrig
+
+HOT Topics in Bidirectional Programming
+Jeremy Gibbons
+
+Lenses are Coalgebras for the Costate Comonad
+Jeremy Gibbons
+
+Lenses, Coalgebraically
+Jeremy Gibbons
+
+Direction Neutral Language Transformation with Metamodels
+Martin Gogolla
+
+Unified (Bidirectional) Transformation Language
+Joel Greenyer
+
+Model Integration and Synchronization
+Frank Hermann
+
+Bidirectional Graph Transformations based on Structural Recursion
+Soichiro Hidaka
+
+Incremental Bidirectional Model Synchronization
+Stephan Hildebrandt
+
+Symmetric lenses
+Martin Hofmann
+
+Triple Graph Grammars: Concepts, Extensions, Implementations, and Application Scenarios
+Ekkart Kindler
+
+Some challenges of integrating bidirectional transformation technologies
+Ekkart Kindler
+
+Towards Systematic Development of Bidirectional Transformations
+Jochen M. Kuester
+
+Right Inverses in Bidirectionalization
+Kazutaka Matsuda
+
+Bidirectional transformations and inter-modelling
+Richard F. Paige
+
+Bidirectional and change propagating transformations in MDE
+Alfonso Pierantonio
+
+Reversible Higher Order Pi Calculus
+Alan Schmitt
+
+Efficiency of Bidirectional Transformations
+Janis Voigtländer
+
+Change-based incremental updates
+Meng Wang
+
+Bx “killer applications” in health care
+Jens-Holger Weber-Jahnke
+
+Fix Generation
+Yingfei Xiong
+
+A reversible programming language
+Tetsuo Yokoyama
+

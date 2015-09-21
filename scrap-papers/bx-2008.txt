@@ -1,0 +1,157 @@
+@URL: "http://web.archive.org/web/20090723194819/http://grace.gsdlab.org/index.php?title=Schedule"
+@TITLE: "Proceedings of the GRACE International Meeting on Bidirectional Transformations"
+@ADDRESS: ["Shonan", "", "Japan"]
+@EDITOR: ["Krzysztof Czarnecki", "J. Nathan Foster", "Zhenjiang Hu", "Ralf Lämmel", "Andy Schürr", "James F. Terwilliger"]
+@YEAR: 2008
+@MONTH: "dec"
+@VENUE: "BX"
+Languages Short Talk 1
+Robert Glück
+
+Languages Short Talk 2
+Holger Bock Axelsen
+
+Languages Short Talk 3
+Kazutaka Matsuda
+
+Languages Short Talk 4
+Keisuke Nakano
+
+Languages Short Talk 5
+Meng Wang
+
+Languages Short Talk 6
+Zhenjiang Hu
+
+Languages Short Talk 7
+Nate Foster
+
+Languages and Applications Short Talk 1
+Shin-Cheng Mu
+
+Languages and Applications Short Talk 2
+Janis Voigtländer
+
+Languages and Applications Short Talk 3
+Ralf Lämmel
+
+Languages and Applications Short Talk 4
+Davit Lutterkort
+
+Languages and Applications Short Talk 5
+Kathleen Fisher
+
+Languages and Applications Short Talk 6
+Jacome Cunha
+
+Languages and Applications Short Talk 7
+Hiroyuki Kato
+
+Models Short Talk 1
+Andy Schürr
+
+Models Short Talk 2
+Bernd Fischer
+
+Models Short Talk 3
+Alfonso Pierantonio
+
+Models Short Talk 4
+Ali Razavi
+
+Models Short Talk 5
+Kryzsztof Czarnecki
+
+Models Short Talk 6
+Zinovy Diskin
+
+Models Short Talk 7
+Soichiro Hidaka
+
+Models and Transformations Short Talk 1
+Jean Bezivin
+
+Models and Transformations Short Talk 2
+Davide Di Ruscio
+
+Models and Transformations Short Talk 3
+Antonio Vallecillo
+
+Models and Transformations Short Talk 4
+Andrzej Wasowski
+
+Models and Transformations Short Talk 5
+James Terwilliger
+
+Models and Transformations Short Talk 6
+Hui Song
+
+Models and Transformations Short Talk 7
+Yingfei Xiong
+
+Triple Graph Grammar (tutorial)
+Andy Schürr
+
+Free Theorems and Bidirectional Transformations
+Janis Voigtländer
+
+Quotient Lenses
+Nate Foster
+
+Graphical User Interfaces as Updatable Views
+James Terwilliger
+
+Realizing Correspondences in Multi-viewpoint Specifications
+Antonio Vallecillo
+
+Algebraic Semantics for Model Translation
+Zinovy Diskin
+
+Reversible Programming Languages (tutorial)
+Robert Glück
+
+Reversible Flowchart Languages
+Holger Axelsen
+
+Format Inference
+Kathleen Fisher
+
+Inversion in Parallelization
+Zhenjiang Hu
+
+A Suite for Coupled Grammar Transformations
+Ralf Lämmel
+
+Bidirectionalization of Programs with Duplication through Complement Function Derivation
+Kazutaka Matsuda
+
+Translucent Abstraction: Safe Views Through Bidirectional Transformations
+Meng Wang
+
+Introduction to UnQL+
+Hiroyuki Kato
+
+Bidirectional Graph Transformation using UnCAL
+Soichiro Hidaka
+
+Inverse Computation for UnCAL
+Shin-Cheng Mu
+
+Bidirectional Transformations for Framework-Specific Modeling Languages
+Krzyzstof Czarnecki
+
+Operation-Based Synchronization with Intra-Relation Support
+Yingfei Xiong
+
+Architecture-Based Runtime System Management
+Hui Song
+
+Automating Co-Evolution in Model-Driven Engineering
+Davide Di Ruscio
+
+Change Propagation in Model Transformation
+Alfonso Pierantonio
+
+Typechecking Model Transformation
+Keisuke Nakano
+

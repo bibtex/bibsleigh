@@ -9,6 +9,9 @@ def js(s):
 	else:
 		return '[' + ', '.join(['"{}"'.format(b) for b in s]) + ']'
 
+def deentitify(z):
+	return z.replace('ü', 'ue').replace('ä', 'ae')
+
 f = open(sys.argv[1])
 keystart = sys.argv[1].split('.')[0].upper()
 lines = f.readlines()
@@ -16,6 +19,7 @@ f.close()
 i = 0
 cx = 0
 d = {}
+used = []
 if not os.path.exists(keystart):
 	os.makedirs(keystart)
 	print('[ √ ] Directory', keystart, 'created.')
@@ -48,11 +52,20 @@ while i < len(lines):
 		url = ''
 	assert lines[i+2].strip() == ''
 	cx += 1
-	key = keystart + '-' + auths[0].split(' ')[-1]
+	key = keystart + '-' + deentitify(auths[0].split(' ')[-1])
 	if len(auths) > 1:
 		for a in auths[1:]:
 			key += a.split(' ')[-1][0]
+	if key in used:
+		dx = 1
+		while '{}{}'.format(key, dx) in used:
+			dx += 1
+		key = '{}{}'.format(key, dx)
+		# key += 'a'
+		# while key in used:
+		# 	key = key[:-1] + chr(ord(key[-1])+1)
 	print(key)
+	used.append(key)
 	f = open(keystart + '/'+key+'.json', 'w')
 	opts = ''
 	for opt in d.keys():
@@ -61,7 +74,7 @@ while i < len(lines):
 	if url:
 		'\n\t"{l}": {v},'.format(l="url", v=url)
 	f.write('''{{{optionals}
-	"booktitle": "{bt}",
+	"booktitle": {bt},
 	"type": "inproceedings",
 	"title": "{title}",
 	"author": {authors},
