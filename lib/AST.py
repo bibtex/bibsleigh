@@ -234,7 +234,8 @@ class Unser(object):
 		elif isinstance(self.json['pages'], int):
 			p1 = p2 = self.json['pages']
 		else:
-			ps = self.json['pages'].split('-')
+
+			ps = self.json['pages'].split(':')[-1].split('-')
 			if ps[0]:
 				if ':' in ps[0]:
 					p1 = int(ps[0].split(':')[-1].strip())
