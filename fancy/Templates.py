@@ -76,8 +76,8 @@ leftLinks('appp', '')+'''
 <p>	<strong>{cxVen}</strong> venues,
 	<strong>{cxVol}</strong> volumes,
 	<strong>{cxPap}</strong> papers,
-	<strong>300</strong> tags,
-	<strong>56326</strong> markings.</p></div>
+	<strong>316</strong> tags,
+	<strong>71206</strong> markings.</p></div>
 {items}
 '''+footer
 
@@ -93,6 +93,8 @@ leftLinks('pppp', '')+'''
 Most follow the original designs by the conference founders/organisers, others are improvised to create a matching feel.
 No legal or artistic rights claimed.</p>
 {}
+<br clear="both"/>
+<p>Next conferences to import: {}…</p>
 '''+footer
 
 confHTML = header+'''

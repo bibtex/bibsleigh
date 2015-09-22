@@ -234,13 +234,15 @@ class Unser(object):
 		elif isinstance(self.json['pages'], int):
 			p1 = p2 = self.json['pages']
 		else:
-
 			ps = self.json['pages'].split(':')[-1].split('-')
 			if ps[0]:
 				if ':' in ps[0]:
 					p1 = int(ps[0].split(':')[-1].strip())
-				else:
+				elif ps[0].isdigit():
 					p1 = int(ps[0])
+				else:
+					p1 = None
+					print('STRANGE pages in', self.getKey(), ':', self.json['pages'])
 			else:
 				p1 = None
 			if ps[-1]:
@@ -348,9 +350,15 @@ class Venue(Unser):
 	def getPage(self):
 		if 'eventurl' in self.json.keys():
 			if 'twitter' in self.json.keys():
-				ev = '<h3>Event series page: <a href="{uri}">{uri}</a> (<a href="https://twitter.com/{twi}">@{twi}</a>)</h3>'.format(uri=self.json['eventurl'], twi=self.json['twitter'])
+				ev2 = ' (<a href="https://twitter.com/{twi}">@{twi}</a>)</h3>'.format(twi=self.json['twitter'])
 			else:
-				ev = '<h3>Event series page: <a href="{uri}">{uri}</a></h3>'.format(uri=self.json['eventurl'])
+				ev2 = ''
+			if isinstance(self.json['eventurl'], list):
+				urls = ['<a href="{uri}">{uri}</a>'.format(uri=u) for u in self.json['eventurl']]
+				ev = '<h3>Event series pages: ' + ', '.join(urls) + ev2
+			else:
+				urls = '<a href="{uri}">{uri}</a>'.format(uri=self.json['eventurl'])
+				ev = '<h3>Event series page: ' + urls + ev2
 		else:
 			ev = ''
 		ads = [c.json['address'][-1] for c in self.getConfs() if 'address' in c.json.keys()]
@@ -552,7 +560,13 @@ class Conf(Unser):
 			abbr=shortdesc,
 			img=venue.lower())
 	def getItem(self):
-		return '<dd><a href="{}.html">{}</a> ({})</dd>'.format(self.get('name'), self.get('title'), self.getEventTitle())
+		icon = '<img src="stuff/{}.png" alt="{}"/>'.format(self.json['venue'].lower(), self.json['venue'])\
+			if 'venue' in self.json.keys() else ''
+		return '<dd>{0}<a href="{1}.html">{2}</a> ({3})</dd>'.format(\
+			icon,\
+			self.get('name'),\
+			self.get('title'),\
+			self.getEventTitle())
 	def getPage(self):
 		if 'eventurl' in self.json.keys():
 			if 'twitter' in self.json.keys():
