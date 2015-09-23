@@ -90,7 +90,8 @@ if __name__ == "__main__":
 	for b in glob.glob(ienputdir + '/bundles/*.json'):
 		purename = b.split('/')[-1][:-5]
 		bun = json.load(open(b, 'r'))
-		uberlist = '<h2>{1} papers</h2>{0}'.format(processSortedRel(bun['contents']), pcx)
+		prevcx = pcx
+		uberlist = '<h2>{1} papers</h2>{0}'.format(processSortedRel(bun['contents']), pcx-prevcx)
 		f = open(outputdir + '/bundle/' + purename + '.html', 'w')
 		f.write(bunHTML.format(\
 			title=purename+' bundle',
@@ -98,7 +99,7 @@ if __name__ == "__main__":
 			ebundle=escape(purename),
 			dl=uberlist.replace('href="', 'href="../').replace('../mailto', 'mailto')))
 		f.close()
-		bundles[purename] = pcx
+		bundles[purename] = pcx-prevcx
 	print('Bundle pages:', C.yellow('{}'.format(len(bundles))), C.blue('generated'))
 	# now for the index
 	f = open(outputdir+'/bundle/index.html', 'w')

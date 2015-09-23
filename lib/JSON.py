@@ -2,6 +2,7 @@
 
 import json
 from fancy.ANSI import C
+from lib.NLP import strictstrip
 
 def jsonify(s):
 	if isinstance(s, int):
@@ -34,3 +35,15 @@ def parseJSON(fn):
 	except ValueError:
 		print(C.red('JSON parse error'), 'on', fn)
 		return {}
+
+def json2lines(j):
+	res = []
+	for line in j:
+		line = strictstrip(line)
+		if line in ('', '{', '}'):
+			continue
+		if line.startswith('"'):
+			res.append(line)
+		else:
+			res[-1] += line
+	return res

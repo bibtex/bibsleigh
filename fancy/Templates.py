@@ -76,8 +76,8 @@ leftLinks('appp', '')+'''
 <p>	<strong>{cxVen}</strong> venues,
 	<strong>{cxVol}</strong> volumes,
 	<strong>{cxPap}</strong> papers,
-	<strong>316</strong> tags,
-	<strong>71206</strong> markings.</p></div>
+	<strong>347</strong> tags,
+	<strong>74865</strong> markings.</p></div>
 {items}
 '''+footer
 
@@ -115,7 +115,7 @@ taglistHTML = header.replace('stuff/', '../stuff/')+'''
 '''+movein(leftLinks('papp', ''))+'''
 </div>
 <div class="main">
-<h2><span class="ttl">Tag index</span></h2>
+<h2><span class="ttl">Tag index<sup><a href="untagged.html">†</a></sup></span></h2>
 <h3>{listname}:</h3>
 {ul}
 '''+footer
@@ -128,7 +128,7 @@ tagHTML = header.replace('stuff/', '../stuff/')+'''
 <div class="tbox">
 {boxlinks}
 </div>
-<h2><span class="ttl">Tag</span> {tag}</h2>{above}
+<h2><span class="ttl">Tag</span> #{tag}</h2>{above}
 <h3>{listname}:</h3>
 {dl}
 '''+footer

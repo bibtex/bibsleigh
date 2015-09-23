@@ -52,13 +52,16 @@ def checkon(fn, o):
 	for t in tags:
 		# print('Check',t,'vs',mes)
 		if 'name' not in t.keys():
-			print(C.red('ERROR:'), 'no name for tag from tile', t['FILE'])
+			print(C.red('ERROR:'), 'no name for tag from file', t['FILE'])
 			continue
 		if all([not k.startswith('match') for k in t.keys()]):
 			print(C.red('ERROR:'), 'no match rules for tag', t['name'])
 			continue
 		for k in t.keys():
-			if k.startswith('match'):
+			if k == 'matchentry':
+				if o.getKey() in t[k]:
+					ts += [t['name']]
+			elif k.startswith('match'):
 				ts += [t['name'] for s in listify(t[k]) if matchModes[k](s, mcs, mes, mew, mis, miw)]
 	# second pass: check reliefs
 	for t in tags:

@@ -6,7 +6,7 @@
 import sys, os, os.path
 from fancy.ANSI import C
 from lib.AST import Sleigh
-from lib.JSON import parseJSON
+from lib.JSON import parseJSON, json2lines
 from lib.LP import listify
 from lib.NLP import strictstrip
 
@@ -22,8 +22,8 @@ def checkon(fn, o):
 	f = open(fn, 'r')
 	lines = f.readlines()[1:-1]
 	f.close()
-	flines = [strictstrip(s) for s in lines]
-	plines = sorted([strictstrip(s) for s in o.getJSON().split('\n')[1:-1]])
+	flines = json2lines(lines)
+	plines = sorted(json2lines(o.getJSON().split('\n')))
 	# "url" from DBLP are useless
 	if 'url' in o.json.keys():
 		o.json['url'] = [link for link in listify(o.json['url'])\
@@ -55,7 +55,7 @@ def checkon(fn, o):
 	if 'eventuri' in o.json.keys():
 		o.json['eventurl'] = o.json['eventuri']
 		del o.json['eventuri']
-	nlines = sorted([strictstrip(s) for s in o.getJSON().split('\n')[1:-1]])
+	nlines = sorted(json2lines(o.getJSON().split('\n')))
 	if flines != plines:
 		return 1
 	elif plines != nlines:

@@ -234,7 +234,7 @@ class Unser(object):
 		elif isinstance(self.json['pages'], int):
 			p1 = p2 = self.json['pages']
 		else:
-			ps = self.json['pages'].split(':')[-1].split('-')
+			ps = self.json['pages'].split(':')[-1].split(',')[0].split('-')
 			if ps[0]:
 				if ':' in ps[0]:
 					p1 = int(ps[0].split(':')[-1].strip())
@@ -655,7 +655,9 @@ class Paper(Unser):
 		p1,p2 = self.getPagesTuple()
 		bar = '<div class="pagevis" style="width:{}px"></div>'.format(p2-p1) if p1 and p2 else ''
 		if doicon and 'venue' in self.json.keys():
-			ven = '<img src="../stuff/{0}.png" alt="{0}"/>'.format(self.json['venue'])
+			ven = '<img src="../stuff/{}.png" alt="{}"/>'.format(\
+				self.json['venue'].lower(),\
+				self.json['venue'])
 		else:
 			ven = ''
 		return '<dt>{5}<a href="{0}.html">{0}</a>{4}</dt><dd>{1}{2}{3}.</dd>{6}'.format(\
@@ -678,7 +680,8 @@ class Paper(Unser):
 			return self.getItemWTags(self.getFancyTags(ts), True)
 	def getFancyTags(self, ts):
 		# TODO: do the same backlinks for bundles
-		return ' ' + ' '.join(['<span class="tag"><a href="tag/{}.html" title="{}">&nbsp;T&nbsp;</a></span>'.format(escape(t), t) for t in ts])
+		return ' ' + ' '.join(['<span class="tag"><a href="tag/{0}.html" title="{1}">#{1}</a></span>'.format(\
+			escape(t), t) for t in ts])
 	def getAbbrAuthors(self):
 		# <abbr title="Rainer Koschke">RK</abbr>
 		if 'author' not in self.json.keys():
@@ -689,7 +692,7 @@ class Paper(Unser):
 	def getPage(self):
 		if self.getTags():
 			cnt = '<h3>Tags:</h3><ul class="tri">'
-			cnt += '\n'.join(['<li><a href="tag/{}.html">{}</a></li>'.format(escape(t), t) for t in self.tags])
+			cnt += '\n'.join(['<li class="tag"><a href="tag/{}.html">#{}</a></li>'.format(escape(t), t) for t in self.tags])
 			cnt += '</ul><hr/>'
 		else:
 			cnt = ''

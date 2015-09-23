@@ -6,7 +6,7 @@
 import sys, os.path, glob
 from fancy.ANSI import C
 from lib.AST import Sleigh
-from lib.JSON import parseJSON, jsonify
+from lib.JSON import parseJSON, jsonify, json2lines
 from lib.NLP import strictstrip
 
 ienputdir = '../json'
@@ -35,14 +35,16 @@ def checkon(fn, o):
 	f = open(fn, 'r')
 	lines = f.readlines()[1:-1]
 	f.close()
-	flines = [strictstrip(s) for s in lines]
-	plines = sorted([strictstrip(s) for s in o.getJSON().split('\n')[1:-1]])
+	flines = json2lines(lines)
+	plines = sorted(json2lines(o.getJSON().split('\n')))
 	if flines != plines:
 		f1 = [line for line in flines if line not in plines]
 		f2 = [line for line in plines if line not in flines]
 		if f1 or f2:
 			if verbose:
 				print('∆:', f1, 'vs', f2)
+			print('F-lines:', '\n'.join(flines))
+			print('P-lines:', '\n'.join(plines))
 			return 1
 		else:
 			f = open(fn, 'w')

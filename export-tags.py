@@ -115,7 +115,7 @@ if __name__ == "__main__":
 	f = open(outputdir+'/tag/index.html', 'w')
 	keyz = [k for k in ts.keys() if len(ts[k]) > 2]
 	keyz = sorted(keyz, key=lambda t: len(ts[t]), reverse=True)
-	lst = ['<li><a href="{}.html">{}</a> ({})</li>'.format(escape(t), t, len(ts[t])) for t in keyz]
+	lst = ['<li>#<a href="{}.html">{}</a> ({})</li>'.format(escape(t), t, len(ts[t])) for t in keyz]
 	ul = '<ul class="tri mul">' + '\n'.join(lst) + '</ul>'
 	CX = sum([len(ts[t]) for t in ts.keys()])
 	f.write(taglistHTML.format(\

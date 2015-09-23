@@ -7,7 +7,7 @@ import sys, os.path
 from fancy.ANSI import C
 from fancy.KnownNames import badvariants, contractions
 from lib.AST import Sleigh
-from lib.JSON import parseJSON
+from lib.JSON import parseJSON, json2lines
 from lib.NLP import strictstrip
 
 ienputdir = '../json'
@@ -23,8 +23,8 @@ def checkon(fn, o):
 	f = open(fn, 'r')
 	lines = f.readlines()[1:-1]
 	f.close()
-	flines = [strictstrip(s) for s in lines]
-	plines = sorted([strictstrip(s) for s in o.getJSON().split('\n')[1:-1]])
+	flines = json2lines(lines)
+	plines = sorted(json2lines(o.getJSON().split('\n')))
 	# bad variants
 	for bad, good in badvariants:
 		for key in wheretolook:
@@ -56,7 +56,7 @@ def checkon(fn, o):
 		if key in o.json.keys() and key+'short' in o.json.keys() \
 		and o.get(key) == o.get(key+'short'):
 			del o.json[key+'short']
-	nlines = sorted([strictstrip(s) for s in o.getJSON().split('\n')[1:-1]])
+	nlines = sorted(json2lines(o.getJSON().split('\n')))
 	if flines != plines:
 		return 1
 	elif plines != nlines:
