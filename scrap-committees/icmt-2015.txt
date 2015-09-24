@@ -27,7 +27,7 @@ StCo Eelco Visser, Delft University of Technology (The Netherlands)
      Programme Committee
      
 PrCo Achim Brucker, SAP AG (Germany)
-PrCo Rubby Casallas, University of los Andes (Colombia)
+PrCo Rubby Casallas
 PrCo Antonio Cicchetti, Mälardalen University (Sweden)
 PrCo Tony Clark, Middlesex University (UK)
 PrCo Benoit Combemale, IRISA, Université de Rennes 1 (France)
@@ -35,7 +35,7 @@ PrCo Krzysztof Czarnecki, University of Waterloo (Canada)
 PrCo Alexander Egyed, Johannes Kepler University (Austria)
 PrCo Gregor Engels, University of Paderborn (Germany)
 PrCo Claudia Ermel, Technical University of Berlin (Germany)
-PrCo Jesús García-Molina, Universidad de Murcia (Spain)
+PrCo Jesús García Molina, Universidad de Murcia (Spain)
 PrCo Holger Giese, Hasso Plattner Institute at the University of Potsdam (Germany)
 PrCo Esther Guerra, Universidad Autónoma de Madrid (Spain)
 PrCo Reiko Heckel,  University of Leicester (UK)

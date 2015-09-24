@@ -22,7 +22,7 @@ PrCo Bran Selic
 PrCo Charles Consel
 PrCo Daniel Varro
 PrCo Davide Di Ruscio
-PrCo Dimitrios Kolovos
+PrCo Dimitris Kolovos
 PrCo Eelco Visser
 PrCo Esperanza Marcos
 PrCo Francesco Parisi-Presicce
@@ -35,7 +35,7 @@ PrCo Howard Ho
 PrCo Ivan Kurtev
 PrCo Ivan Porres
 PrCo Jens Weber
-PrCo Jesús García-Molina
+PrCo Jesús García Molina
 PrCo Jim Steel
 PrCo Jon Whittle
 PrCo Jordi Cabot

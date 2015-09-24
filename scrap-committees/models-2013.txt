@@ -1,0 +1,182 @@
+#DONE
+     Organizing Committee
+     General Chairs
+GeCh Jeff Gray
+GeCh Antonio Vallecillo
+     Local Chair
+LoCh Peter Clarke
+     Technical Program Chairs
+PrCh Ana Moreira
+PrCh Bernhard Schätz
+     
+     Industry Liaison
+InCh Magnus Christerson
+     Workshop Chairs
+WoCh Fabio Costa
+WoCh Eugene Syriani
+     Tutorial Chairs
+TuCh Jordi Cabot
+     INRIA - École des Mines de Nantes
+     France
+TuCh Jörg Kienzle
+     
+     Panel Chairs
+PaCh Silvia Abrahao
+PaCh Isidro Ramos
+     
+     Demonstration Chairs
+TTCh Yan Liu
+TTCh Steffen Zschaler
+     
+     Poster Chairs
+PoCh Benoit Baudry
+PoCh Sudipto Ghosh
+     
+     ACM Student Research Competition Chairs
+SRCh Ethan Jackson
+SRCh Davide Di Ruscio
+     
+     Publicity Chairs
+PbCh James Hill
+PbCh Martina Seidl
+     Social Media Chairs
+SMCh Ralf Lämmel
+SMCh Vadim Zaytsev
+     CWI
+     The Netherlands
+     Publications Chair
+PuCh Manuel Wimmer
+     
+     Doctoral Symposium Chair
+DSCh Martin Gogolla
+     
+     Student Volunteers Chairs
+SVCh Jonathan Corley
+SVCh Raymond Chang Lau
+     
+     Web Chair
+WeCh Robert Tairas
+     
+WeCh The following are the names of those helping to serve on the program and board committees for MODELS 2013.
+     Program Board
+PBCh Ana Moreira (Chair)
+PBCh Bernhard Schätz (Chair)
+PBCo Lionel Briand
+PBCo Jean Michel Bruel
+PBCo Krzysztof Czarnecki
+PBCo Juergen Dingel
+PBCo Gregor Engels
+PBCo Robert France
+PBCo Martin Gogolla
+PBCo Jean-Marc Jezequel
+PBCo Richard Paige
+PBCo Dorina Petriu
+PBCo Bernhard Rumpe
+PBCo Jon Whittle
+     
+     Program Committee (Foundations Track)
+PrCh Ana Moreira (Chair)
+PrCo Vasco Amaral
+PrCo Daniel Amyot
+PrCo João Araújo
+PrCo Colin Atkinson
+PrCo Mira Balaban
+PrCo Benoit Baudry
+PrCo Nelly Bencomo
+PrCo Xavier Blanc
+PrCo Ruth Breu
+PrCo Jordi Cabot
+PrCo Alessandra Cavarra
+PrCo Siobhán Clarke
+PrCo Jane Cleland-Huang
+PrCo Alexander Egyed
+PrCo Rik Eshuis
+PrCo Lidia Fuentes
+PrCo Alessandro Garcia
+PrCo Geri Georg
+PrCo Sebastien Gerard
+PrCo Holger Giese
+PrCo John Grundy
+PrCo Øystein Haugen
+PrCo Zhenjiang Hu
+PrCo Heinrich Hussmann
+PrCo Gerti Kappel
+PrCo Gabor Karsai
+PrCo Ingolf Krueger
+PrCo Thomas Kühne
+PrCo Yvan Labiche
+PrCo Philippe Lahire
+PrCo Juan de Lara
+PrCo Yves Le Traon
+PrCo Hong Mei
+PrCo Dragan Milicev
+PrCo Raffaela Mirandola
+PrCo Pierre-Alain Muller
+PrCo Gunter Mussbacher
+PrCo Ileana Ober
+PrCo Alfonso Pierantonio
+PrCo Gianna Reggio
+PrCo Gustavo Rossi
+PrCo Pete Sawyer
+PrCo Andy Schuerr
+PrCo Arnor Solberg
+PrCo Friedrich Steimann
+PrCo Gabriele Taentzer
+PrCo Daniel Varro
+PrCo Michael Whalen
+PrCo Tao Yue
+PrCo Steffen Zschaler
+     
+     Program Committee (Applications Track)
+PrCh Bernhard Schätz (Chair)
+PrCo Silvia Abrahão
+PrCo Alfred Aue
+PrCo Balbir Barn
+PrCo Brian Berenbach
+PrCo Fernando Brito e Abreu
+PrCo Tony Clark
+PrCo Andreas Graf
+PrCo Pavel Hruby
+PrCo Juergen Kazmeier
+PrCo Cornel Klein
+PrCo Georg Kreuch
+PrCo Tihamer Levendovszky
+PrCo Pieter Mosterman
+PrCo Oscar Pastor
+PrCo Isabelle Perseil
+PrCo Rob Pettit
+PrCo Alexander Pretschner
+PrCo Wolfram Schulte
+PrCo Bran Selic
+PrCo Ketil Stølen
+PrCo Stephan Thesing
+PrCo Juha-Pekka Tolvanen
+PrCo Mario Trapp
+PrCo Markus Völter
+     
+     Steering Committee
+StCh Gregor Engels (Chair), University of Paderborn, Germany
+StCh Lionel Briand (Vice Chair), University of Luxembourg, Luxembourg
+StCo Silvia Abrahão, Universitat Politècnica de València, Spain
+StCo Jean Bezivin, University of Nantes, France
+StCo Ruth Breu, University of Innsbruck, Austria
+StCo Jean-Michel Bruel, IRIT, France
+StCo Krzysztof Czarnecki, University of Waterloo, Canada
+StCo Laurie Dillon, Michigan State University, USA
+StCo Juergen Dingel, Queen's University, Canada
+StCo Geri Georg, Colorado State University, USA
+StCo Jeff Gray, University of Alabama, USA
+StCo Øystein Haugen, SINTEF, Norway
+StCo Heinrich Hussmann, University of Munich, Germany
+StCo Thomas Kühne, Victoria University of Wellington, New Zealand
+StCo Ana Moreira, Universidade Nova de Lisboa, Portugal
+StCo Pierre-Alain Muller, University of Haute-Alsace, France
+StCo Oscar Nierstrasz, University of Bern, Switzerland
+StCo Dorina Petriu, Carleton University, Canada
+StCo Rob Pettit, The Aerospace Corp., USA
+StCo Gianna Reggio, University of Genoa, Italy
+StCo Bernhard Schätz, Technical University of Munich, Germany
+StCo Wolfram Schulte, Microsoft Research, USA
+StCo Andy Schürr, Technical University of Darmstadt, Germany
+StCo Steve Seidman, Texas State University, USA
+StCo Jon Whittle, Lancaster University, UK

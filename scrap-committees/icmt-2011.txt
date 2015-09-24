@@ -4,7 +4,7 @@
 PrCh Eelco Visser
 PrCh Jordi Cabot
      Publicity chair
-PbCh Dimitrios Kolovos
+PbCh Dimitris Kolovos
      Web chair
 WeCh Davide Di Ruscio
      Steering committee
@@ -30,7 +30,7 @@ PrCo Ivan Kurtev
 PrCo Janis Voigtländer
 PrCo Jean-Marie Favre
 PrCo Jendrik Johannes
-PrCo Jesus Garcia-Molina
+PrCo Jesus Garcia Molina
 PrCo Jim Cordy
 PrCo Juan de Lara
 PrCo Jurgen Vinju
