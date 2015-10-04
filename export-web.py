@@ -54,12 +54,10 @@ if __name__ == "__main__":
 		if pure.startswith('a-') or pure.startswith('p-') or pure.startswith('ico-')\
 		or pure in ('cc-by', 'xhtml', 'css', 'open-knowledge', 'edit'):
 			continue
-		# the MSR logo is not redrawn (yet)
-		if pure == 'msr':
-			continue
 		canlink = glob.glob(outputdir + '/' + pure.upper().replace('+', '') + '*.html')
 		# corner cases
-		corner = {'floc': 'FLoC', 'qosa': 'QoSA', 'onward': 'Onward', 'comparch': 'CompArch'}
+		corner = {'floc': 'FLoC', 'qosa': 'QoSA', 'onward': 'Onward',\
+			'comparch': 'CompArch', 'ada': 'Ada', 'adaeurope': 'AdaEurope'}
 		if pure in corner.keys():
 			canlink = glob.glob(outputdir + '/' + corner[pure] + '*.html')
 		elif pure == 'bibsleigh':

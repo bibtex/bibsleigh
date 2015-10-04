@@ -1,0 +1,63 @@
+@URL: "http://web.archive.org/web/20070627100058/http://wm2005.iese.fraunhofer.de/WM2005ProceedingsTOC.pdf"
+@TITLE: "Proceedings of the Seventh International Workshop on Advances in Learning Software Organizations"
+@ADDRESS: ["Kaiserslautern", "", "Germany"]
+@EDITOR: ["Andreas Birk", "Torgeir Dingsøyr"]
+@YEAR: 2005
+@MONTH: "apr"
+@VENUE: "LSO"
+Local Software Organizations with Global Customers: a Survival Quest
+Kari Smolander, Päivi Ovaska, Pasi Juvonen
+#57-61
+
+A Community Based Approach for Organizing Software Product Line Evolution
+Björn Decker, Dirk Muthig
+#62-66
+
+Experience-based Support for Code Inspections
+Markus Nick, Christian Denger, Torsten Willrich
+#67-71
+
+Using a Software Development Environment with Knowledge Management to Support Deploying Software Processes in Small and Medium Size Companies
+Gleison Santos, Mariano Montoni, Ana Regina Rocha, Sávio Figueiredo, Sômulo Mafra, Adriano Albuquerque, Benito Diaz Paret, Márcio Amaral
+#72-76
+
+New generation E-Learning technology by Web Services
+Guido Dedene, Monique Snoeck, Manu De Backer, Wilfried Lemahieu
+#77-81
+
+Software Process Improvement from a FLOW Perspective
+Kurt Schneider
+#82-86
+
+Exploring Communities of Practice for Product Family Engineering
+Tor Erlend Fægri, Torgeir Dingsøyr, Letizia Jaccheri, Patricia Lago, Hans van Vliet
+#87-91
+
+Systematical Validation of Learning in Agile Software Development Environment
+Outi Salo
+#92-96
+
+On the Importance Attributed to Different Knowledge in Software Development Environments
+Karina Villela, Ana Regina Rocha, Guilherme Travassos
+#97-101
+
+Using Open Space Technology as a Method to Share Domain Knowledge
+Torgeir Dingsøyr, Finn Olav Bjørnsson
+#102-106
+
+Harvesting Knowledge through a Method Framework in an Electronic Process Guide
+Finn Olav Bjørnson, Tor Stålhane
+#107-111
+
+Kick-off Workshops and Project Retrospectives: A Good Learning Software Organization Practice
+Fred Frowin Fajtak
+#112-114
+
+Substance, People, and Tools - Knowledge Management at sd&m
+Arnim Buch, Bernhard Humm
+#115-118
+
+Using Feedback for Supporting Software Team Improvement
+Wolfgang Zuser, Thomas Grechenig
+#119-123
+

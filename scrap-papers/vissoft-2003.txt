@@ -1,0 +1,71 @@
+@URL: "http://keg.cs.uvic.ca/vissoft2003/"
+@TITLE: "Proceedings of the 2nd IEEE International Workshop on Visualizing Software for Understanding and Analysis"
+@ADDRESS: ["Amsterdam", "", "The Netherlands"]
+@YEAR: 2003
+@VENUE: "VISSOFT"
+Thinking with Interactive Visualization
+Colin Ware
+
+UML Class Diagrams – State of the Art in Layout Techniques
+Holger Eichelberger, Jurgen Wolff von Gudenberg
+
+Techniques for Reducing the Complexity of Object-Oriented Execution Traces
+Abdelwahab Hamou-Lhadj, Timothy C. Lethbridge
+
+ADG: Annotated Dependency Graphs for Software Understanding
+Ahmed E. Hassan, Richard C. Holt
+
+Exploring the Many Architectures of a Very Large Component-Based Software
+Jean-Marie Favre, R. Sanlaville, J. Estublier
+
+AutoCode: Using Memex-like Trails to Improve Program Comprehension
+Richard Wheeldon, Steve Counsell, Kevin Keenoy
+
+Exploring the Many Architectures of a Very Large Component-Based Software
+Jean-Marie Favre, R. Sanlaville, J. Estublier
+
+CodeCrawler – A Lightweight Software Visualization Tool
+Michele Lanza
+
+AutoCode: Using Memex-like Trails to Improve Program Comprehension
+Richard Wheeldon, Steve Counsell, Kevin Keenoy
+
+Demonstration of Advanced Layout of UML Class Diagrams by SugiBib
+Holger Eichelberger, Jurgen Wolff
+
+GENISOM: Self-Organizing Maps Applied in Visualising Large Software Collections
+James Brittle, Cornelia Boldyreff
+
+Source Viewer 3D (sv3D): A System for Visualizing Multi Dimensional Software Analysis Data
+Andrian Marcus, Louis Feng, Jonathan I. Maletic
+
+Plugging-in Visualization: Experiences Integrating a Visualization Tool with Eclipse
+Robert Lintern, Margaret-Anne Storey, Xiaomin Wu, Jeff Michaud
+
+Program Visualization Support for Highly Iterative Development Environments
+Michele Lanza
+
+Challenges in Visualizing and Reconstructing Architectural Views
+Juergen Rilling, Michel Lizotte
+
+Visualization to Support Version Control Software: Suggested Requirements
+Xiaomin Wu, Adam Murray, Margaret-Anne Storey, Robert Lintern 
+
+Visualization for Software Risk Assessments
+Jordi Vidal Rodriguez, Tobias Kuipers
+
+MetaViz – Issues in Software Visualizing Beyond 3D
+Juergen Rilling, Jianqun Wang, S. P. Mudur
+
+KScope: A Modularized Tool for 3D Visualization of Object-Oriented Programs
+Timothy A. Davis, Kenneth Pestka, Alan Kaplan
+
+Self-Organizing Maps Applied in Visualising Large Software Collections
+James Brittle, Cornelia Boldyreff
+
+The end of the line for Software Visualisation?
+Stuart M. Charters, Nigel Thomas, Malcolm Munro
+
+CFB: A Call for Benchmarks – for Software Visualization
+Jonathan I. Maletic, Andrian Marcus
+

@@ -32,7 +32,8 @@ def checkon(fn, o):
 		# you know nothing, scraped CSV
 		return 0
 	plines = sorted([strictstrip(s) for s in o.getJSON().split('\n')[1:-1]])
-	if 'roles' not in o.json.keys():
+	# if 'roles' not in o.json.keys():
+	if True:
 		# no prior knowledge of roles => we know everything
 		o.json['roles'] = sorted(roles[o.getKey()], key=lambda x: x[1])
 	else:

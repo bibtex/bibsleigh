@@ -89,9 +89,13 @@ leftLinks('pppp', '')+'''
 <div class="main">
 <h2>Bibliography of Software Language Engineering in Generated Hypertext (BibSLEIGH)</h2>
 <p>This is a project on facilitated browsing of scientific knowledge objects in software language engineering. It is a work in progress.</p>
-<p>The following {} logos were recreated to represent venues.
-Most follow the original designs by the conference founders/organisers, others are improvised to create a matching feel.
-No legal or artistic rights claimed.</p>
+<p>The following {} logos were recreated <a href="http://grammarware.net">by me</a> to represent venues.
+Most follow the original designs by the conference founders/organisers,
+but the original images were never used directly.
+Others were improvised to create a matching feel.</p>
+<p>No legal or artistic rights claimed. A couple of times public domain
+images were used to aid the drawing process. If you are an organiser of
+a venue and would like to get my SVG originals, feel free to send an email.</p>
 {}
 <br clear="both"/>
 <p>Next conferences to import: {}…</p>

@@ -10,7 +10,8 @@ def js(s):
 		return '[' + ', '.join(['"{}"'.format(b) for b in s]) + ']'
 
 def deentitify(z):
-	return z.replace('ü', 'ue').replace('ä', 'ae')
+	return z.replace('ü', 'ue').replace('ä', 'ae').replace('ø', 'o').\
+		replace('æ', 'ae')
 
 f = open(sys.argv[1])
 keystart = sys.argv[1].split('.')[0].upper()
@@ -45,6 +46,13 @@ while i < len(lines):
 		i += 1
 	title = lines[i].strip().replace('  ', ' ')
 	auths = lines[i+1].strip().split(', ')
+	# optionally, pages
+	if lines[i+2].strip() != '' and lines[i+2].startswith('#'):
+		pgs = lines[i+2][1:].strip()
+		i += 1
+	else:
+		pgs = ''
+	# optionally, url
 	if lines[i+2].strip() != '':
 		url = lines[i+2].strip()
 		i += 1
@@ -71,8 +79,12 @@ while i < len(lines):
 	for opt in d.keys():
 		if opt not in ('TITLE', 'URL'):
 			opts += '\n\t"{l}": {v},'.format(l=opt.lower(), v=d[opt])
+	if pgs:
+		pgs = '"' + pgs + '"'
+	else:
+		pgs = cx
 	if url:
-		'\n\t"{l}": {v},'.format(l="url", v=url)
+		opts += '\n\t"{l}": {v},'.format(l="url", v=url)
 	f.write('''{{{optionals}
 	"booktitle": {bt},
 	"type": "inproceedings",
@@ -85,7 +97,7 @@ while i < len(lines):
 	title=title,
 	bt=d['TITLE'],
 	authors=js(auths),
-	pages=cx))
+	pages=pgs))
 	f.close()
 	i += 3
 print(cx, 'papers processed')

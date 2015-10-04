@@ -6,6 +6,7 @@
 import sys, os.path
 from lib.AST import Sleigh
 from lib.NLP import strictstrip
+from lib.JSON import parseJSON
 from fancy.ANSI import C
 
 ienputdir = '../json'
