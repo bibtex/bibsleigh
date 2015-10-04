@@ -153,6 +153,7 @@ if __name__ == "__main__":
 		if [myconf, line[5]] not in people[name]['roles']:
 			people[name]['roles'].append([myconf, line[5]])
 	# ensure fast load time next time
+	print(established)
 	f = open('_established.json', 'w')
 	f.write(json.dumps(established, sort_keys=True, separators=(',\n\t', ': '), ensure_ascii=False))
 	f.close()

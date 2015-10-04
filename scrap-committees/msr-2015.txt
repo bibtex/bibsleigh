@@ -54,7 +54,6 @@ PrCo Thomas Zimmermann	Microsoft Research, USA
      General Chair
 GeCh Massimiliano Di Penta	Massimiliano Di Penta
      University of Sannio
-GeCh Italy
      Program Co-Chairs
 PrCh Martin Pinzger	Martin Pinzger
      University of Klagenfurt

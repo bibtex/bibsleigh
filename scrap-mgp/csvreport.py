@@ -61,6 +61,8 @@ if __name__ == "__main__":
 				else:
 					data[0] = int(data[0])
 					id2name[data[0]] = data[1]
+				if key.count(True) < 2:
+					print('Sad about', data)
 			f.close()
 		if os.path.exists(fadvs):
 			print(fadvs, 'found')

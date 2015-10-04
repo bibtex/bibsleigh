@@ -66,7 +66,7 @@ PrCo Mark Harman	University College London, London
 PrCo Martin Robillard	McGill University, Canada
 PrCo Massimiliano Di Penta	Dept. of Engineering - University of Sannio, Italy
 PrCo Meiyappan Nagappan	Queen's University, Canada
-PrCo Olga	Baysal	University of Waterloo, Canada
+PrCo Olga Baysal	University of Waterloo, Canada
 PrCo Peter Rotella	Cisco Systems, USA
 PrCo Romain Robbes	University of Chile, Chile
 PrCo Sonia Haiduc	Florida State University, USA

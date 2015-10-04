@@ -1,7 +1,7 @@
 #!/usr/local/bin/python3
 # -*- coding: utf-8 -*-
 #
-# a module for scraping MGP into a CVS database
+# a module for scraping MGP into a CSV database
 
 import bs4, sys, time, socket, random, urllib.request
 
@@ -67,8 +67,7 @@ if __name__ == "__main__":
 	f_kids = open('_id2kids.csv', 'a')
 	f_advs = open('_id2adv.csv', 'a')
 	startfrom = int(sys.argv[1]) if len(sys.argv) > 1 else 1
-	# for mgid in range(startfrom, startfrom+10000):
-	for mgid in range(146154, 156154):
+	for mgid in range(startfrom, startfrom+10000):
 		cx += 1
 		if cx % 100 == 0:
 			print('================================= +100 =================================')
