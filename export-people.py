@@ -275,7 +275,7 @@ if __name__ == "__main__":
 	f.write(peoplistHTML.format(\
 		title='All contributors',
 		listname='{} people known'.format(len(ps)),
-		ul=azlist
+		ul=azlist\
 	))
 	f.close()
 	print('People index:', C.blue('created'))
@@ -284,4 +284,3 @@ if __name__ == "__main__":
 		C.red(len(sleigh.venues)),
 		C.red(sleigh.numOfPapers()),
 		C.red(sleigh.numOfTags())))
-	# print(sleigh.getTags())

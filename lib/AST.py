@@ -78,7 +78,7 @@ class Unser(object):
 					s += '\t{0:<13} = "{{<span id="{0}">{1}</span>}}",\n'.format(k, self.json[k])
 			elif k in ('crossref', 'key', 'type', 'venue', 'twitter', \
 				'eventtitle', 'eventurl', 'nondblpkey', 'dblpkey', 'dblpurl', \
-				'programchair', 'generalchair', 'roles'):
+				'programchair', 'generalchair', 'roles', 'tagged'):
 				# TODO: ban 'ee' as well
 				pass
 			elif k == 'doi':
@@ -370,7 +370,21 @@ class Venue(Unser):
 				else:
 					clist[a] = 1
 			adds = '<div class="rbox">' + '<br/>\n'.join(['{} × {}'.format(clist[a], a) for a in sorted(clist.keys())]) + '</div>'
-			ev = adds + ev
+		else:
+			adds = ''
+		if 'tagged' in self.json.keys():
+			# gracious continuation
+			if adds:
+				adds = adds[:-6]
+				toptags = '<hr/>\n'
+			else:
+				toptags = '<div class="rbox">'
+			for t in self.json['tagged'][:10]:
+				toptags += '<span class="tag">{1} ×<a href="tag/{0}.html">#{0}</a></span><br/>\n'.format(*t)
+			toptags += '</div>'
+		else:
+			toptags = ''
+		ev = adds + toptags + ev
 		ABBR = self.get('name')
 		title = self.get('title')
 		img = self.json['venue'].lower() if 'venue' in self.json.keys() else ABBR.lower()
@@ -429,6 +443,24 @@ class Venue(Unser):
 						self.tags[k] = []
 					self.tags[k].extend(ts[k])
 		return self.tags
+	def getQTags(self):
+		if 'tagged' not in self.json.keys():
+			tpv = {}
+			for y in self.years:
+				for c in y.confs:
+					for p in c.papers:
+						for t in p.getQTags():
+							if t in tpv.keys():
+								tpv[t] += 1
+							else:
+								tpv[t] = 1
+			tops = [k for k in tpv.keys() if tpv[k] > 1]
+			toptags = sorted(tops, key=lambda z: -tpv[z])#[:10]
+			tagged = [[t, tpv[t]] for t in toptags]
+			if tagged:
+				self.json['tagged'] = tagged
+			return tagged
+		return self.json['tagged']
 
 
 class Year(Unser):
@@ -594,8 +626,16 @@ class Conf(Unser):
 			# ev += '<h3>Committee: ' + ', '.join(['<a href="person/{}.html">{}</a> ({})'.format(\
 			# 	c.replace(' ', '_'),
 			# 	c, t) for c, t in positions]) + '</h3>'
+		if 'tagged' in self.json.keys():
+			toptags = '<div class="rbox">'
+			for t in self.json['tagged'][:10]:
+				toptags += '<span class="tag">{1} ×<a href="tag/{0}.html">#{0}</a></span><br/>'.format(*t)
+			toptags += '</div>'
+		else:
+			toptags = ''
 		if self.papers:
 			ev += '<h3>Contents ({} items)</h3><dl class="toc">'.format(len(self.papers))+\
+				  toptags + \
 				  '\n'.join([p.getItem() for p in sorted(self.papers, key=sortbypages)])+'</dl>'
 		return bibHTML.format(\
 			filename=self.getJsonName(),
@@ -638,6 +678,22 @@ class Conf(Unser):
 						self.tags[k] = []
 					self.tags[k].append(ts[k])
 		return self.tags
+	def getQTags(self):
+		if 'tagged' not in self.json.keys():
+			tpi = {}
+			for p in self.papers:
+				for k in p.getQTags():
+					if k in tpi.keys():
+						tpi[k] += 1
+					else:
+						tpi[k] = 1
+			tops = [k for k in tpi.keys() if tpi[k] > 1]
+			toptags = sorted(tops, key=lambda z: -tpi[z])#[:10]
+			tagged = [[t, tpi[t]] for t in toptags]
+			if tagged:
+				self.json['tagged'] = tagged
+			return tagged
+		return self.json['tagged']
 
 class Paper(Unser):
 	def __init__(self, f, hdir, parent):
@@ -718,8 +774,6 @@ class Paper(Unser):
 		else:
 			return None
 	def getTags(self):
-		if self.tags:
-			# myname = self.getHtmlName()
-			return {k:self for k in self.tags}
-		else:
-			return {}
+		return {k:self for k in self.tags} if self.tags else {}
+	def getQTags(self):
+		return self.tags if self.tags else []

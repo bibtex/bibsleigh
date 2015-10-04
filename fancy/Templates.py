@@ -76,8 +76,8 @@ leftLinks('appp', '')+'''
 <p>	<strong>{cxVen}</strong> venues,
 	<strong>{cxVol}</strong> volumes,
 	<strong>{cxPap}</strong> papers,
-	<strong>347</strong> tags,
-	<strong>74865</strong> markings.</p></div>
+	<strong>392</strong> tags,
+	<strong>95232</strong> markings.</p></div>
 {items}
 '''+footer
 

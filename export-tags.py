@@ -79,7 +79,8 @@ if __name__ == "__main__":
 	for k in ts.keys():
 		f = open('{}/tag/{}.html'.format(outputdir, k), 'w')
 		# papers are displayed in reverse chronological order
-		lst = [x.getRestrictedItem(k) for x in sorted(ts[k], key=lambda z:-z.json['year'] if 'year' in z.json.keys() else 0)]
+		lst = [x.getRestrictedItem(k) for x in \
+			sorted(ts[k], key=lambda z: -z.json['year'] if 'year' in z.json.keys() else 0)]
 		# no comprehension possible for this case
 		for x in ts[k]:
 			if x not in tagged:
