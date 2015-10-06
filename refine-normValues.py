@@ -96,6 +96,9 @@ def checkon(fn, o):
 			# inline trivial lists
 			if len(o.json[k]) == 1:
 				o.json[k] = o.json[k][0]
+			# unless it’s 'tagged'
+			if k == 'tagged' and not isinstance(o.json[k][0], list):
+				o.json[k] = [o.json[k]]
 			# remove DBLP disambiguation: we might later regret it
 			# but the information can be always re-retrieved
 			if k in ('author', 'editor'):

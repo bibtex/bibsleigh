@@ -1,0 +1,151 @@
+#DONE
+     http://www.ase-conferences.org/ase/past/ase2010/committee.html
+     Committees
+     
+     Organisation Committee
+     Program Committee
+     Doctoral Symposium Chairs
+     Tutorial Chairs
+     Workshop Chairs
+     Demonstration Chairs
+     Program Committee
+     
+     Program Chairs
+     
+PrCh Jamie Andrews
+     
+PrCh Elisabetta Di Nitto
+     
+     
+     Program Committee Members
+     
+PrCo Sven Apel
+PrCo Tevfik Bultan
+PrCo Yuanfang Cai
+PrCo Marsha Chechik
+PrCo Vittorio Cortellessa
+PrCo Ivica Crnkovic
+PrCo Krzysztof Czarnecki
+PrCo Ewen Denney
+PrCo Massimiliano Di Penta
+PrCo Wolfgang Emmerich
+PrCo Claudia Ermel
+PrCo Bernd Fischer
+PrCo Michael Goedicke
+     University of Duisburg-Essen, Germany
+PrCo Paul Gruenbacher
+PrCo John Grundy
+PrCo Lars Grunske
+PrCo Robert J. Hall
+PrCo Mary Jean Harrold
+PrCo Mats Heimdahl
+     University of Minnesota Software Engineering Center, USA
+PrCo Reiko Heckel
+     University of Leicester, UK
+PrCo John Hosking
+     University of Auckland, New Zealand
+PrCo Michael Lowry
+PrCo Darko Marinov
+     University of Illinois at Urbana-Champaign, USA
+PrCo Tim Menzies
+PrCo Alex Orso
+PrCo Corina Pasareanu
+PrCo Charles Pecheur
+PrCo Mauro Pezzè
+     University of Lugano, Switzerland
+PrCo Ajitha Rajan
+PrCo David Redmiles
+     University of California, Irvine, USA
+PrCo Debra Richardson
+     University of California, Irvine, USA
+PrCo Beverly Sanders
+     University of Florida, USA
+PrCo Yannis Smaragdakis
+     University of Massachusetts, Amherst, USA
+PrCo Gabi Taentzer
+PrCo Shingo Takada
+PrCo Tetsuo Tamai
+PrCo Daniel Varro
+PrCo Albert Zuendorf
+     University of Kassel, Germany
+     Expert Review Panel Members
+     
+ERP  Perry Alexander
+     University of Kansas, USA
+ERP  Luciano Baresi
+ERP  Wing-Kwong Chan
+ERP  Phyllis Frankl
+ERP  Andrew Ireland
+ERP  Jochen M. Kuester
+ERP  Yves Ledru
+ERP  Jonathan Maletic
+ERP  Sandro Morasca
+ERP  John Penix
+ERP  Peri Tarr
+ERP  Willem Visser
+ERP  Tao Xie
+ERP  Andrea Zisman
+     
+     Scientific Liason
+     
+ScLi Theo D'Hondt
+ScLi Wouter Joosen
+     
+     
+     Doctoral Symposium Chairs
+     
+DSCh Corina Pasareanu
+     
+     
+DSCh John Hosking
+     
+     
+     Tutorial Chairs
+     
+TuCh Thierry Massart
+     
+TuCh John Penix
+     
+     
+     Workshop Chairs
+     
+WoCh Tom Mens
+     
+WoCh Tevfik Bultan
+     
+     Demonstration Chairs
+     
+TTCh Anthony Cleve
+     
+TTCh Bernd Fischer
+     
+     Organisation Committee
+     
+     General Chair
+     
+GeCh Charles Pecheur
+     
+     Local Organisation Chair
+     
+LoCh Serge Demeyer
+     
+     Finance Chair
+     
+FiCh Kim Mens
+     
+     Publicity Chair
+     
+PbCh Dirk Deridder
+     Webmaster
+     
+WeCh Dirk Deridder
+     
+     Publication Chair
+     
+PuCh Jean-François Raskin
+     
+     Sponsor Chairs
+     
+SpCh Viviane Jonckers
+     
+SpCh Pierre-Yves Schobbens

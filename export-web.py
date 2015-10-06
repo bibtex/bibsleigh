@@ -57,7 +57,8 @@ if __name__ == "__main__":
 		canlink = glob.glob(outputdir + '/' + pure.upper().replace('+', '') + '*.html')
 		# corner cases
 		corner = {'floc': 'FLoC', 'qosa': 'QoSA', 'onward': 'Onward',\
-			'comparch': 'CompArch', 'ada': 'Ada', 'adaeurope': 'AdaEurope'}
+			'comparch': 'CompArch', 'ada': 'Ada', 'adaeurope': 'AdaEurope',\
+			'fossacs': 'FoSSaCS'}
 		if pure in corner.keys():
 			canlink = glob.glob(outputdir + '/' + corner[pure] + '*.html')
 		elif pure == 'bibsleigh':

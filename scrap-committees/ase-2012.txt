@@ -1,0 +1,147 @@
+#DONE
+     http://www.ase-conferences.org/ase/past/ase2012/organization/index.html
+     Organization
+     
+     Committee Chairs
+     General Chair
+GeCh Michael Goedicke
+     University of Duisburg-Essen, Germany
+     Program Committee Co-Chairs
+PrCh Tim Menzies
+PrCh Motoshi Saeki
+     
+     Tool Demonstration Co-Chairs
+TTCh Ewen Denney
+TTCh Bernd Fischer
+     University of Southampton, United Kingdom
+     
+     Doctoral Symposium Co-Chairs
+DSCh Tevfik Bultan
+     University of California, Santa Barbara, United States
+DSCh Andreas Zeller
+     
+     Workshop Co-Chairs
+WoCh Darko Marinov
+WoCh Gabriele Taentzer
+     
+     Tutorial Co-Chairs
+TuCh Darko Marinov
+TuCh Gabriele Taentzer
+     
+     Publicity Co-Chairs
+PbCh Gregory Gay (North America)
+     University of Minnesota, United States
+PbCh Patrick Mäder (Europe)
+PbCh Hironori Washizaki (Asia/Pacific)
+     
+     Finance
+FiCh Marco Konersmann
+     University of Duisburg-Essen, Germany
+     Local Arrangements
+LoCo Marco Konersmann
+     University of Duisburg-Essen, Germany
+     Webmaster
+WeCh Patrick Mäder
+     
+     
+     Program Committee
+PrCo Marcelo d’Amorim
+PrCo Jamie Andrews
+PrCo Nikolaj Bjoerner
+PrCo Yuanfang Cai
+PrCo Myra Cohen
+PrCo Vittorio Cortellessa
+PrCo Ivica Crnkovic
+PrCo Bojan Cukic
+PrCo Giovanni Denaro
+PrCo Elisabetta Di Nitto
+PrCo Alexander Egyed
+PrCo Bernd Fischer
+PrCo Jaco Geldenhuys
+PrCo Lars Grunske
+PrCo Arie Gurfinkel
+PrCo Robert Hall
+PrCo Reiko Heckel
+PrCo Maritta Heisel
+PrCo John Hosking
+PrCo Kyo-Chul Kang
+PrCo David Lo
+PrCo Jonathan Maletic
+PrCo Andrian Marcus
+PrCo Katsuhisa Maruyama
+PrCo Tim Menzies
+PrCo Charles Pecheur
+PrCo John Penix
+PrCo David Redmiles
+PrCo Grigore Rosu
+PrCo Motoshi Saeki
+PrCo Houari Sahraoui
+PrCo Beverly Sanders
+PrCo Anita Sarma
+PrCo Gabriele Taentzer
+PrCo Tetsuo Tamai
+PrCo Nikolai Tillmann
+PrCo Richard Torkar
+PrCo Daniel Varro
+PrCo Mike Whalen
+PrCo Tao Xie
+PrCo Ye Yang
+PrCo Andreas Zeller
+PrCo Albert Zuendorf
+     
+     
+     Expert Review Panel
+ERP  Doo-Hwan Bae
+ERP  Sjaak Brinkkemper
+ERP  Marsha Chechik
+     University of Toronto, Canada
+ERP  Krzysztof Czarnecki
+     University of Waterloo, Canada
+ERP  Ewen Denney
+ERP  Ian Gorton
+ERP  Paul Gruenbacher
+ERP  John Grundy
+ERP  Mark Harman
+     University College London, United Kingdom
+ERP  Shinichi Honiden
+ERP  Andrew Ireland
+ERP  Sarfraz Khurshid
+     University of Texas at Austin, United States
+ERP  Yves Ledru
+ERP  Anna Liu
+ERP  Michael Lowry
+ERP  Darko Marinov
+     University of Illinois at Urbana-Champaign, United States
+ERP  Hong Mei
+ERP  Alessandro Orso
+ERP  Corina Pasareanu
+ERP  Douglas Smith
+ERP  Virginie Wiels
+ERP  Andrea Zisman
+     
+     
+     Tool Demonstrations Program Committee
+TTPC David Aspinall (University of Edinburgh, Scotland)
+TTPC Gilles Barthe (IMDEA, Spain)
+TTPC Anthony Cleve (FUNDP Namur, Belgium)
+TTPC Rohit Gheyi (Federal University of Campina Grande, Brazil)
+TTPC Christoph Gladisch (Karlsruhe Institute of Technology, Germany)
+TTPC Paul Gruenbacher (University of Linz, Austria)
+TTPC Robert Hall (AT&T Labs Research, USA)
+TTPC Reiko Heckel (University of Leicester, England)
+TTPC John Hosking (ANU, Australia)
+TTPC Andrew Ireland (Heriot-Watt University, Scotland)
+TTPC Anjali Joshi (MathWorks, USA)
+TTPC Jens Krinke (UCL, England)
+TTPC Julia Lawall (INRIA Paris-Rocquencourt, France)
+TTPC Michael Lowry (NASA Ames, USA)
+TTPC John Penix (Google, USA)
+TTPC Suresh Thummalapenta (IBM Research, India)
+TTPC Daniel Varro (Budapest University of Technology and Economic, Hungary)
+TTPC Michael Whalen (University of Minnesota, USA)
+TTPC Andrea Zisman (City University, England)
+     
+     http://www.ase-conferences.org/ase/past/ase2012/keynotes/index.html
+     Keynotes
+KN   Dr. Ivar Jacobson
+KN   Prof. Mark Harman

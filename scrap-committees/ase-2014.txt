@@ -1,0 +1,133 @@
+#DONE
+     http://ase2014.org/index.php?choice=committee
+     General Chair
+     
+GeCh Ivica Crnkovic
+     
+     Program Chairs
+     
+PrCh Marsha Chechik
+PrCh Paul Grünbacher
+     
+     Tool Demonstration Chairs
+     
+TTCh Arie Gurfinkel
+TTCh Gabriele Taentzer
+     
+     Tutorial Chairs
+     
+TuCh Elisabetta Di Nitto
+TuCh Michel Chaudron
+     
+     Workshops Chairs
+     
+WoCh Lars Grunske
+WoCh Mats Heimdahl
+     
+     Publicity Chairs
+     
+PbCh Yuanfang Cai
+PbCh Mehrdad Sabetzadeh
+PbCh Henry Muccini
+     
+     Proceedings Chair
+     
+PuCh Hongyu Pei-Breivold
+     
+     Web Chairs
+     
+WeCh Hüseyin Aysan
+WeCh Josip Maras
+     
+     Local Chair
+     
+LoCh Malin Rosqvist
+     
+     Mobile Chair
+     
+MoCh Reid Holmes
+     
+     Local Organizing Team
+     
+LoCo Aneta Vulgarakis
+LoCo Antonio Cicchetti
+LoCo Federico Ciccozzi
+LoCo Juraj Feljan
+     
+     http://ase2014.org/index.php?choice=pc
+     Program Committee
+PrCo Benoit Baudry, INRIA
+PrCo Nelly Bencomo, Aston University Birmingham
+PrCo Christian Bird, Microsoft Research
+PrCo Yuriy Brun, University of Massachusetts, Amherst
+PrCo Tevfik Bultan, University of California at Santa Barbara
+PrCo Jordi Cabot, École des Mines de Nantes / Inria
+PrCo Yuanfang Cai, Drexel University
+PrCo Radu Calinescu, University of York
+PrCo Michel Chaudron, Chalmers University of Gothenburg & Gothenburg University
+PrCo Jane Cleland-Huang, DePaul University
+PrCo Myra Cohen, University of Nebraska-Lincoln
+PrCo Vittorio Cortellessa, DISIM University of L'Aquila
+PrCo Elisabetta Di Nitto, DEIB Politecnico di Milano
+PrCo Massimiliano Di Penta, Department of Engineering, University of Sannio
+PrCo Danny Dig, Oregon State University
+PrCo Schahram Dustdar, Vienna University of Technology
+PrCo Bernd Fischer, University of Stellenbosch
+PrCo Robert France, Colorado State University
+PrCo Gordon Fraser, University of Sheffield
+PrCo Diego Garbervetsky, Universidad de Buenos Aires
+PrCo Michael Goedicke, Paluno
+PrCo Lars Grunske, University of Stuttgart
+PrCo Arie Gurfinkel, Carnegie Mellon Software Engineering Institute
+PrCo Robert Hall, AT&T Labs Research
+PrCo Reiko Heckel, Department of Computer Science University of Leicester
+PrCo Mats Heimdahl, University of Minnesota
+PrCo John G. Hosking, University of Auckland & Australian National University
+PrCo Christian Kaestner, Carnegie Mellon University
+PrCo David Lo, School of Information Systems, Singapore Management University
+PrCo Shahar Maoz, Tel Aviv University
+PrCo Henry Muccini, University of L'Aquila
+PrCo Shiva Nejati, University of Luxembourg
+PrCo Tien N. Nguyen, Iowa State University
+PrCo Jocelyn Simmonds, Universidad Tecnica Federico Santa Maria
+PrCo Tetsuo Tamai, Hosei University
+PrCo Lin Tan, University of Waterloo
+PrCo Daniel Varro, Budapest University of Technology and Economics
+PrCo Michael Whalen, University of Minnesota
+PrCo Andreas Zeller, Saarland University
+     
+     Expert Review Panel (ERP)
+ERP  Jamie Andrews, Google Inc.
+ERP  Sven Apel, University of Passau
+ERP  Alexander Egyed, Johannes Kepler University Linz, Austria
+ERP  Harald Gall, University of Zurich
+ERP  Dimitra Giannakopoulou, NASA Ames
+ERP  John Grundy, Swinburne University of Technology
+ERP  Mark Harman, University College London
+ERP  Paola Inverardi, University of L'Aquila
+ERP  Andrew Ireland, Heriot Watt University Edinburgh
+ERP  Sarfraz Khurshid, University of Texas at Austin
+ERP  Akash Lal, Microsoft Research India
+ERP  Axel Legay, INRIA
+ERP  Emmanuel Letier, University College London
+ERP  Darko Marinov, University of Illinois at Urbana-Champaign
+ERP  Tim Menzies, West Virginia University
+ERP  Martin Naedele, ABB
+ERP  Corina Pasareanu, Carnegie Mellon Silicon Valley/NASA Ames
+ERP  Charles Pecheur, Université Catholique de Louvain
+ERP  Lori Pollock, University of Delaware
+ERP  Abhik Roychoudhury, National University of Singapore
+ERP  Motoshi Saeki, Tokyo Institute of Technology
+ERP  Gabriele Taentzer, Philipps-Universitaet Marburg
+ERP  Nikolai Tillmann, Microsoft Research
+ERP  Paolo Tonella, Fondazione Bruno Kessler
+ERP  Willem Visser, University of Stellenbosch
+ERP  Tao Xie, University of Illinois at Urbana-Champaign
+ERP  Thomas Zimmermann, Microsoft Research
+ERP  Andrea Zisman, The Open University
+     
+     http://ase2014.org/index.php?choice=keynotes
+     Keynotes
+KN   Prof. Luciano Floridi (Oxford Internet Institute, University of Oxford)
+KN   Prof. Andrei Voronkov (University of Manchester)
+KN   Dr. Magnus Larsson (ABB, Head of India Development Center)

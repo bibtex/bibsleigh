@@ -1,3 +1,422 @@
+ASE;2010;Jamie;Andrews;;Program Chair
+ASE;2010;Elisabetta;Di Nitto;;Program Chair
+ASE;2010;Sven;Apel;;Program Committee
+ASE;2010;Tevfik;Bultan;;Program Committee
+ASE;2010;Yuanfang;Cai;;Program Committee
+ASE;2010;Marsha;Chechik;;Program Committee
+ASE;2010;Vittorio;Cortellessa;;Program Committee
+ASE;2010;Ivica;Crnkovic;;Program Committee
+ASE;2010;Krzysztof;Czarnecki;;Program Committee
+ASE;2010;Ewen;Denney;;Program Committee
+ASE;2010;Massimiliano;Di Penta;;Program Committee
+ASE;2010;Wolfgang;Emmerich;;Program Committee
+ASE;2010;Claudia;Ermel;;Program Committee
+ASE;2010;Bernd;Fischer;;Program Committee
+ASE;2010;Michael;Goedicke;;Program Committee
+ASE;2010;Paul;Gruenbacher;;Program Committee
+ASE;2010;John;Grundy;;Program Committee
+ASE;2010;Lars;Grunske;;Program Committee
+ASE;2010;Robert;J. Hall;;Program Committee
+ASE;2010;Mary;Jean Harrold;;Program Committee
+ASE;2010;Mats;Heimdahl;;Program Committee
+ASE;2010;Reiko;Heckel;;Program Committee
+ASE;2010;John;Hosking;;Program Committee
+ASE;2010;Michael;Lowry;;Program Committee
+ASE;2010;Darko;Marinov;;Program Committee
+ASE;2010;Tim;Menzies;;Program Committee
+ASE;2010;Alex;Orso;;Program Committee
+ASE;2010;Corina;Pasareanu;;Program Committee
+ASE;2010;Charles;Pecheur;;Program Committee
+ASE;2010;Mauro;Pezzè;;Program Committee
+ASE;2010;Ajitha;Rajan;;Program Committee
+ASE;2010;David;Redmiles;;Program Committee
+ASE;2010;Debra;Richardson;;Program Committee
+ASE;2010;Beverly;Sanders;;Program Committee
+ASE;2010;Yannis;Smaragdakis;;Program Committee
+ASE;2010;Gabi;Taentzer;;Program Committee
+ASE;2010;Shingo;Takada;;Program Committee
+ASE;2010;Tetsuo;Tamai;;Program Committee
+ASE;2010;Daniel;Varro;;Program Committee
+ASE;2010;Albert;Zuendorf;;Program Committee
+ASE;2010;Perry;Alexander;;Expert Review Panel
+ASE;2010;Luciano;Baresi;;Expert Review Panel
+ASE;2010;Wing-Kwong;Chan;;Expert Review Panel
+ASE;2010;Phyllis;Frankl;;Expert Review Panel
+ASE;2010;Andrew;Ireland;;Expert Review Panel
+ASE;2010;Jochen;M. Kuester;;Expert Review Panel
+ASE;2010;Yves;Ledru;;Expert Review Panel
+ASE;2010;Jonathan;Maletic;;Expert Review Panel
+ASE;2010;Sandro;Morasca;;Expert Review Panel
+ASE;2010;John;Penix;;Expert Review Panel
+ASE;2010;Peri;Tarr;;Expert Review Panel
+ASE;2010;Willem;Visser;;Expert Review Panel
+ASE;2010;Tao;Xie;;Expert Review Panel
+ASE;2010;Andrea;Zisman;;Expert Review Panel
+ASE;2010;Theo;D'Hondt;;Scientific Liaison
+ASE;2010;Wouter;Joosen;;Scientific Liaison
+ASE;2010;Corina;Pasareanu;;Doctoral Symposium Chair
+ASE;2010;John;Hosking;;Doctoral Symposium Chair
+ASE;2010;Thierry;Massart;;Tutorials Chair
+ASE;2010;John;Penix;;Tutorials Chair
+ASE;2010;Tom;Mens;;Workshop Chair
+ASE;2010;Tevfik;Bultan;;Workshop Chair
+ASE;2010;Anthony;Cleve;;Tool Track Chair
+ASE;2010;Bernd;Fischer;;Tool Track Chair
+ASE;2010;Charles;Pecheur;;General Chair
+ASE;2010;Serge;Demeyer;;Local Chair
+ASE;2010;Kim;Mens;;Finance Chair
+ASE;2010;Dirk;Deridder;;Publicity Chair
+ASE;2010;Dirk;Deridder;;Web Chair
+ASE;2010;Jean-François;Raskin;;Publication Chair
+ASE;2010;Viviane;Jonckers;;Sponsor Chair
+ASE;2010;Pierre-Yves;Schobbens;;Sponsor Chair
+ASE;2011;Perry;Alexander;;General Chair
+ASE;2011;Corina;Pasareanu;;Program Chair
+ASE;2011;John;Hosking;;Program Chair
+ASE;2011;Reiko;Heckel;;Tool Track Chair
+ASE;2011;Tim;Menzies;;Doctoral Symposium Chair
+ASE;2011;Motoshi;Saeki;;Doctoral Symposium Chair
+ASE;2011;Yuanfang;Cai;;Tutorials Chair
+ASE;2011;Arvin;Agah;;Tutorials Chair
+ASE;2011;Robby;;;Workshop Chair
+ASE;2011;William;Deng;;Workshop Chair
+ASE;2011;Neha;Rungta;;Publication Chair
+ASE;2011;Ajitha;Rajan;;Publicity Chair
+ASE;2011;Kevin;Curry;;Finance Chair
+ASE;2011;Kevin;Curry;;Local Chair
+ASE;2011;Jamie;Andrews;;Program Committee
+ASE;2011;Nikolaj;Bjoerner;;Program Committee
+ASE;2011;Tevfik;Bultan;;Program Committee
+ASE;2011;Margaret;Burnett;;Program Committee
+ASE;2011;Yuanfang;Cai;;Program Committee
+ASE;2011;Marsha;Chechik;;Program Committee
+ASE;2011;Myra;Cohen;;Program Committee
+ASE;2011;Vittorio;Cortellessa;;Program Committee
+ASE;2011;Ivica;Crnkovic;;Program Committee
+ASE;2011;Marcelo;d'Amorim;;Program Committee
+ASE;2011;Giovanni;Denaro;;Program Committee
+ASE;2011;Ewen;Denney;;Program Committee
+ASE;2011;Bernd;Fischer;;Program Committee
+ASE;2011;Michael;Goedicke;;Program Committee
+ASE;2011;Paul;Gruenbacher;;Program Committee
+ASE;2011;Lars;Grunske;;Program Committee
+ASE;2011;Arie;Gurfinkel;;Program Committee
+ASE;2011;Robert;Hall;;Program Committee
+ASE;2011;Mats;Heimdahl;;Program Committee
+ASE;2011;Sarfraz;Khurshid;;Program Committee
+ASE;2011;Anna;Liu;;Program Committee
+ASE;2011;David;Lo;;Program Committee
+ASE;2011;Michael;Lowry;;Program Committee
+ASE;2011;Jonathan;Maletic;;Program Committee
+ASE;2011;Darko;Marinov;;Program Committee
+ASE;2011;Hong;Mei;;Program Committee
+ASE;2011;Tim;Menzies;;Program Committee
+ASE;2011;Charles;Pecheur;;Program Committee
+ASE;2011;John;Penix;;Program Committee
+ASE;2011;David;Redmiles;;Program Committee
+ASE;2011;Grigore;Rosu;;Program Committee
+ASE;2011;Motoshi;Saeki;;Program Committee
+ASE;2011;Beverly;Sanders;;Program Committee
+ASE;2011;Anita;Sarma;;Program Committee
+ASE;2011;Nikolai;Tillmann;;Program Committee
+ASE;2011;Richard;Torkar;;Program Committee
+ASE;2011;Willem;Visser;;Program Committee
+ASE;2011;Mike;Whalen;;Program Committee
+ASE;2011;Tao;Xie;;Program Committee
+ASE;2011;Albert;Zuendorf;;Program Committee
+ASE;2011;Sven;Apel;;Expert Review Panel
+ASE;2011;Krzystof;Czarnecki;;Expert Review Panel
+ASE;2011;Elisabetta;Di Nitto;;Expert Review Panel
+ASE;2011;Claudia;Ermel;;Expert Review Panel
+ASE;2011;Ian;Gorton;;Expert Review Panel
+ASE;2011;John;Grundy;;Expert Review Panel
+ASE;2011;Mary;Jean Harrold;;Expert Review Panel
+ASE;2011;Reiko;Heckel;;Expert Review Panel
+ASE;2011;Sinichi;Honiden;;Expert Review Panel
+ASE;2011;Andrew;Ireland;;Expert Review Panel
+ASE;2011;Yves;Ledru;;Expert Review Panel
+ASE;2011;Nenad;Medvidović;;Expert Review Panel
+ASE;2011;Alex;Orso;;Expert Review Panel
+ASE;2011;Houari;Sahraoui;;Expert Review Panel
+ASE;2011;Yannis;Smaragdakis;;Expert Review Panel
+ASE;2011;Gabi;Taentzer;;Expert Review Panel
+ASE;2011;Tetsuo;Tamai;;Expert Review Panel
+ASE;2011;Alex;Telea;;Expert Review Panel
+ASE;2011;Daniel;Varro;;Expert Review Panel
+ASE;2011;Virginie;Wiels;;Expert Review Panel
+ASE;2011;Andrea;Zisman;;Expert Review Panel
+ASE;2012;Michael;Goedicke;;General Chair
+ASE;2012;Tim;Menzies;;Program Chair
+ASE;2012;Motoshi;Saeki;;Program Chair
+ASE;2012;Ewen;Denney;;Tool Track Chair
+ASE;2012;Bernd;Fischer;;Tool Track Chair
+ASE;2012;Tevfik;Bultan;;Doctoral Symposium Chair
+ASE;2012;Andreas;Zeller;;Doctoral Symposium Chair
+ASE;2012;Darko;Marinov;;Workshop Chair
+ASE;2012;Gabriele;Taentzer;;Workshop Chair
+ASE;2012;Darko;Marinov;;Tutorials Chair
+ASE;2012;Gabriele;Taentzer;;Tutorials Chair
+ASE;2012;Gregory;Gay;;Publicity Chair
+ASE;2012;Patrick;Mäder;;Publicity Chair
+ASE;2012;Hironori;Washizaki;;Publicity Chair
+ASE;2012;Marco;Konersmann;;Finance Chair
+ASE;2012;Marco;Konersmann;;Local Committee
+ASE;2012;Patrick;Mäder;;Web Chair
+ASE;2012;Marcelo;d’Amorim;;Program Committee
+ASE;2012;Jamie;Andrews;;Program Committee
+ASE;2012;Nikolaj;Bjoerner;;Program Committee
+ASE;2012;Yuanfang;Cai;;Program Committee
+ASE;2012;Myra;Cohen;;Program Committee
+ASE;2012;Vittorio;Cortellessa;;Program Committee
+ASE;2012;Ivica;Crnkovic;;Program Committee
+ASE;2012;Bojan;Cukic;;Program Committee
+ASE;2012;Giovanni;Denaro;;Program Committee
+ASE;2012;Elisabetta;Di Nitto;;Program Committee
+ASE;2012;Alexander;Egyed;;Program Committee
+ASE;2012;Bernd;Fischer;;Program Committee
+ASE;2012;Jaco;Geldenhuys;;Program Committee
+ASE;2012;Lars;Grunske;;Program Committee
+ASE;2012;Arie;Gurfinkel;;Program Committee
+ASE;2012;Robert;Hall;;Program Committee
+ASE;2012;Reiko;Heckel;;Program Committee
+ASE;2012;Maritta;Heisel;;Program Committee
+ASE;2012;John;Hosking;;Program Committee
+ASE;2012;Kyo-Chul;Kang;;Program Committee
+ASE;2012;David;Lo;;Program Committee
+ASE;2012;Jonathan;Maletic;;Program Committee
+ASE;2012;Andrian;Marcus;;Program Committee
+ASE;2012;Katsuhisa;Maruyama;;Program Committee
+ASE;2012;Tim;Menzies;;Program Committee
+ASE;2012;Charles;Pecheur;;Program Committee
+ASE;2012;John;Penix;;Program Committee
+ASE;2012;David;Redmiles;;Program Committee
+ASE;2012;Grigore;Rosu;;Program Committee
+ASE;2012;Motoshi;Saeki;;Program Committee
+ASE;2012;Houari;Sahraoui;;Program Committee
+ASE;2012;Beverly;Sanders;;Program Committee
+ASE;2012;Anita;Sarma;;Program Committee
+ASE;2012;Gabriele;Taentzer;;Program Committee
+ASE;2012;Tetsuo;Tamai;;Program Committee
+ASE;2012;Nikolai;Tillmann;;Program Committee
+ASE;2012;Richard;Torkar;;Program Committee
+ASE;2012;Daniel;Varro;;Program Committee
+ASE;2012;Mike;Whalen;;Program Committee
+ASE;2012;Tao;Xie;;Program Committee
+ASE;2012;Ye;Yang;;Program Committee
+ASE;2012;Andreas;Zeller;;Program Committee
+ASE;2012;Albert;Zuendorf;;Program Committee
+ASE;2012;Doo-Hwan;Bae;;Expert Review Panel
+ASE;2012;Sjaak;Brinkkemper;;Expert Review Panel
+ASE;2012;Marsha;Chechik;;Expert Review Panel
+ASE;2012;Krzysztof;Czarnecki;;Expert Review Panel
+ASE;2012;Ewen;Denney;;Expert Review Panel
+ASE;2012;Ian;Gorton;;Expert Review Panel
+ASE;2012;Paul;Gruenbacher;;Expert Review Panel
+ASE;2012;John;Grundy;;Expert Review Panel
+ASE;2012;Mark;Harman;;Expert Review Panel
+ASE;2012;Shinichi;Honiden;;Expert Review Panel
+ASE;2012;Andrew;Ireland;;Expert Review Panel
+ASE;2012;Sarfraz;Khurshid;;Expert Review Panel
+ASE;2012;Yves;Ledru;;Expert Review Panel
+ASE;2012;Anna;Liu;;Expert Review Panel
+ASE;2012;Michael;Lowry;;Expert Review Panel
+ASE;2012;Darko;Marinov;;Expert Review Panel
+ASE;2012;Hong;Mei;;Expert Review Panel
+ASE;2012;Alessandro;Orso;;Expert Review Panel
+ASE;2012;Corina;Pasareanu;;Expert Review Panel
+ASE;2012;Douglas;Smith;;Expert Review Panel
+ASE;2012;Virginie;Wiels;;Expert Review Panel
+ASE;2012;Andrea;Zisman;;Expert Review Panel
+ASE;2012;David;Aspinall;;Tool Track Program Committee
+ASE;2012;Gilles;Barthe;;Tool Track Program Committee
+ASE;2012;Anthony;Cleve;;Tool Track Program Committee
+ASE;2012;Rohit;Gheyi;;Tool Track Program Committee
+ASE;2012;Christoph;Gladisch;;Tool Track Program Committee
+ASE;2012;Paul;Gruenbacher;;Tool Track Program Committee
+ASE;2012;Robert;Hall;;Tool Track Program Committee
+ASE;2012;Reiko;Heckel;;Tool Track Program Committee
+ASE;2012;John;Hosking;;Tool Track Program Committee
+ASE;2012;Andrew;Ireland;;Tool Track Program Committee
+ASE;2012;Anjali;Joshi;;Tool Track Program Committee
+ASE;2012;Jens;Krinke;;Tool Track Program Committee
+ASE;2012;Julia;Lawall;;Tool Track Program Committee
+ASE;2012;Michael;Lowry;;Tool Track Program Committee
+ASE;2012;John;Penix;;Tool Track Program Committee
+ASE;2012;Suresh;Thummalapenta;;Tool Track Program Committee
+ASE;2012;Daniel;Varro;;Tool Track Program Committee
+ASE;2012;Michael;Whalen;;Tool Track Program Committee
+ASE;2012;Andrea;Zisman;;Tool Track Program Committee
+ASE;2012;Ivar;Jacobson;;Keynote Speaker
+ASE;2012;Mark;Harman;;Keynote Speaker
+ASE;2013;Ewen;Denney;;General Chair
+ASE;2013;Tevfik;Bultan;;Program Chair
+ASE;2013;Andreas;Zeller;;Program Chair
+ASE;2013;Marcelo;d'Amorim;;Workshop Chair
+ASE;2013;David;Lo;;Workshop Chair
+ASE;2013;Andrew;Ireland;;Tool Track Chair
+ASE;2013;Neha;Rungta;;Tool Track Chair
+ASE;2013;Paul;Gruenbacher;;Doctoral Symposium Chair
+ASE;2013;Marsha;Chechik;;Doctoral Symposium Chair
+ASE;2013;Ganesh;Pai;;Finance Chair
+ASE;2013;Ganesh;Pai;;Local Committee
+ASE;2013;Ganesh;Pai;;Web Chair
+ASE;2013;Christoph;Gladisch;;Publicity Chair
+ASE;2013;Tien;Nguyen;;Social Media Chair
+ASE;2013;Sarah;Thompson;;Web Chair
+ASE;2013;Reid;Holmes;;Mobile Chair
+ASE;2013;Ronnie;Phillips;;Student Volunteers Chair
+ASE;2013;Andrew;Begel;;Program Committee
+ASE;2013;Myra;Cohen;;Program Committee
+ASE;2013;Danny;Dig;;Program Committee
+ASE;2013;Bernd;Fischer;;Program Committee
+ASE;2013;Gordon;Fraser;;Program Committee
+ASE;2013;Harald;Gall;;Program Committee
+ASE;2013;Dimitra;Giannakopoulou;;Program Committee
+ASE;2013;Alex;Groce;;Program Committee
+ASE;2013;Paul;Grünbacher;;Program Committee
+ASE;2013;Arie;Gurfinkel;;Program Committee
+ASE;2013;William;G.J. Halfond;;Program Committee
+ASE;2013;Mark;Harman;;Program Committee
+ASE;2013;Sunghun;Kim;;Program Committee
+ASE;2013;David;Lo;;Program Committee
+ASE;2013;Shahar;Maoz;;Program Committee
+ASE;2013;Darko;Marinov;;Program Committee
+ASE;2013;Tim;Menzies;;Program Committee
+ASE;2013;Mira;Mezini;;Program Committee
+ASE;2013;Tien;Nguyen;;Program Committee
+ASE;2013;Corina;Pasareanu;;Program Committee
+ASE;2013;Lori;Pollock;;Program Committee
+ASE;2013;Martin;Robillard;;Program Committee
+ASE;2013;Grigore;Rosu;;Program Committee
+ASE;2013;Abhik;Roychoudhury;;Program Committee
+ASE;2013;Gabriele;Taentzer;;Program Committee
+ASE;2013;Nikolai;Tillmann;;Program Committee
+ASE;2013;Sebastian;Uchitel;;Program Committee
+ASE;2013;Willem;Visser;;Program Committee
+ASE;2013;Lu;Zhang;;Program Committee
+ASE;2013;Charles;Zhang;;Program Committee
+ASE;2013;Sven;Apel;;Expert Review Panel
+ASE;2013;Earl;Barr;;Expert Review Panel
+ASE;2013;Samik;Basu;;Expert Review Panel
+ASE;2013;Yuriy;Brun;;Expert Review Panel
+ASE;2013;Yuanfang;Cai;;Expert Review Panel
+ASE;2013;Marsha;Chechik;;Expert Review Panel
+ASE;2013;Jane;Cleland-Huang;;Expert Review Panel
+ASE;2013;Christoph;Csallner;;Expert Review Panel
+ASE;2013;Jyotirmoy;Deshmukh;;Expert Review Panel
+ASE;2013;Xiang;Fu;;Expert Review Panel
+ASE;2013;Alessandra;Gorla;;Expert Review Panel
+ASE;2013;John;Grundy;;Expert Review Panel
+ASE;2013;Lars;Grunske;;Expert Review Panel
+ASE;2013;Sylvain;Hallé;;Expert Review Panel
+ASE;2013;Christian;Hammer;;Expert Review Panel
+ASE;2013;John;Hosking;;Expert Review Panel
+ASE;2013;Lingxiao;Jiang;;Expert Review Panel
+ASE;2013;Sarfraz;Khurshid;;Expert Review Panel
+ASE;2013;Julia;Lawall;;Expert Review Panel
+ASE;2013;Nenad;Medvidovic;;Expert Review Panel
+ASE;2013;Hong;Mei;;Expert Review Panel
+ASE;2013;Atif;Memon;;Expert Review Panel
+ASE;2013;Alessandro;Orso;;Expert Review Panel
+ASE;2013;Klaus;Ostermann;;Expert Review Panel
+ASE;2013;Andrey;Rybalchenko;;Expert Review Panel
+ASE;2013;Yannis;Smaragdakis;;Expert Review Panel
+ASE;2013;Lin;Tan;;Expert Review Panel
+ASE;2013;Laurie;Williams;;Expert Review Panel
+ASE;2013;Thomas;Zimmerman;;Expert Review Panel
+ASE;2013;Joseph;M. Hellerstein;;Keynote Speaker
+ASE;2013;Jeremy;Frank;;Keynote Speaker
+ASE;2014;Ivica;Crnkovic;;General Chair
+ASE;2014;Marsha;Chechik;;Program Chair
+ASE;2014;Paul;Grünbacher;;Program Chair
+ASE;2014;Arie;Gurfinkel;;Tool Track Chair
+ASE;2014;Gabriele;Taentzer;;Tool Track Chair
+ASE;2014;Elisabetta;Di Nitto;;Tutorials Chair
+ASE;2014;Michel;Chaudron;;Tutorials Chair
+ASE;2014;Lars;Grunske;;Workshop Chair
+ASE;2014;Mats;Heimdahl;;Workshop Chair
+ASE;2014;Yuanfang;Cai;;Publicity Chair
+ASE;2014;Mehrdad;Sabetzadeh;;Publicity Chair
+ASE;2014;Henry;Muccini;;Publicity Chair
+ASE;2014;Hongyu;Pei-Breivold;;Publication Chair
+ASE;2014;Hüseyin;Aysan;;Web Chair
+ASE;2014;Josip;Maras;;Web Chair
+ASE;2014;Malin;Rosqvist;;Local Chair
+ASE;2014;Reid;Holmes;;Mobile Chair
+ASE;2014;Aneta;Vulgarakis;;Local Committee
+ASE;2014;Antonio;Cicchetti;;Local Committee
+ASE;2014;Federico;Ciccozzi;;Local Committee
+ASE;2014;Juraj;Feljan;;Local Committee
+ASE;2014;Benoit;Baudry;;Program Committee
+ASE;2014;Nelly;Bencomo;;Program Committee
+ASE;2014;Christian;Bird;;Program Committee
+ASE;2014;Yuriy;Brun;;Program Committee
+ASE;2014;Tevfik;Bultan;;Program Committee
+ASE;2014;Jordi;Cabot;;Program Committee
+ASE;2014;Yuanfang;Cai;;Program Committee
+ASE;2014;Radu;Calinescu;;Program Committee
+ASE;2014;Michel;Chaudron;;Program Committee
+ASE;2014;Jane;Cleland-Huang;;Program Committee
+ASE;2014;Myra;Cohen;;Program Committee
+ASE;2014;Vittorio;Cortellessa;;Program Committee
+ASE;2014;Elisabetta;Di Nitto;;Program Committee
+ASE;2014;Massimiliano;Di Penta;;Program Committee
+ASE;2014;Danny;Dig;;Program Committee
+ASE;2014;Schahram;Dustdar;;Program Committee
+ASE;2014;Bernd;Fischer;;Program Committee
+ASE;2014;Robert;France;;Program Committee
+ASE;2014;Gordon;Fraser;;Program Committee
+ASE;2014;Diego;Garbervetsky;;Program Committee
+ASE;2014;Michael;Goedicke;;Program Committee
+ASE;2014;Lars;Grunske;;Program Committee
+ASE;2014;Arie;Gurfinkel;;Program Committee
+ASE;2014;Robert;Hall;;Program Committee
+ASE;2014;Reiko;Heckel;;Program Committee
+ASE;2014;Mats;Heimdahl;;Program Committee
+ASE;2014;John;G. Hosking;;Program Committee
+ASE;2014;Christian;Kaestner;;Program Committee
+ASE;2014;David;Lo;;Program Committee
+ASE;2014;Shahar;Maoz;;Program Committee
+ASE;2014;Henry;Muccini;;Program Committee
+ASE;2014;Shiva;Nejati;;Program Committee
+ASE;2014;Tien;N. Nguyen;;Program Committee
+ASE;2014;Jocelyn;Simmonds;;Program Committee
+ASE;2014;Tetsuo;Tamai;;Program Committee
+ASE;2014;Lin;Tan;;Program Committee
+ASE;2014;Daniel;Varro;;Program Committee
+ASE;2014;Michael;Whalen;;Program Committee
+ASE;2014;Andreas;Zeller;;Program Committee
+ASE;2014;Jamie;Andrews;;Expert Review Panel
+ASE;2014;Sven;Apel;;Expert Review Panel
+ASE;2014;Alexander;Egyed;;Expert Review Panel
+ASE;2014;Harald;Gall;;Expert Review Panel
+ASE;2014;Dimitra;Giannakopoulou;;Expert Review Panel
+ASE;2014;John;Grundy;;Expert Review Panel
+ASE;2014;Mark;Harman;;Expert Review Panel
+ASE;2014;Paola;Inverardi;;Expert Review Panel
+ASE;2014;Andrew;Ireland;;Expert Review Panel
+ASE;2014;Sarfraz;Khurshid;;Expert Review Panel
+ASE;2014;Akash;Lal;;Expert Review Panel
+ASE;2014;Axel;Legay;;Expert Review Panel
+ASE;2014;Emmanuel;Letier;;Expert Review Panel
+ASE;2014;Darko;Marinov;;Expert Review Panel
+ASE;2014;Tim;Menzies;;Expert Review Panel
+ASE;2014;Martin;Naedele;;Expert Review Panel
+ASE;2014;Corina;Pasareanu;;Expert Review Panel
+ASE;2014;Charles;Pecheur;;Expert Review Panel
+ASE;2014;Lori;Pollock;;Expert Review Panel
+ASE;2014;Abhik;Roychoudhury;;Expert Review Panel
+ASE;2014;Motoshi;Saeki;;Expert Review Panel
+ASE;2014;Gabriele;Taentzer;;Expert Review Panel
+ASE;2014;Nikolai;Tillmann;;Expert Review Panel
+ASE;2014;Paolo;Tonella;;Expert Review Panel
+ASE;2014;Willem;Visser;;Expert Review Panel
+ASE;2014;Tao;Xie;;Expert Review Panel
+ASE;2014;Thomas;Zimmermann;;Expert Review Panel
+ASE;2014;Andrea;Zisman;;Expert Review Panel
+ASE;2014;Luciano;Floridi;;Keynote Speaker
+ASE;2014;Andrei;Voronkov;;Keynote Speaker
+ASE;2014;Magnus;Larsson;;Keynote Speaker
 ATEM;2006;Jean-Marie;Favre;;Organising Committee
 ATEM;2006;Dragan;Gasevic;;Organising Committee
 ATEM;2006;Ralf;Lammel;;Organising Committee
@@ -443,8 +862,7 @@ CBSE;2012;Clemens;Szyperski;;Program Committee
 CBSE;2012;Massimo;Tivoli;;Program Committee
 CBSE;2012;Joshua;Garcia;;Web Chair
 CBSE;2013;Philippe;Kruchten;;General Chair
-CBSE;2013;Finances;Chair;;General Chair
-CBSE;2013;Ali;Mesbah;;General Chair
+CBSE;2013;Ali;Mesbah;;Finance Chair
 CBSE;2013;Davide;Falessi;;Publicity Chair
 CBSE;2013;Ipek;Ozkaya;;Publication Chair
 CBSE;2013;Dimitra;Giannakopoulou;;Program Chair
@@ -2005,8 +2423,7 @@ MSR;2009;Walt;Scacchi;;Program Committee
 MSR;2009;Tao;Xie;;Program Committee
 MSR;2009;Andy;Zaidman;;Program Committee
 MSR;2009;Thomas;Zimmermann;;Program Committee
-MSR;2009;Poster;Chair;;Program Committee
-MSR;2009;Miryung;Kim;;Program Committee
+MSR;2009;Miryung;Kim;;Poster Chair
 MSR;2009;Dirk;Beyer;;Local Chair
 MSR;2009;Abram;Hindle;;Web Chair
 MSR;2009;Ahmed;E. Hassan;;Steering Committee

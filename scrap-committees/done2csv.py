@@ -10,6 +10,7 @@ ROLEZ = {\
 	'DaCh': 'Data Chair',
 	'DSCh': 'Doctoral Symposium Chair',
 	'ERCh': 'ERA Track Chair',
+	'ERP' : 'Expert Review Panel',
 	'FiCh': 'Finance Chair',
 	'ChCh': 'Challenge Chair',
 	'ChCo': 'Challenge Committee',
@@ -18,6 +19,8 @@ ROLEZ = {\
 	'ITPC': 'Industrial Track Program Committee',
 	'KN':   'Keynote Speaker',
 	'LoCh': 'Local Chair',
+	'LoCo': 'Local Committee',
+	'MoCh': 'Mobile Chair',
 	'OrCh': 'Organising Chair',
 	# 'OrCo': 'Organiser',
 	'OrCo': 'Organising Committee',
@@ -32,8 +35,10 @@ ROLEZ = {\
 	'PuCh': 'Publication Chair',
 	'SaCh': 'Satellite Events Chair',
 	'ScCo': 'Scientific Committee',
+	'ScLi': 'Scientific Liaison',
 	'SMCh': 'Social Media Chair',
 	'SRCh': 'Student Research Competition Chair',
+	'SpCh': 'Sponsor Chair',
 	'StCh': 'Steering Chair',
 	'StCo': 'Steering Committee',
 	'SVCh': 'Student Volunteers Chair',
@@ -60,6 +65,10 @@ for line in lines:
 			name = name.split(sep)[0]
 	if name.startswith('* ') or name.startswith('- '):
 		name = name[2:].strip()
+	if name.startswith('Prof.'):
+		name = name[5:].strip()
+	if name.startswith('Dr.'):
+		name = name[3:].strip()
 	if name.count(' ') > 2:
 		name = name.split('   ')[0]
 	# Conference;Year;First Name;Last Name;Sex;Role

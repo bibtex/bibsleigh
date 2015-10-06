@@ -6,7 +6,7 @@
 import glob, os.path
 from fancy.Templates import uberHTML, confHTML, bibHTML
 from lib.JSON import jsonkv, parseJSON
-from lib.LP import listify
+from lib.LP import listify, uniq
 from fancy.ANSI import C
 
 def escape(s):
@@ -444,7 +444,8 @@ class Venue(Unser):
 					self.tags[k].extend(ts[k])
 		return self.tags
 	def getQTags(self):
-		if 'tagged' not in self.json.keys():
+		# if 'tagged' not in self.json.keys():
+		if True:
 			tpv = {}
 			for y in self.years:
 				for c in y.confs:
@@ -455,6 +456,8 @@ class Venue(Unser):
 							else:
 								tpv[t] = 1
 			tops = [k for k in tpv.keys() if tpv[k] > 1]
+			# tagFreqs = uniq([tpv[k] for k in tpv.keys()]) - [1]
+			# freqPerTag = [x for x in tagFreqs, for k in tpv.keys() if tpv[t]==x]
 			toptags = sorted(tops, key=lambda z: -tpv[z])#[:10]
 			tagged = [[t, tpv[t]] for t in toptags]
 			if tagged:
@@ -627,6 +630,9 @@ class Conf(Unser):
 			# 	c.replace(' ', '_'),
 			# 	c, t) for c, t in positions]) + '</h3>'
 		if 'tagged' in self.json.keys():
+			# HACK
+			if not isinstance(self.json['tagged'][0], list):
+				self.json['tagged'] = [self.json['tagged']]
 			toptags = '<div class="rbox">'
 			for t in self.json['tagged'][:10]:
 				toptags += '<span class="tag">{1} ×<a href="tag/{0}.html">#{0}</a></span><br/>'.format(*t)
@@ -679,7 +685,8 @@ class Conf(Unser):
 					self.tags[k].append(ts[k])
 		return self.tags
 	def getQTags(self):
-		if 'tagged' not in self.json.keys():
+		# if 'tagged' not in self.json.keys():
+		if True:
 			tpi = {}
 			for p in self.papers:
 				for k in p.getQTags():

@@ -2,8 +2,8 @@
      General Chair
 GeCh Philippe Kruchten, University of British Columbia (Canada)
      
-GeCh Finances Chair
-GeCh Ali Mesbah, University of British Columbia (Canada)
+     Finances Chair
+FiCh Ali Mesbah, University of British Columbia (Canada)
      
      Publicity Chair
 PbCh Davide Falessi, Fraunhofer Center (USA)

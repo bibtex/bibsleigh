@@ -58,15 +58,15 @@ if __name__ == "__main__":
 	renameto = parseJSON('_renameto.json')
 	# Data from the conferenceMetrics repo
 	csv = []
-	##### f = open('../conferenceMetrics/data/SE-conf-roles.csv', 'r')
-	##### for line in f.readlines():
-	##### 	# Conference;Year;First Name;Last Name;Sex;Role
-	##### 	csv.append(line.strip().split(';'))
-	##### f.close()
-	##### f = open('scraping/scraped-by-grammarware.csv', 'r')
-	##### for line in f.readlines():
-	##### 	csv.append(line.strip().split(';'))
-	##### f.close()
+	f = open('../conferenceMetrics/data/SE-conf-roles.csv', 'r')
+	for line in f.readlines():
+		# Conference;Year;First Name;Last Name;Sex;Role
+		csv.append(line.strip().split(';'))
+	f.close()
+	f = open('scrap-committees/scraped-by-grammarware.csv', 'r')
+	for line in f.readlines():
+		csv.append(line.strip().split(';'))
+	f.close()
 	# All known contributors
 	people = {}
 	for fn in glob.glob(ienputdir + '/people/*.json'):
