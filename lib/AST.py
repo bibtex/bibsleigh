@@ -492,9 +492,13 @@ class Venue(Unser):
 		# now brands
 		brands = []
 		for brand in self.brands:
+			if 'venue' in brand.json.keys():
+				img = brand.json['venue']
+			else:
+				img = brand.getKey().lower()
 			brands.append('<div><a href="{name}.brand.html"><img src="stuff/{lowname}.png" class="abc" alt="{name}" title="{longname}"></a><abbr title="{longname}">{name}</abbr></div>'.format(\
 				name=brand.getKey(),\
-				lowname=brand.getKey().lower(),\
+				lowname=img,\
 				longname=brand.json['title'],\
 				))
 		ABBR = self.get('name')
