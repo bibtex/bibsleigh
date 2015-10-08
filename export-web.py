@@ -31,10 +31,17 @@ if __name__ == "__main__":
 	f.close()
 	# generate all individual pages
 	for v in sleigh.venues:
-		r = C.blue(v.getKey()) + ' => '
+		r = C.blue(v.getKey())
 		f = open(outputdir+'/'+v.getKey()+'.html', 'w')
 		f.write(v.getPage())
 		f.close()
+		if v.brands:
+			r += '{' + '+'.join([C.blue(b.getKey()) for b in v.brands]) + '}'
+		for b in v.brands:
+			f = open(outputdir+'/'+b.getKey()+'.brand.html', 'w')
+			f.write(b.getPage())
+			f.close()
+		r += ' => '
 		for c in v.getConfs():
 			f = open(outputdir+'/'+c.getKey()+'.html', 'w')
 			f.write(c.getPage())
@@ -87,9 +94,9 @@ if __name__ == "__main__":
 		icons.append(pic)
 	# find last year of each venue
 	newstuff = ''
-	for ven in glob.glob(corpusdir + '/*'):
-		venname = ven.split('/')[-1]
-		newstuff += '<strong><a href="http://dblp.uni-trier.de/db/conf/{}/">{} {}</a></strong>, '.format(venname.lower(), venname, nextYear(ven))
+	# for ven in glob.glob(corpusdir + '/*'):
+	# 	venname = ven.split('/')[-1]
+	# 	newstuff += '<strong><a href="http://dblp.uni-trier.de/db/conf/{}/">{} {}</a></strong>, '.format(venname.lower(), venname, nextYear(ven))
 		# print(ven.split('/')[-1], ':', lastYear(ven))
 	# write "more info" file
 	f = open(outputdir+'/about.html', 'w')

@@ -4,9 +4,9 @@
 # a module with classes forming the abstract syntax of BibSLEIGH
 
 import glob, os.path
-from fancy.Templates import uberHTML, confHTML, bibHTML
+from fancy.Templates import uberHTML, confHTML, bibHTML, brandHTML
 from lib.JSON import jsonkv, parseJSON
-from lib.LP import listify, uniq
+from lib.LP import listify
 from fancy.ANSI import C
 
 def escape(s):
@@ -256,13 +256,21 @@ class Sleigh(Unser):
 		super(Sleigh, self).__init__('', idir)
 		self.venues = []
 		self.n2f = name2file
+		jsons = {}
+		for d in glob.glob(idir+'/*.json'):
+			jsons[d.split('/')[-1].split('.')[0]] = d
 		for d in glob.glob(idir+'/*'):
-			if d.endswith('.md'):
+			if d.endswith('.md') or d.endswith('.json'):
 				continue
-			self.venues.append(Venue(d, idir, name2file, self))
+			if d.split('/')[-1] not in jsons.keys():
+				print(C.red('Legacy non-top definition of'), d)
+				self.venues.append(Venue(d, idir, name2file, self))
+			else:
+				self.venues.append(Venue(d, idir, name2file, self))
 	def getPage(self):
 		return uberHTML.format(\
-			cxVen=len(self.venues),
+			cxDom=len(self.venues),
+			cxVen=sum([len(v.brands) for v in self.venues]),
 			cxPap=self.numOfPapers(),
 			cxVol=self.numOfVolumes(),
 			items='\n'.join([v.getItem() for v in self.venues]))
@@ -307,17 +315,113 @@ class Sleigh(Unser):
 					self.tags[k].extend(ts[k])
 		return self.tags
 
+class Brand(Unser):
+	def __init__(self, f, hdir, name2file, parent):
+		super(Brand, self).__init__(f, hdir)
+		self.name = last(f)
+		self.confs = {}
+		self.json = parseJSON(f)
+		self.back = parent
+	def addConf(self, year, conf):
+		if year not in self.confs.keys():
+			self.confs[year] = []
+		self.confs[year].append(conf)
+	def offer(self, year, conf):
+		ckey = conf.getKey()
+		for rule in listify(self.json['select']):
+			if ckey.startswith(rule):
+				self.addConf(year, conf)
+				# print(C.red(conf.getKey()), ' was accepted by ', C.red(self.name))
+				return
+	def getPage(self):
+		if 'eventurl' in self.json.keys():
+			if 'twitter' in self.json.keys():
+				ev2 = ' (<a href="https://twitter.com/{twi}">@{twi}</a>)</h3>'.format(twi=self.json['twitter'])
+			else:
+				ev2 = ''
+			if isinstance(self.json['eventurl'], list):
+				urls = ['<a href="{uri}">{uri}</a>'.format(uri=u) for u in self.json['eventurl']]
+				ev = '<h3>Event series pages: ' + ', '.join(urls) + ev2
+			else:
+				urls = '<a href="{uri}">{uri}</a>'.format(uri=self.json['eventurl'])
+				ev = '<h3>Event series page: ' + urls + ev2
+		else:
+			ev = ''
+		ads = [c.json['address'][-1] for c in self.getConfs() if 'address' in c.json.keys()]
+		if ads:
+			clist = {}
+			for a in ads:
+				if a in clist.keys():
+					clist[a] += 1
+				else:
+					clist[a] = 1
+			adds = '<div class="rbox">' + '<br/>\n'.join(['{} × {}'.format(clist[a], a) for a in sorted(clist.keys())]) + '</div>'
+		else:
+			adds = ''
+		if 'tagged' in self.json.keys():
+			# gracious continuation
+			if adds:
+				adds = adds[:-6]
+				toptags = '<hr/>\n'
+			else:
+				toptags = '<div class="rbox">'
+			for t in self.json['tagged'][:10]:
+				toptags += '<span class="tag">{1} ×<a href="tag/{0}.html">#{0}</a></span><br/>\n'.format(*t)
+			toptags += '</div>'
+		else:
+			toptags = ''
+		ev = adds + toptags + ev
+		ABBR = self.get('name')
+		title = self.get('title')
+		img = self.json['venue'].lower() if 'venue' in self.json.keys() else ABBR.lower()
+		eds = ['<dt>{}</dt>{}'.format(y, '\n'.join([c.getItem() for c in self.confs[y]])) \
+			for y in sorted(self.confs.keys(), reverse=True)]
+		# # return '<dt>{}</dt>{}'.format(self.year, '\n'.join([c.getItem() for c in self.confs]))
+		# eds = [y.getItem() for y in sorted(self.years, reverse=True, key=lambda x: x.year)]
+		return brandHTML.format(\
+			filename='{0}/{0}.json'.format(self.getPureName()),\
+			title=ABBR,\
+			img=img,\
+			fname=('{} ({})'.format(title, ABBR)),\
+			venpage=ev,\
+			parent=self.back.getKey(),\
+			dl=''.join(eds))
+	def getConfs(self):
+		res = []
+		for y in self.confs.keys():
+			res.extend(self.confs[y])
+		return res
+
 
 class Venue(Unser):
 	def __init__(self, d, hdir, name2file, parent):
 		super(Venue, self).__init__(d, hdir)
 		self.years = []
+		self.brands = []
 		self.n2f = name2file
+		if os.path.exists(d+'.json'):
+			# new style
+			print(C.blue(d), 'is new style')
+			self.json = parseJSON(d+'.json')
+		else:
+			# legacy style
+			print(C.red(d), 'is legacy style')
+			self.json = []
+		for f in glob.glob(d+'/*.json'):
+			if not self.json:
+				self.json = parseJSON(f)
+			else:
+				self.brands.append(Brand(f, self.homedir, name2file, self))
 		for f in glob.glob(d+'/*'):
 			if f.endswith('.json'):
-				self.json = parseJSON(f)
+				# already processed
+				continue
 			elif os.path.isdir(f):
-				self.years.append(Year(f, self.homedir, name2file, self))
+				y = Year(f, self.homedir, name2file, self)
+				self.years.append(y)
+				for b in self.brands:
+					for c in y.confs:
+						b.offer(y.year, c)
 			else:
 				print('File out of place:', f)
 		self.back = parent
@@ -385,6 +489,14 @@ class Venue(Unser):
 		else:
 			toptags = ''
 		ev = adds + toptags + ev
+		# now brands
+		brands = []
+		for brand in self.brands:
+			brands.append('<div><a href="{name}.brand.html"><img src="stuff/{lowname}.png" class="abc" alt="{name}" title="{longname}"></a><abbr title="{longname}">{name}</abbr></div>'.format(\
+				name=brand.getKey(),\
+				lowname=brand.getKey().lower(),\
+				longname=brand.json['title'],\
+				))
 		ABBR = self.get('name')
 		title = self.get('title')
 		img = self.json['venue'].lower() if 'venue' in self.json.keys() else ABBR.lower()
@@ -395,6 +507,7 @@ class Venue(Unser):
 			img=img,\
 			fname=('{} ({})'.format(title, ABBR)),\
 			venpage=ev,\
+			brands='\n'.join(brands),\
 			dl=''.join(eds))
 	def getConfs(self):
 		res = []
