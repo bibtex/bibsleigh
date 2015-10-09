@@ -39,7 +39,7 @@ StCo Matthew Dwyer, University of Nebraska USA
 PrCo Franck Barbier, University of Pau France
 PrCo Steffen Becker, University of Paderborn Germany
 PrCo Fernando Brito e Abreu, DCTI/ISCTE-IUL and CITI/FCT/UNL Portugal
-PrCo Jan Carlson Mälardalen, University Sweden
+PrCo Jan Carlson, Mälardalen, University Sweden
 PrCo Guglielmo De Angelis, National Research Council (CNR) Italy
 PrCo Laurence Duchien, University of Lille France
 PrCo Anthony Earl, Hewlett Packard USA

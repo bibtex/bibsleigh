@@ -20,7 +20,7 @@ StCo Matthew Dwyer, University of Nebraska USA
      Program Committee
      Name Surname Affiliation Country
 PrCo Mikael Åkerholm, CrossControl Sweden
-PrCo Eduardo Almeida, Federal University of Bahia Brazil
+PrCo Eduardo Santana de Almeida, Federal University of Bahia Brazil
 PrCo Jakob Axelsson, Swedish Institute of Computer Science and Mälardalen University Sweden
 PrCo Franck Barbier, University of Pau France
 PrCo Steffen Becker, University of Paderborn Germany

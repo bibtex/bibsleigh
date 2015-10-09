@@ -428,7 +428,7 @@ ATEM;2007;Andreas;Winter;;Organising Committee
 CBSE;2000;Mikio;Aoyama;;Organising Committee
 CBSE;2000;Alan;Brown;;Organising Committee
 CBSE;2000;Wojtek;Kozacynski;;Organising Committee
-CBSE;2000;Philippe;Kruchten Rational;;Organising Committee
+CBSE;2000;Philippe;Kruchten;;Organising Committee
 CBSE;2000;William;Lee;;Organising Committee
 CBSE;2000;Jim;Ning;;Organising Committee
 CBSE;2000;Mike;Sparling;;Organising Committee
@@ -777,7 +777,7 @@ CBSE;2011;Matthew;Dwyer;;Steering Committee
 CBSE;2011;Franck;Barbier;;Program Committee
 CBSE;2011;Steffen;Becker;;Program Committee
 CBSE;2011;Fernando;Brito e Abreu;;Program Committee
-CBSE;2011;Jan;Carlson Mälardalen;;Program Committee
+CBSE;2011;Jan;Carlson;;Program Committee
 CBSE;2011;Guglielmo;De Angelis;;Program Committee
 CBSE;2011;Laurence;Duchien;;Program Committee
 CBSE;2011;Anthony;Earl;;Program Committee
@@ -830,7 +830,7 @@ CBSE;2012;Judith;Stafford;;Steering Committee
 CBSE;2012;Clemens;Szyperski;;Steering Committee
 CBSE;2012;Matthew;Dwyer;;Steering Committee
 CBSE;2012;Mikael;Åkerholm;;Program Committee
-CBSE;2012;Eduardo;Almeida;;Program Committee
+CBSE;2012;Eduardo;Santana de Almeida;;Program Committee
 CBSE;2012;Jakob;Axelsson;;Program Committee
 CBSE;2012;Franck;Barbier;;Program Committee
 CBSE;2012;Steffen;Becker;;Program Committee
@@ -929,7 +929,7 @@ CBSE;2014;Lionel;Seinturier;;General Chair
 CBSE;2014;Laurence;Duchien;;Organising Committee
 CBSE;2014;Romain;Rouvoy;;Publicity Chair
 CBSE;2014;Martin;Monperrus;;Organising Committee
-CBSE;2014;Eduardo;Almeida;;Program Chair
+CBSE;2014;Eduardo;Santana de Almeida;;Program Chair
 CBSE;2014;Jan;Carlson;;Program Chair
 CBSE;2014;Franck;Barbier;;Program Committee
 CBSE;2014;Steffen;Becker;;Program Committee
@@ -2006,260 +2006,260 @@ LDTA;2012;Mark;van den Brand;;Steering Committee
 LDTA;2012;Görel;Hedin;;Steering Committee
 LDTA;2012;Tony;Sloane;;Steering Committee
 LDTA;2012;Eric;Van Wyk;;Steering Committee
-MODELS;2013;Jeff;Gray;;General Chair
-MODELS;2013;Antonio;Vallecillo;;General Chair
-MODELS;2013;Peter;Clarke;;Local Chair
-MODELS;2013;Ana;Moreira;;Program Chair
-MODELS;2013;Bernhard;Schätz;;Program Chair
-MODELS;2013;Magnus;Christerson;;Industrial Track Chair
-MODELS;2013;Fabio;Costa;;Workshop Chair
-MODELS;2013;Eugene;Syriani;;Workshop Chair
-MODELS;2013;Jordi;Cabot;;Tutorials Chair
-MODELS;2013;Jörg;Kienzle;;Tutorials Chair
-MODELS;2013;Silvia;Abrahao;;Panel Chair
-MODELS;2013;Isidro;Ramos;;Panel Chair
-MODELS;2013;Yan;Liu;;Tool Track Chair
-MODELS;2013;Steffen;Zschaler;;Tool Track Chair
-MODELS;2013;Benoit;Baudry;;Poster Chair
-MODELS;2013;Sudipto;Ghosh;;Poster Chair
-MODELS;2013;Ethan;Jackson;;Student Research Competition Chair
-MODELS;2013;Davide;Di Ruscio;;Student Research Competition Chair
-MODELS;2013;James;Hill;;Publicity Chair
-MODELS;2013;Martina;Seidl;;Publicity Chair
-MODELS;2013;Ralf;Lämmel;;Social Media Chair
-MODELS;2013;Vadim;Zaytsev;;Social Media Chair
-MODELS;2013;Manuel;Wimmer;;Publication Chair
-MODELS;2013;Martin;Gogolla;;Doctoral Symposium Chair
-MODELS;2013;Jonathan;Corley;;Student Volunteers Chair
-MODELS;2013;Raymond;Chang Lau;;Student Volunteers Chair
-MODELS;2013;Robert;Tairas;;Web Chair
-MODELS;2013;Ana;Moreira;;Program Board Chair
-MODELS;2013;Bernhard;Schätz;;Program Board Chair
-MODELS;2013;Lionel;Briand;;Program Board
-MODELS;2013;Jean;Michel Bruel;;Program Board
-MODELS;2013;Krzysztof;Czarnecki;;Program Board
-MODELS;2013;Juergen;Dingel;;Program Board
-MODELS;2013;Gregor;Engels;;Program Board
-MODELS;2013;Robert;France;;Program Board
-MODELS;2013;Martin;Gogolla;;Program Board
-MODELS;2013;Jean-Marc;Jezequel;;Program Board
-MODELS;2013;Richard;Paige;;Program Board
-MODELS;2013;Dorina;Petriu;;Program Board
-MODELS;2013;Bernhard;Rumpe;;Program Board
-MODELS;2013;Jon;Whittle;;Program Board
-MODELS;2013;Ana;Moreira;;Program Chair
-MODELS;2013;Vasco;Amaral;;Program Committee
-MODELS;2013;Daniel;Amyot;;Program Committee
-MODELS;2013;João;Araújo;;Program Committee
-MODELS;2013;Colin;Atkinson;;Program Committee
-MODELS;2013;Mira;Balaban;;Program Committee
-MODELS;2013;Benoit;Baudry;;Program Committee
-MODELS;2013;Nelly;Bencomo;;Program Committee
-MODELS;2013;Xavier;Blanc;;Program Committee
-MODELS;2013;Ruth;Breu;;Program Committee
-MODELS;2013;Jordi;Cabot;;Program Committee
-MODELS;2013;Alessandra;Cavarra;;Program Committee
-MODELS;2013;Siobhán;Clarke;;Program Committee
-MODELS;2013;Jane;Cleland-Huang;;Program Committee
-MODELS;2013;Alexander;Egyed;;Program Committee
-MODELS;2013;Rik;Eshuis;;Program Committee
-MODELS;2013;Lidia;Fuentes;;Program Committee
-MODELS;2013;Alessandro;Garcia;;Program Committee
-MODELS;2013;Geri;Georg;;Program Committee
-MODELS;2013;Sebastien;Gerard;;Program Committee
-MODELS;2013;Holger;Giese;;Program Committee
-MODELS;2013;John;Grundy;;Program Committee
-MODELS;2013;Øystein;Haugen;;Program Committee
-MODELS;2013;Zhenjiang;Hu;;Program Committee
-MODELS;2013;Heinrich;Hussmann;;Program Committee
-MODELS;2013;Gerti;Kappel;;Program Committee
-MODELS;2013;Gabor;Karsai;;Program Committee
-MODELS;2013;Ingolf;Krueger;;Program Committee
-MODELS;2013;Thomas;Kühne;;Program Committee
-MODELS;2013;Yvan;Labiche;;Program Committee
-MODELS;2013;Philippe;Lahire;;Program Committee
-MODELS;2013;Juan;de Lara;;Program Committee
-MODELS;2013;Yves;Le Traon;;Program Committee
-MODELS;2013;Hong;Mei;;Program Committee
-MODELS;2013;Dragan;Milicev;;Program Committee
-MODELS;2013;Raffaela;Mirandola;;Program Committee
-MODELS;2013;Pierre-Alain;Muller;;Program Committee
-MODELS;2013;Gunter;Mussbacher;;Program Committee
-MODELS;2013;Ileana;Ober;;Program Committee
-MODELS;2013;Alfonso;Pierantonio;;Program Committee
-MODELS;2013;Gianna;Reggio;;Program Committee
-MODELS;2013;Gustavo;Rossi;;Program Committee
-MODELS;2013;Pete;Sawyer;;Program Committee
-MODELS;2013;Andy;Schuerr;;Program Committee
-MODELS;2013;Arnor;Solberg;;Program Committee
-MODELS;2013;Friedrich;Steimann;;Program Committee
-MODELS;2013;Gabriele;Taentzer;;Program Committee
-MODELS;2013;Daniel;Varro;;Program Committee
-MODELS;2013;Michael;Whalen;;Program Committee
-MODELS;2013;Tao;Yue;;Program Committee
-MODELS;2013;Steffen;Zschaler;;Program Committee
-MODELS;2013;Bernhard;Schätz;;Program Chair
-MODELS;2013;Silvia;Abrahão;;Program Committee
-MODELS;2013;Alfred;Aue;;Program Committee
-MODELS;2013;Balbir;Barn;;Program Committee
-MODELS;2013;Brian;Berenbach;;Program Committee
-MODELS;2013;Fernando;Brito e Abreu;;Program Committee
-MODELS;2013;Tony;Clark;;Program Committee
-MODELS;2013;Andreas;Graf;;Program Committee
-MODELS;2013;Pavel;Hruby;;Program Committee
-MODELS;2013;Juergen;Kazmeier;;Program Committee
-MODELS;2013;Cornel;Klein;;Program Committee
-MODELS;2013;Georg;Kreuch;;Program Committee
-MODELS;2013;Tihamer;Levendovszky;;Program Committee
-MODELS;2013;Pieter;Mosterman;;Program Committee
-MODELS;2013;Oscar;Pastor;;Program Committee
-MODELS;2013;Isabelle;Perseil;;Program Committee
-MODELS;2013;Rob;Pettit;;Program Committee
-MODELS;2013;Alexander;Pretschner;;Program Committee
-MODELS;2013;Wolfram;Schulte;;Program Committee
-MODELS;2013;Bran;Selic;;Program Committee
-MODELS;2013;Ketil;Stølen;;Program Committee
-MODELS;2013;Stephan;Thesing;;Program Committee
-MODELS;2013;Juha-Pekka;Tolvanen;;Program Committee
-MODELS;2013;Mario;Trapp;;Program Committee
-MODELS;2013;Markus;Völter;;Program Committee
-MODELS;2013;Gregor;Engels;;Steering Chair
-MODELS;2013;Lionel;Briand;;Steering Chair
-MODELS;2013;Silvia;Abrahão;;Steering Committee
-MODELS;2013;Jean;Bezivin;;Steering Committee
-MODELS;2013;Ruth;Breu;;Steering Committee
-MODELS;2013;Jean-Michel;Bruel;;Steering Committee
-MODELS;2013;Krzysztof;Czarnecki;;Steering Committee
-MODELS;2013;Laurie;Dillon;;Steering Committee
-MODELS;2013;Juergen;Dingel;;Steering Committee
-MODELS;2013;Geri;Georg;;Steering Committee
-MODELS;2013;Jeff;Gray;;Steering Committee
-MODELS;2013;Øystein;Haugen;;Steering Committee
-MODELS;2013;Heinrich;Hussmann;;Steering Committee
-MODELS;2013;Thomas;Kühne;;Steering Committee
-MODELS;2013;Ana;Moreira;;Steering Committee
-MODELS;2013;Pierre-Alain;Muller;;Steering Committee
-MODELS;2013;Oscar;Nierstrasz;;Steering Committee
-MODELS;2013;Dorina;Petriu;;Steering Committee
-MODELS;2013;Rob;Pettit;;Steering Committee
-MODELS;2013;Gianna;Reggio;;Steering Committee
-MODELS;2013;Bernhard;Schätz;;Steering Committee
-MODELS;2013;Wolfram;Schulte;;Steering Committee
-MODELS;2013;Andy;Schürr;;Steering Committee
-MODELS;2013;Steve;Seidman;;Steering Committee
-MODELS;2013;Jon;Whittle;;Steering Committee
-MODELS;2014;Isidro;Ramos;;General Chair
-MODELS;2014;Silvia;Abrahão;;General Chair
-MODELS;2014;Emilio;Insfrán;;Local Chair
-MODELS;2014;Juergen;Dingel;;Program Chair
-MODELS;2014;Wolfram;Schulte;;Program Chair
-MODELS;2014;Gregor;Engels;;Steering Chair
-MODELS;2014;Juan;de Lara;;Tutorials Chair
-MODELS;2014;Michel;Chaudron;;Tutorials Chair
-MODELS;2014;Gabriele;Taenzer;;Workshop Chair
-MODELS;2014;Alfonso;Pierantonio;;Workshop Chair
-MODELS;2014;Timothy;C. Lethbridge;;Panel Chair
-MODELS;2014;Tao;Yue;;Tool Track Chair
-MODELS;2014;Benoit;Combemale;;Tool Track Chair
-MODELS;2014;Manuel;Wimmer;;Poster Chair
-MODELS;2014;Stefan;Sauer;;Poster Chair
-MODELS;2014;Jordi;Cabot;;Social Media Chair
-MODELS;2014;Dimitris;Kolovos;;Social Media Chair
-MODELS;2014;Marcela;Genero;;Student Research Competition Chair
-MODELS;2014;Alessandro;Garcia;;Publicity Chair
-MODELS;2014;Nelly;Bencomo;;Publicity Chair
-MODELS;2014;Benoit;Baudry;;Doctoral Symposium Chair
-MODELS;2014;José;Ángel Carsí;;Finance Chair
-MODELS;2014;Patricio;Letelier;;Finance Chair
-MODELS;2014;Javier;González-Huerta;;Local Chair
-MODELS;2014;Priscila;Cedillo;;Web Chair
-MODELS;2014;M.;Carmen Penadés;;Student Volunteers Chair
-MODELS;2014;Miguel;Angel Zúñiga;;Student Volunteers Chair
-MODELS;2014;Jean;Michel Bruel;;Program Board
-MODELS;2014;Juergen;Dingel;;Program Board
-MODELS;2014;Gregor;Engels;;Program Board
-MODELS;2014;Martin;Gogolla;;Program Board
-MODELS;2014;Oystein;Haugen;;Program Board
-MODELS;2014;Heinrich;Hussmann;;Program Board
-MODELS;2014;Jean-Marc;Jezequel;;Program Board
-MODELS;2014;Gerti;Kappel;;Program Board
-MODELS;2014;Ana;Moreira;;Program Board
-MODELS;2014;Richard;Paige;;Program Board
-MODELS;2014;Andy;Schuerr;;Program Board
-MODELS;2014;Wolfram;Schulte;;Program Board
-MODELS;2014;Perdita;Stevens;;Program Board
-MODELS;2014;Daniel;Amyot;;Program Committee
-MODELS;2014;João;Araújo;;Program Committee
-MODELS;2014;Mira;Balaban;;Program Committee
-MODELS;2014;Benoit;Baudry;;Program Committee
-MODELS;2014;Nelly;Bencomo;;Program Committee
-MODELS;2014;Xavier;Blanc;;Program Committee
-MODELS;2014;Ruth;Breu;;Program Committee
-MODELS;2014;Jordi;Cabot;;Program Committee
-MODELS;2014;Michel;Chaudron;;Program Committee
-MODELS;2014;Marsha;Chechik;;Program Committee
-MODELS;2014;Siobhan;Clarke;;Program Committee
-MODELS;2014;Juan;de Lara;;Program Committee
-MODELS;2014;Zinovy;Diskin;;Program Committee
-MODELS;2014;Alexander;Egyed;;Program Committee
-MODELS;2014;Rik;Eshuis;;Program Committee
-MODELS;2014;Lidia;Fuentes;;Program Committee
-MODELS;2014;Alessandro;Garcia;;Program Committee
-MODELS;2014;Sebastien;Gerard;;Program Committee
-MODELS;2014;Holger;Giese;;Program Committee
-MODELS;2014;Jeff;Gray;;Program Committee
-MODELS;2014;John;Grundy;;Program Committee
-MODELS;2014;Reiko;Heckel;;Program Committee
-MODELS;2014;Constance;Heitmeyer;;Program Committee
-MODELS;2014;Peter;Herrmann;;Program Committee
-MODELS;2014;James;Hill;;Program Committee
-MODELS;2014;Zhenjiang;Hu;;Program Committee
-MODELS;2014;Ferhat;Khendek;;Program Committee
-MODELS;2014;Joerg;Kienzle;;Program Committee
-MODELS;2014;Thomas;Kuehne;;Program Committee
-MODELS;2014;Yvan;Labiche;;Program Committee
-MODELS;2014;Yves;le Traon;;Program Committee
-MODELS;2014;Tim;Lethbridge;;Program Committee
-MODELS;2014;Frederic;Mallet;;Program Committee
-MODELS;2014;Shahar;Maoz;;Program Committee
-MODELS;2014;Hong;Mei;;Program Committee
-MODELS;2014;Dragan;Milicev;;Program Committee
-MODELS;2014;Raffaela;Mirandola;;Program Committee
-MODELS;2014;Henry;Muccini;;Program Committee
-MODELS;2014;Shiva;Nejati;;Program Committee
-MODELS;2014;Ileana;Ober;;Program Committee
-MODELS;2014;Alfonso;Pierantonio;;Program Committee
-MODELS;2014;Gianna;Reggio;;Program Committee
-MODELS;2014;Bernhard;Rumpe;;Program Committee
-MODELS;2014;Ina;Schaefer;;Program Committee
-MODELS;2014;Friedrich;Steimann;;Program Committee
-MODELS;2014;Gabriele;Taentzer;;Program Committee
-MODELS;2014;Stavros;Tripakis;;Program Committee
-MODELS;2014;Antonio;Vallecillo;;Program Committee
-MODELS;2014;Dániel;Varró;;Program Committee
-MODELS;2014;Andrzej;Wasowski;;Program Committee
-MODELS;2014;Mike;Whalen;;Program Committee
-MODELS;2014;Tao;Yue;;Program Committee
-MODELS;2014;Steffen;Zschaler;;Program Committee
-MODELS;2014;Shaukat;Ali;;Program Committee
-MODELS;2014;Balbir;Barn;;Program Committee
-MODELS;2014;Fernando;Brito e Abreu;;Program Committee
-MODELS;2014;Andreas;Graf;;Program Committee
-MODELS;2014;Wolfgang;Grieskamp;;Program Committee
-MODELS;2014;Pavel;Hruby;;Program Committee
-MODELS;2014;Tihamer;Levendovszky;;Program Committee
-MODELS;2014;Pieter;Mosterman;;Program Committee
-MODELS;2014;Barbara;Paech;;Program Committee
-MODELS;2014;Oscar;Pastor;;Program Committee
-MODELS;2014;Alexander;Pretschner;;Program Committee
-MODELS;2014;Shaz;Qadeer;;Program Committee
-MODELS;2014;Bernhard;Schaetz;;Program Committee
-MODELS;2014;Bran;Selic;;Program Committee
-MODELS;2014;Ketil;Stolen;;Program Committee
-MODELS;2014;Stephan;Thesing;;Program Committee
-MODELS;2014;Juha-Pekka;Tolvanen;;Program Committee
-MODELS;2014;Mario;Trapp;;Program Committee
-MODELS;2014;Markus;Voelter;;Program Committee
+MoDELS;2013;Jeff;Gray;;General Chair
+MoDELS;2013;Antonio;Vallecillo;;General Chair
+MoDELS;2013;Peter;Clarke;;Local Chair
+MoDELS;2013;Ana;Moreira;;Program Chair
+MoDELS;2013;Bernhard;Schätz;;Program Chair
+MoDELS;2013;Magnus;Christerson;;Industrial Track Chair
+MoDELS;2013;Fabio;Costa;;Workshop Chair
+MoDELS;2013;Eugene;Syriani;;Workshop Chair
+MoDELS;2013;Jordi;Cabot;;Tutorials Chair
+MoDELS;2013;Jörg;Kienzle;;Tutorials Chair
+MoDELS;2013;Silvia;Abrahao;;Panel Chair
+MoDELS;2013;Isidro;Ramos;;Panel Chair
+MoDELS;2013;Yan;Liu;;Tool Track Chair
+MoDELS;2013;Steffen;Zschaler;;Tool Track Chair
+MoDELS;2013;Benoit;Baudry;;Poster Chair
+MoDELS;2013;Sudipto;Ghosh;;Poster Chair
+MoDELS;2013;Ethan;Jackson;;Student Research Competition Chair
+MoDELS;2013;Davide;Di Ruscio;;Student Research Competition Chair
+MoDELS;2013;James;Hill;;Publicity Chair
+MoDELS;2013;Martina;Seidl;;Publicity Chair
+MoDELS;2013;Ralf;Lämmel;;Social Media Chair
+MoDELS;2013;Vadim;Zaytsev;;Social Media Chair
+MoDELS;2013;Manuel;Wimmer;;Publication Chair
+MoDELS;2013;Martin;Gogolla;;Doctoral Symposium Chair
+MoDELS;2013;Jonathan;Corley;;Student Volunteers Chair
+MoDELS;2013;Raymond;Chang Lau;;Student Volunteers Chair
+MoDELS;2013;Robert;Tairas;;Web Chair
+MoDELS;2013;Ana;Moreira;;Program Board Chair
+MoDELS;2013;Bernhard;Schätz;;Program Board Chair
+MoDELS;2013;Lionel;Briand;;Program Board
+MoDELS;2013;Jean;Michel Bruel;;Program Board
+MoDELS;2013;Krzysztof;Czarnecki;;Program Board
+MoDELS;2013;Juergen;Dingel;;Program Board
+MoDELS;2013;Gregor;Engels;;Program Board
+MoDELS;2013;Robert;France;;Program Board
+MoDELS;2013;Martin;Gogolla;;Program Board
+MoDELS;2013;Jean-Marc;Jezequel;;Program Board
+MoDELS;2013;Richard;Paige;;Program Board
+MoDELS;2013;Dorina;Petriu;;Program Board
+MoDELS;2013;Bernhard;Rumpe;;Program Board
+MoDELS;2013;Jon;Whittle;;Program Board
+MoDELS;2013;Ana;Moreira;;Program Chair
+MoDELS;2013;Vasco;Amaral;;Program Committee
+MoDELS;2013;Daniel;Amyot;;Program Committee
+MoDELS;2013;João;Araújo;;Program Committee
+MoDELS;2013;Colin;Atkinson;;Program Committee
+MoDELS;2013;Mira;Balaban;;Program Committee
+MoDELS;2013;Benoit;Baudry;;Program Committee
+MoDELS;2013;Nelly;Bencomo;;Program Committee
+MoDELS;2013;Xavier;Blanc;;Program Committee
+MoDELS;2013;Ruth;Breu;;Program Committee
+MoDELS;2013;Jordi;Cabot;;Program Committee
+MoDELS;2013;Alessandra;Cavarra;;Program Committee
+MoDELS;2013;Siobhán;Clarke;;Program Committee
+MoDELS;2013;Jane;Cleland-Huang;;Program Committee
+MoDELS;2013;Alexander;Egyed;;Program Committee
+MoDELS;2013;Rik;Eshuis;;Program Committee
+MoDELS;2013;Lidia;Fuentes;;Program Committee
+MoDELS;2013;Alessandro;Garcia;;Program Committee
+MoDELS;2013;Geri;Georg;;Program Committee
+MoDELS;2013;Sebastien;Gerard;;Program Committee
+MoDELS;2013;Holger;Giese;;Program Committee
+MoDELS;2013;John;Grundy;;Program Committee
+MoDELS;2013;Øystein;Haugen;;Program Committee
+MoDELS;2013;Zhenjiang;Hu;;Program Committee
+MoDELS;2013;Heinrich;Hussmann;;Program Committee
+MoDELS;2013;Gerti;Kappel;;Program Committee
+MoDELS;2013;Gabor;Karsai;;Program Committee
+MoDELS;2013;Ingolf;Krueger;;Program Committee
+MoDELS;2013;Thomas;Kühne;;Program Committee
+MoDELS;2013;Yvan;Labiche;;Program Committee
+MoDELS;2013;Philippe;Lahire;;Program Committee
+MoDELS;2013;Juan;de Lara;;Program Committee
+MoDELS;2013;Yves;Le Traon;;Program Committee
+MoDELS;2013;Hong;Mei;;Program Committee
+MoDELS;2013;Dragan;Milicev;;Program Committee
+MoDELS;2013;Raffaela;Mirandola;;Program Committee
+MoDELS;2013;Pierre-Alain;Muller;;Program Committee
+MoDELS;2013;Gunter;Mussbacher;;Program Committee
+MoDELS;2013;Ileana;Ober;;Program Committee
+MoDELS;2013;Alfonso;Pierantonio;;Program Committee
+MoDELS;2013;Gianna;Reggio;;Program Committee
+MoDELS;2013;Gustavo;Rossi;;Program Committee
+MoDELS;2013;Pete;Sawyer;;Program Committee
+MoDELS;2013;Andy;Schuerr;;Program Committee
+MoDELS;2013;Arnor;Solberg;;Program Committee
+MoDELS;2013;Friedrich;Steimann;;Program Committee
+MoDELS;2013;Gabriele;Taentzer;;Program Committee
+MoDELS;2013;Daniel;Varro;;Program Committee
+MoDELS;2013;Michael;Whalen;;Program Committee
+MoDELS;2013;Tao;Yue;;Program Committee
+MoDELS;2013;Steffen;Zschaler;;Program Committee
+MoDELS;2013;Bernhard;Schätz;;Program Chair
+MoDELS;2013;Silvia;Abrahão;;Program Committee
+MoDELS;2013;Alfred;Aue;;Program Committee
+MoDELS;2013;Balbir;Barn;;Program Committee
+MoDELS;2013;Brian;Berenbach;;Program Committee
+MoDELS;2013;Fernando;Brito e Abreu;;Program Committee
+MoDELS;2013;Tony;Clark;;Program Committee
+MoDELS;2013;Andreas;Graf;;Program Committee
+MoDELS;2013;Pavel;Hruby;;Program Committee
+MoDELS;2013;Juergen;Kazmeier;;Program Committee
+MoDELS;2013;Cornel;Klein;;Program Committee
+MoDELS;2013;Georg;Kreuch;;Program Committee
+MoDELS;2013;Tihamer;Levendovszky;;Program Committee
+MoDELS;2013;Pieter;Mosterman;;Program Committee
+MoDELS;2013;Oscar;Pastor;;Program Committee
+MoDELS;2013;Isabelle;Perseil;;Program Committee
+MoDELS;2013;Rob;Pettit;;Program Committee
+MoDELS;2013;Alexander;Pretschner;;Program Committee
+MoDELS;2013;Wolfram;Schulte;;Program Committee
+MoDELS;2013;Bran;Selic;;Program Committee
+MoDELS;2013;Ketil;Stølen;;Program Committee
+MoDELS;2013;Stephan;Thesing;;Program Committee
+MoDELS;2013;Juha-Pekka;Tolvanen;;Program Committee
+MoDELS;2013;Mario;Trapp;;Program Committee
+MoDELS;2013;Markus;Völter;;Program Committee
+MoDELS;2013;Gregor;Engels;;Steering Chair
+MoDELS;2013;Lionel;Briand;;Steering Chair
+MoDELS;2013;Silvia;Abrahão;;Steering Committee
+MoDELS;2013;Jean;Bezivin;;Steering Committee
+MoDELS;2013;Ruth;Breu;;Steering Committee
+MoDELS;2013;Jean-Michel;Bruel;;Steering Committee
+MoDELS;2013;Krzysztof;Czarnecki;;Steering Committee
+MoDELS;2013;Laurie;Dillon;;Steering Committee
+MoDELS;2013;Juergen;Dingel;;Steering Committee
+MoDELS;2013;Geri;Georg;;Steering Committee
+MoDELS;2013;Jeff;Gray;;Steering Committee
+MoDELS;2013;Øystein;Haugen;;Steering Committee
+MoDELS;2013;Heinrich;Hussmann;;Steering Committee
+MoDELS;2013;Thomas;Kühne;;Steering Committee
+MoDELS;2013;Ana;Moreira;;Steering Committee
+MoDELS;2013;Pierre-Alain;Muller;;Steering Committee
+MoDELS;2013;Oscar;Nierstrasz;;Steering Committee
+MoDELS;2013;Dorina;Petriu;;Steering Committee
+MoDELS;2013;Rob;Pettit;;Steering Committee
+MoDELS;2013;Gianna;Reggio;;Steering Committee
+MoDELS;2013;Bernhard;Schätz;;Steering Committee
+MoDELS;2013;Wolfram;Schulte;;Steering Committee
+MoDELS;2013;Andy;Schürr;;Steering Committee
+MoDELS;2013;Steve;Seidman;;Steering Committee
+MoDELS;2013;Jon;Whittle;;Steering Committee
+MoDELS;2014;Isidro;Ramos;;General Chair
+MoDELS;2014;Silvia;Abrahão;;General Chair
+MoDELS;2014;Emilio;Insfrán;;Local Chair
+MoDELS;2014;Juergen;Dingel;;Program Chair
+MoDELS;2014;Wolfram;Schulte;;Program Chair
+MoDELS;2014;Gregor;Engels;;Steering Chair
+MoDELS;2014;Juan;de Lara;;Tutorials Chair
+MoDELS;2014;Michel;Chaudron;;Tutorials Chair
+MoDELS;2014;Gabriele;Taenzer;;Workshop Chair
+MoDELS;2014;Alfonso;Pierantonio;;Workshop Chair
+MoDELS;2014;Timothy;C. Lethbridge;;Panel Chair
+MoDELS;2014;Tao;Yue;;Tool Track Chair
+MoDELS;2014;Benoit;Combemale;;Tool Track Chair
+MoDELS;2014;Manuel;Wimmer;;Poster Chair
+MoDELS;2014;Stefan;Sauer;;Poster Chair
+MoDELS;2014;Jordi;Cabot;;Social Media Chair
+MoDELS;2014;Dimitris;Kolovos;;Social Media Chair
+MoDELS;2014;Marcela;Genero;;Student Research Competition Chair
+MoDELS;2014;Alessandro;Garcia;;Publicity Chair
+MoDELS;2014;Nelly;Bencomo;;Publicity Chair
+MoDELS;2014;Benoit;Baudry;;Doctoral Symposium Chair
+MoDELS;2014;José;Ángel Carsí;;Finance Chair
+MoDELS;2014;Patricio;Letelier;;Finance Chair
+MoDELS;2014;Javier;González-Huerta;;Local Chair
+MoDELS;2014;Priscila;Cedillo;;Web Chair
+MoDELS;2014;M.;Carmen Penadés;;Student Volunteers Chair
+MoDELS;2014;Miguel;Angel Zúñiga;;Student Volunteers Chair
+MoDELS;2014;Jean;Michel Bruel;;Program Board
+MoDELS;2014;Juergen;Dingel;;Program Board
+MoDELS;2014;Gregor;Engels;;Program Board
+MoDELS;2014;Martin;Gogolla;;Program Board
+MoDELS;2014;Oystein;Haugen;;Program Board
+MoDELS;2014;Heinrich;Hussmann;;Program Board
+MoDELS;2014;Jean-Marc;Jezequel;;Program Board
+MoDELS;2014;Gerti;Kappel;;Program Board
+MoDELS;2014;Ana;Moreira;;Program Board
+MoDELS;2014;Richard;Paige;;Program Board
+MoDELS;2014;Andy;Schuerr;;Program Board
+MoDELS;2014;Wolfram;Schulte;;Program Board
+MoDELS;2014;Perdita;Stevens;;Program Board
+MoDELS;2014;Daniel;Amyot;;Program Committee
+MoDELS;2014;João;Araújo;;Program Committee
+MoDELS;2014;Mira;Balaban;;Program Committee
+MoDELS;2014;Benoit;Baudry;;Program Committee
+MoDELS;2014;Nelly;Bencomo;;Program Committee
+MoDELS;2014;Xavier;Blanc;;Program Committee
+MoDELS;2014;Ruth;Breu;;Program Committee
+MoDELS;2014;Jordi;Cabot;;Program Committee
+MoDELS;2014;Michel;Chaudron;;Program Committee
+MoDELS;2014;Marsha;Chechik;;Program Committee
+MoDELS;2014;Siobhan;Clarke;;Program Committee
+MoDELS;2014;Juan;de Lara;;Program Committee
+MoDELS;2014;Zinovy;Diskin;;Program Committee
+MoDELS;2014;Alexander;Egyed;;Program Committee
+MoDELS;2014;Rik;Eshuis;;Program Committee
+MoDELS;2014;Lidia;Fuentes;;Program Committee
+MoDELS;2014;Alessandro;Garcia;;Program Committee
+MoDELS;2014;Sebastien;Gerard;;Program Committee
+MoDELS;2014;Holger;Giese;;Program Committee
+MoDELS;2014;Jeff;Gray;;Program Committee
+MoDELS;2014;John;Grundy;;Program Committee
+MoDELS;2014;Reiko;Heckel;;Program Committee
+MoDELS;2014;Constance;Heitmeyer;;Program Committee
+MoDELS;2014;Peter;Herrmann;;Program Committee
+MoDELS;2014;James;Hill;;Program Committee
+MoDELS;2014;Zhenjiang;Hu;;Program Committee
+MoDELS;2014;Ferhat;Khendek;;Program Committee
+MoDELS;2014;Joerg;Kienzle;;Program Committee
+MoDELS;2014;Thomas;Kuehne;;Program Committee
+MoDELS;2014;Yvan;Labiche;;Program Committee
+MoDELS;2014;Yves;le Traon;;Program Committee
+MoDELS;2014;Tim;Lethbridge;;Program Committee
+MoDELS;2014;Frederic;Mallet;;Program Committee
+MoDELS;2014;Shahar;Maoz;;Program Committee
+MoDELS;2014;Hong;Mei;;Program Committee
+MoDELS;2014;Dragan;Milicev;;Program Committee
+MoDELS;2014;Raffaela;Mirandola;;Program Committee
+MoDELS;2014;Henry;Muccini;;Program Committee
+MoDELS;2014;Shiva;Nejati;;Program Committee
+MoDELS;2014;Ileana;Ober;;Program Committee
+MoDELS;2014;Alfonso;Pierantonio;;Program Committee
+MoDELS;2014;Gianna;Reggio;;Program Committee
+MoDELS;2014;Bernhard;Rumpe;;Program Committee
+MoDELS;2014;Ina;Schaefer;;Program Committee
+MoDELS;2014;Friedrich;Steimann;;Program Committee
+MoDELS;2014;Gabriele;Taentzer;;Program Committee
+MoDELS;2014;Stavros;Tripakis;;Program Committee
+MoDELS;2014;Antonio;Vallecillo;;Program Committee
+MoDELS;2014;Dániel;Varró;;Program Committee
+MoDELS;2014;Andrzej;Wasowski;;Program Committee
+MoDELS;2014;Mike;Whalen;;Program Committee
+MoDELS;2014;Tao;Yue;;Program Committee
+MoDELS;2014;Steffen;Zschaler;;Program Committee
+MoDELS;2014;Shaukat;Ali;;Program Committee
+MoDELS;2014;Balbir;Barn;;Program Committee
+MoDELS;2014;Fernando;Brito e Abreu;;Program Committee
+MoDELS;2014;Andreas;Graf;;Program Committee
+MoDELS;2014;Wolfgang;Grieskamp;;Program Committee
+MoDELS;2014;Pavel;Hruby;;Program Committee
+MoDELS;2014;Tihamer;Levendovszky;;Program Committee
+MoDELS;2014;Pieter;Mosterman;;Program Committee
+MoDELS;2014;Barbara;Paech;;Program Committee
+MoDELS;2014;Oscar;Pastor;;Program Committee
+MoDELS;2014;Alexander;Pretschner;;Program Committee
+MoDELS;2014;Shaz;Qadeer;;Program Committee
+MoDELS;2014;Bernhard;Schaetz;;Program Committee
+MoDELS;2014;Bran;Selic;;Program Committee
+MoDELS;2014;Ketil;Stolen;;Program Committee
+MoDELS;2014;Stephan;Thesing;;Program Committee
+MoDELS;2014;Juha-Pekka;Tolvanen;;Program Committee
+MoDELS;2014;Mario;Trapp;;Program Committee
+MoDELS;2014;Markus;Voelter;;Program Committee
 MSR;2004;Harald;Gall;;Program Committee
 MSR;2004;Les;Gasser;;Program Committee
 MSR;2004;James;Herbsleb;;Program Committee

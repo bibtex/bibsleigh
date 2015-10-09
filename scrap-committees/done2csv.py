@@ -50,6 +50,10 @@ ROLEZ = {\
 	'WoCh': 'Workshop Chair',\
 }
 
+CONFZ = {\
+	'MODELS': 'MoDELS'\
+}
+
 BLANK = '     '
 lines = []
 for fn in sys.argv[1:]:
@@ -73,6 +77,8 @@ for line in lines:
 		name = name.split('   ')[0]
 	# Conference;Year;First Name;Last Name;Sex;Role
 	conf = fn.split('-')[0].upper().replace('_', '-')
+	if conf in CONFZ.keys():
+		conf = CONFZ[conf]
 	year = fn.split('-')[1].split('.')[0]
 	fname = name.split(' ')[0].strip()
 	lname = ' '.join(name.split(' ')[1:]).strip()

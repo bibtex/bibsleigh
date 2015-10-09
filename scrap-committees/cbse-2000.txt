@@ -8,7 +8,7 @@ OrCo Alan Brown, Sterling Software, USA
      
 OrCo Wojtek Kozacynski, Rational, USA
      
-OrCo Philippe Kruchten Rational, Canada
+OrCo Philippe Kruchten, Rational, Canada
      
 OrCo William Lee, The Theory Center, USA
      
