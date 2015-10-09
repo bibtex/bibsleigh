@@ -60,6 +60,8 @@ if __name__ == "__main__":
 		# tags per venue
 		for c in v.getConfs():
 			cx[checkreport(c.filename, c)] += 1
+		for b in v.brands:
+			cx[checkreport(b.filename, b)] += 1
 		cx[checkreport(v.filename, v)] += 1
 	print('{} files checked, {} ok, {} fixed, {} failed'.format(\
 		C.bold(cx[0] + cx[1] + cx[2]),

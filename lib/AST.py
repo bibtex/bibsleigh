@@ -9,6 +9,20 @@ from lib.JSON import jsonkv, parseJSON
 from lib.LP import listify
 from fancy.ANSI import C
 
+def sortMyTags(tpv):
+	tagPerFreq = {}
+	for k in tpv.keys():
+		if tpv[k] < 2:
+			# top tags are those that are used more than once
+			continue
+		if tpv[k] not in tagPerFreq.keys():
+			tagPerFreq[tpv[k]] = []
+		tagPerFreq[tpv[k]].append(k)
+	result = []
+	for n in sorted(tagPerFreq.keys(), reverse=True):
+		result.extend([[t, n] for t in sorted(tagPerFreq[n])])
+	return result
+
 def escape(s):
 	for k, v in ((' ', '%20'), ('+', '%2B'), ('#', '%23')):
 		s = s.replace(k, v)
@@ -391,6 +405,23 @@ class Brand(Unser):
 		for y in self.confs.keys():
 			res.extend(self.confs[y])
 		return res
+	def getQTags(self):
+		# if 'tagged' not in self.json.keys():
+		if True:
+			tpv = {}
+			for y in self.confs.keys():
+				for c in self.confs[y]:
+					for p in c.papers:
+						for t in p.getQTags():
+							if t in tpv.keys():
+								tpv[t] += 1
+							else:
+								tpv[t] = 1
+			tagged = sortMyTags(tpv)
+			if tagged:
+				self.json['tagged'] = tagged
+			return tagged
+		return self.json['tagged']
 
 
 class Venue(Unser):
@@ -401,11 +432,11 @@ class Venue(Unser):
 		self.n2f = name2file
 		if os.path.exists(d+'.json'):
 			# new style
-			print(C.blue(d), 'is new style')
+			# print(C.blue(d), 'is new style')
 			self.json = parseJSON(d+'.json')
 		else:
 			# legacy style
-			print(C.red(d), 'is legacy style')
+			# print(C.red(d), 'is legacy style')
 			self.json = []
 		for f in glob.glob(d+'/*.json'):
 			if not self.json:
@@ -572,11 +603,7 @@ class Venue(Unser):
 								tpv[t] += 1
 							else:
 								tpv[t] = 1
-			tops = [k for k in tpv.keys() if tpv[k] > 1]
-			# tagFreqs = uniq([tpv[k] for k in tpv.keys()]) - [1]
-			# freqPerTag = [x for x in tagFreqs, for k in tpv.keys() if tpv[t]==x]
-			toptags = sorted(tops, key=lambda z: -tpv[z])#[:10]
-			tagged = [[t, tpv[t]] for t in toptags]
+			tagged = sortMyTags(tpv)
 			if tagged:
 				self.json['tagged'] = tagged
 			return tagged
@@ -671,6 +698,8 @@ class Conf(Unser):
 	def getEventTitle(self):
 		if 'eventtitle' in self.json.keys():
 			return self.json['eventtitle']
+		elif 'booktitleshort' in self.json.keys():
+			return '{} {}'.format(self.json['booktitleshort'], self.year)
 		elif 'booktitle' in self.json.keys():
 			return '{} {}'.format(self.json['booktitle'], self.year)
 		elif 'venue' in self.json.keys():
@@ -811,9 +840,7 @@ class Conf(Unser):
 						tpi[k] += 1
 					else:
 						tpi[k] = 1
-			tops = [k for k in tpi.keys() if tpi[k] > 1]
-			toptags = sorted(tops, key=lambda z: -tpi[z])#[:10]
-			tagged = [[t, tpi[t]] for t in toptags]
+			tagged = sortMyTags(tpi)
 			if tagged:
 				self.json['tagged'] = tagged
 			return tagged
