@@ -28,6 +28,7 @@ def checkon(fn, o):
 	if 'url' in o.json.keys():
 		o.json['url'] = [link for link in listify(o.json['url'])\
 		 				if not link.startswith('db/conf/')\
+		 				and not link.startswith('db/series/')\
 						and not link.startswith('db/journals/')]
 		if not o.json['url']:
 			del o.json['url']
@@ -37,18 +38,19 @@ def checkon(fn, o):
 		if isinstance(o.json['ee'], list):
 			if verbose:
 				print(C.red('Manylink:'), o.json['ee'])
-		elif o.json['ee'].startswith('http://dx.doi.org/'):
-			o.json['doi'] = o.json['ee'][18:]
-		elif o.json['ee'].startswith('http://doi.acm.org/'):
-			o.json['doi'] = o.json['ee'][19:]
-		elif o.json['ee'].startswith('http://doi.ieeecomputersociety.org/'):
-			o.json['doi'] = o.json['ee'][35:]
-		elif o.json['ee'].startswith('http://dl.acm.org/citation.cfm?id='):
-			o.json['acmid'] = o.json['ee'][34:]
-		elif o.json['ee'].startswith('http://portal.acm.org/citation.cfm?id='):
-			o.json['acmid'] = o.json['ee'][38:]
-		elif verbose:
-			print(C.yellow('Opportunity:'), o.json['ee'])
+		for onelink in listify(o.json['ee']):
+			if onelink.startswith('http://dx.doi.org/'):
+				o.json['doi'] = onelink[18:]
+			elif onelink.startswith('http://doi.acm.org/'):
+				o.json['doi'] = onelink[19:]
+			elif onelink.startswith('http://doi.ieeecomputersociety.org/'):
+				o.json['doi'] = onelink[35:]
+			elif onelink.startswith('http://dl.acm.org/citation.cfm?id='):
+				o.json['acmid'] = onelink[34:]
+			elif onelink.startswith('http://portal.acm.org/citation.cfm?id='):
+				o.json['acmid'] = onelink[38:]
+			elif verbose:
+				print(C.yellow('Missed opportunity:'), onelink)
 		# post-processing normalisation
 		if 'acmid' in o.json.keys() and o.json['acmid'].isdigit():
 			o.json['acmid'] = int(o.json['acmid'])

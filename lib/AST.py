@@ -402,6 +402,8 @@ class Brand(Unser):
 			fname=('{} ({})'.format(title, ABBR)),\
 			venpage=ev,\
 			parent=self.back.getKey(),\
+			cxPapers=self.numOfPapers(),\
+			cxIssues=len(eds),\
 			dl=''.join(eds))
 	def getConfs(self):
 		res = []
@@ -425,6 +427,8 @@ class Brand(Unser):
 				self.json['tagged'] = tagged
 			return tagged
 		return self.json['tagged']
+	def numOfPapers(self):
+		return sum([c.numOfPapers() for y in self.confs.keys() for c in self.confs[y]])
 
 
 class Venue(Unser):
@@ -545,6 +549,9 @@ class Venue(Unser):
 			img=img,\
 			fname=('{} ({})'.format(title, ABBR)),\
 			venpage=ev,\
+			cxBrands=len(brands),\
+			cxPapers=self.numOfPapers(),\
+			cxIssues=len(eds),\
 			brands='\n'.join(brands),\
 			dl=''.join(eds))
 	def getConfs(self):

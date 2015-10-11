@@ -71,14 +71,14 @@ leftLinks('appp', '')+'''
 <h2>Bibliography of Software Language Engineering in Generated Hypertext (BibSLEIGH)</h2>
 <p>work in progress</p></div>
 <div class="txt">
-<p>Facilitated browsing of scientific knowledge in and beyond software (language) engineering.
+<p>Facilitated browsing of scientific knowledge in and beyond software (language) engineering.<br/>
 <a href="about.html">Read more about this</a>.</p>
 <p>	<strong>{cxDom}</strong> domains,
 	<strong>{cxVen}</strong> brands,
 	<strong>{cxVol}</strong> issues,
 	<strong>{cxPap}</strong> papers,
-	<strong>496</strong> tags,
-	<strong>130238</strong> markings.</p></div>
+	<strong>539</strong> tags,
+	<strong>200952</strong> markings.</p></div>
 {items}
 '''+footer
 
@@ -108,9 +108,9 @@ confHTML = header+'''
 </div>
 <div class="main">
 <h2>{fname}</h2>{venpage}
-<h3>Brands:</h3>
+<h3>{cxBrands} brands:</h3>
 <div class="minibar">{brands}<br style="clear:left"/></div>
-<h3>Issues:</h3>
+<h3>{cxPapers} papers in {cxIssues} issues:</h3>
 <dl>{dl}</dl>
 '''+footer
 
@@ -121,7 +121,7 @@ brandHTML = header+'''
 <div class="main">
 <h2>{fname}</h2>
 <h3>(brand of <a href="{parent}.html">{parent}</a>)</h2>{venpage}
-<h3>Issues:</h3>
+<h3>{cxPapers} papers in {cxIssues} issues:</h3>
 <dl>{dl}</dl>
 '''+footer
 

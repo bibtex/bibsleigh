@@ -1,0 +1,146 @@
+@URL: "http://gauss.ececs.uc.edu/Conferences/SAT2002/program.html"
+@TITLE: "Proceedings of the Fifth International Symposium on the Theory and Applications of Satisfiability Testing"
+@ADDRESS: ["Cincinnati", "Ohio", "USA"]
+@EDITOR: "John Franco"
+@YEAR: 2002
+@MONTH: "may"
+@VENUE: "SAT"
+New worst case bounds on k-SAT (Keynote Talk)
+Uwe Schöning
+http://gauss.ececs.uc.edu/Conferences/SAT2002/Abstracts/satalg.ps
+
+Random generalized satisfiability problems
+Nadia Creignou, Hervé Daudé
+
+Inclusion-exclusion for k-CNF formulas
+Akihiro Matsuura, Kazuo Iwama
+
+Phase Transition Behavior: From Decision to Optimization
+John Slaney, Toby Walsh
+
+The Probabilistic Analysis of a Greedy Satisfiability Algorithm
+Alexis C. Kaporis, Lefteris M. Kirousis, Efthimios G. Lalas
+
+k-SAT: A tight threshold for moderately growing k
+Alan Frieze, Nicolas Wormald
+
+Generalizations of matched CNF formulas
+Stefan Szeider
+
+Towards an adaptive density based branching rule for SAT solvers, using a database for mixed random conjunctive normal forms built upon the Advanced Encryption Standard (AES)
+Oliver Kullmann
+
+The complexity of homomorphisms and renamings of minimal unsatisfiable formulas
+Hans Kleine Büning, Daoyun Xu
+
+X3SAT is decidable in time O(2n/5)
+Stefan Porschen, Bert Randerath, Ewald Speckenmeyer
+
+Restart method and exponential acceleration of random 3-SAT instances resolutions: A large deviation analysis of the Davis-Putnam-Loveland-Logemann algorithm
+Remi Monasson, Simona Cocco
+
+Testing satisfiability of CNF formulas by computing a stable set of points
+Eugene Goldberg
+
+The role of a skeptic agent in testing and benchmarking of SAT algorithms
+Franc Brglez, Xiao Yu Li, Matthias F. Stallmann
+
+Hypothetical reasoning in propositional satisfiability (Keynote Talk)
+João Marques-Silva
+
+Renormalization as a function of clause lengths for solving random k-SAT formulae
+Olivier Dubois, Gilles Dequen
+
+Toward leaner binary-clause reasoning in a satisfiability solver
+Allen Van Gelder
+
+Lemmas on demand for Satisfiability solvers
+Harald Ruess, Leonardo de Moura
+
+Integrating symmetry breaking into a DLL procedure
+Chu Min Li, Bernard Jurkowiak, Paul Walton Purdom
+
+SAT encodings of the stable marriage problem with ties and incomplete lists
+Ian Gent, Patrick Prosser
+
+Efficient data structures for backtrack search SAT solvers
+Inês Lynce, João Marques-Silva
+
+Going non-clausal
+Zbigniew Stachniak
+
+Exact selection of minimal unsatisfiable subformulae for special classes of propositional formulae
+Renato Bruni
+
+Solving difficult SAT instances in the presence of symmetry
+Fadi A. Aloul, Arathi Ramani, Igor Markov, Karem Sakallah
+
+Impact of structure on parallel local search for SAT
+Andrea Roli
+
+A bit of abstinence (provably) promotes satisfaction
+Dimitris Achlioptas, Chris Moore
+
+SAT based abstraction refinement in temporal logic model checking (Keynote Talk)
+Edmund Clarke
+
+A satisfiability checker for difference logic
+Oded Maler, Moez Mahfoudh, Peter Niebert, Eugene Asarin
+
+A tool for measuring progress of backtrack-search solvers
+Fadi A. Aloul, Brian Sierawski, Karem Sakallah
+
+Complete unrestricted backtracking algorithms for satisfiability
+Inês Lynce, João Marques-Silva
+
+Probabilistic logic: The PSAT and CPA models
+Daniele Pretolani
+
+On proof systems behind efficient SAT solvers
+DoRon Motter, Igor Markov
+
+Solving the resolution-free SAT problem by hyper-unit propagation in linear time
+Gábor Kusper
+
+A SAT approach to query optimization in mediator systems
+Steven Prestwich, Stéphane Bressan
+
+Exploring the computational tradeoff of more reasoning and less searching
+Fahiem Bacchus
+
+An empirical measure for characterizing 3-SAT
+Chu Min Li, Hachemi Bennaceur
+
+On deciding subsumption problems
+Uwe Egly, Stefan Woltran, Reinhard Pichler
+
+PBS: A backtrack-search psuedo-Boolean solver and optimizer
+Fadi A. Aloul, Arathi Ramani, Igor Markov, Karem Sakallah
+
+UnitWalk: A new SAT solver that uses local search guided by unit clause elimination
+Edward Hirsch, Arist Kojevnikov
+
+Generating college conference basketball schedules by a SAT solver
+Hantao Zhang
+
+An analog algorithm for the satisfiability problem
+Yoichi Takenaka, Akihiro Hashimoto
+
+SLS algorithms for SAT: irregular instances, search stagnation, and mixture models
+Holger Hoos
+
+Resolution methods for many-valued CNF formulas
+Felip Manya, Carlos Ansótegui, Ramón Béjar, Alba Cabiscol, Chu Min Li
+
+Extension and equivalence problems for clause minimal formulas
+Xishun Zhao, Hans Kleine Büning
+
+CNF application in discrete optimization
+Inna Davydova, Gennady Davydov
+
+NAGSAT: A randomized, complete, parallel solver for 3-SAT
+Sean Forman, Alberto M. Segre
+
+Adding resolution to the DPLL procedure for satisfiability
+Lyndon Drake, Alan Frisch, Toby Walsh
+
