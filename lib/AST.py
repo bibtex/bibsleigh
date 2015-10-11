@@ -35,6 +35,9 @@ def sortbypages(z):
 		return 0
 	p1, _ = z.getPagesTuple()
 	y = z.get('year')
+	if isinstance(y, str):
+		# non-correcting robustness
+		return 0
 	# a trick to have several volumes within one conference
 	v = z.get('volume')
 	if isinstance(v, int) or v.isdigit():
@@ -393,7 +396,7 @@ class Brand(Unser):
 		# # return '<dt>{}</dt>{}'.format(self.year, '\n'.join([c.getItem() for c in self.confs]))
 		# eds = [y.getItem() for y in sorted(self.years, reverse=True, key=lambda x: x.year)]
 		return brandHTML.format(\
-			filename='{0}/{0}.json'.format(self.getPureName()),\
+			filename=self.getJsonName(),\
 			title=ABBR,\
 			img=img,\
 			fname=('{} ({})'.format(title, ABBR)),\
@@ -527,7 +530,7 @@ class Venue(Unser):
 				img = brand.json['venue']
 			else:
 				img = brand.getKey().lower()
-			brands.append('<div><a href="{name}.brand.html"><img src="stuff/{lowname}.png" class="abc" alt="{name}" title="{longname}"></a><abbr title="{longname}">{name}</abbr></div>'.format(\
+			brands.append('<div class="wider"><a href="{name}.brand.html"><img src="stuff/{lowname}.png" class="abc" alt="{name}" title="{longname}"></a><abbr title="{longname}">{name}</abbr></div>'.format(\
 				name=brand.getKey(),\
 				lowname=img,\
 				longname=brand.json['title'],\
@@ -537,7 +540,7 @@ class Venue(Unser):
 		img = self.json['venue'].lower() if 'venue' in self.json.keys() else ABBR.lower()
 		eds = [y.getItem() for y in sorted(self.years, reverse=True, key=lambda x: x.year)]
 		return confHTML.format(\
-			filename='{0}/{0}.json'.format(self.getPureName()),\
+			filename=self.getJsonName(),\
 			title=ABBR,\
 			img=img,\
 			fname=('{} ({})'.format(title, ABBR)),\

@@ -71,14 +71,14 @@ leftLinks('appp', '')+'''
 <h2>Bibliography of Software Language Engineering in Generated Hypertext (BibSLEIGH)</h2>
 <p>work in progress</p></div>
 <div class="txt">
-<p>Facilitated browsing of scientific knowledge objects in software (language) engineering.
+<p>Facilitated browsing of scientific knowledge in and beyond software (language) engineering.
 <a href="about.html">Read more about this</a>.</p>
 <p>	<strong>{cxDom}</strong> domains,
 	<strong>{cxVen}</strong> brands,
 	<strong>{cxVol}</strong> issues,
 	<strong>{cxPap}</strong> papers,
-	<strong>467</strong> tags,
-	<strong>116162</strong> markings.</p></div>
+	<strong>496</strong> tags,
+	<strong>130238</strong> markings.</p></div>
 {items}
 '''+footer
 
@@ -89,7 +89,7 @@ leftLinks('pppp', '')+'''
 </div>
 <div class="main">
 <h2>Bibliography of Software Language Engineering in Generated Hypertext (BibSLEIGH)</h2>
-<p>This is a project on facilitated browsing of scientific knowledge objects in software language engineering. It is a work in progress.</p>
+<p>This is a project on facilitated browsing of scientific knowledge objects in software language engineering, bridging to other domains of software engineering, computer science and artificial intelligence. It is a work in progress.</p>
 <p>The following {} logos were recreated <a href="http://grammarware.net">by me</a> to represent venues.
 Most follow the original designs by the conference founders/organisers,
 but the original images were never used directly.

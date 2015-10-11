@@ -56,41 +56,42 @@ if __name__ == "__main__":
 	# generate the icon lineup
 	icons = []
 	linked = []
-	for png in glob.glob(outputdir + '/stuff/*.png'):
-		pure = png.split('/')[-1].split('.')[0]
-		if pure.startswith('a-') or pure.startswith('p-') or pure.startswith('ico-')\
-		or pure in ('cc-by', 'xhtml', 'css', 'open-knowledge', 'edit'):
-			continue
-		canlink = glob.glob(outputdir + '/' + pure.upper().replace('+', '') + '*.html')
-		# corner cases
-		corner = {'floc': 'FLoC', 'qosa': 'QoSA', 'onward': 'Onward',\
-			'comparch': 'CompArch', 'ada': 'Ada', 'adaeurope': 'AdaEurope',\
-			'fossacs': 'FoSSaCS'}
-		if pure in corner.keys():
-			canlink = glob.glob(outputdir + '/' + corner[pure] + '*.html')
-		elif pure == 'bibsleigh':
-			canlink = [outputdir + '/index.html']
-		if canlink:
-			canlink = sorted(canlink, key=len)
-			# the case of ESEC-* vs ESEC-FSE
-			i = 0
-			while canlink[i] in linked:
-				i += 1
+	pngs = [png.split('/')[-1].split('.')[0] for png in glob.glob(outputdir + '/stuff/*.png')]
+	pngs = [png for png in pngs \
+		if not (png.startswith('a-') or png.startswith('p-') or png.startswith('ico-')\
+		or png in ('cc-by', 'xhtml', 'css', 'open-knowledge', 'edit'))]
+	for brand in glob.glob(outputdir + '/*.brand.html'):
+		pure = brand.split('/')[-1].split('.')[0]
+		img = pure.lower().replace(' ', '')
+		if img in pngs:
 			pic = '<a href="{}"><img class="abc" src="{}" alt="{}"/></a>'.format(\
-				canlink[i],
-				png.replace(outputdir + '/', ''),
-				png.split('/')[-1].split('.')[0])
-			linked.append(canlink[i])
-		elif pure == 'twitter':
-			pic = '<a href="{}"><img class="abc" src="{}" alt="{}"/></a>'.format(\
-				"https://about.twitter.com/company/brand-assets",
-				png.replace(outputdir + '/', ''),
-				png.split('/')[-1].split('.')[0])
+				brand,
+				'stuff/'+img+'.png',
+				pure)
+			pngs.remove(img)
+			icons.append(pic)
 		else:
-			print('No link for', pure)
-			pic = '<img class="abc" src="{}" alt="{}"/>'.format(\
-				png.replace(outputdir + '/', ''),
-				png.split('/')[-1].split('.')[0])
+			# print('No image for', pure)
+			pass
+	for pure in pngs:
+		corner = {'ada': 'TRI-Ada', 'comparch': 'CompArch', 'floc': 'FLoC', 'bibsleigh': 'index'}
+		if pure in corner.keys():
+			venueCandidate = corner[pure]
+		else:
+			venueCandidate = pure.upper().replace('+', '')
+		canlink = sorted(glob.glob(outputdir + '/' + venueCandidate + '*.html'), key=len)
+		if canlink:
+			pic = '<a href="{}"><img class="abc" src="stuff/{}.png" alt="{}"/></a>'.format(\
+				canlink[0],
+				pure,
+				venueCandidate)
+		elif pure == 'twitter':
+			pic = '<a href="https://about.twitter.com/company/brand-assets"><img class="abc" src="stuff/twitter.png" alt="Twitter"/></a>'
+		elif pure == 'email':
+			pic = '<a href="mailto:vadim@grammarware.net"><img class="abc" src="stuff/email.png" alt="e-mail"/></a>'
+		else:
+			print('Lonely', pure)
+			pic = '<img class="abc" src="stuff/{0}.png" alt="{0}"/>'.format(pure)
 		icons.append(pic)
 	# find last year of each venue
 	newstuff = ''
@@ -102,7 +103,7 @@ if __name__ == "__main__":
 	f = open(outputdir+'/about.html', 'w')
 	f.write(aboutHTML.format(\
 		len(icons),
-		'<div class="minibar">' + '\n'.join(icons) + '</div>',
+		'<div class="minibar">' + '\n'.join(sorted(icons)) + '</div>',
 		newstuff\
 		))
 	f.close()

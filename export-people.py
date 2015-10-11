@@ -66,7 +66,7 @@ def dict2links(d):
 				(makeimg('ico-dblp', 'DBLP'),\
 				'<a href="http://dblp.uni-trier.de/pers/hd/{}/{}">DBLP: {}</a>'.format(\
 				v[0].lower(),
-				escape(v),
+				escape(v).replace('-', '='),
 				v)))
 		elif k == 'www':
 			if not v.startswith('http'):
