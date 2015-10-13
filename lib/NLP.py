@@ -3,17 +3,40 @@
 #
 # a module for natural language processing
 
+import re
+
 trash = ('-', \
-	'a', 'an', 'and', 'as', 'at', \
-	'by', \
+	'and', 'are', \
 	'for', 'from', \
-	'how', \
-	'in', \
-	'of', 'on', \
-	's', \
-	'the', 'through', 'to', 'toward', 'towards', \
+	'her', 'hers', 'him', 'his', 'how', \
+	'its', 'into', \
+	'mine', \
+	'over', \
+	'she', \
+	'the', 'they', 'them', 'their', 'through', \
 	'via', \
-	'with')
+	'with', \
+	'you', 'your', 'yours' \
+	)
+# 21010 stems found.
+
+nosplit = (\
+	'JastAdd', \
+	'JavaScript', \
+	'MontiCore', \
+	)
+
+nofilter = (\
+	'ad', \
+	'be', \
+	'do', \
+	'go', \
+	'id', \
+	'no', \
+	'tv', \
+	'ui', \
+	'up', \
+	)
 
 nrs = {'1st': 'First', '2nd': 'Second', '3rd': 'Third', '1th': 'First', '2th': 'Second', \
 '3th': 'Third', '4th': 'Fourth', '5th': 'Fifth', '6th': 'Sixth', '7th': 'Seventh', \
@@ -75,6 +98,7 @@ def heurichoose(k, v1, v2):
 # 	- saves only proper letters
 # 	- treats any other symbol as a words separator
 # 	- converts words to lower case
+#	- tries to break CamelCase
 def string2words(s):
 	ws = ['']
 	for c in s:
@@ -84,4 +108,15 @@ def string2words(s):
 			ws.append('')
 	if ws[-1] == '':
 		ws = ws[:-1]
-	return [w.lower() for w in ws]
+	ws2 = []
+	for w in ws:
+		ccws = re.findall('[A-Z][a-z]+', w)
+		if w not in nosplit and len(ccws) > 1 and ''.join(ccws) == w:
+			# print('[  CC  ]', w, '->', ' ++ '.join(ccws))
+			ws2.extend(ccws)
+		else:
+			ws2.append(w)
+	return [w.lower() for w in ws2 if w.lower() not in trash or w.lower() in nofilter]
+
+def filtershort(ws):
+	return [w for w in ws if len(w) > 2 or w in nofilter]

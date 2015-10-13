@@ -7,7 +7,7 @@ import sys, os.path, glob
 from fancy.ANSI import C
 from lib.AST import Sleigh
 from lib.JSON import parseJSON
-from lib.NLP import string2words
+from lib.NLP import string2words, filtershort
 
 # import stemming.porter2
 import snowballstemmer
@@ -42,7 +42,7 @@ def checkon(fn, o):
 			print('No title in', o.getKey())
 		return 1 # no title
 	# check for a different language - to avoid stemming altogether
-	if o.tags and ('german' in o.tags or 'french' in o.tags):
+	if o.tags and ('german' in o.tags or 'french' in o.tags or 'portuguese' in o.tags):
 		if 'stemmed' in o.json.keys():
 			# if stemmed before marked foreign, remove this info
 			del o.json['stemmed']
@@ -62,7 +62,7 @@ def checkon(fn, o):
 	### disregarded variant: nltk - worse on verbs ending with -ze
 	# stemmer3 = lambda xs: [SnowballStemmer("english").stem(x) for x in xs]
 	### end variants
-	stemmed = stemmer(string2words(o.get('title')))
+	stemmed = filtershort(stemmer(string2words(o.get('title'))))
 	if '' in stemmed:
 		print('“{}” is a title of {} and it has an empty word'.format(o.get('title'), C.red(o.getKey())))
 		print(string2words(o.get('title')))

@@ -10,7 +10,7 @@ from fancy.Templates import taglistHTML, tagHTML
 from lib.AST import Sleigh, escape
 from lib.JSON import parseJSON
 from lib.LP import listify
-from lib.NLP import baretext, superbaretext, trash
+from lib.NLP import string2words, trash
 
 ienputdir = '../json'
 outputdir = '../frontend'
@@ -55,14 +55,14 @@ def kv2link(k, v):
 	elif k == 'www':
 		ico = ''#makeimg('www', 'Homepage')
 		if not v.startswith('http'):
-			w = v
+			y = v
 			v = 'http://'+v
 		else:
-			w = v.replace('http://', '').replace('https://', '')
-		r = '<a href="{0}">{1}</a>'.format(v, w)
+			y = v.replace('http://', '').replace('https://', '')
+		r = '<a href="{0}">{1}</a>'.format(v, y)
 	elif k == 'aka':
 		ico = ''
-		r = '<br/>'.join(['a.k.a.: “{}”'.format(x) for x in listify(v)])
+		r = '<br/>'.join(['a.k.a.: “{}”'.format(z) for z in listify(v)])
 	else:
 		ico = ''
 		r = '?{}?{}?'.format(k, v)
@@ -76,21 +76,21 @@ if __name__ == "__main__":
 		C.purple('='*42)))
 	ts = sleigh.getTags()
 	tagged = []
-	for k in ts.keys():
-		f = open('{}/tag/{}.html'.format(outputdir, k), 'w')
+	for key in ts.keys():
+		f = open('{}/tag/{}.html'.format(outputdir, key), 'w')
 		# papers are displayed in reverse chronological order
-		lst = [x.getRestrictedItem(k) for x in \
-			sorted(ts[k], key=lambda z: -z.json['year'] if 'year' in z.json.keys() else 0)]
+		lst = [x.getRestrictedItem(key) for x in \
+			sorted(ts[key], key=lambda z: -z.json['year'] if 'year' in z.json.keys() else 0)]
 		# no comprehension possible for this case
-		for x in ts[k]:
+		for x in ts[key]:
 			if x not in tagged:
 				tagged.append(x)
 		# read tag definition
-		tagdef = parseJSON(ienputdir + '/tags/{}.json'.format(k))
+		tagdef = parseJSON(ienputdir + '/tags/{}.json'.format(key))
 		# what to google?
 		links = []
 		if 'g' not in tagdef.keys():
-			links.append(kv2link('g', tagdef['namefull'] if 'namefull' in tagdef.keys() else k))
+			links.append(kv2link('g', tagdef['namefull'] if 'namefull' in tagdef.keys() else key))
 		links.extend([kv2link(jk, tagdef[jk]) for jk in tagdef.keys()\
 				if not jk.isupper() \
 				and not jk.startswith('match') \
@@ -103,9 +103,9 @@ if __name__ == "__main__":
 		# hack to get from tags to papers
 		dl = dl.replace('href="', 'href="../')
 		f.write(tagHTML.format(\
-			title=k+' tag',
-			etag=escape(k),
-			tag=k,
+			title=key+' tag',
+			etag=escape(key),
+			tag=key,
 			above='',
 			boxlinks=links,
 			listname='{} papers'.format(len(lst)),
@@ -114,7 +114,7 @@ if __name__ == "__main__":
 	print('Tag pages:', C.yellow('{}'.format(len(ts))), C.blue('generated'))
 	# tag index
 	f = open(outputdir+'/tag/index.html', 'w')
-	keyz = [k for k in ts.keys() if len(ts[k]) > 2]
+	keyz = [q for q in ts.keys() if len(ts[q]) > 2]
 	keyz.sort(key=lambda t: len(ts[t]), reverse=True)
 	lst = ['<li>#<a href="{}.html">{}</a> ({})</li>'.format(escape(t), t, len(ts[t])) for t in keyz]
 	ul = '<ul class="tri mul">' + '\n'.join(lst) + '</ul>'
@@ -131,15 +131,15 @@ if __name__ == "__main__":
 	# bag of words
 	bow = {}
 	lst = []
-	for v in sleigh.venues:
-		for c in v.getConfs():
+	for V in sleigh.venues:
+		for c in V.getConfs():
 			for p in c.papers:
 				if p in tagged:
 					continue
 				lst.append(p)
 				CX += 1
-				for w in superbaretext(baretext(p.get('title'))).split(' '):
-					if w in trash:
+				for w in string2words(p.get('title')):
+					if len(w) < 3 or w in trash:
 						continue
 					if w in bow.keys():
 						bow[w] += 1
@@ -152,7 +152,8 @@ if __name__ == "__main__":
 		bag += '<span style="border:1px solid black;margin:5px">{}</span> ({}) '.format(w, bow[w])
 		if bow[w] < 30:
 			break
-	lst = [x.getRestrictedItem(None) for x in sorted(lst, key=lambda z: -z.json['year'] if 'year' in z.json.keys() else 0)]
+	lst = [x.getRestrictedItem(None) for x in \
+		sorted(lst, key=lambda z: -z.json['year'] if 'year' in z.json.keys() else 0)]
 	dl = '<dl class="toc">' + '\n'.join(lst) + '</dl>'
 	f.write(tagHTML.format(\
 		title='All untagged papers',
