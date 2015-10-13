@@ -147,10 +147,12 @@ if __name__ == "__main__":
 						bow[w] = 1
 	print('Tag candidates:', C.blue('found'))
 	bag = '\n'
-	for w in bow.keys():
-		if bow[w] > 40:
-			bag += '<span style="border:1px solid black;margin:5px">{}</span> ({}) '.format(w, bow[w])
-	lst = [x.getRestrictedItem(None) for x in sorted(lst, key=lambda z:-z.json['year'] if 'year' in z.json.keys() else 0)]
+	bowkeys = sorted(bow.keys(), key=lambda z: -int(bow[z]))
+	for w in bowkeys:
+		bag += '<span style="border:1px solid black;margin:5px">{}</span> ({}) '.format(w, bow[w])
+		if bow[w] < 30:
+			break
+	lst = [x.getRestrictedItem(None) for x in sorted(lst, key=lambda z: -z.json['year'] if 'year' in z.json.keys() else 0)]
 	dl = '<dl class="toc">' + '\n'.join(lst) + '</dl>'
 	f.write(tagHTML.format(\
 		title='All untagged papers',

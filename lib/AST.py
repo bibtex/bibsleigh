@@ -531,7 +531,7 @@ class Venue(Unser):
 		brands = []
 		for brand in self.brands:
 			if 'venue' in brand.json.keys():
-				img = brand.json['venue']
+				img = brand.json['venue'].lower()
 			else:
 				img = brand.getKey().lower()
 			brands.append('<div class="wider"><a href="{name}.brand.html"><img src="stuff/{lowname}.png" class="abc" alt="{name}" title="{longname}"></a><abbr title="{longname}">{name}</abbr></div>'.format(\
