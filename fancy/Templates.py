@@ -8,8 +8,8 @@ header = '''<!DOCTYPE html>
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-	<meta name="keywords" content="software linguistics, software language engineering, book of knowledge, glossary, Russian; иньекция; English; inject"/>
-	<title>SLEBoK — BibSLEIGH — {title}</title>
+	<meta name="keywords" content="software linguistics, software language engineering, book of knowledge, glossary, academic publications, scientific research, open knowledge, open science"/>
+	<title>BibSLEIGH — {title}</title>
 	<link href="stuff/bib.css" rel="stylesheet" type="text/css"/>
 	<link href='http://fonts.googleapis.com/css?family=Exo+2:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
 	<script src="stuff/jquery.min.js" type="text/javascript"></script>
@@ -151,6 +151,26 @@ tagHTML = header.replace('stuff/', '../stuff/')+'''
 {dl}
 '''+footer
 
+wordlistHTML = header+'''
+	<a href="index.html"><img src="stuff/bibsleigh.png" alt="BibSLEIGH" title="BibSLEIGH" class="pad"/></a>
+'''+leftLinks('pppp', '')+'''
+</div>
+<div class="main">
+<h2><span class="ttl">Stem index</span></h2>
+<h3>{listname}:</h3>
+{ul}
+'''+footer
+
+wordHTML = header.replace('stuff/', '../stuff/')+'''
+	<a href="../index.html"><img src="../stuff/bibsleigh.png" alt="BibSLEIGH" title="BibSLEIGH" class="pad"/></a>
+'''+movein(leftLinks('pppp', ''))+'''
+</div>
+<div class="main">
+<h2><span class="ttl">Stem</span> ${stem} (<a href="../words.html">all stems</a>)</h2>
+<h3>{listname}:</h3>
+{dl}
+'''+footer
+
 peoplistHTML = header.replace('stuff/', '../stuff/')+'''
 	<a href="../index.html"><img src="../stuff/bibsleigh.png" alt="BibSLEIGH" title="BibSLEIGH" class="pad"/></a>
 '''+movein(leftLinks('pppa', ''))+'''
@@ -175,7 +195,7 @@ bibHTML = header+'''
 '''+leftLinks('appp', editLink).format(edit=editCorpus)+'''
 </div>
 <div class="main">
-<h2>{authors}<br/><em>{title}</em><br/>{short}.</h2>
+<h2>{authors}<br/><em>{stemmedTitle}</em><br/>{short}.</h2>
 <div class="rbox">
 {boxlinks}
 </div>

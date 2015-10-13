@@ -115,13 +115,13 @@ if __name__ == "__main__":
 	# tag index
 	f = open(outputdir+'/tag/index.html', 'w')
 	keyz = [k for k in ts.keys() if len(ts[k]) > 2]
-	keyz = sorted(keyz, key=lambda t: len(ts[t]), reverse=True)
+	keyz.sort(key=lambda t: len(ts[t]), reverse=True)
 	lst = ['<li>#<a href="{}.html">{}</a> ({})</li>'.format(escape(t), t, len(ts[t])) for t in keyz]
 	ul = '<ul class="tri mul">' + '\n'.join(lst) + '</ul>'
 	CX = sum([len(ts[t]) for t in ts.keys()])
 	f.write(taglistHTML.format(\
 		title='All known tags',
-		listname='{} tags known from {} markings'.format(len(ts.keys()), CX),
+		listname='{} tags known from {} markings'.format(len(ts), CX),
 		ul=ul))
 	f.close()
 	print('Tag index:', C.blue('created'))
@@ -168,4 +168,3 @@ if __name__ == "__main__":
 		C.red(len(sleigh.venues)),
 		C.red(sleigh.numOfPapers()),
 		C.red(sleigh.numOfTags())))
-	# print(sleigh.getTags())

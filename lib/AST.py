@@ -7,6 +7,7 @@ import glob, os.path
 from fancy.Templates import uberHTML, confHTML, bibHTML, brandHTML
 from lib.JSON import jsonkv, parseJSON
 from lib.LP import listify
+from lib.NLP import string2words, trash
 from fancy.ANSI import C
 
 def sortMyTags(tpv):
@@ -54,6 +55,7 @@ class Unser(object):
 		self.json = {}
 		self.back = self
 		self.tags = None
+		self.stems = None
 		self.n2f = {}
 	def getPureName(self):
 		# +1 for the slash
@@ -95,7 +97,7 @@ class Unser(object):
 					s += '\t{0:<13} = "{{<span id="{0}">{1}</span>}}",\n'.format(k, self.json[k])
 			elif k in ('crossref', 'key', 'type', 'venue', 'twitter', \
 				'eventtitle', 'eventurl', 'nondblpkey', 'dblpkey', 'dblpurl', \
-				'programchair', 'generalchair', 'roles', 'tagged'):
+				'programchair', 'generalchair', 'roles', 'tagged', 'stemmed'):
 				# TODO: ban 'ee' as well
 				pass
 			elif k == 'doi':
@@ -331,6 +333,20 @@ class Sleigh(Unser):
 						self.tags[k] = []
 					self.tags[k].extend(ts[k])
 		return self.tags
+	def getStems(self):
+		# the code could be shorter and nicer hierarchically, but this one is fast
+		if not self.stems:
+			self.stems = {}
+			for v in self.venues:
+				for y in v.years:
+					for c in y.confs:
+						for p in c.papers:
+							stems = p.getStems()
+							for s in stems.keys():
+								if s not in self.stems.keys():
+									self.stems[s] = []
+								self.stems[s].append(stems[s])
+		return self.stems
 
 class Brand(Unser):
 	def __init__(self, f, hdir, name2file, parent):
@@ -802,6 +818,7 @@ class Conf(Unser):
 		return bibHTML.format(\
 			filename=self.getJsonName(),
 			title=self.get('title'),
+			stemmedTitle=self.get('title'),
 			img=self.get('venue').lower(), # geticon?
 			authors=self.getAuthors(),
 			short='{}, {}'.format(self.get('booktitle'), self.get('year')),
@@ -913,9 +930,29 @@ class Paper(Unser):
 			cnt += '</ul><hr/>'
 		else:
 			cnt = ''
+		if 'stemmed' in self.json.keys():
+			title = self.get('title')
+			ltitle = title.lower()
+			words = string2words(title)
+			words.reverse()
+			fancytitle = ''
+			for w in words:
+				i = ltitle.rindex(w)
+				stem = self.json['stemmed'][len(words) - words.index(w)-1]
+				if stem in trash:
+					fancytitle = title[i:] + fancytitle
+				else:
+					fancytitle = '<a href="word/{}.html">{}</a>{}'.format(\
+						stem, title[i:i+len(w)], title[i+len(w):]) + fancytitle
+				ltitle = ltitle[:i]
+				title = title[:i]
+			fancytitle = title + fancytitle
+		else:
+			fancytitle = self.get('title')
 		return bibHTML.format(\
 			filename=self.getJsonName(),
 			title=self.get('title'),
+			stemmedTitle=fancytitle,
 			img=self.get('venue').lower(), # geticon?
 			authors=self.getAuthors(),
 			short='{}, {}'.format(self.get('venue'), self.get('year')),
@@ -936,5 +973,7 @@ class Paper(Unser):
 			return None
 	def getTags(self):
 		return {k:self for k in self.tags} if self.tags else {}
+	def getStems(self):
+		return {w:self for w in self.json['stemmed']} if 'stemmed' in self.json.keys() else {}
 	def getQTags(self):
 		return self.tags if self.tags else []

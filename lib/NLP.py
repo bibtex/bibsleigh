@@ -11,7 +11,7 @@ trash = ('-', \
 	'in', \
 	'of', 'on', \
 	's', \
-	'the', 'through', 'to', 'towards', \
+	'the', 'through', 'to', 'toward', 'towards', \
 	'via', \
 	'with')
 
@@ -70,3 +70,18 @@ def heurichoose(k, v1, v2):
 	# print('{}: {} vs {}'.format(C.red('\tUndecided ' + k), v1, v2))
 	# if undecided, stick to the old one
 	return v2
+
+# Works almost like .split() but much stricter:
+# 	- saves only proper letters
+# 	- treats any other symbol as a words separator
+# 	- converts words to lower case
+def string2words(s):
+	ws = ['']
+	for c in s:
+		if c.isalpha():
+			ws[-1] += c
+		elif ws[-1] != '':
+			ws.append('')
+	if ws[-1] == '':
+		ws = ws[:-1]
+	return [w.lower() for w in ws]
