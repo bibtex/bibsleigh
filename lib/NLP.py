@@ -10,7 +10,6 @@ trash = ('-', \
 	'for', 'from', \
 	'her', 'hers', 'him', 'his', 'how', \
 	'its', 'into', \
-	'mine', \
 	'over', \
 	'she', \
 	'the', 'they', 'them', 'their', 'through', \
@@ -98,7 +97,7 @@ def heurichoose(k, v1, v2):
 # 	- saves only proper letters
 # 	- treats any other symbol as a words separator
 # 	- converts words to lower case
-#	- tries to break CamelCase
+#	- tries to break CamelCase, CamelTAIL and HEADCamel (no CamelMIDCase)
 def string2words(s):
 	ws = ['']
 	for c in s:
@@ -111,12 +110,27 @@ def string2words(s):
 	ws2 = []
 	for w in ws:
 		ccws = re.findall('[A-Z][a-z]+', w)
-		if w not in nosplit and len(ccws) > 1 and ''.join(ccws) == w:
+		recon = ''.join(ccws)
+		if w not in nosplit and len(ccws) > 1 and recon == w:
+			# primary case: a word cleanly split into words
 			# print('[  CC  ]', w, '->', ' ++ '.join(ccws))
 			ws2.extend(ccws)
+		elif w.endswith(recon) and re.match('^[A-Z]+$', w[:-len(recon)]):
+			# corner case: starts with an abbreviation, continues to camel
+			# print('[  CC  ]', w, '->', w[:-len(recon)], '±±', ' ++ '.join(ccws))
+			ws2.append(w[:-len(recon)])
+			ws2.extend(ccws)
+		elif w.startswith(recon) and re.match('^[A-Z]+$', w[len(recon):]):
+			# corner case: starts with a camel, ends with an abbreviation
+			# print('[  CC  ]', w, '->', ' ++ '.join(ccws), '±±', w[len(recon):])
+			ws2.extend(ccws)
+			ws2.append(w[len(recon):])
 		else:
 			ws2.append(w)
-	return [w.lower() for w in ws2 if w.lower() not in trash or w.lower() in nofilter]
+	return [w.lower() for w in ws2] # if w.lower() not in trash or w.lower() in nofilter]
 
-def filtershort(ws):
-	return [w for w in ws if len(w) > 2 or w in nofilter]
+def ifIgnored(w):
+	return not ifApproved(w)
+
+def ifApproved(w):
+	return w in nofilter or (w not in trash and len(w) > 2)

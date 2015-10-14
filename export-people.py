@@ -10,7 +10,7 @@ from fancy.Templates import personHTML, peoplistHTML, movein
 from lib.AST import Sleigh, escape
 from lib.JSON import parseJSON
 from lib.LP import uniq, listify
-from lib.NLP import shorten
+from lib.NLP import shorten, ifIgnored
 
 # The idea is to generate a colour between FFFDE7 (for 'a') and F57F17 (for 'z')
 # FFFDE7 is Yellow/50 and F57F17 is Yellow/900 in Material Design
@@ -110,6 +110,12 @@ def countAllPapers(ad, ed):
 	if ad != 0 and ed == 0:
 		return 'Authored {} papers'.format(ad)
 
+def pad(n):
+	x = str(n)
+	while len(x) < 4:
+		x = '0' + x
+	return x
+
 if __name__ == "__main__":
 	print('{}: {} venues, {} papers\n{}'.format(\
 		C.purple('BibSLEIGH'),
@@ -190,7 +196,7 @@ if __name__ == "__main__":
 				adds = '<code>Travelled to:</code><hr/>' \
 					 + '<br/>\n'.join(['{} × {}'.format(clist[a], a) for a in sorted(clist.keys())])
 				boxlinks += adds
-			# TODO: collaborated with...
+			# collaborated with...
 			clist = {}
 			for p in persondef['authored']:
 				if 'author' in bykey[p].json.keys():
@@ -219,10 +225,30 @@ if __name__ == "__main__":
 					 + '\n'.join(['<span style="font-size:{}%">{}</span>'.format(\
 					 		m*clist[a],
 					 		linkto(a))\
-					 	for a in sorted(clist.keys(), key=lambda x:-clist[x])])
+					 	for a in sorted(clist.keys(), key=lambda x: -clist[x])])
 				boxlinks += movein(adds)
 			# else:
 			# 	print(persondef['name'], 'is a very lonely person')
+			# talks about ...
+			stems = {}
+			# TODO: store examples of stem usage for prettier representation
+			# examples = {}
+			for pk in persondef['authored']:
+				p = bykey[pk]
+				if 'stemmed' in p.json.keys():
+					for stem in p.json['stemmed']:
+						if ifIgnored(stem):
+							continue
+						elif stem in stems.keys():
+							stems[stem] += 1
+						else:
+							stems[stem] = 1
+							# examples[stem] = 
+			stemkeys = sorted(stems.keys(), key=lambda Z: pad(stems[Z])+pad(len(Z))+Z, reverse=True)
+			adds = '<hr/><code>Talks about:</code><hr/>' \
+				 + ' \n'.join(['<span class="tag"><a href="../word/{0}.html">{0}</a></span> ({1})'.format(S, stems[S]) \
+				 	for S in stemkeys[:10]])
+			boxlinks += adds
 			# combine boxlinks
 			if boxlinks:
 				boxlinks = '<div class="tbox">' + boxlinks + '</div>'

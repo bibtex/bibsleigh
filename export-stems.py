@@ -8,7 +8,7 @@ from fancy.ANSI import C
 from fancy.Templates import wordlistHTML, wordHTML
 from lib.AST import Sleigh, escape
 from lib.JSON import parseJSON
-from lib.NLP import trash
+from lib.NLP import trash, ifApproved
 
 ienputdir = '../json'
 outputdir = '../frontend'
@@ -27,11 +27,23 @@ if __name__ == "__main__":
 	for k in stems.keys():
 		f = open('{}/word/{}.html'.format(outputdir, k), 'w')
 		# papers are displayed in reverse chronological order
-		lst = [x.getItem() for x in \
+		lst = [x.getIItem() for x in \
 			sorted(stems[k], key=lambda z: -z.json['year'] if 'year' in z.json.keys() else 0)]
+		# collect other stems
+		siblings = {}
+		for x in stems[k]:
+			for s in x.getBareStems():
+				if s != k and ifApproved(s):
+					if s not in siblings:
+						siblings[s] = 0
+					siblings[s] += 1
+		topsib = sorted(siblings.keys(), key=lambda z: -siblings[z])[:5]
+		box = '<code>Used together with:</code><hr/>' + \
+			'\n<br/>'.join(['<span class="tag"><a href="{0}.html">{0}</a></span> ({1})'.format(\
+				S, siblings[S]) for S in topsib])
 		f.write(wordHTML.format(\
-			title=k+' stem',
 			stem=k,
+			inthebox=box,
 			listname='{} papers'.format(len(lst)),
 			dl='<dl class="toc">' + '\n'.join(lst).replace('href="', 'href="../') + '</dl>'))
 		f.close()
@@ -39,9 +51,10 @@ if __name__ == "__main__":
 	# stem index
 	f = open(outputdir+'/words.html', 'w')
 	# TODO: add length mod
+	# TODO: not use trash
 	keyz = [k for k in stems.keys() if (len(k) > 10 or len(k) < 4) and k not in trash]
 	keyz.sort(key=lambda t: -len(t), reverse=True)
-	lst = ['<li>$<a href="word/{}.html">{}</a> ({})</li>'.format(\
+	lst = ['<li><a href="word/{}.html">{}</a>$ ({})</li>'.format(\
 		escape(t), t, len(stems[t])) for t in keyz]
 	ul = '<ul class="tri">' + '\n'.join(lst) + '</ul>'
 	CX = sum([len(stems[t]) for t in stems.keys()])

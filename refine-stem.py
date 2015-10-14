@@ -7,7 +7,7 @@ import sys, os.path, glob
 from fancy.ANSI import C
 from lib.AST import Sleigh
 from lib.JSON import parseJSON
-from lib.NLP import string2words, filtershort
+from lib.NLP import string2words, ifApproved
 
 # import stemming.porter2
 import snowballstemmer
@@ -20,18 +20,18 @@ sleigh = Sleigh(ienputdir + '/corpus', name2file)
 verbose = False
 ALLSTEMS = []
 
-def guessYear(p):
-	cys = [int(w) for w in p.split('-') if len(w) == 4 and w.isdigit()]
+def guessYear(P):
+	cys = [int(w) for w in P.split('-') if len(w) == 4 and w.isdigit()]
 	if len(cys) == 1:
 		return cys[0]
 	else:
-		j = sleigh.seekByKey(p)
+		j = sleigh.seekByKey(P)
 		if 'year' in j.json.keys():
 			return j.get('year')
 		elif 'year' in dir(j):
 			return j.year
 		else:
-			print('[ {} ] {}'.format(C.red('YEAR'), p))
+			print('[ {} ] {}'.format(C.red('YEAR'), P))
 			return 0
 
 def checkon(fn, o):
@@ -62,7 +62,7 @@ def checkon(fn, o):
 	### disregarded variant: nltk - worse on verbs ending with -ze
 	# stemmer3 = lambda xs: [SnowballStemmer("english").stem(x) for x in xs]
 	### end variants
-	stemmed = filtershort(stemmer(string2words(o.get('title'))))
+	stemmed = stemmer(string2words(o.get('title')))
 	if '' in stemmed:
 		print('“{}” is a title of {} and it has an empty word'.format(o.get('title'), C.red(o.getKey())))
 		print(string2words(o.get('title')))
@@ -116,7 +116,7 @@ if __name__ == "__main__":
 	# write all stems
 	ALLSTEMS.sort(key=lambda w: two(len(w)) + w)
 	f = open(ienputdir + '/stems.json', 'w')
-	f.write('[\n\t"' + '",\n\t"'.join(ALLSTEMS) + '"\n]')
+	f.write('[\n\t"' + '",\n\t"'.join(filter(ifApproved, ALLSTEMS)) + '"\n]')
 	f.close()
 	print(C.red(len(ALLSTEMS)), 'stems found.')
 	print('{} files checked, {} ok, {} fixed, {} failed'.format(\

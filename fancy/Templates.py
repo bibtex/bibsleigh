@@ -161,12 +161,15 @@ wordlistHTML = header+'''
 {ul}
 '''+footer
 
-wordHTML = header.replace('stuff/', '../stuff/')+'''
+wordHTML = header.replace('stuff/', '../stuff/').replace('{title}', '{stem} stem')+'''
 	<a href="../index.html"><img src="../stuff/bibsleigh.png" alt="BibSLEIGH" title="BibSLEIGH" class="pad"/></a>
 '''+movein(leftLinks('pppp', ''))+'''
 </div>
 <div class="main">
-<h2><span class="ttl">Stem</span> ${stem} (<a href="../words.html">all stems</a>)</h2>
+<div class="tbox">
+{inthebox}
+</div>
+<h2><span class="ttl">Stem</span> {stem}$ (<a href="../words.html">all stems</a>)</h2>
 <h3>{listname}:</h3>
 {dl}
 '''+footer

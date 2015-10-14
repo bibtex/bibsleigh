@@ -7,7 +7,7 @@ import glob, os.path
 from fancy.Templates import uberHTML, confHTML, bibHTML, brandHTML
 from lib.JSON import jsonkv, parseJSON
 from lib.LP import listify
-from lib.NLP import string2words, trash
+from lib.NLP import string2words, ifApproved
 from fancy.ANSI import C
 
 def sortMyTags(tpv):
@@ -904,6 +904,8 @@ class Paper(Unser):
 			' '+bar)
 	def getItem(self):
 		return self.getItemWTags(self.getFancyTags(self.tags) if self.tags else '', False)
+	def getIItem(self):
+		return self.getItemWTags(self.getFancyTags(self.tags) if self.tags else '', True)
 	def getRestrictedItem(self, t):
 		if not self.tags:
 			return self.getItemWTags('', True)
@@ -939,11 +941,11 @@ class Paper(Unser):
 			for w in words:
 				i = ltitle.rindex(w)
 				stem = self.json['stemmed'][len(words) - words.index(w)-1]
-				if stem in trash:
-					fancytitle = title[i:] + fancytitle
-				else:
+				if ifApproved(stem):
 					fancytitle = '<a href="word/{}.html">{}</a>{}'.format(\
 						stem, title[i:i+len(w)], title[i+len(w):]) + fancytitle
+				else:
+					fancytitle = title[i:] + fancytitle
 				ltitle = ltitle[:i]
 				title = title[:i]
 			fancytitle = title + fancytitle
@@ -974,6 +976,8 @@ class Paper(Unser):
 	def getTags(self):
 		return {k:self for k in self.tags} if self.tags else {}
 	def getStems(self):
-		return {w:self for w in self.json['stemmed']} if 'stemmed' in self.json.keys() else {}
+		return {w:self for w in self.getBareStems()}
+	def getBareStems(self):
+		return self.json['stemmed'] if 'stemmed' in self.json.keys() else {}
 	def getQTags(self):
 		return self.tags if self.tags else []
