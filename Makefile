@@ -2,6 +2,7 @@ ex:
 	make bun
 	make web
 	make tag
+	time ./export-stems.py
 	time ./export-people.py
 
 tag:
@@ -25,7 +26,7 @@ norm:
 	time ./refine-lowerVenue.py
 	time ./refine-giveNames.py
 	time ./refine-hyperlinks.py
-	time ./refine-retag.py
+	# time ./refine-retag.py
 
 run:
 	time ./library.py

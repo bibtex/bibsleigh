@@ -8,7 +8,7 @@ from fancy.ANSI import C
 from fancy.Templates import wordlistHTML, wordHTML
 from lib.AST import Sleigh, escape
 from lib.JSON import parseJSON
-from lib.NLP import trash, ifApproved
+from lib.NLP import ifApproved
 
 ienputdir = '../json'
 outputdir = '../frontend'
@@ -30,6 +30,12 @@ if __name__ == "__main__":
 		lst = [x.getIItem() for x in \
 			sorted(stems[k], key=lambda z: -z.json['year'] if 'year' in z.json.keys() else 0)]
 		# collect other stems
+		# NB: do not use the following code, slows everything down from 1 minute to 161 minutes
+		# allstems = []
+		# for x in stems[k]:
+		# 	allstems += x.getBareStems()
+		# siblings = {stem:allstems.count(stem) for stem in allstems if stem != k and ifApproved(stem)}
+		# NB: the following code is faster:
 		siblings = {}
 		for x in stems[k]:
 			for s in x.getBareStems():
@@ -51,8 +57,7 @@ if __name__ == "__main__":
 	# stem index
 	f = open(outputdir+'/words.html', 'w')
 	# TODO: add length mod
-	# TODO: not use trash
-	keyz = [k for k in stems.keys() if (len(k) > 10 or len(k) < 4) and k not in trash]
+	keyz = [k for k in stems.keys() if ifApproved(k)]
 	keyz.sort(key=lambda t: -len(t), reverse=True)
 	lst = ['<li><a href="word/{}.html">{}</a>$ ({})</li>'.format(\
 		escape(t), t, len(stems[t])) for t in keyz]

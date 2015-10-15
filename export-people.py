@@ -9,7 +9,7 @@ from fancy.Languages import ISONames
 from fancy.Templates import personHTML, peoplistHTML, movein
 from lib.AST import Sleigh, escape
 from lib.JSON import parseJSON
-from lib.LP import uniq, listify
+from lib.LP import listify
 from lib.NLP import shorten, ifIgnored
 
 # The idea is to generate a colour between FFFDE7 (for 'a') and F57F17 (for 'z')
@@ -80,10 +80,10 @@ def dict2links(d):
 			rs.append(('', 'Gender: ' + v))
 		elif k == 'roles':
 			for role in v:
-				if os.path.exists(outputdir + '/stuff/' + role[0].lower() + '.png'):
-					ico = makeimg(role[0].lower(), role[0], 30)
-				else:
-					ico = ''
+				ico = makeimg(role[0].lower(), role[0], 30)
+				# if os.path.exists(outputdir + '/stuff/' + role[0].lower() + '.png'):
+				# else:
+				# 	ico = ''
 				if os.path.exists(outputdir + '/' + role[0] + '-' + role[1] + '.html'):
 					r = '<a href="../{0}-{1}.html">{0}-{1}</a>'.format(role[0], role[1])
 				else:
@@ -100,21 +100,11 @@ def linkto(n):
 	else:
 		return n
 
-def countAllPapers(ad, ed):
-	if ad == 0 and ed == 0:
-		return 'No papers'
-	if ad == 0 and ed != 0:
-		return 'Edited {} volumes edited'.format(ed)
-	if ad != 0 and ed == 0:
-		return 'Authored {} papers'.format(ad)
-	if ad != 0 and ed == 0:
-		return 'Authored {} papers'.format(ad)
-
 def pad(n):
-	x = str(n)
-	while len(x) < 4:
-		x = '0' + x
-	return x
+	X = str(n)
+	while len(X) < 4:
+		X = '0' + X
+	return X
 
 if __name__ == "__main__":
 	print('{}: {} venues, {} papers\n{}'.format(\
@@ -164,37 +154,31 @@ if __name__ == "__main__":
 		dls = dict2links(persondef)
 		boxlinks = ''
 		if 'roles' in persondef.keys():
-			curlist = '<h3>Facilitated {} volumes:</h3>'.format(len(persondef['roles']))
 			# things = [sleigh.seekByKey(p).getItem() for p in persondef['edited']]
 			things = [bykey[r[0]].getIconItem1(r[1]) for r in persondef['roles']]
-			# curlist += '<dl class="toc">' + movein('\n'.join(things)) + '</dl>'
-			curlist += '<div class="minibar">' + movein('\n'.join(things)) + '<br style="clear:left"/></div>'
-			dls += curlist
+			dls += '<h3>Facilitated {} volumes:</h3>'.format(len(persondef['roles'])) \
+				+ '<div class="minibar">' + movein('\n'.join(things)) + '<br style="clear:left"/></div>'
 		if 'authored' in persondef.keys():
-			# List of contributions
-			curlist = '<h3>Contributed to:</h3>'
-			things = [bykey[p].up().getIconItem1(bykey[p].get('year')) for p in persondef['authored']]
-			curlist += '<div class="minibar">' + movein('\n'.join(uniq(things))) + '<br style="clear:left"/></div>'
-			dls += curlist
-			# List of papers
-			curlist = '<h3>Wrote {} papers:</h3>'.format(len(persondef['authored']))
+			# List of contributions and papers
+			dls += '<h3>Contributed to:</h3><div class="minibar">' \
+				+ movein('\n'.join({bykey[p].up().getIconItem1(bykey[p].get('year')) \
+					for p in persondef['authored']})) \
+				+ '<br style="clear:left"/></div>' \
+				+ '<h3>Wrote {} papers:</h3>'.format(len(persondef['authored'])) \
+				+ '<dl class="toc">' \
+				+ movein('\n'.join([bykey[p].getItem() for p in persondef['authored']])) \
+				+ '</dl>'
 			# things = [sleigh.seekByKey(p).getItem() for p in persondef['authored']]
-			things = [bykey[p].getItem() for p in persondef['authored']]
-			curlist += '<dl class="toc">' + movein('\n'.join(things)) + '</dl>'
-			dls += curlist
 			# travelled to...
 			# NB: code clone of AST::Venue
-			cs = uniq([bykey[p].up() for p in persondef['authored']])
-			ads = [c.json['address'][-1] for c in cs if 'address' in c.json.keys()]
+			# cs = 
+			ads = [c.json['address'][-1] \
+				for c in {bykey[p].up() for p in persondef['authored']} \
+				if 'address' in c.json]
 			if ads:
-				clist = {}
-				for a in ads:
-					if a in clist.keys():
-						clist[a] += 1
-					else:
-						clist[a] = 1
+				clist = {a:ads.count(a) for a in ads}
 				adds = '<code>Travelled to:</code><hr/>' \
-					 + '<br/>\n'.join(['{} × {}'.format(clist[a], a) for a in sorted(clist.keys())])
+					 + '<br/>\n'.join(sorted(['{} × {}'.format(clist[a], a) for a in clist]))
 				boxlinks += adds
 			# collaborated with...
 			clist = {}
@@ -205,7 +189,7 @@ if __name__ == "__main__":
 					if D == 1:
 						# solo papers count as coauthoring with yourself
 						a = '∅'
-						if a not in clist.keys():
+						if a not in clist:
 							clist[a] = 0
 							if persondef['name'] in name2file.keys():
 								name2file['∅'] = name2file[persondef['name']]
@@ -233,17 +217,10 @@ if __name__ == "__main__":
 			stems = {}
 			# TODO: store examples of stem usage for prettier representation
 			# examples = {}
+			allstems = []
 			for pk in persondef['authored']:
-				p = bykey[pk]
-				if 'stemmed' in p.json.keys():
-					for stem in p.json['stemmed']:
-						if ifIgnored(stem):
-							continue
-						elif stem in stems.keys():
-							stems[stem] += 1
-						else:
-							stems[stem] = 1
-							# examples[stem] = 
+				allstems += bykey[pk].getBareStems()
+			stems = {stem:allstems.count(stem) for stem in allstems if not ifIgnored(stem)}
 			stemkeys = sorted(stems.keys(), key=lambda Z: pad(stems[Z])+pad(len(Z))+Z, reverse=True)
 			adds = '<hr/><code>Talks about:</code><hr/>' \
 				 + ' \n'.join(['<span class="tag"><a href="../word/{0}.html">{0}</a></span> ({1})'.format(S, stems[S]) \
