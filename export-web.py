@@ -37,10 +37,10 @@ if __name__ == "__main__":
 		f.close()
 		if v.brands:
 			r += '{' + '+'.join([C.blue(b.getKey()) for b in v.brands]) + '}'
-		for b in v.brands:
-			f = open(outputdir+'/'+b.getKey()+'.brand.html', 'w')
-			f.write(b.getPage())
-			f.close()
+			for b in v.brands:
+				f = open(outputdir+'/'+b.getKey()+'.brand.html', 'w')
+				f.write(b.getPage())
+				f.close()
 		r += ' => '
 		for c in v.getConfs():
 			f = open(outputdir+'/'+c.getKey()+'.html', 'w')
@@ -73,12 +73,9 @@ if __name__ == "__main__":
 		else:
 			# print('No image for', pure)
 			pass
+	corner = {'ada': 'TRI-Ada', 'comparch': 'CompArch', 'floc': 'FLoC', 'bibsleigh': 'index'}
 	for pure in pngs:
-		corner = {'ada': 'TRI-Ada', 'comparch': 'CompArch', 'floc': 'FLoC', 'bibsleigh': 'index'}
-		if pure in corner.keys():
-			venueCandidate = corner[pure]
-		else:
-			venueCandidate = pure.upper().replace('+', '')
+		venueCandidate = corner[pure] if pure in corner.keys() else pure.upper()
 		canlink = sorted(glob.glob(outputdir + '/' + venueCandidate + '*.html'), key=len)
 		if canlink:
 			pic = '<a href="{}"><img class="abc" src="stuff/{}.png" alt="{}"/></a>'.format(\

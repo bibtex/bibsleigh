@@ -169,10 +169,10 @@ class Unser(object):
 			self.up().getKey(),
 			self.up().getKey().replace('-', ' ')))
 		# DBLP
-		if 'dblpkey' in self.json.keys():
+		if 'dblpkey' in self.json:
 			for dblpk in listify(self.json['dblpkey']):
 				links[1].append('<a href="http://dblp.uni-trier.de/rec/html/{}">DBLP</a>'.format(dblpk))
-		elif 'dblpurl' in self.json.keys():
+		elif 'dblpurl' in self.json:
 			links[1].append('<a href="{}">DBLP</a>'.format(self.json['dblpurl']))
 		else:
 			links[1].append('no DBLP info')
@@ -183,21 +183,23 @@ class Unser(object):
 		# Some publishers
 		if 'ee' in self.json.keys():
 			for e in listify(self.json['ee']):
-				if e.find('dl.acm.org') > 0 or e.find('doi.acm.org') > 0:
+				if e.find('http://dl.acm.org') \
+				or e.startswith('http://doi.acm.org')\
+				or e.startswith('http://portal.acm.org'):
 					links[2].append('<a href="{}">ACM DL</a>'.format(e))
-				elif e.find('ieeexplore.ieee.org') > 0:
+				elif e.startswith('http://ieeexplore.ieee.org'):
 					links[2].append('<a href="{}">IEEE Xplore</a>'.format(e))
-				elif e.find('ieeecomputersociety.org') > 0:
+				elif e.startswith('http://ieeecomputersociety.org'):
 					links[2].append('<a href="{}">IEEE CS</a>'.format(e))
-				elif e.find('dagstuhl.de') > 0:
+				elif e.startswith('http://drops.dagstuhl.de'):
 					links[2].append('<a href="{}">Dagstuhl</a>'.format(e))
 				elif e.find('computer.org/csdl/proceedings') > 0:
 					links[2].append('<a href="{}">CSDL</a>'.format(e))
-				elif e.find('journal.ub.tu-berlin.de/eceasst') > 0:
+				elif e.startswith('http://journal.ub.tu-berlin.de/eceasst'):
 					links[2].append('<a href="{}">EC-EASST</a>'.format(e))
-				elif e.find('ceur-ws.org') > 0:
+				elif e.startswith('http://ceur-ws.org'):
 					links[2].append('<a href="{}">CEUR</a>'.format(e))
-				elif e.find('dx.doi.org') > 0:
+				elif e.startswith('http://dx.doi.org'):
 					pass
 				else:
 					links[2].append('<a href="{}">?EE?</a>'.format(e))

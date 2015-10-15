@@ -1,6 +1,7 @@
-.DS_Store
-__pycache__
-TODO
 *.json
+*.pyc
+.DS_Store
+TODO
 _*.*
+__pycache__
 batch

@@ -16,6 +16,18 @@ n2f_name = '_name2file.json'
 name2file = parseJSON(n2f_name) if os.path.exists(n2f_name) else {}
 sleigh = Sleigh(ienputdir + '/corpus', name2file)
 
+def top5(d):
+	ks = list(d.keys())
+	byd = lambda z: -d[z]
+	tops = sorted(ks[:5], key=byd)
+	if len(ks) > 5:
+		for kk in ks[5:]:
+			if d[kk] > d[tops[-1]]:
+				tops[-1] = kk
+				if d[kk] > d[tops[-2]]:
+					tops.sort(key=byd)
+	return tops
+
 if __name__ == "__main__":
 	print('{}: {} venues, {} papers\n{}'.format(\
 		C.purple('BibSLEIGH'),
@@ -40,13 +52,11 @@ if __name__ == "__main__":
 		for x in stems[k]:
 			for s in x.getBareStems():
 				if s != k and ifApproved(s):
-					if s not in siblings:
-						siblings[s] = 0
+					siblings.setdefault(s, 0)
 					siblings[s] += 1
-		topsib = sorted(siblings.keys(), key=lambda z: -siblings[z])[:5]
 		box = '<code>Used together with:</code><hr/>' + \
 			'\n<br/>'.join(['<span class="tag"><a href="{0}.html">{0}</a></span> ({1})'.format(\
-				S, siblings[S]) for S in topsib])
+				S, siblings[S]) for S in top5(siblings)])
 		f.write(wordHTML.format(\
 			stem=k,
 			inthebox=box,

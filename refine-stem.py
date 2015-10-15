@@ -18,7 +18,7 @@ n2f_name = '_name2file.json'
 name2file = parseJSON(n2f_name) if os.path.exists(n2f_name) else {}
 sleigh = Sleigh(ienputdir + '/corpus', name2file)
 verbose = False
-ALLSTEMS = []
+ALLSTEMS = set()
 
 def guessYear(P):
 	cys = [int(w) for w in P.split('-') if len(w) == 4 and w.isdigit()]
@@ -67,9 +67,7 @@ def checkon(fn, o):
 		print('“{}” is a title of {} and it has an empty word'.format(o.get('title'), C.red(o.getKey())))
 		print(string2words(o.get('title')))
 		print(stemmer(string2words(o.get('title'))))
-	for w in stemmed:
-		if w not in ALLSTEMS:
-			ALLSTEMS.append(w)
+	ALLSTEMS.update(stemmed)
 	if o.get('stemmed') != stemmed:
 		o.json['stemmed'] = stemmed
 		changed = True
@@ -114,9 +112,9 @@ if __name__ == "__main__":
 			for p in c.papers:
 				cx[checkreport(p.filename, p)] += 1
 	# write all stems
-	ALLSTEMS.sort(key=lambda w: two(len(w)) + w)
+	listOfStems = sorted(filter(ifApproved, ALLSTEMS), key=lambda w: two(len(w)) + w)
 	f = open(ienputdir + '/stems.json', 'w')
-	f.write('[\n\t"' + '",\n\t"'.join(filter(ifApproved, ALLSTEMS)) + '"\n]')
+	f.write('[\n\t"' + '",\n\t"'.join(listOfStems) + '"\n]')
 	f.close()
 	print(C.red(len(ALLSTEMS)), 'stems found.')
 	print('{} files checked, {} ok, {} fixed, {} failed'.format(\

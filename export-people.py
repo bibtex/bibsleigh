@@ -95,7 +95,7 @@ def dict2links(d):
 	return '\n'.join(['<h3>{} {}</h3>'.format(r[0], r[1]) for r in rs])
 
 def linkto(n):
-	if n in name2file.keys():
+	if n in name2file:
 		return '<a href="{}">{}</a>'.format(name2file[n], shorten(n))
 	else:
 		return n

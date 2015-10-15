@@ -26,7 +26,8 @@ def checkon(fn, o):
 	plines = sorted(json2lines(o.getJSON().split('\n')))
 	# "url" from DBLP are useless
 	if 'url' in o.json.keys():
-		o.json['url'] = [link for link in listify(o.json['url'])\
+		o.json['url'] = [link.replace('https://', 'http://')\
+						for link in listify(o.json['url'])\
 		 				if not link.startswith('db/conf/')\
 		 				and not link.startswith('db/series/')\
 						and not link.startswith('db/journals/')]
@@ -57,6 +58,8 @@ def checkon(fn, o):
 	if 'eventuri' in o.json.keys():
 		o.json['eventurl'] = o.json['eventuri']
 		del o.json['eventuri']
+	if 'eventurl' in o.json.keys() and o.json['eventurl'].startswith('https://'):
+		o.json['eventurl'] = o.json['eventurl'].replace('https://', 'http://')
 	nlines = sorted(json2lines(o.getJSON().split('\n')))
 	if flines != plines:
 		return 1

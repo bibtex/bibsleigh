@@ -8,7 +8,7 @@ from fancy.ANSI import C
 from fancy.Latin import nodiaLatin, simpleLatin
 from lib.AST import Sleigh
 from lib.JSON import parseJSON
-from lib.LP import uniq
+from lib.LP import listify
 from lib.NLP import strictstrip
 
 ienputdir = '../json'
@@ -21,10 +21,6 @@ renameto = {}
 def checkon(fn, o):
 	if not os.path.exists(fn) or os.path.isdir(fn):
 		fn = fn + '.json'
-	# f = open(fn, 'r')
-	# lines = f.readlines()[1:-1]
-	# f.close()
-	# flines = [strictstrip(s) for s in lines]
 	plines = sorted([strictstrip(s) for s in o.getJSON().split('\n')[1:-1]])
 	for ae in ('author', 'editor'):
 		if ae in o.json.keys():
@@ -36,13 +32,10 @@ def checkon(fn, o):
 					if x in renameto.keys():
 						o.json[ae][i] = renameto[x]
 	nlines = sorted([strictstrip(s) for s in o.getJSON().split('\n')[1:-1]])
-	# The next case should not happen, but could if we have trivial lists
-	# if flines != plines:
-	# 	return 1
 	if plines != nlines:
-		f = open(fn, 'w')
-		f.write(o.getJSON())
-		f.close()
+		ff = open(fn, 'w')
+		ff.write(o.getJSON())
+		ff.close()
 		return 2
 	else:
 		return 0
@@ -63,7 +56,7 @@ if __name__ == "__main__":
 		C.red(sleigh.numOfPapers()),
 		C.purple('='*42)))
 	aka = parseJSON(ienputdir + '/aliases.json')
-	CX = sum([len(aka[a]) for a in aka.keys()])
+	CX = sum([len(aka[a]) for a in aka])
 	# self-adaptation heuristic:
 	#  if a manual rule does the same as the other heuristic, it’s dumb
 	for a in sorted(aka.keys()):
@@ -76,23 +69,21 @@ if __name__ == "__main__":
 			print('[ {} ]'.format(C.blue('DUMB')), a, 'aliasing contains some unnecessary manual work')
 	# auto-aliasing heuristic:
 	#  for each author with diacritics, its non-diacritic twin is considered harmful
-	people = []
+	people = set()
 	for v in sleigh.venues:
 		for c in v.getConfs():
-			if 'editor' in c.json.keys():
-				people += c.get('editor')
+			if 'editor' in c.json:
+				people.update(listify(c.json['editor']))
 			for p in c.papers:
-				if 'author' in p.json.keys():
-					people += p.get('author')
-	people = uniq(people)
+				if 'author' in p.json:
+					people.update(listify(p.json['author']))
 	for a in people:
 		for na in (nodiaLatin(a), simpleLatin(a)):
 			if na != a:
-				if a not in aka.keys():
-					aka[a] = []
+				aka.setdefault(a, [])
 				aka[a].append(na)
 	# invert aliasing
-	for akey in aka.keys():
+	for akey in aka:
 		if akey in ('ZZZZZZZZZZ', 'FILE'):
 			continue
 		for aval in aka[akey]:
