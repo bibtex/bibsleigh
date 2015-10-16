@@ -22,8 +22,6 @@ if __name__ == "__main__":
 		C.purple('='*42)))
 	if len(sys.argv) < 3:
 		print('Usage:\n\t{} <OLD-NAME> <NEW-NAME>'.format(sys.argv[0]))
-		# print(('e.g.: {} http://dblp.uni-trier.de/db/conf/sigplan/sigplan82.html' + \
-		# 	'../json/corpus/PLDI/1982/SCC-1982').format(sys.argv[0]))
 		sys.exit(1)
 	nameold, namenew = sys.argv[1:3]
 	verbose = sys.argv[-1] == '-v'

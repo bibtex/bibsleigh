@@ -461,7 +461,7 @@ class Venue(Unser):
 			self.json = parseJSON(d+'.json')
 		else:
 			# legacy style
-			# print(C.red(d), 'is legacy style')
+			print(C.red(d), 'is legacy style')
 			self.json = []
 		for f in glob.glob(d+'/*.json'):
 			if not self.json:
@@ -577,6 +577,8 @@ class Venue(Unser):
 		for y in self.years:
 			res.extend(y.confs)
 		return res
+	def getBrands(self):
+		return self.brands
 	def seek(self, key):
 		if key == self.get('dblpkey'):
 			return self

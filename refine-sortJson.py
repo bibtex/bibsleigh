@@ -77,6 +77,8 @@ if __name__ == "__main__":
 	cx = {0: 0, 1: 0, 2: 0}
 	# first, conferences and papers
 	for v in sleigh.venues:
+		for b in v.getBrands():
+			cx[checkreport(b.filename, b)] += 1
 		for c in v.getConfs():
 			cx[checkreport(c.filename, c)] += 1
 			for p in c.papers:

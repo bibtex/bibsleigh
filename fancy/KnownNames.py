@@ -5,11 +5,14 @@
 
 contractions = (\
 	('ACM DL', 'ACM Digital Library'),
+	('CACM', 'Communications of the ACM'),
+	('CEUR', 'CEUR Workshop Proceedings'),
 	('ComLan', 'Computer Languages, Systems & Structures'),
 	('Dagstuhl', 'Schloss Dagstuhl — Leibniz-Zentrum für Informatik'),
 	('ENTCS', 'Electronic Notes in Theoretical Computer Science'),
 	('IEEE CS', 'IEEE Computer Society'),
 	('IJFCS', 'International Journal of Foundations of Computer Science'),
+	('JOT', 'Journal of Object Technology'),
 	('LIPIcs', 'Leibniz International Proceedings in Informatics'),
 	('LNBIP', 'Lecture Notes in Business Information Processing'),
 	('LNCS', 'Lecture Notes in Computer Science'),
@@ -19,11 +22,20 @@ contractions = (\
 )
 
 badvariants = (\
-	('Int. J. Found. Comput. Sci.', 'International Journal of Foundations of Computer Science'),
-	('Electr. Notes Theor. Comput. Sci.', 'Electronic Notes in Theoretical Computer Science'),
+	('Commun. ACM', \
+		'Communications of the ACM'),
+	('Int. J. Found. Comput. Sci.', \
+		'International Journal of Foundations of Computer Science'),
+	('Electr. Notes Theor. Comput. Sci.', \
+		'Electronic Notes in Theoretical Computer Science'),
+	('Schloss Dagstuhl--Leibniz-Zentrum fuer Informatik', \
+		'Schloss Dagstuhl — Leibniz-Zentrum für Informatik'),
 	('Schloss Dagstuhl — Leibniz-Zentrum fuer Informatik', \
 		'Schloss Dagstuhl — Leibniz-Zentrum für Informatik'),
-	('Sci. Comput. Program.', 'Science of Computer Programming'),
-	('SIGSOFT FSE', 'FSE'),
-	('Springer Berlin-Heidelberg', 'Springer-Verlag'),\
+	('Sci. Comput. Program.', \
+		'Science of Computer Programming'),
+	('SIGSOFT FSE', \
+		'FSE'),
+	('Springer Berlin-Heidelberg', \
+		'Springer-Verlag'),\
 )

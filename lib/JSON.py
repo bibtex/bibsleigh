@@ -1,4 +1,5 @@
 #!/usr/local/bin/python3
+# -*- coding: utf-8 -*-
 
 import json
 from fancy.ANSI import C
@@ -8,17 +9,14 @@ def jsonify(s):
 	if isinstance(s, int):
 		return '{}'.format(s)
 	elif isinstance(s, str):
-		if s.isdigit():
-			# return '{}'.format(s)
-			return '"{}"'.format(s)
-		else:
-			return '"{}"'.format(s)
+		return '"{}"'.format(s)
 	elif isinstance(s, list):
 		if s and isinstance(s[0], list):
 			return '[' + ',\n\t\t'.join([jsonify(x) for x in s]) + ']'
 		return '[' + ', '.join([jsonify(x) for x in s]) + ']'
 	elif isinstance(s, dict):
-		return '{\n' + ',\n'.join(['\t"{k}": {v}'.format(k=k, v=jsonify(s[k])) for k in sorted(s.keys())]) + '\n}\n'
+		return '{\n' + ',\n'.join(['\t"{k}": {v}'.format(k=k, v=jsonify(s[k])) \
+			for k in sorted(s.keys())]) + '\n}\n'
 	else:
 		print('Unknown JSON type in', s)
 		return '"{}"'.format(s)

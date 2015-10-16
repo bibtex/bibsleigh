@@ -43,6 +43,18 @@ def checkon(fn, o):
 	and 'booktitle' in o.up().json.keys() \
 	and len(o.get('booktitle')) > len(o.up().get('booktitle')):
 		o.json['booktitleshort'] = o.up().get('booktitle')
+	# a heuristic expansion of conference names
+	# if o.get('type') == 'proceedings' \
+	# and 'booktitleshort' not in o.json.keys() \
+	# and 'booktitle' in o.up().json.keys() \
+	# and len(o.get('booktitle')) > len(o.up().get('booktitle')):
+	# 	o.json['booktitleshort'] = o.up().get('booktitle')
+	# remove faulty series: journal wins
+	if 'series' in o.json and 'journal' in o.json and o.get('series') == o.get('journal'):
+		del o.json['series']
+	# *short legacy while no longer version present
+	for key in [k for k in o.json.keys() if k.endswith('short') and k[:-5] not in o.json.keys()]:
+		del o.json[key]
 	# Springer name change
 	if o.get('publisher').find('Springer') > -1 and 'year' in o.json.keys():
 		if int(o.get('year')) < 2002:
@@ -51,7 +63,7 @@ def checkon(fn, o):
 		else:
 			o.json['publisher'] = 'Springer International Publishing'
 			o.json['publishershort'] = 'Springer'
-	# superfluosness
+	# superfluousness
 	for key in wheretolook:
 		if key in o.json.keys() and key+'short' in o.json.keys() \
 		and o.get(key) == o.get(key+'short'):
