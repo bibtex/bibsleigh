@@ -67,7 +67,7 @@ if __name__ == "__main__":
 	# stem index
 	f = open(outputdir+'/words.html', 'w')
 	# TODO: add length mod
-	keyz = [k for k in stems.keys() if ifApproved(k)]
+	keyz = [k for k in stems.keys() if len(stems[k]) > 100 and ifApproved(k)]
 	keyz.sort(key=lambda t: -len(t), reverse=True)
 	lst = ['<li><a href="word/{}.html">{}</a>$ ({})</li>'.format(\
 		escape(t), t, len(stems[t])) for t in keyz]
@@ -75,7 +75,7 @@ if __name__ == "__main__":
 	CX = sum([len(stems[t]) for t in stems.keys()])
 	f.write(wordlistHTML.format(\
 		title='All known stems',
-		listname='{} stems known from {} notable words'.format(len(stems), CX),
+		listname='{} stems known and {} shown from {} notable words'.format(len(stems), len(keyz), CX),
 		ul=ul))
 	f.close()
 	print('Stem index:', C.blue('created'))

@@ -9,7 +9,7 @@ from fancy.Languages import ISONames
 from fancy.Templates import personHTML, peoplistHTML, movein
 from lib.AST import Sleigh, escape
 from lib.JSON import parseJSON
-from lib.LP import listify
+from lib.LP import listify, uniq
 from lib.NLP import shorten, ifIgnored
 
 # The idea is to generate a colour between FFFDE7 (for 'a') and F57F17 (for 'z')
@@ -154,15 +154,14 @@ if __name__ == "__main__":
 		dls = dict2links(persondef)
 		boxlinks = ''
 		if 'roles' in persondef.keys():
-			# things = [sleigh.seekByKey(p).getItem() for p in persondef['edited']]
 			things = [bykey[r[0]].getIconItem1(r[1]) for r in persondef['roles']]
 			dls += '<h3>Facilitated {} volumes:</h3>'.format(len(persondef['roles'])) \
 				+ '<div class="minibar">' + movein('\n'.join(things)) + '<br style="clear:left"/></div>'
 		if 'authored' in persondef.keys():
 			# List of contributions and papers
+			things = [bykey[p].up().getIconItem1(bykey[p].get('year')) for p in persondef['authored']]
 			dls += '<h3>Contributed to:</h3><div class="minibar">' \
-				+ movein('\n'.join({bykey[p].up().getIconItem1(bykey[p].get('year')) \
-					for p in persondef['authored']})) \
+				+ movein('\n'.join(uniq(things))) \
 				+ '<br style="clear:left"/></div>' \
 				+ '<h3>Wrote {} papers:</h3>'.format(len(persondef['authored'])) \
 				+ '<dl class="toc">' \

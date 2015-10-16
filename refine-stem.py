@@ -79,10 +79,29 @@ def checkon(fn, o):
 	else:
 		return 0
 
-def checkreport(fn, o):
+# somewhat of a code clone
+def checkbrand(fn, o):
+	if 'vocabulary' in o.json:
+		oldvoc = o.json['vocabulary']
+	else:
+		oldvoc = []
+	o.updateStems()
+	if 'vocabulary' in o.json:
+		newvoc = o.json['vocabulary']
+	else:
+		newvoc = []
+	if oldvoc != newvoc:
+		F = open(fn, 'w')
+		F.write(o.getJSON())
+		F.close()
+		return 2
+	else:
+		return 0
+
+def checkreport(fn, o, br):
 	statuses = (C.blue('PASS'), C.red('FAIL'), C.yellow('FIXD'))
-	if isinstance(o, int):
-		r = o
+	if br:
+		r = checkbrand(fn, br)
 	else:
 		r = checkon(fn, o)
 	# non-verbose mode by default
@@ -110,7 +129,9 @@ if __name__ == "__main__":
 	for v in sleigh.venues:
 		for c in v.getConfs():
 			for p in c.papers:
-				cx[checkreport(p.filename, p)] += 1
+				cx[checkreport(p.filename, p, None)] += 1
+		for b in v.getBrands():
+			cx[checkreport(b.filename, None, b)] += 1
 	# write all stems
 	listOfStems = sorted(filter(ifApproved, ALLSTEMS), key=lambda w: two(len(w)) + w)
 	f = open(ienputdir + '/stems.json', 'w')

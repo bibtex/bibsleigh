@@ -14,6 +14,8 @@ def jsonify(s):
 		if s and isinstance(s[0], list):
 			return '[' + ',\n\t\t'.join([jsonify(x) for x in s]) + ']'
 		return '[' + ', '.join([jsonify(x) for x in s]) + ']'
+	elif isinstance(s, set):
+		return '[' + ', '.join([jsonify(x) for x in sorted(s)]) + ']'
 	elif isinstance(s, dict):
 		return '{\n' + ',\n'.join(['\t"{k}": {v}'.format(k=k, v=jsonify(s[k])) \
 			for k in sorted(s.keys())]) + '\n}\n'

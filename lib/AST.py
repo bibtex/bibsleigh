@@ -356,6 +356,8 @@ class Brand(Unser):
 		self.name = last(f)
 		self.confs = {}
 		self.json = parseJSON(f)
+		if 'vocabulary' in self.json:
+			self.json['vocabulary'] = set(self.json['vocabulary'])
 		self.back = parent
 	def addConf(self, year, conf):
 		if year not in self.confs.keys():
@@ -382,7 +384,8 @@ class Brand(Unser):
 				ev = '<h3>Event series page: ' + urls + ev2
 		else:
 			ev = ''
-		ads = [c.json['address'][-1] for c in self.getConfs() if 'address' in c.json.keys()]
+		ads = [c.json['address'][-1] for c in self.getConfs() if 'address' in c.json]
+		# addresses
 		if ads:
 			clist = {}
 			for a in ads:
@@ -390,22 +393,25 @@ class Brand(Unser):
 					clist[a] += 1
 				else:
 					clist[a] = 1
-			adds = '<div class="rbox">' + '<br/>\n'.join(['{} × {}'.format(clist[a], a) for a in sorted(clist.keys())]) + '</div>'
+			rbox = '<div class="rbox">' + '<br/>\n'.join(['{} × {}'.format(clist[a], a) \
+				for a in sorted(clist.keys())])
 		else:
-			adds = ''
-		if 'tagged' in self.json.keys():
+			rbox = ''
+		# toptags
+		if 'tagged' in self.json:
 			# gracious continuation
-			if adds:
-				adds = adds[:-6]
-				toptags = '<hr/>\n'
+			if rbox:
+				rbox += '<hr/>\n'
 			else:
-				toptags = '<div class="rbox">'
+				rbox = '<div class="rbox">'
 			for t in self.json['tagged'][:10]:
-				toptags += '<span class="tag">{1} ×<a href="tag/{0}.html">#{0}</a></span><br/>\n'.format(*t)
-			toptags += '</div>'
-		else:
-			toptags = ''
-		ev = adds + toptags + ev
+				rbox += '<span class="tag">{1} ×<a href="tag/{0}.html">#{0}</a></span><br/>\n'.format(*t)
+		# vocabulary
+		if 'vocabulary' in self.json:
+			rbox += '<hr/>\nVocabulary: <strong>{}</strong> words'.format(len(self.json['vocabulary']))
+		if rbox:
+			rbox += '</div>'
+		ev = rbox + ev
 		ABBR = self.get('name')
 		title = self.get('title')
 		img = self.json['venue'].lower() if 'venue' in self.json.keys() else ABBR.lower()
@@ -436,10 +442,8 @@ class Brand(Unser):
 				for c in self.confs[y]:
 					for p in c.papers:
 						for t in p.getQTags():
-							if t in tpv.keys():
-								tpv[t] += 1
-							else:
-								tpv[t] = 1
+							tpv.setdefault(t, default=0)
+							tpv[t] += 1
 			tagged = sortMyTags(tpv)
 			if tagged:
 				self.json['tagged'] = tagged
@@ -447,6 +451,13 @@ class Brand(Unser):
 		return self.json['tagged']
 	def numOfPapers(self):
 		return sum([c.numOfPapers() for y in self.confs.keys() for c in self.confs[y]])
+	def updateStems(self):
+		self.json['vocabulary'] = set()
+		for y in self.confs.keys():
+			for c in self.confs[y]:
+				for p in c.papers:
+					self.json['vocabulary'].update(p.getBareStems())
+		self.json['vocabulary'] = set(filter(ifApproved, self.json['vocabulary']))
 
 
 class Venue(Unser):
