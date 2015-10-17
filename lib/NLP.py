@@ -17,7 +17,7 @@ trash = ('-', \
 	'with', \
 	'you', 'your', 'yours' \
 	)
-# 21010 stems found.
+# 19210 stems found.
 
 nosplit = (\
 	'JastAdd', \
@@ -31,6 +31,7 @@ nofilter = (\
 	'do', \
 	'go', \
 	'id', \
+	'ml', \
 	'no', \
 	'tv', \
 	'ui', \

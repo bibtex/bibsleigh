@@ -9,6 +9,7 @@ from lib.JSON import jsonkv, parseJSON
 from lib.LP import listify
 from lib.NLP import string2words, ifApproved
 from fancy.ANSI import C
+from collections import Counter
 
 def sortMyTags(tpv):
 	tagPerFreq = {}
@@ -357,7 +358,9 @@ class Brand(Unser):
 		self.confs = {}
 		self.json = parseJSON(f)
 		if 'vocabulary' in self.json:
-			self.json['vocabulary'] = set(self.json['vocabulary'])
+			self.json['vocabulary'] = Counter({\
+				self.json['vocabulary'][i]:self.json['vocabulary'][i+1] \
+				for i in range(0, len(self.json['vocabulary'])//2)})
 		self.back = parent
 	def addConf(self, year, conf):
 		if year not in self.confs.keys():
@@ -452,12 +455,14 @@ class Brand(Unser):
 	def numOfPapers(self):
 		return sum([c.numOfPapers() for y in self.confs.keys() for c in self.confs[y]])
 	def updateStems(self):
-		self.json['vocabulary'] = set()
+		self.json['vocabulary'] = Counter()
 		for y in self.confs.keys():
 			for c in self.confs[y]:
 				for p in c.papers:
 					self.json['vocabulary'].update(p.getBareStems())
-		self.json['vocabulary'] = set(filter(ifApproved, self.json['vocabulary']))
+		for stem in self.json['vocabulary'].keys():
+			if not ifApproved(stem) or self.json['vocabulary'][stem] < 3:
+				self.json['vocabulary'][stem] = 0
 
 
 class Venue(Unser):

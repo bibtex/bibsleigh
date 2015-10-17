@@ -9,24 +9,13 @@ from fancy.Templates import wordlistHTML, wordHTML
 from lib.AST import Sleigh, escape
 from lib.JSON import parseJSON
 from lib.NLP import ifApproved
+from collections import Counter
 
 ienputdir = '../json'
 outputdir = '../frontend'
 n2f_name = '_name2file.json'
 name2file = parseJSON(n2f_name) if os.path.exists(n2f_name) else {}
 sleigh = Sleigh(ienputdir + '/corpus', name2file)
-
-def top5(d):
-	ks = list(d.keys())
-	byd = lambda z: -d[z]
-	tops = sorted(ks[:5], key=byd)
-	if len(ks) > 5:
-		for kk in ks[5:]:
-			if d[kk] > d[tops[-1]]:
-				tops[-1] = kk
-				if d[kk] > d[tops[-2]]:
-					tops.sort(key=byd)
-	return tops
 
 if __name__ == "__main__":
 	print('{}: {} venues, {} papers\n{}'.format(\
@@ -48,15 +37,12 @@ if __name__ == "__main__":
 		# 	allstems += x.getBareStems()
 		# siblings = {stem:allstems.count(stem) for stem in allstems if stem != k and ifApproved(stem)}
 		# NB: the following code is faster:
-		siblings = {}
+		siblings = Counter()
 		for x in stems[k]:
-			for s in x.getBareStems():
-				if s != k and ifApproved(s):
-					siblings.setdefault(s, 0)
-					siblings[s] += 1
+			siblings.update([s for s in x.getBareStems() if s != k and ifApproved(s)])
 		box = '<code>Used together with:</code><hr/>' + \
 			'\n<br/>'.join(['<span class="tag"><a href="{0}.html">{0}</a></span> ({1})'.format(\
-				S, siblings[S]) for S in top5(siblings)])
+				*sn) for sn in siblings.most_common(5)])
 		f.write(wordHTML.format(\
 			stem=k,
 			inthebox=box,
@@ -66,7 +52,6 @@ if __name__ == "__main__":
 	print('Word pages:', C.yellow('{}'.format(len(stems))), C.blue('generated'))
 	# stem index
 	f = open(outputdir+'/words.html', 'w')
-	# TODO: add length mod
 	keyz = [k for k in stems.keys() if len(stems[k]) > 100 and ifApproved(k)]
 	keyz.sort(key=lambda t: -len(t), reverse=True)
 	lst = ['<li><a href="word/{}.html">{}</a>$ ({})</li>'.format(\
