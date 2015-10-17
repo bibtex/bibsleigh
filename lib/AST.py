@@ -359,7 +359,7 @@ class Brand(Unser):
 		self.json = parseJSON(f)
 		if 'vocabulary' in self.json:
 			self.json['vocabulary'] = Counter({\
-				self.json['vocabulary'][i]:self.json['vocabulary'][i+1] \
+				self.json['vocabulary'][2*i]:self.json['vocabulary'][2*i+1] \
 				for i in range(0, len(self.json['vocabulary'])//2)})
 		self.back = parent
 	def addConf(self, year, conf):
