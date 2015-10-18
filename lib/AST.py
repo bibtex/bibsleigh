@@ -6,7 +6,7 @@
 import glob, os.path
 from fancy.Templates import uberHTML, confHTML, bibHTML, brandHTML
 from lib.JSON import jsonkv, parseJSON
-from lib.LP import listify
+from lib.LP import listify, uniq
 from lib.NLP import string2words, ifApproved
 from fancy.ANSI import C
 from collections import Counter
@@ -361,6 +361,10 @@ class Brand(Unser):
 			self.json['vocabulary'] = Counter({\
 				self.json['vocabulary'][2*i]:self.json['vocabulary'][2*i+1] \
 				for i in range(0, len(self.json['vocabulary'])//2)})
+		if 'collocations' in self.json:
+			self.json['collocations'] = Counter({\
+				tuple(self.json['collocations'][2*i]):self.json['collocations'][2*i+1] \
+				for i in range(0, len(self.json['collocations'])//2)})
 		self.back = parent
 	def addConf(self, year, conf):
 		if year not in self.confs.keys():
@@ -456,10 +460,17 @@ class Brand(Unser):
 		return sum([c.numOfPapers() for y in self.confs.keys() for c in self.confs[y]])
 	def updateStems(self):
 		self.json['vocabulary'] = Counter()
+		self.json['collocations'] = Counter()
 		for y in self.confs.keys():
 			for c in self.confs[y]:
 				for p in c.papers:
-					self.json['vocabulary'].update(p.getBareStems())
+					stems = p.getBareStems()
+					triples = {(w1, w2, w3) \
+						for w1 in stems for w2 in stems for w3 in stems \
+						if w1 < w2 and w2 < w3 \
+						if ifApproved(w1) and ifApproved(w2) and ifApproved(w3)}
+					self.json['vocabulary'].update(stems)
+					self.json['collocations'].update(triples)
 		for stem in self.json['vocabulary'].keys():
 			if not ifApproved(stem) or self.json['vocabulary'][stem] < 3:
 				self.json['vocabulary'][stem] = 0

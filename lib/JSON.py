@@ -15,6 +15,8 @@ def jsonify(s):
 		if s and isinstance(s[0], list):
 			return '[' + ',\n\t\t'.join([jsonify(x) for x in s]) + ']'
 		return '[' + ', '.join([jsonify(x) for x in s]) + ']'
+	elif isinstance(s, tuple):
+		return '[' + ', '.join([jsonify(x) for x in s]) + ']'
 	elif isinstance(s, Counter):
 		# a trick to remove zero-time elements
 		s += Counter()

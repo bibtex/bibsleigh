@@ -90,7 +90,10 @@ def checkbrand(fn, o):
 		newvoc = o.json['vocabulary']
 	else:
 		newvoc = []
-	if oldvoc != newvoc:
+	delta = (newvoc - oldvoc) + (oldvoc - newvoc)
+	if newvoc and delta:
+		print('NEW:', newvoc - oldvoc)
+		print('OLD:', oldvoc - newvoc)
 		F = open(fn, 'w')
 		F.write(o.getJSON())
 		F.close()
