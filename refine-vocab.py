@@ -9,6 +9,10 @@ from lib.AST import Sleigh
 from lib.JSON import parseJSON, jsonify, json2lines
 from lib.NLP import strictstrip
 from math import sqrt
+# import cluster
+from scipy.cluster.hierarchy import ward, dendrogram
+import matplotlib.pyplot as plt
+import matplotlib as mpl
 
 ienputdir = '../json'
 sleigh = Sleigh(ienputdir + '/corpus', {})
@@ -53,6 +57,7 @@ def sdistance(x1, x2):
 	return str(distance(x1, x2)).replace('.', ',')
 
 def distance(x1, x2):
+	# print('Asked about the distance between', x1, 'and', x2)
 	return sqrt(sum([(x1[i]-x2[i])**2 for i in range(0, len(x1))]))
 
 if __name__ == "__main__":
@@ -67,29 +72,63 @@ if __name__ == "__main__":
 	cx = {0: 0, 1: 0, 2: 0}
 	# we need to know all the words we have
 	UberDict = set()
-	vocs = {b.getKey():b.json['vocabulary'].keys() \
-		for v in sleigh.venues for b in v.getBrands() if 'vocabulary' in b.json}
+	vocs = {b.getKey():b.json['vocabulary'] \
+		for v in sleigh.venues \
+		for b in v.getBrands() \
+		if 'vocabulary' in b.json \
+		if len(b.json['vocabulary']) > 10}
 	for vkey in vocs:
-		UberDict.update(vocs[vkey])
+		UberDict.update(vocs[vkey].keys())
 	print('The überdictionary has', C.red(len(UberDict)), 'words.')
 	AllWords = sorted(UberDict)
 	# form vectors from dictionaries
-	vecs = {vkey:[w in vocs[vkey] for w in AllWords] for vkey in vocs}
+	vecs = {vkey:[vocs[vkey][w] for w in AllWords] for vkey in vocs}
 	print('Vectors formed.')
 	# how far is each from everything else?
 	far = {vkey:sum([distance(vecs[vkey], vecs[vk2]) for vk2 in vocs])/len(vocs) for vkey in vocs}
-	print(far)
+	# print(far)
 	vockeys = sorted(vocs.keys(), key=lambda z: far[z])
 	print(vockeys)
+	distanceMatrix = []
+	for vk1 in vockeys:
+		distanceMatrix.append([])
+		for vk2 in vockeys:
+			distanceMatrix[-1].append(distance(vecs[vk1], vecs[vk2]))
+	minD = min([min([v for v in distanceMatrix[i] if v > 0]) for i in range(0, len(distanceMatrix))])
+	maxD = max([max(distanceMatrix[i]) for i in range(0, len(distanceMatrix))])
+	print('Distance matrix computed, values from {} to {}'.format(minD, maxD))
 	s = ' ; ' + ';'.join(vockeys) + '\n'
-	for vkey in vockeys:
-		s += vkey + ' ; ' + ';'.join([sdistance(vecs[vkey], vecs[vk2]) for vk2 in vockeys]) + '\n'
+	vocidx = range(0, len(vockeys))
+	for i in vocidx:
+		# s += vkey + ' ; ' + ';'.join([sdistance(vecs[vkey], vecs[vk2]) for vk2 in vockeys]) + '\n'
+		s += vockeys[i]+' ; '+';'.join([str(distanceMatrix[i][j]) for j in vocidx]) +'\n'
 	f = open('vocsim.csv', 'w')
 	f.write(s)
 	f.close()
+	print('Distance matrix saved as CSV.')
+	# cs = cluster.HierarchicalClustering(vocidx, lambda vk1, vk2: distanceMatrix[vk1][vk2])
+	# print(cs.getlevel(10))
+
+	#define the linkage_matrix using ward clustering pre-computed distances
+	linkage_matrix = ward(distanceMatrix)
+	fig, ax = plt.subplots(figsize=(15, 20)) # set size
+	ax = dendrogram(linkage_matrix, \
+		orientation="right", \
+		labels=['{} ({})'.format(key, len(vocs[key])) for key in vockeys])
+
+	plt.tick_params(\
+	    axis='x',          # changes apply to the x-axis
+	    which='both',      # both major and minor ticks are affected
+	    bottom='off',      # ticks along the bottom edge are off
+	    top='off',         # ticks along the top edge are off
+	    labelbottom='off')
+
+	plt.tight_layout() #show plot with tight layout
+	plt.savefig('bibsleigh_clusters.png', dpi=200) #save figure as ward_clusters
 	# for v in sleigh.venues:
 	# 	for b in v.getBrands():
 	# 		cx[checkreport(b.filename, b)] += 1
+	print('Figure plotted.')
 	print('{} files checked, {} ok, {} fixed, {} failed'.format(\
 		C.bold(cx[0] + cx[1] + cx[2]),
 		C.blue(cx[0]),
