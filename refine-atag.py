@@ -6,10 +6,10 @@
 import sys
 
 tag = ' '.join(sys.argv[1:])
-f = open('../json/tags/'+tag+'.json', 'w')
+f = open('../json/tags/' + tag + '.json', 'w')
 if tag.find(' ') < 0:
-	m = 'matchword'
+    m = 'matchword'
 else:
-	m = 'matchsub'
+    m = 'matchsub'
 f.write('{{\n\t"name": "{0}",\n\t"{1}": ["{0}"]\n}}\n'.format(tag, m))
 f.close()
