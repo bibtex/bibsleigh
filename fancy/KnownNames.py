@@ -12,6 +12,8 @@ contractions = (\
 	('ENTCS', 'Electronic Notes in Theoretical Computer Science'),
 	('IEEE CS', 'IEEE Computer Society'),
 	('IJFCS', 'International Journal of Foundations of Computer Science'),
+	('JLAMP', 'Journal of Logic and Algebraic Methods in Programming'),
+	('JLAP', 'Journal of Logic and Algebraic Programming'),
 	('JOT', 'Journal of Object Technology'),
 	('LIPIcs', 'Leibniz International Proceedings in Informatics'),
 	('LNBIP', 'Lecture Notes in Business Information Processing'),
@@ -26,6 +28,10 @@ badvariants = (\
 		'Communications of the ACM'),
 	('Int. J. Found. Comput. Sci.', \
 		'International Journal of Foundations of Computer Science'),
+	('J. Log. Algebr. Meth. Program.', \
+		'Journal of Logic and Algebraic Methods in Programming'),
+	('J. Log. Algebr. Program.', \
+		'Journal of Logic and Algebraic Programming'),
 	('Electr. Notes Theor. Comput. Sci.', \
 		'Electronic Notes in Theoretical Computer Science'),
 	('Schloss Dagstuhl--Leibniz-Zentrum fuer Informatik', \

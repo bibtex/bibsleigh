@@ -184,7 +184,7 @@ class Unser(object):
 		# Some publishers
 		if 'ee' in self.json.keys():
 			for e in listify(self.json['ee']):
-				if e.find('http://dl.acm.org') \
+				if e.startswith('http://dl.acm.org') \
 				or e.startswith('http://doi.acm.org')\
 				or e.startswith('http://portal.acm.org'):
 					links[2].append('<a href="{}">ACM DL</a>'.format(e))
@@ -472,7 +472,7 @@ class Brand(Unser):
 					self.json['vocabulary'].update(stems)
 					self.json['collocations'].update(triples)
 		for stem in self.json['vocabulary'].keys():
-			if not ifApproved(stem) or self.json['vocabulary'][stem] < 3:
+			if not ifApproved(stem):# or self.json['vocabulary'][stem] < 3:
 				self.json['vocabulary'][stem] = 0
 
 
@@ -964,6 +964,7 @@ class Paper(Unser):
 		else:
 			cnt = ''
 		if 'stemmed' in self.json.keys():
+			stemmed = listify(self.json['stemmed'])
 			title = self.get('title')
 			ltitle = title.lower()
 			words = string2words(title)
@@ -971,7 +972,11 @@ class Paper(Unser):
 			fancytitle = ''
 			for w in words:
 				i = ltitle.rindex(w)
-				stem = self.json['stemmed'][len(words) - words.index(w)-1]
+				try:
+					stem = stemmed[len(words) - words.index(w)-1]
+				except:
+					print('Abnormal title in', self.getKey())
+					break
 				if ifApproved(stem):
 					fancytitle = '<a href="word/{}.html">{}</a>{}'.format(\
 						stem, title[i:i+len(w)], title[i+len(w):]) + fancytitle

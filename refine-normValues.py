@@ -35,7 +35,7 @@ def checkon(fn, o):
 		if isinstance(o.json[k], str):
 			# add emdashes for fancier titles
 			if k in ('title', 'booktitle'):
-				o.json[k] = o.json[k].replace(' - ', ' — ')
+				o.json[k] = o.json[k].replace(' - ', ' — ').replace(' -- ', ' — ')
 				# Nice heuristic to run from time to time, but reports too much
 				# on stuff like “eXtreme” and “jPET”
 				# if o.json[k][0].islower():

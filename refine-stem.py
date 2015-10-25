@@ -8,6 +8,7 @@ from fancy.ANSI import C
 from lib.AST import Sleigh
 from lib.JSON import parseJSON
 from lib.NLP import string2words, ifApproved
+from collections import Counter
 
 # import stemming.porter2
 import snowballstemmer
@@ -84,12 +85,12 @@ def checkbrand(fn, o):
 	if 'vocabulary' in o.json:
 		oldvoc = o.json['vocabulary']
 	else:
-		oldvoc = []
+		oldvoc = Counter()
 	o.updateStems()
 	if 'vocabulary' in o.json:
 		newvoc = o.json['vocabulary']
 	else:
-		newvoc = []
+		newvoc = Counter()
 	delta = (newvoc - oldvoc) + (oldvoc - newvoc)
 	if newvoc and delta:
 		print('NEW:', newvoc - oldvoc)
