@@ -34,6 +34,8 @@ badvariants = (\
 		'Journal of Logic and Algebraic Programming'),
 	('Electr. Notes Theor. Comput. Sci.', \
 		'Electronic Notes in Theoretical Computer Science'),
+	('Schloss Dagstuhl - Leibniz-Zentrum fuer Informatik', \
+		'Schloss Dagstuhl — Leibniz-Zentrum für Informatik'),
 	('Schloss Dagstuhl--Leibniz-Zentrum fuer Informatik', \
 		'Schloss Dagstuhl — Leibniz-Zentrum für Informatik'),
 	('Schloss Dagstuhl — Leibniz-Zentrum fuer Informatik', \

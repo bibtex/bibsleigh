@@ -767,10 +767,10 @@ class Conf(Unser):
 		return self.getIconItem1(self.getEventTitle())
 	def getIconItem1(self, desc):
 		shorter = '{}'.format(desc).replace(' ', '')\
-			.replace('Organiser', 'OrganizationCommittee')\
-			.replace('Organising Chair', 'OrganizationChair')
+			.replace('Organiser', 'OrganisingCommittee')\
+			.replace('Organization', 'Organising')
 		shorter = shorter.replace('Committee', 'Co').replace('Chair', 'Ch')\
-			.replace('Program', 'Pr').replace('Organization', 'O')\
+			.replace('Program', 'Pr').replace('Organising', 'O')\
 			.replace('Steering', 'S').replace('Publicity', 'Pub')\
 			.replace('Editor', 'Ed').replace('Publication', 'Pbl')\
 			.replace('Finance', 'Fin').replace('Challenge', 'Cha')\
