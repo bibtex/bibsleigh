@@ -37,6 +37,8 @@ def checkon(fn, o):
 	f.close()
 	flines = [strictstrip(s) for s in lines]
 	plines = sorted([strictstrip(s) for s in o.getJSON().split('\n')[1:-1]])
+	if flines != plines:
+		return 1
 	ts = []
 	# precise case-sensitive match
 	mcs = o.get('title')
@@ -63,6 +65,7 @@ def checkon(fn, o):
 					ts += [t['name']]
 			elif k.startswith('match'):
 				ts += [t['name'] for s in listify(t[k]) if matchModes[k](s, mcs, mes, mew, mis, miw)]
+				# ts += [t['name'] for s in listify(t[k]) if fmm(t, k, s, mcs, mes, mew, mis, miw)]
 	# second pass: check reliefs
 	for t in tags:
 		if 'relieves' in t.keys():
@@ -78,14 +81,12 @@ def checkon(fn, o):
 		for t in ts:
 			if t not in o.tags:
 				o.tags.append(t)
-		# uncomment the following one line to overwrite all tags
-		o.tags = uniq(ts)
-		# let’s keep tags clean and sorted
-		o.tags = sorted(o.tags)
+	# uncomment the following one line to overwrite all tags
+	o.tags = uniq(ts)
+	# let’s keep tags clean and sorted
+	o.tags = sorted(o.tags)
 	nlines = sorted([strictstrip(s) for s in o.getJSON().split('\n')[1:-1]])
-	if flines != plines:
-		return 1
-	elif plines != nlines:
+	if plines != nlines:
 		f = open(fn, 'w')
 		f.write(o.getJSON())
 		f.close()

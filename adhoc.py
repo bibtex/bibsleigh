@@ -15,6 +15,8 @@ name2file = parseJSON(n2f_name) if os.path.exists(n2f_name) else {}
 sleigh = Sleigh(ienputdir + '/corpus', name2file)
 verbose = False
 
+warnings = []
+
 def checkon(fn, o):
 	if not os.path.exists(fn) or os.path.isdir(fn):
 		fn = fn + '.json'
@@ -24,21 +26,25 @@ def checkon(fn, o):
 	o.json['title'] = o.json['title'].replace('lambda', 'λ').replace('Lambda', 'λ')
 	for mu in 'µ𝛍𝜇𝝁𝝻𝞵':
 		o.json['title'] = o.json['title'].replace(mu, 'μ')
-	for calc in ('-calculus', '-Calculus', ' calculus', ' Calculus', ' -calculus', ' -Calculus'):
+	for calc in ('-calculus', '-Calculus', ' calculus', ' Calculus', '-calculi', \
+		'-Calculi', ' calculi', ' Calculi', ' -calculus', ' -Calculus'):
 		for mu in ('mu', 'Mu', '<i>μ</i>'):
 			o.json['title'] = o.json['title'].replace(mu+calc, 'μ'+calc)
 		for pi in ('pi', 'Pi'):
 			o.json['title'] = o.json['title'].replace(pi+calc, 'π'+calc)
-		o.json['title'] = o.json['title'].replace('λ-μ', 'λμ')
+		o.json['title'] = o.json['title'].replace('λ-μ', 'λμ').replace('λ μ', 'λμ')
 	# corner cases:
 	# MICRO common representation language
 	# synchrotron radiation x-ray MICROtomography
 	# MICROkernel
-	for corner in ('µCRL', 'SRµCT', 'µKernel'):
+	# MICROcontroller
+	# uncertain about µSDL
+	for corner in ('µCRL', 'SRµCT', 'µKernel', 'µ-kernel', 'µ-Controller'):
 		o.json['title'] = o.json['title'].replace(corner.replace('µ', 'μ'), corner)
 	for letter in ('alpha', 'beta', 'gamma', 'kappa', 'omega', 'sigma', 'varepsilon'):
-		if o.json['title'].find(letter) > -1:
+		if o.json['title'].find(letter.capitalize()) > -1:
 			print('Warning about', o.getKey(), ': "'+o.json['title']+'"')
+			warnings.append(o.filename)
 	plines = sorted(json2lines(o.getJSON().split('\n')))
 	if flines != plines:
 		if 'stemmed' in o.json:
@@ -80,3 +86,5 @@ if __name__ == "__main__":
 		C.blue(cx[0]),
 		C.yellow(cx[2]),
 		C.red(cx[1])))
+	print(C.red('{} files to check manually!'.format(len(warnings))))
+	print('subl ', ' '.join(warnings))

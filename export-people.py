@@ -184,6 +184,8 @@ if __name__ == "__main__":
 			for p in persondef['authored']:
 				if 'author' in bykey[p].json.keys():
 					coas = listify(bykey[p].get('author'))
+					if ' ' in coas:
+						print('ERROR in [{}] - [{}] - [{}]'.format(p, bykey[p].getKey(), coas))
 					D = len(coas)
 					if D == 1:
 						# solo papers count as coauthoring with yourself
@@ -203,7 +205,10 @@ if __name__ == "__main__":
 							clist[a] = 0
 						clist[a] += 1/D
 			if clist:
-				m = 300/max(clist.values())
+				if len(clist) < 3:
+					m = 200/max(clist.values())
+				else:
+					m = 300/max(clist.values())
 				adds = '<hr/><code>Collaborated with:</code><hr/>' \
 					 + '\n'.join(['<span style="font-size:{}%">{}</span>'.format(\
 					 		m*clist[a],

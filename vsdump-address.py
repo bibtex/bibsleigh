@@ -70,6 +70,18 @@ def checkon(fn, o):
 		if country == 'Georgia' and town == 'Atlanta':
 			state = country
 			country = 'USA'
+		# near Something
+		if town.startswith('near '):
+			town = ws[ws.index(town)-1]
+		# Luxembourg, Luxembourg
+		if country == 'Luxembourg':
+			town = 'Luxembourg'
+		# Saint-Malo / St. Malo
+		if country == 'France' and town == 'St. Malo':
+			town = 'Saint-Malo'
+		# Florence / Firenze
+		if country == 'Italy' and town.find('Firenze') > -1:
+			town = 'Florence'
 		found = True
 	elif state:
 		country = 'USA'

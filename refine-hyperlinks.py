@@ -50,10 +50,13 @@ def checkon(fn, o):
 				o.json['acmid'] = onelink[34:]
 			elif onelink.startswith('http://portal.acm.org/citation.cfm?id='):
 				o.json['acmid'] = onelink[38:]
+			elif onelink.startswith('http://eceasst.cs.tu-berlin.de/index.php/eceasst/article/view/'):
+				# NB: we assume there is no other EE link competing with EC-EASST
+				o.json['ee'] = 'http://journal.ub.tu-berlin.de/eceasst/article/view/' + onelink.split('/')[-1]
 			elif verbose:
 				print(C.yellow('Missed opportunity:'), onelink)
 		# post-processing normalisation
-		if 'acmid' in o.json.keys() and o.json['acmid'].isdigit():
+		if 'acmid' in o.json.keys() and not isinstance(o.json['acmid'], int) and o.json['acmid'].isdigit():
 			o.json['acmid'] = int(o.json['acmid'])
 	if 'eventuri' in o.json.keys():
 		o.json['eventurl'] = o.json['eventuri']

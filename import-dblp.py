@@ -40,7 +40,7 @@ def purenameof(f):
 	return f.split('/')[-1][:-4]
 
 def safelyLoadURL(url):
-	time.sleep(random.randint(1, 3))
+	# time.sleep(random.randint(1, 3))
 	errors = 0
 	while errors < 3:
 		try:

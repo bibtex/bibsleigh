@@ -279,10 +279,17 @@ class Sleigh(Unser):
 		self.venues = []
 		self.n2f = name2file
 		jsons = {}
+		skip4Now = ['InfSys']
 		for d in glob.glob(idir+'/*.json'):
+			if d.split('/')[-1].split('.')[0] in skip4Now:
+				print(C.red('Skipping') + ' ' + C.purple(d) + ' ' + C.red('for now'))
+				continue
 			jsons[d.split('/')[-1].split('.')[0]] = d
 		for d in glob.glob(idir+'/*'):
 			if d.endswith('.md') or d.endswith('.json'):
+				continue
+			if d.split('/')[-1] in skip4Now:
+				print(C.red('Skipping') + ' ' + C.purple(d) + ' ' + C.red('for now'))
 				continue
 			if d.split('/')[-1] not in jsons.keys():
 				print(C.red('Legacy non-top definition of'), d)
@@ -415,7 +422,12 @@ class Brand(Unser):
 				rbox += '<span class="tag">{1} ×<a href="tag/{0}.html">#{0}</a></span><br/>\n'.format(*t)
 		# vocabulary
 		if 'vocabulary' in self.json:
-			rbox += '<hr/>\nVocabulary: <strong>{}</strong> words'.format(len(self.json['vocabulary']))
+			# gracious continuation
+			if rbox:
+				rbox += '<hr/>\n'
+			else:
+				rbox = '<div class="rbox">'
+			rbox += 'Vocabulary: <strong>{}</strong> words'.format(len(self.json['vocabulary']))
 		if rbox:
 			rbox += '</div>'
 		ev = rbox + ev
@@ -449,7 +461,7 @@ class Brand(Unser):
 				for c in self.confs[y]:
 					for p in c.papers:
 						for t in p.getQTags():
-							tpv.setdefault(t, default=0)
+							tpv.setdefault(t, 0)
 							tpv[t] += 1
 			tagged = sortMyTags(tpv)
 			if tagged:
