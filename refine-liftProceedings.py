@@ -7,6 +7,7 @@ import sys, os.path
 from fancy.ANSI import C
 from lib.AST import Sleigh
 from lib.NLP import heurichoose
+from lib.JSON import parseJSON
 
 ienputdir = '../json'
 n2f_name = '_name2file.json'
@@ -20,6 +21,8 @@ def checkon(m, o):
 		return 1
 	if 'type' in m.keys() and m['type'] in ('inproceedings', 'article'):
 		m['type'] = 'proceedings'
+	if 'type' in m.keys() and m['type'] == 'incollection':
+		m['type'] = 'book'
 	if 'crossref' in m.keys():
 		del m['crossref']
 	if 'booktitle' in m.keys():
@@ -53,12 +56,13 @@ def checkon(m, o):
 		fn = o.filename + '.json'
 	else:
 		fn = o.filename
-	f = open(fn, 'r')
-	lines = f.read()
-	f.close()
-	if lines != o.getJSON():
-		# strange, should be equal (run all normalisers first!)
-		return 1
+	if os.path.exists(fn):
+		f = open(fn, 'r')
+		lines = f.read()
+		f.close()
+		if lines != o.getJSON():
+			# strange, should be equal (run all normalisers first!)
+			return 1
 	for k in n.keys():
 		o.json[k] = n[k]
 	f = open(fn, 'w')

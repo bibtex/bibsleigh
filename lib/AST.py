@@ -98,13 +98,19 @@ class Unser(object):
 					s += '\t{0:<13} = "{{<span id="{0}">{1}</span>}}",\n'.format(k, self.json[k])
 			elif k in ('crossref', 'key', 'type', 'venue', 'twitter', \
 				'eventtitle', 'eventurl', 'nondblpkey', 'dblpkey', 'dblpurl', \
-				'programchair', 'generalchair', 'roles', 'tagged', 'stemmed'):
+				'programchair', 'generalchair', 'roles', 'tagged', 'stemmed', 'status'):
 				# TODO: ban 'ee' as well
 				pass
 			elif k == 'doi':
 				s += '<span class="uri">\t{0:<13} = "<a href="http://dx.doi.org/{1}">{1}</a>",\n</span>'.format(k, self.json[k])
 			elif k == 'acmid':
 				s += '<span class="uri">\t{0:<13} = "<a href="http://dl.acm.org/citation.cfm?id={1}">{1}</a>",\n</span>'.format(k, self.json[k])
+			elif k == 'ieeearid':
+				s += '<span class="uri">\t{0:<13} = "<a href="http://ieeexplore.ieee.org/xpl/freeabs_all.jsp?arnumber={1}">{1}</a>",\n</span>'.format(k, self.json[k])
+			elif k == 'ieeepuid':
+				s += '<span class="uri">\t{0:<13} = "<a href="http://ieeexplore.ieee.org/xpl/mostRecentIssue.jsp?punumber={1}">{1}</a>",\n</span>'.format(k, self.json[k])
+			elif k == 'ieeeisid':
+				s += '<span class="uri">\t{0:<13} = "<a href="http://ieeexplore.ieee.org/xpl/tocresult.jsp?isnumber={1}">{1}</a>",\n</span>'.format(k, self.json[k])
 			elif k == 'dblpkey':
 				# Legacy!
 				# s += '\t{0:<13} = "<a href="http://dblp.uni-trier.de/db/{1}">{1}</a>",\n</span>'.format(k, self.json[k])
@@ -267,7 +273,7 @@ class Unser(object):
 					print('STRANGE pages in', self.getKey(), ':', self.json['pages'])
 			else:
 				p1 = None
-			if ps[-1]:
+			if ps[-1] and ps[-1].isdigit():
 				p2 = int(ps[-1])
 			else:
 				p2 = None
@@ -279,7 +285,7 @@ class Sleigh(Unser):
 		self.venues = []
 		self.n2f = name2file
 		jsons = {}
-		skip4Now = ['InfSys']
+		skip4Now = []
 		for d in glob.glob(idir+'/*.json'):
 			if d.split('/')[-1].split('.')[0] in skip4Now:
 				print(C.red('Skipping') + ' ' + C.purple(d) + ' ' + C.red('for now'))
@@ -608,7 +614,7 @@ class Venue(Unser):
 			venpage=ev,\
 			cxBrands=len(brands),\
 			cxPapers=self.numOfPapers(),\
-			cxIssues=len(eds),\
+			cxIssues=len(self.getConfs()),\
 			brands='\n'.join(brands),\
 			dl=''.join(eds))
 	def getConfs(self):

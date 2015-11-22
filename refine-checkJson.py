@@ -16,7 +16,8 @@ sleigh = Sleigh(ienputdir + '/corpus', {})
 verbose = False
 
 def findYear(fn):
-	return int(''.join([ch for ch in fn if ch.isdigit()]))
+	s = ''.join([ch for ch in fn if ch.isdigit()])
+	return int(s) if s else 0
 
 def checkon(fn, o):
 	if not os.path.exists(fn) or os.path.isdir(fn):

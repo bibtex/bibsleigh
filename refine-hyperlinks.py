@@ -30,6 +30,7 @@ def checkon(fn, o):
 						for link in listify(o.json['url'])\
 		 				if not link.startswith('db/conf/')\
 		 				and not link.startswith('db/series/')\
+		 				and not link.startswith('db/books/')\
 						and not link.startswith('db/journals/')]
 		if not o.json['url']:
 			del o.json['url']
@@ -39,6 +40,7 @@ def checkon(fn, o):
 		if isinstance(o.json['ee'], list):
 			if verbose:
 				print(C.red('Manylink:'), o.json['ee'])
+		newee = []
 		for onelink in listify(o.json['ee']):
 			if onelink.startswith('http://dx.doi.org/'):
 				o.json['doi'] = onelink[18:]
@@ -50,11 +52,49 @@ def checkon(fn, o):
 				o.json['acmid'] = onelink[34:]
 			elif onelink.startswith('http://portal.acm.org/citation.cfm?id='):
 				o.json['acmid'] = onelink[38:]
+			elif onelink.startswith('http://ieeexplore.ieee.org/xpl/freeabs_all.jsp?arnumber=')\
+			  or onelink.startswith('http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber='):
+				o.json['ieeearid'] = onelink.split('=')[-1]
+			elif onelink.startswith('http://ieeexplore.ieee.org/xpl/mostRecentIssue.jsp?punumber='):
+				o.json['ieeepuid'] = onelink.split('=')[-1]
+			elif onelink.startswith('http://ieeexplore.ieee.org/xpl/tocresult.jsp?isnumber='):
+				o.json['ieeeisid'] = onelink.split('=')[-1]
 			elif onelink.startswith('http://eceasst.cs.tu-berlin.de/index.php/eceasst/article/view/'):
-				# NB: we assume there is no other EE link competing with EC-EASST
-				o.json['ee'] = 'http://journal.ub.tu-berlin.de/eceasst/article/view/' + onelink.split('/')[-1]
-			elif verbose:
-				print(C.yellow('Missed opportunity:'), onelink)
+				newee.append('http://journal.ub.tu-berlin.de/eceasst/article/view/' + onelink.split('/')[-1])
+			elif onelink.endswith('.pdf') and \
+			    (onelink.startswith('http://computer.org/proceedings/')\
+			  or onelink.startswith('http://csdl.computer.org/')):
+				# Bad: http://computer.org/proceedings/icsm/1189/11890007.pdf
+				# Bad: http://csdl.computer.org/comp/proceedings/date/2003/1870/02/187020040.pdf
+				# Good: http://www.computer.org/csdl/proceedings/icsm/2001/1189/00/11890004.pdf
+				if onelink.startswith('http://csdl'):
+					cname, _, cid, mid, pid = onelink.split('/')[5:10]
+				else:
+					cname, cid, pid = onelink.split('/')[4:7]
+					# heuristic
+					if pid.startswith(cid):
+						mid = pid[len(cid):len(cid)+2]
+					else:
+						mid = '00'
+				newee.append('http://www.computer.org/csdl/proceedings/{}/{}/{}/{}/{}'.format(\
+					cname,
+					o.get('year'),
+					cid,
+					mid,
+					pid))
+			else:
+				if onelink.find('ieee') > -1:
+					print(C.purple('IEEE'), onelink)
+				if verbose:
+					print(C.yellow('Missed opportunity:'), onelink)
+				# nothing matches => preserve
+				newee.append(onelink)
+		if len(newee) == 0:
+			del o.json['ee']
+		elif len(newee) == 1:
+			o.json['ee'] = newee[0]
+		else:
+			o.json['ee'] = newee
 		# post-processing normalisation
 		if 'acmid' in o.json.keys() and not isinstance(o.json['acmid'], int) and o.json['acmid'].isdigit():
 			o.json['acmid'] = int(o.json['acmid'])
