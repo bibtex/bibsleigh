@@ -1,52 +1,52 @@
-#DONE
-     http://comparch2008.ipd.kit.edu/organization/ +
-     http://comparch2008.ipd.kit.edu/fileadmin/user_upload/comparch2008/CBSE2008_CFP.txt
-     General Chair
-GeCh Ralf Reussner, Faculty of Informatics, Universität Karlsruhe (TH) / FZI Forschungszentrum Informatik, Germany
-     
-     Steering Committee
-StCo Steffen Becker, FZI Forschungszentrum Informatik, Germany
-StCo Ivica Crnkovic, Real Time Research Centre, Mälardalen University, Sweden
-StCo Ian Gorton, Pacific North West National Laboratory, United States of America
-StCo George Heineman, Worcester Polytechnic Institute, United States of America
-StCo Sven Overhage, Universität Augsburg / Oversoft, Germany
-StCo Ralf Reussner, Universität Karlsruhe (TH) / FZI Forschungszentrum Informatik, Germany
-StCo Heinz Schmidt, RMIT University, Australia
-StCo Judith Stafford, Tufts University, United States of America
-StCo Clemens Szyperski, Microsoft, United States of America
-     
-     Program Committee
-PrCo Uwe Assmann, Dresden University of Technology, Dresden, Germany
-PrCo Mike Barnett, Microsoft Research, USA
-PrCo Antonia Bertolino, CNR Research, Pisa, Italy
-PrCo Judith Bishop, University of Pretoria, Pretoria, South Africa
-PrCo Ivica Crnkovic, Malardalen University, Vasteras, Sweden
-PrCo Dimitra Giannakopoulou, RIACS/NASA Ames, Moffet Field CA, USA
-PrCo Ian Gorton, Pacific North West National Laboratory, Richland WA, USA
-PrCo Lars Grunske, University of Queensland, Brisbane, Australia
-PrCo Richard Hall, LSR-IMAG, Grenoble, France
-PrCo Dick Hamlet, Portland State University, Portland OR, USA
-PrCo George Heineman, Worcester Polytechnic Institute, Worcester MA, USA
-PrCo Jean-Marc Jezequel, IRISA (INRIA & Univ. Rennes 1), Rennes, France
-PrCo Bengt Jonsson, Uppsala University, Uppsala, Sweden
-PrCo Kiniry, Joe, University College Dublin, Ireland
-PrCo Gerald Kotonya, Lancaster University, Lancaster, UK
-PrCo Magnus Larsson, ABB Corporate Research, Vasteras, Sweden
-PrCo Kung-Kiu Lau, University of Manchester, Manchester, UK
-PrCo Raphael Marvie, University of Lille, Lille, France
-PrCo Michael Maximilien, IBM Almaden Research Centre, San Jose CA, USA
-PrCo Nenad Medvidovic, University of Southern California, Los Angelos CA, USA
-PrCo Henry Muccini, University of L'Aquila, L'Aquila, Italy
-PrCo Rob van Ommering, Philips Research Labs, Eindhoven, The Netherlands
-PrCo Ralf Reussner, University Karlsruhe, Karlsruhe, Germany
-PrCo Alessandra Russo, Imperial College, London, UK
-PrCo Christian Salzmann, BMW Car IT, Munich, Germany
-PrCo Douglas Schmidt, Vanderbilt University, Nashville TN, USA
-PrCo Heinz Schmidt, RMIT University, Australia
-PrCo Jean-Guy Schneider, Swinburne University of Technology, Melbourne, Australia
-PrCo Judith Stafford, Tufts University, USA
-PrCo Asuman Sünbül, SAP Research, Palo Alto CA, USA
-PrCo Clemens Szyperski, Microsoft, USA
-PrCo Massimo Tivoli, University of L'Aquila, L'Aquila, Italy
-PrCo Wolfgang Weck, Independent Software Architect, Zürich, Switzerland
-PrCo Dave Wile, Teknowledge Corp., Los Angelos CA, USA
+##########
+          http://comparch2008.ipd.kit.edu/organization/ +
+          http://comparch2008.ipd.kit.edu/fileadmin/user_upload/comparch2008/CBSE2008_CFP.txt
+          General Chair
+GeneralCh Ralf Reussner, Faculty of Informatics, Universität Karlsruhe (TH) / FZI Forschungszentrum Informatik, Germany
+          
+          Steering Committee
+SteerCo   Steffen Becker, FZI Forschungszentrum Informatik, Germany
+SteerCo   Ivica Crnkovic, Real Time Research Centre, Mälardalen University, Sweden
+SteerCo   Ian Gorton, Pacific North West National Laboratory, United States of America
+SteerCo   George Heineman, Worcester Polytechnic Institute, United States of America
+SteerCo   Sven Overhage, Universität Augsburg / Oversoft, Germany
+SteerCo   Ralf Reussner, Universität Karlsruhe (TH) / FZI Forschungszentrum Informatik, Germany
+SteerCo   Heinz Schmidt, RMIT University, Australia
+SteerCo   Judith Stafford, Tufts University, United States of America
+SteerCo   Clemens Szyperski, Microsoft, United States of America
+          
+          Program Committee
+ProgramCo Uwe Assmann, Dresden University of Technology, Dresden, Germany
+ProgramCo Mike Barnett, Microsoft Research, USA
+ProgramCo Antonia Bertolino, CNR Research, Pisa, Italy
+ProgramCo Judith Bishop, University of Pretoria, Pretoria, South Africa
+ProgramCo Ivica Crnkovic, Malardalen University, Vasteras, Sweden
+ProgramCo Dimitra Giannakopoulou, RIACS/NASA Ames, Moffet Field CA, USA
+ProgramCo Ian Gorton, Pacific North West National Laboratory, Richland WA, USA
+ProgramCo Lars Grunske, University of Queensland, Brisbane, Australia
+ProgramCo Richard Hall, LSR-IMAG, Grenoble, France
+ProgramCo Dick Hamlet, Portland State University, Portland OR, USA
+ProgramCo George Heineman, Worcester Polytechnic Institute, Worcester MA, USA
+ProgramCo Jean-Marc Jezequel, IRISA (INRIA & Univ. Rennes 1), Rennes, France
+ProgramCo Bengt Jonsson, Uppsala University, Uppsala, Sweden
+ProgramCo Kiniry, Joe, University College Dublin, Ireland
+ProgramCo Gerald Kotonya, Lancaster University, Lancaster, UK
+ProgramCo Magnus Larsson, ABB Corporate Research, Vasteras, Sweden
+ProgramCo Kung-Kiu Lau, University of Manchester, Manchester, UK
+ProgramCo Raphael Marvie, University of Lille, Lille, France
+ProgramCo Michael Maximilien, IBM Almaden Research Centre, San Jose CA, USA
+ProgramCo Nenad Medvidovic, University of Southern California, Los Angelos CA, USA
+ProgramCo Henry Muccini, University of L'Aquila, L'Aquila, Italy
+ProgramCo Rob van Ommering, Philips Research Labs, Eindhoven, The Netherlands
+ProgramCo Ralf Reussner, University Karlsruhe, Karlsruhe, Germany
+ProgramCo Alessandra Russo, Imperial College, London, UK
+ProgramCo Christian Salzmann, BMW Car IT, Munich, Germany
+ProgramCo Douglas Schmidt, Vanderbilt University, Nashville TN, USA
+ProgramCo Heinz Schmidt, RMIT University, Australia
+ProgramCo Jean-Guy Schneider, Swinburne University of Technology, Melbourne, Australia
+ProgramCo Judith Stafford, Tufts University, USA
+ProgramCo Asuman Sünbül, SAP Research, Palo Alto CA, USA
+ProgramCo Clemens Szyperski, Microsoft, USA
+ProgramCo Massimo Tivoli, University of L'Aquila, L'Aquila, Italy
+ProgramCo Wolfgang Weck, Independent Software Architect, Zürich, Switzerland
+ProgramCo Dave Wile, Teknowledge Corp., Los Angelos CA, USA

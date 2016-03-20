@@ -1,123 +1,123 @@
-#DONE
-     http://www.ase-conferences.org/ase/past/ase2011/www.continuinged.ku.edu/programs/ase/organization.html
-     Committee Chairs
-     General Chair
-GeCh Perry Alexander
-     University of Kansas
-     Program Committee Co-Chairs
-PrCh Corina Pasareanu
-PrCh John Hosking
-     University of Auckland, john@cs.auckland.ac.nz
-     Demonstrations Chair
-TTCh Reiko Heckel
-     University of Leicester, UK, reiko@mcs.le.ac.uk
-     Doctoral Symposium Co-chairs
-DSCh Tim Menzies
-DSCh Motoshi Saeki
-     
-     Tutorials Chair
-TuCh Yuanfang Cai, Drexel University,
-TuCh Arvin Agah, University of Kansas,
-     Workshop Co-chairs
-WoCh Robby
-WoCh William Deng
-     Proceedings Chair
-PuCh Neha Rungta
-     
-     Publicity Chair
-PbCh Ajitha Rajan
-     
-     Finance Chair
-FiCh Kevin Curry
-     
-     Local Arrangement Chair
-LoCh Kevin Curry
-     
-     Program Committee
-PrCo Jamie Andrews
-     University of Western Ontario, Canada
-PrCo Nikolaj Bjoerner
-PrCo Tevfik Bultan
-     University of California, Santa Barbara, USA
-PrCo Margaret Burnett
-PrCo Yuanfang Cai
-PrCo Marsha Chechik
-     University of Toronto, Canada
-PrCo Myra Cohen
-     University of Nebraska–Lincoln, USA
-PrCo Vittorio Cortellessa
-PrCo Ivica Crnkovic
-PrCo Marcelo d'Amorim
-PrCo Giovanni Denaro
-     University of Milano-Bicocca, Italy
-PrCo Ewen Denney
-PrCo Bernd Fischer
-     University of Southampton, UK
-PrCo Michael Goedicke
-     University of Duisburg-Essen, Germany
-PrCo Paul Gruenbacher
-PrCo Lars Grunske
-     University of Kaiserslautern, Germany
-PrCo Arie Gurfinkel
-PrCo Robert Hall
-PrCo Mats Heimdahl
-     University of Minnesota Software Engineering Center, USA
-PrCo Sarfraz Khurshid
-     University of Texas at Austin, USA
-PrCo Anna Liu
-PrCo David Lo
-PrCo Michael Lowry
-PrCo Jonathan Maletic
-PrCo Darko Marinov
-     University of Illinois at Urbana-Champaign, USA
-PrCo Hong Mei
-PrCo Tim Menzies
-PrCo Charles Pecheur
-PrCo John Penix
-PrCo David Redmiles
-     University of California, Irvine, USA
-PrCo Grigore Rosu
-     University of Illinois at Urbana-Champaign, USA
-PrCo Motoshi Saeki
-PrCo Beverly Sanders
-     University of Florida, USA
-PrCo Anita Sarma
-     University of Nebraska–Lincoln, USA
-PrCo Nikolai Tillmann
-PrCo Richard Torkar
-PrCo Willem Visser
-PrCo Mike Whalen
-     University of Minnesota, USA
-PrCo Tao Xie
-PrCo Albert Zuendorf
-     University of Kassel, Germany
-     
-     Expert Review Panel
-ERP  Sven Apel
-     University of Passau, Germany
-ERP  Krzystof Czarnecki
-     University of Waterloo, Canada
-ERP  Elisabetta Di Nitto
-ERP  Claudia Ermel
-ERP  Ian Gorton
-ERP  John Grundy
-ERP  Mary Jean Harrold
-ERP  Reiko Heckel
-     University of Leicester, UK
-ERP  Sinichi Honiden
-ERP  Andrew Ireland
-ERP  Yves Ledru
-ERP  Nenad Medvidović
-     University of Southern California, USA
-ERP  Alex Orso
-ERP  Houari Sahraoui
-ERP  Yannis Smaragdakis
-     University of Massachusetts, Amherst, USA
-ERP  Gabi Taentzer
-ERP  Tetsuo Tamai
-     University of Tokyo, Japan
-ERP  Alex Telea
-     University of Groningen, The Netherlands
-ERP  Daniel Varro
-ERP  Virginie Wiels
-ERP  Andrea Zisman
+##########
+          http://www.ase-conferences.org/ase/past/ase2011/www.continuinged.ku.edu/programs/ase/organization.html
+          Committee Chairs
+          General Chair
+GeneralCh Perry Alexander
+          University of Kansas
+          Program Committee Co-Chairs
+ProgramCh Corina Pasareanu
+ProgramCh John Hosking
+          University of Auckland, john@cs.auckland.ac.nz
+          Demonstrations Chair
+DemoCh    Reiko Heckel
+          University of Leicester, UK, reiko@mcs.le.ac.uk
+          Doctoral Symposium Co-chairs
+DocSymCh  Tim Menzies
+DocSymCh  Motoshi Saeki
+          
+          Tutorials Chair
+TutorCh   Yuanfang Cai, Drexel University,
+TutorCh   Arvin Agah, University of Kansas,
+          Workshop Co-chairs
+WorkspCh  Robby
+WorkspCh  William Deng
+          Proceedings Chair
+PublicaCh Neha Rungta
+          
+          Publicity Chair
+PubRelCh  Ajitha Rajan
+          
+          Finance Chair
+FinanceCh Kevin Curry
+          
+          Local Arrangement Chair
+LocRegCh  Kevin Curry
+          
+          Program Committee
+ProgramCo Jamie Andrews
+          University of Western Ontario, Canada
+ProgramCo Nikolaj Bjoerner
+ProgramCo Tevfik Bultan
+          University of California, Santa Barbara, USA
+ProgramCo Margaret Burnett
+ProgramCo Yuanfang Cai
+ProgramCo Marsha Chechik
+          University of Toronto, Canada
+ProgramCo Myra Cohen
+          University of Nebraska–Lincoln, USA
+ProgramCo Vittorio Cortellessa
+ProgramCo Ivica Crnkovic
+ProgramCo Marcelo d'Amorim
+ProgramCo Giovanni Denaro
+          University of Milano-Bicocca, Italy
+ProgramCo Ewen Denney
+ProgramCo Bernd Fischer
+          University of Southampton, UK
+ProgramCo Michael Goedicke
+          University of Duisburg-Essen, Germany
+ProgramCo Paul Gruenbacher
+ProgramCo Lars Grunske
+          University of Kaiserslautern, Germany
+ProgramCo Arie Gurfinkel
+ProgramCo Robert Hall
+ProgramCo Mats Heimdahl
+          University of Minnesota Software Engineering Center, USA
+ProgramCo Sarfraz Khurshid
+          University of Texas at Austin, USA
+ProgramCo Anna Liu
+ProgramCo David Lo
+ProgramCo Michael Lowry
+ProgramCo Jonathan Maletic
+ProgramCo Darko Marinov
+          University of Illinois at Urbana-Champaign, USA
+ProgramCo Hong Mei
+ProgramCo Tim Menzies
+ProgramCo Charles Pecheur
+ProgramCo John Penix
+ProgramCo David Redmiles
+          University of California, Irvine, USA
+ProgramCo Grigore Rosu
+          University of Illinois at Urbana-Champaign, USA
+ProgramCo Motoshi Saeki
+ProgramCo Beverly Sanders
+          University of Florida, USA
+ProgramCo Anita Sarma
+          University of Nebraska–Lincoln, USA
+ProgramCo Nikolai Tillmann
+ProgramCo Richard Torkar
+ProgramCo Willem Visser
+ProgramCo Mike Whalen
+          University of Minnesota, USA
+ProgramCo Tao Xie
+ProgramCo Albert Zuendorf
+          University of Kassel, Germany
+          
+          Expert Review Panel
+ExpertRP  Sven Apel
+          University of Passau, Germany
+ExpertRP  Krzystof Czarnecki
+          University of Waterloo, Canada
+ExpertRP  Elisabetta Di Nitto
+ExpertRP  Claudia Ermel
+ExpertRP  Ian Gorton
+ExpertRP  John Grundy
+ExpertRP  Mary Jean Harrold
+ExpertRP  Reiko Heckel
+          University of Leicester, UK
+ExpertRP  Sinichi Honiden
+ExpertRP  Andrew Ireland
+ExpertRP  Yves Ledru
+ExpertRP  Nenad Medvidović
+          University of Southern California, USA
+ExpertRP  Alex Orso
+ExpertRP  Houari Sahraoui
+ExpertRP  Yannis Smaragdakis
+          University of Massachusetts, Amherst, USA
+ExpertRP  Gabi Taentzer
+ExpertRP  Tetsuo Tamai
+          University of Tokyo, Japan
+ExpertRP  Alex Telea
+          University of Groningen, The Netherlands
+ExpertRP  Daniel Varro
+ExpertRP  Virginie Wiels
+ExpertRP  Andrea Zisman

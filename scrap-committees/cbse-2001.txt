@@ -1,39 +1,39 @@
-#DONE
-     Workshop Organizers
-     
-OrCo Ivica Crnkovic, Mälardalen University, Sweden
-OrCo Heinz Schmidt, Monash University, Australia
-     
-OrCo Judith Stafford, Software Engineering Institute, Carnegie Mellon University, USA
-     
-OrCo Kurt Wallnau, Software Engineering Institute, Carnegie Mellon University, USA
-     
-     Program Committee
-     
-PrCo Jan Bosch, University of Groningen, The Netherlands
-     
-PrCo Betty Cheng, Michigan State University, USA
-     
-PrCo Rob Deline, Microsoft Research, USA
-     
-PrCo George T. Heineman, Worcester Polytechnic Institute, USA
-     
-PrCo Daniel Jackson, Massachusetts Institute of Technology, USA
-     
-PrCo Otto Preiss, Asea Brown Boveri (ABB)/CRC, Switzerland
-     
-PrCo Murali Sitaraman, Clemson University, USA
-     
-PrCo Clemens Szyperski, Microsoft Research, USA
-     
-PrCo Steve Vestal, Honeywell, Minneapolis, USA
-     
-PrCo Jeffrey Voas, Reliable Software Technologies, USA
-     
-PrCo Wolfgang Weck, Oberon Microsystems,Switzerland
-     
-PrCo Dave Wile, ISI, University of Southern California, USA
-     
-PrCo Alex Wolf, University of Colorado at Boulder, USA
-     
-PrCo Christian Zeidler, Asea Brown Boveri (ABB)/CRC, Germany
+##########
+          Workshop Organizers
+          
+OrganCo   Ivica Crnkovic, Mälardalen University, Sweden
+OrganCo   Heinz Schmidt, Monash University, Australia
+          
+OrganCo   Judith Stafford, Software Engineering Institute, Carnegie Mellon University, USA
+          
+OrganCo   Kurt Wallnau, Software Engineering Institute, Carnegie Mellon University, USA
+          
+          Program Committee
+          
+ProgramCo Jan Bosch, University of Groningen, The Netherlands
+          
+ProgramCo Betty Cheng, Michigan State University, USA
+          
+ProgramCo Rob Deline, Microsoft Research, USA
+          
+ProgramCo George T. Heineman, Worcester Polytechnic Institute, USA
+          
+ProgramCo Daniel Jackson, Massachusetts Institute of Technology, USA
+          
+ProgramCo Otto Preiss, Asea Brown Boveri (ABB)/CRC, Switzerland
+          
+ProgramCo Murali Sitaraman, Clemson University, USA
+          
+ProgramCo Clemens Szyperski, Microsoft Research, USA
+          
+ProgramCo Steve Vestal, Honeywell, Minneapolis, USA
+          
+ProgramCo Jeffrey Voas, Reliable Software Technologies, USA
+          
+ProgramCo Wolfgang Weck, Oberon Microsystems,Switzerland
+          
+ProgramCo Dave Wile, ISI, University of Southern California, USA
+          
+ProgramCo Alex Wolf, University of Colorado at Boulder, USA
+          
+ProgramCo Christian Zeidler, Asea Brown Boveri (ABB)/CRC, Germany

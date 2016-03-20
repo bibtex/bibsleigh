@@ -1,125 +1,125 @@
-#DONE
-     http://www.ase-conferences.org/ase/past/ase2013/organization.html
-     General Chair
-     
-GeCh Ewen Denney
-     
-     Program Chairs
-     
-PrCh Tevfik Bultan
-PrCh Andreas Zeller
-     
-     Workshop Chairs
-     
-WoCh Marcelo d'Amorim
-WoCh David Lo
-     
-     Tool Demonstration Chairs
-     
-TTCh Andrew Ireland
-TTCh Neha Rungta
-     
-     Doctoral Symposium Chairs
-     
-DSCh Paul Gruenbacher
-DSCh Marsha Chechik
-     
-     Finance Chair
-FiCh Ganesh Pai
-     Local Arrangements
-LoCo Ganesh Pai
-     Webmaster
-WeCh Ganesh Pai
-     
-     Publicity Chair
-     
-PbCh Christoph Gladisch
-     
-     Social Media Chair
-     
-SMCh Tien Nguyen
-     
-     Webmaster / Site Design / Graphics
-     
-WeCh Sarah Thompson
-     
-     Mobile Web Chair
-     
-     
-MoCh Reid Holmes
-     
-     Student Volunteers Chair / Graphics
-     
-     
-SVCh Ronnie Phillips
-     
-     
-     Program Committee
-     
-PrCo Andrew Begel	Microsoft Research
-PrCo Myra Cohen	University of Nebraska - Lincoln
-PrCo Danny Dig	University of Illinois at Urbana-Champaign
-PrCo Bernd Fischer	Stellenbosch University / University of Southampton
-PrCo Gordon Fraser	University of Sheffield
-PrCo Harald Gall	University of Zurich
-PrCo Dimitra Giannakopoulou	NASA Ames Research Ctr
-PrCo Alex Groce	Oregon State University
-PrCo Paul Grünbacher	Johannes Kepler University Linz
-PrCo Arie Gurfinkel	Software Engineering Institute / Carnegie Mellon University
-PrCo William G.J. Halfond	University of Southern California
-PrCo Mark Harman	University College London
-PrCo Sunghun Kim	The Hong Kong University of Science and Technology
-PrCo David Lo	Singapore Management University
-PrCo Shahar Maoz	Tel Aviv University
-PrCo Darko Marinov	University of Illinois at Urbana-Champaign
-PrCo Tim Menzies	West Virginia University
-PrCo Mira Mezini	Technische Universität Darmstadt
-PrCo Tien Nguyen	Iowa State University
-PrCo Corina Pasareanu	CMU, NASA Ames
-PrCo Lori Pollock	University of Delaware
-PrCo Martin Robillard	McGill University
-PrCo Grigore Rosu	University of Illinois at Urbana-Champaign
-PrCo Abhik Roychoudhury	National University of Singapore
-PrCo Gabriele Taentzer	Philipps-Universitaet Marburg
-PrCo Nikolai Tillmann	Microsoft Research
-PrCo Sebastian Uchitel	Universidad de Buenos Aires and Imperial College London
-PrCo Willem Visser	Stellenbosch University
-PrCo Lu Zhang	Peking University
-PrCo Charles Zhang	Hongkong University of Science and Technology
-     
-     http://www.ase-conferences.org/ase/past/ase2013/pc.html
-     Expert Review Panel
-     
-ERP  Sven Apel	University of Passau
-ERP  Earl Barr	University College London
-ERP  Samik Basu	Iowa State University
-ERP  Yuriy Brun	University of Massachusetts, Amherst
-ERP  Yuanfang Cai	Drexel University
-ERP  Marsha Chechik	University of Toronto
-ERP  Jane Cleland-Huang	DePaul University
-ERP  Christoph Csallner	University of Texas at Arlington
-ERP  Jyotirmoy Deshmukh	Toyota Technical Center
-ERP  Xiang Fu	Hofstra University
-ERP  Alessandra Gorla	Saarland University
-ERP  John Grundy	Swinburne University of Technology
-ERP  Lars Grunske	Universitaet Stuttgart
-ERP  Sylvain Hallé	Université du Québec à Chicoutimi
-ERP  Christian Hammer	Saarland University
-ERP  John Hosking	Australian National University
-ERP  Lingxiao Jiang	Singapore Management University
-ERP  Sarfraz Khurshid	The University of Texas at Austin
-ERP  Julia Lawall	INRIA
-ERP  Nenad Medvidovic	University of Southern California
-ERP  Hong Mei	Peking University
-ERP  Atif Memon	University of Maryland
-ERP  Alessandro Orso	Georgia Institute of Technology
-ERP  Klaus Ostermann	University of Marburg
-ERP  Andrey Rybalchenko	Technische Universitaet Muenchen
-ERP  Yannis Smaragdakis	University of Athens
-ERP  Lin Tan	University of Waterloo
-ERP  Laurie Williams	North Carolina State University
-ERP  Thomas Zimmerman	Microsoft Research
-     
-     Keynote Talks
-KN   Joseph M. Hellerstein
-KN   Jeremy Frank
+##########
+          http://www.ase-conferences.org/ase/past/ase2013/organization.html
+          General Chair
+          
+GeneralCh Ewen Denney
+          
+          Program Chairs
+          
+ProgramCh Tevfik Bultan
+ProgramCh Andreas Zeller
+          
+          Workshop Chairs
+          
+WorkspCh  Marcelo d'Amorim
+WorkspCh  David Lo
+          
+          Tool Demonstration Chairs
+          
+DemoCh    Andrew Ireland
+DemoCh    Neha Rungta
+          
+          Doctoral Symposium Chairs
+          
+DocSymCh  Paul Gruenbacher
+DocSymCh  Marsha Chechik
+          
+          Finance Chair
+FinanceCh Ganesh Pai
+          Local Arrangements
+LocRegCo  Ganesh Pai
+          Webmaster
+WebCh     Ganesh Pai
+          
+          Publicity Chair
+          
+PubRelCh  Christoph Gladisch
+          
+          Social Media Chair
+          
+SocMedCh  Tien Nguyen
+          
+          Webmaster / Site Design / Graphics
+          
+WebCh     Sarah Thompson
+          
+          Mobile Web Chair
+          
+          
+MobileCh  Reid Holmes
+          
+          Student Volunteers Chair / Graphics
+          
+          
+StudentCh Ronnie Phillips
+          
+          
+          Program Committee
+          
+ProgramCo Andrew Begel	Microsoft Research
+ProgramCo Myra Cohen	University of Nebraska - Lincoln
+ProgramCo Danny Dig	University of Illinois at Urbana-Champaign
+ProgramCo Bernd Fischer	Stellenbosch University / University of Southampton
+ProgramCo Gordon Fraser	University of Sheffield
+ProgramCo Harald Gall	University of Zurich
+ProgramCo Dimitra Giannakopoulou	NASA Ames Research Ctr
+ProgramCo Alex Groce	Oregon State University
+ProgramCo Paul Grünbacher	Johannes Kepler University Linz
+ProgramCo Arie Gurfinkel	Software Engineering Institute / Carnegie Mellon University
+ProgramCo William G.J. Halfond	University of Southern California
+ProgramCo Mark Harman	University College London
+ProgramCo Sunghun Kim	The Hong Kong University of Science and Technology
+ProgramCo David Lo	Singapore Management University
+ProgramCo Shahar Maoz	Tel Aviv University
+ProgramCo Darko Marinov	University of Illinois at Urbana-Champaign
+ProgramCo Tim Menzies	West Virginia University
+ProgramCo Mira Mezini	Technische Universität Darmstadt
+ProgramCo Tien Nguyen	Iowa State University
+ProgramCo Corina Pasareanu	CMU, NASA Ames
+ProgramCo Lori Pollock	University of Delaware
+ProgramCo Martin Robillard	McGill University
+ProgramCo Grigore Rosu	University of Illinois at Urbana-Champaign
+ProgramCo Abhik Roychoudhury	National University of Singapore
+ProgramCo Gabriele Taentzer	Philipps-Universitaet Marburg
+ProgramCo Nikolai Tillmann	Microsoft Research
+ProgramCo Sebastian Uchitel	Universidad de Buenos Aires and Imperial College London
+ProgramCo Willem Visser	Stellenbosch University
+ProgramCo Lu Zhang	Peking University
+ProgramCo Charles Zhang	Hongkong University of Science and Technology
+          
+          http://www.ase-conferences.org/ase/past/ase2013/pc.html
+          Expert Review Panel
+          
+ExpertRP  Sven Apel	University of Passau
+ExpertRP  Earl Barr	University College London
+ExpertRP  Samik Basu	Iowa State University
+ExpertRP  Yuriy Brun	University of Massachusetts, Amherst
+ExpertRP  Yuanfang Cai	Drexel University
+ExpertRP  Marsha Chechik	University of Toronto
+ExpertRP  Jane Cleland-Huang	DePaul University
+ExpertRP  Christoph Csallner	University of Texas at Arlington
+ExpertRP  Jyotirmoy Deshmukh	Toyota Technical Center
+ExpertRP  Xiang Fu	Hofstra University
+ExpertRP  Alessandra Gorla	Saarland University
+ExpertRP  John Grundy	Swinburne University of Technology
+ExpertRP  Lars Grunske	Universitaet Stuttgart
+ExpertRP  Sylvain Hallé	Université du Québec à Chicoutimi
+ExpertRP  Christian Hammer	Saarland University
+ExpertRP  John Hosking	Australian National University
+ExpertRP  Lingxiao Jiang	Singapore Management University
+ExpertRP  Sarfraz Khurshid	The University of Texas at Austin
+ExpertRP  Julia Lawall	INRIA
+ExpertRP  Nenad Medvidovic	University of Southern California
+ExpertRP  Hong Mei	Peking University
+ExpertRP  Atif Memon	University of Maryland
+ExpertRP  Alessandro Orso	Georgia Institute of Technology
+ExpertRP  Klaus Ostermann	University of Marburg
+ExpertRP  Andrey Rybalchenko	Technische Universitaet Muenchen
+ExpertRP  Yannis Smaragdakis	University of Athens
+ExpertRP  Lin Tan	University of Waterloo
+ExpertRP  Laurie Williams	North Carolina State University
+ExpertRP  Thomas Zimmerman	Microsoft Research
+          
+          Keynote Talks
+KeyNote   Joseph M. Hellerstein
+KeyNote   Jeremy Frank

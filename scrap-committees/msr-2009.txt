@@ -1,108 +1,108 @@
-#DONE
-     http://msr.uwaterloo.ca/msr2009/index.html
-     General Chair
-     
-GeCh Katsuro Inoue
-     University of Osaka, Japan
-     Program Co-chairs
-     
-PrCh Michael W. Godfrey
-     University of Waterloo, Canada
-PrCh Jim Whitehead
-     University of California, Santa Cruz
-     Challenge Chair
-     
-ChCh Christian Bird
-     Program Committee
-     
-PrCo Giuliano Antoniol
-     (Ã‰cole Polytechnique de MontrÃ©al, Canada)
-PrCo Andrew Begel
-     (Microsoft Corp., USA)
-PrCo Geoff Clemm
-     (IBM / Rational, USA)
-PrCo Stephan Diehl
-     (U. of Trier, Germany)
-PrCo Massimiliano di Penta
-     (U. of Sannio, Italy)
-PrCo Harald Gall
-     (U. of Zurich, Switzerland)
-PrCo Daniel GermÃ¡n
-     (U. of Victoria, Canada)
-PrCo Tudor Girba
-     (U. of Bern, Switzerland)
-PrCo Jesus Gonzalez-Barahona
-     (U. Rey Juan Carlos, Spain)
-PrCo Ahmed Hassan
-     (Queen's U., Canada)
-PrCo Ric Holt
-     (U. of Waterloo, Canada)
-PrCo Huzefa Kagdi
-     (Missouri U. of Science and Technology, USA)
-PrCo Tohru Kikuno
-     (Osaka U., Japan)
-PrCo Miryung Kim
-     (U. of Texas (Austin), USA)
-PrCo Sung Kim
-     (Hong Kong University of Science and Technology, China)
-PrCo Michele Lanza
-     (U. of Lugano, Switzerland)
-PrCo Ben Liblit
-     (U. of Wisconsin (Madison), USA)
-PrCo Jonathan Maletic
-     (Kent State U., USA)
-PrCo Andrian Marcus
-     (Wayne State U., USA)
-PrCo Audris Mockus
-     (Avaya Labs, USA)
-PrCo Nachiappan Nagappan
-     (Microsoft Corp., USA)
-PrCo Dewayne Perry
-     (U. of Texas (Austin), USA)
-PrCo Martin Pinzger
-     (U. of Zurich, Switzerland)
-PrCo Lori Pollock
-     (U. of Delaware, USA)
-PrCo Martin Robillard
-     (McGill U., Canada)
-PrCo Gregorio Robles
-     (U. Rey Juan Carlos, Spain)
-PrCo Jelber Sayyad Shirabad
-     (Ottawa U., Canada)
-PrCo Walt Scacchi
-     (U. of California (Irvine), USA)
-PrCo Tao Xie
-     (North Caroline State U., USA)
-PrCo Andy Zaidman
-     (Delft Technical U., Netherlands)
-PrCo Thomas Zimmermann
-     (U. of Calgary, Canada)
-     Poster Chair
-     
-PoCh Miryung Kim
-     
-     Local Arrangement Chair
-     
-LoCh Dirk Beyer
-     
-     Web Chair
-     
-WeCh Abram Hindle
-     University of Waterloo, Canada
-     
-     Steering Committee
-     
-StCo Ahmed E. Hassan
-     
-StCo Audris Mockus
-     
-StCo Ric Holt
-     University of Waterloo, Canada
-StCo Katsuro Inoue
-     
-StCo Stephan Diehl
-     University Trier, Germany
-StCo Harald Gall
-     University of Zurich, Switzerland
-StCo Michele Lanza
-     University of Lugano, Switzerland
+##########
+          http://msr.uwaterloo.ca/msr2009/index.html
+          General Chair
+          
+GeneralCh Katsuro Inoue
+          University of Osaka, Japan
+          Program Co-chairs
+          
+ProgramCh Michael W. Godfrey
+          University of Waterloo, Canada
+ProgramCh Jim Whitehead
+          University of California, Santa Cruz
+          Challenge Chair
+          
+ChalngCh  Christian Bird
+          Program Committee
+          
+ProgramCo Giuliano Antoniol
+          (Ã‰cole Polytechnique de MontrÃ©al, Canada)
+ProgramCo Andrew Begel
+          (Microsoft Corp., USA)
+ProgramCo Geoff Clemm
+          (IBM / Rational, USA)
+ProgramCo Stephan Diehl
+          (U. of Trier, Germany)
+ProgramCo Massimiliano di Penta
+          (U. of Sannio, Italy)
+ProgramCo Harald Gall
+          (U. of Zurich, Switzerland)
+ProgramCo Daniel GermÃ¡n
+          (U. of Victoria, Canada)
+ProgramCo Tudor Girba
+          (U. of Bern, Switzerland)
+ProgramCo Jesus Gonzalez-Barahona
+          (U. Rey Juan Carlos, Spain)
+ProgramCo Ahmed Hassan
+          (Queen's U., Canada)
+ProgramCo Ric Holt
+          (U. of Waterloo, Canada)
+ProgramCo Huzefa Kagdi
+          (Missouri U. of Science and Technology, USA)
+ProgramCo Tohru Kikuno
+          (Osaka U., Japan)
+ProgramCo Miryung Kim
+          (U. of Texas (Austin), USA)
+ProgramCo Sung Kim
+          (Hong Kong University of Science and Technology, China)
+ProgramCo Michele Lanza
+          (U. of Lugano, Switzerland)
+ProgramCo Ben Liblit
+          (U. of Wisconsin (Madison), USA)
+ProgramCo Jonathan Maletic
+          (Kent State U., USA)
+ProgramCo Andrian Marcus
+          (Wayne State U., USA)
+ProgramCo Audris Mockus
+          (Avaya Labs, USA)
+ProgramCo Nachiappan Nagappan
+          (Microsoft Corp., USA)
+ProgramCo Dewayne Perry
+          (U. of Texas (Austin), USA)
+ProgramCo Martin Pinzger
+          (U. of Zurich, Switzerland)
+ProgramCo Lori Pollock
+          (U. of Delaware, USA)
+ProgramCo Martin Robillard
+          (McGill U., Canada)
+ProgramCo Gregorio Robles
+          (U. Rey Juan Carlos, Spain)
+ProgramCo Jelber Sayyad Shirabad
+          (Ottawa U., Canada)
+ProgramCo Walt Scacchi
+          (U. of California (Irvine), USA)
+ProgramCo Tao Xie
+          (North Caroline State U., USA)
+ProgramCo Andy Zaidman
+          (Delft Technical U., Netherlands)
+ProgramCo Thomas Zimmermann
+          (U. of Calgary, Canada)
+          Poster Chair
+          
+PosterCh  Miryung Kim
+          
+          Local Arrangement Chair
+          
+LocRegCh  Dirk Beyer
+          
+          Web Chair
+          
+WebCh     Abram Hindle
+          University of Waterloo, Canada
+          
+          Steering Committee
+          
+SteerCo   Ahmed E. Hassan
+          
+SteerCo   Audris Mockus
+          
+SteerCo   Ric Holt
+          University of Waterloo, Canada
+SteerCo   Katsuro Inoue
+          
+SteerCo   Stephan Diehl
+          University Trier, Germany
+SteerCo   Harald Gall
+          University of Zurich, Switzerland
+SteerCo   Michele Lanza
+          University of Lugano, Switzerland

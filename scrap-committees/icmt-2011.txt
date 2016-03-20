@@ -1,50 +1,50 @@
-#DONE
-     http://www.model-transformation.org/ICMT2011/
-     PC chairs
-PrCh Eelco Visser
-PrCh Jordi Cabot
-     Publicity chair
-PbCh Dimitris Kolovos
-     Web chair
-WeCh Davide Di Ruscio
-     Steering committee
-StCo Jean Bézivin
-StCo Martin Gogolla
-StCo Jeff Gray
-StCo Richard Paige
-StCo Alfonso Pierantonio
-StCo Antonio Vallecillo
-StCo Laurence Tratt
-     Program Committee
-PrCo Andy Schürr
-PrCo Antonio Cicchetti
-PrCo Bernhard Rumpe
-PrCo Daniel Varro
-PrCo Dennis Wagelaar
-PrCo Eric Van Wyk
-PrCo Gerti Kappel
-PrCo Gregor Engels
-PrCo Günter Kniesel
-PrCo Hans Vangheluwe
-PrCo Ivan Kurtev
-PrCo Janis Voigtländer
-PrCo Jean-Marie Favre
-PrCo Jendrik Johannes
-PrCo Jesus Garcia Molina
-PrCo Jim Cordy
-PrCo Juan de Lara
-PrCo Jurgen Vinju
-PrCo Krzysztof Czarnecki
-PrCo Marco Brambilla
-PrCo Mark van den Brand
-PrCo Nate Foster
-PrCo Oscar Nierstrasz
-PrCo Paolo Atzeni
-PrCo Perdita Stevens
-PrCo Pieter Van Gorp
-PrCo Ralf Laemmel
-PrCo Reiko Heckel
-PrCo Simon Thompson
-PrCo Thomas Kuehne
-PrCo Tony Clark
-PrCo Zhenjiang Hu
+##########
+          http://www.model-transformation.org/ICMT2011/
+          PC chairs
+ProgramCh Eelco Visser
+ProgramCh Jordi Cabot
+          Publicity chair
+PubRelCh  Dimitris Kolovos
+          Web chair
+WebCh     Davide Di Ruscio
+          Steering committee
+SteerCo   Jean Bézivin
+SteerCo   Martin Gogolla
+SteerCo   Jeff Gray
+SteerCo   Richard Paige
+SteerCo   Alfonso Pierantonio
+SteerCo   Antonio Vallecillo
+SteerCo   Laurence Tratt
+          Program Committee
+ProgramCo Andy Schürr
+ProgramCo Antonio Cicchetti
+ProgramCo Bernhard Rumpe
+ProgramCo Daniel Varro
+ProgramCo Dennis Wagelaar
+ProgramCo Eric Van Wyk
+ProgramCo Gerti Kappel
+ProgramCo Gregor Engels
+ProgramCo Günter Kniesel
+ProgramCo Hans Vangheluwe
+ProgramCo Ivan Kurtev
+ProgramCo Janis Voigtländer
+ProgramCo Jean-Marie Favre
+ProgramCo Jendrik Johannes
+ProgramCo Jesus Garcia Molina
+ProgramCo Jim Cordy
+ProgramCo Juan de Lara
+ProgramCo Jurgen Vinju
+ProgramCo Krzysztof Czarnecki
+ProgramCo Marco Brambilla
+ProgramCo Mark van den Brand
+ProgramCo Nate Foster
+ProgramCo Oscar Nierstrasz
+ProgramCo Paolo Atzeni
+ProgramCo Perdita Stevens
+ProgramCo Pieter Van Gorp
+ProgramCo Ralf Laemmel
+ProgramCo Reiko Heckel
+ProgramCo Simon Thompson
+ProgramCo Thomas Kuehne
+ProgramCo Tony Clark
+ProgramCo Zhenjiang Hu

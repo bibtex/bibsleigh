@@ -1,26 +1,26 @@
-#DONE
-     http://www.seas.upenn.edu/~sweirich/types/archive/1999-2003/msg01150.html
-     Organizing Committee:
-     ---------------------
-OrCo Isabelle Attali, INRIA Sophia Antipolis
-OrCo Mark van den Brand, CWI Amsterdam
-OrCo Pierre-Etienne Moreau, INRIA-Loria Nancy
-     
-     Program committee co-chairs:
-     ----------------------------
-PrCh Barrett R. Bryant, University of Alabama at Birmingham, USA
-PrCh Joao Saraiva, University of Minho, Portugal
-     
-     Program Committee members:
-     --------------------------
-PrCo Don Batory, University Texas / Austin (USA)
-PrCo Uwe Glaesser, Technical University of British Columbia (Canada)
-PrCo Katsuhiko Gondow, JAIST (Japan)
-PrCo Uwe Kastens, University Paderborn (Germany)
-PrCo Paul Klint, CWI (The Netherlands)
-PrCo Jan Madey, University of Warsaw (Poland)
-PrCo Marjan Mernik, University of Maribor (Slovenia)
-PrCo Thomas Noll, University Aachen (Germany)
-PrCo Oege de Moor, Oxford University Computing Laboratory, (England)
-PrCo Peter D. Mosses, BRICS, University Aarhus (Denmark)
-PrCo Eelco Visser, Utrecht (The Netherlands)
+##########
+          http://www.seas.upenn.edu/~sweirich/types/archive/1999-2003/msg01150.html
+          Organizing Committee:
+          ---------------------
+OrganCo   Isabelle Attali, INRIA Sophia Antipolis
+OrganCo   Mark van den Brand, CWI Amsterdam
+OrganCo   Pierre-Etienne Moreau, INRIA-Loria Nancy
+          
+          Program committee co-chairs:
+          ----------------------------
+ProgramCh Barrett R. Bryant, University of Alabama at Birmingham, USA
+ProgramCh Joao Saraiva, University of Minho, Portugal
+          
+          Program Committee members:
+          --------------------------
+ProgramCo Don Batory, University Texas / Austin (USA)
+ProgramCo Uwe Glaesser, Technical University of British Columbia (Canada)
+ProgramCo Katsuhiko Gondow, JAIST (Japan)
+ProgramCo Uwe Kastens, University Paderborn (Germany)
+ProgramCo Paul Klint, CWI (The Netherlands)
+ProgramCo Jan Madey, University of Warsaw (Poland)
+ProgramCo Marjan Mernik, University of Maribor (Slovenia)
+ProgramCo Thomas Noll, University Aachen (Germany)
+ProgramCo Oege de Moor, Oxford University Computing Laboratory, (England)
+ProgramCo Peter D. Mosses, BRICS, University Aarhus (Denmark)
+ProgramCo Eelco Visser, Utrecht (The Netherlands)

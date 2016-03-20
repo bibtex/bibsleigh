@@ -1,181 +1,181 @@
-#DONE
-     Organizing Committee
-     General Chairs
-GeCh Jeff Gray
-GeCh Antonio Vallecillo
-     Local Chair
-LoCh Peter Clarke
-     Technical Program Chairs
-PrCh Ana Moreira
-PrCh Bernhard Schätz
-     
-     Industry Liaison
-InCh Magnus Christerson
-     Workshop Chairs
-WoCh Fabio Costa
-WoCh Eugene Syriani
-     Tutorial Chairs
-TuCh Jordi Cabot
-     INRIA - École des Mines de Nantes
-TuCh Jörg Kienzle
-     
-     Panel Chairs
-PaCh Silvia Abrahao
-PaCh Isidro Ramos
-     
-     Demonstration Chairs
-TTCh Yan Liu
-TTCh Steffen Zschaler
-     
-     Poster Chairs
-PoCh Benoit Baudry
-PoCh Sudipto Ghosh
-     
-     ACM Student Research Competition Chairs
-SRCh Ethan Jackson
-SRCh Davide Di Ruscio
-     
-     Publicity Chairs
-PbCh James Hill
-PbCh Martina Seidl
-     Social Media Chairs
-SMCh Ralf Lämmel
-SMCh Vadim Zaytsev
-     CWI
-     The Netherlands
-     Publications Chair
-PuCh Manuel Wimmer
-     
-     Doctoral Symposium Chair
-DSCh Martin Gogolla
-     
-     Student Volunteers Chairs
-SVCh Jonathan Corley
-SVCh Raymond Chang Lau
-     
-     Web Chair
-WeCh Robert Tairas
-     
-     The following are the names of those helping to serve on the program and board committees for MODELS 2013.
-     Program Board
-PBCh Ana Moreira (Chair)
-PBCh Bernhard Schätz (Chair)
-PBCo Lionel Briand
-PBCo Jean Michel Bruel
-PBCo Krzysztof Czarnecki
-PBCo Juergen Dingel
-PBCo Gregor Engels
-PBCo Robert France
-PBCo Martin Gogolla
-PBCo Jean-Marc Jezequel
-PBCo Richard Paige
-PBCo Dorina Petriu
-PBCo Bernhard Rumpe
-PBCo Jon Whittle
-     
-     Program Committee (Foundations Track)
-PrCh Ana Moreira (Chair)
-PrCo Vasco Amaral
-PrCo Daniel Amyot
-PrCo João Araújo
-PrCo Colin Atkinson
-PrCo Mira Balaban
-PrCo Benoit Baudry
-PrCo Nelly Bencomo
-PrCo Xavier Blanc
-PrCo Ruth Breu
-PrCo Jordi Cabot
-PrCo Alessandra Cavarra
-PrCo Siobhán Clarke
-PrCo Jane Cleland-Huang
-PrCo Alexander Egyed
-PrCo Rik Eshuis
-PrCo Lidia Fuentes
-PrCo Alessandro Garcia
-PrCo Geri Georg
-PrCo Sebastien Gerard
-PrCo Holger Giese
-PrCo John Grundy
-PrCo Øystein Haugen
-PrCo Zhenjiang Hu
-PrCo Heinrich Hussmann
-PrCo Gerti Kappel
-PrCo Gabor Karsai
-PrCo Ingolf Krueger
-PrCo Thomas Kühne
-PrCo Yvan Labiche
-PrCo Philippe Lahire
-PrCo Juan de Lara
-PrCo Yves Le Traon
-PrCo Hong Mei
-PrCo Dragan Milicev
-PrCo Raffaela Mirandola
-PrCo Pierre-Alain Muller
-PrCo Gunter Mussbacher
-PrCo Ileana Ober
-PrCo Alfonso Pierantonio
-PrCo Gianna Reggio
-PrCo Gustavo Rossi
-PrCo Pete Sawyer
-PrCo Andy Schuerr
-PrCo Arnor Solberg
-PrCo Friedrich Steimann
-PrCo Gabriele Taentzer
-PrCo Daniel Varro
-PrCo Michael Whalen
-PrCo Tao Yue
-PrCo Steffen Zschaler
-     
-     Program Committee (Applications Track)
-PrCh Bernhard Schätz (Chair)
-PrCo Silvia Abrahão
-PrCo Alfred Aue
-PrCo Balbir Barn
-PrCo Brian Berenbach
-PrCo Fernando Brito e Abreu
-PrCo Tony Clark
-PrCo Andreas Graf
-PrCo Pavel Hruby
-PrCo Juergen Kazmeier
-PrCo Cornel Klein
-PrCo Georg Kreuch
-PrCo Tihamer Levendovszky
-PrCo Pieter Mosterman
-PrCo Oscar Pastor
-PrCo Isabelle Perseil
-PrCo Rob Pettit
-PrCo Alexander Pretschner
-PrCo Wolfram Schulte
-PrCo Bran Selic
-PrCo Ketil Stølen
-PrCo Stephan Thesing
-PrCo Juha-Pekka Tolvanen
-PrCo Mario Trapp
-PrCo Markus Völter
-     
-     Steering Committee
-StCh Gregor Engels (Chair), University of Paderborn, Germany
-StCh Lionel Briand (Vice Chair), University of Luxembourg, Luxembourg
-StCo Silvia Abrahão, Universitat Politècnica de València, Spain
-StCo Jean Bezivin, University of Nantes, France
-StCo Ruth Breu, University of Innsbruck, Austria
-StCo Jean-Michel Bruel, IRIT, France
-StCo Krzysztof Czarnecki, University of Waterloo, Canada
-StCo Laurie Dillon, Michigan State University, USA
-StCo Juergen Dingel, Queen's University, Canada
-StCo Geri Georg, Colorado State University, USA
-StCo Jeff Gray, University of Alabama, USA
-StCo Øystein Haugen, SINTEF, Norway
-StCo Heinrich Hussmann, University of Munich, Germany
-StCo Thomas Kühne, Victoria University of Wellington, New Zealand
-StCo Ana Moreira, Universidade Nova de Lisboa, Portugal
-StCo Pierre-Alain Muller, University of Haute-Alsace, France
-StCo Oscar Nierstrasz, University of Bern, Switzerland
-StCo Dorina Petriu, Carleton University, Canada
-StCo Rob Pettit, The Aerospace Corp., USA
-StCo Gianna Reggio, University of Genoa, Italy
-StCo Bernhard Schätz, Technical University of Munich, Germany
-StCo Wolfram Schulte, Microsoft Research, USA
-StCo Andy Schürr, Technical University of Darmstadt, Germany
-StCo Steve Seidman, Texas State University, USA
-StCo Jon Whittle, Lancaster University, UK
+##########
+          Organizing Committee
+          General Chairs
+GeneralCh Jeff Gray
+GeneralCh Antonio Vallecillo
+          Local Chair
+LocRegCh  Peter Clarke
+          Technical Program Chairs
+ProgramCh Ana Moreira
+ProgramCh Bernhard Schätz
+          
+          Industry Liaison
+PractCh   Magnus Christerson
+          Workshop Chairs
+WorkspCh  Fabio Costa
+WorkspCh  Eugene Syriani
+          Tutorial Chairs
+TutorCh   Jordi Cabot
+          INRIA - École des Mines de Nantes
+TutorCh   Jörg Kienzle
+          
+          Panel Chairs
+PanelCh   Silvia Abrahao
+PanelCh   Isidro Ramos
+          
+          Demonstration Chairs
+DemoCh    Yan Liu
+DemoCh    Steffen Zschaler
+          
+          Poster Chairs
+PosterCh  Benoit Baudry
+PosterCh  Sudipto Ghosh
+          
+          ACM Student Research Competition Chairs
+StudComCh Ethan Jackson
+StudComCh Davide Di Ruscio
+          
+          Publicity Chairs
+PubRelCh  James Hill
+PubRelCh  Martina Seidl
+          Social Media Chairs
+SocMedCh  Ralf Lämmel
+SocMedCh  Vadim Zaytsev
+          CWI
+          The Netherlands
+          Publications Chair
+PublicaCh Manuel Wimmer
+          
+          Doctoral Symposium Chair
+DocSymCh  Martin Gogolla
+          
+          Student Volunteers Chairs
+StudentCh Jonathan Corley
+StudentCh Raymond Chang Lau
+          
+          Web Chair
+WebCh     Robert Tairas
+          
+          The following are the names of those helping to serve on the program and board committees for MODELS 2013.
+          Program Board
+ProgBoCh  Ana Moreira (Chair)
+ProgBoCh  Bernhard Schätz (Chair)
+ProgBoCo  Lionel Briand
+ProgBoCo  Jean Michel Bruel
+ProgBoCo  Krzysztof Czarnecki
+ProgBoCo  Juergen Dingel
+ProgBoCo  Gregor Engels
+ProgBoCo  Robert France
+ProgBoCo  Martin Gogolla
+ProgBoCo  Jean-Marc Jezequel
+ProgBoCo  Richard Paige
+ProgBoCo  Dorina Petriu
+ProgBoCo  Bernhard Rumpe
+ProgBoCo  Jon Whittle
+          
+          Program Committee (Foundations Track)
+ProgramCh Ana Moreira (Chair)
+ProgramCo Vasco Amaral
+ProgramCo Daniel Amyot
+ProgramCo João Araújo
+ProgramCo Colin Atkinson
+ProgramCo Mira Balaban
+ProgramCo Benoit Baudry
+ProgramCo Nelly Bencomo
+ProgramCo Xavier Blanc
+ProgramCo Ruth Breu
+ProgramCo Jordi Cabot
+ProgramCo Alessandra Cavarra
+ProgramCo Siobhán Clarke
+ProgramCo Jane Cleland-Huang
+ProgramCo Alexander Egyed
+ProgramCo Rik Eshuis
+ProgramCo Lidia Fuentes
+ProgramCo Alessandro Garcia
+ProgramCo Geri Georg
+ProgramCo Sebastien Gerard
+ProgramCo Holger Giese
+ProgramCo John Grundy
+ProgramCo Øystein Haugen
+ProgramCo Zhenjiang Hu
+ProgramCo Heinrich Hussmann
+ProgramCo Gerti Kappel
+ProgramCo Gabor Karsai
+ProgramCo Ingolf Krueger
+ProgramCo Thomas Kühne
+ProgramCo Yvan Labiche
+ProgramCo Philippe Lahire
+ProgramCo Juan de Lara
+ProgramCo Yves Le Traon
+ProgramCo Hong Mei
+ProgramCo Dragan Milicev
+ProgramCo Raffaela Mirandola
+ProgramCo Pierre-Alain Muller
+ProgramCo Gunter Mussbacher
+ProgramCo Ileana Ober
+ProgramCo Alfonso Pierantonio
+ProgramCo Gianna Reggio
+ProgramCo Gustavo Rossi
+ProgramCo Pete Sawyer
+ProgramCo Andy Schuerr
+ProgramCo Arnor Solberg
+ProgramCo Friedrich Steimann
+ProgramCo Gabriele Taentzer
+ProgramCo Daniel Varro
+ProgramCo Michael Whalen
+ProgramCo Tao Yue
+ProgramCo Steffen Zschaler
+          
+          Program Committee (Applications Track)
+ProgramCh Bernhard Schätz (Chair)
+ProgramCo Silvia Abrahão
+ProgramCo Alfred Aue
+ProgramCo Balbir Barn
+ProgramCo Brian Berenbach
+ProgramCo Fernando Brito e Abreu
+ProgramCo Tony Clark
+ProgramCo Andreas Graf
+ProgramCo Pavel Hruby
+ProgramCo Juergen Kazmeier
+ProgramCo Cornel Klein
+ProgramCo Georg Kreuch
+ProgramCo Tihamer Levendovszky
+ProgramCo Pieter Mosterman
+ProgramCo Oscar Pastor
+ProgramCo Isabelle Perseil
+ProgramCo Rob Pettit
+ProgramCo Alexander Pretschner
+ProgramCo Wolfram Schulte
+ProgramCo Bran Selic
+ProgramCo Ketil Stølen
+ProgramCo Stephan Thesing
+ProgramCo Juha-Pekka Tolvanen
+ProgramCo Mario Trapp
+ProgramCo Markus Völter
+          
+          Steering Committee
+SteerCh   Gregor Engels (Chair), University of Paderborn, Germany
+SteerCh   Lionel Briand (Vice Chair), University of Luxembourg, Luxembourg
+SteerCo   Silvia Abrahão, Universitat Politècnica de València, Spain
+SteerCo   Jean Bezivin, University of Nantes, France
+SteerCo   Ruth Breu, University of Innsbruck, Austria
+SteerCo   Jean-Michel Bruel, IRIT, France
+SteerCo   Krzysztof Czarnecki, University of Waterloo, Canada
+SteerCo   Laurie Dillon, Michigan State University, USA
+SteerCo   Juergen Dingel, Queen's University, Canada
+SteerCo   Geri Georg, Colorado State University, USA
+SteerCo   Jeff Gray, University of Alabama, USA
+SteerCo   Øystein Haugen, SINTEF, Norway
+SteerCo   Heinrich Hussmann, University of Munich, Germany
+SteerCo   Thomas Kühne, Victoria University of Wellington, New Zealand
+SteerCo   Ana Moreira, Universidade Nova de Lisboa, Portugal
+SteerCo   Pierre-Alain Muller, University of Haute-Alsace, France
+SteerCo   Oscar Nierstrasz, University of Bern, Switzerland
+SteerCo   Dorina Petriu, Carleton University, Canada
+SteerCo   Rob Pettit, The Aerospace Corp., USA
+SteerCo   Gianna Reggio, University of Genoa, Italy
+SteerCo   Bernhard Schätz, Technical University of Munich, Germany
+SteerCo   Wolfram Schulte, Microsoft Research, USA
+SteerCo   Andy Schürr, Technical University of Darmstadt, Germany
+SteerCo   Steve Seidman, Texas State University, USA
+SteerCo   Jon Whittle, Lancaster University, UK

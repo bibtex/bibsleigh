@@ -1,18 +1,18 @@
-#DONE
-     http://ldta.info/2002/cfp-ldta02.pdf
-     Program Committee
-PrCh Mark van den Brand (CWI, Amsterdam), chair
-PrCo Barrett Bryant (Univ. of Alabama, Birmingham)
-PrCo Katsuhiko Gondow (JAIST, Japan)
-PrCo Jan Heering (CWI, Amsterdam)
-PrCh Ralf Lämmel (Free University Amsterdam), co-chair
-PrCo Oege de Moor (Oxford University, Computing Lab.)
-PrCo Pierre-Etienne Moreau (LORIA, Nancy)
-PrCo Peter D. Mosses (BRICS and University of Aarhus)
-PrCo Joao Saraiva (University of Minho, Portugal)
-PrCo David Watt (University of Glasgow)
-     
-     Organizing Committee
-OrCo Görel Hedin (Lund Institute of Technology)
-OrCo Marjan Mernik (University of Maribor)
-OrCo Didier Parigot (INRIA, Sophia Antipolis)
+##########
+          http://ldta.info/2002/cfp-ldta02.pdf
+          Program Committee
+ProgramCh Mark van den Brand (CWI, Amsterdam), chair
+ProgramCo Barrett Bryant (Univ. of Alabama, Birmingham)
+ProgramCo Katsuhiko Gondow (JAIST, Japan)
+ProgramCo Jan Heering (CWI, Amsterdam)
+ProgramCh Ralf Lämmel (Free University Amsterdam), co-chair
+ProgramCo Oege de Moor (Oxford University, Computing Lab.)
+ProgramCo Pierre-Etienne Moreau (LORIA, Nancy)
+ProgramCo Peter D. Mosses (BRICS and University of Aarhus)
+ProgramCo Joao Saraiva (University of Minho, Portugal)
+ProgramCo David Watt (University of Glasgow)
+          
+          Organizing Committee
+OrganCo   Görel Hedin (Lund Institute of Technology)
+OrganCo   Marjan Mernik (University of Maribor)
+OrganCo   Didier Parigot (INRIA, Sophia Antipolis)

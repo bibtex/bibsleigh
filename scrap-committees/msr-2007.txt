@@ -1,76 +1,76 @@
-#DONE
-     http://msr.uwaterloo.ca/msr2007/index.html
-     Program Co-chairs
-     
-PrCh Harald Gall
-     
-     University of Zurich, Switzerland
-PrCh Michele Lanza
-     
-     University of Lugano, Switzerland
-     Challenge Chair
-     
-ChCh Thomas Zimmermann
-     
-     Program Committee
-     
-PrCo Tsuneo Ajisaka
-     (Wakayama U., Japan)
-PrCo Serge Demeyer
-     (U. of Antwerp, Belgium)
-PrCo Premkumar T. Devanbu
-     (U. of California, USA)
-PrCo Stephan Diehl
-     (U. of Trier, Germany)
-PrCo Massimiliano di Penta
-     (U. of Sannio, Italy)
-PrCo Stephane Ducasse
-     (U. of Annecy, France)
-PrCo Daniel German
-     (U. of Victoria, Canada)
-PrCo Tudor Girba
-     (U. of Bern, Switzerland)
-PrCo Mike Godfrey
-     (U. of Waterloo, Canada)
-PrCo Ahmed Hassan
-     (U. of Victoria, Canada)
-PrCo Jane Hayes
-     (U. of Kentucky, USA)
-PrCo Ric Holt
-     (U. Waterloo, Canada)
-PrCo Shih-Kun Huang
-     (Nat. Chiao Tung U., Taiwan)
-PrCo Katsuro Inoue
-     (Osaka U., Japan)
-PrCo Jonathan Maletic
-     (Kent State U., USA)
-PrCo Andrian Marcus
-     (Wayne State U., USA)
-PrCo Radu Marinescu
-     (TU Timisoara, Romania)
-PrCo Audris Mockus
-     (Avaya Labs, USA)
-PrCo Leon Moonen
-     (Delft U. of Tech., Netherlands)
-PrCo Gail Murphy
-     (U. of British Colombia, Canada)
-PrCo David Notkin
-     (U. of Washington, USA)
-PrCo Masao Ohira
-     (NAIST, Japan)
-PrCo Dewayne Perry
-     (U. of Texas, USA)
-PrCo Martin Pinzger
-     (U. of Zurich, Switzerland)
-PrCo Jelber Sayyad Shirabad
-     (Ottawa U., Canada)
-PrCo Alexandru Telea
-     (Eindhoven TU, The Netherlands)
-PrCo Annie Ying
-     (IBM Research, USA)
-PrCo Jim Whitehead
-     (U. of California, USA)
-PrCo Kenny Wong
-     (U. of Alberta, Canada)
-PrCo Andreas Zeller
-     (Saarland U., Germany)
+##########
+          http://msr.uwaterloo.ca/msr2007/index.html
+          Program Co-chairs
+          
+ProgramCh Harald Gall
+          
+          University of Zurich, Switzerland
+ProgramCh Michele Lanza
+          
+          University of Lugano, Switzerland
+          Challenge Chair
+          
+ChalngCh  Thomas Zimmermann
+          
+          Program Committee
+          
+ProgramCo Tsuneo Ajisaka
+          (Wakayama U., Japan)
+ProgramCo Serge Demeyer
+          (U. of Antwerp, Belgium)
+ProgramCo Premkumar T. Devanbu
+          (U. of California, USA)
+ProgramCo Stephan Diehl
+          (U. of Trier, Germany)
+ProgramCo Massimiliano di Penta
+          (U. of Sannio, Italy)
+ProgramCo Stephane Ducasse
+          (U. of Annecy, France)
+ProgramCo Daniel German
+          (U. of Victoria, Canada)
+ProgramCo Tudor Girba
+          (U. of Bern, Switzerland)
+ProgramCo Mike Godfrey
+          (U. of Waterloo, Canada)
+ProgramCo Ahmed Hassan
+          (U. of Victoria, Canada)
+ProgramCo Jane Hayes
+          (U. of Kentucky, USA)
+ProgramCo Ric Holt
+          (U. Waterloo, Canada)
+ProgramCo Shih-Kun Huang
+          (Nat. Chiao Tung U., Taiwan)
+ProgramCo Katsuro Inoue
+          (Osaka U., Japan)
+ProgramCo Jonathan Maletic
+          (Kent State U., USA)
+ProgramCo Andrian Marcus
+          (Wayne State U., USA)
+ProgramCo Radu Marinescu
+          (TU Timisoara, Romania)
+ProgramCo Audris Mockus
+          (Avaya Labs, USA)
+ProgramCo Leon Moonen
+          (Delft U. of Tech., Netherlands)
+ProgramCo Gail Murphy
+          (U. of British Colombia, Canada)
+ProgramCo David Notkin
+          (U. of Washington, USA)
+ProgramCo Masao Ohira
+          (NAIST, Japan)
+ProgramCo Dewayne Perry
+          (U. of Texas, USA)
+ProgramCo Martin Pinzger
+          (U. of Zurich, Switzerland)
+ProgramCo Jelber Sayyad Shirabad
+          (Ottawa U., Canada)
+ProgramCo Alexandru Telea
+          (Eindhoven TU, The Netherlands)
+ProgramCo Annie Ying
+          (IBM Research, USA)
+ProgramCo Jim Whitehead
+          (U. of California, USA)
+ProgramCo Kenny Wong
+          (U. of Alberta, Canada)
+ProgramCo Andreas Zeller
+          (Saarland U., Germany)

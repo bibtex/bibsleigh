@@ -1,82 +1,82 @@
-#DONE
-     General Chair
-GeCh Philippe Kruchten, University of British Columbia (Canada)
-     
-     Finances Chair
-FiCh Ali Mesbah, University of British Columbia (Canada)
-     
-     Publicity Chair
-PbCh Davide Falessi, Fraunhofer Center (USA)
-     
-     Proceedings Chair
-PuCh Ipek Ozkaya, Software Engineering Institute (USA)
-     
-     Program Co-Chairs
-PrCh Dimitra Giannakopoulou, NASA Ames Research Center (USA)
-PrCh Massimo Tivoli, University of L'Aquila (Italy)
-     
-     Program Committee
-PrCo Marco Autili, University of L'Aquila (Italy)
-PrCo Steffen Becker, University of Paderborn (Germany)
-PrCo Antonia Bertolino, ISTI-CNR (Italy)
-PrCo Domenico Bianculli, University of Luxembourg (Luxembourg)
-PrCo Radu Calinescu, University of York (UK)
-PrCo Carlos Canal, University of Málaga (Spain)
-PrCo Jan Carlson, Malardalen University (Sweden)
-PrCo Ivica Crnkovic, Malardalen University (Sweden)
-PrCo Aldo Dagnino, Carnegie Mellon University (USA)
-PrCo David Garlan, Carnegie Mellon University (USA)
-PrCo Serban Gheorghe, Edgewater Computer Systems Inc (Canada)
-PrCo Gregor Goessler, INRIA (France)
-PrCo Ian Gorton, Pacific Northwest National Laboratory (USA)
-PrCo Susanne Graf, VERIMAG/CNRS (France)
-PrCo Lars Grunske, University of Stuttgart (Germany)
-PrCo George Heineman, Worcester Polytechnic Institute (USA)
-PrCo Gang Huang, Peking University (China)
-PrCo Paola Inverardi, University of L'Aquila (Italy)
-PrCo Valerie Issarny, INRIA (France)
-PrCo Fabrice Kordon, LIP6/UPMC (France)
-PrCo Anne Koziolek, University of Zurich (Switzerland)
-PrCo Magnus Larsson, Malardalen University (Sweden)
-PrCo Grace A. Lewis, CMU Software Engineering Institute (USA)
-PrCo Nenad Medvidovic, University of Southern California (USA)
-PrCo Raffaela Mirandola, Politecnico di Milano (Italy)
-PrCo Henry Muccini, University of L'Aquila (Italy)
-PrCo Rob van Ommering, Philips Research (Netherlands)
-PrCo David Parker, University of Birmingham (UK)
-PrCo Frantisek Plasil, Charles University in Prague (Czech Republic)
-PrCo Noel Plouzeau, IRISA/University of Rennes 1 (France)
-PrCo Pascal Poizat, Université Paris Ouest Nanterre La Défense (France)
-PrCo Sanjai Rayadurgam, University of Minnesota (USA)
-PrCo Ralf Reussner, Karlsruhe Institute of Technology (Germany)
-PrCo Salah Sadou, IRISA/University of South Brittany (France)
-PrCo Gwen Salaun, INRIA (France)
-PrCo Heinz Schmidt, RMIT University (Australia)
-PrCo Lionel Seinturier, University of Lille/INRIA (France)
-PrCo Clemens Szyperski, Microsoft Research (USA)
-PrCo Pengcheng Zhang, Hohai University (China)
-     
-     Steering Committee Co-Chairs
-StCo Ralf Reussner, Karlsruhe Institute of Technology (Germany)
-StCo Clemens Szyperski, Microsoft Research (USA)
-     
-     Steering Committee
-StCo Steffen Becker, University of Paderborn (Germany)
-StCo Barbora Buhnova, Masaryk University (Czech Republic)
-StCo Ivica Crnkovic, Malardalen University (Sweden)
-StCo Holger Giese, University of Potsdam (Germany)
-StCo Ian Gorton, Pacific Northwest National Laboratory (USA)
-StCo Lars Grunske, University of Stuttgart (Germany)
-StCo George Heineman, Worcester Polytechnic Institute (USA)
-StCo Jan Kofron, Charles University in Prague (Czech Republic)
-StCo Grace A. Lewis, CMU Software Engineering Institute (USA)
-StCo Raffaela Mirandola, Politecnico di Milano (Italy)
-StCo Sven Overhage, Universitát Augsburg/Oversoft (Germany)
-StCo Frantisek Plasil, Charles University in Prague (Czech Republic)
-StCo Ralf Reussner, Karlsruhe Institute of Technology (Germany)
-StCo Heinz Schmidt, RMIT University (Australia)
-StCo Judith Stafford, Tufts University (USA)
-StCo Clemens Szyperski, Microsoft Research (USA)
-     
-     Web Chair
-WeCh Davide Di Ruscio, University of L'Aquila (Italy)
+##########
+          General Chair
+GeneralCh Philippe Kruchten, University of British Columbia (Canada)
+          
+          Finances Chair
+FinanceCh Ali Mesbah, University of British Columbia (Canada)
+          
+          Publicity Chair
+PubRelCh  Davide Falessi, Fraunhofer Center (USA)
+          
+          Proceedings Chair
+PublicaCh Ipek Ozkaya, Software Engineering Institute (USA)
+          
+          Program Co-Chairs
+ProgramCh Dimitra Giannakopoulou, NASA Ames Research Center (USA)
+ProgramCh Massimo Tivoli, University of L'Aquila (Italy)
+          
+          Program Committee
+ProgramCo Marco Autili, University of L'Aquila (Italy)
+ProgramCo Steffen Becker, University of Paderborn (Germany)
+ProgramCo Antonia Bertolino, ISTI-CNR (Italy)
+ProgramCo Domenico Bianculli, University of Luxembourg (Luxembourg)
+ProgramCo Radu Calinescu, University of York (UK)
+ProgramCo Carlos Canal, University of Málaga (Spain)
+ProgramCo Jan Carlson, Malardalen University (Sweden)
+ProgramCo Ivica Crnkovic, Malardalen University (Sweden)
+ProgramCo Aldo Dagnino, Carnegie Mellon University (USA)
+ProgramCo David Garlan, Carnegie Mellon University (USA)
+ProgramCo Serban Gheorghe, Edgewater Computer Systems Inc (Canada)
+ProgramCo Gregor Goessler, INRIA (France)
+ProgramCo Ian Gorton, Pacific Northwest National Laboratory (USA)
+ProgramCo Susanne Graf, VERIMAG/CNRS (France)
+ProgramCo Lars Grunske, University of Stuttgart (Germany)
+ProgramCo George Heineman, Worcester Polytechnic Institute (USA)
+ProgramCo Gang Huang, Peking University (China)
+ProgramCo Paola Inverardi, University of L'Aquila (Italy)
+ProgramCo Valerie Issarny, INRIA (France)
+ProgramCo Fabrice Kordon, LIP6/UPMC (France)
+ProgramCo Anne Koziolek, University of Zurich (Switzerland)
+ProgramCo Magnus Larsson, Malardalen University (Sweden)
+ProgramCo Grace A. Lewis, CMU Software Engineering Institute (USA)
+ProgramCo Nenad Medvidovic, University of Southern California (USA)
+ProgramCo Raffaela Mirandola, Politecnico di Milano (Italy)
+ProgramCo Henry Muccini, University of L'Aquila (Italy)
+ProgramCo Rob van Ommering, Philips Research (Netherlands)
+ProgramCo David Parker, University of Birmingham (UK)
+ProgramCo Frantisek Plasil, Charles University in Prague (Czech Republic)
+ProgramCo Noel Plouzeau, IRISA/University of Rennes 1 (France)
+ProgramCo Pascal Poizat, Université Paris Ouest Nanterre La Défense (France)
+ProgramCo Sanjai Rayadurgam, University of Minnesota (USA)
+ProgramCo Ralf Reussner, Karlsruhe Institute of Technology (Germany)
+ProgramCo Salah Sadou, IRISA/University of South Brittany (France)
+ProgramCo Gwen Salaun, INRIA (France)
+ProgramCo Heinz Schmidt, RMIT University (Australia)
+ProgramCo Lionel Seinturier, University of Lille/INRIA (France)
+ProgramCo Clemens Szyperski, Microsoft Research (USA)
+ProgramCo Pengcheng Zhang, Hohai University (China)
+          
+          Steering Committee Co-Chairs
+SteerCo   Ralf Reussner, Karlsruhe Institute of Technology (Germany)
+SteerCo   Clemens Szyperski, Microsoft Research (USA)
+          
+          Steering Committee
+SteerCo   Steffen Becker, University of Paderborn (Germany)
+SteerCo   Barbora Buhnova, Masaryk University (Czech Republic)
+SteerCo   Ivica Crnkovic, Malardalen University (Sweden)
+SteerCo   Holger Giese, University of Potsdam (Germany)
+SteerCo   Ian Gorton, Pacific Northwest National Laboratory (USA)
+SteerCo   Lars Grunske, University of Stuttgart (Germany)
+SteerCo   George Heineman, Worcester Polytechnic Institute (USA)
+SteerCo   Jan Kofron, Charles University in Prague (Czech Republic)
+SteerCo   Grace A. Lewis, CMU Software Engineering Institute (USA)
+SteerCo   Raffaela Mirandola, Politecnico di Milano (Italy)
+SteerCo   Sven Overhage, Universitát Augsburg/Oversoft (Germany)
+SteerCo   Frantisek Plasil, Charles University in Prague (Czech Republic)
+SteerCo   Ralf Reussner, Karlsruhe Institute of Technology (Germany)
+SteerCo   Heinz Schmidt, RMIT University (Australia)
+SteerCo   Judith Stafford, Tufts University (USA)
+SteerCo   Clemens Szyperski, Microsoft Research (USA)
+          
+          Web Chair
+WebCh     Davide Di Ruscio, University of L'Aquila (Italy)

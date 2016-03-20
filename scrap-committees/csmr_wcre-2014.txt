@@ -1,192 +1,193 @@
-#DONE
-     http://ansymore.uantwerpen.be/csmr-wcre/Program_committees
-     Committees
-     
-     Organization Committee
-     
-     General Chair
-GeCh Serge Demeyer
-     
-     
-     Liaison Chairs - Publications
-PuCh Tom Mens
-     
-     Liaison Chairs - Finances
-     
-FiCh Anthony Cleve
-     
-     ??? Liaison Chairs - IEEE and REF
-     Organization Committee
-     
-OrCo Elliot Chikofsky
-     
-     
-     Program Chairs
-     
-PrCh Dave Binkley
-     
-     
-PrCh Filippo Ricca
-     
-     
-     ERA Chairs
-ERCh Andy Zaidman
-     
-ERCh Coen De Roover
-     
-     
-     Workshops
-     
-WoCh Alexander Serebrenik
-     
-WoCh Emily Hill
-     
-     
-     Doctoral Symposium Chairs
-     
-DSCh Bram Adams
-     
-     
-DSCh Sibylle Schupp
-     
-     
-     Vision Papers
-     
-ViCh Dave Binkley
-     
-ViCh Filippo Ricca
-     
-     
-     Project Track
-     
-PjCh Jens Krinke
-     
-     
-PjCh Rocco Oliveto
-     
-     
-     Industry Track
-     
-InCh Werner Teppe
-     
-     
-InCh Eric Bouwers
-     
-     
-     Tool Demonstrations Chairs
-     
-TTCh Thomas Fritz
-     
-     
-TTCh Jurgen Vinju
-     
-     
-     Web Chair
-     
-WeCh Alessandro Murgia
-     
-     
-     ??? Graphic Designer
-     
-WeCh Tim Molderez
-     
-     
-     Publicity-chair - Social media-chair
-     
-SMCh Bogdan Vasilescu
-     
-     
-     Student volunteers coordinator
-     
-SVCh Javier Pérez
-     
-     
-     Program Committees
-     
-     Program committee
-     
-PrCo Tibor Gyimothy, University of Szeged, Hungary
-PrCo Martin Pinzger, University of Klagenfurt, Austria
-PrCo Giuseppe Scanniello,  University of Basilicata, Italy
-PrCo Daqing Hou, Clarkson University, USA
-PrCo Zheng Li, Bejing University of Chemical Technology, China
-PrCo Klaus Schmid, University of Hildesheim, Germany
-PrCo Marco Gerosa, IME - USP, Brazil
-PrCo Andy Zaidman, Delft University of Technology, The Netherlands
-PrCo Huzefa Kagdi, Wichita State University, USA
-PrCo Harald Gall, University of Zurich, Switzerland
-PrCo Emily Hill, Montclair State University, USA
-PrCo Tom Mens, University of Mons, Belgium
-PrCo Reid Holmes, University of Waterloo, Canada
-PrCo Rocco Oliveto, University of Molise, Italy
-PrCo Bram Adams, École Polytechnique de Montréal, Canada
-PrCo Mariano Ceccato, Fondazione Bruno Kessler, Italy
-PrCo Nikolaos Tsantalis, Concordia University, Canada
-PrCo Andrea De Lucia, University of Salerno, Italy
-PrCo Dawn Lawrie, Loyola University Maryland, USA
-PrCo Francesca Arcelli Fontana, University of Milano Bicocca, Italy
-PrCo Andrian Marcus, Wayne State University, USA
-PrCo Alexander Chatzigeorgiou, University of Macedonia, Greece
-PrCo Alessandro Marchetto, Fiat Research Center, Italy
-PrCo Rudolf Ferenc, University of Szeged, Hungary
-PrCo Rafael Capilla, Universidad Rey Juan Carlos, Spain
-PrCo Romain Robbes, University of Chile, Chile
-PrCo Holger Kienle, Mälardalen University, Sweden
-PrCo Jens Knodel, Fraunhofer IESE, Germany
-PrCo Mark Harman, University College London, UK
-PrCo Lingxiao Jiang, Singapore Management University, Singapore
-PrCo Foutse Khomh   Queen's University, Canada
-PrCo Mircea Lungu, University of Bern, Germany
-PrCo Chanchal Roy, University of Saskatchewan, Canada
-PrCo Gabriele Bavota, University of Salerno, Italy
-PrCo Laurence Duchien, INRIA Lille, France
-PrCo Árpád Beszédes, University of Szeged, Hungary
-PrCo Anthony Cleve, University of Namur, Belgium
-PrCo Zhang Hongyu, Tsinghua University, China
-PrCo Massimiliano Di Penta, University of Sannio, Italy
-PrCo Hausi A. Muller, University of Victoria, Canada
-PrCo Yasutaka Kamei, Kyushu University, Japan
-PrCo Harry Sneed, Universities of Budapest, Passau and Regensburg, Germany
-PrCo Alberto Bacchelli, Delft University of Technology, The Netherlands
-PrCo Thomas Dean, Queens University, Canada
-PrCo Jianjun Zhao, School of Software, Shanghai Jiao Tong University, China
-PrCo Jürgen Ebert, University of Koblenz-Landau, Germany
-PrCo Collin McMillan, University of Notre Dame, USA
-PrCo Xavier Blanc, Bordeaux 1 University, France
-PrCo Ralf Laemmel, Universität Koblenz-Landau, Germany
-PrCo Toshihiro Kamiya, Future University Hakodate, Japan
-PrCo Mircea Trifu, FZI Forschungszentrum Informatik
-PrCo Michael Collard, University of Akron, USA
-PrCo Radu Marinescu, Politehnica University of Timisoara, Romania
-PrCo Dalila Tamzalit, University of Nantes, France
-PrCo Marco Torchiano, Politecnico di Torino, Italy
-PrCo Yijun Yu, The Open University, UK
-PrCo Ragnhild Van Der Straeten, Vrije Universiteit Brussel, Belgium
-PrCo Zhenchang Xing, Nanyang Technological University, Singapore
-PrCo Jesus M. Gonzalez-Barahona, Universidad Rey Juan Carlos, Spain
-PrCo Abram Hindle, University of Alberta, Canada
-PrCo Arie van Deursen, Delft University of Technology, The Netherlands
-PrCo Andreas Winter, Carl von Ossietzky University, Germany
-PrCo Marianne Huchard, Université Montpellier, France
-PrCo Giuliano Antoniol, Ecole Polytechnique de Montréal, Canada
-PrCo Jens Krinke, University College London, UK
-PrCo Dirk Beyer, University of Passau, Germany
-PrCo Thomas Fritz, University of Zurich, Switzerland
-PrCo Rainer Koschke, University of Bremen, Germany
-PrCo David Lo, Singapore Management University, Singapore
-PrCo Grace Lewis, Carnegie Mellon Software Engineering Institute, USA
-PrCo Spiros Mancoridis, Drexel University, USA
-PrCo Tudor Girba, University of Bern, Switzerland
-PrCo James Cordy, Queen's University, Canada
-PrCo Joost Visser, Software Improvement Group, The Netherland
-PrCo Juan C. Dueñas, Universidad Politécnica de Madrid, Spain
-PrCo Florian Deissenboeck, Technische Universitaet Muenchen,Germany
-PrCo Mark Van Den Brand, Eindhoven University of Technology, The Netherlands
-PrCo Raghavan Komondoor, Indian Institute of Science, India
-PrCo Dharmalingam Ganesan, Fraunhofer IESE, Germany
-PrCo Denys Poshyvanyk, College of William and Mary, USA
-PrCo Mark Grechanik, University of Illinois at Chicago, USA
-PrCo Ira Baxter, Semantic Designs
-PrCo Sonia Haiduc, Wayne State University, USA
-PrCo Jonathan Maletic, Kent State University, USA
-PrCo Jurgen Vinju, Centrum Wiskunde & Informatica, The Netherlands
+##########
+          http://ansymore.uantwerpen.be/csmr-wcre/Program_committees
+          Committees
+          
+          Organization Committee
+          
+          General Chair
+GeneralCh Serge Demeyer
+          
+          
+          Liaison Chairs - Publications
+PublicaCh Tom Mens
+          
+          Liaison Chairs - Finances
+          
+FinanceCh Anthony Cleve
+          
+          ??? Liaison Chairs - IEEE and REF
+          Organization Committee
+          
+OrganCo   Elliot Chikofsky
+          
+          
+          Program Chairs
+          
+ProgramCh Dave Binkley
+          
+          
+ProgramCh Filippo Ricca
+          
+          
+          ERA Chairs
+EarlyCh   Andy Zaidman
+          
+EarlyCh   Coen De Roover
+          
+          
+          Workshops
+          
+WorkspCh  Alexander Serebrenik
+          
+WorkspCh  Emily Hill
+          
+          
+          Doctoral Symposium Chairs
+          
+DocSymCh  Bram Adams
+          
+          
+DocSymCh  Sibylle Schupp
+          
+          
+          Vision Papers
+          
+VisionCh  Dave Binkley
+          
+VisionCh  Filippo Ricca
+          
+          
+          Project Track
+          
+ProjectCh Jens Krinke
+          
+          
+ProjectCh Rocco Oliveto
+          
+          
+          Industry Track
+          
+PractCh   Werner Teppe
+          
+          
+PractCh   Eric Bouwers
+          
+          
+          Tool Demonstrations Chairs
+          
+DemoCh    Thomas Fritz
+          
+          
+DemoCh    Jurgen Vinju
+          
+          
+          Web Chair
+          
+WebCh     Alessandro Murgia
+          
+          
+          ??? Graphic Designer
+          
+WebCh     Tim Molderez
+          
+          
+          Publicity-chair
+PubRelCh  Bogdan Vasilescu
+          Social media-chair
+SocMedCh  Bogdan Vasilescu
+          
+          
+          Student volunteers coordinator
+          
+StudentCh Javier Pérez
+          
+          
+          Program Committees
+          
+          Program committee
+          
+ProgramCo Tibor Gyimothy, University of Szeged, Hungary
+ProgramCo Martin Pinzger, University of Klagenfurt, Austria
+ProgramCo Giuseppe Scanniello,  University of Basilicata, Italy
+ProgramCo Daqing Hou, Clarkson University, USA
+ProgramCo Zheng Li, Bejing University of Chemical Technology, China
+ProgramCo Klaus Schmid, University of Hildesheim, Germany
+ProgramCo Marco Gerosa, IME - USP, Brazil
+ProgramCo Andy Zaidman, Delft University of Technology, The Netherlands
+ProgramCo Huzefa Kagdi, Wichita State University, USA
+ProgramCo Harald Gall, University of Zurich, Switzerland
+ProgramCo Emily Hill, Montclair State University, USA
+ProgramCo Tom Mens, University of Mons, Belgium
+ProgramCo Reid Holmes, University of Waterloo, Canada
+ProgramCo Rocco Oliveto, University of Molise, Italy
+ProgramCo Bram Adams, École Polytechnique de Montréal, Canada
+ProgramCo Mariano Ceccato, Fondazione Bruno Kessler, Italy
+ProgramCo Nikolaos Tsantalis, Concordia University, Canada
+ProgramCo Andrea De Lucia, University of Salerno, Italy
+ProgramCo Dawn Lawrie, Loyola University Maryland, USA
+ProgramCo Francesca Arcelli Fontana, University of Milano Bicocca, Italy
+ProgramCo Andrian Marcus, Wayne State University, USA
+ProgramCo Alexander Chatzigeorgiou, University of Macedonia, Greece
+ProgramCo Alessandro Marchetto, Fiat Research Center, Italy
+ProgramCo Rudolf Ferenc, University of Szeged, Hungary
+ProgramCo Rafael Capilla, Universidad Rey Juan Carlos, Spain
+ProgramCo Romain Robbes, University of Chile, Chile
+ProgramCo Holger Kienle, Mälardalen University, Sweden
+ProgramCo Jens Knodel, Fraunhofer IESE, Germany
+ProgramCo Mark Harman, University College London, UK
+ProgramCo Lingxiao Jiang, Singapore Management University, Singapore
+ProgramCo Foutse Khomh   Queen's University, Canada
+ProgramCo Mircea Lungu, University of Bern, Germany
+ProgramCo Chanchal Roy, University of Saskatchewan, Canada
+ProgramCo Gabriele Bavota, University of Salerno, Italy
+ProgramCo Laurence Duchien, INRIA Lille, France
+ProgramCo Árpád Beszédes, University of Szeged, Hungary
+ProgramCo Anthony Cleve, University of Namur, Belgium
+ProgramCo Zhang Hongyu, Tsinghua University, China
+ProgramCo Massimiliano Di Penta, University of Sannio, Italy
+ProgramCo Hausi A. Muller, University of Victoria, Canada
+ProgramCo Yasutaka Kamei, Kyushu University, Japan
+ProgramCo Harry Sneed, Universities of Budapest, Passau and Regensburg, Germany
+ProgramCo Alberto Bacchelli, Delft University of Technology, The Netherlands
+ProgramCo Thomas Dean, Queens University, Canada
+ProgramCo Jianjun Zhao, School of Software, Shanghai Jiao Tong University, China
+ProgramCo Jürgen Ebert, University of Koblenz-Landau, Germany
+ProgramCo Collin McMillan, University of Notre Dame, USA
+ProgramCo Xavier Blanc, Bordeaux 1 University, France
+ProgramCo Ralf Laemmel, Universität Koblenz-Landau, Germany
+ProgramCo Toshihiro Kamiya, Future University Hakodate, Japan
+ProgramCo Mircea Trifu, FZI Forschungszentrum Informatik
+ProgramCo Michael Collard, University of Akron, USA
+ProgramCo Radu Marinescu, Politehnica University of Timisoara, Romania
+ProgramCo Dalila Tamzalit, University of Nantes, France
+ProgramCo Marco Torchiano, Politecnico di Torino, Italy
+ProgramCo Yijun Yu, The Open University, UK
+ProgramCo Ragnhild Van Der Straeten, Vrije Universiteit Brussel, Belgium
+ProgramCo Zhenchang Xing, Nanyang Technological University, Singapore
+ProgramCo Jesus M. Gonzalez-Barahona, Universidad Rey Juan Carlos, Spain
+ProgramCo Abram Hindle, University of Alberta, Canada
+ProgramCo Arie van Deursen, Delft University of Technology, The Netherlands
+ProgramCo Andreas Winter, Carl von Ossietzky University, Germany
+ProgramCo Marianne Huchard, Université Montpellier, France
+ProgramCo Giuliano Antoniol, Ecole Polytechnique de Montréal, Canada
+ProgramCo Jens Krinke, University College London, UK
+ProgramCo Dirk Beyer, University of Passau, Germany
+ProgramCo Thomas Fritz, University of Zurich, Switzerland
+ProgramCo Rainer Koschke, University of Bremen, Germany
+ProgramCo David Lo, Singapore Management University, Singapore
+ProgramCo Grace Lewis, Carnegie Mellon Software Engineering Institute, USA
+ProgramCo Spiros Mancoridis, Drexel University, USA
+ProgramCo Tudor Girba, University of Bern, Switzerland
+ProgramCo James Cordy, Queen's University, Canada
+ProgramCo Joost Visser, Software Improvement Group, The Netherland
+ProgramCo Juan C. Dueñas, Universidad Politécnica de Madrid, Spain
+ProgramCo Florian Deissenboeck, Technische Universitaet Muenchen,Germany
+ProgramCo Mark Van Den Brand, Eindhoven University of Technology, The Netherlands
+ProgramCo Raghavan Komondoor, Indian Institute of Science, India
+ProgramCo Dharmalingam Ganesan, Fraunhofer IESE, Germany
+ProgramCo Denys Poshyvanyk, College of William and Mary, USA
+ProgramCo Mark Grechanik, University of Illinois at Chicago, USA
+ProgramCo Ira Baxter, Semantic Designs
+ProgramCo Sonia Haiduc, Wayne State University, USA
+ProgramCo Jonathan Maletic, Kent State University, USA
+ProgramCo Jurgen Vinju, Centrum Wiskunde & Informatica, The Netherlands

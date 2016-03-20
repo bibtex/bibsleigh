@@ -1,48 +1,48 @@
-#DONE
-     Workshop Organizers
-     
-OrCo Ivica Crnkovic, Mälardalen University, Sweden
-     
-OrCo Heinz Schmidt, Monash University, Australia
-     
-OrCo Judith Stafford, Software Engineering Institute, USA
-     
-OrCo Kurt Wallnau, Software Engineering Institute, USA
-     
-     Program Committee
-     
-PrCo Judith Bishop, University of Pretoria, South Africa
-     
-PrCo Jan Bosch, University of Groningen, The Netherlands
-     
-PrCo Ivica Crnkovic, Mälardalen University, Sweden
-     
-PrCo Jacky Estublier, LSR-IMAG, France
-     
-PrCo Kathi Fisler, WPI, USA
-     
-PrCo Dimitra Giannakopoulou, NASA Ames, USA
-     
-PrCo Richard Hall, Imag/Lsr, France
-     
-PrCo Dick Hamlet, Portland State University, USA
-     
-PrCo George T. Heineman, WPI, USA
-     
-PrCo Paola Inverardi, University of L'Aquila, Italy
-     
-PrCo Shriram Krishnamurthi, Brown University, USA
-     
-PrCo Otto Preiss, ABB/CRC, Switzerland
-     
-PrCo Heinz Schmidt, Monash University, Australia
-     
-PrCo Judith Stafford, Tufts University, USA
-     
-PrCo Clemens Szyperski, Microsoft Research, USA
-     
-PrCo Kurt Wallnau, Software Engineering Institute, Carnegie Mellon University, USA
-     
-PrCo Dave Wile, Teknowledge, Corp., USA
-     
-PrCo Christian Zeidler, ABB Research, Germany
+##########
+          Workshop Organizers
+          
+OrganCo   Ivica Crnkovic, Mälardalen University, Sweden
+          
+OrganCo   Heinz Schmidt, Monash University, Australia
+          
+OrganCo   Judith Stafford, Software Engineering Institute, USA
+          
+OrganCo   Kurt Wallnau, Software Engineering Institute, USA
+          
+          Program Committee
+          
+ProgramCo Judith Bishop, University of Pretoria, South Africa
+          
+ProgramCo Jan Bosch, University of Groningen, The Netherlands
+          
+ProgramCo Ivica Crnkovic, Mälardalen University, Sweden
+          
+ProgramCo Jacky Estublier, LSR-IMAG, France
+          
+ProgramCo Kathi Fisler, WPI, USA
+          
+ProgramCo Dimitra Giannakopoulou, NASA Ames, USA
+          
+ProgramCo Richard Hall, Imag/Lsr, France
+          
+ProgramCo Dick Hamlet, Portland State University, USA
+          
+ProgramCo George T. Heineman, WPI, USA
+          
+ProgramCo Paola Inverardi, University of L'Aquila, Italy
+          
+ProgramCo Shriram Krishnamurthi, Brown University, USA
+          
+ProgramCo Otto Preiss, ABB/CRC, Switzerland
+          
+ProgramCo Heinz Schmidt, Monash University, Australia
+          
+ProgramCo Judith Stafford, Tufts University, USA
+          
+ProgramCo Clemens Szyperski, Microsoft Research, USA
+          
+ProgramCo Kurt Wallnau, Software Engineering Institute, Carnegie Mellon University, USA
+          
+ProgramCo Dave Wile, Teknowledge, Corp., USA
+          
+ProgramCo Christian Zeidler, ABB Research, Germany

@@ -1,9 +1,9 @@
-#DONE
-     https://www.cs.york.ac.uk/puml/puml-list-archive/1446.html
-     Workshop Organizers
-     ==================
-     
-OrCo Jean-Marie Favre   University of Grenoble, France
-OrCo Dragan Gasevic     Athabasca University, Canada
-OrCo Ralf Lämmel        Microsoft Corp., USA
-OrCo Andreas Winter     Johannes Gutenberg University, Mainz, Germany
+##########
+          https://www.cs.york.ac.uk/puml/puml-list-archive/1446.html
+          Workshop Organizers
+          ==================
+          
+OrganCo   Jean-Marie Favre   University of Grenoble, France
+OrganCo   Dragan Gasevic     Athabasca University, Canada
+OrganCo   Ralf Lämmel        Microsoft Corp., USA
+OrganCo   Andreas Winter     Johannes Gutenberg University, Mainz, Germany

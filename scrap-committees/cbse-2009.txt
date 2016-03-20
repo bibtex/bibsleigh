@@ -1,41 +1,41 @@
-#DONE
-     http://seaa2009.vtt.fi/scbse/scbse-cfp.txt
-     ORGANISATION
-     Programme Chairs
-     
-PrCh Ivica Crnkovic, ivica.crnkovic@mdh.se, Mälardalen University, Sweden
-PrCh Tomas Bures, bures@dsrg.mff.cuni.cz, Charles University in Prague, Czech Republic
-     
-     Programme Committee
-     
-PrCo Muhammad AliBabar (Lero, Ireland)
-PrCo Eduardo Santana de Almeida (C.E.S.A.R, Brazil)
-PrCo Colin Atkinson (Mannheim U, Germany)
-PrCo Franck Barbier (University Pau, France)
-PrCo Steffen Becker (FZI Karlsruhe, Germany)
-PrCo Yolande Berbers (KU Leuven, Belgium)
-PrCo Ljerka Beus-Dukic (U Westminster, UK)
-PrCo Marcello Bonsangue (Leiden U, NL)
-PrCo Premysl Brada (U West Bohemia, Pilsen, Czech Republic)
-PrCo Jan Carlson (Mälardalen U, Sweden)
-PrCo Michel Chaudron (Leiden U, NL)
-PrCo Gerhard Chroust (U Linz Austria)
-PrCo Lars Grunske (U Queensland, Australia)
-PrCo Brahim Hamid (IRIT, France)
-PrCo Darko Huljenic (Ericsson Nikola Tesla, Croatia)
-PrCo Petr Hnetynka (Charles U in Prague, Czech Republic)
-PrCo Sylvia Ilieva (U Sofia, Bulgaria)
-PrCo Panagiotis Katsaros (Aristotle U of Thessaloniki, Greece)
-PrCo Gerald Kotonya (U Lancaster, UK)
-PrCo Christian Kreiner (Graz University of Technology, Austria)
-PrCo Kung-Kiu Lau (Manchester U, UK)
-PrCo Magnus Larsson (ABB, SE)
-PrCo Eric Madelaine (Inria, France)
-PrCo Raffaela Mirandola (Politecnico di Milano, Italy)
-PrCo Henry Muccini (L'Aquila U, Italy)
-PrCo Eila Niemelä (VTT, Finland)
-PrCo Alexander Romanovsky (U Newcastle, UK)
-PrCo Lionel Seinturier (U of Lille, France)
-PrCo Ian Sommerville (St Andrews U, UK)
-PrCo Asuman Sünbül (SAP Research, Palo Alto CA, USA)
-PrCo Rob van Ommering (Philips, NL)
+##########
+          http://seaa2009.vtt.fi/scbse/scbse-cfp.txt
+          ORGANISATION
+          Programme Chairs
+          
+ProgramCh Ivica Crnkovic, ivica.crnkovic@mdh.se, Mälardalen University, Sweden
+ProgramCh Tomas Bures, bures@dsrg.mff.cuni.cz, Charles University in Prague, Czech Republic
+          
+          Programme Committee
+          
+ProgramCo Muhammad AliBabar (Lero, Ireland)
+ProgramCo Eduardo Santana de Almeida (C.E.S.A.R, Brazil)
+ProgramCo Colin Atkinson (Mannheim U, Germany)
+ProgramCo Franck Barbier (University Pau, France)
+ProgramCo Steffen Becker (FZI Karlsruhe, Germany)
+ProgramCo Yolande Berbers (KU Leuven, Belgium)
+ProgramCo Ljerka Beus-Dukic (U Westminster, UK)
+ProgramCo Marcello Bonsangue (Leiden U, NL)
+ProgramCo Premysl Brada (U West Bohemia, Pilsen, Czech Republic)
+ProgramCo Jan Carlson (Mälardalen U, Sweden)
+ProgramCo Michel Chaudron (Leiden U, NL)
+ProgramCo Gerhard Chroust (U Linz Austria)
+ProgramCo Lars Grunske (U Queensland, Australia)
+ProgramCo Brahim Hamid (IRIT, France)
+ProgramCo Darko Huljenic (Ericsson Nikola Tesla, Croatia)
+ProgramCo Petr Hnetynka (Charles U in Prague, Czech Republic)
+ProgramCo Sylvia Ilieva (U Sofia, Bulgaria)
+ProgramCo Panagiotis Katsaros (Aristotle U of Thessaloniki, Greece)
+ProgramCo Gerald Kotonya (U Lancaster, UK)
+ProgramCo Christian Kreiner (Graz University of Technology, Austria)
+ProgramCo Kung-Kiu Lau (Manchester U, UK)
+ProgramCo Magnus Larsson (ABB, SE)
+ProgramCo Eric Madelaine (Inria, France)
+ProgramCo Raffaela Mirandola (Politecnico di Milano, Italy)
+ProgramCo Henry Muccini (L'Aquila U, Italy)
+ProgramCo Eila Niemelä (VTT, Finland)
+ProgramCo Alexander Romanovsky (U Newcastle, UK)
+ProgramCo Lionel Seinturier (U of Lille, France)
+ProgramCo Ian Sommerville (St Andrews U, UK)
+ProgramCo Asuman Sünbül (SAP Research, Palo Alto CA, USA)
+ProgramCo Rob van Ommering (Philips, NL)

@@ -1,47 +1,47 @@
-#DONE
-     http://www.sleconf.org/2013/Committees.html
-     Committees
-     General Chair
-GeCh Eric Van Wyk, University of Minnesota, USA
-     Program Committee Co-chairs
-PrCh Martin Erwig, Oregon State University, USA
-PrCh Richard Paige, University of York, UK
-     Program Committee
-PrCo Emilie Balland, INRIA, France
-PrCo Olaf Chitil, University of Kent, UK
-PrCo James R. Cordy, Queen's University, Canada
-PrCo Davide Di Ruscio, Università degli Studi dell'Aquila, Italy
-PrCo Iavor Diatchki, Galois Inc., USA
-PrCo Anne Etien, LIFL - University of Lille 1, Fance
-PrCo Jean-Marie Favre, University of Grenoble, Fance
-PrCo Dragan Gasevic, Athabasca University, Canada
-PrCo Andy Gill, University of Kansas, USA
-PrCo Jeff Gray, University of Alabama, USA
-PrCo Giancarlo Guizzardi, Federal University of Espirito Santo, Brazil
-PrCo Gorel Hedin, Lund University, Sweden
-PrCo Markus Herrmannsdoerfer, Technische Universität München, Germany
-PrCo Zhenjiang Hu, NII, Japan
-PrCo Oleg Kiselyov, USA
-PrCo Paul Klint, Centrum Wiskunde & Informatica, The Netherlands
-PrCo Thomas Kuehne, Victoria University of Wellington, New Zealand
-PrCo Kim Mens, UC Louvain, Belgium
-PrCo Pierre-Etienne Moreau, Ecole des Mines Nancy, France
-PrCo Klaus Ostermann, Marburg University, Germany
-PrCo Arnd Poetzsch-Heffter, University of Kaiserslautern, Germany
-PrCo Fiona Polack, Dept of Computer Science, University of York, UK
-PrCo Lukas Renggli, University of Bern, Switzerland
-PrCo Bernhard Rumpe, RWTH Aachen University, Germany
-PrCo João Saraiva, Universidade do Minho, Portugal
-PrCo Friedrich Steimann, Fernuniversität in Hagen, Germany
-PrCo Gabriele Taentzer, Marburg University, Germany
-PrCo Mark Van Den Brand, TU/e, The Netherlands
-PrCo Jurgen Vinju, Centrum Wiskunde & Informatica, The Netherlands
-     Steering Committee
-StCo Mark van den Brand, Eindhoven University of Technology, The Netherlands
-StCo James Cordy, Queen's University, Canada
-StCo Jean-Marie Favre, University of Grenoble, France
-StCo Dragan Gašević, Athabasca University, Canada
-StCo Görel Hedin, Lund University, Sweden
-StCo Eric Van Wyk, University of Minnesota, USA
-StCo Jurgen Vinju, CWI, The Netherlands
-StCo Kim Mens, Université catholique de Louvain, Belgium
+##########
+          http://www.sleconf.org/2013/Committees.html
+          Committees
+          General Chair
+GeneralCh Eric Van Wyk, University of Minnesota, USA
+          Program Committee Co-chairs
+ProgramCh Martin Erwig, Oregon State University, USA
+ProgramCh Richard Paige, University of York, UK
+          Program Committee
+ProgramCo Emilie Balland, INRIA, France
+ProgramCo Olaf Chitil, University of Kent, UK
+ProgramCo James R. Cordy, Queen's University, Canada
+ProgramCo Davide Di Ruscio, Università degli Studi dell'Aquila, Italy
+ProgramCo Iavor Diatchki, Galois Inc., USA
+ProgramCo Anne Etien, LIFL - University of Lille 1, Fance
+ProgramCo Jean-Marie Favre, University of Grenoble, Fance
+ProgramCo Dragan Gasevic, Athabasca University, Canada
+ProgramCo Andy Gill, University of Kansas, USA
+ProgramCo Jeff Gray, University of Alabama, USA
+ProgramCo Giancarlo Guizzardi, Federal University of Espirito Santo, Brazil
+ProgramCo Gorel Hedin, Lund University, Sweden
+ProgramCo Markus Herrmannsdoerfer, Technische Universität München, Germany
+ProgramCo Zhenjiang Hu, NII, Japan
+ProgramCo Oleg Kiselyov, USA
+ProgramCo Paul Klint, Centrum Wiskunde & Informatica, The Netherlands
+ProgramCo Thomas Kuehne, Victoria University of Wellington, New Zealand
+ProgramCo Kim Mens, UC Louvain, Belgium
+ProgramCo Pierre-Etienne Moreau, Ecole des Mines Nancy, France
+ProgramCo Klaus Ostermann, Marburg University, Germany
+ProgramCo Arnd Poetzsch-Heffter, University of Kaiserslautern, Germany
+ProgramCo Fiona Polack, Dept of Computer Science, University of York, UK
+ProgramCo Lukas Renggli, University of Bern, Switzerland
+ProgramCo Bernhard Rumpe, RWTH Aachen University, Germany
+ProgramCo João Saraiva, Universidade do Minho, Portugal
+ProgramCo Friedrich Steimann, Fernuniversität in Hagen, Germany
+ProgramCo Gabriele Taentzer, Marburg University, Germany
+ProgramCo Mark Van Den Brand, TU/e, The Netherlands
+ProgramCo Jurgen Vinju, Centrum Wiskunde & Informatica, The Netherlands
+          Steering Committee
+SteerCo   Mark van den Brand, Eindhoven University of Technology, The Netherlands
+SteerCo   James Cordy, Queen's University, Canada
+SteerCo   Jean-Marie Favre, University of Grenoble, France
+SteerCo   Dragan Gašević, Athabasca University, Canada
+SteerCo   Görel Hedin, Lund University, Sweden
+SteerCo   Eric Van Wyk, University of Minnesota, USA
+SteerCo   Jurgen Vinju, CWI, The Netherlands
+SteerCo   Kim Mens, Université catholique de Louvain, Belgium

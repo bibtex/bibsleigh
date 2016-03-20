@@ -1,80 +1,53 @@
-#DONE
-     http://www.comparch-events.org/past/CBSE_2006/format.html
-     Symposium Organizers
-     
-     Program Chair
-     
-PrCh Ian Gorton, National ICT, Australia
-     
-     Organization Chair
-     
-OrCh Ivica Crnkovic, Mälardalen University, Sweden
-     
-     Steering Committee
-     
-StCo George Heineman, WPI, USA
-     
-StCo Heinz Schmidt, Monash University, Australia
-     
-StCo Judith Stafford, Tufts University, USA
-     
-StCo Clemens Szyperski, Microsoft Research, USA
-     
-StCo Kurt Wallnau, Software Engineering Institute, USA
-     
-     Program Committee
-     
-PrCo Uwe Assmann, Dresden University of Technology, Germany
-     
-PrCo Mike Barnett, Microsoft Research, USA
-     
-PrCo Judith Bishop, University of Pretoria, South Africa
-     
-PrCo Jan Bosch, Nokia Research Center, Finland
-     
-PrCo Michel Chaudron, University Eindhoven, The Netherlands
-     
-PrCo Shiping Chen, CSIRO, Australia
-     
-PrCo Susan Eisenbach, Imperial College, UK
-     
-PrCo Dimitra Giannakopoulou, RIACS/NASA Ames, USA
-     
-PrCo Lars Grunske, University of Queensland, Australia
-     
-PrCo Richard Hall, LSR-IMAG, France
-     
-PrCo Dick Hamlet, Portland State University, USA
-     
-PrCo George Heineman, Worcester Polytechnic Institute, USA
-     
-PrCo Tom Henzinger, EPFL, Switzerland and UC Berkeley, USA
-     
-PrCo Paola Inverardi, University of L'Aquila, Italy
-     
-PrCo Jean-Marc Jezequel, IRISA (INRIA & Univ. Rennes), France
-     
-PrCo Bengt Jonsson, Uppsala University, Sweden
-     
-PrCo Dean Kuo, University Of Manchester, UK
-     
-PrCo Magnus Larsson, ABB, Sweden
-     
-PrCo Kung-Kiu Lau, University of Manchester, UK
-     
-PrCo Nenad Medvidovic, University of Southern California, USA
-     
-PrCo Rob van Ommering, Philips, The Netherlands
-     
-PrCo Otto Preiss, ABB Switzerland
-     
-PrCo Ralf Reussner, University of Oldenburg, Germany
-     
-PrCo Douglas Schmidt, Vanderbilt University, USA
-     
-PrCo Jean-Guy Schneider, Swinburne University of Tech., Australia
-     
-PrCo Dave Wile, Teknowledge, Corp., USA
-     
-PrCo Wolfgang Weck, Independent Software Architect, Switzerland
-     
+##########
+          http://www.comparch-events.org/past/CBSE_2006/format.html
+          Symposium Organizers
+          
+          Program Chair
+          
+ProgramCh Ian Gorton, National ICT, Australia
+          
+          Organization Chair
+          
+OrganCh   Ivica Crnkovic, Mälardalen University, Sweden
+          
+          Steering Committee
+          
+SteerCo   George Heineman, WPI, USA
+          
+SteerCo   Heinz Schmidt, Monash University, Australia
+          
+SteerCo   Judith Stafford, Tufts University, USA
+          
+SteerCo   Clemens Szyperski, Microsoft Research, USA
+          
+SteerCo   Kurt Wallnau, Software Engineering Institute, USA
+          
+          Program Committee
+          
+ProgramCo Uwe Assmann, Dresden University of Technology, Germany
+ProgramCo Mike Barnett, Microsoft Research, USA
+ProgramCo Judith Bishop, University of Pretoria, South Africa
+ProgramCo Jan Bosch, Nokia Research Center, Finland
+ProgramCo Michel Chaudron, University Eindhoven, The Netherlands
+ProgramCo Shiping Chen, CSIRO, Australia
+ProgramCo Susan Eisenbach, Imperial College, UK
+ProgramCo Dimitra Giannakopoulou, RIACS/NASA Ames, USA
+ProgramCo Lars Grunske, University of Queensland, Australia
+ProgramCo Richard Hall, LSR-IMAG, France
+ProgramCo Dick Hamlet, Portland State University, USA
+ProgramCo George Heineman, Worcester Polytechnic Institute, USA
+ProgramCo Tom Henzinger, EPFL, Switzerland and UC Berkeley, USA
+ProgramCo Paola Inverardi, University of L'Aquila, Italy
+ProgramCo Jean-Marc Jezequel, IRISA (INRIA & Univ. Rennes), France
+ProgramCo Bengt Jonsson, Uppsala University, Sweden
+ProgramCo Dean Kuo, University Of Manchester, UK
+ProgramCo Magnus Larsson, ABB, Sweden
+ProgramCo Kung-Kiu Lau, University of Manchester, UK
+ProgramCo Nenad Medvidovic, University of Southern California, USA
+ProgramCo Rob van Ommering, Philips, The Netherlands
+ProgramCo Otto Preiss, ABB Switzerland
+ProgramCo Ralf Reussner, University of Oldenburg, Germany
+ProgramCo Douglas Schmidt, Vanderbilt University, USA
+ProgramCo Jean-Guy Schneider, Swinburne University of Tech., Australia
+ProgramCo Dave Wile, Teknowledge, Corp., USA
+ProgramCo Wolfgang Weck, Independent Software Architect, Switzerland

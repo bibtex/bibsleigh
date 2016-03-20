@@ -1,53 +1,53 @@
-#DONE
-     http://www.sleconf.org/2015/Committees.html
-     Committees
-     General chair
-GeCh Richard Paige
-     PC co-chairs
-PrCh Davide di Ruscio
-PrCh Markus Voelter
-     Program committee
-PrCo Emilie Balland, INRIA Bordeaux - Sud-Ouest, France
-PrCo Anya Helene Bagge, University of Bergen, Norway
-PrCo Marco Brambilla, Politechnic Milan, Italy
-PrCo Jordi Cabot, INRIA research group at Ecole des Mines de Nantes, France
-PrCo Benoit Combemale, University of Rennes 1, France
-PrCo Zinovy Diskin, McMaster University / University of Waterloo, Canada
-PrCo Sebastian Erdweg, TU Darmstadt, Germany
-PrCo Jean-Marie Favre, University of Grenoble, France
-PrCo Holger Giese, Hasso Plattner Institute at the University of Potsdam, Germany
-PrCo Martin Gogolla, University of Bremen, Germany
-PrCo Thomas Goldschmidt, ABB Corporate Research, Germany
-PrCo Jeff Gray, University of Alabama, USA
-PrCo Angelo Hulshout, Independent Consultant, The Netherlands
-PrCo Zhenjiang Hu, National Institute of Informatics, Japan
-PrCo Adrian Johnstone, Royal Holloway, UK
-PrCo Paul Klint, CWI, Netherlands
-PrCo Dimitris Kolovos, University of York, UK
-PrCo Juan de Lara, Universidad Autonoma de Madrid, Spain
-PrCo Terence Parr, University of San Francisco, US
-PrCo David J. Pearce, Victoria University of Wellington, New Zealand
-PrCo Alfonso Pierantonio, University of L'Aquila, Italy
-PrCo Daniel Ratiu, Siemens Corporate Technology, Germany
-PrCo Tijs van der Storm, CWI, The Netherlands
-PrCo Eugene Syriani, University of Montreal, Canada
-PrCo Juha-Pekka Tolvanen, MetaCase, Finland
-PrCo Guido Wachsmuth, Delft University, The Netherlands
-PrCo Manuel Wimmer, Tu Wien, Austria
-PrCo Daniel Varro, Budapest University of Technology and Economics, Hungary
-PrCo Vadim Zaytsev, Universiteit van Amsterdam, Amsterdam, The Netherlands
-     Workshop organization chair
-     SLE Workshops are handled through SPLASH
-     Publicity chair
-PbCh Anya Helene Bagge, University of Bergen, Norway
-     Steering committee members
-StCo David Pearce
-StCo Benoit Combemale
-StCo Martin Erwig
-StCo Richard Paige
-StCo Tony Sloane
-StCo Eric Van Wyk
-StCo Gorel Hedin
-StCo Jurgen Vinju
-StCo Krzysztof Czarnecki
-StCh Mark van den Brand (chair)
+##########
+          http://www.sleconf.org/2015/Committees.html
+          Committees
+          General chair
+GeneralCh Richard Paige
+          PC co-chairs
+ProgramCh Davide di Ruscio
+ProgramCh Markus Voelter
+          Program committee
+ProgramCo Emilie Balland, INRIA Bordeaux - Sud-Ouest, France
+ProgramCo Anya Helene Bagge, University of Bergen, Norway
+ProgramCo Marco Brambilla, Politechnic Milan, Italy
+ProgramCo Jordi Cabot, INRIA research group at Ecole des Mines de Nantes, France
+ProgramCo Benoit Combemale, University of Rennes 1, France
+ProgramCo Zinovy Diskin, McMaster University / University of Waterloo, Canada
+ProgramCo Sebastian Erdweg, TU Darmstadt, Germany
+ProgramCo Jean-Marie Favre, University of Grenoble, France
+ProgramCo Holger Giese, Hasso Plattner Institute at the University of Potsdam, Germany
+ProgramCo Martin Gogolla, University of Bremen, Germany
+ProgramCo Thomas Goldschmidt, ABB Corporate Research, Germany
+ProgramCo Jeff Gray, University of Alabama, USA
+ProgramCo Angelo Hulshout, Independent Consultant, The Netherlands
+ProgramCo Zhenjiang Hu, National Institute of Informatics, Japan
+ProgramCo Adrian Johnstone, Royal Holloway, UK
+ProgramCo Paul Klint, CWI, Netherlands
+ProgramCo Dimitris Kolovos, University of York, UK
+ProgramCo Juan de Lara, Universidad Autonoma de Madrid, Spain
+ProgramCo Terence Parr, University of San Francisco, US
+ProgramCo David J. Pearce, Victoria University of Wellington, New Zealand
+ProgramCo Alfonso Pierantonio, University of L'Aquila, Italy
+ProgramCo Daniel Ratiu, Siemens Corporate Technology, Germany
+ProgramCo Tijs van der Storm, CWI, The Netherlands
+ProgramCo Eugene Syriani, University of Montreal, Canada
+ProgramCo Juha-Pekka Tolvanen, MetaCase, Finland
+ProgramCo Guido Wachsmuth, Delft University, The Netherlands
+ProgramCo Manuel Wimmer, Tu Wien, Austria
+ProgramCo Daniel Varro, Budapest University of Technology and Economics, Hungary
+ProgramCo Vadim Zaytsev, Universiteit van Amsterdam, Amsterdam, The Netherlands
+          Workshop organization chair
+          SLE Workshops are handled through SPLASH
+          Publicity chair
+PubRelCh  Anya Helene Bagge, University of Bergen, Norway
+          Steering committee members
+SteerCo   David Pearce
+SteerCo   Benoit Combemale
+SteerCo   Martin Erwig
+SteerCo   Richard Paige
+SteerCo   Tony Sloane
+SteerCo   Eric Van Wyk
+SteerCo   Gorel Hedin
+SteerCo   Jurgen Vinju
+SteerCo   Krzysztof Czarnecki
+SteerCh   Mark van den Brand (chair)

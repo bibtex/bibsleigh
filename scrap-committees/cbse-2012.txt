@@ -1,54 +1,54 @@
-#DONE
-     Program Co-Chairs
-     Name Surname Affiliation Country
-PrCh Nenad Medvidovic, University of Southern California USA
-PrCh Magnus Larsson, Mälardalen University & ABB Sweden
-     CompArch Organization Chairs
-     Name Surname Affiliation Country
-OrCh Vincenzo Grassi, Università di Roma Tor Vergata Italy
-OrCh Raffaela Mirandola, Politecnico di Milano Italy
-     Steering Committee
-     Name Surname Affiliation Country
-StCo Ivica Crnkovic, Mälardalen University Sweden
-StCo Ian Gorton, Pacific Northwest National Laboratory USA
-StCo George Heineman, Worcester Polytechnic Institute USA
-StCo Grace A. Lewis, Software Engineering Institute USA
-StCo Heinz Schmidt, RMIT University Australia
-StCo Judith Stafford, Tufts University USA
-StCo Clemens Szyperski, Microsoft USA
-StCo Matthew Dwyer, University of Nebraska USA
-     Program Committee
-     Name Surname Affiliation Country
-PrCo Mikael Åkerholm, CrossControl Sweden
-PrCo Eduardo Santana de Almeida, Federal University of Bahia Brazil
-PrCo Jakob Axelsson, Swedish Institute of Computer Science and Mälardalen University Sweden
-PrCo Franck Barbier, University of Pau France
-PrCo Steffen Becker, University of Paderborn Germany
-PrCo Jan Carlson, Mälardalen University Sweden
-PrCo Anders Caspar, Ericsson Research Sweden
-PrCo Ivica Crnkovic, Mälardalen University Sweden
-PrCo Aldo Dagnino, ABB Corporate Research USA
-PrCo Eric Dashofy, Aerospace Corporation USA
-PrCo Laurence Duchien, University of Lille & Inria France
-PrCo Dimitra Giannakopoulou, NASA Ames Research Center USA
-PrCo Ian Gorton, Pacific Northwest National Lab USA
-PrCo Lars Grunske, University of Kaiserslautern Germany
-PrCo Jörgen Hansson, Chalmers University of Technology Sweden
-PrCo George Heineman, Worcester Polytechnic Institute USA
-PrCo Oliver Hummel, University of Mannheim Germany
-PrCo Kung-Kiu Lau, University of Manchester UK
-PrCo Grace A. Lewis, Software Engineering Institute USA
-PrCo Sam Malek, George Mason University USA
-PrCo Marija Mikic-Rakic, Google USA
-PrCo Noel Plouzeau, IRISA - University of Rennes France
-PrCo T V Prabhakar, IIT Kanpur India
-PrCo Ralf Reussner, Karlsruhe Institute of Technology Germany
-PrCo David S. Rosenblum, National University of Singapore Singapore
-PrCo Cecília M. F. Rubira, University of Campinas Brazil
-PrCo Antonino Sabetta, SAP Research Sophia-Antipolis France
-PrCo Kristian Sandstom, ABB Corporate Research Sweden
-PrCo Jean-Guy Schneider, Swinburne University of Technology Australia
-PrCo Clemens Szyperski, Microsoft Corporation USA
-PrCo Massimo Tivoli, University of L'Aquila Italy
-     Webmaster
-WeCh Joshua Garcia
+##########
+          Program Co-Chairs
+          Name Surname Affiliation Country
+ProgramCh Nenad Medvidovic, University of Southern California USA
+ProgramCh Magnus Larsson, Mälardalen University & ABB Sweden
+          CompArch Organization Chairs
+          Name Surname Affiliation Country
+OrganCh   Vincenzo Grassi, Università di Roma Tor Vergata Italy
+OrganCh   Raffaela Mirandola, Politecnico di Milano Italy
+          Steering Committee
+          Name Surname Affiliation Country
+SteerCo   Ivica Crnkovic, Mälardalen University Sweden
+SteerCo   Ian Gorton, Pacific Northwest National Laboratory USA
+SteerCo   George Heineman, Worcester Polytechnic Institute USA
+SteerCo   Grace A. Lewis, Software Engineering Institute USA
+SteerCo   Heinz Schmidt, RMIT University Australia
+SteerCo   Judith Stafford, Tufts University USA
+SteerCo   Clemens Szyperski, Microsoft USA
+SteerCo   Matthew Dwyer, University of Nebraska USA
+          Program Committee
+          Name Surname Affiliation Country
+ProgramCo Mikael Åkerholm, CrossControl Sweden
+ProgramCo Eduardo Santana de Almeida, Federal University of Bahia Brazil
+ProgramCo Jakob Axelsson, Swedish Institute of Computer Science and Mälardalen University Sweden
+ProgramCo Franck Barbier, University of Pau France
+ProgramCo Steffen Becker, University of Paderborn Germany
+ProgramCo Jan Carlson, Mälardalen University Sweden
+ProgramCo Anders Caspar, Ericsson Research Sweden
+ProgramCo Ivica Crnkovic, Mälardalen University Sweden
+ProgramCo Aldo Dagnino, ABB Corporate Research USA
+ProgramCo Eric Dashofy, Aerospace Corporation USA
+ProgramCo Laurence Duchien, University of Lille & Inria France
+ProgramCo Dimitra Giannakopoulou, NASA Ames Research Center USA
+ProgramCo Ian Gorton, Pacific Northwest National Lab USA
+ProgramCo Lars Grunske, University of Kaiserslautern Germany
+ProgramCo Jörgen Hansson, Chalmers University of Technology Sweden
+ProgramCo George Heineman, Worcester Polytechnic Institute USA
+ProgramCo Oliver Hummel, University of Mannheim Germany
+ProgramCo Kung-Kiu Lau, University of Manchester UK
+ProgramCo Grace A. Lewis, Software Engineering Institute USA
+ProgramCo Sam Malek, George Mason University USA
+ProgramCo Marija Mikic-Rakic, Google USA
+ProgramCo Noel Plouzeau, IRISA - University of Rennes France
+ProgramCo T V Prabhakar, IIT Kanpur India
+ProgramCo Ralf Reussner, Karlsruhe Institute of Technology Germany
+ProgramCo David S. Rosenblum, National University of Singapore Singapore
+ProgramCo Cecília M. F. Rubira, University of Campinas Brazil
+ProgramCo Antonino Sabetta, SAP Research Sophia-Antipolis France
+ProgramCo Kristian Sandstom, ABB Corporate Research Sweden
+ProgramCo Jean-Guy Schneider, Swinburne University of Technology Australia
+ProgramCo Clemens Szyperski, Microsoft Corporation USA
+ProgramCo Massimo Tivoli, University of L'Aquila Italy
+          Webmaster
+WebCh     Joshua Garcia

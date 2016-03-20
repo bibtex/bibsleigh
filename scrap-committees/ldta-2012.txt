@@ -1,31 +1,31 @@
-#DONE
-     http://ldta.info/2012/committees.html
-     program committee
-     
-PrCh Suzana Andova, Eindhoven University of Technology, The Netherlands (co-chair)
-PrCo Anya Helene Bagge, University of Bergen, Norway
-PrCo Kyung-Goo Doh, Hanyang University, Ansan, South Korea
-PrCo Jeff Gray, University of Alabama, USA
-PrCo Görel Hedin, Lund University, Sweden
-PrCo Zoltán Horváth, Eötvös Loránd University, Budapest, Hungary
-PrCo Zhenjiang Hu, National Institute of Informatics, Japan
-PrCo Roberto Ierusalimschy, Pontifícia Universidade Católica do Rio de Janeiro, Brazil
-PrCo Ivan Kurtev, University of Twente, The Netherlands
-PrCo Marjan Mernik, University of Maribor, Slovenia
-PrCo Nate Nystrom, University of Lugano, Switzerland
-PrCo João Saraiva, Universidade do Minho, Braga, Portugal
-PrCo Sylvain Schmitz, Ecole Normale Supérieure de Cachan, France
-PrCh Tony Sloane, Macquarie University, Australia (co-chair)
-PrCo Robert Tairas, Inria, France
-PrCo Laurence Tratt, King's College London, UK
-PrCo Vadim Zaytsev, Centre for Mathematics & Computer Science, The Netherlands
-     organizing committee
-     
-OrCo Anya Helene Bagge, University of Bergen, Norway
-OrCo Emilie Balland, INRIA, France
-     steering committee
-     
-StCo Mark van den Brand, Eindhoven University of Technology, The Netherlands
-StCo Görel Hedin, Lund University, Sweden
-StCo Tony Sloane, Macquarie University, Australia
-StCo Eric Van Wyk, University of Minnesota, United States
+##########
+          http://ldta.info/2012/committees.html
+          program committee
+          
+ProgramCh Suzana Andova, Eindhoven University of Technology, The Netherlands (co-chair)
+ProgramCo Anya Helene Bagge, University of Bergen, Norway
+ProgramCo Kyung-Goo Doh, Hanyang University, Ansan, South Korea
+ProgramCo Jeff Gray, University of Alabama, USA
+ProgramCo Görel Hedin, Lund University, Sweden
+ProgramCo Zoltán Horváth, Eötvös Loránd University, Budapest, Hungary
+ProgramCo Zhenjiang Hu, National Institute of Informatics, Japan
+ProgramCo Roberto Ierusalimschy, Pontifícia Universidade Católica do Rio de Janeiro, Brazil
+ProgramCo Ivan Kurtev, University of Twente, The Netherlands
+ProgramCo Marjan Mernik, University of Maribor, Slovenia
+ProgramCo Nate Nystrom, University of Lugano, Switzerland
+ProgramCo João Saraiva, Universidade do Minho, Braga, Portugal
+ProgramCo Sylvain Schmitz, Ecole Normale Supérieure de Cachan, France
+ProgramCh Tony Sloane, Macquarie University, Australia (co-chair)
+ProgramCo Robert Tairas, Inria, France
+ProgramCo Laurence Tratt, King's College London, UK
+ProgramCo Vadim Zaytsev, Centre for Mathematics & Computer Science, The Netherlands
+          organizing committee
+          
+OrganCo   Anya Helene Bagge, University of Bergen, Norway
+OrganCo   Emilie Balland, INRIA, France
+          steering committee
+          
+SteerCo   Mark van den Brand, Eindhoven University of Technology, The Netherlands
+SteerCo   Görel Hedin, Lund University, Sweden
+SteerCo   Tony Sloane, Macquarie University, Australia
+SteerCo   Eric Van Wyk, University of Minnesota, United States

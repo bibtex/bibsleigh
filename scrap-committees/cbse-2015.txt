@@ -1,52 +1,52 @@
-#DONE
-     http://cbse-conferences.org/2015/index.php?pageId=organization
-     Organization
-     CompArch Organizing Committee
-GeCh Philippe Kruchten, University of British Columbia, Canada (General Chair)
-     
-     
-     CBSE Program Co-Chairs
-PrCh Steffen Becker, University of Technology Chemnitz, Germany
-PrCh Jean-Guy Schneider, Swinburne University of Technology, Australia
-     
-     CBSE Program Committee
-PrCo Domenico Bianculli, University of Luxembourg (Luxembourg)
-PrCo Carlos Canal, University of Malaga (Spain)
-PrCo Ivica Crnkovic, Malardalen University (Sweden)
-PrCo Jan Carlson, Malardalen University (Sweden)
-PrCo Jens Dietrich, Massey University (New Zealand)
-PrCo Alessandro Garcia, PUC-Rio (Brazil)
-PrCo Nikolaos Georgantas, INRIA (France)
-PrCo Serban Gheorghe, Edgewater Computer Systems Inc (Canada)
-PrCo Antonio Filieri, University of Stuttgart (Germany)
-PrCo Imed Hammouda, Chalmers & Gothenburg University (Sweden)
-PrCo Gang Huang, Peking University (China)
-PrCo George Heineman, Worcester Polytechnic Institute (USA)
-PrCo Paola Inverardi, University of L'Aquila (Italy)
-PrCo Magnus Larsson, ABB (India)
-PrCo Doug Lea, SUNY Oswego (USA)
-PrCo Grace A. Lewis, CMU Software Engineering Institute (USA)
-PrCo Yan Liu, Concordia University (Canada)
-PrCo Raffaela Mirandola, Politecnico di Milano (Italy)
-PrCo Rob van Ommering, Philips Research (Netherlands)
-PrCo Noel Plouzeau, IRISA/University of Rennes 1 (France)
-PrCo Frantisek Plasil, Charles University in Prague (Czech Republic)
-PrCo Ralf Reussner, Karlsruhe Institute of Technology (Germany)
-PrCo Houari Sahraoui, Universite de Montreal (Canada)
-PrCo Wilhelm Schäfer, University of Paderborn (Germany)
-PrCo Judith Stafford, University of Colorado (USA)
-PrCo Lionel Seinturier, Lille (France)
-PrCo Clemens Szyperski, Microsoft Research
-PrCo Massimo Tivoli, University of L'Aquila (Italy)
-PrCo Michael Wahler, ABB Corporate Research (Switzerland)
-     
-     CBSE Steering Committee
-StCo Ivica Crnkovic, Malardalen University (Sweden)
-StCo Ian Gorton, Software Engineering Institute (USA)
-StCo George Heineman, Worcester Polytechnic Institute (USA)
-StCo Grace A. Lewis, CMU Software Engineering Institute (USA)
-StCo Raffaela Mirandola, Politecnico di Milano (Italy)
-StCo Ralf Reussner, Karlsruhe Institute of Technology (Germany)
-StCo Heinz Schmidt, RMIT University (Australia)
-StCo Judith Stafford, University of Colorado (USA)
-StCo Clemens Szyperski, Microsoft Research (USA)
+##########
+          http://cbse-conferences.org/2015/index.php?pageId=organization
+          Organization
+          CompArch Organizing Committee
+GeneralCh Philippe Kruchten, University of British Columbia, Canada (General Chair)
+          
+          
+          CBSE Program Co-Chairs
+ProgramCh Steffen Becker, University of Technology Chemnitz, Germany
+ProgramCh Jean-Guy Schneider, Swinburne University of Technology, Australia
+          
+          CBSE Program Committee
+ProgramCo Domenico Bianculli, University of Luxembourg (Luxembourg)
+ProgramCo Carlos Canal, University of Malaga (Spain)
+ProgramCo Ivica Crnkovic, Malardalen University (Sweden)
+ProgramCo Jan Carlson, Malardalen University (Sweden)
+ProgramCo Jens Dietrich, Massey University (New Zealand)
+ProgramCo Alessandro Garcia, PUC-Rio (Brazil)
+ProgramCo Nikolaos Georgantas, INRIA (France)
+ProgramCo Serban Gheorghe, Edgewater Computer Systems Inc (Canada)
+ProgramCo Antonio Filieri, University of Stuttgart (Germany)
+ProgramCo Imed Hammouda, Chalmers & Gothenburg University (Sweden)
+ProgramCo Gang Huang, Peking University (China)
+ProgramCo George Heineman, Worcester Polytechnic Institute (USA)
+ProgramCo Paola Inverardi, University of L'Aquila (Italy)
+ProgramCo Magnus Larsson, ABB (India)
+ProgramCo Doug Lea, SUNY Oswego (USA)
+ProgramCo Grace A. Lewis, CMU Software Engineering Institute (USA)
+ProgramCo Yan Liu, Concordia University (Canada)
+ProgramCo Raffaela Mirandola, Politecnico di Milano (Italy)
+ProgramCo Rob van Ommering, Philips Research (Netherlands)
+ProgramCo Noel Plouzeau, IRISA/University of Rennes 1 (France)
+ProgramCo Frantisek Plasil, Charles University in Prague (Czech Republic)
+ProgramCo Ralf Reussner, Karlsruhe Institute of Technology (Germany)
+ProgramCo Houari Sahraoui, Universite de Montreal (Canada)
+ProgramCo Wilhelm Schäfer, University of Paderborn (Germany)
+ProgramCo Judith Stafford, University of Colorado (USA)
+ProgramCo Lionel Seinturier, Lille (France)
+ProgramCo Clemens Szyperski, Microsoft Research
+ProgramCo Massimo Tivoli, University of L'Aquila (Italy)
+ProgramCo Michael Wahler, ABB Corporate Research (Switzerland)
+          
+          CBSE Steering Committee
+SteerCo   Ivica Crnkovic, Malardalen University (Sweden)
+SteerCo   Ian Gorton, Software Engineering Institute (USA)
+SteerCo   George Heineman, Worcester Polytechnic Institute (USA)
+SteerCo   Grace A. Lewis, CMU Software Engineering Institute (USA)
+SteerCo   Raffaela Mirandola, Politecnico di Milano (Italy)
+SteerCo   Ralf Reussner, Karlsruhe Institute of Technology (Germany)
+SteerCo   Heinz Schmidt, RMIT University (Australia)
+SteerCo   Judith Stafford, University of Colorado (USA)
+SteerCo   Clemens Szyperski, Microsoft Research (USA)

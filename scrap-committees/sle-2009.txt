@@ -1,74 +1,74 @@
-#DONE
-     http://wikicfp.com/cfp/servlet/event.showcfp?eventid=4668&copyownerid=3290
-     Invited Speakers
-     ----------------
-KN   James Cordy, Queens University, Canada
-KN   Jean Bezivin, University of Nantes, France
-     
-     
-     Important Dates
-     ---------------
-     * Initial abstract submission (required) July 3, 2009
-     * Paper submission: July 10, 2009
-     * Author notification: August 21, 2009
-     * Paper submission for pre-proceedings: September 14, 2009
-     * Conference: October 5-6, 2009
-     * Camera-ready paper submission for post-proceedings: December 7, 2009
-     * LNCS post-proceedings mailed to authors (approx.): February 2010
-     
-     
-     Organization
-     ------------
-     
-     General Chair
-GeCh * Dragan Gasevic, Athabasca University, Canada
-     
-     Program Committee Co-Chairs
-PrCh * Mark van den Brand, TU Eindhoven, The Netherlands
-PrCh * Jeff Gray, University of Alabama at Birmingham, USA
-     
-     Program Committee
-PrCo * Colin Atkinson, Universität Mannheim, Germany
-PrCo * Don Batory, University of Texas at Austin, USA
-PrCo * Paulo Borba, Universidade Federal de Pernambuco, Brazil
-PrCo * John Boyland, University of Wisconsin, Milwaukee, USA
-PrCo * Marco Brambilla, Politecnico di Milano, Italy
-PrCo * Shigeru Chiba, Tokyo Institute of Technology, Japan
-PrCo * Charles Consel, LaBRI / INRIA, France
-PrCo * Gregor Engels, Universität Paderborn, Germany
-PrCo * Stephen A. Edwards, Columbia University, USA
-PrCo * Robert Fuhrer, IBM T.J. Watson Research, USA
-PrCo * Martin Gogolla, University of Bremen, Germany
-PrCo * Giancarlo Guizzardi, Federal University of Espírito Santo, Brazil
-PrCo * Reiko Heckel, University of Leicester, UK
-PrCo * Frédéric Jouault, INRIA & Ecole des Mines de Nantes, France
-PrCo * Nicholas Kraft, University of Alabama, USA
-PrCo * Thomas Kühne, Victoria University of Wellington, New Zealand
-PrCo * Julia Lawall, University of Copenhagen, Denmark
-PrCo * Timothy Lethbridge, University Ottawa, Canada
-PrCo * Brian Malloy, Clemson University, USA
-PrCo * Kim Mens, Université catholique de Louvain, Belgium
-PrCo * Marjan Mernik, University of Maribor, Slovenia
-PrCo * Todd Millstein, University of California, Los Angeles, USA
-PrCo * Pierre-Etienne Moreau, INRIA Nancy - Grand Est, France
-PrCo * Pierre-Alain Muller, University of Haute-Alsace, France
-PrCo * Daniel Oberle, SAP Research, Germany
-PrCo * Richard Paige, University of York, UK
-PrCo * James Power, National University of Ireland, Ireland
-PrCo * João Saraiva, Universidade do Minho, Portugal
-PrCo * Mary Lou Soffa, University of Virginia, USA
-PrCo * Juha-Pekka Tolvanen, MetaCase, Finland
-PrCo * Alexander Serebrenik, Eindhoven University of Technology, Netherlands
-PrCo * Tony Sloane, Macquarie University, Australia
-PrCo * Steffen Staab, Universität Koblenz-Landau, Germany
-PrCo * Jun Suzuki, University of Massachusetts, Boston, USA
-PrCo * Walid Taha, Rice University, USA
-PrCo * Eli Tilevich, Virginia Tech, USA
-PrCo * Jurgen Vinju, CWI, Netherlands
-PrCo * Eelco Visser, Delft University of Technology, Netherlands
-PrCo * René Witte, Concordia University, Canada
-     
-     Organization Committee
-WeCh * Bardia Mohabbati, Simon Fraser University, Canada (Web Chair)
-PbCh * Alexander Serebrenik, TU Eindhoven, The Netherlands (Publicity co-Chair)
-PbCh * James Hill, Vanderbilt University, USA (Publicity co-Chair)
+##########
+          http://wikicfp.com/cfp/servlet/event.showcfp?eventid=4668&copyownerid=3290
+          Invited Speakers
+          ----------------
+KeyNote   James Cordy, Queens University, Canada
+KeyNote   Jean Bezivin, University of Nantes, France
+          
+          
+          Important Dates
+          ---------------
+          * Initial abstract submission (required) July 3, 2009
+          * Paper submission: July 10, 2009
+          * Author notification: August 21, 2009
+          * Paper submission for pre-proceedings: September 14, 2009
+          * Conference: October 5-6, 2009
+          * Camera-ready paper submission for post-proceedings: December 7, 2009
+          * LNCS post-proceedings mailed to authors (approx.): February 2010
+          
+          
+          Organization
+          ------------
+          
+          General Chair
+GeneralCh * Dragan Gasevic, Athabasca University, Canada
+          
+          Program Committee Co-Chairs
+ProgramCh * Mark van den Brand, TU Eindhoven, The Netherlands
+ProgramCh * Jeff Gray, University of Alabama at Birmingham, USA
+          
+          Program Committee
+ProgramCo * Colin Atkinson, Universität Mannheim, Germany
+ProgramCo * Don Batory, University of Texas at Austin, USA
+ProgramCo * Paulo Borba, Universidade Federal de Pernambuco, Brazil
+ProgramCo * John Boyland, University of Wisconsin, Milwaukee, USA
+ProgramCo * Marco Brambilla, Politecnico di Milano, Italy
+ProgramCo * Shigeru Chiba, Tokyo Institute of Technology, Japan
+ProgramCo * Charles Consel, LaBRI / INRIA, France
+ProgramCo * Gregor Engels, Universität Paderborn, Germany
+ProgramCo * Stephen A. Edwards, Columbia University, USA
+ProgramCo * Robert Fuhrer, IBM T.J. Watson Research, USA
+ProgramCo * Martin Gogolla, University of Bremen, Germany
+ProgramCo * Giancarlo Guizzardi, Federal University of Espírito Santo, Brazil
+ProgramCo * Reiko Heckel, University of Leicester, UK
+ProgramCo * Frédéric Jouault, INRIA & Ecole des Mines de Nantes, France
+ProgramCo * Nicholas Kraft, University of Alabama, USA
+ProgramCo * Thomas Kühne, Victoria University of Wellington, New Zealand
+ProgramCo * Julia Lawall, University of Copenhagen, Denmark
+ProgramCo * Timothy Lethbridge, University Ottawa, Canada
+ProgramCo * Brian Malloy, Clemson University, USA
+ProgramCo * Kim Mens, Université catholique de Louvain, Belgium
+ProgramCo * Marjan Mernik, University of Maribor, Slovenia
+ProgramCo * Todd Millstein, University of California, Los Angeles, USA
+ProgramCo * Pierre-Etienne Moreau, INRIA Nancy - Grand Est, France
+ProgramCo * Pierre-Alain Muller, University of Haute-Alsace, France
+ProgramCo * Daniel Oberle, SAP Research, Germany
+ProgramCo * Richard Paige, University of York, UK
+ProgramCo * James Power, National University of Ireland, Ireland
+ProgramCo * João Saraiva, Universidade do Minho, Portugal
+ProgramCo * Mary Lou Soffa, University of Virginia, USA
+ProgramCo * Juha-Pekka Tolvanen, MetaCase, Finland
+ProgramCo * Alexander Serebrenik, Eindhoven University of Technology, Netherlands
+ProgramCo * Tony Sloane, Macquarie University, Australia
+ProgramCo * Steffen Staab, Universität Koblenz-Landau, Germany
+ProgramCo * Jun Suzuki, University of Massachusetts, Boston, USA
+ProgramCo * Walid Taha, Rice University, USA
+ProgramCo * Eli Tilevich, Virginia Tech, USA
+ProgramCo * Jurgen Vinju, CWI, Netherlands
+ProgramCo * Eelco Visser, Delft University of Technology, Netherlands
+ProgramCo * René Witte, Concordia University, Canada
+          
+          Organization Committee
+WebCh     * Bardia Mohabbati, Simon Fraser University, Canada (Web Chair)
+PubRelCh  * Alexander Serebrenik, TU Eindhoven, The Netherlands (Publicity co-Chair)
+PubRelCh  * James Hill, Vanderbilt University, USA (Publicity co-Chair)

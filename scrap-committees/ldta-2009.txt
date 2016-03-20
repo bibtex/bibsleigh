@@ -1,25 +1,25 @@
-#DONE
-     http://people.cs.kuleuven.be/~dirk/ada-belgium/events/09/090328-etaps-ldta.html
-     ==Program Committee==
-     
-PrCh Jurgen Vinju, CWI, Amsterdam (co-chair)
-PrCh Torbjoern Ekman, Oxford, UK (co-chair)
-PrCo Erik Meijer, Microsoft, Redmond, USA
-PrCo Walid Taha, Rice University, Houston USA
-PrCo Bob Fuhrer, IBM TJ Watson, USA
-PrCo Susan Eisenbach, Imperial College, UK
-PrCo Jean-Marie Jacquet, FUNDP, Namur, Belgium
-PrCo Sibylle Schuppe, Chalmers, Sweden
-PrCo Elizabeth Scott, RHUL, UK
-PrCo Robert Grimm, NYU, USA
-PrCo Judith Bishop, Pretoria, South Africa
-PrCo Tudor Girba, Univ of Berne, Switzerland
-PrCo Marjan Mernik, University of Maribor, Slovenia
-PrCo Thomas Dean, Fondazione Bruno Kessler - IRST, Italy
-PrCo Martin Bravenboer, Univ. of Oregon, USA
-PrCo Pierre-Etienne Moreau, INRIA-LORIA, France
-PrCo Gabi Taentzer, Philipps-Universitaet Marburg, Germany
-PrCo Joao Saraiva, Universidade do Minho, Braga, Portugal
-PrCo Tijs van der Storm, CWI, The Netherlands
-PrCo Stephen Edwards, Columbia University, USA
-PrCo Peter Thiemann, Universitaet Freiburg, Germany
+##########
+          http://people.cs.kuleuven.be/~dirk/ada-belgium/events/09/090328-etaps-ldta.html
+          ==Program Committee==
+          
+ProgramCh Jurgen Vinju, CWI, Amsterdam (co-chair)
+ProgramCh Torbjoern Ekman, Oxford, UK (co-chair)
+ProgramCo Erik Meijer, Microsoft, Redmond, USA
+ProgramCo Walid Taha, Rice University, Houston USA
+ProgramCo Bob Fuhrer, IBM TJ Watson, USA
+ProgramCo Susan Eisenbach, Imperial College, UK
+ProgramCo Jean-Marie Jacquet, FUNDP, Namur, Belgium
+ProgramCo Sibylle Schuppe, Chalmers, Sweden
+ProgramCo Elizabeth Scott, RHUL, UK
+ProgramCo Robert Grimm, NYU, USA
+ProgramCo Judith Bishop, Pretoria, South Africa
+ProgramCo Tudor Girba, Univ of Berne, Switzerland
+ProgramCo Marjan Mernik, University of Maribor, Slovenia
+ProgramCo Thomas Dean, Fondazione Bruno Kessler - IRST, Italy
+ProgramCo Martin Bravenboer, Univ. of Oregon, USA
+ProgramCo Pierre-Etienne Moreau, INRIA-LORIA, France
+ProgramCo Gabi Taentzer, Philipps-Universitaet Marburg, Germany
+ProgramCo Joao Saraiva, Universidade do Minho, Braga, Portugal
+ProgramCo Tijs van der Storm, CWI, The Netherlands
+ProgramCo Stephen Edwards, Columbia University, USA
+ProgramCo Peter Thiemann, Universitaet Freiburg, Germany

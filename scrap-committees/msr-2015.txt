@@ -1,73 +1,73 @@
-#DONE
-     http://2015.msrconf.org/organization.php
-     Program Committee Members
-PrCo Bram Adams	MCIS, École Polytechnique de Montréal, Canada
-PrCo Giuliano Antoniol	École Polytechnique de Montréal, Canada
-PrCo Alberto Bacchelli	Delft University of Technology, Netherlands
-PrCo Gabriele Bavota	University of Sannio, Italy
-PrCo Olga Baysal	Université de Montréal, Canada
-PrCo Andrew Begel	Microsoft Research, USA
-PrCo Christian Bird	Microsoft Research, USA
-PrCo Stephan Diehl	University of Trier, Germany
-PrCo Thomas Fritz	University of Zurich, Switzerland
-PrCo Harald Gall	University of Zurich, Switzerland
-PrCo Mike Godfrey	University of Waterloo, Canada
-PrCo Georgios Gousios	Radboud Universiteit Nijmegen, Netherlands
-PrCo Michaela Greiler	Microsoft Research, USA
-PrCo Sonia Haiduc	Florida State University, USA
-PrCo Mark Harman	University College London, Great Britain
-PrCo Ahmed E. Hassan	Queen's University, Canada
-PrCo Reid Holmes	University of Waterloo, Canada
-PrCo Huzefa Kagdi	Wichita State University, USA
-PrCo Yasutaka Kamei	Kyushu University, Japan
-PrCo Foutse Khomh	DGIGL, École Polytechnique de Montréal, Canada
-PrCo Sunghun Kim	The University of Hong Kong Science and Technology, China
-PrCo Michele Lanza	Faculty of Informatics, University of Lugano, Switzerland
-PrCo Walid Maalej	University of Hamburg, Germany
-PrCo Andrian Marcus	Wayne State University, USA
-PrCo Na Meng	University of California, Los Angeles, USA
-PrCo Tim Menzies	North Carolina State University, USA
-PrCo Ali Mesbah	University of British Columbia, Canada
-PrCo Audris Mockus	Avaya Labs Research, USA
-PrCo Meiyappan Nagappan	Queen's University, Canada
-PrCo Denys Poshyvanyk	College of William and Mary, USA
-PrCo Baishakhi Ray	Unversity of California, Davis, USA
-PrCo Peter Rigby	Concordia University, Canada
-PrCo Gregorio Robles	Universidad Rey Juan Carlos, Spain
-PrCo David Roethlisberger	Universidad Diego Portales, Chile
-PrCo Chanchal K. Roy	University of Saskatchewan, Canada
-PrCo Caitlin Sadowski	Google, Inc., USA
-PrCo Anita Sarma	University of Nebraska, Lincoln, USA
-PrCo Emad Shihab	Concordia University, Canada
-PrCo Leif Singer	iDoneThis, USA
-PrCo Vibha Sinha	IBM Research Lab, India
-PrCo Lin Tan	University of Waterloo, Canada
-PrCo Ewan Tempero	The University of Auckland, New Zealand
-PrCo Christoph Treude	University of Victoria, Canada
-PrCo Tao Xie	University of Illinois at Urbana-Champaign, USA
-PrCo Annie T.T. Ying	McGill University, Canada
-PrCo Andy Zaidman	TU Delft, Netherlands
-PrCo Andreas Zeller	Saarland University, Germany
-PrCo Hongyu Zhang	Tsinghua University, China
-PrCo Thomas Zimmermann	Microsoft Research, USA
-     
-     General Chair
-GeCh Massimiliano Di Penta	Massimiliano Di Penta
-     University of Sannio
-     Program Co-Chairs
-PrCh Martin Pinzger	Martin Pinzger
-     University of Klagenfurt
-PrCh Romain Robbes	Romain Robbes
-     University of Chile
-     Data Chair
-DaCh Yasutaka Kamei	Yasutaka Kamei
-     Challenge Chair
-ChCh Annie Ying	Annie Ying
-     Web Chair
-WeCh Stefanie Beyer	Stefanie Beyer
-     University of Klagenfurt
-     Steering Committee
-StCo Martin Pinzger	Sung Kim	Ahmed E. Hassan	Audris Mockus
-StCo Ric Holt	Katsuro Inoue	Stephan Diehl	Massimiliano Di Penta
-StCo Harald Gall	Michele Lanza	Michael W. Godfrey	Jim Whitehead
-StCo Tao Xie	Thomas Zimmermann	Romain Robbes	Prem Devanbu
+##########
+          http://2015.msrconf.org/organization.php
+          Program Committee Members
+ProgramCo Bram Adams	MCIS, École Polytechnique de Montréal, Canada
+ProgramCo Giuliano Antoniol	École Polytechnique de Montréal, Canada
+ProgramCo Alberto Bacchelli	Delft University of Technology, Netherlands
+ProgramCo Gabriele Bavota	University of Sannio, Italy
+ProgramCo Olga Baysal	Université de Montréal, Canada
+ProgramCo Andrew Begel	Microsoft Research, USA
+ProgramCo Christian Bird	Microsoft Research, USA
+ProgramCo Stephan Diehl	University of Trier, Germany
+ProgramCo Thomas Fritz	University of Zurich, Switzerland
+ProgramCo Harald Gall	University of Zurich, Switzerland
+ProgramCo Mike Godfrey	University of Waterloo, Canada
+ProgramCo Georgios Gousios	Radboud Universiteit Nijmegen, Netherlands
+ProgramCo Michaela Greiler	Microsoft Research, USA
+ProgramCo Sonia Haiduc	Florida State University, USA
+ProgramCo Mark Harman	University College London, Great Britain
+ProgramCo Ahmed E. Hassan	Queen's University, Canada
+ProgramCo Reid Holmes	University of Waterloo, Canada
+ProgramCo Huzefa Kagdi	Wichita State University, USA
+ProgramCo Yasutaka Kamei	Kyushu University, Japan
+ProgramCo Foutse Khomh	DGIGL, École Polytechnique de Montréal, Canada
+ProgramCo Sunghun Kim	The University of Hong Kong Science and Technology, China
+ProgramCo Michele Lanza	Faculty of Informatics, University of Lugano, Switzerland
+ProgramCo Walid Maalej	University of Hamburg, Germany
+ProgramCo Andrian Marcus	Wayne State University, USA
+ProgramCo Na Meng	University of California, Los Angeles, USA
+ProgramCo Tim Menzies	North Carolina State University, USA
+ProgramCo Ali Mesbah	University of British Columbia, Canada
+ProgramCo Audris Mockus	Avaya Labs Research, USA
+ProgramCo Meiyappan Nagappan	Queen's University, Canada
+ProgramCo Denys Poshyvanyk	College of William and Mary, USA
+ProgramCo Baishakhi Ray	Unversity of California, Davis, USA
+ProgramCo Peter Rigby	Concordia University, Canada
+ProgramCo Gregorio Robles	Universidad Rey Juan Carlos, Spain
+ProgramCo David Roethlisberger	Universidad Diego Portales, Chile
+ProgramCo Chanchal K. Roy	University of Saskatchewan, Canada
+ProgramCo Caitlin Sadowski	Google, Inc., USA
+ProgramCo Anita Sarma	University of Nebraska, Lincoln, USA
+ProgramCo Emad Shihab	Concordia University, Canada
+ProgramCo Leif Singer	iDoneThis, USA
+ProgramCo Vibha Sinha	IBM Research Lab, India
+ProgramCo Lin Tan	University of Waterloo, Canada
+ProgramCo Ewan Tempero	The University of Auckland, New Zealand
+ProgramCo Christoph Treude	University of Victoria, Canada
+ProgramCo Tao Xie	University of Illinois at Urbana-Champaign, USA
+ProgramCo Annie T.T. Ying	McGill University, Canada
+ProgramCo Andy Zaidman	TU Delft, Netherlands
+ProgramCo Andreas Zeller	Saarland University, Germany
+ProgramCo Hongyu Zhang	Tsinghua University, China
+ProgramCo Thomas Zimmermann	Microsoft Research, USA
+          
+          General Chair
+GeneralCh Massimiliano Di Penta	Massimiliano Di Penta
+          University of Sannio
+          Program Co-Chairs
+ProgramCh Martin Pinzger	Martin Pinzger
+          University of Klagenfurt
+ProgramCh Romain Robbes	Romain Robbes
+          University of Chile
+          Data Chair
+DataCh    Yasutaka Kamei	Yasutaka Kamei
+          Challenge Chair
+ChalngCh  Annie Ying	Annie Ying
+          Web Chair
+WebCh     Stefanie Beyer	Stefanie Beyer
+          University of Klagenfurt
+          Steering Committee
+SteerCo   Martin Pinzger	Sung Kim	Ahmed E. Hassan	Audris Mockus
+SteerCo   Ric Holt	Katsuro Inoue	Stephan Diehl	Massimiliano Di Penta
+SteerCo   Harald Gall	Michele Lanza	Michael W. Godfrey	Jim Whitehead
+SteerCo   Tao Xie	Thomas Zimmermann	Romain Robbes	Prem Devanbu

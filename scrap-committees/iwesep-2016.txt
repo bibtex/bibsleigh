@@ -1,111 +1,111 @@
-#DONE
-     IWESEP2016/papers/1851z008.pdf
-     
-     Organization
-     General Chair
-GeCh Hideaki Hata,
-     Nara Institute of Science and Technology, Japan
-     Program Co-Chairs
-PrCh Shinpei Hayashi,
-     Tokyo Institute of Technology, Japan
-PrCh Shane McIntosh,
-     McGill University, Canada
-     ??? Special Focus Co-Chairs
-PrCh Graham Neubig,
-     Nara Institute of Science and Technology, Japan
-PrCh Taiki Todo,
-     Kyushu University, Japan
-     Publication Chair
-PuCh Xin Yang,
-     Nara Institute of Science and Technology, Japan
-     Local Arrangement Co-Chairs
-LoCh Tetsuya Kanda,
-     Osaka University, Japan
-LoCh Takao Nakagawa,
-     Nara Institute of Science and Technology, Japan
-LoCh Hideshi Sakaguchi,
-     Nara Institute of Science and Technology, Japan
-     Finance Co-Chairs
-FiCh Akinori Ihara,
-     Nara Institute of Science and Technology, Japan
-FiCh Nachai Limsettho,
-     Nara Institute of Science and Technology, Japan
-     Web Co-Chairs
-WeCh Kenji Fujiwara,
-     Nara Institute of Science and Technology, Japan
-WeCh Saya Onoue,
-     Nara Institute of Science and Technology, Japan
-     Student Staff Chair
-SVCh Passakorn Phannachitta,
-     Nara Institute of Science and Technology, Japan
-     Steering Committees
-StCo Akinori Ihara,
-     Nara Institute of Science and Technology, Japan
-StCo Yasutaka Kamei,
-     Kyushu University, Japan
-StCo Shinsuke Matsumoto,
-     //Kobe University, Japan
-StCo Masateru Tsunoda,
-     //Kinki University, Japan
-StCo Raula Gaikovina Kula,
-     Osaka University, Japan
-     Advisory Committees
-AdCo Katsuro Inoue,
-     Osaka University, Japan
-AdCo Shinji Kusumoto,
-     Osaka University, Japan
-AdCo Kenichi Matsumoto,
-     Nara Institute of Science and Technology, Japan
-     
-     //IWESEP2016/papers/1851z009.pdf
-     Program Committee
-PrCo Bram Adams,
-     //Ecole Polytechnique de Montreal, Canada
-PrCo Alberto Bacchelli,
-     //Delft University of Technology, Netherland
-PrCo Gabriele Bavota,
-     //Free University of Bolzano-Bozen, Italy
-PrCo Olga Baysal,
-     //Carleton University, Canada
-PrCo Cor-Paul Bezemer,
-     //Queen’s University, Canada
-PrCo Eunjong Choi,
-     Osaka University, Japan
-PrCo Bogdan Dit,
-     //Boise State University, USA
-PrCo Daniel German,
-     //University of Victoria, Canada
-PrCo Sonia Haiduc,
-     //Florida State University, USA
-PrCo Yoshiki Higo,
-     //Osaka University, Japan
-PrCo Akinori Ihara,
-     //Nara Institute of Science and Technology, Japan
-PrCo Zhen Ming Jiang,
-     //York University, Canada
-PrCo Yasutaka Kamei,
-     Kyushu University, Japan
-PrCo Foutse Khomh,
-     Ecole Polytechnique de Montreal, Canada
-PrCo David Lo,
-     //Singapore Management University, Singapore
-PrCo Osamu Mizuno,
-     //Kyoto Institute of Technology, Japan
-PrCo Andrea Mocci,
-     University of Lugano, Switzerland
-PrCo Meiyappan Nagappan,
-     Rochester Institute of Technology
-PrCo Graham Neubig,
-     Nara Institute of Science and Technology, Japan
-PrCo Weiyi Shang,
-     //Concordia University, Canada
-PrCo Taiki Todo,
-     Kyushu University, Japan
-PrCo Bogdan Vasilescu,
-     University of California, Davis, USA
-PrCo Thomas Zimmermann,
-     Microsoft Research, USA
-     
-     //IWESEP2016/papers/1851z011.pdf
-     Keynotes
-KN   Miltiadis Allamanis
+##########
+          IWESEP2016/papers/1851z008.pdf
+          
+          Organization
+          General Chair
+GeneralCh Hideaki Hata,
+          Nara Institute of Science and Technology, Japan
+          Program Co-Chairs
+ProgramCh Shinpei Hayashi,
+          Tokyo Institute of Technology, Japan
+ProgramCh Shane McIntosh,
+          McGill University, Canada
+          ??? Special Focus Co-Chairs
+ProgramCh Graham Neubig,
+          Nara Institute of Science and Technology, Japan
+ProgramCh Taiki Todo,
+          Kyushu University, Japan
+          Publication Chair
+PublicaCh Xin Yang,
+          Nara Institute of Science and Technology, Japan
+          Local Arrangement Co-Chairs
+LocRegCh  Tetsuya Kanda,
+          Osaka University, Japan
+LocRegCh  Takao Nakagawa,
+          Nara Institute of Science and Technology, Japan
+LocRegCh  Hideshi Sakaguchi,
+          Nara Institute of Science and Technology, Japan
+          Finance Co-Chairs
+FinanceCh Akinori Ihara,
+          Nara Institute of Science and Technology, Japan
+FinanceCh Nachai Limsettho,
+          Nara Institute of Science and Technology, Japan
+          Web Co-Chairs
+WebCh     Kenji Fujiwara,
+          Nara Institute of Science and Technology, Japan
+WebCh     Saya Onoue,
+          Nara Institute of Science and Technology, Japan
+          Student Staff Chair
+StudentCh Passakorn Phannachitta,
+          Nara Institute of Science and Technology, Japan
+          Steering Committees
+SteerCo   Akinori Ihara,
+          Nara Institute of Science and Technology, Japan
+SteerCo   Yasutaka Kamei,
+          Kyushu University, Japan
+SteerCo   Shinsuke Matsumoto,
+          //Kobe University, Japan
+SteerCo   Masateru Tsunoda,
+          //Kinki University, Japan
+SteerCo   Raula Gaikovina Kula,
+          Osaka University, Japan
+          Advisory Committees
+AdviceCo  Katsuro Inoue,
+          Osaka University, Japan
+AdviceCo  Shinji Kusumoto,
+          Osaka University, Japan
+AdviceCo  Kenichi Matsumoto,
+          Nara Institute of Science and Technology, Japan
+          
+          //IWESEP2016/papers/1851z009.pdf
+          Program Committee
+ProgramCo Bram Adams,
+          //Ecole Polytechnique de Montreal, Canada
+ProgramCo Alberto Bacchelli,
+          //Delft University of Technology, Netherland
+ProgramCo Gabriele Bavota,
+          //Free University of Bolzano-Bozen, Italy
+ProgramCo Olga Baysal,
+          //Carleton University, Canada
+ProgramCo Cor-Paul Bezemer,
+          //Queen’s University, Canada
+ProgramCo Eunjong Choi,
+          Osaka University, Japan
+ProgramCo Bogdan Dit,
+          //Boise State University, USA
+ProgramCo Daniel German,
+          //University of Victoria, Canada
+ProgramCo Sonia Haiduc,
+          //Florida State University, USA
+ProgramCo Yoshiki Higo,
+          //Osaka University, Japan
+ProgramCo Akinori Ihara,
+          //Nara Institute of Science and Technology, Japan
+ProgramCo Zhen Ming Jiang,
+          //York University, Canada
+ProgramCo Yasutaka Kamei,
+          Kyushu University, Japan
+ProgramCo Foutse Khomh,
+          Ecole Polytechnique de Montreal, Canada
+ProgramCo David Lo,
+          //Singapore Management University, Singapore
+ProgramCo Osamu Mizuno,
+          //Kyoto Institute of Technology, Japan
+ProgramCo Andrea Mocci,
+          University of Lugano, Switzerland
+ProgramCo Meiyappan Nagappan,
+          Rochester Institute of Technology
+ProgramCo Graham Neubig,
+          Nara Institute of Science and Technology, Japan
+ProgramCo Weiyi Shang,
+          //Concordia University, Canada
+ProgramCo Taiki Todo,
+          Kyushu University, Japan
+ProgramCo Bogdan Vasilescu,
+          University of California, Davis, USA
+ProgramCo Thomas Zimmermann,
+          Microsoft Research, USA
+          
+          //IWESEP2016/papers/1851z011.pdf
+          Keynotes
+KeyNote   Miltiadis Allamanis

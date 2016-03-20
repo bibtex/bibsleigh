@@ -1,73 +1,73 @@
-#DONE
-     http://www.comparch-events.org/past/CBSE_2005/format.html
-     Symposium Organizers
-     
-     Program Chair
-     
-PrCh George Heineman, WPI, USA
-     
-     Organizing Committee
-     // and steering, but we don't care - @grammarware
-     
-OrCo Ivica Crnkovic, Mälardalen University, Sweden
-OrCo Heinz Schmidt, Monash University, Australia
-OrCo Judith Stafford, Tufts University, USA
-OrCo Clemens Szyperski, Microsoft Research, USA
-OrCo Kurt Wallnau, Software Engineering Institute, USA
-OrCo Ivica Crnkovic, Mälardalen University, Sweden
-OrCo Heinz Schmidt, Monash University, Australia
-OrCo Judith Stafford, Tufts University, USA
-OrCo Clemens Szyperski, Microsoft Research, USA
-OrCo Kurt Wallnau, Software Engineering Institute, USA
-     
-     Program Committee
-     
-PrCo Rob Armstrong, Sandia National Laboratories, USA
-     
-PrCo Uwe Aßmann, Dresden University of Technology, Germany
-     
-PrCo Jakob Axelsson, Volvo Car Corporation, Sweden
-     
-PrCo Mike Barnett, Microsoft Research, USA
-     
-PrCo Judith Bishop, University of Pretoria, South Africa
-     
-PrCo Jan Bosch, Nokia Research Center, Finland
-     
-PrCo Michel Chaudron, University Eindhoven, The Netherlands
-     
-PrCo Luca de Alfaro, University of California, Santa Cruz, USA
-     
-PrCo Susan Eisenbach, Imperial College University, UK
-     
-PrCo Wolfgang Emmerich, University College London, U.K.
-     
-PrCo Dimitra Giannakopoulou, NASA Ames, USA
-     
-PrCo Richard Hall, LSR-IMAG, France
-     
-PrCo Dick Hamlet, Portland State University, USA
-     
-PrCo Tom Henzinger, EPFL, Switzerland and UC Berkeley, USA
-     
-PrCo Paola Inverardi, University of L'Aquila, Italy
-     
-PrCo Bengt Jonsson, Uppsala University, Sweden
-     
-PrCo Magnus Larsson, ABB, Sweden
-     
-PrCo Kung-Kiu Lau, University of Manchester, UK
-     
-PrCo Nenad Medvidović, University of Southern California, USA
-     
-PrCo Rob van Ommering, Philips Research, The Netherlands
-     
-PrCo Otto Preiss, ABB Corporate Research Centers, Switzerland
-     
-PrCo Ralf Reussner, University of Oldenburg, Germany
-     
-PrCo Douglas Schmidt, Vanderbilt University, USA
-     
-PrCo Jean-Guy Schneider, Swinburne University of Technology, Australia
-     
-PrCo Dave Wile, Teknowledge, Corp., USA
+##########
+          http://www.comparch-events.org/past/CBSE_2005/format.html
+          Symposium Organizers
+          
+          Program Chair
+          
+ProgramCh George Heineman, WPI, USA
+          
+          Organizing Committee
+          // and steering, but we don't care - @grammarware
+          
+OrganCo   Ivica Crnkovic, Mälardalen University, Sweden
+OrganCo   Heinz Schmidt, Monash University, Australia
+OrganCo   Judith Stafford, Tufts University, USA
+OrganCo   Clemens Szyperski, Microsoft Research, USA
+OrganCo   Kurt Wallnau, Software Engineering Institute, USA
+OrganCo   Ivica Crnkovic, Mälardalen University, Sweden
+OrganCo   Heinz Schmidt, Monash University, Australia
+OrganCo   Judith Stafford, Tufts University, USA
+OrganCo   Clemens Szyperski, Microsoft Research, USA
+OrganCo   Kurt Wallnau, Software Engineering Institute, USA
+          
+          Program Committee
+          
+ProgramCo Rob Armstrong, Sandia National Laboratories, USA
+          
+ProgramCo Uwe Aßmann, Dresden University of Technology, Germany
+          
+ProgramCo Jakob Axelsson, Volvo Car Corporation, Sweden
+          
+ProgramCo Mike Barnett, Microsoft Research, USA
+          
+ProgramCo Judith Bishop, University of Pretoria, South Africa
+          
+ProgramCo Jan Bosch, Nokia Research Center, Finland
+          
+ProgramCo Michel Chaudron, University Eindhoven, The Netherlands
+          
+ProgramCo Luca de Alfaro, University of California, Santa Cruz, USA
+          
+ProgramCo Susan Eisenbach, Imperial College University, UK
+          
+ProgramCo Wolfgang Emmerich, University College London, U.K.
+          
+ProgramCo Dimitra Giannakopoulou, NASA Ames, USA
+          
+ProgramCo Richard Hall, LSR-IMAG, France
+          
+ProgramCo Dick Hamlet, Portland State University, USA
+          
+ProgramCo Tom Henzinger, EPFL, Switzerland and UC Berkeley, USA
+          
+ProgramCo Paola Inverardi, University of L'Aquila, Italy
+          
+ProgramCo Bengt Jonsson, Uppsala University, Sweden
+          
+ProgramCo Magnus Larsson, ABB, Sweden
+          
+ProgramCo Kung-Kiu Lau, University of Manchester, UK
+          
+ProgramCo Nenad Medvidović, University of Southern California, USA
+          
+ProgramCo Rob van Ommering, Philips Research, The Netherlands
+          
+ProgramCo Otto Preiss, ABB Corporate Research Centers, Switzerland
+          
+ProgramCo Ralf Reussner, University of Oldenburg, Germany
+          
+ProgramCo Douglas Schmidt, Vanderbilt University, USA
+          
+ProgramCo Jean-Guy Schneider, Swinburne University of Technology, Australia
+          
+ProgramCo Dave Wile, Teknowledge, Corp., USA

@@ -1,68 +1,68 @@
-#DONE
-     http://www.sleconf.org/2014/Committees.html
-     PC co-chairs
-PrCh Benoît Combemale, University of Rennes 1, France
-PrCh David J. Pearce, Victoria University of Wellington, New Zealand
-     Program committee
-PrCo Emilie Balland, INRIA, France
-PrCo Tony Clark, Middlesex University, UK
-PrCo Zinovy Diskin, McMaster University / University of Waterloo, Canada
-PrCo Martin Erwig, Oregon State University, USA
-PrCo Anne Etien, University of Lille, France
-PrCo Joerg Evermann, Memorial University of Newfoundland, Canada
-PrCo Jean-Marie Favre, University of Grenoble, France
-PrCo Robert France, Colorado State University, USA
-PrCo Andy Gill, University of Kansas, USA
-PrCo Martin Gogolla, University of Bremen, Germany
-PrCo Pieter Van Gorp, Eindhoven University of Technology, The Netherlands
-PrCo Giancarlo Guizzardi, Federal University of Espirito Santo, Brazil
-PrCo Görel Hedin, Lund University, Sweden
-PrCo Markus Herrmannsdoerfer, Technische Universität München, Germany
-PrCo Jean-Marc Jézéquel, University of Rennes, France
-PrCo Thomas Kuehne, Victoria University of Wellington, New Zealand
-PrCo Ralf Laemmel, Universität Koblenz-Landau, Germany
-PrCo Peter Mosses, Swansea University, UK
-PrCo Sean Mcdirmid, Microsoft, China
-PrCo Kim Mens, Université catholique de Louvain, Belgium
-PrCo Marjan Mernik, University of Maribor, Slovenia
-PrCo Pierre-Alain Muller, University of Haute-Alsace, France
-PrCo Nathaniel Nystrom, University of Lugano, Switzerland
-PrCo Klaus Ostermann, University of Marburg, Germany
-PrCo Oscar Nierstrasz, University of Bern, Switzerland
-PrCo Richard Paige, University of York, UK
-PrCo Fiona Polack, University of York, UK
-PrCo Arnd Poetzsch-Heffter, University of Kaiserslautern, Germany
-PrCo Davide Di Ruscio, Università degli Studi dell'Aquila, Italy
-PrCo João Saraiva, Universidade do Minho, Portugal
-PrCo Bran Selic, Malina Software Corp., Canada
-PrCo Jim Steel, University of Queensland, Australia
-PrCo Tijs Van Der Storm, Centrum Wiskunde & Informatica, The Netherlands
-PrCo Juha-Pekka Tolvanen, MetaCase, Finland
-PrCo Michael Whalen, University of Minnesota, USA
-PrCo Eric Van Wyk, University of Minnesota, USA
-PrCo Steffen Zschaler, King's College London, UK
-     Workshop organization chair
-WoCh Eric Van Wyk, University of Minnesota, USA
-     Panel organization chair
-PaCh Ralf Lämmel, Universität Koblenz-Landau, Germany
-     Publicity chairs
-PbCh Craig Anslow, University of Calgary, Canada (general publicity)
-SMCh Tijs van der Storm, Centrum Wiskunde & Informatica, The Netherlands (social media)
-WeCh Davy Landman, Centrum Wiskunde & Informatica, The Netherlands (web)
-     Publication chair
-PuCh Olivier Barais, Université de Rennes 1 / IRISA, France
-     Local organization chair
-LoCh Ivica Crnkovic, Mälardalen University, Sweden
-     General chair
-GeCh Jurgen Vinju, Centrum Wiskunde & Informatica, The Netherlands
-     Steering committee members
-StCo Martin Erwig
-StCo Richard Paige
-StCo Jean-Marie Favre
-StCo Tony Sloane
-StCo Eric Van Wyk
-StCo Gorel Hedin
-StCo Jurgen Vinju
-StCo Kim Mens
-StCo Krzysztof Czarnecki
-StCh Mark van den Brand (chair)
+##########
+          http://www.sleconf.org/2014/Committees.html
+          PC co-chairs
+ProgramCh Benoît Combemale, University of Rennes 1, France
+ProgramCh David J. Pearce, Victoria University of Wellington, New Zealand
+          Program committee
+ProgramCo Emilie Balland, INRIA, France
+ProgramCo Tony Clark, Middlesex University, UK
+ProgramCo Zinovy Diskin, McMaster University / University of Waterloo, Canada
+ProgramCo Martin Erwig, Oregon State University, USA
+ProgramCo Anne Etien, University of Lille, France
+ProgramCo Joerg Evermann, Memorial University of Newfoundland, Canada
+ProgramCo Jean-Marie Favre, University of Grenoble, France
+ProgramCo Robert France, Colorado State University, USA
+ProgramCo Andy Gill, University of Kansas, USA
+ProgramCo Martin Gogolla, University of Bremen, Germany
+ProgramCo Pieter Van Gorp, Eindhoven University of Technology, The Netherlands
+ProgramCo Giancarlo Guizzardi, Federal University of Espirito Santo, Brazil
+ProgramCo Görel Hedin, Lund University, Sweden
+ProgramCo Markus Herrmannsdoerfer, Technische Universität München, Germany
+ProgramCo Jean-Marc Jézéquel, University of Rennes, France
+ProgramCo Thomas Kuehne, Victoria University of Wellington, New Zealand
+ProgramCo Ralf Laemmel, Universität Koblenz-Landau, Germany
+ProgramCo Peter Mosses, Swansea University, UK
+ProgramCo Sean Mcdirmid, Microsoft, China
+ProgramCo Kim Mens, Université catholique de Louvain, Belgium
+ProgramCo Marjan Mernik, University of Maribor, Slovenia
+ProgramCo Pierre-Alain Muller, University of Haute-Alsace, France
+ProgramCo Nathaniel Nystrom, University of Lugano, Switzerland
+ProgramCo Klaus Ostermann, University of Marburg, Germany
+ProgramCo Oscar Nierstrasz, University of Bern, Switzerland
+ProgramCo Richard Paige, University of York, UK
+ProgramCo Fiona Polack, University of York, UK
+ProgramCo Arnd Poetzsch-Heffter, University of Kaiserslautern, Germany
+ProgramCo Davide Di Ruscio, Università degli Studi dell'Aquila, Italy
+ProgramCo João Saraiva, Universidade do Minho, Portugal
+ProgramCo Bran Selic, Malina Software Corp., Canada
+ProgramCo Jim Steel, University of Queensland, Australia
+ProgramCo Tijs Van Der Storm, Centrum Wiskunde & Informatica, The Netherlands
+ProgramCo Juha-Pekka Tolvanen, MetaCase, Finland
+ProgramCo Michael Whalen, University of Minnesota, USA
+ProgramCo Eric Van Wyk, University of Minnesota, USA
+ProgramCo Steffen Zschaler, King's College London, UK
+          Workshop organization chair
+WorkspCh  Eric Van Wyk, University of Minnesota, USA
+          Panel organization chair
+PanelCh   Ralf Lämmel, Universität Koblenz-Landau, Germany
+          Publicity chairs
+PubRelCh  Craig Anslow, University of Calgary, Canada (general publicity)
+SocMedCh  Tijs van der Storm, Centrum Wiskunde & Informatica, The Netherlands (social media)
+WebCh     Davy Landman, Centrum Wiskunde & Informatica, The Netherlands (web)
+          Publication chair
+PublicaCh Olivier Barais, Université de Rennes 1 / IRISA, France
+          Local organization chair
+LocRegCh  Ivica Crnkovic, Mälardalen University, Sweden
+          General chair
+GeneralCh Jurgen Vinju, Centrum Wiskunde & Informatica, The Netherlands
+          Steering committee members
+SteerCo   Martin Erwig
+SteerCo   Richard Paige
+SteerCo   Jean-Marie Favre
+SteerCo   Tony Sloane
+SteerCo   Eric Van Wyk
+SteerCo   Gorel Hedin
+SteerCo   Jurgen Vinju
+SteerCo   Kim Mens
+SteerCo   Krzysztof Czarnecki
+SteerCh   Mark van den Brand (chair)

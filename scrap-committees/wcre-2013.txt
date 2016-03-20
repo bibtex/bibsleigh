@@ -1,0 +1,99 @@
+##########
+          Organizing Committee
+          General Chair
+GeneralCh Ralf Lämmel – University of Koblenz-Landau, Germany
+          Program Chairs
+ProgramCh Rocco Oliveto – University of Molise, Italy
+ProgramCh Romain Robbes – University of Chile, Chile
+          Tool Demonstration Chairs
+DemoCh    Gabriele Bavota – University of Sannio, Italy
+DemoCh    Vadim Zaytsev – CWI, The Netherlands
+          Workshop Chairs
+WorkspCh  Tudor Girba – CompuGroup Medical Schweiz, Switzerland
+WorkspCh  Foutse Khomh – Ecole Polytechnique of Montréal, Canada
+WorkspCh  Nicholas A. Kraft – The University of Alabama, USA
+          Proceedings Chair
+PublicaCh Huzefa Kagdi – Wichita State University, USA
+          Finance and Registration Chair
+FinanceCh Elliot Chikofsky – Engineering Management & Integration, USA
+          Publicity Chair
+PubRelCh  Felienne Hermans – Delft University of Technology, The Netherlands
+          Web Chair
+WebCh     Venera Arnaoudova – Ecole Polytechnique de Montréal, Canada
+          Mobile Web Chair
+MobileCh  Reid Holmes – University of Waterloo, Canada
+          Hackathon Chair
+HackCh    Andrei Varanovich – University of Koblenz-Landau, Germany
+          Local Arrangements Chairs
+LocRegCo  Sabine Hülstrunk – University of Koblenz-Landau, Germany
+LocRegCo  Manfred Jackel – University of Koblenz-Landau, Germany
+          Steering Committee
+SteerCh   Rainer Koschke (Chair), University of Bremen, Germany
+SteerCo   Elliot Chikofsky, Engineering Management & Integration, USA
+SteerCo   James Cordy, Queen’s University, Canada
+SteerCo   Tom Dean, Queen’s University, Canada
+SteerCo   Leon Moonen, Simula Research Laboratory, Norwey
+          
+          Program Committee
+ProgramCo Abram Hindle, University of Alberta, Canada
+ProgramCo Alberto Bacchelli, University of Lugano, Switzerland
+ProgramCo Alexandre Bergel, University of Chile, Chile
+ProgramCo Ali Mesbah, University of British Columbia, Canada
+ProgramCo Andrea De Lucia, University of Salerno, Italy
+ProgramCo Andreas Winter, Carl von Ossietzky University, Germany
+ProgramCo Andrew Sutton, Texas A&M University, USA
+ProgramCo Andrian Marcus, Wayne State University, USA
+ProgramCo Andy Zaidman, Delft University of Technology, Netherlands
+ProgramCo Annibale Panichella, University of Salerno, Italy
+ProgramCo Anthony Cleve, University of Namur, Belgium
+ProgramCo Bram Adams, Ecole Polytechnique de Montreal, Canada
+ProgramCo Chanchal Roy, University of Saskatchewan, Canada
+ProgramCo Collin Mcmillan, University of Notre-Dame, USA
+ProgramCo Daqing Hou, Clarkson University, USA
+ProgramCo David Lo, Singapore Management University, Singapore
+ProgramCo David Roethlisberger, UTFSM, Chile
+ProgramCo Dawn J. Lawrie, Loyola University Maryland, USA
+ProgramCo Denys Poshyvanyk, College of William and Mary, USA
+ProgramCo Dirk Beyer, Simon Fraser University, Canada
+ProgramCo Emad Shihab, Rochester Institute of Technology, USA
+ProgramCo Elmar Juergens, CQSE GmbH, Germany
+ProgramCo Emily Hill, Montclair State University, USA
+ProgramCo Filippo Ricca, University of Genova, Italy
+ProgramCo Foutse Khomh, Queen’s University, Canada
+ProgramCo Gabriele Bavota, University of Sannio, Italy
+ProgramCo Gerardo Canfora, University of Sannio, Italy
+ProgramCo Giuliano Antoniol, Ecole Polytechnique de Montreal, Canada
+ProgramCo Hausi Muller, University of Victoria, Canada
+ProgramCo Huzefa Kagdi, Wichita State University, USA
+ProgramCo Jairo Aponte, Universidad Nacional de Colombia, Colombia
+ProgramCo James Cordy, Queen’s University, Canada
+ProgramCo Jens Knodel, Fraunhover IESE, Germany
+ProgramCo Jens Krinke, University College London, UK
+ProgramCo Jonathan Maletic, Kent State University, USA
+ProgramCo Jorge Figeiredo, Universidade Federal de Campina Grande, Brazil
+ProgramCo Latifa Guerrouj, Ecole Polytechnique de Montreal, Canada
+ProgramCo Lingxiao Jiang, Singapore Management University, Singapore
+ProgramCo Lori Pollock, University of Delaware, USA
+ProgramCo Lu Zhang, Peking University, China
+ProgramCo Malcom Gethers, University of Maryland, USA
+ProgramCo Mariano Ceccato, Fondazione Bruno Kessler, Italy
+ProgramCo Mark Grechanik, Accenture Technology Labs and University of Illinois, USA
+ProgramCo Mark Harman, University College London, UK
+ProgramCo Martin Pinzger, Delft University of Technology, Netherlands
+ProgramCo Massimiliano Di Penta, University of Sannio, Italy
+ProgramCo Michael Collard, The University of Akron, USA
+ProgramCo Mircea Lungu, University of Bern, Switzerland
+ProgramCo Murray Wood, University of Strathclyde, UK
+ProgramCo Nabor Mendonca, University of Fortaleza, Brazil
+ProgramCo Nicholas Kraft, The University of Alabama, USA
+ProgramCo Radu Marinescu, Politehnica University of Timisoara, Romania
+ProgramCo Raghavan Komondoor, Indian Institute of Science, India
+ProgramCo Rainer Koschke, University of Bremen, Germany
+ProgramCo Sonia Haiduc, Wayne State University, USA
+ProgramCo Spiros Mancoridis, Drexel University, USA
+ProgramCo Thomas Fritz, University of Zurich, Switzerland
+ProgramCo Tom Dean, Queen’s University, Canada
+ProgramCo Vassilios Tzerpos, York University, Canada
+ProgramCo Ying Zou, Queen’s University, Canada
+ProgramCo Zhenchang Xing, National University of Singapore, Singapore
+ProgramCo Zheng Li, Bejing University of Chemical Technology, China

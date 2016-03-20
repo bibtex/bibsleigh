@@ -1,151 +1,151 @@
-#DONE
-     http://www.ase-conferences.org/ase/past/ase2010/committee.html
-     Committees
-     
-     Organisation Committee
-     Program Committee
-     Doctoral Symposium Chairs
-     Tutorial Chairs
-     Workshop Chairs
-     Demonstration Chairs
-     Program Committee
-     
-     Program Chairs
-     
-PrCh Jamie Andrews
-     
-PrCh Elisabetta Di Nitto
-     
-     
-     Program Committee Members
-     
-PrCo Sven Apel
-PrCo Tevfik Bultan
-PrCo Yuanfang Cai
-PrCo Marsha Chechik
-PrCo Vittorio Cortellessa
-PrCo Ivica Crnkovic
-PrCo Krzysztof Czarnecki
-PrCo Ewen Denney
-PrCo Massimiliano Di Penta
-PrCo Wolfgang Emmerich
-PrCo Claudia Ermel
-PrCo Bernd Fischer
-PrCo Michael Goedicke
-     University of Duisburg-Essen, Germany
-PrCo Paul Gruenbacher
-PrCo John Grundy
-PrCo Lars Grunske
-PrCo Robert J. Hall
-PrCo Mary Jean Harrold
-PrCo Mats Heimdahl
-     University of Minnesota Software Engineering Center, USA
-PrCo Reiko Heckel
-     University of Leicester, UK
-PrCo John Hosking
-     University of Auckland, New Zealand
-PrCo Michael Lowry
-PrCo Darko Marinov
-     University of Illinois at Urbana-Champaign, USA
-PrCo Tim Menzies
-PrCo Alex Orso
-PrCo Corina Pasareanu
-PrCo Charles Pecheur
-PrCo Mauro Pezzè
-     University of Lugano, Switzerland
-PrCo Ajitha Rajan
-PrCo David Redmiles
-     University of California, Irvine, USA
-PrCo Debra Richardson
-     University of California, Irvine, USA
-PrCo Beverly Sanders
-     University of Florida, USA
-PrCo Yannis Smaragdakis
-     University of Massachusetts, Amherst, USA
-PrCo Gabi Taentzer
-PrCo Shingo Takada
-PrCo Tetsuo Tamai
-PrCo Daniel Varro
-PrCo Albert Zuendorf
-     University of Kassel, Germany
-     Expert Review Panel Members
-     
-ERP  Perry Alexander
-     University of Kansas, USA
-ERP  Luciano Baresi
-ERP  Wing-Kwong Chan
-ERP  Phyllis Frankl
-ERP  Andrew Ireland
-ERP  Jochen M. Kuester
-ERP  Yves Ledru
-ERP  Jonathan Maletic
-ERP  Sandro Morasca
-ERP  John Penix
-ERP  Peri Tarr
-ERP  Willem Visser
-ERP  Tao Xie
-ERP  Andrea Zisman
-     
-     Scientific Liason
-     
-ScLi Theo D'Hondt
-ScLi Wouter Joosen
-     
-     
-     Doctoral Symposium Chairs
-     
-DSCh Corina Pasareanu
-     
-     
-DSCh John Hosking
-     
-     
-     Tutorial Chairs
-     
-TuCh Thierry Massart
-     
-TuCh John Penix
-     
-     
-     Workshop Chairs
-     
-WoCh Tom Mens
-     
-WoCh Tevfik Bultan
-     
-     Demonstration Chairs
-     
-TTCh Anthony Cleve
-     
-TTCh Bernd Fischer
-     
-     Organisation Committee
-     
-     General Chair
-     
-GeCh Charles Pecheur
-     
-     Local Organisation Chair
-     
-LoCh Serge Demeyer
-     
-     Finance Chair
-     
-FiCh Kim Mens
-     
-     Publicity Chair
-     
-PbCh Dirk Deridder
-     Webmaster
-     
-WeCh Dirk Deridder
-     
-     Publication Chair
-     
-PuCh Jean-François Raskin
-     
-     Sponsor Chairs
-     
-SpCh Viviane Jonckers
-     
-SpCh Pierre-Yves Schobbens
+##########
+          http://www.ase-conferences.org/ase/past/ase2010/committee.html
+          Committees
+          
+          Organisation Committee
+          Program Committee
+          Doctoral Symposium Chairs
+          Tutorial Chairs
+          Workshop Chairs
+          Demonstration Chairs
+          Program Committee
+          
+          Program Chairs
+          
+ProgramCh Jamie Andrews
+          
+ProgramCh Elisabetta Di Nitto
+          
+          
+          Program Committee Members
+          
+ProgramCo Sven Apel
+ProgramCo Tevfik Bultan
+ProgramCo Yuanfang Cai
+ProgramCo Marsha Chechik
+ProgramCo Vittorio Cortellessa
+ProgramCo Ivica Crnkovic
+ProgramCo Krzysztof Czarnecki
+ProgramCo Ewen Denney
+ProgramCo Massimiliano Di Penta
+ProgramCo Wolfgang Emmerich
+ProgramCo Claudia Ermel
+ProgramCo Bernd Fischer
+ProgramCo Michael Goedicke
+          University of Duisburg-Essen, Germany
+ProgramCo Paul Gruenbacher
+ProgramCo John Grundy
+ProgramCo Lars Grunske
+ProgramCo Robert J. Hall
+ProgramCo Mary Jean Harrold
+ProgramCo Mats Heimdahl
+          University of Minnesota Software Engineering Center, USA
+ProgramCo Reiko Heckel
+          University of Leicester, UK
+ProgramCo John Hosking
+          University of Auckland, New Zealand
+ProgramCo Michael Lowry
+ProgramCo Darko Marinov
+          University of Illinois at Urbana-Champaign, USA
+ProgramCo Tim Menzies
+ProgramCo Alex Orso
+ProgramCo Corina Pasareanu
+ProgramCo Charles Pecheur
+ProgramCo Mauro Pezzè
+          University of Lugano, Switzerland
+ProgramCo Ajitha Rajan
+ProgramCo David Redmiles
+          University of California, Irvine, USA
+ProgramCo Debra Richardson
+          University of California, Irvine, USA
+ProgramCo Beverly Sanders
+          University of Florida, USA
+ProgramCo Yannis Smaragdakis
+          University of Massachusetts, Amherst, USA
+ProgramCo Gabi Taentzer
+ProgramCo Shingo Takada
+ProgramCo Tetsuo Tamai
+ProgramCo Daniel Varro
+ProgramCo Albert Zuendorf
+          University of Kassel, Germany
+          Expert Review Panel Members
+          
+ExpertRP  Perry Alexander
+          University of Kansas, USA
+ExpertRP  Luciano Baresi
+ExpertRP  Wing-Kwong Chan
+ExpertRP  Phyllis Frankl
+ExpertRP  Andrew Ireland
+ExpertRP  Jochen M. Kuester
+ExpertRP  Yves Ledru
+ExpertRP  Jonathan Maletic
+ExpertRP  Sandro Morasca
+ExpertRP  John Penix
+ExpertRP  Peri Tarr
+ExpertRP  Willem Visser
+ExpertRP  Tao Xie
+ExpertRP  Andrea Zisman
+          
+          Scientific Liason
+          
+ScientLi  Theo D'Hondt
+ScientLi  Wouter Joosen
+          
+          
+          Doctoral Symposium Chairs
+          
+DocSymCh  Corina Pasareanu
+          
+          
+DocSymCh  John Hosking
+          
+          
+          Tutorial Chairs
+          
+TutorCh   Thierry Massart
+          
+TutorCh   John Penix
+          
+          
+          Workshop Chairs
+          
+WorkspCh  Tom Mens
+          
+WorkspCh  Tevfik Bultan
+          
+          Demonstration Chairs
+          
+DemoCh    Anthony Cleve
+          
+DemoCh    Bernd Fischer
+          
+          Organisation Committee
+          
+          General Chair
+          
+GeneralCh Charles Pecheur
+          
+          Local Organisation Chair
+          
+LocRegCh  Serge Demeyer
+          
+          Finance Chair
+          
+FinanceCh Kim Mens
+          
+          Publicity Chair
+          
+PubRelCh  Dirk Deridder
+          Webmaster
+          
+WebCh     Dirk Deridder
+          
+          Publication Chair
+          
+PublicaCh Jean-François Raskin
+          
+          Sponsor Chairs
+          
+SponsorCh Viviane Jonckers
+          
+SponsorCh Pierre-Yves Schobbens

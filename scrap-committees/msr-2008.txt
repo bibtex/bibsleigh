@@ -1,100 +1,100 @@
-#DONE
-     http://msr.uwaterloo.ca/msr2008/index.html
-     General Chair
-     
-GeCh Ahmed E. Hassan
-     
-     Program Co-chairs
-     
-PrCh Michele Lanza
-     University of Lugano, Switzerland
-PrCh Michael W. Godfrey
-     University of Waterloo, Canada
-     
-     Challenge Chair
-     
-ChCh Sung Kim
-     Program Committee
-     
-PrCo Tsuneo Ajisaka
-     (Wakayama U., Japan)
-PrCo Giuliano Antoniol
-     (École Polytechnique de Montréal, Canada)
-PrCo Abraham Bernstein
-     (U. of Zurich, Switzerland)
-PrCo Prem Devanbu
-     (U. of California, USA)
-PrCo Stephan Diehl
-     (U. of Trier, Germany)
-PrCo Massimiliano di Penta
-     (U. of Sannio, Italy)
-PrCo Harald Gall
-     (U. of Zurich, Switzerland)
-PrCo Daniel German
-     (U. of Victoria, Canada)
-PrCo Tudor Girba
-     (U. of Bern, Switzerland)
-PrCo Yann-Gael Gueheneuc
-     (U. de Montreal, Canada)
-PrCo Ric Holt
-     (U. Waterloo, Canada)
-PrCo Katsuro Inoue
-     (Osaka U., Japan)
-PrCo Jonathan Maletic
-     (Kent State U., USA)
-PrCo Andrian Marcus
-     (Wayne State U., USA)
-PrCo Radu Marinescu
-     (TU Timisoara, Romania)
-PrCo Audris Mockus
-     (Avaya Labs, USA)
-PrCo Leon Moonen
-     (Delft U. of Tech., Netherlands)
-PrCo David Notkin
-     (U. of Washington, USA)
-PrCo Masao Ohira
-     (NAIST, Japan)
-PrCo Alex Orso
-     (Georgia Tech, USA)
-PrCo Dewayne Perry
-     (U. of Texas, USA)
-PrCo Martin Pinzger
-     (U. of Zurich, Switzerland)
-PrCo Gregorio Robles
-     (U. of Rey Juan Carlos, Spain)
-PrCo Jelber Sayyad Shirabad
-     (Ottawa U., Canada)
-PrCo Alexandru Telea
-     (Eindhoven TU, The Netherlands)
-PrCo Annie Ying
-     (IBM Research, USA)
-PrCo Jim Whitehead
-     (U. of California, USA)
-PrCo Andreas Zeller
-     (Saarland U., Germany)
-PrCo Thomas Zimmermann
-     (U. of Calgary, Canada)
-     
-     Local Arrangement Chair
-     
-LoCh Thomas Zimmermann
-     University of Calgary, Canada
-     Web Chair
-     
-WeCh Marco D'Ambros
-     University of Lugano, Switzerland
-     
-     Steering Committee
-     
-StCo Ahmed E. Hassan
-     
-StCo Audris Mockus
-     
-StCo Ric Holt
-     University of Waterloo, Canada
-StCo Katsuro Inoue
-     
-StCo Stephan Diehl
-     University Trier
-StCo Harald Gall
-     University of Zurich
+##########
+          http://msr.uwaterloo.ca/msr2008/index.html
+          General Chair
+          
+GeneralCh Ahmed E. Hassan
+          
+          Program Co-chairs
+          
+ProgramCh Michele Lanza
+          University of Lugano, Switzerland
+ProgramCh Michael W. Godfrey
+          University of Waterloo, Canada
+          
+          Challenge Chair
+          
+ChalngCh  Sung Kim
+          Program Committee
+          
+ProgramCo Tsuneo Ajisaka
+          (Wakayama U., Japan)
+ProgramCo Giuliano Antoniol
+          (École Polytechnique de Montréal, Canada)
+ProgramCo Abraham Bernstein
+          (U. of Zurich, Switzerland)
+ProgramCo Prem Devanbu
+          (U. of California, USA)
+ProgramCo Stephan Diehl
+          (U. of Trier, Germany)
+ProgramCo Massimiliano di Penta
+          (U. of Sannio, Italy)
+ProgramCo Harald Gall
+          (U. of Zurich, Switzerland)
+ProgramCo Daniel German
+          (U. of Victoria, Canada)
+ProgramCo Tudor Girba
+          (U. of Bern, Switzerland)
+ProgramCo Yann-Gael Gueheneuc
+          (U. de Montreal, Canada)
+ProgramCo Ric Holt
+          (U. Waterloo, Canada)
+ProgramCo Katsuro Inoue
+          (Osaka U., Japan)
+ProgramCo Jonathan Maletic
+          (Kent State U., USA)
+ProgramCo Andrian Marcus
+          (Wayne State U., USA)
+ProgramCo Radu Marinescu
+          (TU Timisoara, Romania)
+ProgramCo Audris Mockus
+          (Avaya Labs, USA)
+ProgramCo Leon Moonen
+          (Delft U. of Tech., Netherlands)
+ProgramCo David Notkin
+          (U. of Washington, USA)
+ProgramCo Masao Ohira
+          (NAIST, Japan)
+ProgramCo Alex Orso
+          (Georgia Tech, USA)
+ProgramCo Dewayne Perry
+          (U. of Texas, USA)
+ProgramCo Martin Pinzger
+          (U. of Zurich, Switzerland)
+ProgramCo Gregorio Robles
+          (U. of Rey Juan Carlos, Spain)
+ProgramCo Jelber Sayyad Shirabad
+          (Ottawa U., Canada)
+ProgramCo Alexandru Telea
+          (Eindhoven TU, The Netherlands)
+ProgramCo Annie Ying
+          (IBM Research, USA)
+ProgramCo Jim Whitehead
+          (U. of California, USA)
+ProgramCo Andreas Zeller
+          (Saarland U., Germany)
+ProgramCo Thomas Zimmermann
+          (U. of Calgary, Canada)
+          
+          Local Arrangement Chair
+          
+LocRegCh  Thomas Zimmermann
+          University of Calgary, Canada
+          Web Chair
+          
+WebCh     Marco D'Ambros
+          University of Lugano, Switzerland
+          
+          Steering Committee
+          
+SteerCo   Ahmed E. Hassan
+          
+SteerCo   Audris Mockus
+          
+SteerCo   Ric Holt
+          University of Waterloo, Canada
+SteerCo   Katsuro Inoue
+          
+SteerCo   Stephan Diehl
+          University Trier
+SteerCo   Harald Gall
+          University of Zurich

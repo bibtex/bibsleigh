@@ -1,76 +1,76 @@
-#DONE
-     https://mail.python.org/pipermail/python-announce-list/2008-June/006703.html
-     
-     Keynote Speakers
-     ----------------
-     
-KN   * Mark van den Brand, TU Eindhoven, The Netherlands
-KN   * Anneke Kleppe, Capgemini, The Netherlands
-     
-     Organization
-     ------------
-     
-     Steering Committee
-StCo * Mark van den Brand, TU Eindhoven, The Netherlands
-StCo * James Cordy, Queen's University, Canada
-StCo * Jean-Marie Favre, University of Grenoble, France
-StCo * Dragan Gasevic, Athabasca University, Canada
-StCo * Gorel Hedin, Lund University, Sweden
-StCo * Ralf Laemmel, Universitat Koblenz-Landau, Germany
-StCo * Eric Van Wyk, University of Minnesota, USA
-StCo * Andreas Winter, Johannes Gutenberg-Universitat Mainz, Germany
-     
-     General Chair
-GeCh * Ralf Laemmel, Universitat Koblenz-Landau, Germany
-     
-     Program Committee Co-Chairs
-PrCh * Dragan Gasevic, Athabasca University, Canada
-PrCh * Eric Van Wyk, University of Minnesota, USA
-     
-     Web Chair
-WeCh * Jean-Sebastien Sottet, , University of Grenoble, France
-     Organization Committee
-OrCo * Jean-Marie Favre, University of Grenoble, France
-OrCo * Andreas Winter, Johannes Gutenberg-Universitat Mainz, Germany
-PbCh * Steffen Zschaler, Publicity Chair, TU Dresden, Germany
-     
-     Program Committee
-PrCo * Uwe Aßmann, Technische Universitaet Dresden, Germany
-PrCo * Colin Atkinson, Universität Mannheim, Germany
-PrCo * Jean Bezivin, Uinversité de Nantes, France
-PrCo * Judith Bishop, University of Pretoria, South Africa
-PrCo * Marco Brambilla, Politecnico di Milano, Italy
-PrCo * Martin Bravenboer, Unversity of Oregon, USA
-PrCo * Charles Consel, Uinversity of Paris VI, France
-PrCo * Torbjörn Ekman, Oxford University, England
-PrCo * Gregor Engels, Universität Paderborn, Germany
-PrCo * Robert Fuhrer, IBM, USA
-PrCh * Dragan Gasevic, co-chair, Athabasca University, Canada
-PrCo * Martin Gogolla, University of Bremen, Germany
-PrCo * Jeff Gray, University of Alabama at Birmingham, USA
-PrCo * Klaus Havelund, NASA Jet Propulsion Labs, USA
-PrCo * Reiko Heckel, Uinversity of Leicester, England
-PrCo * Nigel Horspool, Univeristy of Victoria, Canada
-PrCo * Joe Kiniry, University College Dublin, Ireland
-PrCo * Paul Klint, CWI, The Netherlands
-PrCo * Mitch Kokar, Northeaster Univeristy, USA
-PrCo * Thomas Kuehne, Victoria University of Wellington, New Zealand
-PrCo * Julia Lawall, DIKU, Denmark
-PrCo * Oege de Moor, Oxford University, England
-PrCo * Pirre-Etienne Moreau, INRIA & LORIA, France
-PrCo * Pierre-Alain Muller, University of Haute-Alsace, France
-PrCo * Richard Paige, University of York, England
-PrCo * Jeff Pan, University of Aberdeen, Scotland
-PrCo * João Saraiva, Universidad do Minho, Portugal
-PrCo * Micael Schwartzbach, University of Aarhus, Denmark
-PrCo * Anthony Sloane, Macquarie University, Australia
-PrCo * Steffen Staab, University of Koblenz-Landau, Germany
-PrCo * Laurence Tratt, Bournemouth University, England
-PrCo * Walid Taha, Rice University, USA
-PrCo * Eli Tilevich, Virginia Tech, USA
-PrCo * Juha-Pekka Tolvanen, MetaCase, Finland
-PrCh * Eric Van Wyk, co-chair, University of Minnesota, USA
-PrCo * Jurgen Vinju, CWI, The Netherlands
-PrCo * Mike Whalen, Rockwell Collins, USA
-PrCo * Steffen Zschaler, Technische Universitaet Dresden, Germany
-     
+##########
+          https://mail.python.org/pipermail/python-announce-list/2008-June/006703.html
+          
+          Keynote Speakers
+          ----------------
+          
+KeyNote   * Mark van den Brand, TU Eindhoven, The Netherlands
+KeyNote   * Anneke Kleppe, Capgemini, The Netherlands
+          
+          Organization
+          ------------
+          
+          Steering Committee
+SteerCo   * Mark van den Brand, TU Eindhoven, The Netherlands
+SteerCo   * James Cordy, Queen's University, Canada
+SteerCo   * Jean-Marie Favre, University of Grenoble, France
+SteerCo   * Dragan Gasevic, Athabasca University, Canada
+SteerCo   * Gorel Hedin, Lund University, Sweden
+SteerCo   * Ralf Laemmel, Universitat Koblenz-Landau, Germany
+SteerCo   * Eric Van Wyk, University of Minnesota, USA
+SteerCo   * Andreas Winter, Johannes Gutenberg-Universitat Mainz, Germany
+          
+          General Chair
+GeneralCh * Ralf Laemmel, Universitat Koblenz-Landau, Germany
+          
+          Program Committee Co-Chairs
+ProgramCh * Dragan Gasevic, Athabasca University, Canada
+ProgramCh * Eric Van Wyk, University of Minnesota, USA
+          
+          Web Chair
+WebCh     * Jean-Sebastien Sottet, , University of Grenoble, France
+          Organization Committee
+OrganCo   * Jean-Marie Favre, University of Grenoble, France
+OrganCo   * Andreas Winter, Johannes Gutenberg-Universitat Mainz, Germany
+PubRelCh  * Steffen Zschaler, Publicity Chair, TU Dresden, Germany
+          
+          Program Committee
+ProgramCo * Uwe Aßmann, Technische Universitaet Dresden, Germany
+ProgramCo * Colin Atkinson, Universität Mannheim, Germany
+ProgramCo * Jean Bezivin, Uinversité de Nantes, France
+ProgramCo * Judith Bishop, University of Pretoria, South Africa
+ProgramCo * Marco Brambilla, Politecnico di Milano, Italy
+ProgramCo * Martin Bravenboer, Unversity of Oregon, USA
+ProgramCo * Charles Consel, Uinversity of Paris VI, France
+ProgramCo * Torbjörn Ekman, Oxford University, England
+ProgramCo * Gregor Engels, Universität Paderborn, Germany
+ProgramCo * Robert Fuhrer, IBM, USA
+ProgramCh * Dragan Gasevic, co-chair, Athabasca University, Canada
+ProgramCo * Martin Gogolla, University of Bremen, Germany
+ProgramCo * Jeff Gray, University of Alabama at Birmingham, USA
+ProgramCo * Klaus Havelund, NASA Jet Propulsion Labs, USA
+ProgramCo * Reiko Heckel, Uinversity of Leicester, England
+ProgramCo * Nigel Horspool, Univeristy of Victoria, Canada
+ProgramCo * Joe Kiniry, University College Dublin, Ireland
+ProgramCo * Paul Klint, CWI, The Netherlands
+ProgramCo * Mitch Kokar, Northeaster Univeristy, USA
+ProgramCo * Thomas Kuehne, Victoria University of Wellington, New Zealand
+ProgramCo * Julia Lawall, DIKU, Denmark
+ProgramCo * Oege de Moor, Oxford University, England
+ProgramCo * Pirre-Etienne Moreau, INRIA & LORIA, France
+ProgramCo * Pierre-Alain Muller, University of Haute-Alsace, France
+ProgramCo * Richard Paige, University of York, England
+ProgramCo * Jeff Pan, University of Aberdeen, Scotland
+ProgramCo * João Saraiva, Universidad do Minho, Portugal
+ProgramCo * Micael Schwartzbach, University of Aarhus, Denmark
+ProgramCo * Anthony Sloane, Macquarie University, Australia
+ProgramCo * Steffen Staab, University of Koblenz-Landau, Germany
+ProgramCo * Laurence Tratt, Bournemouth University, England
+ProgramCo * Walid Taha, Rice University, USA
+ProgramCo * Eli Tilevich, Virginia Tech, USA
+ProgramCo * Juha-Pekka Tolvanen, MetaCase, Finland
+ProgramCh * Eric Van Wyk, co-chair, University of Minnesota, USA
+ProgramCo * Jurgen Vinju, CWI, The Netherlands
+ProgramCo * Mike Whalen, Rockwell Collins, USA
+ProgramCo * Steffen Zschaler, Technische Universitaet Dresden, Germany
+          

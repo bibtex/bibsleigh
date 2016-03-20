@@ -1,7 +1,7 @@
-#DONE
-     http://lambda-the-ultimate.org/node/2436
-     a.johnstone@rhul.ac.uk and jurgen.vinju@cwi.nl
-     (Manually examined, decided this)
-     PC co-chairs
-PrCh Adrian Johnstone
-PrCh Jurgen Vinju
+##########
+          http://lambda-the-ultimate.org/node/2436
+          a.johnstone@rhul.ac.uk and jurgen.vinju@cwi.nl
+          (Manually examined, decided this)
+          PC co-chairs
+ProgramCh Adrian Johnstone
+ProgramCh Jurgen Vinju

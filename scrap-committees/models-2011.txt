@@ -1,0 +1,122 @@
+##########
+          http://ecs.victoria.ac.nz/Events/MODELS2011/Organisers
+          Organisers
+          General Chair
+GeneralCh Thomas Kühne
+          Local Chairs
+LocRegCh  Stuart Marshall
+LocRegCh  Hui Ma
+          Program Chairs
+ProgramCh Jon Whittle (Foundations)
+ProgramCh Tony Clark (Applications)
+          Publicity Chair 	Werner Heijstek
+PubRelCh  Workshop Chair 	Jörg Kienzle
+          Tutorial Chair 	Vasco Amaral
+          Panel Chair 	Colin Atkinson
+          Doctoral Symposium Chair 	Joerg Evermann
+DocSymCh  Ivan Porres
+DocSymCh  Educators' Symposium Chair 	Marion Brandsteidl
+DocSymCh  Andreas Winter
+          
+          http://ecs.victoria.ac.nz/Events/MODELS2011/ProgramCommittees
+          Program Committees
+ProgramCo Foundations Track
+ProgramCo Daniel Amyot 	University of Ottawa, Canada
+ProgramCo Colin Atkinson 	University of Mannheim, Germany
+ProgramCo Joanne M. Atlee 	University of Waterloo, Canada
+ProgramCo Don Batory 	UT Austin, USA
+ProgramCo Benoit Baudry 	INRIA, France
+ProgramCo Paulo Borba 	Federal University of Pernambuco, Brazil
+ProgramCo Ruth Breu 	University of Innsbruck, Austria
+ProgramCo Lionel Briand 	Simula Research Laboratory and University of Oslo, Norway
+ProgramCo Jean-Michel Bruel 	University of Toulouse, France
+ProgramCo Jordi Cabot 	INRIA / École des Mines de Nantes, France
+ProgramCo Michel Chaudron 	Leiden University, The Netherlands
+ProgramCo Marsha Chechik 	University of Toronto, Canada
+ProgramCo Jane Cleland-Huang 	DePaul University, USA
+ProgramCo Krzysztof Czarnecki 	University of Waterloo, Canada
+ProgramCo Juergen Dingel 	Queens University, Canada
+ProgramCo Alexander Egyed 	Johannes Kepler University , Austria
+ProgramCo Gregor Engels 	University of Paderborn, Germany
+ProgramCo Rik Eshuis 	Eindhoven University of Technology, The Netherlands
+ProgramCo Robert France 	Colorado State University, USA
+ProgramCo Sébastien Gérard 	CEA LIST, France
+ProgramCo Holger Giese 	Hasso Plattner Institute, University of Potsdam, Germany
+ProgramCo Martin Glinz 	Universität Zürich, Switzerland
+ProgramCo Martin Gogolla 	University of Bremen, Germany
+ProgramCo Aniruddha Gokhale 	Vanderbilt University, USA
+ProgramCo Jeff Gray 	University of Alabama, USA
+ProgramCo John Grundy 	Swinburne University of Technology, Australia
+ProgramCo Mark Harman 	CREST Centre, University College London, UK
+ProgramCo Øystein Haugen 	SINTEF, Norway
+ProgramCo Mats Heimdahl 	University of Minnesota, USA
+ProgramCo Patrick Heymans 	University of Namur, Belgium
+ProgramCo John Howse 	University of Brighton, UK
+ProgramCo Zhenjiang Hu 	National Institute of Informatics, Japan
+ProgramCo Heinrich Hussmann 	Ludwig-Maximilians-Universität München, Germany
+ProgramCo Paola Inverardi 	University of L'Aquila, Italy
+ProgramCo Jan Jürjens 	TU Dortmund and Fraunhofer ISST, Germany
+ProgramCo Shmuel Katz 	Technion - Israel Institute of Technology, Israel
+ProgramCo Gerti Kappel 	Vienna University of Technology, Austria
+ProgramCo Gabor Karsai 	Vanderbilt University, USA
+ProgramCo Jörg Kienzle 	McGill University, Canada
+ProgramCo Ingolf Krüger 	UCSD, USA
+ProgramCo Thomas Kühne 	Victoria University of Wellington, New Zealand
+ProgramCo Jochen Kuester 	IBM Research - Zurich, Switzerland
+ProgramCo Michael Lawley 	CSIRO, Australia
+ProgramCo Timothy C. Lethbridge 	University of Ottawa, Canada
+ProgramCo Hong MEI 	Peking University, China
+ProgramCo Tom Mens 	Université de Mons, Belgium
+ProgramCo Ana Moreira 	Universidade Nova de Lisboa, Portugal
+ProgramCo Pierre-Alain Muller 	Université de Haute-Alsace, France
+ProgramCo Richard Paige 	University of York, UK
+ProgramCo Mauro Pezzè 	University of Lugano and University of Milano Bicocca, Switzerland/Italy
+ProgramCo Dorina C. Petriu 	Carleton University, Canada
+ProgramCo Alfonso Pierantonio 	University of L'Aquila, Italy
+ProgramCo Ivan Porres 	Abo Akademi University, Finland
+ProgramCo Nicolas Rouquette 	NASA JPL, USA
+ProgramCo Bernhard Rumpe 	RWTH Aachen University, Germany
+ProgramCo Andy Schürr 	Technische Universität Darmstadt, Germany
+ProgramCo Bran Selic 	Malina Software Corp., Canada
+ProgramCo Miroslaw Staron 	University of Gothenburg and Chalmers, Sweden
+ProgramCo Perdita Stevens 	University of Edinburgh, UK
+ProgramCo Paul Strooper 	University of Queensland, Australia
+ProgramCo Kevin Sullivan 	University of Virginia, USA
+ProgramCo Daniel Varro 	Budapest University of Technology and Economics, Hungary
+ProgramCo Eelco Visser 	Delft University of Technology, The Netherlands
+ProgramCo Liming Zhu 	NICTA, Australia
+ProgramCo Steffen Zschaler 	King's College, London, UK
+          
+ProgramCo Applications Track
+ProgramCo Patrick Albert 	IBM CAS France, France
+ProgramCo Robert Baillargeon 	Sodius, USA
+ProgramCo Edward J. Barkmeyer 	National Institute of Standards & Technology, USA
+ProgramCo Balbir Barn 	University of Middlesex, UK
+ProgramCo Mariano Belaunde 	Orange Labs, France
+ProgramCo Jorn Bettin 	Sofismo, Switzerland
+ProgramCo Rao Bhaskar 	Motorola, India
+ProgramCo Behzad Bordbar 	University of Birmingham, UK
+ProgramCo William Cook 	University of Texas at Austin, USA
+ProgramCo Diarmuid Corcoran 	Ericsson Software Research, Sweden
+ProgramCo Huascar Espinoza 	TECNALIA-European Software Institute, Spain
+ProgramCo Geri Georg 	Colorado State University, USA
+ProgramCo Jack Greenfield 	Microsoft Corporation, USA
+ProgramCo Pavel Hruby 	CSC, Denmark
+ProgramCo Narendra Jussien 	Ecole des Mines de Nantes, France
+ProgramCo Vinay Kulkarni 	Tata Consultancy Services, India
+ProgramCo Stephen J. Mellor 	UK
+ProgramCo Dragan Milicev 	University of Belgrade, Serbia
+ProgramCo Hiroshi Miyazaki 	Fujitsu, Japan
+ProgramCo Juan Carlos Molina Udaeta 	CARE Technologies, S.A., Spain
+ProgramCo Syed Salman Qadri 	The Mathworks, Inc., USA
+ProgramCo Ina Schieferdecker 	TU Berlin/Fraunhofer FOKUS, Germany
+ProgramCo Bran Selic 	Malina Software Corp., Canada
+ProgramCo Richard Soley 	Object Management Group, USA
+ProgramCo Ingo Stürmer 	Model Engineering Solutions GmbH, Germany
+ProgramCo Jun Sun 	Singapore University of Technology and Design, Singapore
+ProgramCo Francois Terrier 	CEA-LIST, France
+ProgramCo Laurence Tratt 	Middlesex University, UK
+ProgramCo Michael von der Beeck 	BMW Group, Germany
+ProgramCo Thomas Weigert 	Missouri University of Science and Technology, USA
+ProgramCo Frank Weil 	UniqueSoft, USA
+ProgramCo Ed Willink 	Eclipse Modeling Project, UK
