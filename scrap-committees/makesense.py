@@ -146,8 +146,7 @@ for i in range(0, len(lines)):
 		'Tool Demonstrations Track Chairs', 'Tools Track Co-chair',\
 		'Exhibition and Demo Chair')):
 		status, mode = BLANK, 'DemoCh'
-	elif matchs(line, ('Industry track program committee', )):
-		# elif matchs(line, ('Industry track program committee', 'Applications Track')):
+	elif matchs(line, ('Industry track program committee', 'Applications Track')):
 		status, mode = BLANK, 'PractCo'
 	elif matchs(line, ('Industry Track', 'Industrial Track Co-chair',\
 		'Industry Liaison', 'Industrial Liaison Chair')):

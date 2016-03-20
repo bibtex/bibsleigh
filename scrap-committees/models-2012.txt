@@ -104,31 +104,31 @@ ProgramCo Jon Whittle, Lancaster	University, UK
 ProgramCo Andrea Zisman, City	University, UK
 ProgramCo Steffen Zschaler, King’s College London, UK
           Program Committee: Applications Track
-ProgramCo Alfred Aue, Cap Gemini, Germany
-ProgramCo Robert Baillargeon, Sodius, USA
-ProgramCo Balbir Barn, Middlesex	University, UK
-ProgramCo Klaus Beetz, EIT ICT Labs, Germany
-ProgramCo Nelly Bencomo, INRIA, France
-ProgramCo Brian Berenbach, Siemens Corporate Research, USA
-ProgramCo Bezhad Bordbar,	University of Birmingham, UK
-ProgramCo Rudolf Haggenmüller, ITEA, Germany
-ProgramCo Øystein Haugen, SINTEF, Norway
-ProgramCo Pavel Hruby, CSC, Denmark
-ProgramCo Cornel Klein, Siemens AG, Germany
-ProgramCo Georg Kreuch, ATOS, Austria
-ProgramCo Vinay Kulkarni, Tata Consultancy Services, India
-ProgramCo Thomas Mayerdorfer, Siemens AG, Austria
-ProgramCo Stephen J. Mellor, Independent Consultant, UK
-ProgramCo Dan Paulish, SCR, USA
-ProgramCo Isabelle Perseil, INSERM, France
-ProgramCo Rob Pettit, The Aerospace Corp., USA
-ProgramCo Bernhard Schätz, Technical	University of Munich, Germany
-ProgramCo Wolfram Schulte, Microsoft, USA
-ProgramCo Sebastin Thoma, ATOS, Germany
-ProgramCo Juha-Pekka Tolvanen MetaCase, Finland
-ProgramCo Laurence Tratt, King’s College, UK
-ProgramCo Michael von der Beeck    BMW Group, Germany
-ProgramCo Frank Weil     UniqueSoft, USA
+PractCo   Alfred Aue, Cap Gemini, Germany
+PractCo   Robert Baillargeon, Sodius, USA
+PractCo   Balbir Barn, Middlesex	University, UK
+PractCo   Klaus Beetz, EIT ICT Labs, Germany
+PractCo   Nelly Bencomo, INRIA, France
+PractCo   Brian Berenbach, Siemens Corporate Research, USA
+PractCo   Bezhad Bordbar,	University of Birmingham, UK
+PractCo   Rudolf Haggenmüller, ITEA, Germany
+PractCo   Øystein Haugen, SINTEF, Norway
+PractCo   Pavel Hruby, CSC, Denmark
+PractCo   Cornel Klein, Siemens AG, Germany
+PractCo   Georg Kreuch, ATOS, Austria
+PractCo   Vinay Kulkarni, Tata Consultancy Services, India
+PractCo   Thomas Mayerdorfer, Siemens AG, Austria
+PractCo   Stephen J. Mellor, Independent Consultant, UK
+PractCo   Dan Paulish, SCR, USA
+PractCo   Isabelle Perseil, INSERM, France
+PractCo   Rob Pettit, The Aerospace Corp., USA
+PractCo   Bernhard Schätz, Technical	University of Munich, Germany
+PractCo   Wolfram Schulte, Microsoft, USA
+PractCo   Sebastin Thoma, ATOS, Germany
+PractCo   Juha-Pekka Tolvanen MetaCase, Finland
+PractCo   Laurence Tratt, King’s College, UK
+PractCo   Michael von der Beeck    BMW Group, Germany
+PractCo   Frank Weil     UniqueSoft, USA
           Steering Committee
 SteerCh   Geri Georg (Chair)
 SteerCh   Gregor Engels (Vice Chair)

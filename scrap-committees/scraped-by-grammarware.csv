@@ -60,8 +60,8 @@ ASE;2010;Thierry;Massart;Male;Tutorials Chair
 ASE;2010;John;Penix;Male;Tutorials Chair
 ASE;2010;Tom;Mens;Male;Workshop Chair
 ASE;2010;Tevfik;Bultan;;Workshop Chair
-ASE;2010;Anthony;Cleve;Male;Tool Track Chair
-ASE;2010;Bernd;Fischer;Male;Tool Track Chair
+ASE;2010;Anthony;Cleve;Male;Demo Track Chair
+ASE;2010;Bernd;Fischer;Male;Demo Track Chair
 ASE;2010;Charles;Pecheur;Male;General Chair
 ASE;2010;Serge;Demeyer;Male;Local Chair
 ASE;2010;Kim;Mens;Male;Finance Chair
@@ -73,7 +73,7 @@ ASE;2010;Pierre-Yves;Schobbens;Male;Sponsor Chair
 ASE;2011;Perry;Alexander;;General Chair
 ASE;2011;Corina;Pasareanu;Female;Program Chair
 ASE;2011;John;Hosking;Male;Program Chair
-ASE;2011;Reiko;Heckel;;Tool Track Chair
+ASE;2011;Reiko;Heckel;;Demo Track Chair
 ASE;2011;Tim;Menzies;Male;Doctoral Symposium Chair
 ASE;2011;Motoshi;Saeki;;Doctoral Symposium Chair
 ASE;2011;Yuanfang;Cai;;Tutorials Chair
@@ -148,8 +148,8 @@ ASE;2011;Andrea;Zisman;Female;Expert Review Panel
 ASE;2012;Michael;Goedicke;Male;General Chair
 ASE;2012;Tim;Menzies;Male;Program Chair
 ASE;2012;Motoshi;Saeki;;Program Chair
-ASE;2012;Ewen;Denney;Male;Tool Track Chair
-ASE;2012;Bernd;Fischer;Male;Tool Track Chair
+ASE;2012;Ewen;Denney;Male;Demo Track Chair
+ASE;2012;Bernd;Fischer;Male;Demo Track Chair
 ASE;2012;Tevfik;Bultan;;Doctoral Symposium Chair
 ASE;2012;Andreas;Zeller;Male;Doctoral Symposium Chair
 ASE;2012;Darko;Marinov;Male;Workshop Chair
@@ -227,25 +227,25 @@ ASE;2012;Corina;Pasareanu;Female;Expert Review Panel
 ASE;2012;Douglas;Smith;Male;Expert Review Panel
 ASE;2012;Virginie;Wiels;Female;Expert Review Panel
 ASE;2012;Andrea;Zisman;Female;Expert Review Panel
-ASE;2012;David;Aspinall;Male;Tool Track Program Committee
-ASE;2012;Gilles;Barthe;Male;Tool Track Program Committee
-ASE;2012;Anthony;Cleve;Male;Tool Track Program Committee
-ASE;2012;Rohit;Gheyi;Male;Tool Track Program Committee
-ASE;2012;Christoph;Gladisch;Male;Tool Track Program Committee
-ASE;2012;Paul;Gruenbacher;Male;Tool Track Program Committee
-ASE;2012;Robert;Hall;Male;Tool Track Program Committee
-ASE;2012;Reiko;Heckel;;Tool Track Program Committee
-ASE;2012;John;Hosking;Male;Tool Track Program Committee
-ASE;2012;Andrew;Ireland;Male;Tool Track Program Committee
-ASE;2012;Anjali;Joshi;;Tool Track Program Committee
-ASE;2012;Jens;Krinke;Male;Tool Track Program Committee
-ASE;2012;Julia;Lawall;Female;Tool Track Program Committee
-ASE;2012;Michael;Lowry;Male;Tool Track Program Committee
-ASE;2012;John;Penix;Male;Tool Track Program Committee
-ASE;2012;Suresh;Thummalapenta;Male;Tool Track Program Committee
-ASE;2012;Daniel;Varro;Male;Tool Track Program Committee
-ASE;2012;Michael;Whalen;Male;Tool Track Program Committee
-ASE;2012;Andrea;Zisman;Female;Tool Track Program Committee
+ASE;2012;David;Aspinall;Male;Demo Track Program Committee
+ASE;2012;Gilles;Barthe;Male;Demo Track Program Committee
+ASE;2012;Anthony;Cleve;Male;Demo Track Program Committee
+ASE;2012;Rohit;Gheyi;Male;Demo Track Program Committee
+ASE;2012;Christoph;Gladisch;Male;Demo Track Program Committee
+ASE;2012;Paul;Gruenbacher;Male;Demo Track Program Committee
+ASE;2012;Robert;Hall;Male;Demo Track Program Committee
+ASE;2012;Reiko;Heckel;;Demo Track Program Committee
+ASE;2012;John;Hosking;Male;Demo Track Program Committee
+ASE;2012;Andrew;Ireland;Male;Demo Track Program Committee
+ASE;2012;Anjali;Joshi;;Demo Track Program Committee
+ASE;2012;Jens;Krinke;Male;Demo Track Program Committee
+ASE;2012;Julia;Lawall;Female;Demo Track Program Committee
+ASE;2012;Michael;Lowry;Male;Demo Track Program Committee
+ASE;2012;John;Penix;Male;Demo Track Program Committee
+ASE;2012;Suresh;Thummalapenta;Male;Demo Track Program Committee
+ASE;2012;Daniel;Varro;Male;Demo Track Program Committee
+ASE;2012;Michael;Whalen;Male;Demo Track Program Committee
+ASE;2012;Andrea;Zisman;Female;Demo Track Program Committee
 ASE;2012;Ivar;Jacobson;Male;Keynote Speaker
 ASE;2012;Mark;Harman;Male;Keynote Speaker
 ASE;2013;Ewen;Denney;Male;General Chair
@@ -253,8 +253,8 @@ ASE;2013;Tevfik;Bultan;;Program Chair
 ASE;2013;Andreas;Zeller;Male;Program Chair
 ASE;2013;Marcelo;d'Amorim;Male;Workshop Chair
 ASE;2013;David;Lo;Male;Workshop Chair
-ASE;2013;Andrew;Ireland;Male;Tool Track Chair
-ASE;2013;Neha;Rungta;;Tool Track Chair
+ASE;2013;Andrew;Ireland;Male;Demo Track Chair
+ASE;2013;Neha;Rungta;;Demo Track Chair
 ASE;2013;Paul;Gruenbacher;Male;Doctoral Symposium Chair
 ASE;2013;Marsha;Chechik;Female;Doctoral Symposium Chair
 ASE;2013;Ganesh;Pai;Male;Finance Chair
@@ -329,8 +329,8 @@ ASE;2013;Jeremy;Frank;Male;Keynote Speaker
 ASE;2014;Ivica;Crnkovic;Male;General Chair
 ASE;2014;Marsha;Chechik;Female;Program Chair
 ASE;2014;Paul;Grünbacher;Male;Program Chair
-ASE;2014;Arie;Gurfinkel;Male;Tool Track Chair
-ASE;2014;Gabriele;Taentzer;Female;Tool Track Chair
+ASE;2014;Arie;Gurfinkel;Male;Demo Track Chair
+ASE;2014;Gabriele;Taentzer;Female;Demo Track Chair
 ASE;2014;Elisabetta;Di Nitto;Female;Tutorials Chair
 ASE;2014;Michel;Chaudron;Male;Tutorials Chair
 ASE;2014;Lars;Grunske;Male;Workshop Chair
@@ -1021,8 +1021,8 @@ CSMR-WCRE;2014;Anthony;Cleve;Male;Finance Chair
 CSMR-WCRE;2014;Elliot;Chikofsky;Male;Organising Committee
 CSMR-WCRE;2014;Dave;Binkley;Male;Program Chair
 CSMR-WCRE;2014;Filippo;Ricca;Male;Program Chair
-CSMR-WCRE;2014;Andy;Zaidman;Male;ERA Track Chair
-CSMR-WCRE;2014;Coen;De Roover;Male;ERA Track Chair
+CSMR-WCRE;2014;Andy;Zaidman;Male;Early Research Track Chair
+CSMR-WCRE;2014;Coen;De Roover;Male;Early Research Track Chair
 CSMR-WCRE;2014;Alexander;Serebrenik;Male;Workshop Chair
 CSMR-WCRE;2014;Emily;Hill;Female;Workshop Chair
 CSMR-WCRE;2014;Bram;Adams;Male;Doctoral Symposium Chair
@@ -1031,12 +1031,13 @@ CSMR-WCRE;2014;Dave;Binkley;Male;Vision Chair
 CSMR-WCRE;2014;Filippo;Ricca;Male;Vision Chair
 CSMR-WCRE;2014;Jens;Krinke;Male;Project Chair
 CSMR-WCRE;2014;Rocco;Oliveto;Male;Project Chair
-CSMR-WCRE;2014;Werner;Teppe;;Industrial Track Chair
-CSMR-WCRE;2014;Eric;Bouwers;Male;Industrial Track Chair
-CSMR-WCRE;2014;Thomas;Fritz;Male;Tool Track Chair
-CSMR-WCRE;2014;Jurgen;Vinju;Male;Tool Track Chair
+CSMR-WCRE;2014;Werner;Teppe;;Practical Track Chair
+CSMR-WCRE;2014;Eric;Bouwers;Male;Practical Track Chair
+CSMR-WCRE;2014;Thomas;Fritz;Male;Demo Track Chair
+CSMR-WCRE;2014;Jurgen;Vinju;Male;Demo Track Chair
 CSMR-WCRE;2014;Alessandro;Murgia;Male;Web Chair
 CSMR-WCRE;2014;Tim;Molderez;Male;Web Chair
+CSMR-WCRE;2014;Bogdan;Vasilescu;Male;Publicity Chair
 CSMR-WCRE;2014;Bogdan;Vasilescu;Male;Social Media Chair
 CSMR-WCRE;2014;Javier;Pérez;Male;Student Volunteers Chair
 CSMR-WCRE;2014;Tibor;Gyimothy;Male;Program Committee
@@ -1289,7 +1290,7 @@ GTTSE;2015;Jácome;Cunha;Male;Organising Chair
 GTTSE;2015;João;Paulo Fernandes;Male;Program Chair
 GTTSE;2015;Ralf;Lämmel;Male;Briefings Chair
 GTTSE;2015;João;Saraiva;Male;General Chair
-GTTSE;2015;Joost;Visser;Male;Industrial Track Chair
+GTTSE;2015;Joost;Visser;Male;Practical Track Chair
 GTTSE;2015;Vadim;Zaytsev;Male;Publicity Chair
 GTTSE;2015;Bram;Adams;Male;Scientific Committee
 GTTSE;2015;Benoit;Baudry;Male;Scientific Committee
@@ -2053,6 +2054,112 @@ LDTA;2012;Mark;van den Brand;Male;Steering Committee
 LDTA;2012;Görel;Hedin;Female;Steering Committee
 LDTA;2012;Tony;Sloane;Male;Steering Committee
 LDTA;2012;Eric;Van Wyk;Male;Steering Committee
+MoDELS;2011;Thomas;Kühne;Male;General Chair
+MoDELS;2011;Stuart;Marshall;Male;Local Chair
+MoDELS;2011;Hui;Ma;;Local Chair
+MoDELS;2011;Jon;Whittle;Male;Program Chair
+MoDELS;2011;Tony;Clark;Male;Program Chair
+MoDELS;2011;Workshop;Chair;;Publicity Chair
+MoDELS;2011;Ivan;Porres;Male;Doctoral Symposium Chair
+MoDELS;2011;Educators';Symposium Chair;;Doctoral Symposium Chair
+MoDELS;2011;Andreas;Winter;Male;Doctoral Symposium Chair
+MoDELS;2011;Daniel;Amyot;Male;Program Committee
+MoDELS;2011;Colin;Atkinson;Male;Program Committee
+MoDELS;2011;Joanne;M. Atlee;;Program Committee
+MoDELS;2011;Don;Batory;Male;Program Committee
+MoDELS;2011;Benoit;Baudry;Male;Program Committee
+MoDELS;2011;Paulo;Borba;Male;Program Committee
+MoDELS;2011;Ruth;Breu;Male;Program Committee
+MoDELS;2011;Lionel;Briand;Male;Program Committee
+MoDELS;2011;Jean-Michel;Bruel;Male;Program Committee
+MoDELS;2011;Jordi;Cabot;Male;Program Committee
+MoDELS;2011;Michel;Chaudron;Male;Program Committee
+MoDELS;2011;Marsha;Chechik;Female;Program Committee
+MoDELS;2011;Jane;Cleland-Huang;Female;Program Committee
+MoDELS;2011;Krzysztof;Czarnecki;Male;Program Committee
+MoDELS;2011;Juergen;Dingel;Male;Program Committee
+MoDELS;2011;Alexander;Egyed;Male;Program Committee
+MoDELS;2011;Gregor;Engels;Male;Program Committee
+MoDELS;2011;Rik;Eshuis;Male;Program Committee
+MoDELS;2011;Robert;France;Male;Program Committee
+MoDELS;2011;Sébastien;Gérard;;Program Committee
+MoDELS;2011;Holger;Giese;Male;Program Committee
+MoDELS;2011;Martin;Glinz;Male;Program Committee
+MoDELS;2011;Martin;Gogolla;Male;Program Committee
+MoDELS;2011;Aniruddha;Gokhale;;Program Committee
+MoDELS;2011;Jeff;Gray;Male;Program Committee
+MoDELS;2011;John;Grundy;Male;Program Committee
+MoDELS;2011;Mark;Harman;Male;Program Committee
+MoDELS;2011;Øystein;Haugen;Male;Program Committee
+MoDELS;2011;Mats;Heimdahl;Male;Program Committee
+MoDELS;2011;Patrick;Heymans;Male;Program Committee
+MoDELS;2011;John;Howse;Male;Program Committee
+MoDELS;2011;Zhenjiang;Hu;Male;Program Committee
+MoDELS;2011;Heinrich;Hussmann;Male;Program Committee
+MoDELS;2011;Paola;Inverardi;Female;Program Committee
+MoDELS;2011;Jan;Jürjens;Male;Program Committee
+MoDELS;2011;Shmuel;Katz;;Program Committee
+MoDELS;2011;Gerti;Kappel;Female;Program Committee
+MoDELS;2011;Gabor;Karsai;Male;Program Committee
+MoDELS;2011;Jörg;Kienzle;Male;Program Committee
+MoDELS;2011;Ingolf;Krüger;Male;Program Committee
+MoDELS;2011;Thomas;Kühne;Male;Program Committee
+MoDELS;2011;Jochen;Kuester;Male;Program Committee
+MoDELS;2011;Michael;Lawley;Male;Program Committee
+MoDELS;2011;Timothy;C. Lethbridge;Male;Program Committee
+MoDELS;2011;Hong;MEI;;Program Committee
+MoDELS;2011;Tom;Mens;Male;Program Committee
+MoDELS;2011;Ana;Moreira;Female;Program Committee
+MoDELS;2011;Pierre-Alain;Muller;Male;Program Committee
+MoDELS;2011;Richard;Paige;Male;Program Committee
+MoDELS;2011;Mauro;Pezzè;;Program Committee
+MoDELS;2011;Dorina;C. Petriu;Female;Program Committee
+MoDELS;2011;Alfonso;Pierantonio;Male;Program Committee
+MoDELS;2011;Ivan;Porres;Male;Program Committee
+MoDELS;2011;Nicolas;Rouquette;Male;Program Committee
+MoDELS;2011;Bernhard;Rumpe;Male;Program Committee
+MoDELS;2011;Andy;Schürr;Male;Program Committee
+MoDELS;2011;Bran;Selic;Male;Program Committee
+MoDELS;2011;Miroslaw;Staron;;Program Committee
+MoDELS;2011;Perdita;Stevens;Female;Program Committee
+MoDELS;2011;Paul;Strooper;Male;Program Committee
+MoDELS;2011;Kevin;Sullivan;Male;Program Committee
+MoDELS;2011;Daniel;Varro;Male;Program Committee
+MoDELS;2011;Eelco;Visser;Male;Program Committee
+MoDELS;2011;Liming;Zhu;;Program Committee
+MoDELS;2011;Steffen;Zschaler;Male;Program Committee
+MoDELS;2011;Patrick;Albert;Male;Practical Track Program Committee
+MoDELS;2011;Robert;Baillargeon;Male;Practical Track Program Committee
+MoDELS;2011;Edward;J. Barkmeyer;Male;Practical Track Program Committee
+MoDELS;2011;Balbir;Barn;;Practical Track Program Committee
+MoDELS;2011;Mariano;Belaunde;Male;Practical Track Program Committee
+MoDELS;2011;Jorn;Bettin;;Practical Track Program Committee
+MoDELS;2011;Rao;Bhaskar;;Practical Track Program Committee
+MoDELS;2011;Behzad;Bordbar;;Practical Track Program Committee
+MoDELS;2011;William;Cook;Male;Practical Track Program Committee
+MoDELS;2011;Diarmuid;Corcoran;;Practical Track Program Committee
+MoDELS;2011;Huascar;Espinoza;;Practical Track Program Committee
+MoDELS;2011;Geri;Georg;;Practical Track Program Committee
+MoDELS;2011;Jack;Greenfield;;Practical Track Program Committee
+MoDELS;2011;Pavel;Hruby;Male;Practical Track Program Committee
+MoDELS;2011;Narendra;Jussien;;Practical Track Program Committee
+MoDELS;2011;Vinay;Kulkarni;;Practical Track Program Committee
+MoDELS;2011;Stephen;J. Mellor;Male;Practical Track Program Committee
+MoDELS;2011;Dragan;Milicev;Male;Practical Track Program Committee
+MoDELS;2011;Hiroshi;Miyazaki;;Practical Track Program Committee
+MoDELS;2011;Juan;Carlos Molina Udaeta;Male;Practical Track Program Committee
+MoDELS;2011;Syed;Salman Qadri;;Practical Track Program Committee
+MoDELS;2011;Ina;Schieferdecker;Female;Practical Track Program Committee
+MoDELS;2011;Bran;Selic;Male;Practical Track Program Committee
+MoDELS;2011;Richard;Soley;Male;Practical Track Program Committee
+MoDELS;2011;Ingo;Stürmer;;Practical Track Program Committee
+MoDELS;2011;Jun;Sun;Male;Practical Track Program Committee
+MoDELS;2011;Francois;Terrier;;Practical Track Program Committee
+MoDELS;2011;Laurence;Tratt;Male;Practical Track Program Committee
+MoDELS;2011;Michael;von der Beeck;Male;Practical Track Program Committee
+MoDELS;2011;Thomas;Weigert;Male;Practical Track Program Committee
+MoDELS;2011;Frank;Weil;Male;Practical Track Program Committee
+MoDELS;2011;Ed;Willink;Male;Practical Track Program Committee
 MoDELS;2012;Ruth;Breu;Male;General Chair
 MoDELS;2012;Colin;Atkinson;Male;General Chair
 MoDELS;2012;Robert;B. France;Male;Program Chair
@@ -2060,7 +2167,7 @@ MoDELS;2012;Jürgen;Kazmeier;Male;Program Chair
 MoDELS;2012;Jeff;Gray;Male;Workshop Chair
 MoDELS;2012;Joanna;Chimiak-Opoka;;Workshop Chair
 MoDELS;2012;Antonio;Vallecillo;Male;Tutorials Chair
-MoDELS;2012;Dániel;Varró;Male;Tool Track Chair
+MoDELS;2012;Dániel;Varró;Male;Demo Track Chair
 MoDELS;2012;Richard;Paige;Male;Social Media Chair
 MoDELS;2012;Yvan;Labiche;Male;Doctoral Symposium Chair
 MoDELS;2012;Friedrich;Steimann;Male;Panel Chair
@@ -2132,31 +2239,31 @@ MoDELS;2012;Michael;Whalen;Male;Program Committee
 MoDELS;2012;Jon;Whittle;Male;Program Committee
 MoDELS;2012;Andrea;Zisman;Female;Program Committee
 MoDELS;2012;Steffen;Zschaler;Male;Program Committee
-MoDELS;2012;Alfred;Aue;Male;Program Committee
-MoDELS;2012;Robert;Baillargeon;Male;Program Committee
-MoDELS;2012;Balbir;Barn;;Program Committee
-MoDELS;2012;Klaus;Beetz;Male;Program Committee
-MoDELS;2012;Nelly;Bencomo;Female;Program Committee
-MoDELS;2012;Brian;Berenbach;Male;Program Committee
-MoDELS;2012;Bezhad;Bordbar;;Program Committee
-MoDELS;2012;Rudolf;Haggenmüller;Male;Program Committee
-MoDELS;2012;Øystein;Haugen;Male;Program Committee
-MoDELS;2012;Pavel;Hruby;Male;Program Committee
-MoDELS;2012;Cornel;Klein;Male;Program Committee
-MoDELS;2012;Georg;Kreuch;Male;Program Committee
-MoDELS;2012;Vinay;Kulkarni;;Program Committee
-MoDELS;2012;Thomas;Mayerdorfer;Male;Program Committee
-MoDELS;2012;Stephen;J. Mellor;Male;Program Committee
-MoDELS;2012;Dan;Paulish;Male;Program Committee
-MoDELS;2012;Isabelle;Perseil;Female;Program Committee
-MoDELS;2012;Rob;Pettit;Male;Program Committee
-MoDELS;2012;Bernhard;Schätz;Male;Program Committee
-MoDELS;2012;Wolfram;Schulte;Male;Program Committee
-MoDELS;2012;Sebastin;Thoma;;Program Committee
-MoDELS;2012;Juha-Pekka;Tolvanen MetaCase;Male;Program Committee
-MoDELS;2012;Laurence;Tratt;Male;Program Committee
-MoDELS;2012;Michael;von der Beeck;Male;Program Committee
-MoDELS;2012;Frank;Weil;Male;Program Committee
+MoDELS;2012;Alfred;Aue;Male;Practical Track Program Committee
+MoDELS;2012;Robert;Baillargeon;Male;Practical Track Program Committee
+MoDELS;2012;Balbir;Barn;;Practical Track Program Committee
+MoDELS;2012;Klaus;Beetz;Male;Practical Track Program Committee
+MoDELS;2012;Nelly;Bencomo;Female;Practical Track Program Committee
+MoDELS;2012;Brian;Berenbach;Male;Practical Track Program Committee
+MoDELS;2012;Bezhad;Bordbar;;Practical Track Program Committee
+MoDELS;2012;Rudolf;Haggenmüller;Male;Practical Track Program Committee
+MoDELS;2012;Øystein;Haugen;Male;Practical Track Program Committee
+MoDELS;2012;Pavel;Hruby;Male;Practical Track Program Committee
+MoDELS;2012;Cornel;Klein;Male;Practical Track Program Committee
+MoDELS;2012;Georg;Kreuch;Male;Practical Track Program Committee
+MoDELS;2012;Vinay;Kulkarni;;Practical Track Program Committee
+MoDELS;2012;Thomas;Mayerdorfer;Male;Practical Track Program Committee
+MoDELS;2012;Stephen;J. Mellor;Male;Practical Track Program Committee
+MoDELS;2012;Dan;Paulish;Male;Practical Track Program Committee
+MoDELS;2012;Isabelle;Perseil;Female;Practical Track Program Committee
+MoDELS;2012;Rob;Pettit;Male;Practical Track Program Committee
+MoDELS;2012;Bernhard;Schätz;Male;Practical Track Program Committee
+MoDELS;2012;Wolfram;Schulte;Male;Practical Track Program Committee
+MoDELS;2012;Sebastin;Thoma;;Practical Track Program Committee
+MoDELS;2012;Juha-Pekka;Tolvanen MetaCase;Male;Practical Track Program Committee
+MoDELS;2012;Laurence;Tratt;Male;Practical Track Program Committee
+MoDELS;2012;Michael;von der Beeck;Male;Practical Track Program Committee
+MoDELS;2012;Frank;Weil;Male;Practical Track Program Committee
 MoDELS;2012;Geri;Georg;;Steering Chair
 MoDELS;2012;Gregor;Engels;Male;Steering Chair
 MoDELS;2012;Jean;Bezivin;Male;Steering Committee
@@ -2182,15 +2289,15 @@ MoDELS;2013;Antonio;Vallecillo;Male;General Chair
 MoDELS;2013;Peter;Clarke;Male;Local Chair
 MoDELS;2013;Ana;Moreira;Female;Program Chair
 MoDELS;2013;Bernhard;Schätz;Male;Program Chair
-MoDELS;2013;Magnus;Christerson;Male;Industrial Track Chair
+MoDELS;2013;Magnus;Christerson;Male;Practical Track Chair
 MoDELS;2013;Fabio;Costa;Male;Workshop Chair
 MoDELS;2013;Eugene;Syriani;Male;Workshop Chair
 MoDELS;2013;Jordi;Cabot;Male;Tutorials Chair
 MoDELS;2013;Jörg;Kienzle;Male;Tutorials Chair
 MoDELS;2013;Silvia;Abrahao;Female;Panel Chair
 MoDELS;2013;Isidro;Ramos;Male;Panel Chair
-MoDELS;2013;Yan;Liu;Male;Tool Track Chair
-MoDELS;2013;Steffen;Zschaler;Male;Tool Track Chair
+MoDELS;2013;Yan;Liu;Male;Demo Track Chair
+MoDELS;2013;Steffen;Zschaler;Male;Demo Track Chair
 MoDELS;2013;Benoit;Baudry;Male;Poster Chair
 MoDELS;2013;Sudipto;Ghosh;;Poster Chair
 MoDELS;2013;Ethan;Jackson;Male;Student Research Competition Chair
@@ -2330,8 +2437,8 @@ MoDELS;2014;Michel;Chaudron;Male;Tutorials Chair
 MoDELS;2014;Gabriele;Taenzer;Female;Workshop Chair
 MoDELS;2014;Alfonso;Pierantonio;Male;Workshop Chair
 MoDELS;2014;Timothy;C. Lethbridge;Male;Panel Chair
-MoDELS;2014;Tao;Yue;Male;Tool Track Chair
-MoDELS;2014;Benoit;Combemale;Male;Tool Track Chair
+MoDELS;2014;Tao;Yue;Male;Demo Track Chair
+MoDELS;2014;Benoit;Combemale;Male;Demo Track Chair
 MoDELS;2014;Manuel;Wimmer;Male;Poster Chair
 MoDELS;2014;Stefan;Sauer;Male;Poster Chair
 MoDELS;2014;Jordi;Cabot;Male;Social Media Chair
@@ -2431,6 +2538,465 @@ MoDELS;2014;Stephan;Thesing;Male;Program Committee
 MoDELS;2014;Juha-Pekka;Tolvanen;Male;Program Committee
 MoDELS;2014;Mario;Trapp;Male;Program Committee
 MoDELS;2014;Markus;Voelter;Male;Program Committee
+MoDELS;2015;Timothy;Lethbridge;Male;General Chair
+MoDELS;2015;Canada;;;General Chair
+MoDELS;2015;Jordi;Cabot;Male;Program Chair
+MoDELS;2015;ICREA;- UOC;;Program Chair
+MoDELS;2015;Spain;;;Program Chair
+MoDELS;2015;Alexander;Egyed;Male;Program Chair
+MoDELS;2015;Linz;;;Program Chair
+MoDELS;2015;Yvan;Labiche;Male;Finance Chair
+MoDELS;2015;Ottawa;;;Finance Chair
+MoDELS;2015;Gunter;Mussbacher;Male;Tutorials Chair
+MoDELS;2015;Montreal;;;Tutorials Chair
+MoDELS;2015;Ana;Moreira;Female;Tutorials Chair
+MoDELS;2015;Portugal;;;Tutorials Chair
+MoDELS;2015;Abdelwahab;Hamou-Lhadj;;Workshop Chair
+MoDELS;2015;Montreal;;;Workshop Chair
+MoDELS;2015;Emilio;Insfran;Male;Workshop Chair
+MoDELS;2015;Universitat;Politècnica de València;;Workshop Chair
+MoDELS;2015;Spain;;;Workshop Chair
+MoDELS;2015;Posters;and Demos Chairs;;Workshop Chair
+MoDELS;2015;Vinay;Kulkarni;;Workshop Chair
+MoDELS;2015;Tata;Consultancy Services;;Workshop Chair
+MoDELS;2015;India;;;Workshop Chair
+MoDELS;2015;Omar;Badreddin;;Workshop Chair
+MoDELS;2015;USA;;;Workshop Chair
+MoDELS;2015;Panels;Chairs;;Workshop Chair
+MoDELS;2015;Benoit;Baudry;Male;Workshop Chair
+MoDELS;2015;Benoit;Combemale;Male;Workshop Chair
+MoDELS;2015;Institut;de Recherche en Informatique et Systèmes Aléatoires;;Workshop Chair
+MoDELS;2015;Educators;Symposium Chairs;;Workshop Chair
+MoDELS;2015;Tony;Clark;Male;Workshop Chair
+MoDELS;2015;London;;;Workshop Chair
+MoDELS;2015;Arnon;Sturm;;Workshop Chair
+MoDELS;2015;Israel;;Male;Workshop Chair
+MoDELS;2015;Marsha;Chechik;Female;Doctoral Symposium Chair
+MoDELS;2015;Canada;;;Doctoral Symposium Chair
+MoDELS;2015;Dimitris;Kolovos;Male;Doctoral Symposium Chair
+MoDELS;2015;UK;;;Doctoral Symposium Chair
+MoDELS;2015;ACM;Student Research Chairs;;Doctoral Symposium Chair
+MoDELS;2015;Martin;Gogolla;Male;Doctoral Symposium Chair
+MoDELS;2015;Germany;;;Doctoral Symposium Chair
+MoDELS;2015;Mira;Balaban;Female;Doctoral Symposium Chair
+MoDELS;2015;Israel;;Male;Doctoral Symposium Chair
+MoDELS;2015;Stéphane;Somé;;Web Chair
+MoDELS;2015;Canada;;;Web Chair
+MoDELS;2015;Sahar;Kokaly;;Social Media Chair
+MoDELS;2015;Canada;;;Social Media Chair
+MoDELS;2015;Michalis;Famelis;;Social Media Chair
+MoDELS;2015;Canada;;;Social Media Chair
+MoDELS;2015;Focus;on Europe;;Publicity Chair
+MoDELS;2015;Manuel;Wimmer;Male;Publicity Chair
+MoDELS;2015;TU;Wien;;Publicity Chair
+MoDELS;2015;Austria;;;Publicity Chair
+MoDELS;2015;Focus;on China;;Publicity Chair
+MoDELS;2015;Tian;Zhang;;Publicity Chair
+MoDELS;2015;China;;;Publicity Chair
+MoDELS;2015;Vahdat;Abdelzad;;Local Committee
+MoDELS;2015;Canada;;;Local Committee
+MoDELS;2015;Hamoud;Aljamaan;;Local Committee
+MoDELS;2015;Canada;;;Local Committee
+MoDELS;2015;Andrew;Forward;Male;Local Committee
+MoDELS;2015;Private;Consultant;;Local Committee
+MoDELS;2015;Canada;;;Local Committee
+MoDELS;2015;News;rss logo;;Local Committee
+MoDELS;2015;Lionel;Briand;Male;Local Chair
+MoDELS;2015;Juergen;Dingel;Male;Local Committee
+MoDELS;2015;Silvia;Abrahão;Female;Local Committee
+MoDELS;2015;Benoit;Baudry;Male;Local Committee
+MoDELS;2015;Ruth;Breu;Male;Local Committee
+MoDELS;2015;Jean-Michel;Bruel;Male;Local Committee
+MoDELS;2015;Jordi;Cabot;Male;Local Committee
+MoDELS;2015;Laurie;Dillon;Male;Local Committee
+MoDELS;2015;Alexander;Egyed;Male;Local Committee
+MoDELS;2015;Gregor;Engels;Male;Local Committee
+MoDELS;2015;Jeff;Gray;Male;Local Committee
+MoDELS;2015;Øystein;Haugen;Male;Local Committee
+MoDELS;2015;Jörg;Kienzle;Male;Local Committee
+MoDELS;2015;Thomas;Kühne;Male;Local Committee
+MoDELS;2015;Timothy;C. Lethbridge;Male;Local Committee
+MoDELS;2015;Ana;Moreira;Female;Local Committee
+MoDELS;2015;Pierre-Alain;Muller;Male;Local Committee
+MoDELS;2015;Dorina;Petriu;Female;Local Committee
+MoDELS;2015;Rob;Pettit;Male;Local Committee
+MoDELS;2015;Gianna;Reggio;Female;Local Committee
+MoDELS;2015;Bernhard;Schätz;Male;Local Committee
+MoDELS;2015;Wolfram;Schulte;Male;Local Committee
+MoDELS;2015;Andy;Schürr;Male;Local Committee
+MoDELS;2015;Steve;Seidman;Male;Local Committee
+MoDELS;2015;Jon;Whittle;Male;Local Committee
+MoDELS;2015;Richard;Paige;Male;Local Committee
+MoDELS;2015;United;Kingdom;;Local Committee
+MoDELS;2015;Juergen;Dingel;Male;Local Committee
+MoDELS;2015;Canada;;;Local Committee
+MoDELS;2015;Ana;Moreira;Female;Local Committee
+MoDELS;2015;Portugal;;;Local Committee
+MoDELS;2015;Antonio;Vallecillo;Male;Local Committee
+MoDELS;2015;Spain;;;Local Committee
+MoDELS;2015;Bran;Selic;Male;Local Committee
+MoDELS;2015;Malina;Software Corp;;Local Committee
+MoDELS;2015;Canada;;;Local Committee
+MoDELS;2015;Bernhard;Rumpe;Male;Local Committee
+MoDELS;2015;Software;Engineering RWTH Aachen;;Local Committee
+MoDELS;2015;Germany;;;Local Committee
+MoDELS;2015;Øystein;Haugen;Male;Local Committee
+MoDELS;2015;Norway;;;Local Committee
+MoDELS;2015;Zhenjiang;Hu;Male;Local Committee
+MoDELS;2015;National;Institute of Informatics;;Local Committee
+MoDELS;2015;Japan;;;Local Committee
+MoDELS;2015;Pierre-Alain;Muller;Male;Local Committee
+MoDELS;2015;Jörg;Kienzle;Male;Local Committee
+MoDELS;2015;Canada;;;Local Committee
+MoDELS;2015;Lionel;Briand;Male;Local Committee
+MoDELS;2015;Luxembourg;;;Local Committee
+MoDELS;2015;Betty;H.C. Cheng;Female;Local Committee
+MoDELS;2015;USA;;;Local Committee
+MoDELS;2015;Benoit;Baudry;Male;Local Committee
+MoDELS;2015;News;rss logo;;Local Committee
+MoDELS;2015;Silvia;Abrahão;Female;Program Committee
+MoDELS;2015;Daniel;Amyot;Male;Program Committee
+MoDELS;2015;Mohsen;Asadi;;Program Committee
+MoDELS;2015;Don;Batory;Male;Program Committee
+MoDELS;2015;Nelly;Bencomo;Female;Program Committee
+MoDELS;2015;Xavier;Blanc;Male;Program Committee
+MoDELS;2015;Alessandro;Bozzon;Male;Program Committee
+MoDELS;2015;Ruth;Breu;Male;Program Committee
+MoDELS;2015;Manfred;Broy;Male;Program Committee
+MoDELS;2015;Jean-Michel;Bruel;Male;Program Committee
+MoDELS;2015;Michel;Chaudron;Male;Program Committee
+MoDELS;2015;Marsha;Chechik;Female;Program Committee
+MoDELS;2015;Robert;Clariso;Male;Program Committee
+MoDELS;2015;Tony;Clark;Male;Program Committee
+MoDELS;2015;Siobhan;Clarke;Female;Program Committee
+MoDELS;2015;Peter;Clarke;Male;Program Committee
+MoDELS;2015;Manuel;Clavel;Male;Program Committee
+MoDELS;2015;Krzysztof;Czarnecki;Male;Program Committee
+MoDELS;2015;Fabiano;Dalpiaz;;Program Committee
+MoDELS;2015;Gregor;Engels;Male;Program Committee
+MoDELS;2015;Neil;Ernst;;Program Committee
+MoDELS;2015;Alessandro;Garcia;Male;Program Committee
+MoDELS;2015;Geri;Georg;;Program Committee
+MoDELS;2015;Sebastien;Gerard;Male;Program Committee
+MoDELS;2015;Martin;Gogolla;Male;Program Committee
+MoDELS;2015;Jeff;Gray;Male;Program Committee
+MoDELS;2015;John;Grundy;Male;Program Committee
+MoDELS;2015;Giancarlo;Guizzardi;Male;Program Committee
+MoDELS;2015;Reiko;Heckel;;Program Committee
+MoDELS;2015;Gerti;Kappel;Female;Program Committee
+MoDELS;2015;Frederic;Mallet;Male;Program Committee
+MoDELS;2015;Shahar;Maoz;Male;Program Committee
+MoDELS;2015;Tom;Mens;Male;Program Committee
+MoDELS;2015;Raffaela;Mirandola;Female;Program Committee
+MoDELS;2015;Henry;Muccini;Male;Program Committee
+MoDELS;2015;Shiva;Nejati;Male;Program Committee
+MoDELS;2015;Jeffrey;Parsons;Male;Program Committee
+MoDELS;2015;Dorina;Petriu;Female;Program Committee
+MoDELS;2015;Alfonso;Pierantonio;Male;Program Committee
+MoDELS;2015;Julia;Rubin;Female;Program Committee
+MoDELS;2015;Ina;Schaefer;Female;Program Committee
+MoDELS;2015;Andy;Schuerr;Male;Program Committee
+MoDELS;2015;Jocelyn;Simmonds;;Program Committee
+MoDELS;2015;Friedrich;Steimann;Male;Program Committee
+MoDELS;2015;Perdita;Stevens;Female;Program Committee
+MoDELS;2015;Gabriele;Taentzer;Female;Program Committee
+MoDELS;2015;Pieter;Van Gorp;Male;Program Committee
+MoDELS;2015;Daniel;Varro;Male;Program Committee
+MoDELS;2015;Andrzej;Wasowski;Male;Program Committee
+MoDELS;2015;Jon;Whittle;Male;Program Committee
+MoDELS;2015;Tao;Yue;Male;Program Committee
+MoDELS;2015;Steffen;Zschaler;Male;Program Committee
+MoDELS;2015;Juan;de Lara;Male;Program Committee
+MoDELS;2015;Yves;le Traon;Male;Program Committee
+MoDELS;2015;Shaukat;Ali;Male;Program Committee
+MoDELS;2015;Robert;Baillargeon;Male;Program Committee
+MoDELS;2015;Martin;Becker;Male;Program Committee
+MoDELS;2015;Francis;Bordeleau;;Program Committee
+MoDELS;2015;Maged;Elaasar;;Program Committee
+MoDELS;2015;Pavel;Hruby;Male;Program Committee
+MoDELS;2015;Robert;Karban;Male;Program Committee
+MoDELS;2015;Cornel;Klein;Male;Program Committee
+MoDELS;2015;Heiko;Koziolek;;Program Committee
+MoDELS;2015;Vinay;Kulkarni;;Program Committee
+MoDELS;2015;Stephen;J. Mellor;Male;Program Committee
+MoDELS;2015;Pieter;Mosterman;Male;Program Committee
+MoDELS;2015;Isabelle;Perseil;Female;Program Committee
+MoDELS;2015;Rob;Pettit;Male;Program Committee
+MoDELS;2015;Ketil;Stolen;;Program Committee
+MoDELS;2015;Stephan;Thesing;Male;Program Committee
+MoDELS;2015;Mario;Trapp;Male;Program Committee
+MoDELS;2015;Salvador;Trujillo;;Program Committee
+MoDELS;2015;Markus;Voelter;Male;Program Committee
+MoDELS;2015;Wahab;Hamou-Lhadj;Male;Workshop Chair
+MoDELS;2015;Emilio;Insfran;Male;Workshop Chair
+MoDELS;2015;Silvia;Abrahao;Female;Workshop Chair
+MoDELS;2015;Marco;Brambilla;Male;Workshop Chair
+MoDELS;2015;Antonio;Cicchetti;Male;Workshop Chair
+MoDELS;2015;Juan;de Lara;Male;Workshop Chair
+MoDELS;2015;Jeff;Gray;Male;Workshop Chair
+MoDELS;2015;Wahab;Hamou-Lhadj;Male;Workshop Chair
+MoDELS;2015;Emilio;Insfran;Male;Workshop Chair
+MoDELS;2015;Marouane;Kessentini;;Workshop Chair
+MoDELS;2015;Dimitris;Kolovos;Male;Workshop Chair
+MoDELS;2015;Yan;Liu;Male;Workshop Chair
+MoDELS;2015;Alfonso;Pierantonio;Male;Workshop Chair
+MoDELS;2015;Giuseppe;Scanniello;Male;Workshop Chair
+MoDELS;2015;Gabi;Taentzer;Female;Workshop Chair
+MoDELS;2015;Matthias;Tichy;;Workshop Chair
+MoDELS;2015;Manuel;Wimmer;Male;Workshop Chair
+MoDELS;2015;Omar;Bahy Badreddin;;Workshop Chair
+MoDELS;2015;Ana;Moreira;Female;Tutorials Chair
+MoDELS;2015;Gunter;Mussbacher;Male;Tutorials Chair
+MoDELS;2015;Shaukat;Ali;Male;Tutorials Chair
+MoDELS;2015;Daniel;Amyot;Male;Tutorials Chair
+MoDELS;2015;João;Araújo;Male;Tutorials Chair
+MoDELS;2015;Jordi;Cabot;Male;Tutorials Chair
+MoDELS;2015;Betty;Cheng;Female;Tutorials Chair
+MoDELS;2015;Benoit;Combemale;Male;Tutorials Chair
+MoDELS;2015;Juan;de Lara;Male;Tutorials Chair
+MoDELS;2015;Jeff;Gray;Male;Tutorials Chair
+MoDELS;2015;Øystein;Haugen;Male;Tutorials Chair
+MoDELS;2015;Gerti;Kappel;Female;Tutorials Chair
+MoDELS;2015;Jörg;Kienzle;Male;Tutorials Chair
+MoDELS;2015;Stephan;Krusche;Male;Tutorials Chair
+MoDELS;2015;Pieter;Mosterman;Male;Tutorials Chair
+MoDELS;2015;Rob;Pettit;Male;Tutorials Chair
+MoDELS;2015;Bran;Selic;Male;Tutorials Chair
+MoDELS;2015;Arnor;Solberg;;Tutorials Chair
+MoDELS;2015;Harald;Störrle;Male;Tutorials Chair
+MoDELS;2015;Eugene;Syriani;Male;Tutorials Chair
+MoDELS;2015;Dániel;Varró;Male;Tutorials Chair
+MoDELS;2015;Manuel;Wimmer;Male;Tutorials Chair
+MoDELS;2015;Steffen;Zschaler;Male;Tutorials Chair
+MoDELS;2015;Co-Chairs:;;;Tutorials Chair
+MoDELS;2015;Omar;Badreddin;;Tutorials Chair
+MoDELS;2015;Vinay;Kulkarni;;Tutorials Chair
+MoDELS;2015;Chairs;;;Tutorials Chair
+MoDELS;2015;Marsha;Chechik;Female;Tutorials Chair
+MoDELS;2015;Dimitris;Kolovos;Male;Tutorials Chair
+MoDELS;2015;Istvan;Rath;Male;Program Committee
+MoDELS;2015;Jeff;Gray;Male;Program Committee
+MoDELS;2015;Eugene;Syriani;Male;Program Committee
+MoDELS;2015;Shiva;Nejati;Male;Program Committee
+MoDELS;2015;Juan;De Lara;Male;Program Committee
+MoDELS;2015;Sahar;Kokaly;;Program Committee
+MoDELS;2015;David;Méndez-Acuña;Male;Program Committee
+MoDELS;2015;Reiner;Jung;;Program Committee
+MoDELS;2015;Adolfo;Sanchez-Barbudo Herrera;;Program Committee
+MoDELS;2015;Jorge;Sedeño;;Program Committee
+MoDELS;2015;Simon;Van Mierlo;Male;Program Committee
+MoDELS;2015;Luis;Silvestre;;Program Committee
+MoDELS;2015;Davide;Arcelli;Male;Program Committee
+MoDELS;2015;News;rss logo;;Program Committee
+MoDELS;2016;benoit-baudry;;;General Chair
+MoDELS;2016;Benoit;Baudry;Male;General Chair
+MoDELS;2016;benoit-combemale;;;General Chair
+MoDELS;2016;Benoit;Combemale;Male;General Chair
+MoDELS;2016;jorg-kienzle;;;Program Chair
+MoDELS;2016;Jörg;Kienzle;Male;Program Chair
+MoDELS;2016;alexander-pretschner;;;Program Chair
+MoDELS;2016;Alexander;Pretschner;Male;Program Chair
+MoDELS;2016;TU;München;;Program Chair
+MoDELS;2016;houari-sahraoui;;;Workshop Chair
+MoDELS;2016;Houari;Sahraoui;;Workshop Chair
+MoDELS;2016;manuel-wimmer;;;Workshop Chair
+MoDELS;2016;Manuel;Wimmer;Male;Workshop Chair
+MoDELS;2016;Vienna;University of Technology;;Workshop Chair
+MoDELS;2016;martin-gogolla;;;Tutorials Chair
+MoDELS;2016;Martin;Gogolla;Male;Tutorials Chair
+MoDELS;2016;geri-georg;;;Tutorials Chair
+MoDELS;2016;Geri;Georg;;Tutorials Chair
+MoDELS;2016;Colorado;State University;;Tutorials Chair
+MoDELS;2016;juan-delara;;;Demo Track Chair
+MoDELS;2016;Juan;de Lara;Male;Demo Track Chair
+MoDELS;2016;peter-clarke;;;Demo Track Chair
+MoDELS;2016;Peter;J. Clarke;Male;Demo Track Chair
+MoDELS;2016;Florida;International University;;Demo Track Chair
+MoDELS;2016;Mehrdad;Sabetzadeh;;Poster Chair
+MoDELS;2016;Don;Batory;Male;Panel Chair
+MoDELS;2016;Jeff;Gray;Male;Student Research Competition Chair
+MoDELS;2016;Ruth;Breu;Male;Student Research Competition Chair
+MoDELS;2016;rick-salay;;;Doctoral Symposium Chair
+MoDELS;2016;Rick;Salay;;Doctoral Symposium Chair
+MoDELS;2016;Shiva;Nejati;Male;Doctoral Symposium Chair
+MoDELS;2016;Educator;Symposium Chairs;;Doctoral Symposium Chair
+MoDELS;2016;gunter-mussbacher;;;Doctoral Symposium Chair
+MoDELS;2016;Gunter;Mussbacher;Male;Doctoral Symposium Chair
+MoDELS;2016;henry-muccini;;;Doctoral Symposium Chair
+MoDELS;2016;Henry;Muccini;Male;Doctoral Symposium Chair
+MoDELS;2016;julien-deantoni;;;Publication Chair
+MoDELS;2016;Julien;DeAntoni;;Publication Chair
+MoDELS;2016;Jeff;Gray;Male;Publicity Chair
+MoDELS;2016;North;America;;Publicity Chair
+MoDELS;2016;alessandro-garcia;;;Publicity Chair
+MoDELS;2016;Alessandro;Garcia;Male;Publicity Chair
+MoDELS;2016;PUC-Rio;;;Publicity Chair
+MoDELS;2016;South;America;;Publicity Chair
+MoDELS;2016;richard-paige-2;;;Publicity Chair
+MoDELS;2016;Richard;Paige;Male;Publicity Chair
+MoDELS;2016;Europe;;;Publicity Chair
+MoDELS;2016;zhenjiang-hu;;;Publicity Chair
+MoDELS;2016;Zhenjiang;Hu;Male;Publicity Chair
+MoDELS;2016;National;Institute of Informatics;;Publicity Chair
+MoDELS;2016;Asia;;;Publicity Chair
+MoDELS;2016;jim-steel;;;Publicity Chair
+MoDELS;2016;Jim;Steel;Male;Publicity Chair
+MoDELS;2016;Oceania;;;Publicity Chair
+MoDELS;2016;Sponsorship;Chair;;Publicity Chair
+MoDELS;2016;jordi-cabot;;;Publicity Chair
+MoDELS;2016;Jordi;Cabot;Male;Publicity Chair
+MoDELS;2016;Open;University of Catalonia;;Publicity Chair
+MoDELS;2016;elisabeth-lebret;;;Local Committee
+MoDELS;2016;Elisabeth;Lebret;;Local Committee
+MoDELS;2016;Multimedia;Chair;;Local Committee
+MoDELS;2016;olivier-barais;;;Local Committee
+MoDELS;2016;Olivier;Barais;Male;Local Committee
+MoDELS;2016;mathieu-acher;;;Social Media Chair
+MoDELS;2016;Mathieu;Acher;;Social Media Chair
+MoDELS;2016;arnaud-blouin;;;Student Volunteers Chair
+MoDELS;2016;Arnaud;Blouin;;Student Volunteers Chair
+MoDELS;2016;INSA;;;Student Volunteers Chair
+MoDELS;2016;johann-bourcier;;;Student Volunteers Chair
+MoDELS;2016;Johann;Bourcier;;Student Volunteers Chair
+MoDELS;2016;Website;chairs;;Student Volunteers Chair
+MoDELS;2016;guillaume-becan;;;Student Volunteers Chair
+MoDELS;2016;Guillaume;Bécan;;Student Volunteers Chair
+MoDELS;2016;Dorian;Leroy;;Student Volunteers Chair
+MoDELS;2016;Communication;chair;;Student Volunteers Chair
+MoDELS;2016;nathalie-lacaux;;;Student Volunteers Chair
+MoDELS;2016;Nathalie;Lacaux;;Student Volunteers Chair
+MoDELS;2016;Photos;;;Student Volunteers Chair
+MoDELS;2016;noel-plouzeau;;;Student Volunteers Chair
+MoDELS;2016;Noël;Plouzeau;;Student Volunteers Chair
+MoDELS;2016;Lionel;Briand;Male;Student Volunteers Chair
+MoDELS;2016;Juergen;Dingel;Male;Student Volunteers Chair
+MoDELS;2016;Silvia;Abrahão;Female;Student Volunteers Chair
+MoDELS;2016;Benoit;Baudry;Male;Student Volunteers Chair
+MoDELS;2016;Ruth;Breu;Male;Student Volunteers Chair
+MoDELS;2016;Jean-Michel;Bruel;Male;Student Volunteers Chair
+MoDELS;2016;Jordi;Cabot;Male;Student Volunteers Chair
+MoDELS;2016;Laurie;Dillon;Male;Student Volunteers Chair
+MoDELS;2016;Alexander;Egyed;Male;Student Volunteers Chair
+MoDELS;2016;Gregor;Engels;Male;Student Volunteers Chair
+MoDELS;2016;Jeff;Gray;Male;Student Volunteers Chair
+MoDELS;2016;Øystein;Haugen;Male;Student Volunteers Chair
+MoDELS;2016;Jörg;Kienzle;Male;Student Volunteers Chair
+MoDELS;2016;Thomas;Kühne;Male;Student Volunteers Chair
+MoDELS;2016;Timothy;C. Lethbridge;Male;Student Volunteers Chair
+MoDELS;2016;Ana;Moreira;Female;Student Volunteers Chair
+MoDELS;2016;Pierre-Alain;Muller;Male;Student Volunteers Chair
+MoDELS;2016;Dorina;Petriu;Female;Student Volunteers Chair
+MoDELS;2016;Rob;Pettit;Male;Student Volunteers Chair
+MoDELS;2016;Gianna;Reggio;Female;Student Volunteers Chair
+MoDELS;2016;Bernhard;Schätz;Male;Student Volunteers Chair
+MoDELS;2016;Wolfram;Schulte;Male;Student Volunteers Chair
+MoDELS;2016;Andy;Schürr;Male;Student Volunteers Chair
+MoDELS;2016;Steve;Seidman;Male;Student Volunteers Chair
+MoDELS;2016;Jon;Whittle;Male;Student Volunteers Chair
+MoDELS;2016;Jordi;Cabot;Male;Program Board
+MoDELS;2016;Jordi;Cabot;Male;Program Board
+MoDELS;2016;ICREA;– UOC;;Program Board
+MoDELS;2016;Marsha;Chechik;Female;Program Board
+MoDELS;2016;Marsha;Chechik;Female;Program Board
+MoDELS;2016;Betty;H. C. Cheng;Female;Program Board
+MoDELS;2016;Betty;H. C. Cheng;Female;Program Board
+MoDELS;2016;Michigan;State University;;Program Board
+MoDELS;2016;Gregor;Engels;Male;Program Board
+MoDELS;2016;Gregor;Engels;Male;Program Board
+MoDELS;2016;Jeff;Gray;Male;Program Board
+MoDELS;2016;Jeff;Gray;Male;Program Board
+MoDELS;2016;Jean-Marc;Jézéquel;Male;Program Board
+MoDELS;2016;Jean-Marc;Jézéquel;Male;Program Board
+MoDELS;2016;Gerti;Kappel;Female;Program Board
+MoDELS;2016;Gerti;Kappel;Female;Program Board
+MoDELS;2016;Technische;Universität Wien;;Program Board
+MoDELS;2016;Thomas;Kühne;Male;Program Board
+MoDELS;2016;Thomas;Kühne;Male;Program Board
+MoDELS;2016;Victoria;University of Wellington;;Program Board
+MoDELS;2016;Vinay;Kulkarni;;Program Board
+MoDELS;2016;Vinay;Kulkarni;;Program Board
+MoDELS;2016;Tata;Consultancy Services Research;;Program Board
+MoDELS;2016;Bernhard;Schätz;Male;Program Board
+MoDELS;2016;Bernhard;Schätz;Male;Program Board
+MoDELS;2016;fortiss;GmbH;;Program Board
+MoDELS;2016;Bran;Selic;Male;Program Board
+MoDELS;2016;Bran;Selic;Male;Program Board
+MoDELS;2016;Malina;Software Corp.;;Program Board
+MoDELS;2016;Friedrich;Steimann;Male;Program Board
+MoDELS;2016;Friedrich;Steimann;Male;Program Board
+MoDELS;2016;Fernuniversität;in Hagen;;Program Board
+MoDELS;2016;Antonio;Vallecillo;Male;Program Board
+MoDELS;2016;Antonio;Vallecillo;Male;Program Board
+MoDELS;2016;Daniel;Varro;Male;Program Board
+MoDELS;2016;Daniel;Varro;Male;Program Board
+MoDELS;2016;Budapest;University of Technology and Economics;;Program Board
+MoDELS;2016;Silvia;Abrahão;Female;Program Committee
+MoDELS;2016;Shaukat;Ali;Male;Program Committee
+MoDELS;2016;João;Araújo;Male;Program Committee
+MoDELS;2016;Uwe;Assmann;Male;Program Committee
+MoDELS;2016;Colin;Atkinson;Male;Program Committee
+MoDELS;2016;Nelly;Bencomo;Female;Program Committee
+MoDELS;2016;Arnaud;Blouin;;Program Committee
+MoDELS;2016;Lionel;Briand;Male;Program Committee
+MoDELS;2016;Manfred;Broy;Male;Program Committee
+MoDELS;2016;Jean-Michel;Bruel;Male;Program Committee
+MoDELS;2016;Walter;Cazzola;;Program Committee
+MoDELS;2016;Michel;Chaudron;Male;Program Committee
+MoDELS;2016;Tony;Clark;Male;Program Committee
+MoDELS;2016;Peter;Clarke;Male;Program Committee
+MoDELS;2016;Philippe;Collet;Male;Program Committee
+MoDELS;2016;Krzysztof;Czarnecki;Male;Program Committee
+MoDELS;2016;Fabiano;Dalpiaz;;Program Committee
+MoDELS;2016;Julien;DeAntoni;;Program Committee
+MoDELS;2016;Juergen;Dingel;Male;Program Committee
+MoDELS;2016;Zinovy;Diskin;Male;Program Committee
+MoDELS;2016;Neil;Ernst;;Program Committee
+MoDELS;2016;Alessandro;Garcia;Male;Program Committee
+MoDELS;2016;Geri;Georg;;Program Committee
+MoDELS;2016;Holger;Giese;Male;Program Committee
+MoDELS;2016;Martin;Gogolla;Male;Program Committee
+MoDELS;2016;Joel;Greenyer;;Program Committee
+MoDELS;2016;Giancarlo;Guizzardi;Male;Program Committee
+MoDELS;2016;Stefan;Hanenberg;Male;Program Committee
+MoDELS;2016;Reiko;Heckel;;Program Committee
+MoDELS;2016;Peter;Herrmann;Male;Program Committee
+MoDELS;2016;Zhenjiang;Hu;Male;Program Committee
+MoDELS;2016;Marouane;Kessentini;;Program Committee
+MoDELS;2016;Ferhat;Khendek;;Program Committee
+MoDELS;2016;Jacques;Klein;;Program Committee
+MoDELS;2016;Juan;De Lara;Male;Program Committee
+MoDELS;2016;Henry;Muccini;Male;Program Committee
+MoDELS;2016;Gunter;Mussbacher;Male;Program Committee
+MoDELS;2016;Ileana;Ober;Female;Program Committee
+MoDELS;2016;Richard;Paige;Male;Program Committee
+MoDELS;2016;Dorina;Petriu;Female;Program Committee
+MoDELS;2016;Arend;Rensink;;Program Committee
+MoDELS;2016;Julia;Rubin;Female;Program Committee
+MoDELS;2016;Bernhard;Rumpe;Male;Program Committee
+MoDELS;2016;Ina;Schaefer;Female;Program Committee
+MoDELS;2016;Arnor;Solberg;;Program Committee
+MoDELS;2016;Perdita;Stevens;Female;Program Committee
+MoDELS;2016;Eugene;Syriani;Male;Program Committee
+MoDELS;2016;Andrej;Wasowski;;Program Committee
+MoDELS;2016;Jon;Whittle;Male;Program Committee
+MoDELS;2016;Manuel;Wimmer;Male;Program Committee
+MoDELS;2016;Steffen;Zschaler;Male;Program Committee
+MoDELS;2016;Achim;Brucker;;Program Committee
+MoDELS;2016;Andras;Schmied;;Program Committee
+MoDELS;2016;Harald;Ruess;Male;Program Committee
+MoDELS;2016;Hardi;Hungar;;Program Committee
+MoDELS;2016;Heiko;Koziolek;;Program Committee
+MoDELS;2016;Jan;Philipps;Male;Program Committee
+MoDELS;2016;Jörg;Dörr;Male;Program Committee
+MoDELS;2016;Maged;Elaasar;;Program Committee
+MoDELS;2016;Mike;Whalen;Male;Program Committee
+MoDELS;2016;Oystein;Haugen;Male;Program Committee
+MoDELS;2016;Ralf;Reussner;Male;Program Committee
+MoDELS;2016;Rance;Cleaveland;;Program Committee
+MoDELS;2016;Robert;Baillargeon;Male;Program Committee
+MoDELS;2016;Robert;Eschbach;Male;Program Committee
+MoDELS;2016;Salvador;Trujillo;;Program Committee
+MoDELS;2016;Tao;Yue;Male;Program Committee
 MSR;2004;Harald;Gall;Male;Program Committee
 MSR;2004;Les;Gasser;;Program Committee
 MSR;2004;James;Herbsleb;Male;Program Committee
@@ -2978,8 +3544,8 @@ SANER;2015;Elliot;J. Chikofsky;Male;Finance Chair
 SANER;2015;Hausi;A. Müller;Male;Finance Chair
 SANER;2015;Bram;Adams;Male;Program Chair
 SANER;2015;Alexander;Serebrenik;Male;Program Chair
-SANER;2015;Naouel;Moha;;ERA Track Chair
-SANER;2015;Nikolaos;Tsantalis;Male;ERA Track Chair
+SANER;2015;Naouel;Moha;;Early Research Track Chair
+SANER;2015;Nikolaos;Tsantalis;Male;Early Research Track Chair
 SANER;2015;Ralf;Lämmel;Male;Doctoral Symposium Chair
 SANER;2015;Peter;C. Rigby;Male;Doctoral Symposium Chair
 SANER;2015;Jens;Krinke;Male;Tutorials Chair
@@ -2987,9 +3553,9 @@ SANER;2015;Bonita;Sharif;Female;Tutorials Chair
 SANER;2015;Jane;Hayes;Female;Panel Chair
 SANER;2015;Marianne;Huchard;Female;Panel Chair
 SANER;2015;Foutse;Khomh;Male;Satellite Events Chair
-SANER;2015;Wahab;Hamou-Lhadj;Male;Industrial Track Chair
+SANER;2015;Wahab;Hamou-Lhadj;Male;Practical Track Chair
 SANER;2015;Francesca;Arcelli Fontana;Female;Workshop Chair
-SANER;2015;Emily;Hill;Female;Tool Track Chair
+SANER;2015;Emily;Hill;Female;Demo Track Chair
 SANER;2015;Bram;Adams;Male;Program Committee
 SANER;2015;Nicolas;Anquetil;Male;Program Committee
 SANER;2015;Alberto;Bacchelli;Male;Program Committee
@@ -3060,39 +3626,39 @@ SANER;2015;Dongmei;Zhang;;Program Committee
 SANER;2015;Hongyu;Zhang;;Program Committee
 SANER;2015;Thomas;Zimmermann;Male;Program Committee
 SANER;2015;Ying;Zou;;Program Committee
-SANER;2015;Foutse;Khomh;Male;Tool Track Program Committee
-SANER;2015;Emily;Hill;Female;Tool Track Program Committee
-SANER;2015;Stéphane;Vaucher;;Tool Track Program Committee
-SANER;2015;Sonia;Haiduc;Female;Tool Track Program Committee
-SANER;2015;Nasir;Ali;;Tool Track Program Committee
-SANER;2015;David;Shepherd;Male;Tool Track Program Committee
-SANER;2015;Felienne;Hermans;Female;Tool Track Program Committee
-SANER;2015;David;Lo;Male;Tool Track Program Committee
-SANER;2015;Gabriele;Bavota;Female;Tool Track Program Committee
-SANER;2015;Iman;Keivanloo;Male;Tool Track Program Committee
-SANER;2015;Venera;Arnaoudova;Female;Tool Track Program Committee
-SANER;2015;Foutse;Khomh;Male;Industrial Track Program Committee
-SANER;2015;Wahab;Hamou-Lhadj;Male;Industrial Track Program Committee
-SANER;2015;Josef;Pichler;Male;Industrial Track Program Committee
-SANER;2015;Weiyi;Shang;;Industrial Track Program Committee
-SANER;2015;Vassilios;Tzerpos;Male;Industrial Track Program Committee
-SANER;2015;Sigrid;Eldh;Female;Industrial Track Program Committee
-SANER;2015;Alf;Larsson;Male;Industrial Track Program Committee
-SANER;2015;Mark;Van Den Brand;Male;Industrial Track Program Committee
-SANER;2015;Mark;Grechanik;Male;Industrial Track Program Committee
-SANER;2015;Radu;Marinescu;Male;Industrial Track Program Committee
-SANER;2015;Juergen;Rilling;Male;Industrial Track Program Committee
+SANER;2015;Foutse;Khomh;Male;Demo Track Program Committee
+SANER;2015;Emily;Hill;Female;Demo Track Program Committee
+SANER;2015;Stéphane;Vaucher;;Demo Track Program Committee
+SANER;2015;Sonia;Haiduc;Female;Demo Track Program Committee
+SANER;2015;Nasir;Ali;;Demo Track Program Committee
+SANER;2015;David;Shepherd;Male;Demo Track Program Committee
+SANER;2015;Felienne;Hermans;Female;Demo Track Program Committee
+SANER;2015;David;Lo;Male;Demo Track Program Committee
+SANER;2015;Gabriele;Bavota;Female;Demo Track Program Committee
+SANER;2015;Iman;Keivanloo;Male;Demo Track Program Committee
+SANER;2015;Venera;Arnaoudova;Female;Demo Track Program Committee
+SANER;2015;Foutse;Khomh;Male;Practical Track Program Committee
+SANER;2015;Wahab;Hamou-Lhadj;Male;Practical Track Program Committee
+SANER;2015;Josef;Pichler;Male;Practical Track Program Committee
+SANER;2015;Weiyi;Shang;;Practical Track Program Committee
+SANER;2015;Vassilios;Tzerpos;Male;Practical Track Program Committee
+SANER;2015;Sigrid;Eldh;Female;Practical Track Program Committee
+SANER;2015;Alf;Larsson;Male;Practical Track Program Committee
+SANER;2015;Mark;Van Den Brand;Male;Practical Track Program Committee
+SANER;2015;Mark;Grechanik;Male;Practical Track Program Committee
+SANER;2015;Radu;Marinescu;Male;Practical Track Program Committee
+SANER;2015;Juergen;Rilling;Male;Practical Track Program Committee
 SANER;2016;Wim;De Pauw;;Keynote Speaker
 SANER;2016;Alexander;L. Wolf;Male;Keynote Speaker
 SANER;2016;Katsuro;Inoue;Male;General Chair
 SANER;2016;Yasutaka;Kamei;Male;Program Chair
 SANER;2016;Michele;Lanza;Male;Program Chair
-SANER;2016;Alberto;Bacchelli;Male;ERA Track Chair
-SANER;2016;Emad;Shihab;;ERA Track Chair
-SANER;2016;Ashish;Sureka;;Industrial Track Chair
-SANER;2016;Thomas;Zimmerman;Male;Industrial Track Chair
-SANER;2016;Sonia;Haiduc;Female;Tool Track Chair
-SANER;2016;Yoshiki;Higo;;Tool Track Chair
+SANER;2016;Alberto;Bacchelli;Male;Early Research Track Chair
+SANER;2016;Emad;Shihab;;Early Research Track Chair
+SANER;2016;Ashish;Sureka;;Practical Track Chair
+SANER;2016;Thomas;Zimmerman;Male;Practical Track Chair
+SANER;2016;Sonia;Haiduc;Female;Demo Track Chair
+SANER;2016;Yoshiki;Higo;;Demo Track Chair
 SANER;2016;Serge;Demeyer;Male;Doctoral Symposium Chair
 SANER;2016;Mike;Godfrey;Male;Doctoral Symposium Chair
 SANER;2016;Bram;Adams;Male;Post-Doctoral Symposium Chair
@@ -3123,7 +3689,7 @@ SANER;2016;Makoto;Matsushita;;Publicity Chair
 SANER;2016;Andrea;Mocci;Female;Publicity Chair
 SANER;2016;Tetsuya;Kanda;;Web Chair
 SANER;2016;Luca;Ponzanelli;Male;Web Chair
-SANER;2016;Shusuke;Haruna;;Industrial Track Chair
+SANER;2016;Shusuke;Haruna;;Practical Track Chair
 SANER;2016;Bram;Adams;Male;Steering Committee
 SANER;2016;Dave;Binkley;Male;Steering Committee
 SANER;2016;Ira;Baxter;Male;Steering Committee
@@ -3197,55 +3763,55 @@ SANER;2016;Chanchal;K. Roy;Male;Program Committee
 SANER;2016;Andy;Zaidman;Male;Program Committee
 SANER;2016;Walid;Maalej;Male;Program Committee
 SANER;2016;Federica;Sarro;Female;Program Committee
-SANER;2016;Sonja;Haiduc;Female;Tool Track Chair
-SANER;2016;Yoshiki;;;Tool Track Chair
-SANER;2016;Chakkrit;Tantithamthavorn;;Tool Track Program Committee
-SANER;2016;Venera;Arnaoudova;Female;Tool Track Program Committee
-SANER;2016;Ali;Ouni;Male;Tool Track Program Committee
-SANER;2016;Fabian;Beck;Male;Tool Track Program Committee
-SANER;2016;Keisuke;Hotta;;Tool Track Program Committee
-SANER;2016;Shane;Mcintosh;Male;Tool Track Program Committee
-SANER;2016;Mario;Linares-Vásquez;Male;Tool Track Program Committee
-SANER;2016;Hideaki;Hata;;Tool Track Program Committee
-SANER;2016;Laura;Moreno;Female;Tool Track Program Committee
-SANER;2016;Thomas;;Male;Industrial Track Chair
-SANER;2016;Ashish;Sureka;;Industrial Track Chair
-SANER;2016;Vibha;Sinha;;Industrial Track Program Committee
-SANER;2016;Hee;Beng Kuan Tan;;Industrial Track Program Committee
-SANER;2016;Hongyu;Zhang;;Industrial Track Program Committee
-SANER;2016;Sagar;Sen;;Industrial Track Program Committee
-SANER;2016;Raghavan;Komondoor;Male;Industrial Track Program Committee
-SANER;2016;David;;Male;Industrial Track Program Committee
-SANER;2016;Weiyi;Shang;;Industrial Track Program Committee
-SANER;2016;David;Lo;Male;Industrial Track Program Committee
-SANER;2016;Jing;Sun;;Industrial Track Program Committee
-SANER;2016;Takashi;;Male;Industrial Track Program Committee
-SANER;2016;Jean-Guy;Schneider;Male;Industrial Track Program Committee
-SANER;2016;Diptikalyan;Saha;;Industrial Track Program Committee
-SANER;2016;Kivanc;Muslu;;Industrial Track Program Committee
-SANER;2016;Carl;Worms;Male;Industrial Track Program Committee
-SANER;2016;Emad;Shihab;;ERA Track Chair
-SANER;2016;Alberto;Bacchelli;Male;ERA Track Chair
-SANER;2016;Foutse;Khomh;Male;ERA Track Program Committee
-SANER;2016;Marco;;Male;ERA Track Program Committee
-SANER;2016;Hideaki;Hata;;ERA Track Program Committee
-SANER;2016;Christian;Bird;Male;ERA Track Program Committee
-SANER;2016;Christoph;Treude;Male;ERA Track Program Committee
-SANER;2016;Akinori;Ihara;;ERA Track Program Committee
-SANER;2016;Yoshiki;Higo;;ERA Track Program Committee
-SANER;2016;Xin;Xia;;ERA Track Program Committee
-SANER;2016;Alexander;Serebrenik;Male;ERA Track Program Committee
-SANER;2016;Andy;Zaidman;Male;ERA Track Program Committee
-SANER;2016;Georgios;Gousios;Male;ERA Track Program Committee
-SANER;2016;Gabriele;Bavota;Female;ERA Track Program Committee
-SANER;2016;Nikolaos;Tsantalis;Male;ERA Track Program Committee
-SANER;2016;David;Lo;Male;ERA Track Program Committee
-SANER;2016;Otavio;Lemos;;ERA Track Program Committee
-SANER;2016;Annibale;Panichella;Male;ERA Track Program Committee
-SANER;2016;Collin;McMillan;Male;ERA Track Program Committee
-SANER;2016;Alessandra;Gorla;Female;ERA Track Program Committee
-SANER;2016;Sonia;Haiduc;Female;ERA Track Program Committee
-SANER;2016;Peter;Rigby;Male;ERA Track Program Committee
+SANER;2016;Sonja;Haiduc;Female;Demo Track Chair
+SANER;2016;Yoshiki;;;Demo Track Chair
+SANER;2016;Chakkrit;Tantithamthavorn;;Demo Track Program Committee
+SANER;2016;Venera;Arnaoudova;Female;Demo Track Program Committee
+SANER;2016;Ali;Ouni;Male;Demo Track Program Committee
+SANER;2016;Fabian;Beck;Male;Demo Track Program Committee
+SANER;2016;Keisuke;Hotta;;Demo Track Program Committee
+SANER;2016;Shane;Mcintosh;Male;Demo Track Program Committee
+SANER;2016;Mario;Linares-Vásquez;Male;Demo Track Program Committee
+SANER;2016;Hideaki;Hata;;Demo Track Program Committee
+SANER;2016;Laura;Moreno;Female;Demo Track Program Committee
+SANER;2016;Thomas;;Male;Practical Track Chair
+SANER;2016;Ashish;Sureka;;Practical Track Chair
+SANER;2016;Vibha;Sinha;;Practical Track Program Committee
+SANER;2016;Hee;Beng Kuan Tan;;Practical Track Program Committee
+SANER;2016;Hongyu;Zhang;;Practical Track Program Committee
+SANER;2016;Sagar;Sen;;Practical Track Program Committee
+SANER;2016;Raghavan;Komondoor;Male;Practical Track Program Committee
+SANER;2016;David;;Male;Practical Track Program Committee
+SANER;2016;Weiyi;Shang;;Practical Track Program Committee
+SANER;2016;David;Lo;Male;Practical Track Program Committee
+SANER;2016;Jing;Sun;;Practical Track Program Committee
+SANER;2016;Takashi;;Male;Practical Track Program Committee
+SANER;2016;Jean-Guy;Schneider;Male;Practical Track Program Committee
+SANER;2016;Diptikalyan;Saha;;Practical Track Program Committee
+SANER;2016;Kivanc;Muslu;;Practical Track Program Committee
+SANER;2016;Carl;Worms;Male;Practical Track Program Committee
+SANER;2016;Emad;Shihab;;Early Research Track Chair
+SANER;2016;Alberto;Bacchelli;Male;Early Research Track Chair
+SANER;2016;Foutse;Khomh;Male;Early Research Track Program Committee
+SANER;2016;Marco;;Male;Early Research Track Program Committee
+SANER;2016;Hideaki;Hata;;Early Research Track Program Committee
+SANER;2016;Christian;Bird;Male;Early Research Track Program Committee
+SANER;2016;Christoph;Treude;Male;Early Research Track Program Committee
+SANER;2016;Akinori;Ihara;;Early Research Track Program Committee
+SANER;2016;Yoshiki;Higo;;Early Research Track Program Committee
+SANER;2016;Xin;Xia;;Early Research Track Program Committee
+SANER;2016;Alexander;Serebrenik;Male;Early Research Track Program Committee
+SANER;2016;Andy;Zaidman;Male;Early Research Track Program Committee
+SANER;2016;Georgios;Gousios;Male;Early Research Track Program Committee
+SANER;2016;Gabriele;Bavota;Female;Early Research Track Program Committee
+SANER;2016;Nikolaos;Tsantalis;Male;Early Research Track Program Committee
+SANER;2016;David;Lo;Male;Early Research Track Program Committee
+SANER;2016;Otavio;Lemos;;Early Research Track Program Committee
+SANER;2016;Annibale;Panichella;Male;Early Research Track Program Committee
+SANER;2016;Collin;McMillan;Male;Early Research Track Program Committee
+SANER;2016;Alessandra;Gorla;Female;Early Research Track Program Committee
+SANER;2016;Sonia;Haiduc;Female;Early Research Track Program Committee
+SANER;2016;Peter;Rigby;Male;Early Research Track Program Committee
 SLE;2008;Mark;van den Brand;Male;Keynote Speaker
 SLE;2008;Anneke;Kleppe;Female;Keynote Speaker
 SLE;2008;Mark;van den Brand;Male;Steering Committee
@@ -3447,7 +4013,7 @@ SLE;2011;Zhenjiang;Hu;Male;Program Committee
 SLE;2011;José;Creissac Campos;Male;Finance Chair
 SLE;2011;João;Paulo Fernandes;Male;Web Chair
 SLE;2011;João;Paulo Fernandes;Male;Publicity Chair
-SLE;2011;Jurgen;Vinju;Male;Workshop Chair
+SLE;2011;Jurgen;Vinju;Male;Satellite Events Chair
 SLE;2011;Vadim;Zaytsev;Male;Publicity Chair
 SLE;2012;Uwe;Assmann;Male;General Chair
 SLE;2012;Krzysztof;Czarnecki;Male;Program Chair
@@ -3623,3 +4189,86 @@ SLE;2015;Gorel;Hedin;Female;Steering Committee
 SLE;2015;Jurgen;Vinju;Male;Steering Committee
 SLE;2015;Krzysztof;Czarnecki;Male;Steering Committee
 SLE;2015;Mark;van den Brand;Male;Steering Chair
+WCRE;2013;Ralf;Lämmel;Male;General Chair
+WCRE;2013;Rocco;Oliveto;Male;Program Chair
+WCRE;2013;Romain;Robbes;Male;Program Chair
+WCRE;2013;Gabriele;Bavota;Female;Demo Track Chair
+WCRE;2013;Vadim;Zaytsev;Male;Demo Track Chair
+WCRE;2013;Tudor;Girba;Male;Workshop Chair
+WCRE;2013;Foutse;Khomh;Male;Workshop Chair
+WCRE;2013;Nicholas;A. Kraft;Male;Workshop Chair
+WCRE;2013;Huzefa;Kagdi;Male;Publication Chair
+WCRE;2013;Elliot;Chikofsky;Male;Finance Chair
+WCRE;2013;Felienne;Hermans;Female;Publicity Chair
+WCRE;2013;Venera;Arnaoudova;Female;Web Chair
+WCRE;2013;Reid;Holmes;;Mobile Chair
+WCRE;2013;Andrei;Varanovich;Male;Hackathon Chair
+WCRE;2013;Sabine;Hülstrunk;;Local Committee
+WCRE;2013;Manfred;Jackel;Male;Local Committee
+WCRE;2013;Rainer;Koschke;Male;Steering Chair
+WCRE;2013;Elliot;Chikofsky;Male;Steering Committee
+WCRE;2013;James;Cordy;Male;Steering Committee
+WCRE;2013;Tom;Dean;Male;Steering Committee
+WCRE;2013;Leon;Moonen;Male;Steering Committee
+WCRE;2013;Abram;Hindle;Male;Program Committee
+WCRE;2013;Alberto;Bacchelli;Male;Program Committee
+WCRE;2013;Alexandre;Bergel;Male;Program Committee
+WCRE;2013;Ali;Mesbah;Male;Program Committee
+WCRE;2013;Andrea;De Lucia;Female;Program Committee
+WCRE;2013;Andreas;Winter;Male;Program Committee
+WCRE;2013;Andrew;Sutton;Male;Program Committee
+WCRE;2013;Andrian;Marcus;Male;Program Committee
+WCRE;2013;Andy;Zaidman;Male;Program Committee
+WCRE;2013;Annibale;Panichella;Male;Program Committee
+WCRE;2013;Anthony;Cleve;Male;Program Committee
+WCRE;2013;Bram;Adams;Male;Program Committee
+WCRE;2013;Chanchal;Roy;Male;Program Committee
+WCRE;2013;Collin;Mcmillan;Male;Program Committee
+WCRE;2013;Daqing;Hou;;Program Committee
+WCRE;2013;David;Lo;Male;Program Committee
+WCRE;2013;David;Roethlisberger;Male;Program Committee
+WCRE;2013;Dawn;J. Lawrie;;Program Committee
+WCRE;2013;Denys;Poshyvanyk;Male;Program Committee
+WCRE;2013;Dirk;Beyer;Male;Program Committee
+WCRE;2013;Emad;Shihab;;Program Committee
+WCRE;2013;Elmar;Juergens;;Program Committee
+WCRE;2013;Emily;Hill;Female;Program Committee
+WCRE;2013;Filippo;Ricca;Male;Program Committee
+WCRE;2013;Foutse;Khomh;Male;Program Committee
+WCRE;2013;Gabriele;Bavota;Female;Program Committee
+WCRE;2013;Gerardo;Canfora;Male;Program Committee
+WCRE;2013;Giuliano;Antoniol;Male;Program Committee
+WCRE;2013;Hausi;Muller;Male;Program Committee
+WCRE;2013;Huzefa;Kagdi;Male;Program Committee
+WCRE;2013;Jairo;Aponte;;Program Committee
+WCRE;2013;James;Cordy;Male;Program Committee
+WCRE;2013;Jens;Knodel;Male;Program Committee
+WCRE;2013;Jens;Krinke;Male;Program Committee
+WCRE;2013;Jonathan;Maletic;Male;Program Committee
+WCRE;2013;Jorge;Figeiredo;;Program Committee
+WCRE;2013;Latifa;Guerrouj;Female;Program Committee
+WCRE;2013;Lingxiao;Jiang;;Program Committee
+WCRE;2013;Lori;Pollock;;Program Committee
+WCRE;2013;Lu;Zhang;;Program Committee
+WCRE;2013;Malcom;Gethers;;Program Committee
+WCRE;2013;Mariano;Ceccato;Male;Program Committee
+WCRE;2013;Mark;Grechanik;Male;Program Committee
+WCRE;2013;Mark;Harman;Male;Program Committee
+WCRE;2013;Martin;Pinzger;Male;Program Committee
+WCRE;2013;Massimiliano;Di Penta;Male;Program Committee
+WCRE;2013;Michael;Collard;Male;Program Committee
+WCRE;2013;Mircea;Lungu;Male;Program Committee
+WCRE;2013;Murray;Wood;;Program Committee
+WCRE;2013;Nabor;Mendonca;;Program Committee
+WCRE;2013;Nicholas;Kraft;Male;Program Committee
+WCRE;2013;Radu;Marinescu;Male;Program Committee
+WCRE;2013;Raghavan;Komondoor;Male;Program Committee
+WCRE;2013;Rainer;Koschke;Male;Program Committee
+WCRE;2013;Sonia;Haiduc;Female;Program Committee
+WCRE;2013;Spiros;Mancoridis;Male;Program Committee
+WCRE;2013;Thomas;Fritz;Male;Program Committee
+WCRE;2013;Tom;Dean;Male;Program Committee
+WCRE;2013;Vassilios;Tzerpos;Male;Program Committee
+WCRE;2013;Ying;Zou;;Program Committee
+WCRE;2013;Zhenchang;Xing;;Program Committee
+WCRE;2013;Zheng;Li;;Program Committee

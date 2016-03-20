@@ -87,36 +87,36 @@ ProgramCo Eelco Visser 	Delft University of Technology, The Netherlands
 ProgramCo Liming Zhu 	NICTA, Australia
 ProgramCo Steffen Zschaler 	King's College, London, UK
           
-ProgramCo Applications Track
-ProgramCo Patrick Albert 	IBM CAS France, France
-ProgramCo Robert Baillargeon 	Sodius, USA
-ProgramCo Edward J. Barkmeyer 	National Institute of Standards & Technology, USA
-ProgramCo Balbir Barn 	University of Middlesex, UK
-ProgramCo Mariano Belaunde 	Orange Labs, France
-ProgramCo Jorn Bettin 	Sofismo, Switzerland
-ProgramCo Rao Bhaskar 	Motorola, India
-ProgramCo Behzad Bordbar 	University of Birmingham, UK
-ProgramCo William Cook 	University of Texas at Austin, USA
-ProgramCo Diarmuid Corcoran 	Ericsson Software Research, Sweden
-ProgramCo Huascar Espinoza 	TECNALIA-European Software Institute, Spain
-ProgramCo Geri Georg 	Colorado State University, USA
-ProgramCo Jack Greenfield 	Microsoft Corporation, USA
-ProgramCo Pavel Hruby 	CSC, Denmark
-ProgramCo Narendra Jussien 	Ecole des Mines de Nantes, France
-ProgramCo Vinay Kulkarni 	Tata Consultancy Services, India
-ProgramCo Stephen J. Mellor 	UK
-ProgramCo Dragan Milicev 	University of Belgrade, Serbia
-ProgramCo Hiroshi Miyazaki 	Fujitsu, Japan
-ProgramCo Juan Carlos Molina Udaeta 	CARE Technologies, S.A., Spain
-ProgramCo Syed Salman Qadri 	The Mathworks, Inc., USA
-ProgramCo Ina Schieferdecker 	TU Berlin/Fraunhofer FOKUS, Germany
-ProgramCo Bran Selic 	Malina Software Corp., Canada
-ProgramCo Richard Soley 	Object Management Group, USA
-ProgramCo Ingo Stürmer 	Model Engineering Solutions GmbH, Germany
-ProgramCo Jun Sun 	Singapore University of Technology and Design, Singapore
-ProgramCo Francois Terrier 	CEA-LIST, France
-ProgramCo Laurence Tratt 	Middlesex University, UK
-ProgramCo Michael von der Beeck 	BMW Group, Germany
-ProgramCo Thomas Weigert 	Missouri University of Science and Technology, USA
-ProgramCo Frank Weil 	UniqueSoft, USA
-ProgramCo Ed Willink 	Eclipse Modeling Project, UK
+          Applications Track
+PractCo   Patrick Albert 	IBM CAS France, France
+PractCo   Robert Baillargeon 	Sodius, USA
+PractCo   Edward J. Barkmeyer 	National Institute of Standards & Technology, USA
+PractCo   Balbir Barn 	University of Middlesex, UK
+PractCo   Mariano Belaunde 	Orange Labs, France
+PractCo   Jorn Bettin 	Sofismo, Switzerland
+PractCo   Rao Bhaskar 	Motorola, India
+PractCo   Behzad Bordbar 	University of Birmingham, UK
+PractCo   William Cook 	University of Texas at Austin, USA
+PractCo   Diarmuid Corcoran 	Ericsson Software Research, Sweden
+PractCo   Huascar Espinoza 	TECNALIA-European Software Institute, Spain
+PractCo   Geri Georg 	Colorado State University, USA
+PractCo   Jack Greenfield 	Microsoft Corporation, USA
+PractCo   Pavel Hruby 	CSC, Denmark
+PractCo   Narendra Jussien 	Ecole des Mines de Nantes, France
+PractCo   Vinay Kulkarni 	Tata Consultancy Services, India
+PractCo   Stephen J. Mellor 	UK
+PractCo   Dragan Milicev 	University of Belgrade, Serbia
+PractCo   Hiroshi Miyazaki 	Fujitsu, Japan
+PractCo   Juan Carlos Molina Udaeta 	CARE Technologies, S.A., Spain
+PractCo   Syed Salman Qadri 	The Mathworks, Inc., USA
+PractCo   Ina Schieferdecker 	TU Berlin/Fraunhofer FOKUS, Germany
+PractCo   Bran Selic 	Malina Software Corp., Canada
+PractCo   Richard Soley 	Object Management Group, USA
+PractCo   Ingo Stürmer 	Model Engineering Solutions GmbH, Germany
+PractCo   Jun Sun 	Singapore University of Technology and Design, Singapore
+PractCo   Francois Terrier 	CEA-LIST, France
+PractCo   Laurence Tratt 	Middlesex University, UK
+PractCo   Michael von der Beeck 	BMW Group, Germany
+PractCo   Thomas Weigert 	Missouri University of Science and Technology, USA
+PractCo   Frank Weil 	UniqueSoft, USA
+PractCo   Ed Willink 	Eclipse Modeling Project, UK
