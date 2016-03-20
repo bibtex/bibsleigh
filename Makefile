@@ -40,3 +40,11 @@ prep: dblp.xml
 clean:
 	rm -rf __pychache__
 	find .. -name ".DS_Store" | xargs rm
+
+windows:
+	perl -pi -w -e 's/\/usr\/local\/bin\/python3/\/c\/Users\/vadim\/AppData\/Local\/Programs\/Python\/Python35\/python/g;' *.py */*.py
+	rm -f *.bak */*.bak
+
+unix:
+	perl -pi -w -e 's/\/c\/Users\/vadim\/AppData\/Local\/Programs\/Python\/Python35\/python/\/usr\/local\/bin\/python3/g;' *.py */*.py
+	rm -f *.bak

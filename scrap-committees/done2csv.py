@@ -1,9 +1,11 @@
-#!/usr/local/bin/python3
+#!/c/Users/vadim/AppData/Local/Programs/Python/Python35/python
 # -*- coding: utf-8 -*-
 #
 # a module to create a CSV
 
 import sys
+sys.path.append('..')
+from fancy.ANSI import C
 
 ROLEZ = {\
 	'BrCh': 'Briefings Chair',
@@ -56,11 +58,26 @@ CONFZ = {\
 
 BLANK = '     '
 lines = []
-for fn in sys.argv[1:]:
-	f = open(fn, 'r')
+cur = ''
+for fn in sys.argv[1:-1]:
+	if cur != fn.split('-')[0]:
+		if cur != '':
+			print()
+		print('[{}]'.format(C.purple(fn.split('-')[0].upper())), end=': ')
+		cur = fn.split('-')[0]
+	print("'{}".format(fn.split('-')[-1][-6:-4]), end=' ')
+	f = open(fn, 'r', encoding='utf-8')
 	lines += [(fn, line[:5], line[5:].strip()) for line in f.readlines()\
 		if line.strip() and line[:5] != BLANK and not line.startswith('#DONE')]
 	f.close()
+print()
+
+succ = fail = 0
+males = set(line.strip() for line in open('../naming/male.txt', 'r', encoding='utf-8').readlines())
+femes = set(line.strip() for line in open('../naming/female.txt', 'r', encoding='utf-8').readlines())
+asexs = set()
+
+f = open(sys.argv[-1], 'w', encoding='utf-8')
 
 for line in lines:
 	fn, status, name = line
@@ -83,6 +100,21 @@ for line in lines:
 	fname = name.split(' ')[0].strip()
 	lname = ' '.join(name.split(' ')[1:]).strip()
 	role = ROLEZ[status.strip()]
+	# try to determine gender
+	if fname in males:
+		gender = 'Male'
+		succ += 1
+	elif fname in femes:
+		gender = 'Female'
+		succ += 1
+	else:
+		gender = ''
+		asexs.add(fname)
+		fail += 1
 	# line = fn, status, name
 	# print(line)
-	print('{};{};{};{};;{}'.format(conf, year, fname, lname, role))
+	f.write('{};{};{};{};{};{}\n'.format(conf, year, fname, lname, gender, role))
+f.close()
+
+open('../naming/unknown.txt', 'w', encoding='utf-8').write('\n'.join(sorted(asexs)))
+print('With {} known names, {}% was classified.'.format(len(males)+len(femes), 100*succ//(succ+fail)))
