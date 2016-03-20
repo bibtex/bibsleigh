@@ -87,13 +87,13 @@ WeCh Marco D'Ambros
      Steering Committee
      
 StCo Ahmed E. Hassan
-
+     
 StCo Audris Mockus
-
+     
 StCo Ric Holt
      University of Waterloo, Canada
 StCo Katsuro Inoue
-
+     
 StCo Stephan Diehl
      University Trier
 StCo Harald Gall

@@ -14,4 +14,3 @@ OrCo Ahmed E. Hassan
 OrCo Richard C. Holt
      University of Waterloo
 OrCo Audris Mockus
-

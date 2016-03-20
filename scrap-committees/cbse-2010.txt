@@ -17,7 +17,7 @@ PrCh Lars Grunske
 PrCh Ralf Reussner
      
      CompArch Organization Chair
-GeCh František Plášil
+OrCh František Plášil
      
      Program Committee
 PrCo Steffen Becker	Forschungszentrum Informatik (FZI)	Germany
@@ -61,4 +61,3 @@ PrCo Asuman Sünbül	University of Potsdam	Germany
 PrCo Clemens Szyperski	Microsoft	USA
 PrCo Kurt Wallnau	Software Engineering Institute	USA
 PrCo Dave Wile	Teknowledge Corporation	USA
-     This layout is based on © YAML | TYPO3 Template © by T3NET-Consulting

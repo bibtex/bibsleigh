@@ -502,11 +502,8 @@ CBSE;2003;Christian;Zeidler;Male;Program Committee
 CBSE;2004;Clemens;Szyperski;Male;General Chair
 CBSE;2004;Ivica;Crnkovic;Male;Program Chair
 CBSE;2004;Heinz;Schmidt;Male;Organising Committee
-CBSE;2004;Heinz;Schmidt;Male;Steering Committee
 CBSE;2004;Judith;Stafford;Female;Organising Committee
-CBSE;2004;Judith;Stafford;Female;Steering Committee
 CBSE;2004;Kurt;Wallnau;Male;Organising Committee
-CBSE;2004;Kurt;Wallnau;Male;Steering Committee
 CBSE;2004;Uwe;Aßmann;Male;Program Committee
 CBSE;2004;Jakob;Axelsson;Male;Program Committee
 CBSE;2004;Mike;Barnett;Male;Program Committee
@@ -538,11 +535,11 @@ CBSE;2005;Heinz;Schmidt;Male;Organising Committee
 CBSE;2005;Judith;Stafford;Female;Organising Committee
 CBSE;2005;Clemens;Szyperski;Male;Organising Committee
 CBSE;2005;Kurt;Wallnau;Male;Organising Committee
-CBSE;2005;Ivica;Crnkovic;Male;Steering Committee
-CBSE;2005;Heinz;Schmidt;Male;Steering Committee
-CBSE;2005;Judith;Stafford;Female;Steering Committee
-CBSE;2005;Clemens;Szyperski;Male;Steering Committee
-CBSE;2005;Kurt;Wallnau;Male;Steering Committee
+CBSE;2005;Ivica;Crnkovic;Male;Organising Committee
+CBSE;2005;Heinz;Schmidt;Male;Organising Committee
+CBSE;2005;Judith;Stafford;Female;Organising Committee
+CBSE;2005;Clemens;Szyperski;Male;Organising Committee
+CBSE;2005;Kurt;Wallnau;Male;Organising Committee
 CBSE;2005;Rob;Armstrong;Male;Program Committee
 CBSE;2005;Uwe;Aßmann;Male;Program Committee
 CBSE;2005;Jakob;Axelsson;Male;Program Committee
@@ -569,7 +566,7 @@ CBSE;2005;Douglas;Schmidt;Male;Program Committee
 CBSE;2005;Jean-Guy;Schneider;Male;Program Committee
 CBSE;2005;Dave;Wile;Male;Program Committee
 CBSE;2006;Ian;Gorton;Male;Program Chair
-CBSE;2006;Ivica;Crnkovic;Male;Program Chair
+CBSE;2006;Ivica;Crnkovic;Male;Organising Chair
 CBSE;2006;George;Heineman;Male;Steering Committee
 CBSE;2006;Heinz;Schmidt;Male;Steering Committee
 CBSE;2006;Judith;Stafford;Female;Steering Committee
@@ -602,6 +599,7 @@ CBSE;2006;Douglas;Schmidt;Male;Program Committee
 CBSE;2006;Jean-Guy;Schneider;Male;Program Committee
 CBSE;2006;Dave;Wile;Male;Program Committee
 CBSE;2006;Wolfgang;Weck;Male;Program Committee
+CBSE;2007;Judith;Stafford;Female;Organising Chair
 CBSE;2007;Heinz;W. Schmidt;Male;Program Chair
 CBSE;2007;Ivica;Crnkovic;Male;Steering Committee
 CBSE;2007;Ian;Gorton;Male;Steering Committee
@@ -720,7 +718,7 @@ CBSE;2009;Asuman;Sünbül;Male;Program Committee
 CBSE;2009;Rob;van Ommering;Male;Program Committee
 CBSE;2010;Lars;Grunske;Male;Program Chair
 CBSE;2010;Ralf;Reussner;Male;Program Chair
-CBSE;2010;František;Plášil;Male;General Chair
+CBSE;2010;František;Plášil;Male;Organising Chair
 CBSE;2010;Steffen;Becker;Male;Program Committee
 CBSE;2010;Judith;Bishop;Female;Program Committee
 CBSE;2010;Barbora;Buhnova;;Program Committee
@@ -764,8 +762,8 @@ CBSE;2010;Kurt;Wallnau;Male;Program Committee
 CBSE;2010;Dave;Wile;Male;Program Committee
 CBSE;2011;Antonia;Bertolino;Female;Program Chair
 CBSE;2011;Kendra;M-L Cooper;Male;Program Chair
-CBSE;2011;Ivica;Crnkovic;Male;General Chair
-CBSE;2011;Judith;A. Stafford;Female;General Chair
+CBSE;2011;Ivica;Crnkovic;Male;Organising Chair
+CBSE;2011;Judith;A. Stafford;Female;Organising Chair
 CBSE;2011;Ivica;Crnkovic;Male;Steering Committee
 CBSE;2011;Ian;Gorton;Male;Steering Committee
 CBSE;2011;George;Heineman;Male;Steering Committee
@@ -819,8 +817,8 @@ CBSE;2011;Reishi;Yokomori;;Program Committee
 CBSE;2011;Hüseyin;Aysan;Male;Web Chair
 CBSE;2012;Nenad;Medvidovic;Male;Program Chair
 CBSE;2012;Magnus;Larsson;Male;Program Chair
-CBSE;2012;Vincenzo;Grassi;Male;General Chair
-CBSE;2012;Raffaela;Mirandola;Female;General Chair
+CBSE;2012;Vincenzo;Grassi;Male;Organising Chair
+CBSE;2012;Raffaela;Mirandola;Female;Organising Chair
 CBSE;2012;Ivica;Crnkovic;Male;Steering Committee
 CBSE;2012;Ian;Gorton;Male;Steering Committee
 CBSE;2012;George;Heineman;Male;Steering Committee
@@ -1126,6 +1124,9 @@ CSMR-WCRE;2014;Ira;Baxter;Male;Program Committee
 CSMR-WCRE;2014;Sonia;Haiduc;Female;Program Committee
 CSMR-WCRE;2014;Jonathan;Maletic;Male;Program Committee
 CSMR-WCRE;2014;Jurgen;Vinju;Male;Program Committee
+FoSE;2016;Massimiliano;Di Penta;Male;Award Chair
+FoSE;2016;Ahmed;Hassan;Male;Award Chair
+FoSE;2016;Thomas;Zimmerman;Male;Award Chair
 GTTSE;2005;Ralf;Lämmel;Male;Program Chair
 GTTSE;2005;João;Saraiva;Male;Program Chair
 GTTSE;2005;Joost;Visser;Male;Organising Chair
@@ -2911,6 +2912,170 @@ SANER;2015;Mark;Van Den Brand;Male;Industrial Track Program Committee
 SANER;2015;Mark;Grechanik;Male;Industrial Track Program Committee
 SANER;2015;Radu;Marinescu;Male;Industrial Track Program Committee
 SANER;2015;Juergen;Rilling;Male;Industrial Track Program Committee
+SANER;2016;Wim;De Pauw;;Keynote Speaker
+SANER;2016;Alexander;L. Wolf;Male;Keynote Speaker
+SANER;2016;Katsuro;Inoue;Male;General Chair
+SANER;2016;Yasutaka;Kamei;Male;Program Chair
+SANER;2016;Michele;Lanza;Male;Program Chair
+SANER;2016;Alberto;Bacchelli;Male;ERA Track Chair
+SANER;2016;Emad;Shihab;;ERA Track Chair
+SANER;2016;Ashish;Sureka;;Industrial Track Chair
+SANER;2016;Thomas;Zimmerman;Male;Industrial Track Chair
+SANER;2016;Sonia;Haiduc;Female;Tool Track Chair
+SANER;2016;Yoshiki;Higo;;Tool Track Chair
+SANER;2016;Serge;Demeyer;Male;Doctoral Symposium Chair
+SANER;2016;Mike;Godfrey;Male;Doctoral Symposium Chair
+SANER;2016;Bram;Adams;Male;Post-Doctoral Symposium Chair
+SANER;2016;Haroon;Malik;;Post-Doctoral Symposium Chair
+SANER;2016;Coen;De Roover;Male;Workshop Chair
+SANER;2016;Daniel;German;Male;Workshop Chair
+SANER;2016;Massimiliano;Di Penta;Male;Award Chair
+SANER;2016;Laura;Moreno;;Poster Chair
+SANER;2016;Hiroyuki;Nakagawa;;Poster Chair
+SANER;2016;Eunjong;Choi;;Local Committee
+SANER;2016;Hideaki;Hata;;Local Committee
+SANER;2016;Shinji;Kusumoto;;Local Committee
+SANER;2016;Takashi;Kobayashi;Male;Local Committee
+SANER;2016;Mizuho;Karube;;Local Committee
+SANER;2016;Hiroshi;Igaki;;Local Chair
+SANER;2016;Tatsuhiro;Tsuchiya;;Local Chair
+SANER;2016;Takashi;Ishio;Male;Local Chair
+SANER;2016;Masahide;Nakamura;;Local Chair
+SANER;2016;Shinpei;Hayashi;;Student Volunteers Chair
+SANER;2016;Raula;Gaikovina Kula;;Student Volunteers Chair
+SANER;2016;Norihiro;Yoshida;;Publication Chair
+SANER;2016;Gabriele;Bavota;;Publicity Chair
+SANER;2016;Olga;Baysal;Male;Publicity Chair
+SANER;2016;Anthony;Cleve;Male;Publicity Chair
+SANER;2016;Akinori;Ihara;;Publicity Chair
+SANER;2016;David;Lo;Male;Publicity Chair
+SANER;2016;Makoto;Matsushita;;Publicity Chair
+SANER;2016;Andrea;Mocci;Female;Publicity Chair
+SANER;2016;Tetsuya;Kanda;;Web Chair
+SANER;2016;Luca;Ponzanelli;Male;Web Chair
+SANER;2016;Shusuke;Haruna;;Industrial Track Chair
+SANER;2016;Bram;Adams;Male;Steering Committee
+SANER;2016;Dave;Binkley;Male;Steering Committee
+SANER;2016;Ira;Baxter;Male;Steering Committee
+SANER;2016;Elliot;Chikofsky;Male;Steering Committee
+SANER;2016;Serge;Demeyer;Male;Steering Committee
+SANER;2016;Yann-Gaël;Guéhéneuc;Male;Steering Committee
+SANER;2016;David;Lo;Male;Steering Committee
+SANER;2016;Hausi;Müller;Male;Steering Committee
+SANER;2016;Michele;Lanza;Male;Program Chair
+SANER;2016;Yasutaka;Kamei;Male;Program Chair
+SANER;2016;Gabriele;Bavota;;Program Committee
+SANER;2016;Harald;Gall;Male;Program Committee
+SANER;2016;Rainer;Koschke;Male;Program Committee
+SANER;2016;Andrian;Marcus;Male;Program Committee
+SANER;2016;Tudor;Girba;Male;Program Committee
+SANER;2016;Nils;Göde;Male;Program Committee
+SANER;2016;Alexander;Serebrenik;Male;Program Committee
+SANER;2016;Andrea;Mocci;Female;Program Committee
+SANER;2016;Marcus;Denker;Male;Program Committee
+SANER;2016;Filippo;Ricca;Male;Program Committee
+SANER;2016;Foutse;Khomh;Male;Program Committee
+SANER;2016;David;Lo;Male;Program Committee
+SANER;2016;Marco;Tulio;Male;Program Committee
+SANER;2016;Takashi;;Male;Program Committee
+SANER;2016;Giuseppe;Scanniello;Male;Program Committee
+SANER;2016;Denys;;Male;Program Committee
+SANER;2016;Abram;Hindle;Male;Program Committee
+SANER;2016;Giuliano;Antoniol;Male;Program Committee
+SANER;2016;Christian;Bird;Male;Program Committee
+SANER;2016;Romain;;Male;Program Committee
+SANER;2016;Dave;Binkley;Male;Program Committee
+SANER;2016;Massimiliano;Di Penta;Male;Program Committee
+SANER;2016;Radu;Marinescu;Male;Program Committee
+SANER;2016;Alessandra;Gorla;Female;Program Committee
+SANER;2016;Olga;Baysal;Male;Program Committee
+SANER;2016;Andrew;;Male;Program Committee
+SANER;2016;Sunghun;Kim;;Program Committee
+SANER;2016;Yann-Gaël;Guéhéneuc;Male;Program Committee
+SANER;2016;Gregorio;Robles;Male;Program Committee
+SANER;2016;Norihiro;Yoshida;;Program Committee
+SANER;2016;Makoto;Matsushita;;Program Committee
+SANER;2016;Akinori;;;Program Committee
+SANER;2016;Daniel;German;Male;Program Committee
+SANER;2016;Rocco;Oliveto;Male;Program Committee
+SANER;2016;Martin;Pinzger;Male;Program Committee
+SANER;2016;Michael;Collard;Male;Program Committee
+SANER;2016;Reid;Holmes;;Program Committee
+SANER;2016;Anthony;Cleve;Male;Program Committee
+SANER;2016;Hongyu;;;Program Committee
+SANER;2016;Oscar;Nierstrasz;Male;Program Committee
+SANER;2016;Jonathan;Maletic;Male;Program Committee
+SANER;2016;Jim;Whitehead;Male;Program Committee
+SANER;2016;Lin;Tan;;Program Committee
+SANER;2016;Jurgen;Vinju;Male;Program Committee
+SANER;2016;Alessandro;Garcia;Male;Program Committee
+SANER;2016;Hausi;Müller;Male;Program Committee
+SANER;2016;Meiyappan;Nagappan;Male;Program Committee
+SANER;2016;Rudolf;Ferenc;Male;Program Committee
+SANER;2016;James;R. Cordy;Male;Program Committee
+SANER;2016;Tibor;Gyimothy;Male;Program Committee
+SANER;2016;Dongsun;Kim;;Program Committee
+SANER;2016;Mark;Harman;Male;Program Committee
+SANER;2016;Shinpei;Hayashi;;Program Committee
+SANER;2016;Georgios;Gousios;Male;Program Committee
+SANER;2016;Marco;Gerosa;Male;Program Committee
+SANER;2016;Carmine;Gravino;;Program Committee
+SANER;2016;Domenico;Bianculli;Male;Program Committee
+SANER;2016;Francesca;Arcelli Fontana;Female;Program Committee
+SANER;2016;Zhen;Ming Jack  Jiang;;Program Committee
+SANER;2016;Chanchal;K. Roy;Male;Program Committee
+SANER;2016;Andy;Zaidman;Male;Program Committee
+SANER;2016;Walid;Maalej;Male;Program Committee
+SANER;2016;Federica;Sarro;;Program Committee
+SANER;2016;Sonja;Haiduc;;Tool Track Chair
+SANER;2016;Yoshiki;;;Tool Track Chair
+SANER;2016;Chakkrit;Tantithamthavorn;;Tool Track Program Committee
+SANER;2016;Venera;Arnaoudova;Female;Tool Track Program Committee
+SANER;2016;Ali;Ouni;Male;Tool Track Program Committee
+SANER;2016;Fabian;Beck;;Tool Track Program Committee
+SANER;2016;Keisuke;Hotta;;Tool Track Program Committee
+SANER;2016;Shane;Mcintosh;Male;Tool Track Program Committee
+SANER;2016;Mario;Linares-Vásquez;Male;Tool Track Program Committee
+SANER;2016;Hideaki;Hata;;Tool Track Program Committee
+SANER;2016;Laura;Moreno;;Tool Track Program Committee
+SANER;2016;Thomas;;Male;Industrial Track Chair
+SANER;2016;Ashish;Sureka;;Industrial Track Chair
+SANER;2016;Vibha;Sinha;;Industrial Track Program Committee
+SANER;2016;Hee;Beng Kuan Tan;;Industrial Track Program Committee
+SANER;2016;Hongyu;Zhang;;Industrial Track Program Committee
+SANER;2016;Sagar;Sen;;Industrial Track Program Committee
+SANER;2016;Raghavan;Komondoor;Male;Industrial Track Program Committee
+SANER;2016;David;;Male;Industrial Track Program Committee
+SANER;2016;Weiyi;Shang;;Industrial Track Program Committee
+SANER;2016;David;Lo;Male;Industrial Track Program Committee
+SANER;2016;Jing;Sun;;Industrial Track Program Committee
+SANER;2016;Takashi;;Male;Industrial Track Program Committee
+SANER;2016;Jean-Guy;Schneider;Male;Industrial Track Program Committee
+SANER;2016;Diptikalyan;Saha;;Industrial Track Program Committee
+SANER;2016;Kivanc;Muslu;;Industrial Track Program Committee
+SANER;2016;Carl;Worms;;Industrial Track Program Committee
+SANER;2016;Emad;Shihab;;ERA Track Chair
+SANER;2016;Alberto;Bacchelli;Male;ERA Track Chair
+SANER;2016;Foutse;Khomh;Male;ERA Track Program Committee
+SANER;2016;Marco;;Male;ERA Track Program Committee
+SANER;2016;Hideaki;Hata;;ERA Track Program Committee
+SANER;2016;Christian;Bird;Male;ERA Track Program Committee
+SANER;2016;Christoph;Treude;Male;ERA Track Program Committee
+SANER;2016;Akinori;Ihara;;ERA Track Program Committee
+SANER;2016;Yoshiki;Higo;;ERA Track Program Committee
+SANER;2016;Xin;Xia;;ERA Track Program Committee
+SANER;2016;Alexander;Serebrenik;Male;ERA Track Program Committee
+SANER;2016;Andy;Zaidman;Male;ERA Track Program Committee
+SANER;2016;Georgios;Gousios;Male;ERA Track Program Committee
+SANER;2016;Gabriele;Bavota;;ERA Track Program Committee
+SANER;2016;Nikolaos;Tsantalis;Male;ERA Track Program Committee
+SANER;2016;David;Lo;Male;ERA Track Program Committee
+SANER;2016;Otavio;Lemos;;ERA Track Program Committee
+SANER;2016;Annibale;Panichella;;ERA Track Program Committee
+SANER;2016;Collin;McMillan;Male;ERA Track Program Committee
+SANER;2016;Alessandra;Gorla;Female;ERA Track Program Committee
+SANER;2016;Sonia;Haiduc;Female;ERA Track Program Committee
+SANER;2016;Peter;Rigby;Male;ERA Track Program Committee
 SLE;2008;Mark;van den Brand;Male;Keynote Speaker
 SLE;2008;Anneke;Kleppe;Female;Keynote Speaker
 SLE;2008;Mark;van den Brand;Male;Steering Committee
@@ -2924,8 +3089,8 @@ SLE;2008;Andreas;Winter;Male;Steering Committee
 SLE;2008;Ralf;Laemmel;Male;General Chair
 SLE;2008;Dragan;Gasevic;Male;Program Chair
 SLE;2008;Eric;Van Wyk;Male;Program Chair
-SLE;2008;Jean-Marie;Favre;Male;Organising Committee
 SLE;2008;Jean-Sebastien;Sottet;Male;Web Chair
+SLE;2008;Jean-Marie;Favre;Male;Organising Committee
 SLE;2008;Andreas;Winter;Male;Organising Committee
 SLE;2008;Steffen;Zschaler;Male;Publicity Chair
 SLE;2008;Uwe;Aßmann;Male;Program Committee
@@ -3011,8 +3176,8 @@ SLE;2009;Jurgen;Vinju;Male;Program Committee
 SLE;2009;Eelco;Visser;Male;Program Committee
 SLE;2009;René;Witte;Male;Program Committee
 SLE;2009;Bardia;Mohabbati;;Web Chair
-SLE;2009;Alexander;Serebrenik;Male;Publication Chair
-SLE;2009;James;Hill;Male;Publication Chair
+SLE;2009;Alexander;Serebrenik;Male;Publicity Chair
+SLE;2009;James;Hill;Male;Publicity Chair
 SLE;2010;Mark;van den Brand;Male;General Chair
 SLE;2010;Brian;Malloy;Male;Program Chair
 SLE;2010;Steffen;Staab;Male;Program Chair

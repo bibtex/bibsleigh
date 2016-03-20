@@ -27,9 +27,10 @@ GeCh * Ralf Laemmel, Universitat Koblenz-Landau, Germany
 PrCh * Dragan Gasevic, Athabasca University, Canada
 PrCh * Eric Van Wyk, University of Minnesota, USA
      
+     Web Chair
+WeCh * Jean-Sebastien Sottet, , University of Grenoble, France
      Organization Committee
 OrCo * Jean-Marie Favre, University of Grenoble, France
-WeCh * Jean-Sebastien Sottet, Web Chair, University of Grenoble, France
 OrCo * Andreas Winter, Johannes Gutenberg-Universitat Mainz, Germany
 PbCh * Steffen Zschaler, Publicity Chair, TU Dresden, Germany
      

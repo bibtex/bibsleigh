@@ -5,8 +5,8 @@ PrCh Nenad Medvidovic, University of Southern California USA
 PrCh Magnus Larsson, Mälardalen University & ABB Sweden
      CompArch Organization Chairs
      Name Surname Affiliation Country
-GeCh Vincenzo Grassi, Università di Roma Tor Vergata Italy
-GeCh Raffaela Mirandola, Politecnico di Milano Italy
+OrCh Vincenzo Grassi, Università di Roma Tor Vergata Italy
+OrCh Raffaela Mirandola, Politecnico di Milano Italy
      Steering Committee
      Name Surname Affiliation Country
 StCo Ivica Crnkovic, Mälardalen University Sweden

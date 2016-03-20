@@ -1,9 +1,12 @@
 #DONE
      http://wiki.di.uminho.pt/twiki/bin/view/Events/GTTSE/Organisers
      Summer school chairs
-PrCh Ralf Lämmel (Program Chair), Microsoft Corporation, USA.
-PrCh João Saraiva (Program Chair), Universidade do Minho, Braga, Portugal.
-OrCh Joost Visser (Organizing Chair), Universidade do Minho, Braga, Portugal.
+PrCh Ralf Lämmel (Program Chair),
+     Microsoft Corporation, USA.
+PrCh João Saraiva (Program Chair),
+     Universidade do Minho, Braga, Portugal.
+OrCh Joost Visser (Organizing Chair),
+     Universidade do Minho, Braga, Portugal.
      Organizing committee
 OrCo Jose Bacelar Almeida, Universidade do Minho, Braga, Portugal.
 OrCo Mark van den Brand, CWI & HvA, Amsterdam, The Netherlands.

@@ -1,7 +1,7 @@
 #DONE
      http://goanna.cs.rmit.edu.au/~hws/CBSE10/cfp.shtml
      Organization Chair
-     Judith Stafford	Tufts University, USA	jas@cs.tufts.edu
+OrCh Judith Stafford	Tufts University, USA	jas@cs.tufts.edu
      Program Chair
 PrCh Heinz W. Schmidt	RMIT University, Australia	Heinz.Schmidt@rmit.edu.au
      Steering Committee

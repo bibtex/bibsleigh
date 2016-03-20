@@ -1,6 +1,11 @@
 #DONE
      SANER2016/papers/1855z015.pdf
      SANER2016/papers/1855z018.pdf
+     
+     Keynotes
+KN   Wim De Pauw
+KN   Alexander L. Wolf
+     
      Organizing Committee
      General Chair
 GeCh Katsuro Inoue,
@@ -41,7 +46,7 @@ WoCh Daniel German,
      MIP Award Chair
 AwCh Massimiliano Di Penta,
      University of Sannio
-     ??? [skip FoSE]
+     // [skip FoSE]
      Poster Co-Chairs
 PoCh Laura Moreno,
      The University of Texas at Dallas
@@ -204,7 +209,7 @@ PrCo Anthony Cleve,
 PrCo Hongyu   Zhang,
      Tsinghua University
 PrCo Oscar Nierstrasz,
-     SCG - University of Bern
+     University of Bern
 PrCo Jonathan Maletic,
      Kent State University
 PrCo Jim Whitehead,
@@ -214,7 +219,7 @@ PrCo Lin Tan ,
 PrCo Jurgen  Vinju,
      Centrum Wiskunde & Informatica
 PrCo Alessandro Garcia,
-     Pontifícia Universidade Católica do Rio de Janeiro (PUC-Rio)
+     Pontifícia Universidade Católica do Rio de Janeiro
 PrCo Hausi Müller,
      University of Victoria
 PrCo Meiyappan Nagappan,
@@ -238,7 +243,7 @@ PrCo Marco Gerosa,
 PrCo Carmine Gravino,
      University of Salerno
 PrCo Domenico Bianculli,
-     SnT Centre - University of Luxembourg
+     University of Luxembourg
 PrCo Francesca Arcelli Fontana
      University of Milano Bicocca
 PrCo Zhen Ming Jack  Jiang,

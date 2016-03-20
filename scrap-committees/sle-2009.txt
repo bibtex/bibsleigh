@@ -70,5 +70,5 @@ PrCo * René Witte, Concordia University, Canada
      
      Organization Committee
 WeCh * Bardia Mohabbati, Simon Fraser University, Canada (Web Chair)
-PuCh * Alexander Serebrenik, TU Eindhoven, The Netherlands (Publicity co-Chair)
-PuCh * James Hill, Vanderbilt University, USA (Publicity co-Chair)
+PbCh * Alexander Serebrenik, TU Eindhoven, The Netherlands (Publicity co-Chair)
+PbCh * James Hill, Vanderbilt University, USA (Publicity co-Chair)

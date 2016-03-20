@@ -1,8 +1,10 @@
 #DONE
      http://wiki.di.uminho.pt/twiki/bin/view/Events/GTTSE2007/Organisers
      Summer school chairs
-TuCh Ralf Lämmel (Tutorials Chair), Microsoft Corporation, USA.
-OrCh João Saraiva (Organizing Chair), Universidade do Minho, Braga, Portugal.
+TuCh Ralf Lämmel (Tutorials Chair),
+     Microsoft Corporation, USA.
+OrCh João Saraiva (Organizing Chair),
+     Universidade do Minho, Braga, Portugal.
 TuCh Joost Visser (Tutorials Chair), Software Improvement Group, The Netherlands.
      Organizing committee
 OrCo Alcino Cunha, Universidade do Minho, Braga, Portugal.

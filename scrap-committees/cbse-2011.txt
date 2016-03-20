@@ -21,8 +21,8 @@ PrCh Antonia Bertolino
 PrCh Kendra M-L Cooper
      
      CompArch Organization Chairs
-GeCh Ivica Crnkovic
-GeCh Judith A. Stafford
+OrCh Ivica Crnkovic
+OrCh Judith A. Stafford
      
      Steering Committee
      Name Surname Affiliation Country

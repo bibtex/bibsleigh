@@ -10,18 +10,14 @@ GeCh Clemens Szyperski, Microsoft Research, USA
      
 PrCh Ivica Crnkovic, Mälardalen University, Sweden
      
-     Organizing & Steering
-     
-          Committee
+     Organizing Committee
+     // and steering, but we don't care - @grammarware
      
 OrCo Heinz Schmidt, Monash University, Australia
-StCo Heinz Schmidt, Monash University, Australia
      
 OrCo Judith Stafford, Tufts University, USA
-StCo Judith Stafford, Tufts University, USA
      
 OrCo Kurt Wallnau, Software Engineering Institute, Carnegie Mellon University, USA
-StCo Kurt Wallnau, Software Engineering Institute, Carnegie Mellon University, USA
      
      Program Committee
      

@@ -67,7 +67,10 @@ for fn in sys.argv[1:-1]:
 	if cur != fn.split('-')[0]:
 		if cur != '':
 			print()
-		print('[{}]'.format(C.purple(fn.split('-')[0].upper())), end=': ')
+		name = fn.split('-')[0].upper()
+		if name in CONFZ:
+			name = CONFZ[name]
+		print('[{}]'.format(C.green(name)), end=': ')
 		cur = fn.split('-')[0]
 	print("'{}".format(fn.split('-')[-1][-6:-4]), end=' ')
 	f = open(fn, 'r', encoding='utf-8')
@@ -103,6 +106,8 @@ for line in lines:
 	year = fn.split('-')[1].split('.')[0]
 	fname = name.split(' ')[0].strip()
 	lname = ' '.join(name.split(' ')[1:]).strip()
+	if lname.find(' - '):
+		lname = lname.split(' - ')[0]
 	role = ROLEZ[status.strip()]
 	# try to determine gender
 	if fname in males:
