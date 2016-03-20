@@ -8,6 +8,7 @@ sys.path.append('..')
 from fancy.ANSI import C
 
 ROLEZ = {\
+	'AdCo': 'Advisory Committee',
 	'AwCh': 'Award Chair',
 	'BrCh': 'Briefings Chair',
 	'DaCh': 'Data Chair',

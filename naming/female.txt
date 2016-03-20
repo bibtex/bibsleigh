@@ -4,6 +4,7 @@ Andrea
 Aneta
 Angela
 Anita
+Anja
 Anna
 Anne
 Anneke
@@ -26,18 +27,22 @@ Daniela
 Debra
 Dimitra
 Dorina
+Eila
 Ekaterina
 Eleni
 Elisabetta
 Elizabeth
 Emilie
 Emily
+Esperanza
 Esther
+Federica
 Felienne
 Fiona
 Francesca
 G?rel
 Gabi
+Gabriele
 Gail
 Gerti
 Gianna
@@ -53,6 +58,7 @@ Judith
 Julia
 Kathi
 Latifa
+Laura
 Lidia
 Marcela
 Margaret
@@ -74,6 +80,8 @@ Patricia
 Perdita
 Priscila
 Raffaela
+Ragnhild
+Raula
 Roberta
 Rose
 Sigrid
@@ -82,6 +90,7 @@ Silvia
 Siobhan
 Siobhán
 Sonia
+Sonja
 Stefanie
 Susan
 Susanne
@@ -90,7 +99,9 @@ Sylvia
 Ségla
 Tanja
 Tiziana
+Valerie
 Venera
 Veronika
+Virginie
 Viviane
 Yolande

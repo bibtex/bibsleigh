@@ -22,6 +22,7 @@ Andrian
 Andrzej
 Andy
 Angelo
+Annibale
 Anthony
 Antonio
 Arie
@@ -43,11 +44,13 @@ Bill
 Bob
 Bogdan
 Bojan
+Boris
 Brahim
 Bram
 Bran
 Brian
 Bruno
+Carl
 Carlos
 Carsten
 Chanchal
@@ -60,9 +63,11 @@ Clemens
 Coen
 Colin
 Collin
+Cor-Paul
 Cornel
 Cornelius
 Craig
+Dan
 Daniel
 Danny
 Darius
@@ -102,6 +107,7 @@ Ethan
 Eugene
 Ewan
 Ewen
+Fabian
 Fabio
 Federico
 Fernando
@@ -111,6 +117,7 @@ Foutse
 Francesco
 Francisco
 Franck
+Frank
 Frantisek
 František
 Frederic
@@ -138,6 +145,7 @@ Girish
 Giuliano
 Giuseppe
 Gordon
+Graham
 Gregor
 Gregorio
 Gregory
@@ -248,6 +256,7 @@ Maarten
 Magne
 Magnus
 Malin
+Manfred
 Manuel
 Marc
 Marcello
@@ -272,11 +281,13 @@ Michele
 Miguel
 Mikael
 Mike
+Miltiadis
 Mircea
 Miryung
 Mitch
 Mithun
 Morven
+Muhammad
 Murali
 Nachiappan
 Nate
@@ -367,6 +378,7 @@ Shigeru
 Shih-Kun
 Shingo
 Shinichi
+Shinpei
 Shiping
 Shiva
 Shriram

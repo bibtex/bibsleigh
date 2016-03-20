@@ -143,7 +143,7 @@ ASE;2011;Gabi;Taentzer;Female;Expert Review Panel
 ASE;2011;Tetsuo;Tamai;Male;Expert Review Panel
 ASE;2011;Alex;Telea;;Expert Review Panel
 ASE;2011;Daniel;Varro;Male;Expert Review Panel
-ASE;2011;Virginie;Wiels;;Expert Review Panel
+ASE;2011;Virginie;Wiels;Female;Expert Review Panel
 ASE;2011;Andrea;Zisman;Female;Expert Review Panel
 ASE;2012;Michael;Goedicke;Male;General Chair
 ASE;2012;Tim;Menzies;Male;Program Chair
@@ -153,9 +153,9 @@ ASE;2012;Bernd;Fischer;Male;Tool Track Chair
 ASE;2012;Tevfik;Bultan;;Doctoral Symposium Chair
 ASE;2012;Andreas;Zeller;Male;Doctoral Symposium Chair
 ASE;2012;Darko;Marinov;Male;Workshop Chair
-ASE;2012;Gabriele;Taentzer;;Workshop Chair
+ASE;2012;Gabriele;Taentzer;Female;Workshop Chair
 ASE;2012;Darko;Marinov;Male;Tutorials Chair
-ASE;2012;Gabriele;Taentzer;;Tutorials Chair
+ASE;2012;Gabriele;Taentzer;Female;Tutorials Chair
 ASE;2012;Gregory;Gay;Male;Publicity Chair
 ASE;2012;Patrick;Mäder;Male;Publicity Chair
 ASE;2012;Hironori;Washizaki;;Publicity Chair
@@ -195,7 +195,7 @@ ASE;2012;Motoshi;Saeki;;Program Committee
 ASE;2012;Houari;Sahraoui;;Program Committee
 ASE;2012;Beverly;Sanders;;Program Committee
 ASE;2012;Anita;Sarma;Female;Program Committee
-ASE;2012;Gabriele;Taentzer;;Program Committee
+ASE;2012;Gabriele;Taentzer;Female;Program Committee
 ASE;2012;Tetsuo;Tamai;Male;Program Committee
 ASE;2012;Nikolai;Tillmann;Male;Program Committee
 ASE;2012;Richard;Torkar;Male;Program Committee
@@ -225,7 +225,7 @@ ASE;2012;Hong;Mei;;Expert Review Panel
 ASE;2012;Alessandro;Orso;Male;Expert Review Panel
 ASE;2012;Corina;Pasareanu;Female;Expert Review Panel
 ASE;2012;Douglas;Smith;Male;Expert Review Panel
-ASE;2012;Virginie;Wiels;;Expert Review Panel
+ASE;2012;Virginie;Wiels;Female;Expert Review Panel
 ASE;2012;Andrea;Zisman;Female;Expert Review Panel
 ASE;2012;David;Aspinall;Male;Tool Track Program Committee
 ASE;2012;Gilles;Barthe;Male;Tool Track Program Committee
@@ -289,7 +289,7 @@ ASE;2013;Lori;Pollock;;Program Committee
 ASE;2013;Martin;Robillard;Male;Program Committee
 ASE;2013;Grigore;Rosu;Male;Program Committee
 ASE;2013;Abhik;Roychoudhury;;Program Committee
-ASE;2013;Gabriele;Taentzer;;Program Committee
+ASE;2013;Gabriele;Taentzer;Female;Program Committee
 ASE;2013;Nikolai;Tillmann;Male;Program Committee
 ASE;2013;Sebastian;Uchitel;Male;Program Committee
 ASE;2013;Willem;Visser;Male;Program Committee
@@ -330,7 +330,7 @@ ASE;2014;Ivica;Crnkovic;Male;General Chair
 ASE;2014;Marsha;Chechik;Female;Program Chair
 ASE;2014;Paul;Grünbacher;Male;Program Chair
 ASE;2014;Arie;Gurfinkel;Male;Tool Track Chair
-ASE;2014;Gabriele;Taentzer;;Tool Track Chair
+ASE;2014;Gabriele;Taentzer;Female;Tool Track Chair
 ASE;2014;Elisabetta;Di Nitto;Female;Tutorials Chair
 ASE;2014;Michel;Chaudron;Male;Tutorials Chair
 ASE;2014;Lars;Grunske;Male;Workshop Chair
@@ -407,7 +407,7 @@ ASE;2014;Charles;Pecheur;Male;Expert Review Panel
 ASE;2014;Lori;Pollock;;Expert Review Panel
 ASE;2014;Abhik;Roychoudhury;;Expert Review Panel
 ASE;2014;Motoshi;Saeki;;Expert Review Panel
-ASE;2014;Gabriele;Taentzer;;Expert Review Panel
+ASE;2014;Gabriele;Taentzer;Female;Expert Review Panel
 ASE;2014;Nikolai;Tillmann;Male;Expert Review Panel
 ASE;2014;Paolo;Tonella;Male;Expert Review Panel
 ASE;2014;Willem;Visser;Male;Expert Review Panel
@@ -685,7 +685,7 @@ CBSE;2008;Wolfgang;Weck;Male;Program Committee
 CBSE;2008;Dave;Wile;Male;Program Committee
 CBSE;2009;Ivica;Crnkovic;Male;Program Chair
 CBSE;2009;Tomas;Bures;Male;Program Chair
-CBSE;2009;Muhammad;AliBabar;;Program Committee
+CBSE;2009;Muhammad;AliBabar;Male;Program Committee
 CBSE;2009;Eduardo;Santana de Almeida;Male;Program Committee
 CBSE;2009;Colin;Atkinson;Male;Program Committee
 CBSE;2009;Franck;Barbier;Male;Program Committee
@@ -710,7 +710,7 @@ CBSE;2009;Magnus;Larsson;Male;Program Committee
 CBSE;2009;Eric;Madelaine;Male;Program Committee
 CBSE;2009;Raffaela;Mirandola;Female;Program Committee
 CBSE;2009;Henry;Muccini;Male;Program Committee
-CBSE;2009;Eila;Niemelä;;Program Committee
+CBSE;2009;Eila;Niemelä;Female;Program Committee
 CBSE;2009;Alexander;Romanovsky;Male;Program Committee
 CBSE;2009;Lionel;Seinturier;Male;Program Committee
 CBSE;2009;Ian;Sommerville;Male;Program Committee
@@ -883,7 +883,7 @@ CBSE;2013;Lars;Grunske;Male;Program Committee
 CBSE;2013;George;Heineman;Male;Program Committee
 CBSE;2013;Gang;Huang;;Program Committee
 CBSE;2013;Paola;Inverardi;Female;Program Committee
-CBSE;2013;Valerie;Issarny;;Program Committee
+CBSE;2013;Valerie;Issarny;Female;Program Committee
 CBSE;2013;Fabrice;Kordon;;Program Committee
 CBSE;2013;Anne;Koziolek;Female;Program Committee
 CBSE;2013;Magnus;Larsson;Male;Program Committee
@@ -944,7 +944,7 @@ CBSE;2014;George;Heineman;Male;Program Committee
 CBSE;2014;Petr;Hnetynka;Male;Program Committee
 CBSE;2014;Gang;Huang;;Program Committee
 CBSE;2014;Oliver;Hummel;Male;Program Committee
-CBSE;2014;Valerie;Issarny;;Program Committee
+CBSE;2014;Valerie;Issarny;Female;Program Committee
 CBSE;2014;Fabrice;Kordon;;Program Committee
 CBSE;2014;Anne;Koziolek;Female;Program Committee
 CBSE;2014;Magnus;Larsson;Male;Program Committee
@@ -1072,7 +1072,7 @@ CSMR-WCRE;2014;Lingxiao;Jiang;;Program Committee
 CSMR-WCRE;2014;Foutse;Khomh;Male;Program Committee
 CSMR-WCRE;2014;Mircea;Lungu;Male;Program Committee
 CSMR-WCRE;2014;Chanchal;Roy;Male;Program Committee
-CSMR-WCRE;2014;Gabriele;Bavota;;Program Committee
+CSMR-WCRE;2014;Gabriele;Bavota;Female;Program Committee
 CSMR-WCRE;2014;Laurence;Duchien;Male;Program Committee
 CSMR-WCRE;2014;Árpád;Beszédes;Male;Program Committee
 CSMR-WCRE;2014;Anthony;Cleve;Male;Program Committee
@@ -1095,7 +1095,7 @@ CSMR-WCRE;2014;Radu;Marinescu;Male;Program Committee
 CSMR-WCRE;2014;Dalila;Tamzalit;Female;Program Committee
 CSMR-WCRE;2014;Marco;Torchiano;Male;Program Committee
 CSMR-WCRE;2014;Yijun;Yu;;Program Committee
-CSMR-WCRE;2014;Ragnhild;Van Der Straeten;;Program Committee
+CSMR-WCRE;2014;Ragnhild;Van Der Straeten;Female;Program Committee
 CSMR-WCRE;2014;Zhenchang;Xing;;Program Committee
 CSMR-WCRE;2014;Jesus;M. Gonzalez-Barahona;Male;Program Committee
 CSMR-WCRE;2014;Abram;Hindle;Male;Program Committee
@@ -1387,10 +1387,10 @@ ICMT;2008;Dave;Akehurst;Male;Program Committee
 ICMT;2008;Davide;Di Ruscio;Male;Program Committee
 ICMT;2008;Ed;Willink;Male;Program Committee
 ICMT;2008;Elie;Najm;;Program Committee
-ICMT;2008;Esperanza;Marcos;;Program Committee
+ICMT;2008;Esperanza;Marcos;Female;Program Committee
 ICMT;2008;Frédéric;Jouault;Male;Program Committee
 ICMT;2008;Gabor;Karsai;Male;Program Committee
-ICMT;2008;Gabriele;Taentzer;;Program Committee
+ICMT;2008;Gabriele;Taentzer;Female;Program Committee
 ICMT;2008;Gregor;Engels;Male;Program Committee
 ICMT;2008;Gianna;Reggio;Female;Program Committee
 ICMT;2008;Günter;Kniesel;Male;Program Committee
@@ -1443,10 +1443,10 @@ ICMT;2009;Daniel;Varro;Male;Program Committee
 ICMT;2009;Davide;Di Ruscio;Male;Program Committee
 ICMT;2009;Dimitrios;Kolovos;Male;Program Committee
 ICMT;2009;Ed;Willink;Male;Program Committee
-ICMT;2009;Esperanza;Marcos;;Program Committee
+ICMT;2009;Esperanza;Marcos;Female;Program Committee
 ICMT;2009;Francisco;Parisi-Presicce;Male;Program Committee
 ICMT;2009;Frédéric;Jouault;Male;Program Committee
-ICMT;2009;Gabriele;Taentzer;;Program Committee
+ICMT;2009;Gabriele;Taentzer;Female;Program Committee
 ICMT;2009;Gerti;Kappel;Female;Program Committee
 ICMT;2009;Gregor;Engels;Male;Program Committee
 ICMT;2009;Günter;Kniesel;Male;Program Committee
@@ -1491,10 +1491,10 @@ ICMT;2010;Daniel;Varro;Male;Program Committee
 ICMT;2010;Davide;Di Ruscio;Male;Program Committee
 ICMT;2010;Dimitris;Kolovos;Male;Program Committee
 ICMT;2010;Eelco;Visser;Male;Program Committee
-ICMT;2010;Esperanza;Marcos;;Program Committee
+ICMT;2010;Esperanza;Marcos;Female;Program Committee
 ICMT;2010;Francesco;Parisi-Presicce;Male;Program Committee
 ICMT;2010;Frédéric;Jouault;Male;Program Committee
-ICMT;2010;Gabriele;Taentzer;;Program Committee
+ICMT;2010;Gabriele;Taentzer;Female;Program Committee
 ICMT;2010;Gerti;Kappel;Female;Program Committee
 ICMT;2010;Gregor;Engels;Male;Program Committee
 ICMT;2010;Günter;Kniesel;Male;Program Committee
@@ -1603,7 +1603,7 @@ ICMT;2012;Bernhard;Rumpe;Male;Program Committee
 ICMT;2012;Andy;Schürr;Male;Program Committee
 ICMT;2012;Jim;Steel;Male;Program Committee
 ICMT;2012;Perdita;Stevens;Female;Program Committee
-ICMT;2012;Gabriele;Taentzer;;Program Committee
+ICMT;2012;Gabriele;Taentzer;Female;Program Committee
 ICMT;2012;Daniel;Varro;Male;Program Committee
 ICMT;2012;Janis;Voigtländer;;Program Committee
 ICMT;2012;Hironori;Washizaki;;Program Committee
@@ -1667,7 +1667,7 @@ ICMT;2013;Jim;Steel;Male;Program Committee
 ICMT;2013;Perdita;Stevens;Female;Program Committee
 ICMT;2013;Markus;Stumptner;Male;Program Committee
 ICMT;2013;Eugene;Syriani;Male;Program Committee
-ICMT;2013;Gabriele;Taentzer;;Program Committee
+ICMT;2013;Gabriele;Taentzer;Female;Program Committee
 ICMT;2013;James;Terwilliger;Male;Program Committee
 ICMT;2013;Massimo;Tisi;Male;Program Committee
 ICMT;2013;Laurence;Tratt;Male;Program Committee
@@ -1729,7 +1729,7 @@ ICMT;2014;Jim;Steel;Male;Program Committee
 ICMT;2014;Perdita;Stevens;Female;Program Committee
 ICMT;2014;Markus;Stumptner;Male;Program Committee
 ICMT;2014;Eugene;Syriani;Male;Program Committee
-ICMT;2014;Gabriele;Taentzer;;Program Committee
+ICMT;2014;Gabriele;Taentzer;Female;Program Committee
 ICMT;2014;Massimo;Tisi;Male;Program Committee
 ICMT;2014;Laurence;Tratt;Male;Program Committee
 ICMT;2014;Antonio;Vallecillo;Male;Program Committee
@@ -1792,7 +1792,7 @@ ICMT;2015;Andy;Schürr;Male;Program Committee
 ICMT;2015;Jim;Steel;Male;Program Committee
 ICMT;2015;Perdita;Stevens;Female;Program Committee
 ICMT;2015;Eugene;Syriani;Male;Program Committee
-ICMT;2015;Gabriele;Taentzer;;Program Committee
+ICMT;2015;Gabriele;Taentzer;Female;Program Committee
 ICMT;2015;Massimo;Tisi;Male;Program Committee
 ICMT;2015;Mark;Van Den Brand;Male;Program Committee
 ICMT;2015;Tijs;Van Der Storm;Male;Program Committee
@@ -1804,6 +1804,52 @@ ICMT;2015;Dennis;Wagelaar;Male;Program Committee
 ICMT;2015;Edward;Willink;Male;Program Committee
 ICMT;2015;Haiyan;Zhao;;Program Committee
 ICMT;2015;Albert;Zündorf;Male;Program Committee
+IWESEP;2016;Hideaki;Hata;;General Chair
+IWESEP;2016;Shinpei;Hayashi;Male;Program Chair
+IWESEP;2016;Shane;McIntosh;Male;Program Chair
+IWESEP;2016;Graham;Neubig;Male;Program Chair
+IWESEP;2016;Taiki;Todo;;Program Chair
+IWESEP;2016;Xin;Yang;;Publication Chair
+IWESEP;2016;Tetsuya;Kanda;;Local Chair
+IWESEP;2016;Takao;Nakagawa;;Local Chair
+IWESEP;2016;Hideshi;Sakaguchi;;Local Chair
+IWESEP;2016;Akinori;Ihara;;Finance Chair
+IWESEP;2016;Nachai;Limsettho;;Finance Chair
+IWESEP;2016;Kenji;Fujiwara;;Web Chair
+IWESEP;2016;Saya;Onoue;;Web Chair
+IWESEP;2016;Passakorn;Phannachitta;;Student Volunteers Chair
+IWESEP;2016;Akinori;Ihara;;Steering Committee
+IWESEP;2016;Yasutaka;Kamei;Male;Steering Committee
+IWESEP;2016;Shinsuke;Matsumoto;;Steering Committee
+IWESEP;2016;Masateru;Tsunoda;;Steering Committee
+IWESEP;2016;Raula;Gaikovina Kula;Female;Steering Committee
+IWESEP;2016;Katsuro;Inoue;Male;Advisory Committee
+IWESEP;2016;Shinji;Kusumoto;;Advisory Committee
+IWESEP;2016;Kenichi;Matsumoto;Male;Advisory Committee
+IWESEP;2016;Bram;Adams;Male;Program Committee
+IWESEP;2016;Alberto;Bacchelli;Male;Program Committee
+IWESEP;2016;Gabriele;Bavota;Female;Program Committee
+IWESEP;2016;Olga;Baysal;Male;Program Committee
+IWESEP;2016;Cor-Paul;Bezemer;Male;Program Committee
+IWESEP;2016;Eunjong;Choi;;Program Committee
+IWESEP;2016;Bogdan;Dit;Male;Program Committee
+IWESEP;2016;Daniel;German;Male;Program Committee
+IWESEP;2016;Sonia;Haiduc;Female;Program Committee
+IWESEP;2016;Yoshiki;Higo;;Program Committee
+IWESEP;2016;Akinori;Ihara;;Program Committee
+IWESEP;2016;Zhen;Ming Jiang;;Program Committee
+IWESEP;2016;Yasutaka;Kamei;Male;Program Committee
+IWESEP;2016;Foutse;Khomh;Male;Program Committee
+IWESEP;2016;David;Lo;Male;Program Committee
+IWESEP;2016;Osamu;Mizuno;;Program Committee
+IWESEP;2016;Andrea;Mocci;Female;Program Committee
+IWESEP;2016;Meiyappan;Nagappan;Male;Program Committee
+IWESEP;2016;Graham;Neubig;Male;Program Committee
+IWESEP;2016;Weiyi;Shang;;Program Committee
+IWESEP;2016;Taiki;Todo;;Program Committee
+IWESEP;2016;Bogdan;Vasilescu;Male;Program Committee
+IWESEP;2016;Thomas;Zimmermann;Male;Program Committee
+IWESEP;2016;Miltiadis;Allamanis;Male;Keynote Speaker
 LDTA;2001;Isabelle;Attali;Female;Program Committee
 LDTA;2001;Mark;van den Brand;Male;Program Chair
 LDTA;2001;Görel;Hedin;Female;Program Committee
@@ -2007,6 +2053,130 @@ LDTA;2012;Mark;van den Brand;Male;Steering Committee
 LDTA;2012;Görel;Hedin;Female;Steering Committee
 LDTA;2012;Tony;Sloane;Male;Steering Committee
 LDTA;2012;Eric;Van Wyk;Male;Steering Committee
+MoDELS;2012;Ruth;Breu;Male;General Chair
+MoDELS;2012;Colin;Atkinson;Male;General Chair
+MoDELS;2012;Robert;B. France;Male;Program Chair
+MoDELS;2012;Jürgen;Kazmeier;Male;Program Chair
+MoDELS;2012;Jeff;Gray;Male;Workshop Chair
+MoDELS;2012;Joanna;Chimiak-Opoka;;Workshop Chair
+MoDELS;2012;Antonio;Vallecillo;Male;Tutorials Chair
+MoDELS;2012;Dániel;Varró;Male;Tool Track Chair
+MoDELS;2012;Richard;Paige;Male;Social Media Chair
+MoDELS;2012;Yvan;Labiche;Male;Doctoral Symposium Chair
+MoDELS;2012;Friedrich;Steimann;Male;Panel Chair
+MoDELS;2012;Peter;Clarke;Male;Publicity Chair
+MoDELS;2012;Boris;Shishkov;Male;Publicity Chair
+MoDELS;2012;Anja;Niedworok;Female;Local Committee
+MoDELS;2012;Thomas;Schrettl;Male;Web Chair
+MoDELS;2012;Lionel;Briand;Male;Program Board
+MoDELS;2012;Manfred;Broy;Male;Program Board
+MoDELS;2012;Betty;Cheng;Female;Program Board
+MoDELS;2012;Tony;Clark;Male;Program Board
+MoDELS;2012;Geri;Georg;;Program Board
+MoDELS;2012;Martin;Gogolla;Male;Program Board
+MoDELS;2012;Jean-Marc;Jezequel;Male;Program Board
+MoDELS;2012;Bernhard;Rumpe;Male;Program Board
+MoDELS;2012;Bran;Selic;Male;Program Board
+MoDELS;2012;Perdita;Stevens;Female;Program Board
+MoDELS;2012;Daniel;Amyot;Male;Program Committee
+MoDELS;2012;Don;Batory;Male;Program Committee
+MoDELS;2012;Benoit;Baudry;Male;Program Committee
+MoDELS;2012;Xavier;Blanc;Male;Program Committee
+MoDELS;2012;Jean-Michel;Bruel;Male;Program Committee
+MoDELS;2012;Jordi;Cabot;Male;Program Committee
+MoDELS;2012;Alessandra;Cavarra;Female;Program Committee
+MoDELS;2012;Michel;Chaudron;Male;Program Committee
+MoDELS;2012;Siobhan;Clarke;Female;Program Committee
+MoDELS;2012;Vittorio;Cortellessa;Male;Program Committee
+MoDELS;2012;Krzysztof;Czarnecki;Male;Program Committee
+MoDELS;2012;Jürgen;Dingel;Male;Program Committee
+MoDELS;2012;Alexander;Egyed;Male;Program Committee
+MoDELS;2012;Gregor;Engels;Male;Program Committee
+MoDELS;2012;Rik;Eshuis;Male;Program Committee
+MoDELS;2012;Alessandro;Garcia;Male;Program Committee
+MoDELS;2012;Holger;Giese;Male;Program Committee
+MoDELS;2012;Sebastien;Gerard;Male;Program Committee
+MoDELS;2012;Sudipto;Ghosh;;Program Committee
+MoDELS;2012;Jeff;Gray;Male;Program Committee
+MoDELS;2012;Brian;Henderson-Sellers;Male;Program Committee
+MoDELS;2012;Zhenjiang;Hu;Male;Program Committee
+MoDELS;2012;Heinrich;Hussmann;Male;Program Committee
+MoDELS;2012;Paola;Inverardi;Female;Program Committee
+MoDELS;2012;Gerti;Kappel;Female;Program Committee
+MoDELS;2012;Gabor;Karsai;Male;Program Committee
+MoDELS;2012;Alexander;Knapp;Male;Program Committee
+MoDELS;2012;Ingolf;Krüger;Male;Program Committee
+MoDELS;2012;Thomas;Kühne;Male;Program Committee
+MoDELS;2012;Yvan;Labiche;Male;Program Committee
+MoDELS;2012;Philippe;Lahire;Male;Program Committee
+MoDELS;2012;Kevin;Lano;Male;Program Committee
+MoDELS;2012;Hong;Mei;;Program Committee
+MoDELS;2012;Dragan;Milicev;Male;Program Committee
+MoDELS;2012;Raffaela;Mirandola;Female;Program Committee
+MoDELS;2012;Ana;Moreira;Female;Program Committee
+MoDELS;2012;Pierre-Alain;Muller;Male;Program Committee
+MoDELS;2012;Ileana;Ober;Female;Program Committee
+MoDELS;2012;Richard;Paige;Male;Program Committee
+MoDELS;2012;Dorina;Petriu;Female;Program Committee
+MoDELS;2012;Alfonso;Pierantonio;Male;Program Committee
+MoDELS;2012;Alexander;Pretschner;Male;Program Committee
+MoDELS;2012;Gianna;Reggio;Female;Program Committee
+MoDELS;2012;Andy;Schürr;Male;Program Committee
+MoDELS;2012;Arnor;Solberg;;Program Committee
+MoDELS;2012;Jim;Steel;Male;Program Committee
+MoDELS;2012;Gabriele;Taentzer;Female;Program Committee
+MoDELS;2012;Antonio;Vallecillo;Male;Program Committee
+MoDELS;2012;Hans;Vangheluwe;Male;Program Committee
+MoDELS;2012;Dániel;Varró;Male;Program Committee
+MoDELS;2012;Michael;Whalen;Male;Program Committee
+MoDELS;2012;Jon;Whittle;Male;Program Committee
+MoDELS;2012;Andrea;Zisman;Female;Program Committee
+MoDELS;2012;Steffen;Zschaler;Male;Program Committee
+MoDELS;2012;Alfred;Aue;Male;Program Committee
+MoDELS;2012;Robert;Baillargeon;Male;Program Committee
+MoDELS;2012;Balbir;Barn;;Program Committee
+MoDELS;2012;Klaus;Beetz;Male;Program Committee
+MoDELS;2012;Nelly;Bencomo;Female;Program Committee
+MoDELS;2012;Brian;Berenbach;Male;Program Committee
+MoDELS;2012;Bezhad;Bordbar;;Program Committee
+MoDELS;2012;Rudolf;Haggenmüller;Male;Program Committee
+MoDELS;2012;Øystein;Haugen;Male;Program Committee
+MoDELS;2012;Pavel;Hruby;Male;Program Committee
+MoDELS;2012;Cornel;Klein;Male;Program Committee
+MoDELS;2012;Georg;Kreuch;Male;Program Committee
+MoDELS;2012;Vinay;Kulkarni;;Program Committee
+MoDELS;2012;Thomas;Mayerdorfer;Male;Program Committee
+MoDELS;2012;Stephen;J. Mellor;Male;Program Committee
+MoDELS;2012;Dan;Paulish;Male;Program Committee
+MoDELS;2012;Isabelle;Perseil;Female;Program Committee
+MoDELS;2012;Rob;Pettit;Male;Program Committee
+MoDELS;2012;Bernhard;Schätz;Male;Program Committee
+MoDELS;2012;Wolfram;Schulte;Male;Program Committee
+MoDELS;2012;Sebastin;Thoma;;Program Committee
+MoDELS;2012;Juha-Pekka;Tolvanen MetaCase;Male;Program Committee
+MoDELS;2012;Laurence;Tratt;Male;Program Committee
+MoDELS;2012;Michael;von der Beeck;Male;Program Committee
+MoDELS;2012;Frank;Weil;Male;Program Committee
+MoDELS;2012;Geri;Georg;;Steering Chair
+MoDELS;2012;Gregor;Engels;Male;Steering Chair
+MoDELS;2012;Jean;Bezivin;Male;Steering Committee
+MoDELS;2012;Ruth;Breu;Male;Steering Committee
+MoDELS;2012;Lionel;Briand;Male;Steering Committee
+MoDELS;2012;Jean-Michel;Bruel;Male;Steering Committee
+MoDELS;2012;Krzysztof;Czarnecki;Male;Steering Committee
+MoDELS;2012;Matthew;Dwyer;Male;Steering Committee
+MoDELS;2012;Øystein;Haugen;Male;Steering Committee
+MoDELS;2012;Heinrich;Hussmann;Male;Steering Committee
+MoDELS;2012;Thomas;Kühne;Male;Steering Committee
+MoDELS;2012;Pierre-Alain;Muller;Male;Steering Committee
+MoDELS;2012;Oscar;Nierstrasz;Male;Steering Committee
+MoDELS;2012;Dorina;Petriu;Female;Steering Committee
+MoDELS;2012;Rob;Pettit;Male;Steering Committee
+MoDELS;2012;Gianna;Reggio;Female;Steering Committee
+MoDELS;2012;Doug;Schmidt;Male;Steering Committee
+MoDELS;2012;Andy;Schürr;Male;Steering Committee
+MoDELS;2012;Steve;Seidman;Male;Steering Committee
+MoDELS;2012;Jon;Whittle;Male;Steering Committee
 MoDELS;2013;Jeff;Gray;Male;General Chair
 MoDELS;2013;Antonio;Vallecillo;Male;General Chair
 MoDELS;2013;Peter;Clarke;Male;Local Chair
@@ -2094,7 +2264,7 @@ MoDELS;2013;Pete;Sawyer;Male;Program Committee
 MoDELS;2013;Andy;Schuerr;Male;Program Committee
 MoDELS;2013;Arnor;Solberg;;Program Committee
 MoDELS;2013;Friedrich;Steimann;Male;Program Committee
-MoDELS;2013;Gabriele;Taentzer;;Program Committee
+MoDELS;2013;Gabriele;Taentzer;Female;Program Committee
 MoDELS;2013;Daniel;Varro;Male;Program Committee
 MoDELS;2013;Michael;Whalen;Male;Program Committee
 MoDELS;2013;Tao;Yue;Male;Program Committee
@@ -2157,7 +2327,7 @@ MoDELS;2014;Wolfram;Schulte;Male;Program Chair
 MoDELS;2014;Gregor;Engels;Male;Steering Chair
 MoDELS;2014;Juan;de Lara;Male;Tutorials Chair
 MoDELS;2014;Michel;Chaudron;Male;Tutorials Chair
-MoDELS;2014;Gabriele;Taenzer;;Workshop Chair
+MoDELS;2014;Gabriele;Taenzer;Female;Workshop Chair
 MoDELS;2014;Alfonso;Pierantonio;Male;Workshop Chair
 MoDELS;2014;Timothy;C. Lethbridge;Male;Panel Chair
 MoDELS;2014;Tao;Yue;Male;Tool Track Chair
@@ -2234,7 +2404,7 @@ MoDELS;2014;Gianna;Reggio;Female;Program Committee
 MoDELS;2014;Bernhard;Rumpe;Male;Program Committee
 MoDELS;2014;Ina;Schaefer;Female;Program Committee
 MoDELS;2014;Friedrich;Steimann;Male;Program Committee
-MoDELS;2014;Gabriele;Taentzer;;Program Committee
+MoDELS;2014;Gabriele;Taentzer;Female;Program Committee
 MoDELS;2014;Stavros;Tripakis;Male;Program Committee
 MoDELS;2014;Antonio;Vallecillo;Male;Program Committee
 MoDELS;2014;Dániel;Varró;Male;Program Committee
@@ -2700,7 +2870,7 @@ MSR;2014;Dongmei;Zhang;;Program Committee
 MSR;2014;Emad;Shihab;;Program Committee
 MSR;2014;Emily;Hill;Female;Program Committee
 MSR;2014;Foutse;Khomh;Male;Program Committee
-MSR;2014;Gabriele;Bavota;;Program Committee
+MSR;2014;Gabriele;Bavota;Female;Program Committee
 MSR;2014;Gail;Murphy;Female;Program Committee
 MSR;2014;Girish;Maskeri;Male;Program Committee
 MSR;2014;Giuliano;Antoniol;Male;Program Committee
@@ -2731,7 +2901,7 @@ MSR;2014;Yossi;Gil;;Program Committee
 MSR;2015;Bram;Adams;Male;Program Committee
 MSR;2015;Giuliano;Antoniol;Male;Program Committee
 MSR;2015;Alberto;Bacchelli;Male;Program Committee
-MSR;2015;Gabriele;Bavota;;Program Committee
+MSR;2015;Gabriele;Bavota;Female;Program Committee
 MSR;2015;Olga;Baysal;Male;Program Committee
 MSR;2015;Andrew;Begel;Male;Program Committee
 MSR;2015;Christian;Bird;Male;Program Committee
@@ -2823,7 +2993,7 @@ SANER;2015;Emily;Hill;Female;Tool Track Chair
 SANER;2015;Bram;Adams;Male;Program Committee
 SANER;2015;Nicolas;Anquetil;Male;Program Committee
 SANER;2015;Alberto;Bacchelli;Male;Program Committee
-SANER;2015;Gabriele;Bavota;;Program Committee
+SANER;2015;Gabriele;Bavota;Female;Program Committee
 SANER;2015;Olga;Baysal;Male;Program Committee
 SANER;2015;Alexandre;Bergel;Male;Program Committee
 SANER;2015;Árpád;Beszédes;Male;Program Committee
@@ -2898,7 +3068,7 @@ SANER;2015;Nasir;Ali;;Tool Track Program Committee
 SANER;2015;David;Shepherd;Male;Tool Track Program Committee
 SANER;2015;Felienne;Hermans;Female;Tool Track Program Committee
 SANER;2015;David;Lo;Male;Tool Track Program Committee
-SANER;2015;Gabriele;Bavota;;Tool Track Program Committee
+SANER;2015;Gabriele;Bavota;Female;Tool Track Program Committee
 SANER;2015;Iman;Keivanloo;Male;Tool Track Program Committee
 SANER;2015;Venera;Arnaoudova;Female;Tool Track Program Committee
 SANER;2015;Foutse;Khomh;Male;Industrial Track Program Committee
@@ -2930,7 +3100,7 @@ SANER;2016;Haroon;Malik;;Post-Doctoral Symposium Chair
 SANER;2016;Coen;De Roover;Male;Workshop Chair
 SANER;2016;Daniel;German;Male;Workshop Chair
 SANER;2016;Massimiliano;Di Penta;Male;Award Chair
-SANER;2016;Laura;Moreno;;Poster Chair
+SANER;2016;Laura;Moreno;Female;Poster Chair
 SANER;2016;Hiroyuki;Nakagawa;;Poster Chair
 SANER;2016;Eunjong;Choi;;Local Committee
 SANER;2016;Hideaki;Hata;;Local Committee
@@ -2941,10 +3111,10 @@ SANER;2016;Hiroshi;Igaki;;Local Chair
 SANER;2016;Tatsuhiro;Tsuchiya;;Local Chair
 SANER;2016;Takashi;Ishio;Male;Local Chair
 SANER;2016;Masahide;Nakamura;;Local Chair
-SANER;2016;Shinpei;Hayashi;;Student Volunteers Chair
-SANER;2016;Raula;Gaikovina Kula;;Student Volunteers Chair
+SANER;2016;Shinpei;Hayashi;Male;Student Volunteers Chair
+SANER;2016;Raula;Gaikovina Kula;Female;Student Volunteers Chair
 SANER;2016;Norihiro;Yoshida;;Publication Chair
-SANER;2016;Gabriele;Bavota;;Publicity Chair
+SANER;2016;Gabriele;Bavota;Female;Publicity Chair
 SANER;2016;Olga;Baysal;Male;Publicity Chair
 SANER;2016;Anthony;Cleve;Male;Publicity Chair
 SANER;2016;Akinori;Ihara;;Publicity Chair
@@ -2964,7 +3134,7 @@ SANER;2016;David;Lo;Male;Steering Committee
 SANER;2016;Hausi;Müller;Male;Steering Committee
 SANER;2016;Michele;Lanza;Male;Program Chair
 SANER;2016;Yasutaka;Kamei;Male;Program Chair
-SANER;2016;Gabriele;Bavota;;Program Committee
+SANER;2016;Gabriele;Bavota;Female;Program Committee
 SANER;2016;Harald;Gall;Male;Program Committee
 SANER;2016;Rainer;Koschke;Male;Program Committee
 SANER;2016;Andrian;Marcus;Male;Program Committee
@@ -3016,7 +3186,7 @@ SANER;2016;James;R. Cordy;Male;Program Committee
 SANER;2016;Tibor;Gyimothy;Male;Program Committee
 SANER;2016;Dongsun;Kim;;Program Committee
 SANER;2016;Mark;Harman;Male;Program Committee
-SANER;2016;Shinpei;Hayashi;;Program Committee
+SANER;2016;Shinpei;Hayashi;Male;Program Committee
 SANER;2016;Georgios;Gousios;Male;Program Committee
 SANER;2016;Marco;Gerosa;Male;Program Committee
 SANER;2016;Carmine;Gravino;;Program Committee
@@ -3026,18 +3196,18 @@ SANER;2016;Zhen;Ming Jack  Jiang;;Program Committee
 SANER;2016;Chanchal;K. Roy;Male;Program Committee
 SANER;2016;Andy;Zaidman;Male;Program Committee
 SANER;2016;Walid;Maalej;Male;Program Committee
-SANER;2016;Federica;Sarro;;Program Committee
-SANER;2016;Sonja;Haiduc;;Tool Track Chair
+SANER;2016;Federica;Sarro;Female;Program Committee
+SANER;2016;Sonja;Haiduc;Female;Tool Track Chair
 SANER;2016;Yoshiki;;;Tool Track Chair
 SANER;2016;Chakkrit;Tantithamthavorn;;Tool Track Program Committee
 SANER;2016;Venera;Arnaoudova;Female;Tool Track Program Committee
 SANER;2016;Ali;Ouni;Male;Tool Track Program Committee
-SANER;2016;Fabian;Beck;;Tool Track Program Committee
+SANER;2016;Fabian;Beck;Male;Tool Track Program Committee
 SANER;2016;Keisuke;Hotta;;Tool Track Program Committee
 SANER;2016;Shane;Mcintosh;Male;Tool Track Program Committee
 SANER;2016;Mario;Linares-Vásquez;Male;Tool Track Program Committee
 SANER;2016;Hideaki;Hata;;Tool Track Program Committee
-SANER;2016;Laura;Moreno;;Tool Track Program Committee
+SANER;2016;Laura;Moreno;Female;Tool Track Program Committee
 SANER;2016;Thomas;;Male;Industrial Track Chair
 SANER;2016;Ashish;Sureka;;Industrial Track Chair
 SANER;2016;Vibha;Sinha;;Industrial Track Program Committee
@@ -3053,7 +3223,7 @@ SANER;2016;Takashi;;Male;Industrial Track Program Committee
 SANER;2016;Jean-Guy;Schneider;Male;Industrial Track Program Committee
 SANER;2016;Diptikalyan;Saha;;Industrial Track Program Committee
 SANER;2016;Kivanc;Muslu;;Industrial Track Program Committee
-SANER;2016;Carl;Worms;;Industrial Track Program Committee
+SANER;2016;Carl;Worms;Male;Industrial Track Program Committee
 SANER;2016;Emad;Shihab;;ERA Track Chair
 SANER;2016;Alberto;Bacchelli;Male;ERA Track Chair
 SANER;2016;Foutse;Khomh;Male;ERA Track Program Committee
@@ -3067,11 +3237,11 @@ SANER;2016;Xin;Xia;;ERA Track Program Committee
 SANER;2016;Alexander;Serebrenik;Male;ERA Track Program Committee
 SANER;2016;Andy;Zaidman;Male;ERA Track Program Committee
 SANER;2016;Georgios;Gousios;Male;ERA Track Program Committee
-SANER;2016;Gabriele;Bavota;;ERA Track Program Committee
+SANER;2016;Gabriele;Bavota;Female;ERA Track Program Committee
 SANER;2016;Nikolaos;Tsantalis;Male;ERA Track Program Committee
 SANER;2016;David;Lo;Male;ERA Track Program Committee
 SANER;2016;Otavio;Lemos;;ERA Track Program Committee
-SANER;2016;Annibale;Panichella;;ERA Track Program Committee
+SANER;2016;Annibale;Panichella;Male;ERA Track Program Committee
 SANER;2016;Collin;McMillan;Male;ERA Track Program Committee
 SANER;2016;Alessandra;Gorla;Female;ERA Track Program Committee
 SANER;2016;Sonia;Haiduc;Female;ERA Track Program Committee
@@ -3223,7 +3393,7 @@ SLE;2010;Fernando;Silva Parreiras;Male;Program Committee
 SLE;2010;Anthony;Sloane;Male;Program Committee
 SLE;2010;Eleni;Stroulia;Female;Program Committee
 SLE;2010;York;Sure;;Program Committee
-SLE;2010;Gabriele;Taentzer;;Program Committee
+SLE;2010;Gabriele;Taentzer;Female;Program Committee
 SLE;2010;Jurgen;Vinju;Male;Program Committee
 SLE;2010;Eelco;Visser;Male;Program Committee
 SLE;2010;Steffen;Zschaler;Male;Program Committee
@@ -3342,7 +3512,7 @@ SLE;2013;Lukas;Renggli;Male;Program Committee
 SLE;2013;Bernhard;Rumpe;Male;Program Committee
 SLE;2013;João;Saraiva;Male;Program Committee
 SLE;2013;Friedrich;Steimann;Male;Program Committee
-SLE;2013;Gabriele;Taentzer;;Program Committee
+SLE;2013;Gabriele;Taentzer;Female;Program Committee
 SLE;2013;Mark;Van Den Brand;Male;Program Committee
 SLE;2013;Jurgen;Vinju;Male;Program Committee
 SLE;2013;Mark;van den Brand;Male;Steering Committee
