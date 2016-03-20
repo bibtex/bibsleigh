@@ -9,9 +9,9 @@ ProgramCh Romain Robbes – University of Chile, Chile
 DemoCh    Gabriele Bavota – University of Sannio, Italy
 DemoCh    Vadim Zaytsev – CWI, The Netherlands
           Workshop Chairs
-WorkspCh  Tudor Girba – CompuGroup Medical Schweiz, Switzerland
-WorkspCh  Foutse Khomh – Ecole Polytechnique of Montréal, Canada
-WorkspCh  Nicholas A. Kraft – The University of Alabama, USA
+SatellCh  Tudor Girba – CompuGroup Medical Schweiz, Switzerland
+SatellCh  Foutse Khomh – Ecole Polytechnique of Montréal, Canada
+SatellCh  Nicholas A. Kraft – The University of Alabama, USA
           Proceedings Chair
 PublicaCh Huzefa Kagdi – Wichita State University, USA
           Finance and Registration Chair

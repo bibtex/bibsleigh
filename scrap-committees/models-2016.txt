@@ -2,223 +2,96 @@
           http://models2016.irisa.fr/organizing-committee/
           Organizing Committee
           General Chairs
-GeneralCh benoit-baudry
-          
 GeneralCh Benoit Baudry
-          
           Inria, France
-          models2016-gc@inria.fr
-          
-GeneralCh benoit-combemale
-          
 GeneralCh Benoit Combemale
-          
           Inria, France
-          models2016-gc@inria.fr
           
           Program chair (Foundations Track)
-          
-ProgramCh jorg-kienzle
 ProgramCh Jörg Kienzle
-          
           McGill University, Canada
-          models2016-pc@inria.fr
+          
           Program chair (MEIP Track)
+PractCh   Alexander Pretschner
           
-ProgramCh alexander-pretschner
-ProgramCh Alexander Pretschner
-          
-ProgramCh TU München, Germany
-          models2016-pc@inria.fr
           Workshop co-chairs
+SatellCh  Houari Sahraoui
+SatellCh  Manuel Wimmer
           
-          models2016-workshops@inria.fr
-WorkspCh  houari-sahraoui
-          
-WorkspCh  Houari Sahraoui
-          
-          University of Montréal, Canada
-          
-WorkspCh  manuel-wimmer
-          
-WorkspCh  Manuel Wimmer
-          
-WorkspCh  Vienna University of Technology, Austria
           Tutorial Chairs
-          
-          models2016-tutorials@inria.fr
-TutorCh   martin-gogolla
-          
 TutorCh   Martin Gogolla
-          
-          University of Bremen, Germany
-          
-TutorCh   geri-georg
-          
 TutorCh   Geri Georg
           
-TutorCh   Colorado State University, USA
           Tool / Demonstration Chairs
-          
-          models2016-demos@inria.fr
-DemoCh    juan-delara
-          
 DemoCh    Juan de Lara
-          
-          University of Madrid, Spain
-          
-DemoCh    peter-clarke
-          
 DemoCh    Peter J. Clarke
           
-DemoCh    Florida International University, USA
           Poster Chair
           
 PosterCh  Mehrdad Sabetzadeh
-          
           University of Luxembourg, Luxembourg
-          mehrdad.sabetzadeh@uni.lu
+          
           Panel Chair
-          
 PanelCh   Don Batory
-          
           University of Texas, Austin, USA
-          batory@cs.utexas.edu
+          
           ACM Student Research Competition Chairs
-          
 StudComCh Jeff Gray
-          
-          University of Alabama, USA
-          
 StudComCh Ruth Breu
-          
           University of Innsbruck, Austria
+          
           Doctoral Symposium Chairs
-          
-          models2016-doctoral-symp@inria.fr
-DocSymCh  rick-salay
-          
 DocSymCh  Rick Salay
-          
           University of Toronto, Canada
-          
 DocSymCh  Shiva Nejati
-          
           University of Luxembourg, Luxembourg
-DocSymCh  Educator Symposium Chairs
           
-          models2016-educator-symp@inria.fr
-DocSymCh  gunter-mussbacher
+          ??? Educator Symposium Chairs
+          ??? Gunter Mussbacher
+          ??? Henry Muccini
           
-DocSymCh  Gunter Mussbacher
-          
-          McGill University, Canada
-          
-DocSymCh  henry-muccini
-          
-DocSymCh  Henry Muccini
-          
-          University of L’Aquila, Italy
           Publication Chair
-          
-PublicaCh julien-deantoni
 PublicaCh Julien DeAntoni
-          
           University of Nice, France
+          
           Publicity Chairs
-          
-          models2016-publicity@inria.fr
-          
 PubRelCh  Jeff Gray
-          
           University of Alabama, USA
-PubRelCh  North America
-          
-PubRelCh  alessandro-garcia
-          
 PubRelCh  Alessandro Garcia
-          
-PubRelCh  PUC-Rio, Brasil
-PubRelCh  South America
-PubRelCh  richard-paige-2
-          
 PubRelCh  Richard Paige
-          
           University of York, United Kingdom
-PubRelCh  Europe
-PubRelCh  zhenjiang-hu
-          
 PubRelCh  Zhenjiang Hu
-          
-PubRelCh  National Institute of Informatics, Japan
-PubRelCh  Asia
-PubRelCh  jim-steel
-          
 PubRelCh  Jim Steel
-          
           University of Queensland, Australia
-PubRelCh  Oceania
-PubRelCh  Sponsorship Chair
           
-PubRelCh  jordi-cabot
-PubRelCh  Jordi Cabot
+          Sponsorship Chair
+SponsorCh Jordi Cabot
           
-PubRelCh  Open University of Catalonia, Spain
           Local Arrangements Chair
-          
-LocRegCo  elisabeth-lebret
 LocRegCo  Elisabeth Lebret
-          
           Inria, France
-          models2016-local@inria.fr
+          
 LocRegCo  Multimedia Chair
-          
-LocRegCo  olivier-barais
 LocRegCo  Olivier Barais
-          
           University of Rennes 1, France
+          
           Social Media Chair
-          
-SocMedCh  mathieu-acher
 SocMedCh  Mathieu Acher
-          
           University of Rennes 1, France
+          
           Local and student volunteers co-chairs
-          
-          models2016-volunteers@inria.fr
-StudentCh arnaud-blouin
-          
 StudentCh Arnaud Blouin
-          
-StudentCh INSA, France
-          
-StudentCh johann-bourcier
-          
 StudentCh Johann Bourcier
           
-          University of Rennes 1, France
 StudentCh Website chairs
-          
-          models2016-website@inria.fr
-StudentCh guillaume-becan
-          
 StudentCh Guillaume Bécan
-          
-          University of Rennes 1, France
-          
 StudentCh Dorian Leroy
           
-          Inria, France
-          
 StudentCh Communication chair
-          
-StudentCh nathalie-lacaux
 StudentCh Nathalie Lacaux
-          
           Inria, France
-StudentCh Photos
           
-StudentCh noel-plouzeau
+StudentCh Photos
 StudentCh Noël Plouzeau
           
           University of Rennes 1, France
@@ -227,105 +100,55 @@ StudentCh Noël Plouzeau
           
           The Steering Committee oversees the conference from year to year membership is primarily composed of previous general chairs and program chairs. The following is the Steering Committee as it existed at the time the 2016 conference was organized.
           
-StudentCh Lionel Briand (Chair), University of Luxembourg (Luxembourg)
-StudentCh Juergen Dingel, Queen’s University (Canada)
-StudentCh Silvia Abrahão, Universitat Politècnica de València (Spain)
-StudentCh Benoit Baudry, IRISA – INRIA (France)
-StudentCh Ruth Breu, University of Innsbruck (Austria)
-StudentCh Jean-Michel Bruel, IRIT (France)
-StudentCh Jordi Cabot, ICREA – UOC, Barcelona (Spain)
-StudentCh Laurie Dillon, Michigan State University (USA)
-StudentCh Alexander Egyed, JKU Linz (Austria)
-StudentCh Gregor Engels, University of Paderborn (Germany)
-StudentCh Jeff Gray, University of Alabama (USA)
-StudentCh Øystein Haugen, Østfold University College (Norway)
-StudentCh Jörg Kienzle, McGill University (Canada)
-StudentCh Thomas Kühne, Victoria University of Wellington (New Zealand)
-StudentCh Timothy C. Lethbridge, University of Ottawa (Canada)
-StudentCh Ana Moreira, Universidade Nova de Lisboa (Portugal)
-StudentCh Pierre-Alain Muller, University of Haute-Alsace (France)
-StudentCh Dorina Petriu, Carleton University (Canada)
-StudentCh Rob Pettit, The Aerospace Corp. (USA)
-StudentCh Gianna Reggio, University of Genoa (Italy)
-StudentCh Bernhard Schätz, Technical University of Munich (Germany)
-StudentCh Wolfram Schulte, Microsoft Research (USA)
-StudentCh Andy Schürr, Technical University of Darmstadt (Germany)
-StudentCh Steve Seidman, Texas State University (USA)
-StudentCh Jon Whittle, Lancaster University (UK)
+          Steering Committee
+          
+SteerCh   Lionel Briand (Chair), University of Luxembourg (Luxembourg)
+SteerCo   Juergen Dingel, Queen’s University (Canada)
+SteerCo   Silvia Abrahão, Universitat Politècnica de València (Spain)
+SteerCo   Benoit Baudry, IRISA – INRIA (France)
+SteerCo   Ruth Breu, University of Innsbruck (Austria)
+SteerCo   Jean-Michel Bruel, IRIT (France)
+SteerCo   Jordi Cabot, ICREA – UOC, Barcelona (Spain)
+SteerCo   Laurie Dillon, Michigan State University (USA)
+SteerCo   Alexander Egyed, JKU Linz (Austria)
+SteerCo   Gregor Engels, University of Paderborn (Germany)
+SteerCo   Jeff Gray, University of Alabama (USA)
+SteerCo   Øystein Haugen, Østfold University College (Norway)
+SteerCo   Jörg Kienzle, McGill University (Canada)
+SteerCo   Thomas Kühne, Victoria University of Wellington (New Zealand)
+SteerCo   Timothy C. Lethbridge, University of Ottawa (Canada)
+SteerCo   Ana Moreira, Universidade Nova de Lisboa (Portugal)
+SteerCo   Pierre-Alain Muller, University of Haute-Alsace (France)
+SteerCo   Dorina Petriu, Carleton University (Canada)
+SteerCo   Rob Pettit, The Aerospace Corp. (USA)
+SteerCo   Gianna Reggio, University of Genoa (Italy)
+SteerCo   Bernhard Schätz, Technical University of Munich (Germany)
+SteerCo   Wolfram Schulte, Microsoft Research (USA)
+SteerCo   Andy Schürr, Technical University of Darmstadt (Germany)
+SteerCo   Steve Seidman, Texas State University (USA)
+SteerCo   Jon Whittle, Lancaster University (UK)
           
           http://models2016.irisa.fr/program-board/
           Program Board
           
 ProgBoCo  Jordi Cabot
-          
-ProgBoCo  Jordi Cabot
-          
-ProgBoCo  ICREA – UOC, Spain
 ProgBoCo  Marsha Chechik
-          
-ProgBoCo  Marsha Chechik
-          
           University of Toronto, Canada
 ProgBoCo  Betty H. C. Cheng
-          
-ProgBoCo  Betty H. C. Cheng
-          
-ProgBoCo  Michigan State University, USA
 ProgBoCo  Gregor Engels
-          
-ProgBoCo  Gregor Engels
-          
           University of Paderborn, Germany
 ProgBoCo  Jeff Gray
-          
-ProgBoCo  Jeff Gray
-          
           University of Alabama, USA
 ProgBoCo  Jean-Marc Jézéquel
-          
-ProgBoCo  Jean-Marc Jézéquel
-          
           University of Rennes 1, France
 ProgBoCo  Gerti Kappel
-          
-ProgBoCo  Gerti Kappel
-          
-ProgBoCo  Technische Universität Wien, Austria
 ProgBoCo  Thomas Kühne
-          
-ProgBoCo  Thomas Kühne
-          
-ProgBoCo  Victoria University of Wellington, New Zealand
 ProgBoCo  Vinay Kulkarni
-          
-ProgBoCo  Vinay Kulkarni
-          
-ProgBoCo  Tata Consultancy Services Research, India
 ProgBoCo  Bernhard Schätz
-          
-ProgBoCo  Bernhard Schätz
-          
-ProgBoCo  fortiss GmbH, Germany
 ProgBoCo  Bran Selic
-          
-ProgBoCo  Bran Selic
-          
-ProgBoCo  Malina Software Corp., Canada
 ProgBoCo  Friedrich Steimann
-          
-ProgBoCo  Friedrich Steimann
-          
-ProgBoCo  Fernuniversität in Hagen, Germany
 ProgBoCo  Antonio Vallecillo
-          
-ProgBoCo  Antonio Vallecillo
-          
-          University of Malaga, Spain
 ProgBoCo  Daniel Varro
-          
-ProgBoCo  Daniel Varro
-          
-ProgBoCo  Budapest University of Technology and Economics, Hungary
           
           http://models2016.irisa.fr/foundation-program-committee/
           
@@ -386,19 +209,19 @@ ProgramCo Steffen Zschaler, King’s College London (UK)
           http://models2016.irisa.fr/practice-innovation-program-committee/
           Practice & Innovation Track Program Committee
           
-ProgramCo Achim Brucker, University of Sheffield (UK)
-ProgramCo Andras Schmied, CapGemini (Germany)
-ProgramCo Harald Ruess, fortiss (Germany)
-ProgramCo Hardi Hungar, OFFIS (Germany)
-ProgramCo Heiko Koziolek, ABB Corporate Research (Germany)
-ProgramCo Jan Philipps, validas AG (Germany)
-ProgramCo Jörg Dörr, Fraunhofer IESE (Germany)
-ProgramCo Maged Elaasar, Jet Propulsion Laboratory (United States)
-ProgramCo Mike Whalen, University of Minnesota (USA)
-ProgramCo Oystein Haugen (Norway)
-ProgramCo Ralf Reussner (Germany)
-ProgramCo Rance Cleaveland, University of Maryland (USA)
-ProgramCo Robert Baillargeon, MethodPark (United States)
-ProgramCo Robert Eschbach, KSB (Germany)
-ProgramCo Salvador Trujillo, Ikerlan (Spain)
-ProgramCo Tao Yue, Simula Research Laboratory (Norway)
+PractCo   Achim Brucker, University of Sheffield (UK)
+PractCo   Andras Schmied, CapGemini (Germany)
+PractCo   Harald Ruess, fortiss (Germany)
+PractCo   Hardi Hungar, OFFIS (Germany)
+PractCo   Heiko Koziolek, ABB Corporate Research (Germany)
+PractCo   Jan Philipps, validas AG (Germany)
+PractCo   Jörg Dörr, Fraunhofer IESE (Germany)
+PractCo   Maged Elaasar, Jet Propulsion Laboratory (United States)
+PractCo   Mike Whalen, University of Minnesota (USA)
+PractCo   Oystein Haugen (Norway)
+PractCo   Ralf Reussner (Germany)
+PractCo   Rance Cleaveland, University of Maryland (USA)
+PractCo   Robert Baillargeon, MethodPark (United States)
+PractCo   Robert Eschbach, KSB (Germany)
+PractCo   Salvador Trujillo, Ikerlan (Spain)
+PractCo   Tao Yue, Simula Research Laboratory (Norway)

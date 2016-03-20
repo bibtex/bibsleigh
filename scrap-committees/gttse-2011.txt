@@ -49,8 +49,8 @@ ScienceCo Andreas Winter (Carl von Ossietzky University Oldenburg, Germany)
 ScienceCo Steffen Zschaler (King's College London, UK)
           Students' Workshop co-Chairs
           
-WorkspCh  Joost Visser (Software Improvement Group, The Netherlands)
-WorkspCh  Eric Van Wyk (University of Minnesota, USA)
+EarlyCh   Joost Visser (Software Improvement Group, The Netherlands)
+EarlyCh   Eric Van Wyk (University of Minnesota, USA)
           Local arrangements and registration
           
 LocRegCh  Jácome Cunha (Universidade do Minho, Portugal)

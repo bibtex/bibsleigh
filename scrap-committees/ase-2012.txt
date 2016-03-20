@@ -21,8 +21,8 @@ DocSymCh  Tevfik Bultan
 DocSymCh  Andreas Zeller
           
           Workshop Co-Chairs
-WorkspCh  Darko Marinov
-WorkspCh  Gabriele Taentzer
+SatellCh  Darko Marinov
+SatellCh  Gabriele Taentzer
           
           Tutorial Co-Chairs
 TutorCh   Darko Marinov
@@ -91,33 +91,33 @@ ProgramCo Albert Zuendorf
           
           
           Expert Review Panel
-ExpertRP  Doo-Hwan Bae
-ExpertRP  Sjaak Brinkkemper
-ExpertRP  Marsha Chechik
+ProgBoCo  Doo-Hwan Bae
+ProgBoCo  Sjaak Brinkkemper
+ProgBoCo  Marsha Chechik
           University of Toronto, Canada
-ExpertRP  Krzysztof Czarnecki
+ProgBoCo  Krzysztof Czarnecki
           University of Waterloo, Canada
-ExpertRP  Ewen Denney
-ExpertRP  Ian Gorton
-ExpertRP  Paul Gruenbacher
-ExpertRP  John Grundy
-ExpertRP  Mark Harman
+ProgBoCo  Ewen Denney
+ProgBoCo  Ian Gorton
+ProgBoCo  Paul Gruenbacher
+ProgBoCo  John Grundy
+ProgBoCo  Mark Harman
           University College London, United Kingdom
-ExpertRP  Shinichi Honiden
-ExpertRP  Andrew Ireland
-ExpertRP  Sarfraz Khurshid
+ProgBoCo  Shinichi Honiden
+ProgBoCo  Andrew Ireland
+ProgBoCo  Sarfraz Khurshid
           University of Texas at Austin, United States
-ExpertRP  Yves Ledru
-ExpertRP  Anna Liu
-ExpertRP  Michael Lowry
-ExpertRP  Darko Marinov
+ProgBoCo  Yves Ledru
+ProgBoCo  Anna Liu
+ProgBoCo  Michael Lowry
+ProgBoCo  Darko Marinov
           University of Illinois at Urbana-Champaign, United States
-ExpertRP  Hong Mei
-ExpertRP  Alessandro Orso
-ExpertRP  Corina Pasareanu
-ExpertRP  Douglas Smith
-ExpertRP  Virginie Wiels
-ExpertRP  Andrea Zisman
+ProgBoCo  Hong Mei
+ProgBoCo  Alessandro Orso
+ProgBoCo  Corina Pasareanu
+ProgBoCo  Douglas Smith
+ProgBoCo  Virginie Wiels
+ProgBoCo  Andrea Zisman
           
           
           Tool Demonstrations Program Committee

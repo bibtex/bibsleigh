@@ -17,8 +17,8 @@ SteerCh   Gregor Engels
 TutorCh   Juan de Lara
 TutorCh   Michel Chaudron
           Workshop Chairs
-WorkspCh  Gabriele Taenzer
-WorkspCh  Alfonso Pierantonio
+SatellCh  Gabriele Taenzer
+SatellCh  Alfonso Pierantonio
           Panel Chair
 PanelCh   Timothy C. Lethbridge
           Demonstrations Chairs
@@ -119,22 +119,22 @@ ProgramCo Tao Yue, Simula Research Laboratory, Norway
 ProgramCo Steffen Zschaler, King's College London, United Kingdom
           
           Program Committee (MDE in Practice Track)
-ProgramCo Shaukat Ali, Simula Research Laboratory, Norway
-ProgramCo Balbir Barn, Middlesex University, United Kingdom
-ProgramCo Fernando Brito e Abreu, ISCTE - Instituto Universitário de Lisboa, gal
-ProgramCo Andreas Graf, Itemis AG,  Germany
-ProgramCo Wolfgang Grieskamp, Google Inc, USA
-ProgramCo Pavel Hruby, CSC, Denmark
-ProgramCo Tihamer Levendovszky, Vanderbilt University, USA
-ProgramCo Pieter Mosterman, MathWorks, USA
-ProgramCo Barbara Paech, Universitaet Heidelberg, Germany
-ProgramCo Oscar Pastor, Universitat Politècnica de València, Spain
-ProgramCo Alexander Pretschner, Technische Universitaet Muenchen, Germany
-ProgramCo Shaz Qadeer, MSR, USA
-ProgramCo Bernhard Schaetz, Fortiss, Germany
-ProgramCo Bran Selic, Malina Software Corp, Canada
-ProgramCo Ketil Stolen, SINTEF, Norway
-ProgramCo Stephan Thesing, Eurocopter Deutschland GmbH, Germany
-ProgramCo Juha-Pekka Tolvanen, Metacase,  Finland
-ProgramCo Mario Trapp, Fraunhofer IESE, Germany
-ProgramCo Markus Voelter, Independent/Itemis, Germany
+PractCo   Shaukat Ali, Simula Research Laboratory, Norway
+PractCo   Balbir Barn, Middlesex University, United Kingdom
+PractCo   Fernando Brito e Abreu, ISCTE - Instituto Universitário de Lisboa, gal
+PractCo   Andreas Graf, Itemis AG,  Germany
+PractCo   Wolfgang Grieskamp, Google Inc, USA
+PractCo   Pavel Hruby, CSC, Denmark
+PractCo   Tihamer Levendovszky, Vanderbilt University, USA
+PractCo   Pieter Mosterman, MathWorks, USA
+PractCo   Barbara Paech, Universitaet Heidelberg, Germany
+PractCo   Oscar Pastor, Universitat Politècnica de València, Spain
+PractCo   Alexander Pretschner, Technische Universitaet Muenchen, Germany
+PractCo   Shaz Qadeer, MSR, USA
+PractCo   Bernhard Schaetz, Fortiss, Germany
+PractCo   Bran Selic, Malina Software Corp, Canada
+PractCo   Ketil Stolen, SINTEF, Norway
+PractCo   Stephan Thesing, Eurocopter Deutschland GmbH, Germany
+PractCo   Juha-Pekka Tolvanen, Metacase,  Finland
+PractCo   Mario Trapp, Fraunhofer IESE, Germany
+PractCo   Markus Voelter, Independent/Itemis, Germany

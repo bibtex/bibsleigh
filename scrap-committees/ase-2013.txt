@@ -11,8 +11,8 @@ ProgramCh Andreas Zeller
           
           Workshop Chairs
           
-WorkspCh  Marcelo d'Amorim
-WorkspCh  David Lo
+SatellCh  Marcelo d'Amorim
+SatellCh  David Lo
           
           Tool Demonstration Chairs
           
@@ -90,35 +90,35 @@ ProgramCo Charles Zhang	Hongkong University of Science and Technology
           http://www.ase-conferences.org/ase/past/ase2013/pc.html
           Expert Review Panel
           
-ExpertRP  Sven Apel	University of Passau
-ExpertRP  Earl Barr	University College London
-ExpertRP  Samik Basu	Iowa State University
-ExpertRP  Yuriy Brun	University of Massachusetts, Amherst
-ExpertRP  Yuanfang Cai	Drexel University
-ExpertRP  Marsha Chechik	University of Toronto
-ExpertRP  Jane Cleland-Huang	DePaul University
-ExpertRP  Christoph Csallner	University of Texas at Arlington
-ExpertRP  Jyotirmoy Deshmukh	Toyota Technical Center
-ExpertRP  Xiang Fu	Hofstra University
-ExpertRP  Alessandra Gorla	Saarland University
-ExpertRP  John Grundy	Swinburne University of Technology
-ExpertRP  Lars Grunske	Universitaet Stuttgart
-ExpertRP  Sylvain Hallé	Université du Québec à Chicoutimi
-ExpertRP  Christian Hammer	Saarland University
-ExpertRP  John Hosking	Australian National University
-ExpertRP  Lingxiao Jiang	Singapore Management University
-ExpertRP  Sarfraz Khurshid	The University of Texas at Austin
-ExpertRP  Julia Lawall	INRIA
-ExpertRP  Nenad Medvidovic	University of Southern California
-ExpertRP  Hong Mei	Peking University
-ExpertRP  Atif Memon	University of Maryland
-ExpertRP  Alessandro Orso	Georgia Institute of Technology
-ExpertRP  Klaus Ostermann	University of Marburg
-ExpertRP  Andrey Rybalchenko	Technische Universitaet Muenchen
-ExpertRP  Yannis Smaragdakis	University of Athens
-ExpertRP  Lin Tan	University of Waterloo
-ExpertRP  Laurie Williams	North Carolina State University
-ExpertRP  Thomas Zimmerman	Microsoft Research
+ProgBoCo  Sven Apel	University of Passau
+ProgBoCo  Earl Barr	University College London
+ProgBoCo  Samik Basu	Iowa State University
+ProgBoCo  Yuriy Brun	University of Massachusetts, Amherst
+ProgBoCo  Yuanfang Cai	Drexel University
+ProgBoCo  Marsha Chechik	University of Toronto
+ProgBoCo  Jane Cleland-Huang	DePaul University
+ProgBoCo  Christoph Csallner	University of Texas at Arlington
+ProgBoCo  Jyotirmoy Deshmukh	Toyota Technical Center
+ProgBoCo  Xiang Fu	Hofstra University
+ProgBoCo  Alessandra Gorla	Saarland University
+ProgBoCo  John Grundy	Swinburne University of Technology
+ProgBoCo  Lars Grunske	Universitaet Stuttgart
+ProgBoCo  Sylvain Hallé	Université du Québec à Chicoutimi
+ProgBoCo  Christian Hammer	Saarland University
+ProgBoCo  John Hosking	Australian National University
+ProgBoCo  Lingxiao Jiang	Singapore Management University
+ProgBoCo  Sarfraz Khurshid	The University of Texas at Austin
+ProgBoCo  Julia Lawall	INRIA
+ProgBoCo  Nenad Medvidovic	University of Southern California
+ProgBoCo  Hong Mei	Peking University
+ProgBoCo  Atif Memon	University of Maryland
+ProgBoCo  Alessandro Orso	Georgia Institute of Technology
+ProgBoCo  Klaus Ostermann	University of Marburg
+ProgBoCo  Andrey Rybalchenko	Technische Universitaet Muenchen
+ProgBoCo  Yannis Smaragdakis	University of Athens
+ProgBoCo  Lin Tan	University of Waterloo
+ProgBoCo  Laurie Williams	North Carolina State University
+ProgBoCo  Thomas Zimmerman	Microsoft Research
           
           Keynote Talks
 KeyNote   Joseph M. Hellerstein

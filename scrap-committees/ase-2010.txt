@@ -70,21 +70,21 @@ ProgramCo Albert Zuendorf
           University of Kassel, Germany
           Expert Review Panel Members
           
-ExpertRP  Perry Alexander
+ProgBoCo  Perry Alexander
           University of Kansas, USA
-ExpertRP  Luciano Baresi
-ExpertRP  Wing-Kwong Chan
-ExpertRP  Phyllis Frankl
-ExpertRP  Andrew Ireland
-ExpertRP  Jochen M. Kuester
-ExpertRP  Yves Ledru
-ExpertRP  Jonathan Maletic
-ExpertRP  Sandro Morasca
-ExpertRP  John Penix
-ExpertRP  Peri Tarr
-ExpertRP  Willem Visser
-ExpertRP  Tao Xie
-ExpertRP  Andrea Zisman
+ProgBoCo  Luciano Baresi
+ProgBoCo  Wing-Kwong Chan
+ProgBoCo  Phyllis Frankl
+ProgBoCo  Andrew Ireland
+ProgBoCo  Jochen M. Kuester
+ProgBoCo  Yves Ledru
+ProgBoCo  Jonathan Maletic
+ProgBoCo  Sandro Morasca
+ProgBoCo  John Penix
+ProgBoCo  Peri Tarr
+ProgBoCo  Willem Visser
+ProgBoCo  Tao Xie
+ProgBoCo  Andrea Zisman
           
           Scientific Liason
           
@@ -109,9 +109,9 @@ TutorCh   John Penix
           
           Workshop Chairs
           
-WorkspCh  Tom Mens
+SatellCh  Tom Mens
           
-WorkspCh  Tevfik Bultan
+SatellCh  Tevfik Bultan
           
           Demonstration Chairs
           

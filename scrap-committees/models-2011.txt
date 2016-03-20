@@ -8,15 +8,21 @@ LocRegCh  Stuart Marshall
 LocRegCh  Hui Ma
           Program Chairs
 ProgramCh Jon Whittle (Foundations)
-ProgramCh Tony Clark (Applications)
-          Publicity Chair 	Werner Heijstek
-PubRelCh  Workshop Chair 	Jörg Kienzle
-          Tutorial Chair 	Vasco Amaral
-          Panel Chair 	Colin Atkinson
-          Doctoral Symposium Chair 	Joerg Evermann
+PractCh   Tony Clark (Applications)
+          Publicity Chair
+PubRelCh  Werner Heijstek
+          Workshop Chair
+SatellCh  Jörg Kienzle
+          Tutorial Chair
+TutorCh   Vasco Amaral
+          Panel Chair
+PanelCh   Colin Atkinson
+          Doctoral Symposium Chair
+DocSymCh  Joerg Evermann
 DocSymCh  Ivan Porres
-DocSymCh  Educators' Symposium Chair 	Marion Brandsteidl
-DocSymCh  Andreas Winter
+          //Educators' Symposium Chair
+          //Marion Brandsteidl
+          //Andreas Winter
           
           http://ecs.victoria.ac.nz/Events/MODELS2011/ProgramCommittees
           Program Committees

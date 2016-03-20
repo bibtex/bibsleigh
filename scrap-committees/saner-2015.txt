@@ -134,7 +134,7 @@ PractCh   Wahab Hamou-Lhadj
           Workshops Co-chair
           
           http://essere.disco.unimib.it/
-WorkspCh  Francesca Arcelli Fontana
+SatellCh  Francesca Arcelli Fontana
           worked in Italy at University of Milano, University of Salerno and University of Sannio. Currently, she is Associate Professor of software engineering at the Department of Computer Science of the University of Milano Bicocca, where she works in the area of software evolution and reverse engineering and she leads the Evolution of Software SystEms and Reverse Engineering Lab. (ESSeRE). The actual research activity principally concerns software quality assessment, software maintenance and evolution, program comprehension, design patterns detection for reverse engineering, code smell detection through machine learning techniques and empirical analysis in software engineering. She also interested in exploiting complex network analysis in software evolution. She is a member of IEEE Computer Society.
           
           Tools Track Co-chair
@@ -234,14 +234,14 @@ DemoCo    Venera Arnaoudova	venera.arnaoudova@gmail.com	Web	École Polytechnique
           
           Industry track program committee
           name	email	Web site	organization	role
-PractCo   Foutse Khomh	foutse.khomh@polymtl.ca	Web	DGIGL, École Polytechnique de Montréal	track chair
-PractCo   Wahab Hamou-Lhadj	abdelw@ece.concordia.ca	Web	Concordia University	track chair
-PractCo   Josef Pichler	josef.pichler@scch.at	Web	Software Competence Center Hagenberg GmbH
-PractCo   Weiyi Shang	swy@cs.queensu.ca	Web	SAIL, Queen's University
-PractCo   Vassilios Tzerpos	bil@cse.yorku.ca	Webl	York University
-PractCo   Sigrid Eldh	sigrid.eldh@ericsson.com	Web	Ericsson AB
-PractCo   Alf Larsson	alf.larsson@ericsson.com
-PractCo   Mark Van Den Brand	m.g.j.v.d.brand@tue.nl	Web	Eindhoven University of Technology
-PractCo   Mark Grechanik	drmark@uic.edu	Web
-PractCo   Radu Marinescu	radu.marinescu@cs.upt.ro	Web	Politehnica University of Timisoara
-PractCo   Juergen Rilling	juergen.rilling@concordia.ca	Web	Concordia University
+PractCh   Foutse Khomh	foutse.khomh@polymtl.ca	Web	DGIGL, École Polytechnique de Montréal	track chair
+PractCh   Wahab Hamou-Lhadj	abdelw@ece.concordia.ca	Web	Concordia University	track chair
+PractCh   Josef Pichler	josef.pichler@scch.at	Web	Software Competence Center Hagenberg GmbH
+PractCh   Weiyi Shang	swy@cs.queensu.ca	Web	SAIL, Queen's University
+PractCh   Vassilios Tzerpos	bil@cse.yorku.ca	Webl	York University
+PractCh   Sigrid Eldh	sigrid.eldh@ericsson.com	Web	Ericsson AB
+PractCh   Alf Larsson	alf.larsson@ericsson.com
+PractCh   Mark Van Den Brand	m.g.j.v.d.brand@tue.nl	Web	Eindhoven University of Technology
+PractCh   Mark Grechanik	drmark@uic.edu	Web
+PractCh   Radu Marinescu	radu.marinescu@cs.upt.ro	Web	Politehnica University of Timisoara
+PractCh   Juergen Rilling	juergen.rilling@concordia.ca	Web	Concordia University

@@ -19,8 +19,8 @@ DocSymCh  Motoshi Saeki
 TutorCh   Yuanfang Cai, Drexel University,
 TutorCh   Arvin Agah, University of Kansas,
           Workshop Co-chairs
-WorkspCh  Robby
-WorkspCh  William Deng
+SatellCh  Robby
+SatellCh  William Deng
           Proceedings Chair
 PublicaCh Neha Rungta
           
@@ -93,31 +93,31 @@ ProgramCo Albert Zuendorf
           University of Kassel, Germany
           
           Expert Review Panel
-ExpertRP  Sven Apel
+ProgBoCo  Sven Apel
           University of Passau, Germany
-ExpertRP  Krzystof Czarnecki
+ProgBoCo  Krzystof Czarnecki
           University of Waterloo, Canada
-ExpertRP  Elisabetta Di Nitto
-ExpertRP  Claudia Ermel
-ExpertRP  Ian Gorton
-ExpertRP  John Grundy
-ExpertRP  Mary Jean Harrold
-ExpertRP  Reiko Heckel
+ProgBoCo  Elisabetta Di Nitto
+ProgBoCo  Claudia Ermel
+ProgBoCo  Ian Gorton
+ProgBoCo  John Grundy
+ProgBoCo  Mary Jean Harrold
+ProgBoCo  Reiko Heckel
           University of Leicester, UK
-ExpertRP  Sinichi Honiden
-ExpertRP  Andrew Ireland
-ExpertRP  Yves Ledru
-ExpertRP  Nenad Medvidović
+ProgBoCo  Sinichi Honiden
+ProgBoCo  Andrew Ireland
+ProgBoCo  Yves Ledru
+ProgBoCo  Nenad Medvidović
           University of Southern California, USA
-ExpertRP  Alex Orso
-ExpertRP  Houari Sahraoui
-ExpertRP  Yannis Smaragdakis
+ProgBoCo  Alex Orso
+ProgBoCo  Houari Sahraoui
+ProgBoCo  Yannis Smaragdakis
           University of Massachusetts, Amherst, USA
-ExpertRP  Gabi Taentzer
-ExpertRP  Tetsuo Tamai
+ProgBoCo  Gabi Taentzer
+ProgBoCo  Tetsuo Tamai
           University of Tokyo, Japan
-ExpertRP  Alex Telea
+ProgBoCo  Alex Telea
           University of Groningen, The Netherlands
-ExpertRP  Daniel Varro
-ExpertRP  Virginie Wiels
-ExpertRP  Andrea Zisman
+ProgBoCo  Daniel Varro
+ProgBoCo  Virginie Wiels
+ProgBoCo  Andrea Zisman

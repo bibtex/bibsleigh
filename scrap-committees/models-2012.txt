@@ -7,10 +7,10 @@ GeneralCh Colin Atkinson,	University of Mannheim, Germany
           Foundations Track Program Chair
 ProgramCh Robert B. France, Colorado State	University, USA
           Applications Track Program Chair
-ProgramCh Jürgen Kazmeier, Siemens AG, Germany
+PractCh   Jürgen Kazmeier, Siemens AG, Germany
           Workshop Chairs
-WorkspCh  Jeff Gray,	University of Alabama, USA
-WorkspCh  Joanna Chimiak-Opoka,	University of Innsbruck, Austria
+SatellCh  Jeff Gray,	University of Alabama, USA
+SatellCh  Joanna Chimiak-Opoka,	University of Innsbruck, Austria
           Tutorial Chair
 TutorCh   Antonio Vallecillo,	University of Malaga, Spain
           Exhibition and Demo Chair

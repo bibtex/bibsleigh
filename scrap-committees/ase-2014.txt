@@ -21,8 +21,8 @@ TutorCh   Michel Chaudron
           
           Workshops Chairs
           
-WorkspCh  Lars Grunske
-WorkspCh  Mats Heimdahl
+SatellCh  Lars Grunske
+SatellCh  Mats Heimdahl
           
           Publicity Chairs
           
@@ -97,34 +97,34 @@ ProgramCo Michael Whalen, University of Minnesota
 ProgramCo Andreas Zeller, Saarland University
           
           Expert Review Panel (ERP)
-ExpertRP  Jamie Andrews, Google Inc.
-ExpertRP  Sven Apel, University of Passau
-ExpertRP  Alexander Egyed, Johannes Kepler University Linz, Austria
-ExpertRP  Harald Gall, University of Zurich
-ExpertRP  Dimitra Giannakopoulou, NASA Ames
-ExpertRP  John Grundy, Swinburne University of Technology
-ExpertRP  Mark Harman, University College London
-ExpertRP  Paola Inverardi, University of L'Aquila
-ExpertRP  Andrew Ireland, Heriot Watt University Edinburgh
-ExpertRP  Sarfraz Khurshid, University of Texas at Austin
-ExpertRP  Akash Lal, Microsoft Research India
-ExpertRP  Axel Legay, INRIA
-ExpertRP  Emmanuel Letier, University College London
-ExpertRP  Darko Marinov, University of Illinois at Urbana-Champaign
-ExpertRP  Tim Menzies, West Virginia University
-ExpertRP  Martin Naedele, ABB
-ExpertRP  Corina Pasareanu, Carnegie Mellon Silicon Valley/NASA Ames
-ExpertRP  Charles Pecheur, Université Catholique de Louvain
-ExpertRP  Lori Pollock, University of Delaware
-ExpertRP  Abhik Roychoudhury, National University of Singapore
-ExpertRP  Motoshi Saeki, Tokyo Institute of Technology
-ExpertRP  Gabriele Taentzer, Philipps-Universitaet Marburg
-ExpertRP  Nikolai Tillmann, Microsoft Research
-ExpertRP  Paolo Tonella, Fondazione Bruno Kessler
-ExpertRP  Willem Visser, University of Stellenbosch
-ExpertRP  Tao Xie, University of Illinois at Urbana-Champaign
-ExpertRP  Thomas Zimmermann, Microsoft Research
-ExpertRP  Andrea Zisman, The Open University
+ProgBoCo  Jamie Andrews, Google Inc.
+ProgBoCo  Sven Apel, University of Passau
+ProgBoCo  Alexander Egyed, Johannes Kepler University Linz, Austria
+ProgBoCo  Harald Gall, University of Zurich
+ProgBoCo  Dimitra Giannakopoulou, NASA Ames
+ProgBoCo  John Grundy, Swinburne University of Technology
+ProgBoCo  Mark Harman, University College London
+ProgBoCo  Paola Inverardi, University of L'Aquila
+ProgBoCo  Andrew Ireland, Heriot Watt University Edinburgh
+ProgBoCo  Sarfraz Khurshid, University of Texas at Austin
+ProgBoCo  Akash Lal, Microsoft Research India
+ProgBoCo  Axel Legay, INRIA
+ProgBoCo  Emmanuel Letier, University College London
+ProgBoCo  Darko Marinov, University of Illinois at Urbana-Champaign
+ProgBoCo  Tim Menzies, West Virginia University
+ProgBoCo  Martin Naedele, ABB
+ProgBoCo  Corina Pasareanu, Carnegie Mellon Silicon Valley/NASA Ames
+ProgBoCo  Charles Pecheur, Université Catholique de Louvain
+ProgBoCo  Lori Pollock, University of Delaware
+ProgBoCo  Abhik Roychoudhury, National University of Singapore
+ProgBoCo  Motoshi Saeki, Tokyo Institute of Technology
+ProgBoCo  Gabriele Taentzer, Philipps-Universitaet Marburg
+ProgBoCo  Nikolai Tillmann, Microsoft Research
+ProgBoCo  Paolo Tonella, Fondazione Bruno Kessler
+ProgBoCo  Willem Visser, University of Stellenbosch
+ProgBoCo  Tao Xie, University of Illinois at Urbana-Champaign
+ProgBoCo  Thomas Zimmermann, Microsoft Research
+ProgBoCo  Andrea Zisman, The Open University
           
           http://ase2014.org/index.php?choice=keynotes
           Keynotes

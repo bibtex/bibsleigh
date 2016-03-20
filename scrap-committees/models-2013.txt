@@ -12,8 +12,8 @@ ProgramCh Bernhard Schätz
           Industry Liaison
 PractCh   Magnus Christerson
           Workshop Chairs
-WorkspCh  Fabio Costa
-WorkspCh  Eugene Syriani
+SatellCh  Fabio Costa
+SatellCh  Eugene Syriani
           Tutorial Chairs
 TutorCh   Jordi Cabot
           INRIA - École des Mines de Nantes
@@ -127,31 +127,31 @@ ProgramCo Tao Yue
 ProgramCo Steffen Zschaler
           
           Program Committee (Applications Track)
-ProgramCh Bernhard Schätz (Chair)
-ProgramCo Silvia Abrahão
-ProgramCo Alfred Aue
-ProgramCo Balbir Barn
-ProgramCo Brian Berenbach
-ProgramCo Fernando Brito e Abreu
-ProgramCo Tony Clark
-ProgramCo Andreas Graf
-ProgramCo Pavel Hruby
-ProgramCo Juergen Kazmeier
-ProgramCo Cornel Klein
-ProgramCo Georg Kreuch
-ProgramCo Tihamer Levendovszky
-ProgramCo Pieter Mosterman
-ProgramCo Oscar Pastor
-ProgramCo Isabelle Perseil
-ProgramCo Rob Pettit
-ProgramCo Alexander Pretschner
-ProgramCo Wolfram Schulte
-ProgramCo Bran Selic
-ProgramCo Ketil Stølen
-ProgramCo Stephan Thesing
-ProgramCo Juha-Pekka Tolvanen
-ProgramCo Mario Trapp
-ProgramCo Markus Völter
+PractCh   Bernhard Schätz (Chair)
+PractCo   Silvia Abrahão
+PractCo   Alfred Aue
+PractCo   Balbir Barn
+PractCo   Brian Berenbach
+PractCo   Fernando Brito e Abreu
+PractCo   Tony Clark
+PractCo   Andreas Graf
+PractCo   Pavel Hruby
+PractCo   Juergen Kazmeier
+PractCo   Cornel Klein
+PractCo   Georg Kreuch
+PractCo   Tihamer Levendovszky
+PractCo   Pieter Mosterman
+PractCo   Oscar Pastor
+PractCo   Isabelle Perseil
+PractCo   Rob Pettit
+PractCo   Alexander Pretschner
+PractCo   Wolfram Schulte
+PractCo   Bran Selic
+PractCo   Ketil Stølen
+PractCo   Stephan Thesing
+PractCo   Juha-Pekka Tolvanen
+PractCo   Mario Trapp
+PractCo   Markus Völter
           
           Steering Committee
 SteerCh   Gregor Engels (Chair), University of Paderborn, Germany

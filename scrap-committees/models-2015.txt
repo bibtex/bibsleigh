@@ -2,256 +2,142 @@
           http://cruise.eecs.uottawa.ca/models2015/organizing.html
           General Chair
 GeneralCh Timothy Lethbridge
-          
           University of Ottawa
-GeneralCh Canada
           tcl@eecs.uottawa.ca
-          
           
           Foundations Track Program Chair
 ProgramCh Jordi Cabot
           
-ProgramCh ICREA - UOC, Barcelona
-ProgramCh Spain
-          
-          
           MDE in Practice Program Chair
-ProgramCh Alexander Egyed
-          
+PractCh   Alexander Egyed
           Johannes Kepler University
-ProgramCh Linz, Austria
-          
           
           Finance Chair
 FinanceCh Yvan Labiche
-          
           Carleton University
-FinanceCh Ottawa, Canada
-          
           
           Tutorial Chairs
 TutorCh   Gunter Mussbacher
-          
           McGill University
-TutorCh   Montreal, Canada
 TutorCh   Ana Moreira
-          
           Universidade Nova de Lisboa
-TutorCh   Portugal
-          
           
           Workshops Chairs
-WorkspCh  Abdelwahab Hamou-Lhadj
-          
+SatellCh  Abdelwahab Hamou-Lhadj
           Concordia University
-WorkspCh  Montreal, Canada
-WorkspCh  Emilio Insfran
+SatellCh  Emilio Insfran
+          Universitat Politècnica de València
           
-WorkspCh  Universitat Politècnica de València
-WorkspCh  Spain
+          Posters Chairs
+PosterCh  Vinay Kulkarni
+PosterCh  Omar Badreddin
           
+          Demos Chairs
+DemoCh    Vinay Kulkarni
+DemoCh    Omar Badreddin
           
-WorkspCh  Posters and Demos Chairs
-WorkspCh  Vinay Kulkarni
-          
-WorkspCh  Tata Consultancy Services
-WorkspCh  India
-WorkspCh  Omar Badreddin
-          
-          Northern Arizona University
-WorkspCh  USA
-          
-          
-WorkspCh  Panels Chairs
-WorkspCh  Benoit Baudry
-          
+          Panels Chairs
+PanelCh   Benoit Baudry
           INRIA
           France
-WorkspCh  Benoit Combemale
-          
-WorkspCh  Institut de Recherche en Informatique et Systèmes Aléatoires
+PanelCh   Benoit Combemale
           France
           
-          
-WorkspCh  Educators Symposium Chairs
-WorkspCh  Tony Clark
-          
-          Middlesex University
-WorkspCh  London, UK
-WorkspCh  Arnon Sturm
-          
-          Ben-Gurion University of the Negev
-WorkspCh  Israel
-          
+          // Educators Symposium Chairs
+          // Tony Clark
+          // Arnon Sturm
           
           Doctoral Symposium Chairs
 DocSymCh  Marsha Chechik
-          
           University of Toronto
-DocSymCh  Canada
 DocSymCh  Dimitris Kolovos
-          
           University of York
-DocSymCh  UK
           
-          
-DocSymCh  ACM Student Research Chairs
-DocSymCh  Martin Gogolla
-          
+          ACM Student Research Chairs
+StudComCh Martin Gogolla
           University of Bremen
-DocSymCh  Germany
-DocSymCh  Mira Balaban
-          
+StudComCh Mira Balaban
           Ben-Gurion University of the Negev
-DocSymCh  Israel
-          
           
           Web Chair
 WebCh     Stéphane Somé
-          
           University of Ottawa
-WebCh     Canada
-          
           
           Social Media Chairs
 SocMedCh  Sahar Kokaly
-          
           McMaster University
-SocMedCh  Canada
 SocMedCh  Michalis Famelis
-          
           University of Toronto
-SocMedCh  Canada
-          
           
           Publicity Chairs
-PubRelCh  Focus on Europe
 PubRelCh  Manuel Wimmer
-          
-PubRelCh  TU Wien
-PubRelCh  Austria
-PubRelCh  Focus on China
 PubRelCh  Tian Zhang
-          
-          Nanjing University
-PubRelCh  China
-          
           
           Local Arrangements
 LocRegCo  Vahdat Abdelzad
-          
           University of Ottawa
-LocRegCo  Canada
 LocRegCo  Hamoud Aljamaan
-          
           University of Ottawa
-LocRegCo  Canada
 LocRegCo  Andrew Forward
-          
-LocRegCo  Private Consultant
-LocRegCo  Canada
-LocRegCo  News rss logo
-          
-          
+          //Private Consultant
           
           
           http://cruise.eecs.uottawa.ca/models2015/steering.html
           The Steering Committee oversees the conference from year to year membership is primarily composed of previous general chairs and program chairs. The following is the Steering Committee as it existed at the time the 2015 conference was organized.
-          
-LocRegCh  Lionel Briand (Chair), University of Luxembourg (Luxembourg)
-LocRegCo  Juergen Dingel, Queen's University (Canada)
-LocRegCo  Silvia Abrahão, Universitat Politècnica de València (Spain)
-LocRegCo  Benoit Baudry, IRISA - INRIA (France)
-LocRegCo  Ruth Breu, University of Innsbruck (Austria)
-LocRegCo  Jean-Michel Bruel, IRIT (France)
-LocRegCo  Jordi Cabot, ICREA - UOC, Barcelona (Spain)
-LocRegCo  Laurie Dillon, Michigan State University (USA)
-LocRegCo  Alexander Egyed, JKU Linz (Austria)
-LocRegCo  Gregor Engels, University of Paderborn (Germany)
-LocRegCo  Jeff Gray, University of Alabama (USA)
-LocRegCo  Øystein Haugen, Østfold University College (Norway)
-LocRegCo  Jörg Kienzle, McGill University (Canada)
-LocRegCo  Thomas Kühne, Victoria University of Wellington (New Zealand)
-LocRegCo  Timothy C. Lethbridge, University of Ottawa (Canada)
-LocRegCo  Ana Moreira, Universidade Nova de Lisboa (Portugal)
-LocRegCo  Pierre-Alain Muller, University of Haute-Alsace (France)
-LocRegCo  Dorina Petriu, Carleton University (Canada)
-LocRegCo  Rob Pettit, The Aerospace Corp. (USA)
-LocRegCo  Gianna Reggio, University of Genoa (Italy)
-LocRegCo  Bernhard Schätz, Technical University of Munich (Germany)
-LocRegCo  Wolfram Schulte, Microsoft Research (USA)
-LocRegCo  Andy Schürr, Technical University of Darmstadt (Germany)
-LocRegCo  Steve Seidman, Texas State University (USA)
-LocRegCo  Jon Whittle, Lancaster University (UK)
+          Steering Committee
+SteerCh   Lionel Briand (Chair), University of Luxembourg (Luxembourg)
+SteerCo   Juergen Dingel, Queen's University (Canada)
+SteerCo   Silvia Abrahão, Universitat Politècnica de València (Spain)
+SteerCo   Benoit Baudry, IRISA - INRIA (France)
+SteerCo   Ruth Breu, University of Innsbruck (Austria)
+SteerCo   Jean-Michel Bruel, IRIT (France)
+SteerCo   Jordi Cabot, ICREA - UOC, Barcelona (Spain)
+SteerCo   Laurie Dillon, Michigan State University (USA)
+SteerCo   Alexander Egyed, JKU Linz (Austria)
+SteerCo   Gregor Engels, University of Paderborn (Germany)
+SteerCo   Jeff Gray, University of Alabama (USA)
+SteerCo   Øystein Haugen, Østfold University College (Norway)
+SteerCo   Jörg Kienzle, McGill University (Canada)
+SteerCo   Thomas Kühne, Victoria University of Wellington (New Zealand)
+SteerCo   Timothy C. Lethbridge, University of Ottawa (Canada)
+SteerCo   Ana Moreira, Universidade Nova de Lisboa (Portugal)
+SteerCo   Pierre-Alain Muller, University of Haute-Alsace (France)
+SteerCo   Dorina Petriu, Carleton University (Canada)
+SteerCo   Rob Pettit, The Aerospace Corp. (USA)
+SteerCo   Gianna Reggio, University of Genoa (Italy)
+SteerCo   Bernhard Schätz, Technical University of Munich (Germany)
+SteerCo   Wolfram Schulte, Microsoft Research (USA)
+SteerCo   Andy Schürr, Technical University of Darmstadt (Germany)
+SteerCo   Steve Seidman, Texas State University (USA)
+SteerCo   Jon Whittle, Lancaster University (UK)
           
           http://cruise.eecs.uottawa.ca/models2015/programBoard.html
           
-LocRegCo  Richard Paige
-          
+          Program Board
+ProgBoCo  Richard Paige
           University of York
-LocRegCo  United Kingdom
-          richard.paige@york.ac.uk
-LocRegCo  Juergen Dingel
-          
+ProgBoCo  Juergen Dingel
           Queen's University
-LocRegCo  Canada
-          dingel@cs.queensu.ca
-LocRegCo  Ana Moreira
-          
+ProgBoCo  Ana Moreira
           Universidade Nova de Lisboa
-LocRegCo  Portugal
-          amm@fct.unl.pt
-LocRegCo  Antonio Vallecillo
-          
+ProgBoCo  Antonio Vallecillo
           Universidad de Màlaga
-LocRegCo  Spain
-          av@lcc.uma.es
-LocRegCo  Bran Selic
-          
-LocRegCo  Malina Software Corp
-LocRegCo  Canada
-          selic@acm.org
-LocRegCo  Bernhard Rumpe
-          
-LocRegCo  Software Engineering RWTH Aachen
-LocRegCo  Germany
-          rumpe@se-rwth.de
-LocRegCo  Øystein Haugen
-          
+ProgBoCo  Bran Selic
+ProgBoCo  Bernhard Rumpe
+ProgBoCo  Øystein Haugen
           Østfold University College
-LocRegCo  Norway
-          oystein.haugen@hiof.no
-LocRegCo  Zhenjiang Hu
-          
-LocRegCo  National Institute of Informatics
-LocRegCo  Japan
-          hu@nii.ac.jp
-LocRegCo  Pierre-Alain Muller
-          
+ProgBoCo  Zhenjiang Hu
+ProgBoCo  Pierre-Alain Muller
           Université de Haute Alsace
           France
-          pierre-alain.muller@uha.fr
-LocRegCo  Jörg Kienzle
-          
+ProgBoCo  Jörg Kienzle
           McGill University
-LocRegCo  Canada
-          Joerg.Kienzle@mcgill.ca
-LocRegCo  Lionel Briand
-          
+ProgBoCo  Lionel Briand
           University of Luxembourg
-LocRegCo  Luxembourg
-          lionel.brand@uni.lu
-LocRegCo  Betty H.C. Cheng
-          
+ProgBoCo  Betty H.C. Cheng
           Michigan State University
-LocRegCo  USA
-          chengb@cse.msu.edu
-LocRegCo  Benoit Baudry
-          
+ProgBoCo  Benoit Baudry
           INRIA
-          France
-          Benoit.Baudry@inria.fr
-LocRegCo  News rss logo
           
           http://cruise.eecs.uottawa.ca/models2015/programCommittee.html
           Foundations Track Program Committee
@@ -259,111 +145,58 @@ LocRegCo  News rss logo
           (see the call for papers here)
           
 ProgramCo Silvia Abrahão, Universidad Politecnica de Valencia, Spain
-          
 ProgramCo Daniel Amyot, University of Ottawa, Canada
-          
 ProgramCo Mohsen Asadi, Simon Fraser University, Canada
-          
 ProgramCo Don Batory, The University of Texas at Austin, United States
-          
 ProgramCo Nelly Bencomo, Aston University, United Kingdom
-          
 ProgramCo Xavier Blanc, Bordeaux University, France
-          
 ProgramCo Alessandro Bozzon, Delft University of Technology, Netherlands
-          
 ProgramCo Ruth Breu, Universitaet Innsbruck, Austria
-          
 ProgramCo Manfred Broy, Fakultät für Informatik Technische Universität München, Germany
-          
 ProgramCo Jean-Michel Bruel, University of Toulouse, France
-          
 ProgramCo Michel Chaudron, Chalmers & Gothenburg University, Sweden
-          
 ProgramCo Marsha Chechik, University of Toronto, Canada
-          
 ProgramCo Robert Clariso, Universitat Oberta de Catalunya, Spain
-          
 ProgramCo Tony Clark, Middlesex University, United Kingdom
-          
 ProgramCo Siobhan Clarke, Trinity College Dublin, Ireland
-          
 ProgramCo Peter Clarke, Florida International University, United States
-          
 ProgramCo Manuel Clavel, IMDEA Software Institute, Spain
-          
 ProgramCo Krzysztof Czarnecki, Universtiy of Waterloo, Canada
-          
 ProgramCo Fabiano Dalpiaz, Utrecht University, Netherlands
-          
 ProgramCo Gregor Engels, University of Paderborn, Germany
-          
 ProgramCo Neil Ernst, Carnegie Mellon University, United States
-          
 ProgramCo Alessandro Garcia, Pontifical Catholic University of Rio de Janeiro, Brazil
-          
 ProgramCo Geri Georg, Colorado State University, United States
-          
 ProgramCo Sebastien Gerard, CEA List, France
-          
 ProgramCo Martin Gogolla, University of Bremen, Germany
-          
 ProgramCo Jeff Gray, University of Alabama, United States
-          
 ProgramCo John Grundy, Swinburne University of Technology, Australia
-          
 ProgramCo Giancarlo Guizzardi, Federal University of Espirito Santo, Brazil
-          
 ProgramCo Reiko Heckel, Department of Computer Science University of Leicester, United Kingdom
-          
 ProgramCo Gerti Kappel, Vienna University of Technology, Austria
-          
 ProgramCo Frederic Mallet, Universite Nice Sophia Antipolis, France
-          
 ProgramCo Shahar Maoz, Tel Aviv University, Israel
-          
 ProgramCo Tom Mens, University of Mons, Belgium
-          
 ProgramCo Raffaela Mirandola, Politecnico di Milano, Italy
-          
 ProgramCo Henry Muccini, University of l'Aquila, Italy
-          
 ProgramCo Shiva Nejati, University of Luxembourg, Luxembourg
-          
 ProgramCo Jeffrey Parsons, Memorial University, Canada
-          
 ProgramCo Dorina Petriu, Carleton University Ottawa, Ontario, Canada
-          
 ProgramCo Alfonso Pierantonio, University of l'Aquila, Italy
-          
 ProgramCo Julia Rubin, Massachusetts Institute of Technology, United States
-          
 ProgramCo Ina Schaefer, Technische Universitaet Braunschweig, Germany
-          
 ProgramCo Andy Schuerr, Technische Universitaet Darmstadt, Germany
-          
 ProgramCo Jocelyn Simmonds, Universidad de Chile, Chile
-          
 ProgramCo Friedrich Steimann, Fernuniversitaet in Hagen, Germany
-          
 ProgramCo Perdita Stevens, University of Edinburgh, United Kingdom
-          
 ProgramCo Gabriele Taentzer, Philipps-Universitaet Marburg, Germany
-          
 ProgramCo Pieter Van Gorp, Eindhoven University of Technology, Netherlands
-          
 ProgramCo Daniel Varro, Budapest University of Technology and EconomicsÂ, Hungary
-          
 ProgramCo Andrzej Wasowski, IT University of Copenhagen, Denmark
-          
 ProgramCo Jon Whittle, Lancaster University, United Kingdom
-          
 ProgramCo Tao Yue, Simula Research Laboratory and University of Oslo, Norway
-          
 ProgramCo Steffen Zschaler, King's College London, United Kingdom
-          
 ProgramCo Juan de Lara, Universidad Autónoma de Madrid, Spain
-          
 ProgramCo Yves le Traon, University of Luxembourg, Luxembourg
           
           http://cruise.eecs.uottawa.ca/models2015/mdeInPracticeProgramCommittee.html
@@ -371,72 +204,54 @@ ProgramCo Yves le Traon, University of Luxembourg, Luxembourg
           
           (see the call for papers here)
           
-ProgramCo Shaukat Ali, Simula Research Laboratory, Norway
-          
-ProgramCo Robert Baillargeon, CloudOne, United States
-          
-ProgramCo Martin Becker, Fraunhofer IESE, Germany
-          
-ProgramCo Francis Bordeleau, Ericsson, Canada
-          
-ProgramCo Maged Elaasar, Jet Propulsion Laboratory, United States
-          
-ProgramCo Pavel Hruby, CSC, Denmark
-          
-ProgramCo Robert Karban, JPL, United States
-          
-ProgramCo Cornel Klein, Siemens AG Corporate Research & Technology CT NTF CAR, Germany
-          
-ProgramCo Heiko Koziolek, ABB Corporate Research, Germany
-          
-ProgramCo Vinay Kulkarni, Tata Consultancy Services, India
-          
-ProgramCo Stephen J. Mellor, Independent Consultant, United Kingdom
-          
-ProgramCo Pieter Mosterman, MathWorks McGill University, United States
-          
-ProgramCo Isabelle Perseil, INSERM, France
-          
-ProgramCo Rob Pettit, The Aerospace Corporation, United States
-          
-ProgramCo Ketil Stolen, SINTEF, Norway
-          
-ProgramCo Stephan Thesing, Airbus Helicopters Deutschland GmbH, Germany
-          
-ProgramCo Mario Trapp, Fraunhofer IESE, Germany
-          
-ProgramCo Salvador Trujillo, IK4-IKERLAN Research Centre, Spain
-          
-ProgramCo Markus Voelter, Independent/Itemis, Germany
+PractCo   Shaukat Ali, Simula Research Laboratory, Norway
+PractCo   Robert Baillargeon, CloudOne, United States
+PractCo   Martin Becker, Fraunhofer IESE, Germany
+PractCo   Francis Bordeleau, Ericsson, Canada
+PractCo   Maged Elaasar, Jet Propulsion Laboratory, United States
+PractCo   Pavel Hruby, CSC, Denmark
+PractCo   Robert Karban, JPL, United States
+PractCo   Cornel Klein, Siemens AG Corporate Research & Technology CT NTF CAR, Germany
+PractCo   Heiko Koziolek, ABB Corporate Research, Germany
+PractCo   Vinay Kulkarni, Tata Consultancy Services, India
+PractCo   Stephen J. Mellor, Independent Consultant, United Kingdom
+PractCo   Pieter Mosterman, MathWorks McGill University, United States
+PractCo   Isabelle Perseil, INSERM, France
+PractCo   Rob Pettit, The Aerospace Corporation, United States
+PractCo   Ketil Stolen, SINTEF, Norway
+PractCo   Stephan Thesing, Airbus Helicopters Deutschland GmbH, Germany
+PractCo   Mario Trapp, Fraunhofer IESE, Germany
+PractCo   Salvador Trujillo, IK4-IKERLAN Research Centre, Spain
+PractCo   Markus Voelter, Independent/Itemis, Germany
           
           http://cruise.eecs.uottawa.ca/models2015/callForWorkshops.html#Committee
           Workshop Organization and Contact Information
           
           Workshops Co-Chairs:
           
-WorkspCh  Wahab Hamou-Lhadj, Concordia University, Montreal, QC, Canada
-WorkspCh  Emilio Insfran, Universitat Politècnica de València, Spain
+SatellCh  Wahab Hamou-Lhadj, Concordia University, Montreal, QC, Canada
+SatellCh  Emilio Insfran, Universitat Politècnica de València, Spain
           
           For further information, please contact the tutorial chairs at workshopsmodels2015@easychair.org.
           
           Workshops Selection Committee:
           
-WorkspCh  Silvia Abrahao, Universitat Politècnica de València, Spain
-WorkspCh  Marco Brambilla, Politecnico di Milano, Italy
-WorkspCh  Antonio Cicchetti, Mälardalen University, Sweden
-WorkspCh  Juan de Lara, Universidad Autónoma de Madrid, Spain
-WorkspCh  Jeff Gray, University of Alabama, USA
-WorkspCh  Wahab Hamou-Lhadj (chair), Concordia University, Canada
-WorkspCh  Emilio Insfran (chair), Universitat Politecnica de Valencia, Valencia, Spain
-WorkspCh  Marouane Kessentini, University of Michigan, USA
-WorkspCh  Dimitris Kolovos, University of York, United Kingdom
-WorkspCh  Yan Liu, Concordia University, Montreal, QC, Canada
-WorkspCh  Alfonso Pierantonio, Università degli Studi dell'Aquila, Italy
-WorkspCh  Giuseppe Scanniello, University of Basilicata, Italy
-WorkspCh  Gabi Taentzer, University of Marburg, Germany
-WorkspCh  Matthias Tichy, Chalmers and University of Gothenburg, Sweden
-WorkspCh  Manuel Wimmer, Technical University of Wien, Austria
-WorkspCh  Omar Bahy Badreddin, Northern Arizona University, US
+SatellCh  Silvia Abrahao, Universitat Politècnica de València, Spain
+SatellCh  Marco Brambilla, Politecnico di Milano, Italy
+SatellCh  Antonio Cicchetti, Mälardalen University, Sweden
+SatellCh  Juan de Lara, Universidad Autónoma de Madrid, Spain
+SatellCh  Jeff Gray, University of Alabama, USA
+SatellCh  Wahab Hamou-Lhadj (chair), Concordia University, Canada
+SatellCh  Emilio Insfran (chair), Universitat Politecnica de Valencia, Valencia, Spain
+SatellCh  Marouane Kessentini, University of Michigan, USA
+SatellCh  Dimitris Kolovos, University of York, United Kingdom
+SatellCh  Yan Liu, Concordia University, Montreal, QC, Canada
+SatellCh  Alfonso Pierantonio, Università degli Studi dell'Aquila, Italy
+SatellCh  Giuseppe Scanniello, University of Basilicata, Italy
+SatellCh  Gabi Taentzer, University of Marburg, Germany
+SatellCh  Matthias Tichy, Chalmers and University of Gothenburg, Sweden
+SatellCh  Manuel Wimmer, Technical University of Wien, Austria
+SatellCh  Omar Bahy Badreddin, Northern Arizona University, US
           
           http://cruise.eecs.uottawa.ca/models2015/callForTutorials.html#Committee
           Tutorial Organization and Contact Information
@@ -474,35 +289,32 @@ TutorCh   Steffen Zschaler, King’s College London, United Kingdom
           
           http://cruise.eecs.uottawa.ca/models2015/callForDemonstrationsAndPosters.html#Committee
           Demonstrations and Posters Organization and Contact Information
+          // @grammarware claims demo is bigger than a poster
+          Demonstration Co-Chairs:
           
-TutorCh   Co-Chairs:
-          
-TutorCh   Omar Badreddin, Northern Arizona University, U.S.A.
-TutorCh   Vinay Kulkarni, Tata Consultancy Services, India.
+DemoCh    Omar Badreddin, Northern Arizona University, U.S.A.
+DemoCh    Vinay Kulkarni, Tata Consultancy Services, India.
           
           
           http://cruise.eecs.uottawa.ca/models2015/callForDoctoralSymposium.html#committee
           Symposium Organization and Contact Information
-TutorCh   Chairs
+          Doctoral Symposium Chairs
           
-TutorCh   Marsha Chechik, University of Toronto, Canada
-TutorCh   Dimitris Kolovos, University of York, UK
+DocSymCh  Marsha Chechik, University of Toronto, Canada
+DocSymCh  Dimitris Kolovos, University of York, UK
           
-          Program Committee
+          Doctoral Symposium Program Committee
           
-ProgramCo Istvan Rath, Budapest University of Technology and Economics
-ProgramCo Jeff Gray, University of Alabama
-ProgramCo Eugene Syriani, University of Montreal
-ProgramCo Shiva Nejati, University of Luxembourg
-ProgramCo Juan De Lara, Universidad Autonoma de Madrid
-ProgramCo Sahar Kokaly, McMaster University
-ProgramCo David Méndez-Acuña, Universidad de los Andes
-ProgramCo Reiner Jung, Kiel University
-ProgramCo Adolfo Sanchez-Barbudo Herrera, University of York
-ProgramCo Jorge Sedeño, University of Seville
-ProgramCo Simon Van Mierlo, University of Antwerp
-ProgramCo Luis Silvestre, University of Chile
-ProgramCo Davide Arcelli, Università de L'Aquila
-          
-ProgramCo News rss logo
-          
+DocSymCo  Istvan Rath, Budapest University of Technology and Economics
+DocSymCo  Jeff Gray, University of Alabama
+DocSymCo  Eugene Syriani, University of Montreal
+DocSymCo  Shiva Nejati, University of Luxembourg
+DocSymCo  Juan De Lara, Universidad Autonoma de Madrid
+DocSymCo  Sahar Kokaly, McMaster University
+DocSymCo  David Méndez-Acuña, Universidad de los Andes
+DocSymCo  Reiner Jung, Kiel University
+DocSymCo  Adolfo Sanchez-Barbudo Herrera, University of York
+DocSymCo  Jorge Sedeño, University of Seville
+DocSymCo  Simon Van Mierlo, University of Antwerp
+DocSymCo  Luis Silvestre, University of Chile
+DocSymCo  Davide Arcelli, Università de L'Aquila

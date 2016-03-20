@@ -42,7 +42,7 @@ ProgramCo Michael Whalen, University of Minnesota, USA
 ProgramCo Eric Van Wyk, University of Minnesota, USA
 ProgramCo Steffen Zschaler, King's College London, UK
           Workshop organization chair
-WorkspCh  Eric Van Wyk, University of Minnesota, USA
+SatellCh  Eric Van Wyk, University of Minnesota, USA
           Panel organization chair
 PanelCh   Ralf Lämmel, Universität Koblenz-Landau, Germany
           Publicity chairs

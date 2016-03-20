@@ -39,9 +39,9 @@ PodSymCh  Bram Adams,
 PodSymCh  Haroon Malik,
           University of Waterloo
           Workshop Co-Chairs
-WorkspCh  Coen De Roover,
+SatellCh  Coen De Roover,
           Vrije Universiteit Brussel
-WorkspCh  Daniel German,
+SatellCh  Daniel German,
           University of Victoria
           MIP Award Chair
 AwardCh   Massimiliano Di Penta,
@@ -288,32 +288,32 @@ PractCh   Ashish Sureka,
           // Indraprastha Institute of
           Information Technology
           Industry Track Program Committee
-PractCo   Vibha Sinha,
+PractCh   Vibha Sinha,
           IBM Research Lab, India
-PractCo   Hee Beng Kuan Tan
-PractCo   Hongyu Zhang,
+PractCh   Hee Beng Kuan Tan
+PractCh   Hongyu Zhang,
           Tsinghua University
-PractCo   Sagar Sen,
+PractCh   Sagar Sen,
           Simula Research Laboratory
-PractCo   Raghavan Komondoor,
+PractCh   Raghavan Komondoor,
           // Indian Institute of Science, Bangalore
-PractCo   David   Shepherd,
+PractCh   David   Shepherd,
           // ABB, Inc.
-PractCo   Weiyi Shang,
+PractCh   Weiyi Shang,
           SAIL Queen’s University
-PractCo   David Lo,
+PractCh   David Lo,
           Singapore Management University
-PractCo   Jing Sun,
+PractCh   Jing Sun,
           The University of Auckland
-PractCo   Takashi   Kobayashi,
+PractCh   Takashi   Kobayashi,
           Tokyo Institute of Technology
-PractCo   Jean-Guy Schneider,
+PractCh   Jean-Guy Schneider,
           Swinburne University of Technology
-PractCo   Diptikalyan Saha,
+PractCh   Diptikalyan Saha,
           IBM Research, India
-PractCo   Kivanc  Muslu,
+PractCh   Kivanc  Muslu,
           University of Washington
-PractCo   Carl Worms,
+PractCh   Carl Worms,
           // Credit Suisse AG, Information Technology
           ERA Track Chairs
 EarlyCh   Emad Shihab,

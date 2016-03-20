@@ -37,9 +37,9 @@ EarlyCh   Coen De Roover
           
           Workshops
           
-WorkspCh  Alexander Serebrenik
+SatellCh  Alexander Serebrenik
           
-WorkspCh  Emily Hill
+SatellCh  Emily Hill
           
           
           Doctoral Symposium Chairs
