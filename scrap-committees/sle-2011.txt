@@ -80,7 +80,7 @@ WebCh     João Paulo Fernandes (Web and Publicity co-Chair)
 PubRelCh  João Paulo Fernandes (Publicity co-Chair)
           Universidade do Porto&  Universidade do Minho, Portugal
           
-WorkspCh  Jurgen Vinju (Workshop Selection Chair)
+SatellCh  Jurgen Vinju (Workshop Selection Chair)
           CWI, The Netherlands
           
 PubRelCh  Vadim Zaytsev (Publicity co-Chair)

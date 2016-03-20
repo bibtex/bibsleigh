@@ -8,52 +8,52 @@ sys.path.append('..')
 from fancy.ANSI import C
 
 ROLEZ = {\
-	'AdCo': 'Advisory Committee',
-	'AwCh': 'Award Chair',
-	'BrCh': 'Briefings Chair',
-	'DaCh': 'Data Chair',
-	'DSCh': 'Doctoral Symposium Chair',
-	'PSCh': 'Post-Doctoral Symposium Chair',
-	'ERCh': 'ERA Track Chair',
-	'ERCo': 'ERA Track Program Committee',
-	'ERP' : 'Expert Review Panel',
-	'FiCh': 'Finance Chair',
-	'ChCh': 'Challenge Chair',
-	'ChCo': 'Challenge Committee',
-	'GeCh': 'General Chair',
-	'InCh': 'Industrial Track Chair',
-	'ITPC': 'Industrial Track Program Committee',
-	'KN':   'Keynote Speaker',
-	'LoCh': 'Local Chair',
-	'LoCo': 'Local Committee',
-	'MoCh': 'Mobile Chair',
-	'OrCh': 'Organising Chair',
-	# 'OrCo': 'Organiser',
-	'OrCo': 'Organising Committee',
-	'PaCh': 'Panel Chair',
-	'PbCh': 'Publicity Chair',
-	'PBCh': 'Program Board Chair',
-	'PBCo': 'Program Board',
-	'PjCh': 'Project Chair',
-	'PoCh': 'Poster Chair',
-	'PrCh': 'Program Chair',
-	'PrCo': 'Program Committee',
-	'PuCh': 'Publication Chair',
-	'SaCh': 'Satellite Events Chair',
-	'ScCo': 'Scientific Committee',
-	'ScLi': 'Scientific Liaison',
-	'SMCh': 'Social Media Chair',
-	'SRCh': 'Student Research Competition Chair',
-	'SpCh': 'Sponsor Chair',
-	'StCh': 'Steering Chair',
-	'StCo': 'Steering Committee',
-	'SVCh': 'Student Volunteers Chair',
-	'TTCh': 'Tool Track Chair',
-	'TTPC': 'Tool Track Program Committee',
-	'TuCh': 'Tutorials Chair',
-	'ViCh': 'Vision Chair',
-	'WeCh': 'Web Chair',
-	'WoCh': 'Workshop Chair',\
+	'AdviceCo'  :  'Advisory Committee',
+	'AwardCh'   :  'Award Chair',
+	'BriefCh'   :  'Briefings Chair',
+	'DataCh'    :  'Data Chair',
+	'DocSymCh'  :  'Doctoral Symposium Chair',
+	'PodSymCh'  :  'Post-Doctoral Symposium Chair',
+	'EarlyCh'   :  'ERA Track Chair',
+	'EarlyCo'   :  'ERA Track Program Committee',
+	'ExpertRP'  :  'Expert Review Panel',
+	'FinanceCh' :  'Finance Chair',
+	'ChalngCh'  :  'Challenge Chair',
+	'ChalngCo'  :  'Challenge Committee',
+	'GeneralCh' :  'General Chair',
+	'HackCh'    :  'Hackathon Chair',
+	'PractCh'   :  'Industrial Track Chair',
+	'PractCo'   :  'Industrial Track Program Committee',
+	'KeyNote'   :  'Keynote Speaker',
+	'LocRegCh'  :  'Local Chair',
+	'LocRegCo'  :  'Local Committee',
+	'MobileCh'  :  'Mobile Chair',
+	'OrganCh'   :  'Organising Chair',
+	'OrganCo'   :  'Organising Committee',
+	'PanelCh'   :  'Panel Chair',
+	'PubRelCh'  :  'Publicity Chair',
+	'ProgBoCh'  :  'Program Board Chair',
+	'ProgBoCo'  :  'Program Board',
+	'ProjectCh' :  'Project Chair',
+	'PosterCh'  :  'Poster Chair',
+	'ProgramCh' :  'Program Chair',
+	'ProgramCo' :  'Program Committee',
+	'PublicaCh' :  'Publication Chair',
+	'SatellCh'  :  'Satellite Events Chair',
+	'ScienceCo' :  'Scientific Committee',
+	'ScientLi'  :  'Scientific Liaison',
+	'SocMedCh'  :  'Social Media Chair',
+	'StudComCh' :  'Student Research Competition Chair',
+	'SponsorCh' :  'Sponsor Chair',
+	'SteerCh'   :  'Steering Chair',
+	'SteerCo'   :  'Steering Committee',
+	'StudentCh' :  'Student Volunteers Chair',
+	'DemoCh'    :  'Tool Track Chair',
+	'DemoCo'    :  'Tool Track Program Committee',
+	'TutorCh'   :  'Tutorials Chair',
+	'VisionCh'  :  'Vision Chair',
+	'WebCh'     :  'Web Chair',
+	'WorkspCh'  :  'Workshop Chair',\
 }
 
 CONFZ = {\
@@ -75,8 +75,10 @@ for fn in sys.argv[1:-1]:
 		cur = fn.split('-')[0]
 	print("'{}".format(fn.split('-')[-1][-6:-4]), end=' ')
 	f = open(fn, 'r', encoding='utf-8')
-	lines += [(fn, line[:5], line[5:].strip()) for line in f.readlines()\
-		if line.strip() and line[:5] != BLANK and not line.startswith('#DONE')]
+	lines += [(fn, line[:10], line[10:].strip()) for line in f.readlines()\
+		if line.strip() \
+		and line[:10] != '          ' \
+		and not line.startswith('##########')]
 	f.close()
 print()
 
@@ -107,8 +109,9 @@ for line in lines:
 	year = fn.split('-')[1].split('.')[0]
 	fname = name.split(' ')[0].strip()
 	lname = ' '.join(name.split(' ')[1:]).strip()
-	if lname.find(' - '):
-		lname = lname.split(' - ')[0]
+	for sep in '-–—':
+		if lname.find(' '+sep+' '):
+			lname = lname.split(' '+sep+' ')[0]
 	role = ROLEZ[status.strip()]
 	# try to determine gender
 	if fname in males:

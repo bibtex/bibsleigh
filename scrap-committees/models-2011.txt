@@ -20,7 +20,7 @@ DocSymCh  Andreas Winter
           
           http://ecs.victoria.ac.nz/Events/MODELS2011/ProgramCommittees
           Program Committees
-ProgramCo Foundations Track
+          Foundations Track
 ProgramCo Daniel Amyot 	University of Ottawa, Canada
 ProgramCo Colin Atkinson 	University of Mannheim, Germany
 ProgramCo Joanne M. Atlee 	University of Waterloo, Canada
