@@ -1,3 +1,5 @@
 #!/bin/sh
+rm -f tmp
 ./makesense.py $1
-./done2csv.py $1
+./done2csv.py $1 tmp
+cat tmp

@@ -1,0 +1,358 @@
+#DONE
+     SANER2016/papers/1855z015.pdf
+     SANER2016/papers/1855z018.pdf
+     Organizing Committee
+     General Chair
+GeCh Katsuro Inoue,
+     Osaka University
+     Program Co-Chairs
+PrCh Yasutaka Kamei,
+     Kyushu University
+PrCh Michele Lanza,
+     University of Lugano
+     ERA Co-Chairs
+ERCh Alberto Bacchelli,
+     Delft University of Technology
+ERCh Emad Shihab,
+     Concordia University
+     Industrial Track Co-Chairs
+InCh Ashish Sureka,
+InCh Thomas Zimmerman,
+     Tool Demo Co-Chairs
+TTCh Sonia Haiduc,
+     Florida State University
+TTCh Yoshiki Higo,
+     Osaka University
+     Doctoral Symposium Co-Chairs
+DSCh Serge Demeyer,
+     University of Antwerp
+DSCh Mike Godfrey,
+     University of Waterloo
+     Post-Doctoral Symposium Co-Chairs
+PSCh Bram Adams,
+     École Polytechnique de Montréal
+PSCh Haroon Malik,
+     University of Waterloo
+     Workshop Co-Chairs
+WoCh Coen De Roover,
+     Vrije Universiteit Brussel
+WoCh Daniel German,
+     University of Victoria
+     MIP Award Chair
+AwCh Massimiliano Di Penta,
+     University of Sannio
+     ??? [skip FoSE]
+     Poster Co-Chairs
+PoCh Laura Moreno,
+     The University of Texas at Dallas
+PoCh Hiroyuki Nakagawa,
+     Osaka University
+     Local Arrangements
+LoCo Eunjong Choi,
+     Osaka University
+LoCo Hideaki Hata,
+     Nara Institute of Science and Technology
+LoCo Shinji Kusumoto,
+     Osaka University
+LoCo Takashi Kobayashi,
+     Tokyo Institute of Technology
+LoCo Mizuho Karube,
+     Osaka University
+     Social Event Co-Chairs
+LoCh Hiroshi Igaki,
+     Osaka Institute of Technology
+LoCh Tatsuhiro Tsuchiya,
+     Osaka University
+     Registration Co-Chairs
+LoCh Takashi Ishio,
+     Osaka University
+LoCh Masahide Nakamura,
+     Kobe University
+     Student Volunteers Co-Chairs
+SVCh Shinpei Hayashi,
+     Tokyo Institute of Technology
+SVCh Raula Gaikovina Kula,
+     Osaka University
+     Proceedings Chair
+PuCh Norihiro Yoshida,
+     Nagoya University
+     Publicity Co-Chairs
+PbCh Gabriele Bavota,
+     Free University of Bolzano-Bozen
+PbCh Olga Baysal,
+     Carleton University
+PbCh Anthony Cleve,
+     Université de Namur
+PbCh Akinori Ihara,
+     Nara Institute of Science and Technology
+PbCh David Lo,
+     Singapore Management University
+PbCh Makoto Matsushita,
+     Osaka University
+PbCh Andrea Mocci,
+     University of Lugano
+     
+     Web Co-Chairs
+WeCh Tetsuya Kanda,
+     Osaka University
+WeCh Luca Ponzanelli,
+     University of Lugano
+     Industrial Liaison Chair
+InCh Shusuke Haruna,
+     Osaka University
+     Steering Committee
+StCo Bram Adams,
+     École Polytechnique de Montréal
+StCo Dave Binkley,
+     Loyola University Maryland
+StCo Ira Baxter,
+     Semantic Designs
+StCo Elliot Chikofsky,
+     PathBridge
+StCo Serge Demeyer,
+     University of Antwerp
+StCo Yann-Gaël Guéhéneuc,
+     École Polytechnique de Montréal
+StCo David Lo,
+     Singapore Management University
+StCo Hausi Müller,
+     University of Victoria
+     
+     //Research
+     Program Chairs
+PrCh Michele Lanza,
+     University of Lugano
+PrCh Yasutaka Kamei,
+     Kyushu University
+     Program Committee
+PrCo Gabriele Bavota ,
+     Free University of Bozen-Bolzano
+PrCo Harald Gall,
+     University of Zurich
+PrCo Rainer  Koschke,
+     University of Bremen
+PrCo Andrian Marcus,
+     The University of Texas at Dallas
+PrCo Tudor Girba,
+     University of Bern
+PrCo Nils Göde,
+     // CQSE GmbH
+PrCo Alexander Serebrenik,
+     Eindhoven University of Technology
+PrCo Andrea  Mocci,
+     University of Lugano, Switzerland
+PrCo Marcus Denker,
+     INRIA Lille
+PrCo Filippo  Ricca,
+     // DIBRIS, Università di Genova - Italy
+PrCo Foutse  Khomh,
+     // DGIGL, École Polytechnique de Montréal
+PrCo David Lo,
+     Singapore Management University
+PrCo Marco Tulio,
+     //UFMG
+PrCo Takashi   Kobayashi,
+     Tokyo Institute of Technology
+PrCo Giuseppe Scanniello,
+     // Informatica ed Economia
+PrCo Denys   Poshyvanyk,
+     College of William and Mary
+PrCo Abram  Hindle,
+     University of Alberta
+PrCo Giuliano Antoniol,
+     Ecole Polytechnique de Montréal
+PrCo Christian Bird,
+     Microsoft Research
+PrCo Romain   Robbes ,
+     University of Chile
+PrCo Dave Binkley    ,
+     Loyola University Maryland
+PrCo Massimiliano Di Penta,
+     University of Sannio, Italy
+PrCo Radu Marinescu,
+     Politehnica University of Timisoara
+PrCo Alessandra Gorla,
+     Saarland University
+PrCo Olga Baysal,
+     Université de Montréal
+PrCo Andrew   Begel,
+     Microsoft Research
+PrCo Sunghun Kim,
+     The University of Hong Kong Science and Technology
+PrCo Yann-Gaël Guéhéneuc,
+     École Polytechnique de Montréal
+PrCo Gregorio Robles,
+     Universidad Rey Juan Carlos
+PrCo Norihiro Yoshida,
+     Nagoya University
+PrCo Makoto Matsushita,
+     Osaka University
+PrCo Akinori   Ihara,
+     Nara Institute of Science and Technology
+PrCo Daniel German,
+     University of Victoria
+PrCo Rocco Oliveto,
+     University of Molise - Department of Bioscience and Territory
+PrCo Martin  Pinzger,
+     University of Klagenfurt
+PrCo Michael Collard,
+     The University of Akron
+PrCo Reid Holmes,
+     University of Waterloo
+PrCo Anthony Cleve,
+     University of Namur
+PrCo Hongyu   Zhang,
+     Tsinghua University
+PrCo Oscar Nierstrasz,
+     SCG - University of Bern
+PrCo Jonathan Maletic,
+     Kent State University
+PrCo Jim Whitehead,
+     University of California, Santa Cruz
+PrCo Lin Tan ,
+     University of Waterloo
+PrCo Jurgen  Vinju,
+     Centrum Wiskunde & Informatica
+PrCo Alessandro Garcia,
+     Pontifícia Universidade Católica do Rio de Janeiro (PUC-Rio)
+PrCo Hausi Müller,
+     University of Victoria
+PrCo Meiyappan Nagappan,
+     Rochester Institute of Technology
+PrCo Rudolf  Ferenc,
+     University of Szeged
+PrCo James R. Cordy,
+     Queen’s University
+PrCo Tibor Gyimothy,
+     University of Szeged
+PrCo Dongsun Kim,
+     Sogang University
+PrCo Mark Harman,
+     University College London
+PrCo Shinpei Hayashi,
+     Tokyo Institute of Technology
+PrCo Georgios Gousios,
+     Delft University of Technology
+PrCo Marco Gerosa,
+     //IME - USP
+PrCo Carmine Gravino,
+     University of Salerno
+PrCo Domenico Bianculli,
+     SnT Centre - University of Luxembourg
+PrCo Francesca Arcelli Fontana
+     University of Milano Bicocca
+PrCo Zhen Ming Jack  Jiang,
+     York University
+PrCo Chanchal K. Roy,
+     University of Saskatchewan
+PrCo Andy Zaidman,
+     TU Delft
+PrCo Walid Maalej,
+     University of Hamburg
+PrCo Federica Sarro,
+     University College London
+     
+     Tool Demonstrations Track Chairs
+TTCh Sonja Haiduc,
+     Florida State University
+TTCh Yoshiki   Higo,
+     Osaka University
+     Tool Demonstrations Program Committee
+TTPC Chakkrit Tantithamthavorn,
+     Nara Institute of Science and Technology
+TTPC Venera  Arnaoudova,
+     Polytechnique Montreal
+TTPC Ali Ouni, DIRO,
+     Université de Montréal
+TTPC Fabian  Beck,
+     //VISUS, University of Stuttgart
+TTPC Keisuke Hotta
+     Osaka University
+TTPC Shane Mcintosh,
+     //SAIL, Queen’s University
+TTPC Mario Linares-Vásquez,
+     The College of William and Mary
+TTPC Hideaki Hata,
+     Nara Institute of Science and Technology
+TTPC Laura Moreno,
+     The University of Texas at Dallas
+     Industry Track Chairs
+InCh Thomas   Zimmermann,
+     Microsoft Research
+InCh Ashish Sureka,
+     // Indraprastha Institute of
+     Information Technology
+     Industry Track Program Committee
+ITPC Vibha Sinha,
+     IBM Research Lab, India
+ITPC Hee Beng Kuan Tan
+ITPC Hongyu Zhang,
+     Tsinghua University
+ITPC Sagar Sen,
+     Simula Research Laboratory
+ITPC Raghavan Komondoor,
+     // Indian Institute of Science, Bangalore
+ITPC David   Shepherd,
+     // ABB, Inc.
+ITPC Weiyi Shang,
+     SAIL Queen’s University
+ITPC David Lo,
+     Singapore Management University
+ITPC Jing Sun,
+     The University of Auckland
+ITPC Takashi   Kobayashi,
+     Tokyo Institute of Technology
+ITPC Jean-Guy Schneider,
+     Swinburne University of Technology
+ITPC Diptikalyan Saha,
+     IBM Research, India
+ITPC Kivanc  Muslu,
+     University of Washington
+ITPC Carl Worms,
+     // Credit Suisse AG, Information Technology
+     ERA Track Chairs
+ERCh Emad Shihab,
+     Concordia University
+ERCh Alberto Bacchelli,
+     Delft University of Technology
+     ERA Track Committee
+ERCo Foutse Khomh, DGIGL,
+     École Polytechnique de Montréal
+ERCo Marco   Gerosa,
+     //IME - USP
+ERCo Hideaki Hata,
+     Nara Institute of Science and Technology
+ERCo Christian Bird,
+     Microsoft Research
+ERCo Christoph Treude,
+     Universidade Federal do Rio Grande do Norte
+ERCo Akinori Ihara,
+     Nara Institute of Science and Technology
+ERCo Yoshiki Higo,
+     Osaka University
+ERCo Xin Xia,
+     Zhejiang University
+ERCo Alexander Serebrenik,
+     Eindhoven University of Technology
+ERCo Andy Zaidman,
+     TU Delft
+ERCo Georgios Gousios,
+     Radboud University Nijmegen
+ERCo Gabriele Bavota,
+     Free University of Bozen-Bolzano
+ERCo Nikolaos Tsantalis,
+     Concordia University
+ERCo David Lo,
+     Singapore Management University
+ERCo Otavio Lemos,
+     //UNIFESP
+ERCo Annibale Panichella,
+     Delft University of Technology
+ERCo Collin McMillan,
+     University of Notre Dame
+ERCo Alessandra Gorla,
+     //IMDEA Software Institute
+ERCo Sonia Haiduc,
+     Florida State University
+ERCo Peter Rigby,
+     Concordia University

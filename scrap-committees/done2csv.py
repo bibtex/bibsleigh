@@ -8,10 +8,13 @@ sys.path.append('..')
 from fancy.ANSI import C
 
 ROLEZ = {\
+	'AwCh': 'Award Chair',
 	'BrCh': 'Briefings Chair',
 	'DaCh': 'Data Chair',
 	'DSCh': 'Doctoral Symposium Chair',
+	'PSCh': 'Post-Doctoral Symposium Chair',
 	'ERCh': 'ERA Track Chair',
+	'ERCo': 'ERA Track Program Committee',
 	'ERP' : 'Expert Review Panel',
 	'FiCh': 'Finance Chair',
 	'ChCh': 'Challenge Chair',
@@ -53,6 +56,7 @@ ROLEZ = {\
 }
 
 CONFZ = {\
+	'FOSE': 'FoSE',
 	'MODELS': 'MoDELS'\
 }
 
@@ -117,4 +121,8 @@ for line in lines:
 f.close()
 
 open('../naming/unknown.txt', 'w', encoding='utf-8').write('\n'.join(sorted(asexs)))
+
+# safeguard
+if fail == 0 and succ == 0:
+	fail = 1
 print('With {} known names, {}% was classified.'.format(len(males)+len(femes), 100*succ//(succ+fail)))

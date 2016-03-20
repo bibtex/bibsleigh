@@ -1,4 +1,4 @@
-#!/usr/local/bin/python3
+#!/c/Users/vadim/AppData/Local/Programs/Python/Python35/python
 # -*- coding: utf-8 -*-
 #
 # a module to make sense out of CfPs or webpage scraps
@@ -39,7 +39,7 @@ def matchbeg(s, subs):
 
 lines = []
 done = False
-f = open(sys.argv[1], 'r')
+f = open(sys.argv[1], 'r', encoding='utf-8')
 for line in f.readlines():
 	if line.startswith('#DONE'):
 		done = True
@@ -58,11 +58,16 @@ ignored = (\
 )
 
 ignopatterns = (\
-	'Organizing', 'Committee',
-	'Universidade', 'CWI', 'University', 'Dresden', 'Macquarie', 'Eindhoven', 'Clemson', 'Lancaster',
-	'INRIA', '-----', '=====', 'Organization', 'Netherlands', 'Centrum voor Wiskunde en Informatica',
-	'France', 'Interactive Software Development', 'Kruislaan', 'NL-1098', 'The Netherlands', 'Faculty', 
-	'Smetanova', 'Slovenia', 'http://' \
+	'Organizing', 'Committee', 'College', 'Technology', 'École', 'Ecole',
+	'Universidade', 'Université', 'Universidad', 'University',
+	'Vrije Universiteit', 'Polytechnique', 'Microsoft', 'Semantic Designs',
+	'Dresden', 'Macquarie', 'Eindhoven', 'Clemson', 'Lancaster',
+	'INRIA', '-----', '=====', 'Organization', 'Netherlands', 'France',
+	'IBM', 'CWI', 'PathBridge', 'Simula',
+	'Centrum voor Wiskunde en Informatica', 'Centrum Wiskunde & Informatica',
+	'The Netherlands', 'Faculty', 'TU Delft',
+	'Interactive Software Development', 'Kruislaan', 'NL-1098', 'Smetanova',
+	'Slovenia', 'http://' \
 )
 BLANK = '     '
 mode = BLANK
@@ -70,9 +75,7 @@ for i in range(0, len(lines)):
 	status, line = lines[i]
 	if len(line) > 200 or len(line) < 2:
 		status = BLANK
-	elif line.startswith('???'):
-		status = BLANK
-	elif line.startswith('('):
+	elif matchbeg(line, ('(', '???', '//')):
 		status = BLANK
 	elif match(line, 'Name') and match(line, 'Surname'):
 		status = BLANK
@@ -87,27 +90,35 @@ for i in range(0, len(lines)):
 		status, mode = BLANK, 'PbCh '
 	elif matchs(line, ('Local organization chair', 'Local arrangements and registration',\
 		'Local Co-chairs', 'Local Arrangement Chair', 'Local Organizing Chair',\
-		'Local Facilities Chairs', 'Local Chair', 'Local Organisation Chair')):
+		'Local Facilities Chairs', 'Local Chair', 'Local Organisation Chair',\
+		'Social Event Co-Chairs', 'Registration Co-Chairs')):
 		status, mode = BLANK, 'LoCh '
 	elif matchs(line, ('Local Organizing Team', 'Local Arrangements')):
 		status, mode = BLANK, 'LoCo '
 	elif matchs(line, ('Panel organization chair', 'Panel Co-chairs',\
 		'Panel Chair')):
 		status, mode = BLANK, 'PaCh '
+	elif matchs(line, ('Post-Doctoral Symposium Co-Chairs',)):
+		status, mode = BLANK, 'PSCh '
 	elif matchs(line, ('DOCTORAL SYMPOSIUM CHAIR',\
 		'Doctoral Symposium Co-Chairs', 'Doctoral Symposium Track Co-chairs')):
 		status, mode = BLANK, 'DSCh '
 	elif matchs(line, ('Student volunteers coordinator',\
 		'Student-volunteer Chair', 'Student Volunteers Chairs',\
-		'Student Volunteers Chair')):
+		'Student Volunteers Chair', 'Student Volunteers Co-Chairs')):
 		status, mode = BLANK, 'SVCh '
+	elif matchs(line, ('MIP Award Chair',)):
+		status, mode = BLANK, 'AwCh '
 	elif match(line, 'Student Research Competition Chair'):
 		status, mode = BLANK, 'SRCh '
 	elif matchs(line, ('Finance Co-chairs', 'Liaison Chairs - Finances',\
 		'Financial Chairs', 'Finance')):
 		status, mode = BLANK, 'FiCh '
-	elif matchs(line, ('ERA Track Co-chairs', 'ERA Chairs')):
+	elif matchs(line, ('ERA Track Co-chairs', 'ERA Chairs', 'ERA Co-Chairs',\
+		'ERA Track Chairs')):
 		status, mode = BLANK, 'ERCh '
+	elif matchs(line, ('ERA Track Committee',)):
+		status, mode = BLANK, 'ERCo '
 	elif match(line, 'Challenge Chair'):
 		status, mode = BLANK, 'ChCh '
 	elif match(line, 'Hackathon Chair'):
@@ -123,7 +134,7 @@ for i in range(0, len(lines)):
 		status, mode = BLANK, 'ViCh '
 	elif match(line, 'Project Track'):
 		status, mode = BLANK, 'PjCh '
-	elif matchs(line, ('Poster Chairs', 'Poster Chair')):
+	elif matchs(line, ('Poster Chairs', 'Poster Chair', 'Poster Co-Chairs')):
 		status, mode = BLANK, 'PoCh '
 	elif matchs(line, ('Proceedings Chair', 'Proceedings Co-chairs',\
 		'Liaison Chairs - Publications', 'Publication Chair',\
@@ -134,21 +145,22 @@ for i in range(0, len(lines)):
 		status, mode = BLANK, 'KN   '
 	elif match(line, 'Important Dates'):
 		status, mode = BLANK, BLANK
-	elif matchs(line, ('Tool Demonstrations Program Committee',\
-		'Tool track program committee')):
-		status, mode = BLANK, 'TTPC '
 	elif matchs(line, ('Mobile Chair', 'Mobile Web Chair')):
 		status, mode = BLANK, 'MoCh '
 	elif match(line, 'Expert Review Panel'):
 		status, mode = BLANK, 'ERP  '
+	elif matchs(line, ('Tool Demonstrations Program Committee',\
+		'Tool track program committee')):
+		status, mode = BLANK, 'TTPC '
 	elif matchs(line, ('Tool Demonstrations Chairs', 'Demonstrations Chair',\
 		'Demonstrations Chairs', 'Demonstration Chairs',\
-		'Tool Demonstration Co-Chairs')):
+		'Tool Demonstration Co-Chairs', 'Tool Demo Co-Chairs',\
+		'Tool Demonstrations Track Chairs')):
 		status, mode = BLANK, 'TTCh '
 	elif match(line, 'Industry track program committee'):
 		status, mode = BLANK, 'ITPC '
 	elif matchs(line, ('Industry Track', 'Industrial Track Co-chair',\
-		'Industry Liaison')):
+		'Industry Liaison', 'Industrial Liaison Chair')):
 		status, mode = BLANK, 'InCh '
 	elif match(line, 'Scientific Liason'):
 		status, mode = BLANK, 'ScLi '
@@ -177,9 +189,12 @@ for i in range(0, len(lines)):
 	elif matchs(line, ('Workshop organization chair', 'Workshop co-Chairs',\
 		'Workshops Co-chair', 'Workshops', 'Workshop Chairs')):
 		status, mode = BLANK, 'WoCh '
-	elif matchs(line, ('Website administration', 'Web Chair', 'Webmaster')):
+	elif matchs(line, ('Website administration', 'Web Chair', 'Webmaster', 'Web Co-Chairs')):
 		status, mode = BLANK, 'WeCh '
-	elif matchbeg(line, ignopatterns):
+	elif matchbeg(line, ignopatterns) and line.find('Francesca')<0:
+		# NB: corner case: France vs Francesca
+		status = BLANK
+	elif matchs(line, ignopatterns) and ',' not in line and line.find('Francesca')<0:
 		status = BLANK
 	elif line.split(' ')[0].isdigit():
 		status = BLANK
@@ -223,7 +238,7 @@ for i in range(0, len(lines)):
 # # line = ' '.join(nws)
 # print(line)
 
-f = open(sys.argv[1], 'w')
+f = open(sys.argv[1], 'w', encoding='utf-8')
 f.write('#DONE\n')
 for status, line in lines:
 	f.write(status+line+'\n')
