@@ -55,6 +55,9 @@ def checkon(fn, o):
 			elif onelink.startswith('http://ieeexplore.ieee.org/xpl/freeabs_all.jsp?arnumber=')\
 			  or onelink.startswith('http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber='):
 				o.json['ieeearid'] = onelink.split('=')[-1]
+			elif onelink.startswith('http://ieeexplore.ieee.org/xpls/abs_all.jsp?isnumber=')\
+			 and onelink.find('arnumber') > -1:
+				o.json['ieeearid'] = onelink.split('arnumber=')[-1].split('&')[0]
 			elif onelink.startswith('http://ieeexplore.ieee.org/xpl/mostRecentIssue.jsp?punumber='):
 				o.json['ieeepuid'] = onelink.split('=')[-1]
 			elif onelink.startswith('http://ieeexplore.ieee.org/xpl/tocresult.jsp?isnumber='):

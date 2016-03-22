@@ -64,10 +64,9 @@ if __name__ == "__main__":
 		pure = brand.split('/')[-1].split('.')[0]
 		img = pure.lower().replace(' ', '')
 		if img in pngs:
-			pic = '<div class="wider"><a href="{0}"><img class="abc" src="{1}" alt="{2}"/></a><span>{2}</span></div>'.format(\
-				brand,
-				'stuff/'+img+'.png',
-				pure)
+			pic = '<div class="wider"><a href="{0}.brand.html"><img class="abc" src="{1}" alt="{0}"/></a><span>{0}</span></div>'.format(\
+				pure,
+				'stuff/'+img+'.png')
 			pngs.remove(img)
 			icons.append(pic)
 		else:
@@ -79,7 +78,7 @@ if __name__ == "__main__":
 		canlink = sorted(glob.glob(outputdir + '/' + venueCandidate + '*.html'), key=len)
 		if canlink:
 			pic = '<div class="wider"><a href="{0}"><img class="abc" src="stuff/{1}.png" alt="{2}"/></a><span>{2}</span></div>'.format(\
-				canlink[0],
+				canlink[0].split('/')[-1],
 				pure,
 				venueCandidate,
 				canlink[0].split('/')[0])

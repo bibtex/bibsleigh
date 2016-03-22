@@ -95,6 +95,9 @@ def heurichoose(k, v1, v2):
 	# if undecided, stick to the old one
 	return v2
 
+greek = ['µ', 'ᗺ', '¬', 'ℬ', 'ℰ', 'ℒ', 'ℋ', 'ð', 'ℓ', 'ᴾ', 'ᵂ', 'ϵ'] + \
+	[chr(x) for x in range(ord('α'), ord('ω')+1)]
+
 # Works almost like .split() but much stricter:
 # 	- saves only proper letters
 # 	- treats any other symbol as a words separator
@@ -104,7 +107,7 @@ def heurichoose(k, v1, v2):
 def string2words(s):
 	ws = ['']
 	for c in s:
-		if c.isalpha():
+		if c.isalpha() and c not in greek:
 			ws[-1] += c
 		elif ws[-1] != '':
 			ws.append('')
