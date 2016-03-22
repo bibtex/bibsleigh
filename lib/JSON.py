@@ -1,4 +1,4 @@
-#!/usr/local/bin/python3
+#!/c/Users/vadim/AppData/Local/Programs/Python/Python35/python
 # -*- coding: utf-8 -*-
 
 import json
@@ -37,7 +37,7 @@ def jsonkv(k, v):
 def parseJSON(fn):
 	# print('Parsing',fn,'...')
 	try:
-		j = json.load(open(fn, 'r'))
+		j = json.load(open(fn, 'r', encoding='utf-8'))
 		j['FILE'] = fn
 		return j
 	except ValueError:

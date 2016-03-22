@@ -1,4 +1,4 @@
-#!/usr/local/bin/python3
+#!/c/Users/vadim/AppData/Local/Programs/Python/Python35/python
 # -*- coding: utf-8 -*-
 #
 # a module for analysing tagging per entity
@@ -33,7 +33,7 @@ def checkon(fn, o):
 		if verbose:
 			print('∆:', '\n'.join([line for line in flines if line not in plines]))
 			print('vs', '\n'.join([line for line in plines if line not in flines]))
-		f = open(fn, 'w')
+		f = open(fn, 'w', encoding='utf-8')
 		f.write(o.getJSON())
 		f.close()
 		return 2

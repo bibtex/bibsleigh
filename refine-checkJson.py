@@ -1,4 +1,4 @@
-#!/usr/local/bin/python3
+#!/c/Users/vadim/AppData/Local/Programs/Python/Python35/python
 # -*- coding: utf-8 -*-
 #
 # a module for simply traversing all the LRJs and reading them in
@@ -7,6 +7,7 @@
 import sys, os.path
 from lib.AST import Sleigh
 from lib.NLP import strictstrip
+from lib.LP import lastSlash
 from fancy.ANSI import C
 
 ienputdir = '../json'
@@ -23,15 +24,15 @@ def checkon(fn, o):
 		fn = fn + '.json'
 	if not os.path.exists(fn):
 		# if it still does not exist, let us create a minimal one
-		f = open(fn, 'w')
+		f = open(fn, 'w', encoding='utf-8')
 		f.write('{{\n\t"title": "{name}",\n\t"type": "proceedings",\n\t"year": {year}\n}}'.format(\
-			name=fn.split('/')[-1][:-5].replace('-', ' '),
-			year=findYear(fn.split('/')[-1])\
+			name=lastSlash(fn)[:-5].replace('-', ' '),
+			year=findYear(lastSlash(fn))\
 		))
 		f.close()
 		print('[ {} ] {}'.format(C.yellow('MADE'), fn))
 		return 2
-	f = open(fn, 'r')
+	f = open(fn, 'r', encoding='utf-8')
 	lines = f.readlines()[1:-1]
 	f.close()
 	for line in lines:

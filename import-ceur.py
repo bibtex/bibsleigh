@@ -1,4 +1,4 @@
-#!/usr/local/bin/python3
+#!/c/Users/vadim/AppData/Local/Programs/Python/Python35/python
 # -*- coding: utf-8 -*-
 #
 # a module for harvesting a CEUR link into a proper BibSLEIGH entity
@@ -7,6 +7,7 @@ import bs4, sys, os.path, time
 from urllib.request import urlopen
 from lib.JSON import jsonify
 from fancy.ANSI import C
+from lib.LP import lastSlash
 
 def safelyLoadURL(url):
 	# time.sleep(random.randint(1, 3))
@@ -64,7 +65,7 @@ if __name__ == "__main__":
 	if volLnk:
 		mainEntry['url'] = volLnk
 	# print(jsonify(mainEntry), '-->', outputdir+'.json')
-	f = open(outputdir+'.json', 'w')
+	f = open(outputdir+'.json', 'w', encoding='utf-8')
 	f.write(jsonify(mainEntry))
 	f.close()
 	done = []
@@ -92,7 +93,7 @@ if __name__ == "__main__":
 			paperEntry['openpdf'] = paperPdf
 		if paperLnk:
 			paperEntry['url'] = urlstart + '#' + paperLnk
-		paperFilename = outputdir.split('/')[-1] + '-' + paperAuths[0].split(' ')[-1]
+		paperFilename = lastSlash(outputdir) + '-' + paperAuths[0].split(' ')[-1]
 		for a in paperAuths[1:]:
 			paperFilename += a.split(' ')[-1][0]
 		if paperFilename in done:
@@ -100,7 +101,7 @@ if __name__ == "__main__":
 			while paperFilename in done:
 				paperFilename = paperFilename[:-1] + chr(ord(paperFilename[-1])+1)
 		# print(jsonify(paperEntry), '-->', outputdir+'/'+paperFilename+'.json')
-		f = open(outputdir+'/'+paperFilename+'.json', 'w')
+		f = open(outputdir+'/'+paperFilename+'.json', 'w', encoding='utf-8')
 		f.write(jsonify(paperEntry))
 		f.close()
 		cx += 1

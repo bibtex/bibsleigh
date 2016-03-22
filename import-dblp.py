@@ -1,4 +1,4 @@
-#!/usr/local/bin/python3
+#!/c/Users/vadim/AppData/Local/Programs/Python/Python35/python
 # -*- coding: utf-8 -*-
 #
 # a module for importing DBLP data straight from the pages into LRJs
@@ -7,6 +7,7 @@ import sys, time, socket, os, os.path, random
 import bs4
 from urllib.request import urlopen
 from lib.JSON import jsonkv, jsonify
+from lib.LP import lastSlash
 
 def xml2json(x):
 	jsonmap = {}
@@ -37,7 +38,7 @@ def xml2json(x):
 	return jsonify(jsonmap)
 
 def purenameof(f):
-	return f.split('/')[-1][:-4]
+	return lastSlash(f)[:-4]
 
 def safelyLoadURL(url):
 	time.sleep(random.randint(1, 3))
@@ -66,8 +67,8 @@ if __name__ == "__main__":
 	year = ldir.split('/')[4]
 	allxmls = [xmlname for xmlname in dblp.split('"') if xmlname.endswith('.xml')]
 	if len(sys.argv) == 5:
-		entry1 = sys.argv[3].split('/')[-1]
-		entry2 = sys.argv[4].split('/')[-1]
+		entry1 = lastSlash(sys.argv[3])
+		entry2 = lastSlash(sys.argv[4])
 	else:
 		entry1 = purenameof(allxmls[0])
 		entry2 = purenameof(allxmls[-1])
@@ -88,12 +89,12 @@ if __name__ == "__main__":
 		print('\tFetching ' + xmlname)
 		ps += 1
 		xml = safelyLoadURL(xmlname)
-		if xmlname.split('/')[-1].split('.')[0].isdigit():
+		if lastSlash(xmlname).split('.')[0].isdigit():
 			print('\t\tAssumed to be the boss record!')
 			lname = ldir + '.json'
 		else:
-			qname = ldir.split('/')[-1]
-			lname = ldir + '/' + qname + '-' + xmlname.split('/')[-1].replace('.xml', '.json')
+			qname = lastSlash(ldir)
+			lname = ldir + '/' + qname + '-' + lastSlash(xmlname).replace('.xml', '.json')
 			# print('NB: match "{}" vs "{}"'.format(lname[:-5], year))
 			if lname[:-5].endswith(year):
 				lname = lname[:-5-len(year)] + '.json'
@@ -102,7 +103,7 @@ if __name__ == "__main__":
 		while os.path.isfile(lname):
 			lname = lname.replace('.json', '_.json')
 		# now write!
-		g = open(lname, 'w')
+		g = open(lname, 'w', encoding='utf-8')
 		g.write(xml2json(xml))
 		g.close()
 		print('\t\t->', lname)

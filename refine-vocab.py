@@ -1,4 +1,4 @@
-#!/usr/local/bin/python3
+#!/c/Users/vadim/AppData/Local/Programs/Python/Python35/python
 # -*- coding: utf-8 -*-
 #
 # a module for dealing with vocabularies
@@ -80,7 +80,7 @@ if __name__ == "__main__":
 	for i in vocidx:
 		# s += vkey + ' ; ' + ';'.join([sdistance(vecs[vkey], vecs[vk2]) for vk2 in vockeys]) + '\n'
 		s += vockeys[i]+' ; '+';'.join([str(distanceMatrix[i][j]) for j in vocidx]) +'\n'
-	f = open('vocsim.csv', 'w')
+	f = open('vocsim.csv', 'w', encoding='utf-8')
 	f.write(s)
 	f.close()
 	print('Distance matrix saved as CSV.')
@@ -121,7 +121,7 @@ if __name__ == "__main__":
 	colidx = range(0, len(colkeys))
 	for i in colidx:
 		s += colkeys[i]+' ; '+';'.join([str(distanceMatrix[i][j]) for j in colidx]) +'\n'
-	f = open('colsim.csv', 'w')
+	f = open('colsim.csv', 'w', encoding='utf-8')
 	f.write(s)
 	f.close()
 	print('Distance matrix saved as CSV.')

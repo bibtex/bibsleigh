@@ -1,4 +1,4 @@
-#!/usr/local/bin/python3
+#!/c/Users/vadim/AppData/Local/Programs/Python/Python35/python
 # -*- coding: utf-8 -*-
 #
 # a module for deriving location values from the DBLP XML dump
@@ -104,7 +104,7 @@ def checkon(fn, o):
 		newaddr = [town, '' if state=='?' else state, country]
 		if 'address' not in o.json.keys() or newaddr != o.json['address']:
 			o.json['address'] = newaddr
-			f = open(o.json['FILE'], 'w')
+			f = open(o.json['FILE'], 'w', encoding='utf-8')
 			f.write(o.getJSON())
 			f.close()
 			return 2
@@ -132,7 +132,7 @@ if __name__ == "__main__":
 	cx = {0: 0, 1: 0, 2: 0}
 	# now read in the proceedings entries from the dump
 	if os.path.exists('_procs.json'):
-		procs = json.load(open('_procs.json', 'r'))
+		procs = json.load(open('_procs.json', 'r', encoding='utf-8'))
 	else:
 		parser = ET.XMLParser(encoding="utf-8")
 		for event, elem in ET.iterparse('../dblp.xml', events=("end",), parser=parser):
@@ -140,7 +140,7 @@ if __name__ == "__main__":
 				dblpkey = elem.attrib['key']
 				title = elem.findtext('title')
 				procs[dblpkey] = title
-		f = open('_procs.json', 'w', encoding='utf8')
+		f = open('_procs.json', 'w', encoding='utf-8')
 		f.write(json.dumps(procs, sort_keys=True, separators=(',\n\t', ': '), ensure_ascii=False))
 		f.close()
 	print('{} proceedings volumes found.'.format(len(procs)))

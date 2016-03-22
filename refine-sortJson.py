@@ -1,4 +1,4 @@
-#!/usr/local/bin/python3
+#!/c/Users/vadim/AppData/Local/Programs/Python/Python35/python
 # -*- coding: utf-8 -*-
 #
 # a module for sorting the key-value pairs within each LRJ
@@ -21,7 +21,7 @@ def guessYear(p):
 		return cys[0]
 	else:
 		j = sleigh.seekByKey(p)
-		if 'year' in j.json.keys():
+		if j and 'year' in j.json.keys():
 			return j.get('year')
 		elif 'year' in dir(j):
 			return j.year
@@ -32,7 +32,7 @@ def guessYear(p):
 def checkon(fn, o):
 	if not os.path.exists(fn) or os.path.isdir(fn):
 		fn = fn + '.json'
-	f = open(fn, 'r')
+	f = open(fn, 'r', encoding='utf-8')
 	lines = f.readlines()[1:-1]
 	f.close()
 	flines = json2lines(lines)
@@ -47,7 +47,7 @@ def checkon(fn, o):
 			print('P-lines:', '\n'.join(plines))
 			return 1
 		else:
-			f = open(fn, 'w')
+			f = open(fn, 'w', encoding='utf-8')
 			f.write(o.getJSON())
 			f.close()
 			return 2
@@ -120,7 +120,7 @@ if __name__ == "__main__":
 		# Decide whether to update
 		if changed:
 			cx[checkreport(fn, 2)] += 1
-			f = open(fn, 'w')
+			f = open(fn, 'w', encoding='utf-8')
 			del per['FILE']
 			f.write(jsonify(per))
 			f.close()

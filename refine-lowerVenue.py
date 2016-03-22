@@ -1,4 +1,4 @@
-#!/usr/local/bin/python3
+#!/c/Users/vadim/AppData/Local/Programs/Python/Python35/python
 # -*- coding: utf-8 -*-
 #
 # a module for lowering the values of a venue, publisher, series/volume, etc
@@ -30,7 +30,7 @@ def checkon(fn, o):
 	# tricky to say what is truly lacking
 	if not changed:
 		return 1 if 'venue' in lacking else 0
-	f = open(fn, 'w')
+	f = open(fn, 'w', encoding='utf-8')
 	f.write(o.getJSON())
 	f.close()
 	return 2

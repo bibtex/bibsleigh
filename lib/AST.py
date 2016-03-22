@@ -1,4 +1,4 @@
-#!/usr/local/bin/python3
+#!/c/Users/vadim/AppData/Local/Programs/Python/Python35/python
 # -*- coding: utf-8 -*-
 #
 # a module with classes forming the abstract syntax of BibSLEIGH
@@ -6,7 +6,7 @@
 import glob, os.path
 from fancy.Templates import uberHTML, confHTML, bibHTML, brandHTML
 from lib.JSON import jsonkv, parseJSON
-from lib.LP import listify, uniq
+from lib.LP import listify, uniq, lastSlash
 from lib.NLP import string2words, ifApproved
 from fancy.ANSI import C
 from collections import Counter
@@ -47,7 +47,7 @@ def sortbypages(z):
 	return (y + p1 / 10000.) if p1 else y
 
 def last(xx):
-	return xx.split('/')[-1].replace('.json', '')
+	return lastSlash(xx).replace('.json', '')
 
 class Unser(object):
 	def __init__(self, d, hdir):
@@ -65,11 +65,13 @@ class Unser(object):
 		s = self.getPureName()
 		return s if s.endswith('.json') else s+'.json'
 	def getHtmlName(self):
-		s = self.getPureName().split('/')[-1]
+		s = lastSlash(self.getPureName())
 		if s.endswith('.json'):
 			s = s[:-5]
 		return s if s.endswith('.html') else s+'.html'
 	def get(self, name):
+		if not isinstance(self.json, dict):
+			print('Suspicious JSON in', self.getKey(),'=', self.json)
 		return self.json[name] if name in self.json.keys() else self.getKey()
 	def getKey(self):
 		return last(self.filename)
@@ -268,7 +270,11 @@ class Unser(object):
 			else:
 				p1 = None
 			if ps[-1]:
-				p2 = int(ps[-1])
+				if ps[-1].isdigit():
+					p2 = int(ps[-1])
+				else:
+					# TODO work properly with arabic numbers
+					p2 = None
 			else:
 				p2 = None
 		return (p1, p2)
@@ -280,13 +286,14 @@ class Sleigh(Unser):
 		self.n2f = name2file
 		jsons = {}
 		for d in glob.glob(idir+'/*.json'):
-			jsons[d.split('/')[-1].split('.')[0]] = d
+			jsons[lastSlash(d).split('.')[0]] = d
 		for d in glob.glob(idir+'/*'):
 			if d.endswith('.md') or d.endswith('.json'):
 				continue
-			if d.split('/')[-1] not in jsons.keys():
+			if lastSlash(d) not in jsons.keys():
 				print(C.red('Legacy non-top definition of'), d)
-				self.venues.append(Venue(d, idir, name2file, self))
+				if lastSlash(d) not in ('edif', 'frem'):
+					self.venues.append(Venue(d, idir, name2file, self))
 			else:
 				self.venues.append(Venue(d, idir, name2file, self))
 	def getPage(self):
@@ -321,6 +328,7 @@ class Sleigh(Unser):
 			f = v.seekByKey(key)
 			if f:
 				return f
+		print(C.red(key), ' not found in BibSLEIGH!')
 		return f
 	def numOfPapers(self):
 		return sum([v.numOfPapers() for v in self.venues])
@@ -489,7 +497,7 @@ class Venue(Unser):
 		else:
 			# legacy style
 			print(C.red(d), 'is legacy style')
-			self.json = []
+			self.json = {}
 		for f in glob.glob(d+'/*.json'):
 			if not self.json:
 				self.json = parseJSON(f)
@@ -976,6 +984,7 @@ class Paper(Unser):
 					stem = stemmed[len(words) - words.index(w)-1]
 				except:
 					print('Abnormal title in', self.getKey())
+					print('\tCould not get', w, 'from', stemmed)
 					break
 				if ifApproved(stem):
 					fancytitle = '<a href="word/{}.html">{}</a>{}'.format(\

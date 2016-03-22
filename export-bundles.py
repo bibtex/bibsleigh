@@ -1,4 +1,4 @@
-#!/usr/local/bin/python3
+#!/c/Users/vadim/AppData/Local/Programs/Python/Python35/python
 # -*- coding: utf-8 -*-
 #
 # a module for exporting LRJ definitions of bundles to the HTML frontpages
@@ -8,6 +8,7 @@ from fancy.ANSI import C
 from fancy.Templates import bunHTML, bunListHTML
 from lib.AST import Sleigh, sortbypages, escape
 from lib.JSON import parseJSON
+from lib.LP import lastSlash, getPath
 
 ienputdir = '../json'
 outputdir = '../frontend'
@@ -31,7 +32,7 @@ def matchfromsleigh(sleigh, pattern):
 			res.extend(matchfromsleigh(sleigh, p))
 		return res
 	else:
-		path = pattern.split('/')
+		path = getPath(pattern)
 	# NB: could have been a simple bruteforce search with a getPureName check,
 	# but that is too slow; this way the code is somewhat uglier but we skip
 	# over entire venues and years that are of no interest to us
@@ -88,11 +89,11 @@ if __name__ == "__main__":
 		C.purple('='*42)))
 	bundles = {}
 	for b in glob.glob(ienputdir + '/bundles/*.json'):
-		purename = b.split('/')[-1][:-5]
-		bun = json.load(open(b, 'r'))
+		purename = lastSlash(b)[:-5]
+		bun = json.load(open(b, 'r', encoding='utf-8'))
 		prevcx = pcx
 		uberlist = '<h2>{1} papers</h2>{0}'.format(processSortedRel(bun['contents']), pcx-prevcx)
-		f = open(outputdir + '/bundle/' + purename + '.html', 'w')
+		f = open(outputdir + '/bundle/' + purename + '.html', 'w', encoding='utf-8')
 		f.write(bunHTML.format(\
 			title=purename+' bundle',
 			bundle=bun['name'],
@@ -102,7 +103,7 @@ if __name__ == "__main__":
 		bundles[purename] = pcx-prevcx
 	print('Bundle pages:', C.yellow('{}'.format(len(bundles))), C.blue('generated'))
 	# now for the index
-	f = open(outputdir+'/bundle/index.html', 'w')
+	f = open(outputdir+'/bundle/index.html', 'w', encoding='utf-8')
 	lst = ['<li><a href="{}.html">{}</a> ({})</li>'.format(\
 		escape(b),
 		b,

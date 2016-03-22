@@ -1,4 +1,4 @@
-#!/usr/local/bin/python3
+#!/c/Users/vadim/AppData/Local/Programs/Python/Python35/python
 # -*- coding: utf-8 -*-
 #
 # a module for enriching conference definitions with chairs/committees
@@ -44,7 +44,7 @@ def checkon(fn, o):
 	# if flines != plines:
 	# 	return 1
 	if plines != nlines:
-		f = open(fn, 'w')
+		f = open(fn, 'w', encoding='utf-8')
 		f.write(o.getJSON())
 		f.close()
 		return 2
@@ -68,7 +68,7 @@ if __name__ == "__main__":
 		C.red(sleigh.numOfPapers()),
 		C.purple('='*42)))
 	# read the CSV
-	f = open('scrap-committees/scraped-by-grammarware.csv', 'r')
+	f = open('scrap-committees/scraped-by-grammarware.csv', 'r', encoding='utf-8')
 	# CBSE;2001;Heinz;Schmidt;;Organising Committee
 	for line in f.readlines():
 		vs = line.strip().split(';')

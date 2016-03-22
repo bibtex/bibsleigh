@@ -1,4 +1,4 @@
-#!/usr/local/bin/python3
+#!/c/Users/vadim/AppData/Local/Programs/Python/Python35/python
 # -*- coding: utf-8 -*-
 #
 # a module for lexical cleanup: turns even badly damaged JSONs into LRJs
@@ -18,7 +18,7 @@ verbose = False
 def checkon(fn, o):
 	if not os.path.exists(fn) or os.path.isdir(fn):
 		fn = fn + '.json'
-	f = open(fn, 'r')
+	f = open(fn, 'r', encoding='utf-8')
 	flines = f.readlines()[1:-1]
 	f.close()
 	sflines = [strictstrip(s) for s in flines]
@@ -31,7 +31,7 @@ def checkon(fn, o):
 		# f1 = [s for s in jlines if s not in flines]
 		# f2 = [s for s in flines if s not in jlines]
 		# print('∆:', f1, '\nvs', f2)
-		f = open(fn, 'w')
+		f = open(fn, 'w', encoding='utf-8')
 		f.write('{\n')
 		for line in jlines:
 			f.write(line)

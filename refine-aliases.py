@@ -1,4 +1,4 @@
-#!/usr/local/bin/python3
+#!/c/Users/vadim/AppData/Local/Programs/Python/Python35/python
 # -*- coding: utf-8 -*-
 #
 # a module for enforcing aliases
@@ -33,7 +33,7 @@ def checkon(fn, o):
 						o.json[ae][i] = renameto[x]
 	nlines = sorted([strictstrip(s) for s in o.getJSON().split('\n')[1:-1]])
 	if plines != nlines:
-		ff = open(fn, 'w')
+		ff = open(fn, 'w', encoding='utf-8')
 		ff.write(o.getJSON())
 		ff.close()
 		return 2
@@ -52,8 +52,8 @@ if __name__ == "__main__":
 	verbose = sys.argv[-1] == '-v'
 	print('{}: {} venues, {} papers\n{}'.format(\
 		C.purple('BibSLEIGH'),
-		C.red(len(sleigh.venues)),
-		C.red(sleigh.numOfPapers()),
+		C.green(len(sleigh.venues)),
+		C.green(sleigh.numOfPapers()),
 		C.purple('='*42)))
 	aka = parseJSON(ienputdir + '/aliases.json')
 	CX = sum([len(aka[a]) for a in aka])
@@ -61,12 +61,12 @@ if __name__ == "__main__":
 	#  if a manual rule does the same as the other heuristic, it’s dumb
 	for a in sorted(aka.keys()):
 		if len(aka[a]) == 1 and aka[a][0] in (nodiaLatin(a), simpleLatin(a)):
-			print('[ {} ]'.format(C.blue('DUMB')), a, 'aliasing was unnecessary manual work')
+			print('[ {} ]'.format(C.blue('DUMB')), simpleLatin(a), 'aliasing was unnecessary manual work')
 		elif len(aka[a]) == 2 and (aka[a] == [nodiaLatin(a), simpleLatin(a)] \
 							    or aka[a] == [simpleLatin(a), nodiaLatin(a)]):
-			print('[ {} ]'.format(C.blue('DUMB')), a, 'aliasing was a lot of unnecessary manual work')
+			print('[ {} ]'.format(C.blue('DUMB')), simpleLatin(a), 'aliasing was a lot of unnecessary manual work')
 		elif nodiaLatin(a) in aka[a] or simpleLatin(a) in aka[a]:
-			print('[ {} ]'.format(C.blue('DUMB')), a, 'aliasing contains some unnecessary manual work')
+			print('[ {} ]'.format(C.blue('DUMB')), simpleLatin(a), 'aliasing contains some unnecessary manual work')
 	# auto-aliasing heuristic:
 	#  for each author with diacritics, its non-diacritic twin is considered harmful
 	people = set()
@@ -88,7 +88,7 @@ if __name__ == "__main__":
 			continue
 		for aval in aka[akey]:
 			renameto[aval] = akey
-	f = open('_renameto.json', 'w', encoding='utf8')
+	f = open('_renameto.json', 'w', encoding='utf-8')
 	f.write(json.dumps(renameto, sort_keys=True, separators=(',\n\t', ': '), ensure_ascii=False))
 	f.close()
 	cx = {0: 0, 1: 0, 2: 0}

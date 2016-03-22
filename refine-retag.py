@@ -1,4 +1,4 @@
-#!/usr/local/bin/python3
+#!/c/Users/vadim/AppData/Local/Programs/Python/Python35/python
 # -*- coding: utf-8 -*-
 #
 # a module for retagging LRJs in the adjacent repository
@@ -32,7 +32,7 @@ matchModes = {\
 def checkon(fn, o):
 	if os.path.isdir(fn):
 		fn = fn + '.json'
-	f = open(fn, 'r')
+	f = open(fn, 'r', encoding='utf-8')
 	lines = f.readlines()[1:-1]
 	f.close()
 	flines = [strictstrip(s) for s in lines]
@@ -86,7 +86,7 @@ def checkon(fn, o):
 	if flines != plines:
 		return 1
 	elif plines != nlines:
-		f = open(fn, 'w')
+		f = open(fn, 'w', encoding='utf-8')
 		f.write(o.getJSON())
 		f.close()
 		return 2

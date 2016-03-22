@@ -1,4 +1,4 @@
-#!/usr/local/bin/python3
+#!/c/Users/vadim/AppData/Local/Programs/Python/Python35/python
 # -*- coding: utf-8 -*-
 #
 # a module for finding duplicates in people
@@ -94,7 +94,7 @@ if __name__ == "__main__":
 					continue
 			print('[', C.yellow('FIXD'), ']', p['name'])
 			cx[2] += 1
-			f = open(p['FILE'], 'w')
+			f = open(p['FILE'], 'w', encoding='utf-8')
 			del p['FILE']
 			f.write(jsonify(p))
 			f.close()

@@ -1,4 +1,4 @@
-#!/usr/local/bin/python3
+#!/c/Users/vadim/AppData/Local/Programs/Python/Python35/python
 # -*- coding: utf-8 -*-
 #
 # a module for pushing the title of a proceedings to booktitles of its papers
@@ -31,7 +31,7 @@ def checkon(fn, o):
 			return 0
 	else:
 		return 0
-	# f = open(fn, 'r')
+	# f = open(fn, 'r', encoding='utf-8')
 	# lines = f.readlines()[1:-1]
 	# f.close()
 	# flines = [strictstrip(s) for s in lines]
@@ -42,7 +42,7 @@ def checkon(fn, o):
 		return 0
 	nlines = sorted([strictstrip(s) for s in o.getJSON().split('\n')[1:-1]])
 	if plines != nlines:
-		f = open(fn, 'w')
+		f = open(fn, 'w', encoding='utf-8')
 		f.write(o.getJSON())
 		f.close()
 		return 2

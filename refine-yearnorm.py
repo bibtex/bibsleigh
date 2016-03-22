@@ -1,4 +1,4 @@
-#!/usr/local/bin/python3
+#!/c/Users/vadim/AppData/Local/Programs/Python/Python35/python
 # -*- coding: utf-8 -*-
 #
 # a module for normalising conferences (with papers inside)
@@ -6,6 +6,7 @@
 
 import sys, os.path, glob
 from fancy.ANSI import C
+from lib.LP import lastSlash
 
 ienputdir = '../json'
 verbose = False
@@ -28,11 +29,11 @@ if __name__ == "__main__":
 	if sys.argv[1].startswith(ienputdir):
 		path = sys.argv[1]
 		name = path.replace(ienputdir + '/corpus/', '')
-		namem = name.split('/')[-1]
+		namem = lastSlash(name)
 	else:
 		name = sys.argv[1]
 		path = ienputdir + '/corpus/' + name
-		namem = name.split('/')[-1]
+		namem = lastSlash(name)
 	cx = {0: 0, 1: 0, 2: 0}
 	if not os.path.exists(path):
 		report(name, name, 1)

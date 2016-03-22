@@ -1,4 +1,4 @@
-#!/usr/local/bin/python3
+#!/c/Users/vadim/AppData/Local/Programs/Python/Python35/python
 # -*- coding: utf-8 -*-
 #
 # a module for exporting LRJ definitions of tags to the HTML frontpages
@@ -77,7 +77,7 @@ if __name__ == "__main__":
 	ts = sleigh.getTags()
 	tagged = []
 	for key in ts.keys():
-		f = open('{}/tag/{}.html'.format(outputdir, key), 'w')
+		f = open('{}/tag/{}.html'.format(outputdir, key), 'w', encoding='utf-8')
 		# papers are displayed in reverse chronological order
 		lst = [x.getRestrictedItem(key) for x in \
 			sorted(ts[key], key=lambda z: -z.json['year'] if 'year' in z.json.keys() else 0)]
@@ -113,7 +113,7 @@ if __name__ == "__main__":
 		f.close()
 	print('Tag pages:', C.yellow('{}'.format(len(ts))), C.blue('generated'))
 	# tag index
-	f = open(outputdir+'/tag/index.html', 'w')
+	f = open(outputdir+'/tag/index.html', 'w', encoding='utf-8')
 	keyz = [q for q in ts.keys() if len(ts[q]) > 2]
 	keyz.sort(key=lambda t: len(ts[t]), reverse=True)
 	lst = ['<li>#<a href="{}.html">{}</a> ({})</li>'.format(escape(t), t, len(ts[t])) for t in keyz]
@@ -126,7 +126,7 @@ if __name__ == "__main__":
 	f.close()
 	print('Tag index:', C.blue('created'))
 	# untagged papers
-	f = open(outputdir+'/tag/untagged.html', 'w')
+	f = open(outputdir+'/tag/untagged.html', 'w', encoding='utf-8')
 	CX = 0
 	# bag of words
 	bow = {}

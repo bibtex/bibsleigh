@@ -1,4 +1,4 @@
-#!/usr/local/bin/python3
+#!/c/Users/vadim/AppData/Local/Programs/Python/Python35/python
 # -*- coding: utf-8 -*-
 #
 # a module for exporting LRJs to the HTML frontpages
@@ -8,6 +8,7 @@ from fancy.ANSI import C
 from fancy.Templates import aboutHTML
 from lib.AST import Sleigh
 from lib.JSON import parseJSON
+from lib.LP import lastSlash
 
 ienputdir = '../json'
 corpusdir = ienputdir + '/corpus'
@@ -17,7 +18,7 @@ name2file = parseJSON(n2f_name) if os.path.exists(n2f_name) else {}
 sleigh = Sleigh(corpusdir, name2file)
 
 def nextYear(vvv):
-	return int(sorted(glob.glob(vvv+'/*'))[-2].split('/')[-1])+1
+	return int(lastSlash(sorted(glob.glob(vvv+'/*'))[-2]))+1
 
 if __name__ == "__main__":
 	print('{}: {} venues, {} papers\n{}'.format(\
@@ -26,28 +27,28 @@ if __name__ == "__main__":
 		C.red(sleigh.numOfPapers()),
 		C.purple('='*42)))
 	# generate the index
-	f = open(outputdir+'/index.html', 'w')
+	f = open(outputdir+'/index.html', 'w', encoding='utf-8')
 	f.write(sleigh.getPage())
 	f.close()
 	# generate all individual pages
 	for v in sleigh.venues:
 		r = C.blue(v.getKey())
-		f = open(outputdir+'/'+v.getKey()+'.html', 'w')
+		f = open(outputdir+'/'+v.getKey()+'.html', 'w', encoding='utf-8')
 		f.write(v.getPage())
 		f.close()
 		if v.brands:
 			r += '{' + '+'.join([C.blue(b.getKey()) for b in v.brands]) + '}'
 			for b in v.brands:
-				f = open(outputdir+'/'+b.getKey()+'.brand.html', 'w')
+				f = open(outputdir+'/'+b.getKey()+'.brand.html', 'w', encoding='utf-8')
 				f.write(b.getPage())
 				f.close()
 		r += ' => '
 		for c in v.getConfs():
-			f = open(outputdir+'/'+c.getKey()+'.html', 'w')
+			f = open(outputdir+'/'+c.getKey()+'.html', 'w', encoding='utf-8')
 			f.write(c.getPage())
 			f.close()
 			for p in c.papers:
-				f = open(outputdir+'/'+p.getKey()+'.html', 'w')
+				f = open(outputdir+'/'+p.getKey()+'.html', 'w', encoding='utf-8')
 				f.write(p.getPage())
 				f.close()
 			purekey = c.getKey().replace(v.getKey(), '').replace('-', ' ').strip()
@@ -56,12 +57,12 @@ if __name__ == "__main__":
 	# generate the icon lineup
 	icons = []
 	linked = []
-	pngs = [png.split('/')[-1].split('.')[0] for png in glob.glob(outputdir + '/stuff/*.png')]
+	pngs = [lastSlash(png).split('.')[0] for png in glob.glob(outputdir + '/stuff/*.png')]
 	pngs = [png for png in pngs \
 		if not (png.startswith('a-') or png.startswith('p-') or png.startswith('ico-')\
 		or png in ('cc-by', 'xhtml', 'css', 'open-knowledge', 'edit'))]
 	for brand in glob.glob(outputdir + '/*.brand.html'):
-		pure = brand.split('/')[-1].split('.')[0]
+		pure = lastSlash(brand).split('.')[0]
 		img = pure.lower().replace(' ', '')
 		if img in pngs:
 			pic = '<a href="{}"><img class="abc" src="{}" alt="{}"/></a>'.format(\
@@ -93,11 +94,11 @@ if __name__ == "__main__":
 	# find last year of each venue
 	newstuff = ''
 	# for ven in glob.glob(corpusdir + '/*'):
-	# 	venname = ven.split('/')[-1]
+	# 	venname = lastSlash(ven)
 	# 	newstuff += '<strong><a href="http://dblp.uni-trier.de/db/conf/{}/">{} {}</a></strong>, '.format(venname.lower(), venname, nextYear(ven))
-		# print(ven.split('/')[-1], ':', lastYear(ven))
+		# print(lastSlash(ven), ':', lastYear(ven))
 	# write "more info" file
-	f = open(outputdir+'/about.html', 'w')
+	f = open(outputdir+'/about.html', 'w', encoding='utf-8')
 	f.write(aboutHTML.format(\
 		len(icons),
 		'<div class="minibar">' + '\n'.join(sorted(icons)) + '</div>',

@@ -1,4 +1,4 @@
-#!/usr/local/bin/python3
+#!/c/Users/vadim/AppData/Local/Programs/Python/Python35/python
 # -*- coding: utf-8 -*-
 #
 # a module for importing DBLP data straight from the pages into LRJs
@@ -7,6 +7,7 @@ import sys, time, socket, os, os.path, random
 import bs4
 from urllib.request import urlopen
 from lib.JSON import jsonkv, jsonify
+from lib.LP import lastSlash
 
 def xml2json(x):
 	jsonmap = {}
@@ -37,7 +38,7 @@ def xml2json(x):
 	return jsonify(jsonmap)
 
 def purenameof(f):
-	return f.split('/')[-1][:-4]
+	return lastSlash(f)[:-4]
 
 def safelyLoadURL(url):
 	time.sleep(random.randint(1, 3))
@@ -62,10 +63,10 @@ if __name__ == "__main__":
 	url = sys.argv[1]
 	venue = sys.argv[2]
 	dblp = safelyLoadURL(url)
-	# dblp = open('/Users/zaytsev/Desktop/dblp.html' ,'r').read()
+	# dblp = open('/Users/zaytsev/Desktop/dblp.html' ,'r', encoding='utf-8').read()
 	# http://dblp.uni-trier.de/db/conf/cbse/
 	links = [a[a.rindex('"')+1:] for a in dblp.split('">[contents]</a>')[:-1]]
-	f = open('batch', 'w')
+	f = open('batch', 'w', encoding='utf-8')
 	f.write('#!/bin/sh\n\n')
 	for lnk in links:
 		# http://dblp.uni-trier.de/db/conf/cbse/cbse2015.html

@@ -1,10 +1,11 @@
-#!/usr/local/bin/python3
+#!/c/Users/vadim/AppData/Local/Programs/Python/Python35/python
 # -*- coding: utf-8 -*-
 #
 # a module for renaming conferences (with papers inside)
 
 import sys, os.path, glob
 from fancy.ANSI import C
+from lib.LP import lastSlash
 
 ienputdir = '../json'
 verbose = False
@@ -25,8 +26,8 @@ if __name__ == "__main__":
 		sys.exit(1)
 	nameold, namenew = sys.argv[1:3]
 	verbose = sys.argv[-1] == '-v'
-	nameoldm = nameold.split('/')[-1]
-	namenewm = namenew.split('/')[-1]
+	nameoldm = lastSlash(nameold)
+	namenewm = lastSlash(namenew)
 	print(nameoldm)
 	cx = {0: 0, 1: 0, 2: 0}
 	if not os.path.exists(ienputdir + '/corpus/' + nameold)\

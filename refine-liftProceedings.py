@@ -1,4 +1,4 @@
-#!/usr/local/bin/python3
+#!/c/Users/vadim/AppData/Local/Programs/Python/Python35/python
 # -*- coding: utf-8 -*-
 #
 # a module for lifting information common within papers from the same venue, to the venue itself
@@ -53,7 +53,7 @@ def checkon(m, o):
 		fn = o.filename + '.json'
 	else:
 		fn = o.filename
-	f = open(fn, 'r')
+	f = open(fn, 'r', encoding='utf-8')
 	lines = f.read()
 	f.close()
 	if lines != o.getJSON():
@@ -61,7 +61,7 @@ def checkon(m, o):
 		return 1
 	for k in n.keys():
 		o.json[k] = n[k]
-	f = open(fn, 'w')
+	f = open(fn, 'w', encoding='utf-8')
 	f.write(o.getJSON())
 	f.close()
 	return 2

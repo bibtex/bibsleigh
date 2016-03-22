@@ -1,4 +1,4 @@
-#!/usr/local/bin/python3
+#!/c/Users/vadim/AppData/Local/Programs/Python/Python35/python
 # -*- coding: utf-8 -*-
 #
 # a module for cross-checking information on people available from different sources
@@ -8,7 +8,7 @@ from fancy.ANSI import C
 from fancy.Latin import simpleLatin, dblpLatin, nodiaLatin
 from lib.AST import Sleigh
 from lib.JSON import parseJSON, jsonify
-from lib.LP import listify
+from lib.LP import listify, lastSlash
 
 ienputdir = '../json'
 n2f_name = '_name2file.json'
@@ -58,12 +58,12 @@ if __name__ == "__main__":
 	renameto = parseJSON('_renameto.json')
 	# Data from the conferenceMetrics repo
 	csv = []
-	f = open('../conferenceMetrics/data/SE-conf-roles.csv', 'r')
+	f = open('../conferenceMetrics/data/SE-conf-roles.csv', 'r', encoding='utf-8')
 	for line in f.readlines():
 		# Conference;Year;First Name;Last Name;Sex;Role
 		csv.append(line.strip().split(';'))
 	f.close()
-	f = open('scrap-committees/scraped-by-grammarware.csv', 'r')
+	f = open('scrap-committees/scraped-by-grammarware.csv', 'r', encoding='utf-8')
 	for line in f.readlines():
 		csv.append(line.strip().split(';'))
 	f.close()
@@ -92,7 +92,7 @@ if __name__ == "__main__":
 	# caching
 	peoplekeys = people.keys()
 	if os.path.exists('_established.json'):
-		established = json.load(open('_established.json', 'r'))
+		established = json.load(open('_established.json', 'r', encoding='utf-8'))
 	else:
 		established = {}
 	# print(people)
@@ -154,7 +154,7 @@ if __name__ == "__main__":
 			people[name]['roles'].append([myconf, line[5]])
 	# ensure fast load time next time
 	print(established)
-	f = open('_established.json', 'w')
+	f = open('_established.json', 'w', encoding='utf-8')
 	f.write(json.dumps(established, sort_keys=True, separators=(',\n\t', ': '), ensure_ascii=False))
 	f.close()
 	print('\t', C.blue(CXread), 'people found in LRJs')
@@ -168,7 +168,7 @@ if __name__ == "__main__":
 	for k in peoplekeys:
 		p = people[k]
 		if maken2f:
-			name2file[k] = 'person/' + p['FILE'].split('/')[-1].replace('.json', '.html')
+			name2file[k] = 'person/' + lastSlash(p['FILE']).replace('.json', '.html')
 		if p['FILE']:
 			if os.path.exists(p['FILE']):
 				cur = parseJSON(p['FILE'])
@@ -179,7 +179,7 @@ if __name__ == "__main__":
 					continue
 			print('[', C.yellow('FIXD'), ']', p['name'])
 			cx[2] += 1
-			f = open(p['FILE'], 'w')
+			f = open(p['FILE'], 'w', encoding='utf-8')
 			del p['FILE']
 			f.write(jsonify(p))
 			f.close()
@@ -187,7 +187,7 @@ if __name__ == "__main__":
 			print('How can that be?')
 	# caching to be used later (in other scripts mostly)
 	if maken2f:
-		f = open(n2f_name, 'w', encoding='utf8')
+		f = open(n2f_name, 'w', encoding='utf-8')
 		f.write(json.dumps(name2file, sort_keys=True, separators=(',\n\t', ': '), ensure_ascii=False))
 		f.close()
 	cx[1] = len(dunno)

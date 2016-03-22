@@ -1,4 +1,4 @@
-#!/usr/local/bin/python3
+#!/c/Users/vadim/AppData/Local/Programs/Python/Python35/python
 # -*- coding: utf-8 -*-
 #
 # a module for exporting stems/words to the HTML frontpages
@@ -26,7 +26,7 @@ if __name__ == "__main__":
 	stems = sleigh.getStems()
 	tagged = []
 	for k in stems.keys():
-		f = open('{}/word/{}.html'.format(outputdir, k), 'w')
+		f = open('{}/word/{}.html'.format(outputdir, k), 'w', encoding='utf-8')
 		# papers are displayed in reverse chronological order
 		lst = [x.getIItem() for x in \
 			sorted(stems[k], key=lambda z: -z.json['year'] if 'year' in z.json.keys() else 0)]
@@ -51,7 +51,7 @@ if __name__ == "__main__":
 		f.close()
 	print('Word pages:', C.yellow('{}'.format(len(stems))), C.blue('generated'))
 	# stem index
-	f = open(outputdir+'/words.html', 'w')
+	f = open(outputdir+'/words.html', 'w', encoding='utf-8')
 	keyz = [k for k in stems.keys() if len(stems[k]) > 100 and ifApproved(k)]
 	keyz.sort(key=lambda t: -len(t), reverse=True)
 	lst = ['<li><a href="word/{}.html">{}</a>$ ({})</li>'.format(\

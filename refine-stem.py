@@ -1,4 +1,4 @@
-#!/usr/local/bin/python3
+#!/c/Users/vadim/AppData/Local/Programs/Python/Python35/python
 # -*- coding: utf-8 -*-
 #
 # a module for stemming paper titles LRJ
@@ -47,7 +47,7 @@ def checkon(fn, o):
 		if 'stemmed' in o.json.keys():
 			# if stemmed before marked foreign, remove this info
 			del o.json['stemmed']
-			F = open(fn, 'w')
+			F = open(fn, 'w', encoding='utf-8')
 			F.write(o.getJSON())
 			F.close()
 			return 2
@@ -73,7 +73,7 @@ def checkon(fn, o):
 		o.json['stemmed'] = stemmed
 		changed = True
 	if changed:
-		F = open(fn, 'w')
+		F = open(fn, 'w', encoding='utf-8')
 		F.write(o.getJSON())
 		F.close()
 		return 2
@@ -95,7 +95,7 @@ def checkbrand(fn, o):
 	if newvoc and delta:
 		print('NEW:', newvoc - oldvoc)
 		print('OLD:', oldvoc - newvoc)
-		F = open(fn, 'w')
+		F = open(fn, 'w', encoding='utf-8')
 		F.write(o.getJSON())
 		F.close()
 		return 2
@@ -138,7 +138,7 @@ if __name__ == "__main__":
 			cx[checkreport(b.filename, None, b)] += 1
 	# write all stems
 	listOfStems = sorted(filter(ifApproved, ALLSTEMS), key=lambda w: two(len(w)) + w)
-	f = open(ienputdir + '/stems.json', 'w')
+	f = open(ienputdir + '/stems.json', 'w', encoding='utf-8')
 	f.write('[\n\t"' + '",\n\t"'.join(listOfStems) + '"\n]')
 	f.close()
 	print(C.red(len(ALLSTEMS)), 'stems found.')

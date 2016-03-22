@@ -1,4 +1,4 @@
-#!/usr/local/bin/python3
+#!/c/Users/vadim/AppData/Local/Programs/Python/Python35/python
 # -*- coding: utf-8 -*-
 #
 # a module for matching authors/editors with people entries
@@ -8,6 +8,7 @@ from fancy.ANSI import C
 from lib.AST import Sleigh
 from lib.JSON import parseJSON, jsonify
 from lib.LP import listify
+from fancy.Latin import simpleLatin
 
 ienputdir = '../json'
 n2f_name = '_name2file.json'
@@ -19,7 +20,7 @@ def report(s, r):
 	statuses = (C.blue('PASS'), C.red('FAIL'), C.yellow('FIXD'))
 	# non-verbose mode by default
 	if verbose or r != 0:
-		print('[ {} ] {}'.format(statuses[r], s))
+		print('[ {} ] {}'.format(statuses[r], simpleLatin(s)))
 	return r
 
 if __name__ == "__main__":
@@ -91,7 +92,7 @@ if __name__ == "__main__":
 			cx[report(p['name'], 0)] += 1
 		else:
 			cx[report(p['name'], 2)] += 1
-			f = open(fn, 'w')
+			f = open(fn, 'w', encoding='utf-8')
 			del people[p['name']]['FILE']
 			f.write(jsonify(people[p['name']]))
 			f.close()

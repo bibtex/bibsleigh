@@ -1,4 +1,4 @@
-#!/usr/local/bin/python3
+#!/c/Users/vadim/AppData/Local/Programs/Python/Python35/python
 # -*- coding: utf-8 -*-
 #
 # a module for exporting LRJ definitions of people to the HTML frontpages
@@ -9,7 +9,7 @@ from fancy.Languages import ISONames
 from fancy.Templates import personHTML, peoplistHTML, movein
 from lib.AST import Sleigh, escape
 from lib.JSON import parseJSON
-from lib.LP import listify, uniq
+from lib.LP import listify, uniq, lastSlash
 from lib.NLP import shorten, ifIgnored
 
 # The idea is to generate a colour between FFFDE7 (for 'a') and F57F17 (for 'z')
@@ -126,10 +126,10 @@ if __name__ == "__main__":
 	# for k in ts.keys():
 	peoples = {}
 	for fn in glob.glob(ienputdir + '/people/*.json'):
-		k = fn.split('/')[-1][:-5]
+		k = lastSlash(fn)[:-5]
 		ps.append(k)
 		# TODO: get rid of ps in favour of peoples
-		f = open('{}/person/{}.html'.format(outputdir, k), 'w')
+		f = open('{}/person/{}.html'.format(outputdir, k), 'w', encoding='utf-8')
 		persondef = parseJSON(fn)
 		peoples[k] = persondef
 		# what to google?
@@ -265,7 +265,7 @@ if __name__ == "__main__":
 	azlist = '\n'.join(links)+'<br style="clear:both"/>\n'
 	# index-a, index-b, etc: one index for all is too big
 	for letter in letters:
-		f = open('{}/person/index-{}.html'.format(outputdir, letter), 'w')
+		f = open('{}/person/index-{}.html'.format(outputdir, letter), 'w', encoding='utf-8')
 		f.write(peoplistHTML.format(\
 			title='All {}* contributors'.format(letter.upper()),
 			listname='{} people known'.format(len(indices[letter])),
@@ -273,7 +273,7 @@ if __name__ == "__main__":
 		))
 		f.close()
 	# the main index only contains links to A-Z indices
-	f = open('{}/person/index.html'.format(outputdir), 'w')
+	f = open('{}/person/index.html'.format(outputdir), 'w', encoding='utf-8')
 	f.write(peoplistHTML.format(\
 		title='All contributors',
 		listname='{} people known'.format(len(ps)),
