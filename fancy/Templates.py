@@ -77,8 +77,8 @@ leftLinks('appp', '')+'''
 	<strong>{cxVen}</strong> brands,
 	<strong>{cxVol}</strong> issues,
 	<strong>{cxPap}</strong> papers,
-	<strong>539</strong> tags,
-	<strong>200952</strong> markings.</p></div>
+	<strong>634</strong> tags,
+	<strong>324858</strong> markings.</p></div>
 {items}
 '''+footer
 

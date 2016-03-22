@@ -11,6 +11,26 @@ from lib.NLP import string2words, ifApproved
 from fancy.ANSI import C
 from collections import Counter
 
+def isroman(n):
+	s = n.lower()
+	for c in 'mcdlxvi':
+		s = s.replace(c, '')
+	return n != '' and s == ''
+
+# Courtesy of Winston Ewert (http://codereview.stackexchange.com/a/5095)
+def roman2int(string):
+	result = 0
+	old = string
+	string = string.lower()
+	for letter, value in (('m', 1000), ('cm', 900), ('d', 500), ('cd', 400),\
+		('c', 100), ('xc', 90), ('l', 50), ('xl', 40), ('x', 10), ('ix', 9),\
+		('v', 5), ('iv', 4), ('i', 1)):
+		while string.startswith(letter):
+			result += value
+			string = string[len(letter):]
+	# print(C.purple('ROMAN'), old, 'is', result)
+	return result
+
 def sortMyTags(tpv):
 	tagPerFreq = {}
 	for k in tpv.keys():
@@ -44,7 +64,7 @@ def sortbypages(z):
 	v = z.get('volume')
 	if isinstance(v, int) or v.isdigit():
 		y += int(v)
-	return (y + p1 / 10000.) if p1 else y
+	return y + p1 / 10000. if p1 else y
 
 def last(xx):
 	return lastSlash(xx).replace('.json', '')
@@ -100,13 +120,20 @@ class Unser(object):
 					s += '\t{0:<13} = "{{<span id="{0}">{1}</span>}}",\n'.format(k, self.json[k])
 			elif k in ('crossref', 'key', 'type', 'venue', 'twitter', \
 				'eventtitle', 'eventurl', 'nondblpkey', 'dblpkey', 'dblpurl', \
-				'programchair', 'generalchair', 'roles', 'tagged', 'stemmed'):
+				'programchair', 'generalchair', 'roles', 'tagged', 'stemmed', \
+				'status', 'ieeepuid', 'ieeearid', 'ieeeisid', 'cite'):
 				# TODO: ban 'ee' as well
 				pass
 			elif k == 'doi':
 				s += '<span class="uri">\t{0:<13} = "<a href="http://dx.doi.org/{1}">{1}</a>",\n</span>'.format(k, self.json[k])
 			elif k == 'acmid':
 				s += '<span class="uri">\t{0:<13} = "<a href="http://dl.acm.org/citation.cfm?id={1}">{1}</a>",\n</span>'.format(k, self.json[k])
+			elif k == 'ieeearid':
+				s += '<span class="uri">\t{0:<13} = "<a href="http://ieeexplore.ieee.org/xpl/freeabs_all.jsp?arnumber={1}">{1}</a>",\n</span>'.format(k, self.json[k])
+			elif k == 'ieeepuid':
+				s += '<span class="uri">\t{0:<13} = "<a href="http://ieeexplore.ieee.org/xpl/mostRecentIssue.jsp?punumber={1}">{1}</a>",\n</span>'.format(k, self.json[k])
+			elif k == 'ieeeisid':
+				s += '<span class="uri">\t{0:<13} = "<a href="http://ieeexplore.ieee.org/xpl/tocresult.jsp?isnumber={1}">{1}</a>",\n</span>'.format(k, self.json[k])
 			elif k == 'dblpkey':
 				# Legacy!
 				# s += '\t{0:<13} = "<a href="http://dblp.uni-trier.de/db/{1}">{1}</a>",\n</span>'.format(k, self.json[k])
@@ -237,18 +264,24 @@ class Unser(object):
 		p1, p2 = self.getPagesTuple()
 		if not p1 and not p2:
 			return ''
-		elif p1 and not p2:
-			return ', p. {}–?'.format(p1)
-		elif p2 and not p1:
+		elif not p1 and p2:
 			# weird
 			return ', p. ?–{}'.format(p2)
+		elif p1 < 0:
+			# Romans have come!
+			return ', p. ' + self.json['pages']
+		elif p1 and not p2:
+			return ', p. {}–?'.format(p1)
 		elif p1 == p2:
 			return ', p. {}'.format(p1)
 		else:
 			return ', pp. {}–{}'.format(p1, p2)
 	def getPagesBib(self):
 		p1, p2 = self.getPagesTuple()
-		if p1 == p2:
+		if p1 and p1 < 0:
+			# Romans have come!
+			return self.json['pages']
+		elif p1 == p2:
 			return '{}'.format(p1)
 		else:
 			return '{}--{}'.format(p1, p2)
@@ -257,6 +290,12 @@ class Unser(object):
 			p1 = p2 = None
 		elif isinstance(self.json['pages'], int):
 			p1 = p2 = self.json['pages']
+		elif isroman(self.json['pages']):
+			p1 = p2 = roman2int(self.json['pages'])-1000
+		elif isroman(self.json['pages'].split('-')[0]) \
+		 and isroman(self.json['pages'].split('-')[-1]):
+			p1 = roman2int(self.json['pages'].split('-')[0])-1000
+			p2 = roman2int(self.json['pages'].split('-')[-1])-1000
 		else:
 			ps = self.json['pages'].split(':')[-1].split(',')[0].split('-')
 			if ps[0]:
@@ -285,10 +324,21 @@ class Sleigh(Unser):
 		self.venues = []
 		self.n2f = name2file
 		jsons = {}
+		skip4Now = []
 		for d in glob.glob(idir+'/*.json'):
+			if lastSlash(d).split('.')[0] in skip4Now:
+				print(C.red('Skipping') + ' ' + C.purple(d) + ' ' + C.red('for now'))
+				continue
 			jsons[lastSlash(d).split('.')[0]] = d
 		for d in glob.glob(idir+'/*'):
-			if d.endswith('.md') or d.endswith('.json'):
+			cont = False
+			for end in ('.md', '.json', '/frem', '/edif'):
+				if d.endswith(end):
+					cont = True
+			if d.split('/')[-1] in skip4Now:
+				print(C.red('Skipping') + ' ' + C.purple(d) + ' ' + C.red('for now'))
+				cont = True
+			if cont:
 				continue
 			if lastSlash(d) not in jsons.keys():
 				print(C.red('Legacy non-top definition of'), d)
@@ -423,7 +473,12 @@ class Brand(Unser):
 				rbox += '<span class="tag">{1} ×<a href="tag/{0}.html">#{0}</a></span><br/>\n'.format(*t)
 		# vocabulary
 		if 'vocabulary' in self.json:
-			rbox += '<hr/>\nVocabulary: <strong>{}</strong> words'.format(len(self.json['vocabulary']))
+			# gracious continuation
+			if rbox:
+				rbox += '<hr/>\n'
+			else:
+				rbox = '<div class="rbox">'
+			rbox += 'Vocabulary: <strong>{}</strong> words'.format(len(self.json['vocabulary']))
 		if rbox:
 			rbox += '</div>'
 		ev = rbox + ev
@@ -457,7 +512,7 @@ class Brand(Unser):
 				for c in self.confs[y]:
 					for p in c.papers:
 						for t in p.getQTags():
-							tpv.setdefault(t, default=0)
+							tpv.setdefault(t, 0)
 							tpv[t] += 1
 			tagged = sortMyTags(tpv)
 			if tagged:
@@ -604,7 +659,7 @@ class Venue(Unser):
 			venpage=ev,\
 			cxBrands=len(brands),\
 			cxPapers=self.numOfPapers(),\
-			cxIssues=len(eds),\
+			cxIssues=len(self.getConfs()),\
 			brands='\n'.join(brands),\
 			dl=''.join(eds))
 	def getConfs(self):
@@ -775,10 +830,10 @@ class Conf(Unser):
 		return self.getIconItem1(self.getEventTitle())
 	def getIconItem1(self, desc):
 		shorter = '{}'.format(desc).replace(' ', '')\
-			.replace('Organiser', 'OrganizationCommittee')\
-			.replace('Organising Chair', 'OrganizationChair')
+			.replace('Organiser', 'OrganisingCommittee')\
+			.replace('Organization', 'Organising')
 		shorter = shorter.replace('Committee', 'Co').replace('Chair', 'Ch')\
-			.replace('Program', 'Pr').replace('Organization', 'O')\
+			.replace('Program', 'Pr').replace('Organising', 'O')\
 			.replace('Steering', 'S').replace('Publicity', 'Pub')\
 			.replace('Editor', 'Ed').replace('Publication', 'Pbl')\
 			.replace('Finance', 'Fin').replace('Challenge', 'Cha')\

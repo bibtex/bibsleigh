@@ -1,5 +1,5 @@
 ex:
-	make bun
+	#make bun
 	make web
 	make tag
 	time ./export-stems.py
@@ -26,7 +26,7 @@ norm:
 	time ./refine-lowerVenue.py
 	time ./refine-giveNames.py
 	time ./refine-hyperlinks.py
-	# time ./refine-retag.py
+	time ./refine-retag.py
 
 run:
 	time ./library.py
@@ -36,6 +36,14 @@ run:
 
 prep: dblp.xml
 	./deentitify dblp.xml
+
+psync:
+	rm _established.json _name2file.json _renameto.json
+	time ./refine-aliases.py
+	time ./refine-xmatch-people.py
+	time ./refine-whowrote.py
+	time ./refine-sortJson.py
+	make ex
 
 clean:
 	rm -rf __pychache__

@@ -5,10 +5,9 @@
 
 import sys, os.path
 from fancy.ANSI import C
-from fancy.KnownNames import badvariants, contractions
+from fancy.KnownNames import unfoldName, short2long
 from lib.AST import Sleigh
 from lib.JSON import parseJSON, json2lines
-from lib.NLP import strictstrip
 
 ienputdir = '../json'
 n2f_name = '_name2file.json'
@@ -26,16 +25,16 @@ def checkon(fn, o):
 	flines = json2lines(lines)
 	plines = sorted(json2lines(o.getJSON().split('\n')))
 	# bad variants
-	for bad, good in badvariants:
+	for bad in unfoldName:
 		for key in wheretolook:
 			if o.get(key) == bad:
-				o.json[key] = good
+				o.json[key] = unfoldName[bad]
 	# contractions
-	for short, longer in contractions:
+	for short in short2long:
 		for key in wheretolook:
 			if o.get(key) == short:
-				o.json[key] = longer
-			if o.get(key) == longer:
+				o.json[key] = short2long[short]
+			if o.get(key) == short2long[short]:
 				o.json[key+'short'] = short
 	# a heuristic contraction for conference names
 	if o.get('type') == 'inproceedings' \
@@ -63,10 +62,26 @@ def checkon(fn, o):
 		else:
 			o.json['publisher'] = 'Springer International Publishing'
 			o.json['publishershort'] = 'Springer'
-	# superfluousness
 	for key in wheretolook:
-		if key in o.json.keys() and key+'short' in o.json.keys() \
-		and o.get(key) == o.get(key+'short'):
+		if key not in o.json:
+			continue
+		val = o.get(key)
+		# ends with a dot
+		if val.endswith('.'):
+			o.json[key] = o.json[key][:-1]
+			continue
+		# suspiciousness
+		if val.find('.') > -1:
+			problem = True
+			for ok in ('. Volume', 'CEUR-WS.org', 'icml.cc', 'JMLR.org', 'Vol. ', '. Part', \
+				' Inc. ', 'WG2.8'):
+				if val.find(ok) > -1:
+					problem = False
+					break
+			if problem:
+				report(C.yellow('LOOK'), key + ' of ' + o.getKey() + ' is “' + o.get(key) + '”')
+		# superfluousness
+		if key+'short' in o.json.keys() and val == o.get(key+'short'):
 			del o.json[key+'short']
 	nlines = sorted(json2lines(o.getJSON().split('\n')))
 	if flines != plines:
@@ -79,12 +94,15 @@ def checkon(fn, o):
 	else:
 		return 0
 
+def report(one, two):
+	print('[ {} ] {}'.format(one, two))
+
 def checkreport(fn, o):
 	statuses = (C.blue('PASS'), C.red('FAIL'), C.yellow('FIXD'))
 	r = checkon(fn, o)
 	# non-verbose mode by default
 	if verbose or r != 0:
-		print('[ {} ] {}'.format(statuses[r], fn))
+		report(statuses[r], fn)
 	return r
 
 if __name__ == "__main__":

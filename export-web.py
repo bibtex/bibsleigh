@@ -65,10 +65,9 @@ if __name__ == "__main__":
 		pure = lastSlash(brand).split('.')[0]
 		img = pure.lower().replace(' ', '')
 		if img in pngs:
-			pic = '<a href="{}"><img class="abc" src="{}" alt="{}"/></a>'.format(\
-				brand,
-				'stuff/'+img+'.png',
-				pure)
+			pic = '<div class="wider"><a href="{0}.brand.html"><img class="abc" src="{1}" alt="{0}"/></a><span>{0}</span></div>'.format(\
+				pure,
+				'stuff/'+img+'.png')
 			pngs.remove(img)
 			icons.append(pic)
 		else:
@@ -76,17 +75,18 @@ if __name__ == "__main__":
 			pass
 	corner = {'ada': 'TRI-Ada', 'comparch': 'CompArch', 'floc': 'FLoC', 'bibsleigh': 'index'}
 	for pure in pngs:
-		venueCandidate = corner[pure] if pure in corner.keys() else pure.upper()
+		venueCandidate = corner[pure] if pure in corner else pure.upper()
 		canlink = sorted(glob.glob(outputdir + '/' + venueCandidate + '*.html'), key=len)
 		if canlink:
-			pic = '<a href="{}"><img class="abc" src="stuff/{}.png" alt="{}"/></a>'.format(\
-				canlink[0],
+			pic = '<div class="wider"><a href="{0}"><img class="abc" src="stuff/{1}.png" alt="{2}"/></a><span>{2}</span></div>'.format(\
+				canlink[0].split('/')[-1],
 				pure,
-				venueCandidate)
+				venueCandidate,
+				canlink[0].split('/')[0])
 		elif pure == 'twitter':
-			pic = '<a href="https://about.twitter.com/company/brand-assets"><img class="abc" src="stuff/twitter.png" alt="Twitter"/></a>'
+			pic = '<div class="wider"><a href="https://about.twitter.com/company/brand-assets"><img class="abc" src="stuff/twitter.png" alt="Twitter"/></a><span>Twitter</span></div>'
 		elif pure == 'email':
-			pic = '<a href="mailto:vadim@grammarware.net"><img class="abc" src="stuff/email.png" alt="e-mail"/></a>'
+			pic = '<div class="wider"><a href="mailto:vadim@grammarware.net"><img class="abc" src="stuff/email.png" alt="e-mail"/></a><span>email</span></div>'
 		else:
 			print('Lonely', pure)
 			pic = '<img class="abc" src="stuff/{0}.png" alt="{0}"/>'.format(pure)

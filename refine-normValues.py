@@ -18,10 +18,6 @@ lookat = []
 def checkon(fn, o):
 	if not os.path.exists(fn) or os.path.isdir(fn):
 		fn = fn + '.json'
-	# f = open(fn, 'r', encoding='utf-8')
-	# lines = f.readlines()[1:-1]
-	# f.close()
-	# flines = [strictstrip(s) for s in lines]
 	plines = sorted([strictstrip(s) for s in o.getJSON().split('\n')[1:-1]])
 	for k in o.json.keys():
 		if 'type' not in o.json.keys():
@@ -42,7 +38,7 @@ def checkon(fn, o):
 				# 	print('[ {} ] {}: {} {}'.format(C.red('LOOK'), o.getKey(), 'title is', o.get('title')))
 			# normalised pages
 			if k == 'pages':
-				o.json[k] = o.json[k].replace('–', '-').replace('--', '-')
+				o.json[k] = o.json[k].replace('–', '-').replace('--', '-').replace('−', '-')
 			# double spaces
 			if o.json[k].find('  ') > -1:
 				o.json[k] = o.json[k].replace('  ', ' ').strip()
@@ -96,6 +92,10 @@ def checkon(fn, o):
 			# inline trivial lists
 			if len(o.json[k]) == 1:
 				o.json[k] = o.json[k][0]
+			# inline hidden trivial lists
+			if len(o.json[k]) == 2 and o.json[k][0] == o.json[k][1] \
+			and k not in ('stemmed', 'tag', 'tagged'):
+				o.json[k] = o.json[k][0]
 			# unless it’s 'tagged'
 			if k == 'tagged' and not isinstance(o.json[k][0], list):
 				o.json[k] = [o.json[k]]
@@ -115,9 +115,6 @@ def checkon(fn, o):
 				# the case of "Jr" vs "Jr."
 				o.json[k] = [a+'.' if a.endswith(' Jr') else a for a in o.json[k]]
 	nlines = sorted([strictstrip(s) for s in o.getJSON().split('\n')[1:-1]])
-	# The next case should not happen, but could if we have trivial lists
-	# if flines != plines:
-	# 	return 1
 	if plines != nlines:
 		f = open(fn, 'w', encoding='utf-8')
 		f.write(o.getJSON())

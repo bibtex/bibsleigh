@@ -51,7 +51,8 @@ def strictstrip(s):
 	return s
 
 def shorten(n):
-	ws = n.split(' ')
+	# print('SHORTEN[{}]'.format(n))
+	ws = n.strip().split(' ')
 	if len(ws) == 1:
 		return n
 	return '.'.join([w[0] for w in ws[:-1]]) + '.' + ws[-1]
@@ -94,15 +95,19 @@ def heurichoose(k, v1, v2):
 	# if undecided, stick to the old one
 	return v2
 
+greek = ['µ', 'ᗺ', '¬', 'ℬ', 'ℰ', 'ℒ', 'ℋ', 'ð', 'ℓ', 'ᴾ', 'ᵂ', 'ϵ'] + \
+	[chr(x) for x in range(ord('α'), ord('ω')+1)]
+
 # Works almost like .split() but much stricter:
 # 	- saves only proper letters
 # 	- treats any other symbol as a words separator
 # 	- converts words to lower case
 #	- tries to break CamelCase, CamelTAIL and HEADCamel (no CamelMIDCase)
+# 	- resists the temptation to treat ABBRs as HEADCamel
 def string2words(s):
 	ws = ['']
 	for c in s:
-		if c.isalpha():
+		if c.isalpha() and c not in greek:
 			ws[-1] += c
 		elif ws[-1] != '':
 			ws.append('')
@@ -110,6 +115,17 @@ def string2words(s):
 		ws = ws[:-1]
 	ws2 = []
 	for w in ws:
+		if w[-1] == 's' and w[:-1].isupper():
+			# corner case: DAGs, NDAs, APIs, etc
+			ws2.append(w)
+			continue
+		if re.match('^[A-Z]+to[A-Z]+', w):
+			# corner case: XXXtoYYY
+			uc = re.findall('[A-Z]+', w)
+			ws2.append(uc[0])
+			ws2.append('to')
+			ws2.append(uc[1])
+			continue
 		ccws = re.findall('[A-Z][a-z]+', w)
 		recon = ''.join(ccws)
 		if w not in nosplit and len(ccws) > 1 and recon == w:

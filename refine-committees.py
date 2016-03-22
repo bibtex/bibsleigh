@@ -25,7 +25,7 @@ roles = {}
 def checkon(fn, o):
 	if not os.path.exists(fn) or os.path.isdir(fn):
 		fn = fn + '.json'
-	if o.get('type') != 'proceedings':
+	if o.get('type') not in ('proceedings', 'book'):
 		# we don't go per paper
 		return 0
 	if o.getKey() not in roles.keys():
