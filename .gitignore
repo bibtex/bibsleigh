@@ -1,7 +1,12 @@
 *.json
 *.pyc
 .DS_Store
-TODO
+.vs
 _*.*
 __pycache__
 batch
+bin
+obj
+packages
+tmp
+TODO

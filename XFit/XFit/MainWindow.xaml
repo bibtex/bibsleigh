@@ -5,13 +5,26 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:XFit"
         mc:Ignorable="d"
-        Title="BibSLEIGH X-fit" Height="450" Width="800">
+        Title="BibSLEIGH X-fit" Height="500" Width="810">
     <Grid>
         <Menu HorizontalAlignment="Stretch" VerticalAlignment="Top">
-            <MenuItem Header="Read in" Click="Read_Click" />
-            <MenuItem Header="Write out" Click="Write_Click" />
-            <MenuItem Header="Quit" Click="Quit_Click" />
+            <MenuItem Header="_Read in" Click="Read_Click"/>
+            <MenuItem Header="_Write out" Click="Write_Click"/>
+            <MenuItem Header="_Quit" Click="Quit_Click"/>
         </Menu>
-
+        <Canvas Margin="1">
+            <TextBox Name="Path" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="C:\bigrepos\bibsleigh\json\corpus" VerticalAlignment="Top" Width="805" Canvas.Top="23"/>
+            <ListBox Height="150" Canvas.Top="47" Width="805" BorderThickness="2"/>
+            <ListBox Height="150" Canvas.Top="197" Width="200"/>
+            <Border BorderThickness="1" BorderBrush="Gray" Canvas.Top="197" Canvas.Left="200">
+                <TextBlock Name="Before" TextWrapping="Wrap" Text="" Height="150" Width="300"/>
+            </Border>
+            <Border BorderThickness="1" BorderBrush="Gray" Canvas.Top="197" Canvas.Left="502">
+                <TextBlock x:Name="After" TextWrapping="Wrap" Text="" Height="150" Width="300"/>
+            </Border>
+            <Border BorderThickness="1" BorderBrush="Gray" Canvas.Top="349">
+                <TextBlock Name="Log" TextWrapping="Wrap" Text="" Width="800" Height="119"/>
+            </Border>
+        </Canvas>
     </Grid>
 </Window>
