@@ -8,11 +8,11 @@ namespace XFit.ast
     {
         private List<Domain> Domains = new List<Domain>();
 
-        internal Sleigh(TextBlock log, string path)
+        internal Sleigh(string path)
         {
             foreach (var domainFile in Directory.GetFiles(path, "*.json", SearchOption.TopDirectoryOnly))
             {
-                Domains.Add(new Domain(log, domainFile));
+                Domains.Add(new Domain(domainFile));
             }
         }
 

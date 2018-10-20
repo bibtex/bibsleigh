@@ -14,7 +14,7 @@ namespace XFit.ast
         private string EventUrl;
         private List<string> _tags = new List<string> { "name", "title", "venue", "tagged", "eventurl" };
 
-        internal Domain(TextBlock log, string path)
+        internal Domain(string path)
         {
             dynamic domain = JsonConvert.DeserializeObject(File.ReadAllText(path));
             Name = domain.name;
@@ -27,9 +27,9 @@ namespace XFit.ast
             {
                 var key = p.Name;
                 if (!_tags.Contains(key))
-                    log.Text
-                        = $"Unused key '{key}' in domain '{path}'!"
-                        + "\n" + log.Text;
+                    Logger.Log($"Unused key '{key}' in domain '{path}'!");
+                else
+                    Logger.Log($"Used key '{key}' in domain '{path}'");
             }
 
         }

@@ -13,14 +13,13 @@ namespace XFit
         public MainWindow()
         {
             InitializeComponent();
+            Logger._log = Log;
         }
 
         private void Read_Click(object sender, RoutedEventArgs e)
         {
-            _main = new Sleigh(Log, Path.Text);
-            Log.Text
-                = $"Read {_main.NoOfDomains} domains"
-                + "\n" + Log.Text;
+            _main = new Sleigh(Path.Text);
+            Logger.Log($"Read {_main.NoOfDomains} domains");
         }
 
         private void Write_Click(object sender, RoutedEventArgs e)
