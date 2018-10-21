@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using System.IO;
+using XFit.io;
 
 namespace XFit.ast
 {
@@ -15,14 +15,14 @@ namespace XFit.ast
             Dictionary<string, string>
                 jsons = new Dictionary<string, string>(),
                 dirs = new Dictionary<string, string>();
-            foreach (var file in Directory.GetFiles(path, "*", SearchOption.TopDirectoryOnly))
+            foreach (var file in Walker.Everything(path))
             {
-                if (File.Exists(file))
-                    jsons[Path.GetFileNameWithoutExtension(file)] = file;
-                if (Directory.Exists(file))
-                    dirs[Path.GetFileNameWithoutExtension(file)] = file;
+                if (Walker.FileExists(file))
+                    jsons[Walker.PureName(file)] = file;
+                if (Walker.DirExists(file))
+                    dirs[Walker.PureName(file)] = file;
             }
-            foreach(var key in jsons.Keys)
+            foreach (var key in jsons.Keys)
             {
                 if (!dirs.ContainsKey(key))
                     Logger.Log($"JSON without a directory: {key}");

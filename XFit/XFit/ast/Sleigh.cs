@@ -1,24 +1,21 @@
 ﻿using System.Collections.Generic;
-using System.IO;
-using System.Windows.Controls;
+using XFit.io;
 
 namespace XFit.ast
 {
     internal class Sleigh
     {
-        private List<Domain> Domains = new List<Domain>();
-
-        internal Sleigh(string path)
-        {
-            foreach (var domainFile in Directory.GetFiles(path, "*.json", SearchOption.TopDirectoryOnly))
-            {
-                Domains.Add(new Domain(this, domainFile));
-            }
-        }
+        private readonly List<Domain> Domains = new List<Domain>();
 
         public int NoOfDomains
         {
             get => Domains.Count;
+        }
+
+        internal Sleigh(string path)
+        {
+            foreach (var file in Walker.EveryJSON(path))
+                Domains.Add(new Domain(this, file));
         }
     }
 }

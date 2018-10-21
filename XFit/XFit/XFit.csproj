@@ -79,6 +79,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="io\ParseDomain.cs" />
+    <Compile Include="io\Parser.cs" />
+    <Compile Include="io\Walker.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -105,5 +108,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

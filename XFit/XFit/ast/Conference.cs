@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.IO;
+using XFit.io;
 
 namespace XFit.ast
 {
@@ -12,7 +13,7 @@ namespace XFit.ast
         public Conference(Year year, string jsonname, string path)
         {
             this.Parent = year;
-            foreach (var file in Directory.GetFiles(path, "*", SearchOption.TopDirectoryOnly))
+            foreach (var file in Walker.Everything(path))
             {
                 if (File.Exists(file))
                     Papers.Add(new Paper(this, file));
