@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using XFit.ast;
@@ -24,13 +25,6 @@ namespace XFit.io
                     output[(string)elem[0]] = (int)elem[1];
         }
 
-        internal static void JSONtoDomain(string path, Domain output)
-        {
-            dynamic domain = JsonConvert.DeserializeObject(File.ReadAllText(path));
-            ParseDomain(path, domain, output);
-            CheckForUnusedKeys(path, domain.Properties());
-        }
-
         private static void CheckForUnusedKeys(string path, dynamic props)
         {
             foreach (var p in props)
@@ -39,6 +33,20 @@ namespace XFit.io
                 if (!KnownKeys.Contains(key))
                     Logger.Log($"Unused key '{key}' in domain '{path}'!");
             }
+        }
+
+        internal static void JSONtoDomain(string path, Domain output)
+            => JSONtoAST(path, output, ParseDomain);
+
+
+        internal static void JSONtoBrand(string path, Brand output)
+            => JSONtoAST(path, output, ParseBrand);
+
+        private static void JSONtoAST<T>(string path, T output, Action<string, dynamic, T> parse)
+        {
+            dynamic brand = JsonConvert.DeserializeObject(File.ReadAllText(path));
+            parse(path, brand, output);
+            CheckForUnusedKeys(path, brand.Properties());
         }
     }
 }

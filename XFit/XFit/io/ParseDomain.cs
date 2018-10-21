@@ -20,9 +20,9 @@ namespace XFit.io
             if (Walker.DirExists(dirname))
                 foreach (var file in Walker.Everything(dirname))
                     if (Walker.FileExists(file))
-                        output.Brands.Add(new Brand(output, file));
+                        output.AddBrand(file);
                     else if (Walker.DirExists(file))
-                        output.Years.Add(new Year(output, file));
+                        output.AddYear(file);
         }
     }
 }

@@ -3,15 +3,21 @@ using XFit.io;
 
 namespace XFit.ast
 {
-    internal class Year
+    internal class Year : Serialisable
     {
+        private string FileName;
         private readonly Domain Parent;
 
         private List<Conference> Confs = new List<Conference>();
 
-        internal Year(Domain parent, string path)
+        internal Year(Domain parent)
         {
             Parent = parent;
+        }
+
+        public void FromDisk(string path)
+        {
+            FileName = path;
             Dictionary<string, string>
                 jsons = new Dictionary<string, string>(),
                 dirs = new Dictionary<string, string>();
