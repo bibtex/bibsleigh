@@ -23,9 +23,8 @@
                 <TextBlock x:Name="After" TextWrapping="Wrap" Text="" Height="150" Width="300"/>
             </Border>
             <Border BorderThickness="1" BorderBrush="Gray" Canvas.Top="349" Width="801">
-                <ScrollViewer>
-                    <TextBlock Name="Log" TextWrapping="Wrap" Text="" Width="800" Height="119"/>
-                </ScrollViewer>
+                <TextBox Name="Log" TextWrapping="Wrap" Text="" Width="800" Height="119" 
+                         ScrollViewer.CanContentScroll="True" ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.VerticalScrollBarVisibility="Visible"/>
             </Border>
         </Canvas>
     </Grid>

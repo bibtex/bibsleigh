@@ -12,7 +12,7 @@ namespace XFit.ast
         {
             foreach (var domainFile in Directory.GetFiles(path, "*.json", SearchOption.TopDirectoryOnly))
             {
-                Domains.Add(new Domain(domainFile));
+                Domains.Add(new Domain(this, domainFile));
             }
         }
 

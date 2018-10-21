@@ -67,8 +67,11 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="ast\Brand.cs" />
+    <Compile Include="ast\Conference.cs" />
     <Compile Include="ast\Domain.cs" />
+    <Compile Include="ast\Paper.cs" />
     <Compile Include="ast\Sleigh.cs" />
+    <Compile Include="ast\Year.cs" />
     <Compile Include="Logger.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>

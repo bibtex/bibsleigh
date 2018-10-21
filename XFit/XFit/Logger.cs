@@ -4,7 +4,7 @@ namespace XFit
 {
     internal static class Logger
     {
-        internal static TextBlock _log;
+        internal static TextBox _log;
 
         internal static void Log(string msg)
         {
