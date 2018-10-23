@@ -2,6 +2,7 @@
 using Newtonsoft.Json;
 using System.IO;
 using XFit.ast;
+using XFit.io;
 
 namespace BibTest
 {
@@ -9,15 +10,38 @@ namespace BibTest
     public class UnitTest1
     {
         [TestMethod]
-        public void TestMethod1()
+        public void TestPaper()
         {
             string path = @"C:\bigrepos\bibsleigh\json\corpus\SLE\2017\SLE-2017";
+            JsonSerializerSettings settings = new JsonSerializerSettings
+            {
+                MissingMemberHandling = MissingMemberHandling.Error,
+                NullValueHandling = NullValueHandling.Ignore
+            };
             foreach (var fname in Directory.GetFiles(path, "*.json", SearchOption.TopDirectoryOnly))
             {
-                string contents = File.ReadAllText(fname);
-                Paper thing = JsonConvert.DeserializeObject<Paper>(contents);
-                string result = JsonConvert.SerializeObject(thing, Formatting.Indented).Replace("  ", "\t");
-                File.WriteAllText(fname + "_", result);
+                Parser.Unparse(
+                    Parser.Parse<Paper>(fname),
+                    fname + "_"
+                    );
+            }
+        }
+
+        [TestMethod]
+        public void TestDomain()
+        {
+            string path = @"C:\bigrepos\bibsleigh\json\corpus";
+            JsonSerializerSettings settings = new JsonSerializerSettings
+            {
+                MissingMemberHandling = MissingMemberHandling.Error,
+                NullValueHandling = NullValueHandling.Ignore
+            };
+            foreach (var fname in Directory.GetFiles(path, "*.json", SearchOption.TopDirectoryOnly))
+            {
+                Parser.Unparse(
+                    Parser.Parse<Domain>(fname),
+                    fname + "_"
+                    );
             }
         }
     }

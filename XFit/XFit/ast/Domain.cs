@@ -1,30 +1,44 @@
-﻿using System.Collections.Generic;
+﻿using Newtonsoft.Json;
+using System.Collections.Generic;
 using XFit.io;
 
 namespace XFit.ast
 {
     public class Domain
     {
-        private string FileName;
-        private readonly Sleigh Parent;
+        internal string FileName { get; set; }
+        internal Sleigh Parent { get; set; }
 
-        internal string Name;
-        internal readonly Dictionary<string, int> Tagged = new Dictionary<string, int>();
-        internal string Title;
-        internal string Venue;
-        internal string EventUrl;
+        public string name;
+
+        [JsonConverter(typeof(RelStrIntConverter))]
+        public Dictionary<string, int> tagged = new Dictionary<string, int>();
+        public string title;
+        public string venue;
+        public string eventurl;
+
+        [JsonConverter(typeof(ListFriendlyConverter))]
         internal readonly List<Brand> Brands = new List<Brand>();
+
+        [JsonConverter(typeof(ListFriendlyConverter))]
         internal readonly List<Year> Years = new List<Year>();
 
-        internal Domain(Sleigh parent)
+        internal Domain()
         {
-            Parent = parent;
         }
 
         internal void FromDisk(string path)
         {
             FileName = path;
-            Parser.JSONtoDomain(path, this);
+
+            //if (Walker.FileExists(path))
+            //{
+            //    dynamic thing = JsonConvert.DeserializeObject(File.ReadAllText(path));
+            //    parse(path, thing, output);
+            //    CheckForUnusedKeys(path, thing.Properties(), where);
+            //}
+            //else
+            //    parse(path, null, output);
         }
 
         internal void AddBrand(string file)

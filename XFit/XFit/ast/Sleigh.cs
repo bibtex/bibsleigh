@@ -31,8 +31,10 @@ namespace XFit.ast
 
         private void AddDomain(string file)
         {
-            Domain domain = new Domain(this);
-            domain.FromDisk(file);
+            Domain domain = Parser.Parse<Domain>(file);
+            domain.Parent = this;
+            domain.FileName = file;
+            // TODO: descend
             Domains.Add(domain);
         }
     }

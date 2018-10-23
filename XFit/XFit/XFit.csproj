@@ -75,10 +75,11 @@
     <Compile Include="ast\Sleigh.cs" />
     <Compile Include="ast\Year.cs" />
     <Compile Include="io\ListFriendlyConverter.cs" />
-    <Compile Include="io\NullableConverter.cs" />
     <Compile Include="io\ParseBrand.cs" />
     <Compile Include="io\ParseConf.cs" />
     <Compile Include="io\ParseYear.cs" />
+    <Compile Include="io\RelationConverter.cs" />
+    <Compile Include="io\RelStrIntConverter.cs" />
     <Compile Include="Logger.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>

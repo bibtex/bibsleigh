@@ -6,8 +6,15 @@ using XFit.ast;
 
 namespace XFit.io
 {
-    internal static partial class Parser
+    public static partial class Parser
     {
+        private static JsonSerializerSettings _settings = new JsonSerializerSettings
+        {
+            DefaultValueHandling = DefaultValueHandling.Ignore,
+            MissingMemberHandling = MissingMemberHandling.Error,
+            NullValueHandling = NullValueHandling.Ignore
+        };
+
         private static List<string> KnownKeys
             = new List<string> {
                 "collocations", // not fully
@@ -87,6 +94,21 @@ namespace XFit.io
             }
             else
                 parse(path, null, output);
+        }
+
+        public static T Parse<T>(string fname)
+        {
+            string contents = File.ReadAllText(fname);
+            T thing = JsonConvert.DeserializeObject<T>(contents, _settings);
+            return thing;
+        }
+
+        public static void Unparse(object thing, string fname)
+        {
+            string result = JsonConvert.SerializeObject(thing, Formatting.Indented, _settings).Replace("  ", "\t");
+            // The following is not strictly needed, but used for comparison
+            //result = result.Replace("\r\n\t\t", " ").Replace(": [ ", ": [").Replace("\r\n\t],", "],");
+            File.WriteAllText(fname, result);
         }
     }
 }

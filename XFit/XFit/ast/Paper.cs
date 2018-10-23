@@ -16,8 +16,6 @@ namespace XFit.ast
         public string booktitle;
         public string crossref;
         public string dblpkey;
-
-        [JsonConverter(typeof(NullableConverter))]
         public string dblpurl;
         public string doi;
         public string pages;

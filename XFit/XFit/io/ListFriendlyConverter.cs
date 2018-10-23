@@ -25,6 +25,12 @@ namespace XFit.io
         }
 
         public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer)
-            => JToken.FromObject(value).WriteTo(writer);
+        {
+            var t = JToken.FromObject(value);
+            if (t is JArray ta && ta.Count == 1)
+                ta[0].WriteTo(writer);
+            else
+                t.WriteTo(writer);
+        }
     }
 }

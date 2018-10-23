@@ -2,15 +2,15 @@
 
 namespace XFit.io
 {
-    internal static partial class Parser
+    public static partial class Parser
     {
         private static void ParseDomain(string path, dynamic input, Domain output)
         {
-            output.Name = input.name;
-            output.Title = input.title;
-            output.Venue = input.venue;
-            ParseDictStrInt(input.tagged, output.Tagged);
-            output.EventUrl = input.eventurl;
+            //output.Name = input.name;
+            //output.Title = input.title;
+            //output.Venue = input.venue;
+            //ParseDictStrInt(input.tagged, output.Tagged);
+            //output.EventUrl = input.eventurl;
             AddBrandsAndYears(Walker.DropExtension(path), output);
         }
 
