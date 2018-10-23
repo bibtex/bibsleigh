@@ -5,7 +5,7 @@ using XFit.io;
 
 namespace XFit.ast
 {
-    internal class Conference
+    internal class Conference : Serialisable
     {
         private string FileName;
         private string DirName;
@@ -13,18 +13,20 @@ namespace XFit.ast
 
         private List<Paper> Papers = new List<Paper>();
 
-        public Conference(Year year, string jsonname, string path)
+        public Conference(Year year)
         {
-            FileName = String.IsNullOrEmpty(jsonname) ? String.Empty : jsonname;
-            DirName = String.IsNullOrEmpty(path) ? String.Empty : path;
             Parent = year;
-            foreach (var file in Walker.Everything(path))
-            {
-                if (File.Exists(file))
-                    Papers.Add(new Paper(this, file));
-                else
-                    Logger.Log($"File out of place: '{file}'");
-            }
+        }
+
+        public void FromDisk(string path)
+        {
+            FileName = Path.ChangeExtension(path, "json");
+            DirName = path;
+            Parser.JSONtoConf(path, this);
+        }
+        internal void AddPaper(string file)
+        {
+            Papers.Add(new Paper(this, file));
         }
     }
 }

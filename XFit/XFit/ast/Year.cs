@@ -18,23 +18,14 @@ namespace XFit.ast
         public void FromDisk(string path)
         {
             FileName = path;
-            Dictionary<string, string>
-                jsons = new Dictionary<string, string>(),
-                dirs = new Dictionary<string, string>();
-            foreach (var file in Walker.Everything(path))
-            {
-                if (Walker.FileExists(file))
-                    jsons[Walker.PureName(file)] = file;
-                if (Walker.DirExists(file))
-                    dirs[Walker.PureName(file)] = file;
-            }
-            foreach (var key in jsons.Keys)
-            {
-                if (!dirs.ContainsKey(key))
-                    Logger.Log($"JSON without a directory: {key}");
-                else
-                    Confs.Add(new Conference(this, jsons[key], dirs[key]));
-            }
+            Parser.JSONtoYear(path, this);
+        }
+
+        internal void AddConf(string path)
+        {
+            Conference conf = new Conference(this);
+            conf.FromDisk(path);
+            Confs.Add(conf);
         }
     }
 }

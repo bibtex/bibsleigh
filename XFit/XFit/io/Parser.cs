@@ -10,12 +10,26 @@ namespace XFit.io
     {
         private static List<string> KnownKeys
             = new List<string> {
-                "name",
-                "title",
-                "venue",
-                "tagged",
+                "collocations", // not fully
+                "dblpkey",
+                "dblpurl",
                 "eventurl",
+                "name",
+                "select",
+                "tagged",
+                "title",
+                "twitter",
+                "venue",
+                "vocabulary",
             };
+
+        internal static void ParseListStr(dynamic json, List<string> output)
+        {
+            output.Clear();
+            if (json != null)
+                foreach (dynamic elem in json)
+                    output.Add((string)elem);
+        }
 
         internal static void ParseDictStrInt(dynamic json, Dictionary<string, int> output)
         {
@@ -25,28 +39,54 @@ namespace XFit.io
                     output[(string)elem[0]] = (int)elem[1];
         }
 
-        private static void CheckForUnusedKeys(string path, dynamic props)
+        internal static void ParseFlatDictStrInt(dynamic json, Dictionary<string, int> output)
+        {
+            output.Clear();
+            bool word = true;
+            string name = "";
+            if (json != null)
+                foreach (dynamic elem in json)
+                {
+                    if (word)
+                        name = (string)elem;
+                    else
+                        output[name] = (int)elem;
+                    word = !word;
+                }
+        }
+
+        private static void CheckForUnusedKeys(string path, dynamic props, string where)
         {
             foreach (var p in props)
             {
                 var key = p.Name;
                 if (!KnownKeys.Contains(key))
-                    Logger.Log($"Unused key '{key}' in domain '{path}'!");
+                    Logger.Log($"Unused key '{key}' in {where} '{path}'!");
             }
         }
 
         internal static void JSONtoDomain(string path, Domain output)
-            => JSONtoAST(path, output, ParseDomain);
-
+            => JSONtoAST(path, output, ParseDomain, "domain");
 
         internal static void JSONtoBrand(string path, Brand output)
-            => JSONtoAST(path, output, ParseBrand);
+            => JSONtoAST(path, output, ParseBrand, "brand");
 
-        private static void JSONtoAST<T>(string path, T output, Action<string, dynamic, T> parse)
+        internal static void JSONtoYear(string path, Year output)
+           => JSONtoAST(path, output, ParseYear, "year");
+
+        internal static void JSONtoConf(string path, Conference output)
+            => JSONtoAST(path, output, ParseConf, "conference");
+
+        private static void JSONtoAST<T>(string path, T output, Action<string, dynamic, T> parse, string where)
         {
-            dynamic brand = JsonConvert.DeserializeObject(File.ReadAllText(path));
-            parse(path, brand, output);
-            CheckForUnusedKeys(path, brand.Properties());
+            if (Walker.FileExists(path))
+            {
+                dynamic thing = JsonConvert.DeserializeObject(File.ReadAllText(path));
+                parse(path, thing, output);
+                CheckForUnusedKeys(path, thing.Properties(), where);
+            }
+            else
+                parse(path, null, output);
         }
     }
 }

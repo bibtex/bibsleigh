@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.IO;
 
 namespace XFit.io
@@ -8,8 +9,13 @@ namespace XFit.io
         internal static IEnumerable<string> EveryJSON(string path)
             => Directory.GetFiles(path, "*.json", SearchOption.TopDirectoryOnly);
 
-        internal static IEnumerable<string> Everything(string path)
-            => Directory.GetFiles(path, "*", SearchOption.TopDirectoryOnly);
+        //=> Directory.GetFiles(path, "*", SearchOption.TopDirectoryOnly);
+        internal static IEnumerable<string> EveryDir(string path)
+        {
+            var r = Directory.GetDirectories(path, "*", SearchOption.TopDirectoryOnly);
+            Logger.Log($"EVERYTHING from '{path}' IS [{String.Join(",", r)}]");
+            return r;
+        }
 
         internal static bool FileExists(string path)
             => File.Exists(path);
@@ -27,7 +33,7 @@ namespace XFit.io
         {
             string result = Path.ChangeExtension(path, "");
             if (result.EndsWith(".", System.StringComparison.Ordinal))
-                result = result.Substring(0, result.Length);
+                result = result.Substring(0, result.Length - 1);
             return result;
         }
     }

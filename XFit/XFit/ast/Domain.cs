@@ -33,6 +33,7 @@ namespace XFit.ast
             brand.FromDisk(file);
             Brands.Add(brand);
         }
+
         internal void AddYear(string file)
         {
             Year year = new Year(this);

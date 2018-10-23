@@ -4,25 +4,25 @@ namespace XFit.io
 {
     internal static partial class Parser
     {
-        private static void ParseDomain(string path, dynamic domain, Domain output)
+        private static void ParseDomain(string path, dynamic input, Domain output)
         {
-            output.Name = domain.name;
-            output.Title = domain.title;
-            output.Venue = domain.venue;
-            ParseDictStrInt(domain.tagged, output.Tagged);
-            output.EventUrl = domain.eventurl;
+            output.Name = input.name;
+            output.Title = input.title;
+            output.Venue = input.venue;
+            ParseDictStrInt(input.tagged, output.Tagged);
+            output.EventUrl = input.eventurl;
             AddBrandsAndYears(Walker.DropExtension(path), output);
-            CheckForUnusedKeys(path, domain.Properties());
         }
 
         private static void AddBrandsAndYears(string dirname, Domain output)
         {
             if (Walker.DirExists(dirname))
-                foreach (var file in Walker.Everything(dirname))
-                    if (Walker.FileExists(file))
-                        output.AddBrand(file);
-                    else if (Walker.DirExists(file))
-                        output.AddYear(file);
+            {
+                foreach (var file in Walker.EveryJSON(dirname))
+                    output.AddBrand(file);
+                foreach (var file in Walker.EveryDir(dirname))
+                    output.AddYear(file);
+            }
         }
     }
 }
