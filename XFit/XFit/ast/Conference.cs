@@ -5,7 +5,7 @@ using XFit.io;
 
 namespace XFit.ast
 {
-    internal class Conference : Serialisable
+    public class Conference : Serialisable
     {
         private string FileName;
         private string DirName;

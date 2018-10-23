@@ -3,7 +3,7 @@ using XFit.io;
 
 namespace XFit.ast
 {
-    internal class Domain
+    public class Domain
     {
         private string FileName;
         private readonly Sleigh Parent;

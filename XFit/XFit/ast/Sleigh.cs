@@ -3,7 +3,7 @@ using XFit.io;
 
 namespace XFit.ast
 {
-    internal class Sleigh : Serialisable
+    public class Sleigh : Serialisable
     {
         private string FileName;
         private readonly List<Domain> Domains = new List<Domain>();

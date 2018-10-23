@@ -8,8 +8,6 @@ namespace XFit.io
     {
         internal static IEnumerable<string> EveryJSON(string path)
             => Directory.GetFiles(path, "*.json", SearchOption.TopDirectoryOnly);
-
-        //=> Directory.GetFiles(path, "*", SearchOption.TopDirectoryOnly);
         internal static IEnumerable<string> EveryDir(string path)
         {
             var r = Directory.GetDirectories(path, "*", SearchOption.TopDirectoryOnly);

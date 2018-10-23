@@ -3,7 +3,7 @@ using XFit.io;
 
 namespace XFit.ast
 {
-    internal class Year : Serialisable
+    public class Year : Serialisable
     {
         private string FileName;
         private readonly Domain Parent;

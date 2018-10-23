@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.27703.2035
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XFit", "XFit\XFit.csproj", "{15B34E3C-BEA1-4867-B7A6-EB8877D680DE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BibTest", "BibTest\BibTest.csproj", "{BAAA1145-7559-4934-A284-13D08EA7EF6D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{15B34E3C-BEA1-4867-B7A6-EB8877D680DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{15B34E3C-BEA1-4867-B7A6-EB8877D680DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{15B34E3C-BEA1-4867-B7A6-EB8877D680DE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BAAA1145-7559-4934-A284-13D08EA7EF6D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BAAA1145-7559-4934-A284-13D08EA7EF6D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BAAA1145-7559-4934-A284-13D08EA7EF6D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BAAA1145-7559-4934-A284-13D08EA7EF6D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
