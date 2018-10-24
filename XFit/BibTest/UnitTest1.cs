@@ -13,11 +13,6 @@ namespace BibTest
         public void TestPaper()
         {
             string path = @"C:\bigrepos\bibsleigh\json\corpus\SLE\2017\SLE-2017";
-            JsonSerializerSettings settings = new JsonSerializerSettings
-            {
-                MissingMemberHandling = MissingMemberHandling.Error,
-                NullValueHandling = NullValueHandling.Ignore
-            };
             foreach (var fname in Directory.GetFiles(path, "*.json", SearchOption.TopDirectoryOnly))
             {
                 Parser.Unparse(
@@ -31,15 +26,23 @@ namespace BibTest
         public void TestDomain()
         {
             string path = @"C:\bigrepos\bibsleigh\json\corpus";
-            JsonSerializerSettings settings = new JsonSerializerSettings
-            {
-                MissingMemberHandling = MissingMemberHandling.Error,
-                NullValueHandling = NullValueHandling.Ignore
-            };
             foreach (var fname in Directory.GetFiles(path, "*.json", SearchOption.TopDirectoryOnly))
             {
                 Parser.Unparse(
                     Parser.Parse<Domain>(fname),
+                    fname + "_"
+                    );
+            }
+        }
+
+        [TestMethod]
+        public void TestBrand()
+        {
+            string path = @"C:\bigrepos\bibsleigh\json\corpus\ARCH";
+            foreach (var fname in Directory.GetFiles(path, "*.json", SearchOption.TopDirectoryOnly))
+            {
+                Parser.Unparse(
+                    Parser.Parse<Brand>(fname),
                     fname + "_"
                     );
             }

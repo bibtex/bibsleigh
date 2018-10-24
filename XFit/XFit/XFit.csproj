@@ -79,6 +79,8 @@
     <Compile Include="io\ParseConf.cs" />
     <Compile Include="io\ParseYear.cs" />
     <Compile Include="io\RelationConverter.cs" />
+    <Compile Include="io\RelFlatStr3IntConverter.cs" />
+    <Compile Include="io\RelFlatStrIntConverter.cs" />
     <Compile Include="io\RelStrIntConverter.cs" />
     <Compile Include="Logger.cs" />
     <Compile Include="MainWindow.xaml.cs">
