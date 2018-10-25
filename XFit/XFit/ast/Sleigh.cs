@@ -5,7 +5,6 @@ namespace XFit.ast
 {
     public class Sleigh : Serialisable
     {
-        private string FileName;
         private readonly List<Domain> Domains = new List<Domain>();
 
         public int NoOfDomains
@@ -15,6 +14,7 @@ namespace XFit.ast
 
         internal Sleigh()
         {
+            Parent = null;
         }
 
         internal Sleigh(string path) : this()
@@ -34,6 +34,7 @@ namespace XFit.ast
             Domain domain = Parser.Parse<Domain>(file);
             domain.Parent = this;
             domain.FileName = file;
+            domain.Descend();
             // TODO: descend
             Domains.Add(domain);
         }

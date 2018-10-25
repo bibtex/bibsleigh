@@ -72,17 +72,7 @@ namespace XFit.io
             }
         }
 
-        internal static void JSONtoDomain(string path, Domain output)
-            => JSONtoAST(path, output, ParseDomain, "domain");
-
-        internal static void JSONtoBrand(string path, Brand output)
-            => JSONtoAST(path, output, ParseBrand, "brand");
-
-        internal static void JSONtoYear(string path, Year output)
-           => JSONtoAST(path, output, ParseYear, "year");
-
-        internal static void JSONtoConf(string path, Conference output)
-            => JSONtoAST(path, output, ParseConf, "conference");
+        
 
         private static void JSONtoAST<T>(string path, T output, Action<string, dynamic, T> parse, string where)
         {

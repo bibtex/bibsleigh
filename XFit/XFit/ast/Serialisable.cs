@@ -1,7 +1,9 @@
 ﻿namespace XFit.ast
 {
-    internal interface Serialisable
+    public class Serialisable
     {
-        void FromDisk(string path);
+        internal Serialisable Parent;
+        internal string FileName;
+        //void FromDisk(string path);
     }
 }

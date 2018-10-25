@@ -69,14 +69,11 @@
     <Compile Include="ast\Brand.cs" />
     <Compile Include="ast\Conference.cs" />
     <Compile Include="ast\Domain.cs" />
-    <Compile Include="ast\Node.cs" />
     <Compile Include="ast\Paper.cs" />
     <Compile Include="ast\Serialisable.cs" />
     <Compile Include="ast\Sleigh.cs" />
     <Compile Include="ast\Year.cs" />
     <Compile Include="io\ListFriendlyConverter.cs" />
-    <Compile Include="io\ParseBrand.cs" />
-    <Compile Include="io\ParseConf.cs" />
     <Compile Include="io\ParseYear.cs" />
     <Compile Include="io\RelationConverter.cs" />
     <Compile Include="io\RelFlatStr3IntConverter.cs" />
@@ -89,7 +86,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="io\ParseDomain.cs" />
     <Compile Include="io\Parser.cs" />
     <Compile Include="io\Walker.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">

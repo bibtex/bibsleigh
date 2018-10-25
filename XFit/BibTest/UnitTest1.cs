@@ -47,5 +47,18 @@ namespace BibTest
                     );
             }
         }
+
+        [TestMethod]
+        public void TestConf()
+        {
+            string path = @"C:\bigrepos\bibsleigh\json\corpus\SLE\2012";
+            foreach (var fname in Directory.GetFiles(path, "*.json", SearchOption.TopDirectoryOnly))
+            {
+                Parser.Unparse(
+                    Parser.Parse<Conference>(fname),
+                    fname + "_"
+                    );
+            }
+        }
     }
 }

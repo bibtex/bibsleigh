@@ -5,26 +5,22 @@ namespace XFit.ast
 {
     public class Year : Serialisable
     {
-        private string FileName;
-        private readonly Domain Parent;
-
         private List<Conference> Confs = new List<Conference>();
 
-        internal Year(Domain parent)
+        internal Year(Domain parent, string path)
         {
             Parent = parent;
-        }
-
-        public void FromDisk(string path)
-        {
             FileName = path;
-            Parser.JSONtoYear(path, this);
+            foreach (var file in Walker.EveryJSON(path))
+                AddConf(file);
         }
 
         internal void AddConf(string path)
         {
-            Conference conf = new Conference(this);
-            conf.FromDisk(path);
+            Conference conf = Parser.Parse<Conference>(path);
+            conf.Parent = this;
+            conf.FileName = path;
+            // TODO: descend!
             Confs.Add(conf);
         }
     }

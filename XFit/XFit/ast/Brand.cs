@@ -7,13 +7,14 @@ namespace XFit.ast
 {
     public class Brand : Serialisable
     {
-        private string FileName;
-        private readonly Domain Parent;
-
         [JsonConverter(typeof(RelFlatStr3IntConverter))]
         public Dictionary<Tuple<string, string, string>, int> collocations = new Dictionary<Tuple<string, string, string>, int>();
 
         public string name;
+        public string dblpurl;
+        public string dblpkey;
+        public string eventtitle;
+        public string eventurl;
 
         [JsonConverter(typeof(ListFriendlyConverter))]
         public List<string> select;
@@ -26,22 +27,11 @@ namespace XFit.ast
 
         [JsonConverter(typeof(RelFlatStrIntConverter))]
         public Dictionary<string, int> vocabulary = new Dictionary<string, int>();
-        public string dblpurl;
-        public string dblpkey;
+
+        public string venue; // TODO: ban?
 
         internal Brand()
         {
-        }
-
-        internal Brand(Domain parent) : this()
-        {
-            Parent = parent;
-        }
-
-        public void FromDisk(string path)
-        {
-            FileName = path;
-            Parser.JSONtoBrand(path, this);
         }
     }
 }

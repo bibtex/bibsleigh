@@ -1,14 +1,12 @@
 ﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using XFit.io;
 
 namespace XFit.ast
 {
-    public class Domain
+    public class Domain : Serialisable
     {
-        internal string FileName { get; set; }
-        internal Sleigh Parent { get; set; }
-
         public string name;
 
         [JsonConverter(typeof(RelStrIntConverter))]
@@ -41,17 +39,26 @@ namespace XFit.ast
             //    parse(path, null, output);
         }
 
+        internal void Descend()
+        {
+            var dirname = Walker.DropExtension(FileName);
+            foreach (var file in Walker.EveryJSON(dirname))
+                AddBrand(file);
+            foreach (var file in Walker.EveryDir(dirname))
+                AddYear(file);
+        }
+
         internal void AddBrand(string file)
         {
-            Brand brand = new Brand(this);
-            brand.FromDisk(file);
+            Brand brand = Parser.Parse<Brand>(file);
+            brand.Parent = this;
+            brand.FileName = file;
             Brands.Add(brand);
         }
 
         internal void AddYear(string file)
         {
-            Year year = new Year(this);
-            year.FromDisk(file);
+            Year year = new Year(this, file);
             Years.Add(year);
         }
     }
