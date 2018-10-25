@@ -35,7 +35,7 @@ namespace XFit.ast
             domain.Parent = this;
             domain.FileName = file;
             domain.Descend();
-            // TODO: descend
+            Logger.Log($"Domain '{domain.name}' added with {domain.NoOfPapers} papers.");
             Domains.Add(domain);
         }
     }

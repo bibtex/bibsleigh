@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
-using System;
 using System.Collections.Generic;
+using System.Linq;
 using XFit.io;
 
 namespace XFit.ast
@@ -20,6 +20,11 @@ namespace XFit.ast
 
         [JsonConverter(typeof(ListFriendlyConverter))]
         internal readonly List<Year> Years = new List<Year>();
+
+        public int NoOfPapers
+        {
+            get => Years.Sum(y => y.NoOfPapers);
+        }
 
         internal Domain()
         {

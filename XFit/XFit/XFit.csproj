@@ -74,7 +74,6 @@
     <Compile Include="ast\Sleigh.cs" />
     <Compile Include="ast\Year.cs" />
     <Compile Include="io\ListFriendlyConverter.cs" />
-    <Compile Include="io\ParseYear.cs" />
     <Compile Include="io\RelationConverter.cs" />
     <Compile Include="io\RelFlatStr3IntConverter.cs" />
     <Compile Include="io\RelFlatStrIntConverter.cs" />

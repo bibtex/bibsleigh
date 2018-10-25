@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
-using System.IO;
 using XFit.io;
 
 namespace XFit.ast
@@ -9,9 +9,9 @@ namespace XFit.ast
     {
         private string DirName;
 
-        public int acmid;
-        public int ieeepuid;
+        public string acmid; // can be 99999999.999999
         public int ieeeisid;
+        public int ieeepuid;
         public string ieeeurl; // http://www.computer.org/...
 
         public List<string> address;
@@ -66,6 +66,7 @@ namespace XFit.ast
 
         [JsonConverter(typeof(ListFriendlyConverter))]
         public List<string> programchair; // migrate to roles?
+
         [JsonConverter(typeof(ListFriendlyConverter))]
         public List<string> generalchair; // migrate to roles?
 
@@ -75,16 +76,34 @@ namespace XFit.ast
         {
         }
 
-        public Conference(Year year, string path)
+        internal void Descend()
         {
-            FileName = Path.ChangeExtension(path, "json");
-            DirName = path;
-            //Parser.JSONtoConf(path, this);
+            if (String.IsNullOrEmpty(FileName))
+            {
+                Logger.Log($"Unknown location of conference '{title}', skipped");
+                return;
+            }
+            DirName = Walker.DropExtension(FileName);
+            if (!Walker.DirExists(DirName))
+            {
+                Logger.Log($"No papers in conference {Walker.PureName(DirName)} ('{title}'), skipped");
+                return;
+            }
+            foreach (var file in Walker.EveryJSON(DirName))
+                AddPaper(file);
         }
 
         internal void AddPaper(string file)
         {
-            Papers.Add(new Paper(this, file));
+            var paper = Parser.Parse<Paper>(file);
+            paper.FileName = file;
+            paper.Parent = this;
+            Papers.Add(paper);
+        }
+
+        public int NoOfPapers
+        {
+            get => Papers.Count;
         }
     }
 }

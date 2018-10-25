@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using XFit.io;
 
 namespace XFit.ast
@@ -20,8 +21,13 @@ namespace XFit.ast
             Conference conf = Parser.Parse<Conference>(path);
             conf.Parent = this;
             conf.FileName = path;
-            // TODO: descend!
+            conf.Descend();
             Confs.Add(conf);
+        }
+
+        public int NoOfPapers
+        {
+            get => Confs.Sum(c => c.NoOfPapers);
         }
     }
 }
