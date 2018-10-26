@@ -13,15 +13,14 @@ namespace XFit.io
 
         public override object ReadJson(JsonReader reader, Type objectType, object existingValue, JsonSerializer serializer)
         {
-            try
-            {
-                var r = serializer.Deserialize<string>(reader);
-                return new List<string> { r };
-            }
-            catch
-            {
+            if (reader.Value is string vs)
+                return new List<string> { vs };
+            else if (reader.Value is int vi)
+                return new List<string> { vi.ToString() };
+            else if (reader.Value is long vl)
+                return new List<string> { vl.ToString() };
+            else
                 return serializer.Deserialize<List<string>>(reader);
-            }
         }
 
         public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer)

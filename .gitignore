@@ -1,5 +1,8 @@
 *.json
+*.psess
 *.pyc
+*.vsp
+*.vspx
 .DS_Store
 .vs
 _*.*

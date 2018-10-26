@@ -19,11 +19,6 @@ namespace XFit.ast
 
         internal Sleigh(string path) : this()
         {
-            FromDisk(path);
-        }
-
-        public void FromDisk(string path)
-        {
             FileName = path;
             foreach (var file in Walker.EveryJSON(path))
                 AddDomain(file);
@@ -31,6 +26,8 @@ namespace XFit.ast
 
         private void AddDomain(string file)
         {
+            //if (!file.EndsWith("GRAPH.json", System.StringComparison.Ordinal))
+            //    return;
             Domain domain = Parser.Parse<Domain>(file);
             domain.Parent = this;
             domain.FileName = file;

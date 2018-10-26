@@ -9,6 +9,7 @@
     <Grid>
         <Menu HorizontalAlignment="Stretch" VerticalAlignment="Top">
             <MenuItem Header="_Read in" Click="Read_Click"/>
+            <MenuItem Header="_Analyse" Click="Analyse_Click"/>
             <MenuItem Header="_Write out" Click="Write_Click"/>
             <MenuItem Header="_Quit" Click="Quit_Click"/>
         </Menu>

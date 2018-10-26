@@ -41,7 +41,7 @@ namespace XFit.ast
         public List<string> ee = new List<string>(); // refactoring opportunities
 
         [JsonConverter(typeof(ListFriendlyConverter))]
-        public List<string> isbn; // at some point move to one?
+        public List<string> isbn = new List<string>(); // at some point move to one?
 
         public int issue;
         public string journal;

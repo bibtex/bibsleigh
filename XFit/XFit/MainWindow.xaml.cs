@@ -27,6 +27,11 @@ namespace XFit
             Logger.Log($"Read {_main.NoOfDomains} domains in {S.Elapsed}");
         }
 
+        private void Analyse_Click(object sender, RoutedEventArgs e)
+        {
+            Logger.Log($"No analyses implemented yet!");
+        }
+
         private void Write_Click(object sender, RoutedEventArgs e)
         {
         }
