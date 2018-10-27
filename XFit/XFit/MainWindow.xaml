@@ -5,27 +5,31 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:XFit"
         mc:Ignorable="d"
-        Title="BibSLEIGH X-fit" Height="500" Width="810">
+        Title="BibSLEIGH X-fit" Height="652.4" Width="810">
     <Grid>
-        <Menu HorizontalAlignment="Stretch" VerticalAlignment="Top">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="151*"/>
+            <RowDefinition Height="52*"/>
+        </Grid.RowDefinitions>
+        <Menu HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="0,0,0.2,0">
             <MenuItem Header="_Read in" Click="Read_Click"/>
             <MenuItem Header="_Analyse" Click="Analyse_Click"/>
             <MenuItem Header="_Write out" Click="Write_Click"/>
             <MenuItem Header="_Quit" Click="Quit_Click"/>
         </Menu>
-        <Canvas Margin="1">
+        <Canvas Margin="1,1,1.2,-12.2" Grid.RowSpan="2">
             <TextBox Name="Path" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="C:\bigrepos\bibsleigh\json\corpus" VerticalAlignment="Top" Width="805" Canvas.Top="23"/>
-            <ListBox Height="150" Canvas.Top="47" Width="805" BorderThickness="2"/>
-            <ListBox Height="150" Canvas.Top="197" Width="200"/>
+            <ListBox Name="RecsList" Height="150" Canvas.Top="47" Width="805" BorderThickness="2" SelectionChanged="RecsList_SelectionChanged"/>
+            <ListBox Name="FileList" Height="303" Canvas.Top="197" Width="200" SelectionChanged="FileList_SelectionChanged"/>
             <Border BorderThickness="1" BorderBrush="Gray" Canvas.Top="197" Canvas.Left="200">
-                <TextBlock Name="Before" TextWrapping="Wrap" Text="" Height="150" Width="300"/>
+                <TextBox Name="Before" TextWrapping="Wrap" Text="" Height="301" Width="300" ScrollViewer.CanContentScroll="True" ScrollViewer.VerticalScrollBarVisibility="Visible"/>
             </Border>
             <Border BorderThickness="1" BorderBrush="Gray" Canvas.Top="197" Canvas.Left="502">
-                <TextBlock x:Name="After" TextWrapping="Wrap" Text="" Height="150" Width="300"/>
+                <TextBox x:Name="After" TextWrapping="Wrap" Text="" Height="301" Width="300" ScrollViewer.CanContentScroll="True" ScrollViewer.VerticalScrollBarVisibility="Visible"/>
             </Border>
-            <Border BorderThickness="1" BorderBrush="Gray" Canvas.Top="349" Width="801">
+            <Border BorderThickness="1" BorderBrush="Gray" Canvas.Top="500" Width="801">
                 <TextBox Name="Log" TextWrapping="Wrap" Text="" Width="800" Height="119" 
-                         ScrollViewer.CanContentScroll="True" ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.VerticalScrollBarVisibility="Visible"/>
+                         ScrollViewer.CanContentScroll="True" ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.VerticalScrollBarVisibility="Visible" Margin="-1,0,-0.2,0"/>
             </Border>
         </Canvas>
     </Grid>

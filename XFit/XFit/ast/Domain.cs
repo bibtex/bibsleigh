@@ -56,11 +56,14 @@ namespace XFit.ast
 
         public override void Accept(CorpusVisitor v)
         {
-            v.VisitDomain(this);
-            foreach (var brand in Brands)
-                brand.Accept(v);
-            foreach (var year in Years)
-                year.Accept(v);
+            if (v.EnterDomain(this))
+            {
+                foreach (var brand in Brands)
+                    brand.Accept(v);
+                foreach (var year in Years)
+                    year.Accept(v);
+            }
+            v.ExitDomain(this);
         }
     }
 }

@@ -37,6 +37,5 @@ namespace XFit.ast
 
         public override void Accept(CorpusVisitor v)
             => v.VisitBrand(this);
-
     }
 }

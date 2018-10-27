@@ -1,8 +1,8 @@
 ﻿using System.Diagnostics;
 using System.Windows;
+using System.Windows.Controls;
 using XFit.analysis;
 using XFit.ast;
-using XFit.io;
 
 namespace XFit
 {
@@ -16,7 +16,8 @@ namespace XFit
         public MainWindow()
         {
             InitializeComponent();
-            Logger._log = Log;
+            Logger.InitialiseLogger(Log);
+            Manager.InitialiseManager(RecsList, FileList, Before, After);
         }
 
         private void Read_Click(object sender, RoutedEventArgs e)
@@ -39,5 +40,21 @@ namespace XFit
 
         private void Quit_Click(object sender, RoutedEventArgs e)
             => this.Close();
+
+        private void RecsList_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
+        {
+            if (sender is ListBox box)
+            {
+                Manager.HighlightRecommender(box.SelectedIndex);
+            }
+        }
+
+        private void FileList_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (sender is ListBox box)
+            {
+                Manager.HighlightFile(box.SelectedIndex);
+            }
+        }
     }
 }

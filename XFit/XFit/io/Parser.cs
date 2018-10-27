@@ -2,7 +2,6 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
-using XFit.ast;
 
 namespace XFit.io
 {
@@ -72,8 +71,6 @@ namespace XFit.io
             }
         }
 
-        
-
         private static void JSONtoAST<T>(string path, T output, Action<string, dynamic, T> parse, string where)
         {
             if (Walker.FileExists(path))
@@ -93,12 +90,15 @@ namespace XFit.io
             return thing;
         }
 
-        public static void Unparse(object thing, string fname)
+        public static string Unparse(object thing)
         {
             string result = JsonConvert.SerializeObject(thing, Formatting.Indented, _settings).Replace("  ", "\t");
             // The following is not strictly needed, but used for comparison
             //result = result.Replace("\r\n\t\t", " ").Replace(": [ ", ": [").Replace("\r\n\t],", "],");
-            File.WriteAllText(fname, result);
+            return result;
         }
+
+        public static void Unparse(object thing, string fname)
+            => File.WriteAllText(fname, Unparse(thing));
     }
 }

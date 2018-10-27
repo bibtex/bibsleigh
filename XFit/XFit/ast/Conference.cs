@@ -109,9 +109,10 @@ namespace XFit.ast
 
         public override void Accept(CorpusVisitor v)
         {
-            v.VisitConference(this);
-            foreach (var paper in Papers)
-                paper.Accept(v);
+            if (v.EnterConference(this))
+                foreach (var paper in Papers)
+                    paper.Accept(v);
+            v.ExitConference(this);
         }
     }
 }

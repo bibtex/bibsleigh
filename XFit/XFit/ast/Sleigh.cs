@@ -39,9 +39,10 @@ namespace XFit.ast
 
         public override void Accept(CorpusVisitor v)
         {
-            v.VisitSleigh(this);
-            foreach (var domain in Domains)
-                domain.Accept(v);
+            if (v.EnterSleigh(this))
+                foreach (var domain in Domains)
+                    domain.Accept(v);
+            v.ExitSleigh(this);
         }
     }
 }

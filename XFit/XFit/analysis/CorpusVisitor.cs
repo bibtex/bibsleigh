@@ -4,15 +4,19 @@ namespace XFit.analysis
 {
     public abstract class CorpusVisitor
     {
-        public abstract void VisitSleigh(Sleigh sleigh);
+        public abstract bool EnterSleigh(Sleigh sleigh);
+        public abstract void ExitSleigh(Sleigh sleigh);
 
-        public abstract void VisitDomain(Domain domain);
+        public abstract bool EnterDomain(Domain domain);
+        public abstract void ExitDomain(Domain domain);
 
         public abstract void VisitBrand(Brand brand);
 
-        public abstract void VisitYear(Year year);
+        public abstract bool EnterYear(Year year);
+        public abstract void ExitYear(Year year);
 
-        public abstract void VisitConference(Conference conference);
+        public abstract bool EnterConference(Conference conference);
+        public abstract void ExitConference(Conference conference);
 
         public abstract void VisitPaper(Paper paper);
     }

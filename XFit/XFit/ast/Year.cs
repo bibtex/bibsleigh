@@ -33,9 +33,10 @@ namespace XFit.ast
 
         public override void Accept(CorpusVisitor v)
         {
-            v.VisitYear(this);
-            foreach (var conf in Confs)
-                conf.Accept(v);
+            if (v.EnterYear(this))
+                foreach (var conf in Confs)
+                    conf.Accept(v);
+            v.ExitYear(this);
         }
     }
 }
