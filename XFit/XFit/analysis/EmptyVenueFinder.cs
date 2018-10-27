@@ -38,14 +38,8 @@ namespace XFit.analysis
             if (String.IsNullOrEmpty(conference.venue))
             {
                 string proposed = Walker.PureName(conference).Split('-')[0];
-                Conference f(Conference c)
-                {
-                    c.venue = proposed;
-                    return c;
-                }
-                Xformation action = new XConf(f);
+                Xformation action = new XConf(GenConfAction(proposed));
                 Manager.RegisterAction("Conference lacks a venue", conference, action);
-                //Logger.Log($"Conference '{Walker.PureName(conference)}' lacks a venue!");
                 confvenue = String.Empty;
                 return false;
             }
@@ -58,6 +52,7 @@ namespace XFit.analysis
 
         public override void ExitConference(Conference conference)
         {
+            confvenue = String.Empty;
         }
 
         public override void VisitPaper(Paper paper)
@@ -68,15 +63,25 @@ namespace XFit.analysis
                 Logger.Log($"Paper '{Walker.PureName(paper)}' lacks a venue, buts is parent conference lacks it too!");
             else
             {
-                Paper f(Paper p)
-                {
-                    p.venue = confvenue;
-                    return p;
-                }
-                Xformation action = new XPaper(f);
+                Xformation action = new XPaper(GenPaperAction(confvenue));
                 Manager.RegisterAction("Paper lacks a venue", paper, action);
-                //Logger.Log($"Paper '{Walker.PureName(paper)}' lacks a venue: TODO add an action!");
             }
         }
+
+        private Func<Paper, Paper> GenPaperAction(string venue)
+            => p =>
+            {
+                var p2 = Parser.Clone(p);
+                p2.venue = venue;
+                return p2;
+            };
+
+        private Func<Conference, Conference> GenConfAction(string venue)
+            => c =>
+            {
+                var c2 = Parser.Clone(c);
+                c2.venue = venue;
+                return c2;
+            };
     }
 }

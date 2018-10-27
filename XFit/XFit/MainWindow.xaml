@@ -20,7 +20,7 @@
         <Canvas Margin="1,1,1.2,-12.2" Grid.RowSpan="2">
             <TextBox Name="Path" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="C:\bigrepos\bibsleigh\json\corpus" VerticalAlignment="Top" Width="805" Canvas.Top="23"/>
             <ListBox Name="RecsList" Height="150" Canvas.Top="47" Width="805" BorderThickness="2" SelectionChanged="RecsList_SelectionChanged"/>
-            <ListBox Name="FileList" Height="303" Canvas.Top="197" Width="200" SelectionChanged="FileList_SelectionChanged"/>
+            <ListBox Name="FileList" Height="274" Canvas.Top="197" Width="200" SelectionChanged="FileList_SelectionChanged"/>
             <Border BorderThickness="1" BorderBrush="Gray" Canvas.Top="197" Canvas.Left="200">
                 <TextBox Name="Before" TextWrapping="Wrap" Text="" Height="301" Width="300" ScrollViewer.CanContentScroll="True" ScrollViewer.VerticalScrollBarVisibility="Visible"/>
             </Border>
@@ -31,6 +31,9 @@
                 <TextBox Name="Log" TextWrapping="Wrap" Text="" Width="800" Height="119" 
                          ScrollViewer.CanContentScroll="True" ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.VerticalScrollBarVisibility="Visible" Margin="-1,0,-0.2,0"/>
             </Border>
+            <Button Content="×" Canvas.Left="10" Canvas.Top="476" Width="50" Click="X_Click"/>
+            <Button Content=">" Canvas.Left="77" Canvas.Top="476" Width="50" Click="Run_Click"/>
+            <Button Content=">>" Canvas.Left="145" Canvas.Top="476" Width="50" Click="RunAll_Click"/>
         </Canvas>
     </Grid>
 </Window>

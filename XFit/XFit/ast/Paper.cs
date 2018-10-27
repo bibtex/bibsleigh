@@ -9,26 +9,21 @@ namespace XFit.ast
     public class Paper : Serialisable
     {
         public string acmid; // can be 99999999.999999
-        public int ieeearid;
-        public int ieeeisid;
-        public int ieeepuid;
-        public string ieeeurl; // http://www.computer.org/...
-
-        // do we care about a path to the PDF on some long gone CD?
-        [JsonConverter(typeof(ListFriendlyConverter))]
-        public List<string> cdrom = new List<string>();
-
-        public List<string> address = new List<string>(); // Should be a tuple?
+        public List<string> address; // Should be a tuple?
 
         [JsonConverter(typeof(ListFriendlyConverter))]
-        public List<string> author = new List<string>();
+        public List<string> author;
 
         public string booktitle;
         public string booktitleshort;
 
+        // do we care about a path to the PDF on some long gone CD?
+        [JsonConverter(typeof(ListFriendlyConverter))]
+        public List<string> cdrom;
+
         // TODO: verify and use more extensively? or reserve for Zeitgeist?
         [JsonConverter(typeof(ListFriendlyConverter))]
-        public List<string> cite = new List<string>();
+        public List<string> cite;
 
         public string crossref;
         public string dblpkey;
@@ -36,13 +31,18 @@ namespace XFit.ast
         public string doi;
 
         [JsonConverter(typeof(ListFriendlyConverter))]
-        public List<string> editor = new List<string>();
+        public List<string> editor;
 
         [JsonConverter(typeof(ListFriendlyConverter))]
-        public List<string> ee = new List<string>(); // refactoring opportunities
+        public List<string> ee; // refactoring opportunities
+
+        public int ieeearid;
+        public int ieeeisid;
+        public int ieeepuid;
+        public string ieeeurl; // http://www.computer.org/...
 
         [JsonConverter(typeof(ListFriendlyConverter))]
-        public List<string> isbn = new List<string>(); // at some point move to one?
+        public List<string> isbn; // at some point move to one?
 
         public int issue;
         public string journal;
@@ -61,16 +61,15 @@ namespace XFit.ast
 
         // "keynote", "tool demo", "invited", "influential", etc (ref opp!)
         [JsonConverter(typeof(ListFriendlyConverter))]
-        public List<string> status = new List<string>();
+        public List<string> status;
 
-        public List<string> stemmed = new List<string>();
-        public List<string> tag = new List<string>();
+        public List<string> stemmed;
+        public List<string> tag;
         public string title;
         public string type;
         public string url; // semantics unclear, possible refactoring target
         public string venue;
         public string volume;
-
         public int year;
 
         public Paper()

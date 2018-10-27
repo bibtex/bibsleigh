@@ -28,7 +28,6 @@ namespace XFit.analysis
         }
 
         private static List<Recommender> recs = new List<Recommender>();
-        private static List<string> recnames = new List<string>();
 
         internal static void FullAnalysis(Sleigh root)
         {
@@ -52,7 +51,7 @@ namespace XFit.analysis
         internal static void HighlightRecommender(int index)
         {
             _fileList.Items.Clear();
-            if (index >= recs.Count)
+            if (index < 0 || index >= recs.Count)
                 return;
             _recSelected = index;
             foreach (var file in recs[index].Files)
@@ -62,8 +61,40 @@ namespace XFit.analysis
         internal static void HighlightFile(int index)
         {
             if (_recSelected < 0 || _recSelected >= recs.Count || index < 0 || index >= recs[_recSelected].Count)
+            {
+                _bef.Clear();
+                _aft.Clear();
                 return;
+            }
             recs[_recSelected].HighlightFile(index, _bef, _aft);
+        }
+
+        internal static void DisposeFile(int index, bool run)
+        {
+            _bef.Clear();
+            _aft.Clear();
+            if (_recSelected < 0 || _recSelected >= recs.Count || index < 0 || index >= recs[_recSelected].Count)
+                return;
+            if (run)
+                recs[_recSelected].RunForOne(index);
+            Logger.Log($"The recommendation of '{recs[_recSelected].Name}' followed for '{_fileList.Items[index]}'.");
+            _fileList.Items.RemoveAt(index);
+            recs[_recSelected].RemoveFile(index);
+        }
+
+        internal static void RunCurrentRec()
+        {
+            _bef.Clear();
+            _aft.Clear();
+            var cx = _fileList.Items.Count;
+            _fileList.Items.Clear();
+            if (_recSelected < 0 || _recSelected >= recs.Count)
+                return;
+            recs[_recSelected].RunForAll();
+            Logger.Log($"All {cx} recommendations of '{recs[_recSelected].Name}' followed.");
+            _recList.Items.RemoveAt(_recSelected);
+            recs.RemoveAt(_recSelected);
+            _recSelected = -1;
         }
     }
 }

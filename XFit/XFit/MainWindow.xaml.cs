@@ -56,5 +56,20 @@ namespace XFit
                 Manager.HighlightFile(box.SelectedIndex);
             }
         }
+
+        private void X_Click(object sender, RoutedEventArgs e)
+        {
+            Manager.DisposeFile(FileList.SelectedIndex, run: false);
+        }
+
+        private void Run_Click(object sender, RoutedEventArgs e)
+        {
+            Manager.DisposeFile(FileList.SelectedIndex, run: true);
+        }
+
+        private void RunAll_Click(object sender, RoutedEventArgs e)
+        {
+            Manager.RunCurrentRec();
+        }
     }
 }

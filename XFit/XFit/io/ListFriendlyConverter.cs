@@ -20,7 +20,10 @@ namespace XFit.io
             else if (reader.Value is long vl)
                 return new List<string> { vl.ToString() };
             else
-                return serializer.Deserialize<List<string>>(reader);
+            {
+                var list = serializer.Deserialize<List<string>>(reader);
+                return list.Count < 1 ? null : list;
+            }
         }
 
         public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer)

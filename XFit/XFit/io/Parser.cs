@@ -1,5 +1,4 @@
 ﻿using Newtonsoft.Json;
-using System;
 using System.Collections.Generic;
 using System.IO;
 
@@ -71,24 +70,11 @@ namespace XFit.io
             }
         }
 
-        private static void JSONtoAST<T>(string path, T output, Action<string, dynamic, T> parse, string where)
-        {
-            if (Walker.FileExists(path))
-            {
-                dynamic thing = JsonConvert.DeserializeObject(File.ReadAllText(path));
-                parse(path, thing, output);
-                CheckForUnusedKeys(path, thing.Properties(), where);
-            }
-            else
-                parse(path, null, output);
-        }
-
         public static T Parse<T>(string fname)
-        {
-            string contents = File.ReadAllText(fname);
-            T thing = JsonConvert.DeserializeObject<T>(contents, _settings);
-            return thing;
-        }
+            => ParseText<T>(File.ReadAllText(fname));
+
+        public static T ParseText<T>(string text)
+            => JsonConvert.DeserializeObject<T>(text, _settings);
 
         public static string Unparse(object thing)
         {
@@ -100,5 +86,8 @@ namespace XFit.io
 
         public static void Unparse(object thing, string fname)
             => File.WriteAllText(fname, Unparse(thing));
+
+        public static T Clone<T>(T c)
+            => ParseText<T>(Unparse(c));
     }
 }

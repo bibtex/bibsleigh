@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Controls;
 using XFit.ast;
@@ -36,10 +35,31 @@ namespace XFit.analysis
 
         internal void HighlightFile(int index, TextBox before, TextBox after)
         {
+            if (index < 0 || index > Files.Count)
+                return;
             string file = Files[index];
-            Logger.Log($"highlight '{file}'");
             before.Text = Parser.Unparse(input[file]);
             after.Text = Parser.Unparse(plan[file].Transform(input[file]));
+        }
+
+        internal void RemoveFile(int index)
+        {
+            string file = Files[index];
+            input.Remove(file);
+            plan.Remove(file);
+            Files.RemoveAt(index);
+        }
+
+        internal void RunForOne(int index)
+        {
+            string file = Files[index];
+            Parser.Unparse(plan[file].Transform(input[file]), input[file].FileName);
+        }
+
+        internal void RunForAll()
+        {
+            foreach (var file in Files)
+                Parser.Unparse(plan[file].Transform(input[file]), input[file].FileName);
         }
     }
 }
