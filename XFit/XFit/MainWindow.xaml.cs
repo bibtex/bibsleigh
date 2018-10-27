@@ -1,5 +1,6 @@
 ﻿using System.Diagnostics;
 using System.Windows;
+using XFit.analysis;
 using XFit.ast;
 using XFit.io;
 
@@ -29,7 +30,7 @@ namespace XFit
 
         private void Analyse_Click(object sender, RoutedEventArgs e)
         {
-            Logger.Log($"No analyses implemented yet!");
+            Manager.FullAnalysis(_main);
         }
 
         private void Write_Click(object sender, RoutedEventArgs e)

@@ -1,6 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.IO;
+using XFit.ast;
 
 namespace XFit.io
 {
@@ -28,6 +28,9 @@ namespace XFit.io
 
         internal static bool Exists(string path)
             => FileExists(path) || DirExists(path);
+
+        internal static string PureName(Serialisable thing)
+            => Path.GetFileNameWithoutExtension(thing.FileName);
 
         internal static string PureName(string path)
             => Path.GetFileNameWithoutExtension(path);

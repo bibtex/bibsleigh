@@ -1,6 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System.Collections.Generic;
 using System.IO;
+using XFit.analysis;
 using XFit.io;
 
 namespace XFit.ast
@@ -82,5 +83,8 @@ namespace XFit.ast
             Parent = conference;
             dynamic domain = JsonConvert.DeserializeObject(File.ReadAllText(file));
         }
+
+        public override void Accept(CorpusVisitor v)
+            => v.VisitPaper(this);
     }
 }

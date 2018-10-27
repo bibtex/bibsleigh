@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using XFit.analysis;
 using XFit.io;
 
 namespace XFit.ast
@@ -28,6 +29,13 @@ namespace XFit.ast
         public int NoOfPapers
         {
             get => Confs.Sum(c => c.NoOfPapers);
+        }
+
+        public override void Accept(CorpusVisitor v)
+        {
+            v.VisitYear(this);
+            foreach (var conf in Confs)
+                conf.Accept(v);
         }
     }
 }

@@ -1,6 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System.Collections.Generic;
 using System.Linq;
+using XFit.analysis;
 using XFit.io;
 
 namespace XFit.ast
@@ -30,20 +31,6 @@ namespace XFit.ast
         {
         }
 
-        internal void FromDisk(string path)
-        {
-            FileName = path;
-
-            //if (Walker.FileExists(path))
-            //{
-            //    dynamic thing = JsonConvert.DeserializeObject(File.ReadAllText(path));
-            //    parse(path, thing, output);
-            //    CheckForUnusedKeys(path, thing.Properties(), where);
-            //}
-            //else
-            //    parse(path, null, output);
-        }
-
         internal void Descend()
         {
             var dirname = Walker.DropExtension(FileName);
@@ -65,6 +52,15 @@ namespace XFit.ast
         {
             Year year = new Year(this, file);
             Years.Add(year);
+        }
+
+        public override void Accept(CorpusVisitor v)
+        {
+            v.VisitDomain(this);
+            foreach (var brand in Brands)
+                brand.Accept(v);
+            foreach (var year in Years)
+                year.Accept(v);
         }
     }
 }

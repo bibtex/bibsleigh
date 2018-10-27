@@ -1,9 +1,12 @@
-﻿namespace XFit.ast
+﻿using XFit.analysis;
+
+namespace XFit.ast
 {
-    public class Serialisable
+    public abstract class Serialisable
     {
         internal Serialisable Parent;
         internal string FileName;
-        //void FromDisk(string path);
+
+        public abstract void Accept(CorpusVisitor v);
     }
 }

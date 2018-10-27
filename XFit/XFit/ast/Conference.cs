@@ -1,6 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using XFit.analysis;
 using XFit.io;
 
 namespace XFit.ast
@@ -104,6 +105,13 @@ namespace XFit.ast
         public int NoOfPapers
         {
             get => Papers.Count;
+        }
+
+        public override void Accept(CorpusVisitor v)
+        {
+            v.VisitConference(this);
+            foreach (var paper in Papers)
+                paper.Accept(v);
         }
     }
 }

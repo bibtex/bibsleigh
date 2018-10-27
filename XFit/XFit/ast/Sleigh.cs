@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using XFit.analysis;
 using XFit.io;
 
 namespace XFit.ast
@@ -34,6 +35,13 @@ namespace XFit.ast
             domain.Descend();
             Logger.Log($"Domain '{domain.name}' added with {domain.NoOfPapers} papers.");
             Domains.Add(domain);
+        }
+
+        public override void Accept(CorpusVisitor v)
+        {
+            v.VisitSleigh(this);
+            foreach (var domain in Domains)
+                domain.Accept(v);
         }
     }
 }

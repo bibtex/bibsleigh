@@ -1,6 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using XFit.analysis;
 using XFit.io;
 
 namespace XFit.ast
@@ -33,5 +34,9 @@ namespace XFit.ast
         internal Brand()
         {
         }
+
+        public override void Accept(CorpusVisitor v)
+            => v.VisitBrand(this);
+
     }
 }
