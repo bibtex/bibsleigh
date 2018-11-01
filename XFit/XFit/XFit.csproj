@@ -65,6 +65,8 @@
     <Compile Include="analysis\EmptyVenueFinder.cs" />
     <Compile Include="analysis\CorpusVisitor.cs" />
     <Compile Include="analysis\Manager.cs" />
+    <Compile Include="analysis\ProceedingsNamePusher.cs" />
+    <Compile Include="analysis\ProceedingsNamer.cs" />
     <Compile Include="analysis\Recommender.cs" />
     <Compile Include="analysis\XConf.cs" />
     <Compile Include="analysis\Xformation.cs" />

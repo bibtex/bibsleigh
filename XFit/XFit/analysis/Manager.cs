@@ -17,6 +17,8 @@ namespace XFit.analysis
         private static readonly IEnumerable<CorpusVisitor> checkers = new List<CorpusVisitor>()
         {
             new EmptyVenueFinder(),
+            new ProceedingsNamer(),
+            new ProceedingsNamePusher(),
         };
 
         internal static void InitialiseManager(ListBox top, ListBox left, TextBox before, TextBox after)
@@ -75,9 +77,15 @@ namespace XFit.analysis
             _aft.Clear();
             if (_recSelected < 0 || _recSelected >= recs.Count || index < 0 || index >= recs[_recSelected].Count)
                 return;
+            string verb;
             if (run)
+            {
                 recs[_recSelected].RunForOne(index);
-            Logger.Log($"The recommendation of '{recs[_recSelected].Name}' followed for '{_fileList.Items[index]}'.");
+                verb = "followed";
+            }
+            else
+                verb = "removed";
+            Logger.Log($"The recommendation of '{recs[_recSelected].Name}' {verb} for '{_fileList.Items[index]}'.");
             _fileList.Items.RemoveAt(index);
             recs[_recSelected].RemoveFile(index);
         }
