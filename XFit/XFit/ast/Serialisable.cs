@@ -1,4 +1,4 @@
-﻿using XFit.analysis;
+﻿using XFit.refine;
 
 namespace XFit.ast
 {

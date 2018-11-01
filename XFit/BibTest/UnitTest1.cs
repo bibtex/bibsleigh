@@ -1,6 +1,6 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.IO;
-using XFit.analysis;
+using XFit.refine;
 using XFit.ast;
 using XFit.io;
 

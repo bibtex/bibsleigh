@@ -1,7 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
-using XFit.analysis;
+using XFit.refine;
 using XFit.io;
 
 namespace XFit.ast

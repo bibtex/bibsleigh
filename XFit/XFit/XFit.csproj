@@ -62,15 +62,15 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Compile Include="analysis\EmptyVenueFinder.cs" />
-    <Compile Include="analysis\CorpusVisitor.cs" />
-    <Compile Include="analysis\Manager.cs" />
-    <Compile Include="analysis\ProceedingsNamePusher.cs" />
-    <Compile Include="analysis\ProceedingsNamer.cs" />
-    <Compile Include="analysis\Recommender.cs" />
-    <Compile Include="analysis\XConf.cs" />
-    <Compile Include="analysis\Xformation.cs" />
-    <Compile Include="analysis\XPaper.cs" />
+    <Compile Include="refine\EmptyVenueFinder.cs" />
+    <Compile Include="refine\CorpusVisitor.cs" />
+    <Compile Include="refine\Manager.cs" />
+    <Compile Include="refine\ProceedingsNamePusher.cs" />
+    <Compile Include="refine\ProceedingsNamer.cs" />
+    <Compile Include="refine\Recommender.cs" />
+    <Compile Include="refine\XConf.cs" />
+    <Compile Include="refine\Xformation.cs" />
+    <Compile Include="refine\XPaper.cs" />
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>

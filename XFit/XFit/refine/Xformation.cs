@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using XFit.ast;
 
-namespace XFit.analysis
+namespace XFit.refine
 {
     internal interface Xformation
     {

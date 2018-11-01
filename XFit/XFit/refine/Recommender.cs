@@ -4,7 +4,7 @@ using System.Windows.Controls;
 using XFit.ast;
 using XFit.io;
 
-namespace XFit.analysis
+namespace XFit.refine
 {
     internal class Recommender
     {

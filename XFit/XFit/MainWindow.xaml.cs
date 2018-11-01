@@ -1,7 +1,7 @@
 ﻿using System.Diagnostics;
 using System.Windows;
 using System.Windows.Controls;
-using XFit.analysis;
+using XFit.refine;
 using XFit.ast;
 
 namespace XFit
@@ -32,6 +32,11 @@ namespace XFit
         private void Analyse_Click(object sender, RoutedEventArgs e)
         {
             Manager.FullAnalysis(_main);
+        }
+
+        private void Calc_Click(object sender, RoutedEventArgs e)
+        {
+            
         }
 
         private void Write_Click(object sender, RoutedEventArgs e)

@@ -3,7 +3,7 @@ using System.Linq;
 using System.Windows.Controls;
 using XFit.ast;
 
-namespace XFit.analysis
+namespace XFit.refine
 {
     internal static class Manager
     {

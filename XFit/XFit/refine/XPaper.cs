@@ -1,7 +1,7 @@
 ﻿using System;
 using XFit.ast;
 
-namespace XFit.analysis
+namespace XFit.refine
 {
     internal class XPaper : Xformation
     {
