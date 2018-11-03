@@ -16,10 +16,8 @@ namespace XFit.ast
         public string venue;
         public string eventurl;
 
-        [JsonConverter(typeof(ListFriendlyConverter))]
         internal readonly List<Brand> Brands = new List<Brand>();
 
-        [JsonConverter(typeof(ListFriendlyConverter))]
         internal readonly List<Year> Years = new List<Year>();
 
         public int NoOfPapers

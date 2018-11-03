@@ -1,8 +1,12 @@
-﻿using System.Diagnostics;
+﻿using System.Collections.Generic;
+using System.Diagnostics;
+using System.IO;
+using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
-using XFit.refine;
+using XFit.analysis;
 using XFit.ast;
+using XFit.refine;
 
 namespace XFit
 {
@@ -36,7 +40,33 @@ namespace XFit
 
         private void Calc_Click(object sender, RoutedEventArgs e)
         {
-            
+            Community c = new Community();
+            _main.Accept(c);
+            DumpData(c.AllAuthors, c.AuthorDict, "authors");
+            DumpData(c.AllWords, c.VocabDict, "words");
+            DumpData(c.AllTags, c.TagDict, "tags");
+        }
+
+        private void DumpData(SortedSet<string> keys, Dictionary<string, Dictionary<string, int>> dict, string file)
+        {
+            List<string> lines = new List<string>();
+            lines.AddRange(keys);
+            List<string> venues = dict.Keys.ToList();
+            venues.Sort();
+            foreach (string venue in venues)
+            {
+                int i = 0, num;
+                foreach (var key in keys)
+                {
+                    if (dict[venue].ContainsKey(key))
+                        num = dict[venue][key];
+                    else
+                        num = 0;
+                    lines[i] += "," + num;
+                    i++;
+                }
+            }
+            File.WriteAllLines(System.IO.Path.Combine(Path.Text, file + ".csv"), lines);
         }
 
         private void Write_Click(object sender, RoutedEventArgs e)

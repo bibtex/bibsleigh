@@ -1,12 +1,14 @@
 ﻿using System.Collections.Generic;
-using XFit.refine;
 using XFit.io;
+using XFit.refine;
 
 namespace XFit.ast
 {
     public class Sleigh : Serialisable
     {
         private readonly List<Domain> Domains = new List<Domain>();
+
+        public IEnumerable<Domain> AllDomains { get => Domains; }
 
         public int NoOfDomains
         {
