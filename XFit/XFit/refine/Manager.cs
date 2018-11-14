@@ -16,9 +16,10 @@ namespace XFit.refine
 
         private static readonly IEnumerable<CorpusVisitor> checkers = new List<CorpusVisitor>()
         {
-            new EmptyVenueFinder(),
-            new ProceedingsNamer(),
-            new ProceedingsNamePusher(),
+            new EmptyVenueFinder(), // finds empty venue fields in conferences and papers
+            new ProceedingsNamer(), // finds weirdly named proceedings and renames them
+            new ProceedingsNamePusher(), // replaces booktitle[short] of papers with title of their parent conferences
+            new StatusInferrer(), // infers the status of papers
         };
 
         internal static void InitialiseManager(ListBox top, ListBox left, TextBox before, TextBox after)

@@ -85,5 +85,13 @@ namespace XFit.ast
 
         public override void Accept(CorpusVisitor v)
             => v.VisitPaper(this);
+
+        public void AddStatus(string newstat)
+        {
+            if (status == null)
+                status = new List<string>();
+            if (!status.Contains(newstat))
+                status.Add(newstat);
+        }
     }
 }

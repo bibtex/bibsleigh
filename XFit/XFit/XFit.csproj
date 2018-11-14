@@ -69,6 +69,7 @@
     <Compile Include="refine\ProceedingsNamePusher.cs" />
     <Compile Include="refine\ProceedingsNamer.cs" />
     <Compile Include="refine\Recommender.cs" />
+    <Compile Include="refine\StatusInferrer.cs" />
     <Compile Include="refine\XConf.cs" />
     <Compile Include="refine\Xformation.cs" />
     <Compile Include="refine\XPaper.cs" />
