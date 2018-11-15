@@ -65,7 +65,9 @@
     <Compile Include="analysis\Community.cs" />
     <Compile Include="ast\Call.cs" />
     <Compile Include="io\CallReader.cs" />
-    <Compile Include="io\Fancy.cs" />
+    <Compile Include="io\ht\Fancy.cs" />
+    <Compile Include="io\ht\HtCall.cs" />
+    <Compile Include="io\ht\MenuItem.cs" />
     <Compile Include="refine\EmptyVenueFinder.cs" />
     <Compile Include="refine\CorpusVisitor.cs" />
     <Compile Include="refine\Manager.cs" />

@@ -4,6 +4,7 @@ using System.Windows.Controls;
 using XFit.analysis;
 using XFit.ast;
 using XFit.io;
+using XFit.io.ht;
 using XFit.refine;
 
 namespace XFit
@@ -47,11 +48,11 @@ namespace XFit
         private void CfP_Click(object sender, RoutedEventArgs e)
         {
             string ipath = Walker.PathToCfPs(Path.Text);
-            string opath = System.IO.Path.Combine(Walker.PathToHTMLs(Path.Text), "calls");
+            string opath = System.IO.Path.Combine(Walker.PathToHTMLs(Path.Text), "call");
             foreach (var file in Walker.EveryCfP(ipath))
             {
                 var pure = Walker.PureName(file);
-                CallReader.UnParse(System.IO.Path.Combine(opath, pure + ".html"), CallReader.Parse(file));
+                CallReader.UnParse(Walker.PathToHTMLs(Path.Text), pure + ".html", CallReader.Parse(file));
                 Logger.Log($"Visualised a call for {pure}");
             }
         }

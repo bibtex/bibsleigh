@@ -2,15 +2,24 @@
 using System.Collections.Generic;
 using System.IO;
 using XFit.io;
+using XFit.io.ht;
 
 namespace XFit.ast
 {
     public class Call
     {
         private string Content = String.Empty;
+        public string Name { get; private set; }
+        public string ReadableName { get; private set; }
 
         public Call(string filename)
         {
+            Name = Walker.PureName(filename);
+            if (Name.Length > 6 && Char.IsDigit(Name[Name.Length - 1]) && Char.IsDigit(Name[Name.Length - 2]) && Char.IsDigit(Name[Name.Length - 3]) && Char.IsDigit(Name[Name.Length - 4]) && Name[Name.Length - 5] == '-')
+                ReadableName = Name.Substring(0, Name.LastIndexOf('-')) + " " + Name.Substring(Name.Length - 4);
+            else
+                ReadableName = Name;
+
             var lines = File.ReadAllLines(filename);
             foreach (var rawline in lines)
             {
