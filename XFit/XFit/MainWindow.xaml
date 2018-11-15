@@ -14,8 +14,8 @@
         <Menu HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="0,0,0.2,0">
             <MenuItem Header="_Read in" Click="Read_Click"/>
             <MenuItem Header="_Analyse" Click="Analyse_Click"/>
-            <MenuItem Header="_Write out" Click="Write_Click"/>
             <MenuItem Header="_Calculate" Click="Calc_Click"/>
+            <MenuItem Header="Cf_Ps" Click="CfP_Click"/>
             <MenuItem Header="_Quit" Click="Quit_Click"/>
         </Menu>
         <Canvas Margin="1,1,1.2,-12.2" Grid.RowSpan="2">

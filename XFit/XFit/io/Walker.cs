@@ -20,6 +20,11 @@ namespace XFit.io
             return r;
         }
 
+        internal static IEnumerable<string> EveryCfP(string path)
+            => DirExists(path)
+            ? Directory.GetFiles(path, "*.cfp", SearchOption.TopDirectoryOnly)
+            : new string[0];
+
         internal static bool FileExists(string path)
             => File.Exists(path);
 
@@ -42,5 +47,35 @@ namespace XFit.io
                 result = result.Substring(0, result.Length - 1);
             return result;
         }
+
+        internal static string PathToCfPs(string path)
+        {
+            path = TrimPath(path);
+            if (path.EndsWith("corpus", System.StringComparison.Ordinal))
+                path = path.Substring(0, path.Length - 6);
+            else
+                path = Path.Combine(path, "..");
+            return Path.Combine(path, "calls");
+        }
+
+        internal static string PathToHTMLs(string path)
+        {
+            path = TrimPath(path);
+            if (path.EndsWith("corpus", System.StringComparison.Ordinal))
+                path = path.Substring(0, path.Length - 6);
+            else
+                path = Path.Combine(path, "..");
+            path = TrimPath(path);
+            if (path.EndsWith("json", System.StringComparison.Ordinal))
+                path = path.Substring(0, path.Length - 4);
+            else
+                path = Path.Combine(path, "..");
+            return Path.Combine(path, "frontend");
+        }
+
+        internal static string TrimPath(string path)
+            => path[path.Length - 1] == '/' || path[path.Length - 1] == '\\'
+            ? path.Substring(0, path.Length - 1)
+            : path;
     }
 }

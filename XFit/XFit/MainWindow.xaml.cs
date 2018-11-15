@@ -3,6 +3,7 @@ using System.Windows;
 using System.Windows.Controls;
 using XFit.analysis;
 using XFit.ast;
+using XFit.io;
 using XFit.refine;
 
 namespace XFit
@@ -43,8 +44,16 @@ namespace XFit
             c.CalculateDistances();
         }
 
-        private void Write_Click(object sender, RoutedEventArgs e)
+        private void CfP_Click(object sender, RoutedEventArgs e)
         {
+            string ipath = Walker.PathToCfPs(Path.Text);
+            string opath = System.IO.Path.Combine(Walker.PathToHTMLs(Path.Text), "calls");
+            foreach (var file in Walker.EveryCfP(ipath))
+            {
+                var pure = Walker.PureName(file);
+                CallReader.UnParse(System.IO.Path.Combine(opath, pure + ".html"), CallReader.Parse(file));
+                Logger.Log($"Visualised a call for {pure}");
+            }
         }
 
         private void Quit_Click(object sender, RoutedEventArgs e)
