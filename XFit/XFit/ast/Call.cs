@@ -30,19 +30,31 @@ namespace XFit.ast
                     Content += rawline;
                     continue;
                 }
-                if (new HashSet<char>(line.ToCharArray()).Count == 1 && line[0] == '-')
+                if (new HashSet<char>(line.ToCharArray()).Count == 1 && (line[0] == '-' || line[0] == '='))
                 {
                     Content += "<hr/><br/>" + Environment.NewLine;
                     continue;
                 }
-                if (rawline.StartsWith("  ", StringComparison.Ordinal))
+                if (addline.StartsWith("  ", StringComparison.Ordinal))
                 {
                     int i = 0;
-                    while (i < rawline.Length && rawline[i] == ' ')
+                    while (i < addline.Length && addline[i] == ' ')
                         i++;
-                    addline = Fancy.Times("&nbsp;", i) + rawline.TrimStart();
+                    addline = Fancy.Times("&nbsp;", i) + addline.TrimStart();
                 }
-                if (rawline[0] == '*')
+                if (line.StartsWith("###", StringComparison.Ordinal))
+                {
+                    addline = Fancy.ReplaceFirst(addline, "###", "<h3>") + "</h3>";
+                }
+                if (line.Contains("**"))
+                {
+                    while (addline.Contains("**"))
+                    {
+                        addline = Fancy.ReplaceFirst(addline, "**", "<b>");
+                        addline = Fancy.ReplaceFirst(addline, "**", "</b>");
+                    }
+                }
+                if (addline[0] == '*')
                     addline = '•' + addline.Substring(1);
                 Content += addline + "<br/>";
             }
@@ -75,6 +87,8 @@ namespace XFit.ast
                     Logger.Log($"Call '{filename}' broken w.r.t. pipelines");
                     return;
                 }
+
+                target = target.Replace('\n', ' ').Replace('\r', ' ').Replace('\t', ' ').Replace("<br/>", " ").Replace("  ", " ");
 
                 // [[X]]s
                 while (after.Length > 0 && Char.IsLetter(after[0]))

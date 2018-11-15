@@ -141,6 +141,23 @@ namespace XFit.io.ht
                 .Replace("ë", "e")
                 .Replace("ü", "ue")
                 .Replace("ö", "oe")
+                .Replace("á", "a")
+                .Replace("ą", "a")
+                .Replace(".", "")
             ;
+
+        public static string ReplaceFirst(string Source, string Find, string Replace)
+        {
+            int Place = Source.IndexOf(Find, StringComparison.Ordinal);
+            string result = Source.Remove(Place, Find.Length).Insert(Place, Replace);
+            return result;
+        }
+
+        public static string ReplaceLast(string Source, string Find, string Replace)
+        {
+            int Place = Source.LastIndexOf(Find, StringComparison.Ordinal);
+            string result = Source.Remove(Place, Find.Length).Insert(Place, Replace);
+            return result;
+        }
     }
 }
