@@ -1,0 +1,10 @@
+corpus ../../json/corpus
+
+-- If a paper has no venue, inherit from the conference
+in */*/*/*
+	when no venue
+		take from parent
+
+-- in */*/{c:*}/*.json
+-- 	when no venue
+-- 		take from ../{c}
