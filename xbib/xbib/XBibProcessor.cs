@@ -10,7 +10,7 @@ namespace xbib
         private string Corpus;
         private string ThePath;
 
-        private List<XBibRule> Rules = new List<XBibRule>();
+        private List<XbRule> Rules = new List<XbRule>();
 
         internal XBibProcessor(string filename)
         {
@@ -34,19 +34,8 @@ namespace xbib
                     AssignPath(CuratePath(line.Substring(3).Trim()));
                     i++;
                 }
-                else if (line.StartsWith("when ") && i + 1 < text.Length)
-                {
-                    string s1, s2;
-                    s1 = line;
-                    s2 = text[i + 1].Trim();
-                    if (s2.StartsWith("take"))
-                        Rules.Add(new XBibGuardedAction(s1, s2));
-                    else
-                        throw new NotImplementedException("wrong xbib command: " + line);
-                    i += 3;
-                }
                 else
-                    throw new NotImplementedException("wrong xbib command: " + line);
+                    Rules.Add(XBibParser.ParseRule(line, text, ref i));
             }
         }
 

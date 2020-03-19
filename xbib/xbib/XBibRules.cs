@@ -2,20 +2,20 @@
 
 namespace xbib
 {
-    internal abstract class XBibRule
+    internal abstract class XbRule
     {
         internal abstract bool Enforce(JsonValue json, JsonValue parent);
     }
 
-    internal class XBibGuardedAction : XBibRule
+    internal class XrGuardedAction : XbRule
     {
-        private XBibCondition Guard;
-        private XBibAction Act;
+        private XbCondition Guard;
+        private XbAction Act;
 
-        internal XBibGuardedAction(string cond, string act)
+        public XrGuardedAction(XbCondition guard, XbAction act)
         {
-            Guard = XBibParser.ParseCondition(cond);
-            Act = XBibParser.ParseAction(act, Guard.GetContext());
+            Guard = guard;
+            Act = act;
         }
 
         internal override bool Enforce(JsonValue json, JsonValue parent)

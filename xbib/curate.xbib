@@ -3,8 +3,7 @@ in */*/*/*
 
 -- If a paper has no venue, inherit from the conference
 when no venue
-	take from parent
+	inherit venue
 
--- in */*/*/*
--- 	when url =~ db/conf/
--- 		remove url
+when url =~ db/conf/
+	remove url
