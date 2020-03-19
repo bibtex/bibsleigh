@@ -1,10 +1,10 @@
 corpus ../../json/corpus
+in */*/*/*
 
 -- If a paper has no venue, inherit from the conference
-in */*/*/*
-	when no venue
-		take from parent
+when no venue
+	take from parent
 
--- in */*/{c:*}/*.json
--- 	when no venue
--- 		take from ../{c}
+-- in */*/*/*
+-- 	when url =~ db/conf/
+-- 		remove url
