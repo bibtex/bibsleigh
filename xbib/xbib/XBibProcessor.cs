@@ -35,7 +35,11 @@ namespace xbib
                     i++;
                 }
                 else
-                    Rules.Add(XBibParser.ParseRule(line, text, ref i));
+                {
+                    var rule = IO.ParseRule(line, text, ref i);
+                    if (rule != null)
+                        Rules.Add(rule);
+                }
             }
         }
 
@@ -64,10 +68,10 @@ namespace xbib
                         int i = 0, j = 0;
                         JsonValue Parent = null;
                         if (PossibleParents.ContainsKey(treF.Name))
-                            Parent = XBibParser.ParseJson(PossibleParents[treF.Name].FullName);
+                            Parent = WokeJ.ParseJson(PossibleParents[treF.Name].FullName);
                         foreach (var quaF in treF.GetFiles("*.json"))
                         {
-                            JsonValue json = XBibParser.ParseJson(quaF.FullName);
+                            JsonValue json = WokeJ.ParseJson(quaF.FullName);
                             if (json == null)
                                 continue;
                             bool changed = false;
@@ -76,7 +80,7 @@ namespace xbib
                             if (changed)
                             {
                                 //Console.WriteLine("qapla!");
-                                File.WriteAllText(quaF.FullName, XBibParser.UnParseJson(json));
+                                File.WriteAllText(quaF.FullName, WokeJ.UnParseJson(json));
                                 //Console.WriteLine(XBibParser.UnParseJson(json));
                                 //throw new Exception();
                                 j++;

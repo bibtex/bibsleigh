@@ -59,7 +59,7 @@ namespace xbib
         internal override bool Evaluate(JsonValue json)
             => json.ContainsKey(Key)
             && json[Key] is JsonPrimitive jp
-            && XBibParser.BareValue(jp).StartsWith(Value);
+            && IO.BareValue(jp).StartsWith(Value);
 
         internal override string GetContext()
             => Key;
@@ -80,7 +80,7 @@ namespace xbib
         internal override bool Evaluate(JsonValue json)
             => json.ContainsKey(Key)
             && json[Key] is JsonPrimitive jp
-            && XBibParser.BareValue(jp).EndsWith(Value);
+            && IO.BareValue(jp).EndsWith(Value);
 
         internal override string GetContext()
             => Key;
