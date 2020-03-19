@@ -1,4 +1,4 @@
-#!/c/Users/vadim/AppData/Local/Programs/Python/Python35/python
+#!/c/Users/vadim/AppData/Local/Programs/Python/Python37-32/python
 # -*- coding: utf-8 -*-
 #
 # a module with classes forming the abstract syntax of BibSLEIGH
@@ -201,7 +201,7 @@ class Unser(object):
 		# DBLP
 		if 'dblpkey' in self.json:
 			for dblpk in listify(self.json['dblpkey']):
-				links[1].append('<a href="http://dblp.uni-trier.de/rec/html/{}">DBLP</a>'.format(dblpk))
+				links[1].append('<a href="http://dblp.org/rec/html/{}">DBLP</a>'.format(dblpk))
 		elif 'dblpurl' in self.json:
 			links[1].append('<a href="{}">DBLP</a>'.format(self.json['dblpurl']))
 		else:
@@ -652,7 +652,7 @@ class Venue(Unser):
 		img = self.json['venue'].lower() if 'venue' in self.json.keys() else ABBR.lower()
 		eds = [y.getItem() for y in sorted(self.years, reverse=True, key=lambda x: x.year)]
 		return confHTML.format(\
-			filename=self.getJsonName(),\
+			filename=self.getJsonName().replace('\\','/'),\
 			title=ABBR,\
 			img=img,\
 			fname=('{} ({})'.format(title, ABBR)),\

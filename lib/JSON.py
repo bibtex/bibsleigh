@@ -1,4 +1,4 @@
-#!/c/Users/vadim/AppData/Local/Programs/Python/Python35/python
+#!/c/Users/vadim/AppData/Local/Programs/Python/Python37-32/python
 # -*- coding: utf-8 -*-
 
 import json
@@ -41,7 +41,7 @@ def parseJSON(fn):
 		j['FILE'] = fn
 		return j
 	except ValueError:
-		print(C.red('JSON parse error'), 'on', fn)
+		print(C.red('JSON parse error'), 'on', fn.replace('\\', '/'))
 		return {}
 
 def json2lines(j):

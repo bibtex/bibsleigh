@@ -1,4 +1,4 @@
-#!/c/Users/vadim/AppData/Local/Programs/Python/Python35/python
+#!/c/Users/vadim/AppData/Local/Programs/Python/Python37-32/python
 # -*- coding: utf-8 -*-
 #
 # a module for importing DBLP data straight from the pages into LRJs
@@ -8,10 +8,15 @@ import bs4
 from urllib.request import urlopen
 from lib.JSON import jsonkv, jsonify
 from lib.LP import lastSlash
+import ssl
+
+ctx = ssl.create_default_context()
+ctx.check_hostname = False
+ctx.verify_mode = ssl.CERT_NONE
 
 def xml2json(x):
 	jsonmap = {}
-	s = bs4.BeautifulSoup(x)
+	s = bs4.BeautifulSoup(x, 'html.parser')
 	for main in s.dblp.children:
 		if isinstance(main, bs4.element.NavigableString):
 			continue
@@ -42,10 +47,11 @@ def purenameof(f):
 
 def safelyLoadURL(url):
 	# time.sleep(random.randint(1, 3))
+	time.sleep(1)
 	errors = 0
 	while errors < 3:
 		try:
-			return urlopen(url).read().decode('utf-8')
+			return urlopen(url, context=ctx).read().decode('utf-8')
 		except IOError:
 			print('Warning: failed to load URL, retrying...')
 			errors += 1
@@ -63,6 +69,9 @@ if __name__ == "__main__":
 			'../json/corpus/PLDI/1982/SCC-1982').format(sys.argv[0]))
 		sys.exit(1)
 	dblp = safelyLoadURL(sys.argv[1])
+	tmp = open('httpdump.raw', 'w')
+	tmp.write(dblp)
+	tmp.close()
 	ldir = sys.argv[2]
 	year = ldir.split('/')[4]
 	allxmls = [xmlname for xmlname in dblp.split('"') if xmlname.endswith('.xml')]
