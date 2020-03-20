@@ -12,6 +12,8 @@ namespace xbib
                 return new XcExistsKey(words[1]);
             else if (words.Length == 3 && words[0] == "when" && words[1] == "no")
                 return new XcNegation(new XcExistsKey(words[2]));
+            else if (words.Length == 4 && words[0] == "when" && words[2] == "==")
+                return new XcMatchesExactly(words[1], words[3].Replace('_', ' '));
             else if (words.Length == 4 && words[0] == "when" && words[2] == "=~")
                 return new XcMatchesLeft(words[1], words[3]);
             else if (words.Length == 4 && words[0] == "when" && words[2] == "~=")
@@ -27,6 +29,8 @@ namespace xbib
                 return new XaInherit(context, words[1]);
             else if (words.Length == 2 && words[0] == "remove")
                 return new XaRemove(words[1]);
+            else if (words.Length == 2 && words[0] == "assign")
+                return new XaAssign(context, words[1]);
             else if (words.Length == 3 && words[0] == "rename" && words[1] == "to")
                 return new XaRenameTo(context, words[2]);
             else if (words.Length == 3 && words[0] == "truncate" && words[1] == "left")

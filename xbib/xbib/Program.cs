@@ -11,7 +11,6 @@ namespace xbib
                 var x = new XBibProcessor(arg);
                 x.Engage();
             }
-            //Console.WriteLine($"Hello World! {args[0]}");
         }
     }
 }

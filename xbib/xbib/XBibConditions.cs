@@ -44,6 +44,27 @@ namespace xbib
             => Inner.GetContext();
     }
 
+    internal class XcMatchesExactly : XbCondition
+    {
+        private string Key;
+        private string Value;
+
+        internal XcMatchesExactly(string key, string val)
+        {
+            Key = key;
+            Value = val;
+            Console.WriteLine($"[DEBUG] XcMatchesExactly of {key} with '{val}' is created");
+        }
+
+        internal override bool Evaluate(JsonValue json)
+            => json.ContainsKey(Key)
+            && json[Key] is JsonPrimitive jp
+            && IO.BareValue(jp) == Value;
+
+        internal override string GetContext()
+            => Key;
+    }
+
     internal class XcMatchesLeft : XbCondition
     {
         private string Key;

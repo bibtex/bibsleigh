@@ -54,6 +54,37 @@ namespace xbib
         }
     }
 
+    internal class XaAssign : XbAction
+    {
+        private string Key;
+        private string Value;
+
+        internal XaAssign(string key, string v)
+        {
+            Key = key;
+            Value = v;
+            Console.WriteLine($"[DEBUG] XaAssign of {key} with '{v}' is created");
+        }
+
+        internal override bool Execute(JsonValue json, JsonValue parent)
+        {
+            JsonValue old = WokeJ.GetElementByKey(json, Key);
+            if (old == null)
+                return false;
+            if (old is JsonPrimitive oldP)
+            {
+                var oldVal = IO.BareValue(oldP);
+                json[Key] = new JsonPrimitive(Value);
+                return oldVal != Value;
+            }
+            else
+            {
+                json[Key] = new JsonPrimitive(Value);
+                return true;
+            }
+        }
+    }
+
     internal class XaTruncateLeft : XbAction
     {
         private string Key;
