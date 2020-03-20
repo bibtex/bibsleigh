@@ -818,6 +818,8 @@ class Conf(Unser):
 	def getEventTitle(self):
 		if 'eventtitle' in self.json.keys():
 			return self.json['eventtitle']
+		elif 'titleshort' in self.json.keys():
+			return '{} {}'.format(self.json['titleshort'], self.year)
 		elif 'booktitleshort' in self.json.keys():
 			return '{} {}'.format(self.json['booktitleshort'], self.year)
 		elif 'booktitle' in self.json.keys():
@@ -915,7 +917,7 @@ class Conf(Unser):
 			stemmedTitle=self.get('title'),
 			img=self.get('venue').lower(), # geticon?
 			authors=self.getAuthors(),
-			short='{}, {}'.format(self.get('booktitle'), self.get('year')),
+			short='{}, {}'.format(self.get('titleshort'), self.get('year')),
 			code=self.getCode(),
 			bib=self.getBib(),
 			boxlinks=self.getBoxLinks(),

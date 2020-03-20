@@ -8,7 +8,9 @@ namespace xbib
         internal static XbCondition ParseCondition(string cond)
         {
             var words = cond.Split(' ');
-            if (words.Length == 3 && words[0] == "when" && words[1] == "no")
+            if (words.Length == 2 && words[0] == "when")
+                return new XcExistsKey(words[1]);
+            else if (words.Length == 3 && words[0] == "when" && words[1] == "no")
                 return new XcNegation(new XcExistsKey(words[2]));
             else if (words.Length == 4 && words[0] == "when" && words[2] == "=~")
                 return new XcMatchesLeft(words[1], words[3]);

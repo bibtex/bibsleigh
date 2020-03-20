@@ -7,13 +7,19 @@ namespace xbib
 {
     internal class XBibProcessor
     {
+        private const string PathToPaper = @"*\*\*\*";
+        private const string PathToConf = @"*\*\*";
+
         private string Corpus;
         private string ThePath;
 
-        private List<XbRule> Rules = new List<XbRule>();
+        private Dictionary<string, List<XbRule>> Rules = new Dictionary<string, List<XbRule>>();
 
         internal XBibProcessor(string filename)
         {
+            Rules[PathToPaper] = new List<XbRule>();
+            Rules[PathToConf] = new List<XbRule>();
+
             string[] text = File.ReadAllLines(CuratePath(filename));
             int i = 0;
             string line;
@@ -38,7 +44,7 @@ namespace xbib
                 {
                     var rule = IO.ParseRule(line, text, ref i);
                     if (rule != null)
-                        Rules.Add(rule);
+                        Rules[ThePath].Add(rule);
                 }
             }
         }
@@ -48,11 +54,7 @@ namespace xbib
             if (String.IsNullOrEmpty(Corpus))
                 Corpus = Directory.GetCurrentDirectory();
             DirectoryInfo root = new DirectoryInfo(Corpus);
-
-            if (ThePath == @"*\*\*\*")
-                EnforceInLeaves(root);
-            else
-                throw new NotImplementedException($"Path '{ThePath}' unsupported");
+            EnforceInLeaves(root);
         }
 
         private void EnforceInLeaves(DirectoryInfo corpus)
@@ -60,27 +62,40 @@ namespace xbib
             foreach (var unoF in corpus.GetDirectories("*"))
                 foreach (var duoF in unoF.GetDirectories("*"))
                 {
-                    Dictionary<string, FileInfo> PossibleParents = new Dictionary<string, FileInfo>();
+                    Dictionary<string, JsonValue> PossibleParents = new Dictionary<string, JsonValue>();
                     foreach (var treJ in duoF.GetFiles("*.json"))
-                        PossibleParents[Path.GetFileNameWithoutExtension(treJ.Name)] = treJ;
+                    {
+                        var json = WokeJ.ParseJson(treJ.FullName);
+                        bool changed = false;
+                        foreach (var rule in Rules[PathToConf])
+                            changed |= rule.Enforce(json, null); // TODO: parents of conferences
+                        if (changed)
+                        {
+                            File.WriteAllText(treJ.FullName, WokeJ.UnParseJson(json));
+                            //Console.WriteLine(XBibParser.UnParseJson(json));
+                            //throw new Exception();
+                            Console.WriteLine($"Updated {unoF}/{duoF}/{treJ}");
+                        }
+                        PossibleParents[Path.GetFileNameWithoutExtension(treJ.Name)] = json;
+                    }
                     foreach (var treF in duoF.GetDirectories("*"))
                     {
                         int i = 0, j = 0;
                         JsonValue Parent = null;
                         if (PossibleParents.ContainsKey(treF.Name))
-                            Parent = WokeJ.ParseJson(PossibleParents[treF.Name].FullName);
-                        foreach (var quaF in treF.GetFiles("*.json"))
+                            Parent = PossibleParents[treF.Name];
+                        foreach (var quaJ in treF.GetFiles("*.json"))
                         {
-                            JsonValue json = WokeJ.ParseJson(quaF.FullName);
+                            JsonValue json = WokeJ.ParseJson(quaJ.FullName);
                             if (json == null)
                                 continue;
                             bool changed = false;
-                            foreach (var rule in Rules)
+                            foreach (var rule in Rules[PathToPaper])
                                 changed |= rule.Enforce(json, Parent);
                             if (changed)
                             {
                                 //Console.WriteLine("qapla!");
-                                File.WriteAllText(quaF.FullName, WokeJ.UnParseJson(json));
+                                File.WriteAllText(quaJ.FullName, WokeJ.UnParseJson(json));
                                 //Console.WriteLine(XBibParser.UnParseJson(json));
                                 //throw new Exception();
                                 j++;
@@ -104,6 +119,11 @@ namespace xbib
         private void AssignPath(string p)
         {
             ThePath = p;
+            if (!Rules.ContainsKey(ThePath))
+            {
+                Rules[ThePath] = new List<XbRule>();
+                Console.WriteLine($"[WARN] Suspiciously unfamiliar path: '{ThePath}' (know {String.Join(" and ", Rules.Keys)})");
+            }
         }
 
         private string CuratePath(string p)

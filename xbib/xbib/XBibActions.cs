@@ -49,7 +49,7 @@ namespace xbib
             JsonValue old = WokeJ.GetElementByKey(json, Key);
             if (old == null)
                 return false;
-            (json as JsonArray).Remove(Key);
+            (json as JsonObject).Remove(Key);
             return true;
         }
     }

@@ -1,12 +1,19 @@
 ﻿using System;
 using System.IO;
 using System.Json;
+using System.Linq;
 using System.Text;
 
 namespace xbib
 {
     internal class WokeJ
     {
+        private static readonly string[] FormattedVertically =
+        {
+            "roles",
+            "tagged",
+        };
+
         internal static void ForAllElements(JsonArray json, Action<JsonValue> act)
         {
             for (int i = 0; i < json.Count; i++)
@@ -77,14 +84,19 @@ namespace xbib
         internal static string UnParseJson(JsonValue json)
         {
             StringBuilder sb = new StringBuilder();
-            UnparseJson2(json, sb);
+            UnparseJson2("", json, sb);
             return sb.ToString();
         }
 
-        private static void UnparseJson2(JsonValue json, StringBuilder sb)
+        private static void UnparseJson2(string key, JsonValue json, StringBuilder sb)
         {
             if (json is JsonArray ja)
-                UnparseJson3(ja, sb);
+            {
+                if (FormattedVertically.Contains(key))
+                    UnparseJson4(ja, sb);
+                else
+                    UnparseJson3(ja, sb);
+            }
             else if (json is JsonObject jo)
                 UnparseJson3(jo, sb);
             else if (json is JsonPrimitive jp)
@@ -105,8 +117,7 @@ namespace xbib
                 sb.Append("\t\"");
                 sb.Append(k);
                 sb.Append("\": ");
-                UnparseJson2(jo[k], sb);
-                // COMMA!
+                UnparseJson2(k, jo[k], sb);
                 if (i != j)
                     sb.Append(",");
                 sb.Append(Environment.NewLine);
@@ -120,10 +131,26 @@ namespace xbib
             sb.Append("[");
             ForAllElements(ja, (i, e) =>
                 {
-                    UnparseJson2(e, sb);
+                    UnparseJson2("", e, sb);
                     if (i != ja.Count - 1)
                         sb.Append(", ");
                 });
+            sb.Append("]");
+        }
+
+        private static void UnparseJson4(JsonArray ja, StringBuilder sb)
+        {
+            sb.Append("[");
+            ForAllElements(ja, (i, e) =>
+            {
+                UnparseJson2("", e, sb);
+                if (i != ja.Count - 1)
+                {
+                    sb.Append(",");
+                    sb.Append(Environment.NewLine);
+                    sb.Append("\t\t");
+                }
+            });
             sb.Append("]");
         }
     }

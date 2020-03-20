@@ -1,4 +1,4 @@
-#!/c/Users/vadim/AppData/Local/Programs/Python/Python35/python
+#!/c/Users/vadim/AppData/Local/Programs/Python/Python37-32/python
 # -*- coding: utf-8 -*-
 #
 # a module for stemming paper titles LRJ
