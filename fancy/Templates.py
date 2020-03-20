@@ -99,7 +99,18 @@ images were used to aid the drawing process. If you are an organiser of
 a venue and would like to get my SVG originals, feel free to send an email.</p>
 {}
 <br clear="both"/>
-<p>Next conferences to import: {}…</p>
+<p><a href="sync.html">Next conferences to import</a></p>
+'''+footer
+
+syncHTML = \
+header.format(title='Bibliography of Software Language Engineering in Generated Hypertext — Sync')+\
+'<a href="index.html"><img src="stuff/bibsleigh.png" alt="BibSLEIGH" title="BibSLEIGH" class="pad"/></a><br/>'+\
+leftLinks('pppp', '')+'''
+</div>
+<div class="main">
+<h2>Bibliography of Software Language Engineering in Generated Hypertext (BibSLEIGH)</h2>
+<p>BibSLEIGH is being synced by manual executions of automated update scripts. This page is meant for the maintainer of the project to keep track of the progress.</p>
+{}
 '''+footer
 
 confHTML = header+'''

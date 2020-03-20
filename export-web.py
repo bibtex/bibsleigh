@@ -3,9 +3,10 @@
 #
 # a module for exporting LRJs to the HTML frontpages
 
+import cProfile
 import os.path, glob
 from fancy.ANSI import C
-from fancy.Templates import aboutHTML
+from fancy.Templates import aboutHTML, syncHTML
 from lib.AST import Sleigh
 from lib.JSON import parseJSON
 from lib.LP import lastSlash
@@ -20,7 +21,7 @@ sleigh = Sleigh(corpusdir, name2file)
 def nextYear(vvv):
 	return int(lastSlash(sorted(glob.glob(vvv+'/*'))[-2]))+1
 
-if __name__ == "__main__":
+def main():
 	print('{}: {} venues, {} papers\n{}'.format(\
 		C.purple('BibSLEIGH'),
 		C.red(len(sleigh.venues)),
@@ -101,11 +102,67 @@ if __name__ == "__main__":
 	f = open(outputdir+'/about.html', 'w', encoding='utf-8')
 	f.write(aboutHTML.format(\
 		len(icons),
-		'<div class="minibar">' + '\n'.join(sorted(icons)) + '</div>',
-		newstuff\
+		'<div class="minibar">' + '\n'.join(sorted(icons)) + '</div>'
 		))
 	f.close()
+
+	# generate the DBLP sync page
+	cell_by_conf_by_year = {}
+	Ys = [2020, 2019, 2018, 2017, 2016, 2015, 2014, 2013, 2012, 2011, 2010]
+	dblplinks = {}
+
+	with open(ienputdir+'/meta/dblpguide.sync', 'r') as f:
+		for line in f:
+			if not line or line.startswith('#'):
+				continue
+			words = line.split(' : ')
+			if len(words) != 3:
+				print('- Metaline {} skipped!'.format(words))
+				continue
+			name = words[0].strip()
+			dome = words[1].strip()
+			dblp = words[2].strip()
+			cell_by_conf_by_year[name] = {}
+			dblplinks[name] = dblp
+			for y in Ys:
+				cell_by_conf_by_year[name][y] = '(no)'
+			v = sleigh.getVenue(dome)
+			if v:
+				for yy in Ys:
+					y = v.getYear(yy)
+					if y:
+						ckey = '{}-{}'.format(name, yy)
+						c = y.getConf(ckey)
+						if c:
+							cell_by_conf_by_year[name][yy] = c.getIconItem2('','')
+						else:
+							print('- Conference {} of year {} in venue {} not found in the corpus'.format(ckey, yy, name))
+					else:
+						print('- Year {} in venue {} not found in the corpus among {}'.format(yy, name, [z.year for z in v.years]))
+			else:
+				print('- Venue {} not found in the corpus'.format(name))
+
+	table = '<table>'
+	table += '<tr><td></td>'
+	for y in Ys:
+		table += '<th>{}</th>\n'.format(y)
+	table += '</tr>'
+	print (cell_by_conf_by_year)
+	for name in sorted(cell_by_conf_by_year.keys()):
+		table += '<tr><th><a href="{}.html">[@]</a> <a href="{}">{}</a></th>'.format(name, dblplinks[name],name)
+		for y in Ys:
+			table += '<td>{}</td>\n'.format(cell_by_conf_by_year[name][y])
+		table += '</tr>'
+	table += '</table>'
+
+	with open(outputdir+'/sync.html', 'w', encoding='utf-8') as f:
+		f.write(syncHTML.format(table))
+
 	print('{}\nDone with {} venues, {} papers.'.format(\
 		C.purple('='*42),
 		C.red(len(sleigh.venues)),
 		C.red(sleigh.numOfPapers())))
+
+if __name__ == "__main__":
+	main()
+	# cProfile.run('main()')

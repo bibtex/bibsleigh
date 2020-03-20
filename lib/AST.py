@@ -346,6 +346,11 @@ class Sleigh(Unser):
 					self.venues.append(Venue(d, idir, name2file, self))
 			else:
 				self.venues.append(Venue(d, idir, name2file, self))
+	def getVenue(self, key):
+		for v in self.venues:
+			if v.getKey() == key:
+				return v
+		return None
 	def getPage(self):
 		return uberHTML.format(\
 			cxDom=len(self.venues),
@@ -571,6 +576,12 @@ class Venue(Unser):
 			else:
 				print('File out of place:', f)
 		self.back = parent
+	def getYear(self, n):
+		n = str(n)
+		for y in self.years:
+			if y.year == n:
+				return y
+		return None
 	def numOfPapers(self):
 		return sum([y.numOfPapers() for y in self.years])
 	def numOfVolumes(self):
@@ -795,6 +806,11 @@ class Year(Unser):
 						self.tags[k] = []
 					self.tags[k].extend(ts[k])
 		return self.tags
+	def getConf(self, key):
+		for c in self.confs:
+			if c.getKey() == key:
+				return c
+		return None
 
 class Conf(Unser):
 	def __init__(self, d, hdir, name2file, parent):
