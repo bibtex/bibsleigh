@@ -69,9 +69,6 @@ if __name__ == "__main__":
 			'../json/corpus/PLDI/1982/SCC-1982').format(sys.argv[0]))
 		sys.exit(1)
 	dblp = safelyLoadURL(sys.argv[1])
-	tmp = open('httpdump.raw', 'w')
-	tmp.write(dblp)
-	tmp.close()
 	ldir = sys.argv[2]
 	year = ldir.split('/')[4]
 	allxmls = [xmlname for xmlname in dblp.split('"') if xmlname.endswith('.xml')]

@@ -20,7 +20,7 @@ namespace xbib
 
         internal override bool Enforce(JsonValue json, JsonValue parent)
         {
-            if (Guard.Evaluate(json))
+            if (Guard.Evaluate(json, parent))
                 return Act.Execute(json, parent);
             else
                 return false;

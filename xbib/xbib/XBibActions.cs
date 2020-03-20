@@ -24,7 +24,7 @@ namespace xbib
         {
             JsonValue old = WokeJ.GetElementByKey(json, Key);
             JsonValue neu = WokeJ.GetElementByKey(parent, ParentKey);
-            if (old != null && neu != null)
+            if (neu != null)
             {
                 WokeJ.AddKeyValue(json, Key, neu);
                 return WokeJ.GetElementByKey(json, Key) != old;
@@ -69,17 +69,25 @@ namespace xbib
         internal override bool Execute(JsonValue json, JsonValue parent)
         {
             JsonValue old = WokeJ.GetElementByKey(json, Key);
-            if (old == null)
+            if (Value[0] == '$')
+                return _assign(old, json, parent, Key, IO.BareValue(WokeJ.GetElementByKey(json, Value.Substring(1))));
+            else
+                return _assign(old, json, parent, Key, Value);
+        }
+
+        private static bool _assign(JsonValue old, JsonValue json, JsonValue parent, string key, string value)
+        {
+            if (String.IsNullOrEmpty(value))
                 return false;
-            if (old is JsonPrimitive oldP)
+            if (old != null && old is JsonPrimitive oldP)
             {
                 var oldVal = IO.BareValue(oldP);
-                json[Key] = new JsonPrimitive(Value);
-                return oldVal != Value;
+                json[key] = new JsonPrimitive(value);
+                return oldVal != value;
             }
             else
             {
-                json[Key] = new JsonPrimitive(Value);
+                json[key] = new JsonPrimitive(value);
                 return true;
             }
         }

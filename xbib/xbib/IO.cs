@@ -14,10 +14,12 @@ namespace xbib
                 return new XcNegation(new XcExistsKey(words[2]));
             else if (words.Length == 4 && words[0] == "when" && words[2] == "==")
                 return new XcMatchesExactly(words[1], words[3].Replace('_', ' '));
+            else if (words.Length == 4 && words[0] == "when" && words[2] == "=^=")
+                return new XcMatchesParentExactly(words[1], words[3]);
             else if (words.Length == 4 && words[0] == "when" && words[2] == "=~")
-                return new XcMatchesLeft(words[1], words[3]);
+                return new XcMatchesLeft(words[1], words[3].Replace('_', ' '));
             else if (words.Length == 4 && words[0] == "when" && words[2] == "~=")
-                return new XcMatchesRight(words[1], words[3]);
+                return new XcMatchesRight(words[1], words[3].Replace('_', ' '));
             else
                 throw new NotImplementedException($"condition '{cond}' not recognised");
         }
@@ -59,7 +61,9 @@ namespace xbib
 
         internal static string BareValue(JsonValue json)
         {
-            string value = json.ToString();
+            string value = json?.ToString();
+            if (String.IsNullOrEmpty(value))
+                return String.Empty;
             if (value.Length > 2 && value[0] == '"' && value[value.Length - 1] == '"')
                 value = value.Substring(1, value.Length - 2);
             return value;

@@ -32,6 +32,7 @@ def main():
 	f.write(sleigh.getPage())
 	f.close()
 	# generate all individual pages
+	# if False:
 	for v in sleigh.venues:
 		r = C.blue(v.getKey())
 		f = open(outputdir+'/'+v.getKey()+'.html', 'w', encoding='utf-8')
@@ -93,7 +94,6 @@ def main():
 			pic = '<img class="abc" src="stuff/{0}.png" alt="{0}"/>'.format(pure)
 		icons.append(pic)
 	# find last year of each venue
-	newstuff = ''
 	# for ven in glob.glob(corpusdir + '/*'):
 	# 	venname = lastSlash(ven)
 	# 	newstuff += '<strong><a href="http://dblp.uni-trier.de/db/conf/{}/">{} {}</a></strong>, '.format(venname.lower(), venname, nextYear(ven))
@@ -147,9 +147,9 @@ def main():
 	for y in Ys:
 		table += '<th>{}</th>\n'.format(y)
 	table += '</tr>'
-	print (cell_by_conf_by_year)
+	# print (cell_by_conf_by_year)
 	for name in sorted(cell_by_conf_by_year.keys()):
-		table += '<tr><th><a href="{}.html">[@]</a> <a href="{}">{}</a></th>'.format(name, dblplinks[name],name)
+		table += '<tr><th><a href="{}.brand.html">[@]</a> <a href="{}">{}</a></th>'.format(name, dblplinks[name],name)
 		for y in Ys:
 			table += '<td>{}</td>\n'.format(cell_by_conf_by_year[name][y])
 		table += '</tr>'
