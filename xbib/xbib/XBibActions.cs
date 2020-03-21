@@ -17,7 +17,8 @@ namespace xbib
         {
             Key = key;
             ParentKey = parkey;
-            Console.WriteLine($"[DEBUG] XaInherit of {parkey} as {key} is created");
+            if (Config.Debug)
+                Console.WriteLine($"[DEBUG] XaInherit of {parkey} as {key} is created");
         }
 
         internal override bool Execute(JsonValue json, JsonValue parent)
@@ -41,7 +42,8 @@ namespace xbib
         internal XaRemove(string key)
         {
             Key = key;
-            Console.WriteLine($"[DEBUG] XaRemove of {key} is created");
+            if (Config.Debug)
+                Console.WriteLine($"[DEBUG] XaRemove of {key} is created");
         }
 
         internal override bool Execute(JsonValue json, JsonValue parent)
@@ -63,7 +65,8 @@ namespace xbib
         {
             Key = key;
             Value = v;
-            Console.WriteLine($"[DEBUG] XaAssign of {key} with '{v}' is created");
+            if (Config.Debug)
+                Console.WriteLine($"[DEBUG] XaAssign of {key} with '{v}' is created");
         }
 
         internal override bool Execute(JsonValue json, JsonValue parent)
@@ -123,6 +126,7 @@ namespace xbib
                 return true; // overapproximation
             }
             else
+            if (Config.Debug)
                 Console.WriteLine($"[ERROR] Cannot truncate a dictionary, skipped");
             return false;
         }
@@ -158,6 +162,7 @@ namespace xbib
                 return true; // overapproximation
             }
             else
+            if (Config.Debug)
                 Console.WriteLine($"[ERROR] Cannot truncate a dictionary, skipped");
             return false;
         }
@@ -179,7 +184,8 @@ namespace xbib
             var json = json_ as JsonObject;
             if (json == null)
             {
-                Console.WriteLine("[ERROR] Cannot rename something outside a dictionary");
+                if (Config.Debug)
+                    Console.WriteLine("[ERROR] Cannot rename something outside a dictionary");
                 return false;
             }
             var old = WokeJ.GetElementByKey(json, KeyOld);

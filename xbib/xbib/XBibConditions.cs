@@ -35,7 +35,8 @@ namespace xbib
         internal XcExistsKey(string key)
         {
             Key = key;
-            Console.WriteLine($"[DEBUG] XBibExistsKey of {key} is created");
+            if (Config.Debug)
+                Console.WriteLine($"[DEBUG] XBibExistsKey of {key} is created");
         }
 
         internal override bool Evaluate(JsonValue json, JsonValue parent)
@@ -52,7 +53,8 @@ namespace xbib
         internal XcNegation(XbCondition cond)
         {
             Inner = cond;
-            Console.WriteLine($"[DEBUG] XcNegation of {cond} is created");
+            if (Config.Debug)
+                Console.WriteLine($"[DEBUG] XcNegation of {cond} is created");
         }
 
         internal override bool Evaluate(JsonValue json, JsonValue parent)
@@ -71,7 +73,8 @@ namespace xbib
         {
             Key = key;
             Value = val;
-            Console.WriteLine($"[DEBUG] XcMatchesExactly of {key} with '{val}' is created");
+            if (Config.Debug)
+                Console.WriteLine($"[DEBUG] XcMatchesExactly of {key} with '{val}' is created");
         }
 
         internal override bool Evaluate(JsonValue json, JsonValue parent)
@@ -92,7 +95,8 @@ namespace xbib
         {
             Key = key1;
             ParentKey = key2;
-            Console.WriteLine($"[DEBUG] XcMatchesParentExactly of {key1} with ^{key2} is created");
+            if (Config.Debug)
+                Console.WriteLine($"[DEBUG] XcMatchesParentExactly of {key1} with ^{key2} is created");
         }
 
         internal override bool Evaluate(JsonValue json, JsonValue parent)
@@ -116,7 +120,8 @@ namespace xbib
         {
             Key = key;
             Value = val;
-            Console.WriteLine($"[DEBUG] XcMatchesLeft of {key} with '{val}' is created");
+            if (Config.Debug)
+                Console.WriteLine($"[DEBUG] XcMatchesLeft of {key} with '{val}' is created");
         }
 
         internal override bool Evaluate(JsonValue json, JsonValue parent)
@@ -137,7 +142,8 @@ namespace xbib
         {
             Key = key;
             Value = val;
-            Console.WriteLine($"[DEBUG] XcMatchesRight of {key} with '{val}' is created");
+            if (Config.Debug)
+                Console.WriteLine($"[DEBUG] XcMatchesRight of {key} with '{val}' is created");
         }
 
         internal override bool Evaluate(JsonValue json, JsonValue parent)

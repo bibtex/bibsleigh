@@ -115,7 +115,7 @@ def main():
 		for line in f:
 			if not line or line.startswith('#'):
 				continue
-			words = line.split(' : ')
+			words = line.split('|')
 			if len(words) != 3:
 				print('- Metaline {} skipped!'.format(words))
 				continue

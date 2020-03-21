@@ -2,11 +2,17 @@
 
 namespace xbib
 {
-    class Program
+    internal static class Config
     {
-        static void Main(string[] args)
+        internal static bool Debug { get; } = false;
+    }
+
+    internal class Program
+    {
+        private static void Main(string[] args)
         {
-            foreach(var arg in args)
+            Console.WriteLine("xbib 1.0.0.0");
+            foreach (var arg in args)
             {
                 var x = new XBibProcessor(arg);
                 x.Engage();
