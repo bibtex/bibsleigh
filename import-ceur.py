@@ -1,4 +1,4 @@
-#!/c/Users/vadim/AppData/Local/Programs/Python/Python35/python
+#!/c/Users/vadim/AppData/Local/Programs/Python/Python37-32/python
 # -*- coding: utf-8 -*-
 #
 # a module for harvesting a CEUR link into a proper BibSLEIGH entity
@@ -47,7 +47,7 @@ if __name__ == "__main__":
 	if not urlstart.endswith('/'):
 		urlstart += '/'
 	# soup = bs4.BeautifulSoup(open('ceur.example.txt', 'r'))
-	soup = bs4.BeautifulSoup(safelyLoadURL(urlstart))
+	soup = bs4.BeautifulSoup(safelyLoadURL(urlstart), 'html.parser')
 	volNr = getme(soup, 'CEURVOLNR')
 	volUrn = getme(soup, 'CEURURN')
 	volYear = getme(soup, 'CEURPUBYEAR')
@@ -74,7 +74,9 @@ if __name__ == "__main__":
 		if not paperTitle:
 			continue
 		paperPages = getme(li, 'CEURPAGES')
-		paperAuths = getme(li, 'CEURAUTHORS').split(', ')
+		paperAuths = getme(li, 'CEURAUTHOR')
+		if type(paperAuths) != type([]):
+			paperAuths = [paperAuths]
 		if paperAuths[-1].find(' and ') > -1:
 			auths = [a for a in paperAuths[-1].split(' and ') if a]
 			paperAuths = paperAuths[:-1]
@@ -95,6 +97,7 @@ if __name__ == "__main__":
 			paperEntry['url'] = urlstart + '#' + paperLnk
 		paperFilename = lastSlash(outputdir) + '-' + paperAuths[0].split(' ')[-1]
 		for a in paperAuths[1:]:
+			print(a)
 			paperFilename += a.split(' ')[-1][0]
 		if paperFilename in done:
 			paperFilename += 'a'
