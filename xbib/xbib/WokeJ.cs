@@ -26,6 +26,17 @@ namespace xbib
                 act(i, json[i]);
         }
 
+        internal static void MapReduce(JsonArray json, Func<JsonValue, JsonValue> map)
+        {
+            for (int i = 0; i < json.Count; i++)
+                json[i] = map(json[i]);
+            for (int i = 0; i < json.Count; i++)
+                if (json[i] == null)
+                    json.RemoveAt(i);
+        }
+
+
+
         internal static JsonValue GetElementByKey(JsonValue target, string key)
         {
             JsonObject json = target as JsonObject;
@@ -54,7 +65,12 @@ namespace xbib
                     if (oldP == value)
                         return;
                     else
-                        target[key] = value;
+                    {
+                        var n = new JsonArray();
+                        n.Add(oldP);
+                        n.Add(value);
+                        target[key] = n;
+                    }
                 }
                 else if (old is JsonArray oldA)
                 {

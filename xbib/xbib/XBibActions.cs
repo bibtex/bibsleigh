@@ -5,7 +5,9 @@ namespace xbib
 {
     abstract internal class XbAction
     {
-        abstract internal bool Execute(JsonValue json, JsonValue parent);
+        abstract internal bool ExecuteB(JsonValue json, JsonValue parent);
+
+        abstract internal JsonPrimitive ExecuteE(JsonPrimitive jp, JsonValue json, JsonValue parent);
     }
 
     internal class XaInherit : XbAction
@@ -21,7 +23,7 @@ namespace xbib
                 Console.WriteLine($"[DEBUG] XaInherit of {parkey} as {key} is created");
         }
 
-        internal override bool Execute(JsonValue json, JsonValue parent)
+        internal override bool ExecuteB(JsonValue json, JsonValue parent)
         {
             JsonValue old = WokeJ.GetElementByKey(json, Key);
             JsonValue neu = WokeJ.GetElementByKey(parent, ParentKey);
@@ -32,6 +34,11 @@ namespace xbib
             }
             else
                 return false;
+        }
+
+        internal override JsonPrimitive ExecuteE(JsonPrimitive jp, JsonValue json, JsonValue parent)
+        {
+            throw new NotImplementedException();
         }
     }
 
@@ -46,7 +53,7 @@ namespace xbib
                 Console.WriteLine($"[DEBUG] XaRemove of {key} is created");
         }
 
-        internal override bool Execute(JsonValue json, JsonValue parent)
+        internal override bool ExecuteB(JsonValue json, JsonValue parent)
         {
             JsonValue old = WokeJ.GetElementByKey(json, Key);
             if (old == null)
@@ -54,6 +61,9 @@ namespace xbib
             (json as JsonObject).Remove(Key);
             return true;
         }
+
+        internal override JsonPrimitive ExecuteE(JsonPrimitive jp, JsonValue json, JsonValue parent)
+            => null;
     }
 
     internal class XaAssign : XbAction
@@ -69,7 +79,7 @@ namespace xbib
                 Console.WriteLine($"[DEBUG] XaAssign of {key} with '{v}' is created");
         }
 
-        internal override bool Execute(JsonValue json, JsonValue parent)
+        internal override bool ExecuteB(JsonValue json, JsonValue parent)
         {
             JsonValue old = WokeJ.GetElementByKey(json, Key);
             if (Value[0] == '$')
@@ -94,6 +104,14 @@ namespace xbib
                 return true;
             }
         }
+
+        internal override JsonPrimitive ExecuteE(JsonPrimitive jp, JsonValue json, JsonValue parent)
+        {
+            if (Value[0] == '$')
+                return new JsonPrimitive(IO.BareValue(WokeJ.GetElementByKey(json, Value.Substring(1))));
+            else
+                return new JsonPrimitive(Value);
+        }
     }
 
     internal class XaTruncateLeft : XbAction
@@ -107,28 +125,34 @@ namespace xbib
             Size = x;
         }
 
-        internal override bool Execute(JsonValue json, JsonValue parent)
+        internal override bool ExecuteB(JsonValue json, JsonValue parent)
         {
             JsonValue old = WokeJ.GetElementByKey(json, Key);
             if (old == null)
                 return false;
             if (old is JsonPrimitive oldP)
             {
-                var val = IO.BareValue(oldP);
-                if (val.Length >= Size)
-                    val = val.Substring(Size);
-                json[Key] = new JsonPrimitive(val);
+                json[Key] = ExecuteE(oldP, json, parent);
                 return old != json[Key];
             }
             else if (old is JsonArray oldA)
             {
-                WokeJ.ForAllElements(oldA, e => Execute(e, parent));
+                Console.WriteLine($"got to the array {oldA}");
+                WokeJ.MapReduce(oldA, e => e is JsonPrimitive ep ? ExecuteE(ep, json, parent) : e);
                 return true; // overapproximation
             }
             else
             if (Config.Debug)
                 Console.WriteLine($"[ERROR] Cannot truncate a dictionary, skipped");
             return false;
+        }
+
+        internal override JsonPrimitive ExecuteE(JsonPrimitive jp, JsonValue json, JsonValue parent)
+        {
+            var val = IO.BareValue(jp);
+            if (val.Length >= Size)
+                val = val.Substring(Size);
+            return new JsonPrimitive(val);
         }
     }
 
@@ -143,28 +167,33 @@ namespace xbib
             Size = x;
         }
 
-        internal override bool Execute(JsonValue json, JsonValue parent)
+        internal override bool ExecuteB(JsonValue json, JsonValue parent)
         {
             JsonValue old = WokeJ.GetElementByKey(json, Key);
             if (old == null)
                 return false;
             if (old is JsonPrimitive oldP)
             {
-                var val = IO.BareValue(oldP);
-                if (val.Length >= Size)
-                    val = val.Substring(0, val.Length - Size);
-                json[Key] = new JsonPrimitive(val);
+                json[Key] = ExecuteE(oldP, json, parent);
                 return old != json[Key];
             }
             else if (old is JsonArray oldA)
             {
-                WokeJ.ForAllElements(oldA, e => Execute(e, parent));
+                WokeJ.ForAllElements(oldA, e => ExecuteB(e, parent));
                 return true; // overapproximation
             }
             else
             if (Config.Debug)
                 Console.WriteLine($"[ERROR] Cannot truncate a dictionary, skipped");
             return false;
+        }
+
+        internal override JsonPrimitive ExecuteE(JsonPrimitive jp, JsonValue json, JsonValue parent)
+        {
+            var val = IO.BareValue(jp);
+            if (val.Length >= Size)
+                val = val.Substring(0, val.Length - Size);
+            return new JsonPrimitive(val);
         }
     }
 
@@ -179,7 +208,7 @@ namespace xbib
             KeyNew = newkey;
         }
 
-        internal override bool Execute(JsonValue json_, JsonValue parent)
+        internal override bool ExecuteB(JsonValue json_, JsonValue parent)
         {
             var json = json_ as JsonObject;
             if (json == null)
@@ -194,6 +223,11 @@ namespace xbib
             WokeJ.AddKeyValue(json, KeyNew, old);
             json.Remove(KeyOld);
             return true; // overapptoximation
+        }
+
+        internal override JsonPrimitive ExecuteE(JsonPrimitive jp, JsonValue json, JsonValue parent)
+        {
+            throw new NotImplementedException();
         }
     }
 }

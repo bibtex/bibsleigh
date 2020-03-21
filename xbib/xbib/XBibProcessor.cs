@@ -23,6 +23,7 @@ namespace xbib
             string[] text = File.ReadAllLines(CuratePath(filename));
             int i = 0;
             string line;
+            bool for_each = false;
             while (i < text.Length)
             {
                 line = text[i].Trim();
@@ -40,11 +41,17 @@ namespace xbib
                     AssignPath(CuratePath(line.Substring(3).Trim()));
                     i++;
                 }
+                else if (line == "for each")
+                {
+                    for_each = true;
+                    i++;
+                }
                 else
                 {
-                    var rule = IO.ParseRule(line, text, ref i);
+                    var rule = IO.ParseRule(line, text, ref i, for_each);
                     if (rule != null)
                         Rules[ThePath].Add(rule);
+                    for_each = false;
                 }
             }
         }

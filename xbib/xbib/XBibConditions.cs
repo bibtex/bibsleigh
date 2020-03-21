@@ -5,7 +5,9 @@ namespace xbib
 {
     abstract internal class XbCondition
     {
-        abstract internal bool Evaluate(JsonValue json, JsonValue parent);
+        abstract internal bool EvaluateB(JsonValue json, JsonValue parent);
+
+        abstract internal bool EvaluateE(JsonPrimitive jp, JsonValue json, JsonValue parent);
 
         abstract internal string GetContext();
     }
@@ -20,9 +22,13 @@ namespace xbib
             Y = right;
         }
 
-        internal override bool Evaluate(JsonValue json, JsonValue parent)
-            => X.Evaluate(json, parent)
-            && Y.Evaluate(json, parent);
+        internal override bool EvaluateB(JsonValue json, JsonValue parent)
+            => X.EvaluateB(json, parent)
+            && Y.EvaluateB(json, parent);
+
+        internal override bool EvaluateE(JsonPrimitive jp, JsonValue json, JsonValue parent)
+            => X.EvaluateE(jp, json, parent)
+            && Y.EvaluateE(jp, json, parent);
 
         internal override string GetContext()
             => Y.GetContext();
@@ -39,8 +45,13 @@ namespace xbib
                 Console.WriteLine($"[DEBUG] XBibExistsKey of {key} is created");
         }
 
-        internal override bool Evaluate(JsonValue json, JsonValue parent)
+        internal override bool EvaluateB(JsonValue json, JsonValue parent)
             => json.ContainsKey(Key);
+
+        internal override bool EvaluateE(JsonPrimitive jp, JsonValue json, JsonValue parent)
+        {
+            throw new NotImplementedException();
+        }
 
         internal override string GetContext()
             => Key;
@@ -57,8 +68,11 @@ namespace xbib
                 Console.WriteLine($"[DEBUG] XcNegation of {cond} is created");
         }
 
-        internal override bool Evaluate(JsonValue json, JsonValue parent)
-            => !Inner.Evaluate(json, parent);
+        internal override bool EvaluateB(JsonValue json, JsonValue parent)
+            => !Inner.EvaluateB(json, parent);
+
+        internal override bool EvaluateE(JsonPrimitive jp, JsonValue json, JsonValue parent)
+            => !Inner.EvaluateE(jp, json, parent);
 
         internal override string GetContext()
             => Inner.GetContext();
@@ -77,10 +91,13 @@ namespace xbib
                 Console.WriteLine($"[DEBUG] XcMatchesExactly of {key} with '{val}' is created");
         }
 
-        internal override bool Evaluate(JsonValue json, JsonValue parent)
+        internal override bool EvaluateB(JsonValue json, JsonValue parent)
             => json.ContainsKey(Key)
             && json[Key] is JsonPrimitive jp
-            && IO.BareValue(jp) == Value;
+            && EvaluateE(jp, json, parent);
+
+        internal override bool EvaluateE(JsonPrimitive jp, JsonValue json, JsonValue parent)
+            => IO.BareValue(jp) == Value;
 
         internal override string GetContext()
             => Key;
@@ -99,11 +116,14 @@ namespace xbib
                 Console.WriteLine($"[DEBUG] XcMatchesParentExactly of {key1} with ^{key2} is created");
         }
 
-        internal override bool Evaluate(JsonValue json, JsonValue parent)
+        internal override bool EvaluateB(JsonValue json, JsonValue parent)
             => parent != null
             && json.ContainsKey(Key)
             && json[Key] is JsonPrimitive jp
-            && parent.ContainsKey(ParentKey)
+            && EvaluateE(jp, json, parent);
+
+        internal override bool EvaluateE(JsonPrimitive jp, JsonValue json, JsonValue parent)
+            => parent.ContainsKey(ParentKey)
             && parent[ParentKey] is JsonPrimitive jpp
             && IO.BareValue(jp) == IO.BareValue(jpp);
 
@@ -124,10 +144,13 @@ namespace xbib
                 Console.WriteLine($"[DEBUG] XcMatchesLeft of {key} with '{val}' is created");
         }
 
-        internal override bool Evaluate(JsonValue json, JsonValue parent)
+        internal override bool EvaluateB(JsonValue json, JsonValue parent)
             => json.ContainsKey(Key)
             && json[Key] is JsonPrimitive jp
-            && IO.BareValue(jp).StartsWith(Value);
+            && EvaluateE(jp, json, parent);
+
+        internal override bool EvaluateE(JsonPrimitive jp, JsonValue json, JsonValue parent)
+            => IO.BareValue(jp).StartsWith(Value);
 
         internal override string GetContext()
             => Key;
@@ -146,10 +169,13 @@ namespace xbib
                 Console.WriteLine($"[DEBUG] XcMatchesRight of {key} with '{val}' is created");
         }
 
-        internal override bool Evaluate(JsonValue json, JsonValue parent)
+        internal override bool EvaluateB(JsonValue json, JsonValue parent)
             => json.ContainsKey(Key)
             && json[Key] is JsonPrimitive jp
-            && IO.BareValue(jp).EndsWith(Value);
+            && EvaluateE(jp, json, parent);
+
+        internal override bool EvaluateE(JsonPrimitive jp, JsonValue json, JsonValue parent)
+            => IO.BareValue(jp).EndsWith(Value);
 
         internal override string GetContext()
             => Key;

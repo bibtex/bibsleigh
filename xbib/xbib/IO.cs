@@ -45,7 +45,7 @@ namespace xbib
                 throw new NotImplementedException($"action '{act}' not recognised");
         }
 
-        internal static XbRule ParseRule(string line, string[] text, ref int i)
+        internal static XbRule ParseRule(string line, string[] text, ref int i, bool for_each)
         {
             if (i + 1 < text.Length)
             {
@@ -61,7 +61,10 @@ namespace xbib
                 } while (IsCondition(line));
                 var act = ParseAction(line, ctx);
                 i++;
-                return new XrGuardedAction(guard, act);
+                if (for_each)
+                    return new XrIterativeAction(ctx, guard, act);
+                else
+                    return new XrGuardedAction(guard, act);
             }
             else
                 throw new NotImplementedException("wrong xbib command: " + line);
