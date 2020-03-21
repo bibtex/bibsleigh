@@ -32,7 +32,9 @@ namespace xbib
             else if (words.Length == 2 && words[0] == "remove")
                 return new XaRemove(words[1]);
             else if (words.Length == 2 && words[0] == "assign")
-                return new XaAssign(context, words[1]);
+                return new XaAssign(context, words[1].Replace('_', ' '));
+            else if (words.Length == 3 && words[0] == "add")
+                return new XaAssign(words[1], words[2].Replace('_', ' '));
             else if (words.Length == 3 && words[0] == "rename" && words[1] == "to")
                 return new XaRenameTo(context, words[2]);
             else if (words.Length == 3 && words[0] == "truncate" && words[1] == "left")
@@ -47,17 +49,29 @@ namespace xbib
         {
             if (i + 1 < text.Length)
             {
-                string s1, s2;
-                s1 = line;
-                s2 = text[i + 1].Trim();
-                i += 2;
-                var guard = ParseCondition(s1);
-                var act = ParseAction(s2, guard.GetContext());
+                XbCondition guard = null;
+                string ctx;
+                do
+                {
+                    var newguard = ParseCondition(line);
+                    ctx = newguard.GetContext();
+                    guard = CombineConditions(guard, newguard);
+                    i++;
+                    line = text[i].Trim();
+                } while (IsCondition(line));
+                var act = ParseAction(line, ctx);
+                i++;
                 return new XrGuardedAction(guard, act);
             }
             else
                 throw new NotImplementedException("wrong xbib command: " + line);
         }
+
+        private static XbCondition CombineConditions(XbCondition guard, XbCondition newguard)
+            => guard == null ? newguard : new XcConjunction(guard, newguard);
+
+        private static bool IsCondition(string line)
+            => line.StartsWith("when ");
 
         internal static string BareValue(JsonValue json)
         {

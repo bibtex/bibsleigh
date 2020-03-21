@@ -10,6 +10,24 @@ namespace xbib
         abstract internal string GetContext();
     }
 
+    internal class XcConjunction : XbCondition
+    {
+        private XbCondition X, Y;
+
+        internal XcConjunction(XbCondition left, XbCondition right)
+        {
+            X = left;
+            Y = right;
+        }
+
+        internal override bool Evaluate(JsonValue json, JsonValue parent)
+            => X.Evaluate(json, parent)
+            && Y.Evaluate(json, parent);
+
+        internal override string GetContext()
+            => Y.GetContext();
+    }
+
     internal class XcExistsKey : XbCondition
     {
         private string Key;
