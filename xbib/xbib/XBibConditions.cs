@@ -82,11 +82,21 @@ namespace xbib
     {
         private string Key;
         private string Value;
+        private string OtherKey;
 
         internal XcMatchesExactly(string key, string val)
         {
             Key = key;
-            Value = val;
+            if (val[0] == '$')
+            {
+                Value = null;
+                OtherKey = val.Substring(1);
+            }
+            else
+            {
+                Value = val;
+                OtherKey = null;
+            }
             if (Config.Debug)
                 Console.WriteLine($"[DEBUG] XcMatchesExactly of {key} with '{val}' is created");
         }
@@ -97,7 +107,9 @@ namespace xbib
             && EvaluateE(jp, json, parent);
 
         internal override bool EvaluateE(JsonPrimitive jp, JsonValue json, JsonValue parent)
-            => IO.BareValue(jp) == Value;
+            => String.IsNullOrEmpty(Value)
+            ? json.ContainsKey(OtherKey) && IO.BareValue(jp) == IO.BareValue(json[OtherKey])
+            : IO.BareValue(jp) == Value;
 
         internal override string GetContext()
             => Key;
@@ -192,5 +204,4 @@ namespace xbib
         internal override string GetContext()
             => String.Empty;
     }
-
 }
