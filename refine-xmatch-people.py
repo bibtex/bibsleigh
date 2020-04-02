@@ -1,4 +1,4 @@
-#!/c/Users/vadim/AppData/Local/Programs/Python/Python35/python
+#!/c/Users/vadim/AppData/Local/Programs/Python/Python37-32/python
 # -*- coding: utf-8 -*-
 #
 # a module for cross-checking information on people available from different sources
@@ -49,13 +49,18 @@ def dblpify(s):
 	return sur+':'+rest
 
 if __name__ == "__main__":
+	print('Greetings, human.')
 	verbose = sys.argv[-1] == '-v'
-	if not os.path.exists('_renameto.json'):
-		print('Run', C.blue('refine-aliases.py'), 'to build the aliasing/renaming relation and cache it.')
-		sys.exit(1)
+	# if not os.path.exists('_renameto.json'):
+	# 	print('Run', C.blue('refine-aliases.py'), 'to build the aliasing/renaming relation and cache it.')
+	# 	sys.exit(1)
+	print('We start here.')
 	# aka = parseJSON(ienputdir + '/aliases.json')
 	dis = parseJSON(ienputdir + '/disambig.json')
+	print('Parsed', ienputdir + '/disambig.json')
 	renameto = parseJSON('_renameto.json')
+	print('Parsed all JSONs.')
+	sys.stdout.flush()
 	# Data from the conferenceMetrics repo
 	csv = []
 	f = open('../conferenceMetrics/data/SE-conf-roles.csv', 'r', encoding='utf-8')
@@ -67,6 +72,8 @@ if __name__ == "__main__":
 	for line in f.readlines():
 		csv.append(line.strip().split(';'))
 	f.close()
+	print('Parsed all CSVs.')
+	sys.stdout.flush()
 	# All known contributors
 	people = {}
 	for fn in glob.glob(ienputdir + '/people/*.json'):
@@ -76,6 +83,7 @@ if __name__ == "__main__":
 			print('[', C.red('NOGO'), ']', 'No name in', fn)
 			continue
 		people[p['name']] = p
+	print('Got all the known people.')
 	print('{}: {} venues, {} papers\n{}'.format(\
 		C.purple('BibSLEIGH'),
 		C.red(len(sleigh.venues)),
@@ -83,18 +91,22 @@ if __name__ == "__main__":
 		C.purple('='*42)))
 	# All people who ever contributed
 	names = []
+	sys.stdout.flush()
 	for v in sleigh.venues:
 		for c in v.getConfs():
 			for p in c.papers:
 				for k in ('author', 'editor'):
 					if k in p.json.keys():
 						names += [a for a in listify(p.json[k]) if a not in names]
+	print('Got all the contributors.')
+	sys.stdout.flush()
 	# caching
 	peoplekeys = people.keys()
 	if os.path.exists('_established.json'):
 		established = json.load(open('_established.json', 'r', encoding='utf-8'))
 	else:
 		established = {}
+	print('Got all the established ones.')
 	# print(people)
 	CXread = len(people)
 	for name in names:
@@ -110,6 +122,7 @@ if __name__ == "__main__":
 			knownConfs.append(c.getKey())
 	# print(knownConfs)
 	print(C.purple('BibSLEIGH flattened to {} entities'.format(len(knownConfs))))
+	sys.stdout.flush()
 	# compressed error output
 	dunno = []
 	# Conference;Year;First Name;Last Name;Sex;Role
@@ -153,7 +166,9 @@ if __name__ == "__main__":
 		if [myconf, line[5]] not in people[name]['roles']:
 			people[name]['roles'].append([myconf, line[5]])
 	# ensure fast load time next time
-	print(established)
+	# print(established)
+	print('About to write the established relation.')
+	sys.stdout.flush()
 	f = open('_established.json', 'w', encoding='utf-8')
 	f.write(json.dumps(established, sort_keys=True, separators=(',\n\t', ': '), ensure_ascii=False))
 	f.close()

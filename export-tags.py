@@ -1,4 +1,4 @@
-#!/c/Users/vadim/AppData/Local/Programs/Python/Python35/python
+#!/c/Users/vadim/AppData/Local/Programs/Python/Python37-32/python
 # -*- coding: utf-8 -*-
 #
 # a module for exporting LRJ definitions of tags to the HTML frontpages
@@ -86,7 +86,11 @@ if __name__ == "__main__":
 			if x not in tagged:
 				tagged.append(x)
 		# read tag definition
-		tagdef = parseJSON(ienputdir + '/tags/{}.json'.format(key))
+		p = ienputdir + '/tags/{}.json'.format(key)
+		if not os.path.exists(p):
+			print(C.red('Error') + ' opening ' + p)
+			continue
+		tagdef = parseJSON(p)
 		# what to google?
 		links = []
 		if 'g' not in tagdef.keys():

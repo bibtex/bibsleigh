@@ -1,4 +1,4 @@
-#!/c/Users/vadim/AppData/Local/Programs/Python/Python35/python
+#!/c/Users/vadim/AppData/Local/Programs/Python/Python37-32/python
 # -*- coding: utf-8 -*-
 #
 # a module for exporting LRJ definitions of people to the HTML frontpages
@@ -154,25 +154,25 @@ if __name__ == "__main__":
 		dls = dict2links(persondef)
 		boxlinks = ''
 		if 'roles' in persondef.keys():
-			things = [bykey[r[0]].getIconItem1(r[1]) for r in persondef['roles']]
+			things = [bykey[r[0]].getIconItem1(r[1]) for r in persondef['roles'] if r[0] in bykey]
 			dls += '<h3>Facilitated {} volumes:</h3>'.format(len(persondef['roles'])) \
 				+ '<div class="minibar">' + movein('\n'.join(things)) + '<br style="clear:left"/></div>'
 		if 'authored' in persondef.keys():
 			# List of contributions and papers
-			things = [bykey[p].up().getIconItem1(bykey[p].get('year')) for p in persondef['authored']]
+			things = [bykey[p].up().getIconItem1(bykey[p].get('year')) for p in persondef['authored'] if p in bykey]
 			dls += '<h3>Contributed to:</h3><div class="minibar">' \
 				+ movein('\n'.join(uniq(things))) \
 				+ '<br style="clear:left"/></div>' \
 				+ '<h3>Wrote {} papers:</h3>'.format(len(persondef['authored'])) \
 				+ '<dl class="toc">' \
-				+ movein('\n'.join([bykey[p].getItem() for p in persondef['authored']])) \
+				+ movein('\n'.join([bykey[p].getItem() for p in persondef['authored'] if p in bykey])) \
 				+ '</dl>'
 			# things = [sleigh.seekByKey(p).getItem() for p in persondef['authored']]
 			# travelled to...
 			# NB: code clone of AST::Venue
 			# cs = 
 			ads = [c.json['address'][-1] \
-				for c in {bykey[p].up() for p in persondef['authored']} \
+				for c in {bykey[p].up() for p in persondef['authored'] if p in bykey} \
 				if 'address' in c.json]
 			if ads:
 				clist = {a:ads.count(a) for a in ads}
@@ -182,6 +182,8 @@ if __name__ == "__main__":
 			# collaborated with...
 			clist = {}
 			for p in persondef['authored']:
+				if p not in bykey:
+					continue
 				if 'author' in bykey[p].json.keys():
 					coas = listify(bykey[p].get('author'))
 					if ' ' in coas:
@@ -223,6 +225,8 @@ if __name__ == "__main__":
 			# examples = {}
 			allstems = []
 			for pk in persondef['authored']:
+				if pk not in bykey:
+					continue
 				allstems += bykey[pk].getBareStems()
 			stems = {stem:allstems.count(stem) for stem in allstems if not ifIgnored(stem)}
 			stemkeys = sorted(stems.keys(), key=lambda Z: pad(stems[Z])+pad(len(Z))+Z, reverse=True)
