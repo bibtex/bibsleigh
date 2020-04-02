@@ -46,6 +46,11 @@ namespace xbib
                     for_each = true;
                     i++;
                 }
+                else if (line == "use the force")
+                {
+                    Rules[ThePath].Add(new XrGuardedAction(new XcAlways(), new XaTouch()));
+                    i++;
+                }
                 else
                 {
                     var rule = IO.ParseRule(line, text, ref i, for_each);
@@ -69,10 +74,10 @@ namespace xbib
             foreach (var unoF in corpus.GetDirectories("*"))
                 foreach (var duoF in unoF.GetDirectories("*"))
                 {
-                    Dictionary<string, JsonValue> PossibleParents = new Dictionary<string, JsonValue>();
+                    Dictionary<string, JsonObject> PossibleParents = new Dictionary<string, JsonObject>();
                     foreach (var treJ in duoF.GetFiles("*.json"))
                     {
-                        var json = WokeJ.ParseJson(treJ.FullName);
+                        var json = WokeJ.ParseJson(treJ.FullName) as JsonObject;
                         bool changed = false;
                         foreach (var rule in Rules[PathToConf])
                             changed |= rule.Enforce(json, null); // TODO: parents of conferences
@@ -88,12 +93,12 @@ namespace xbib
                     foreach (var treF in duoF.GetDirectories("*"))
                     {
                         int i = 0, j = 0;
-                        JsonValue Parent = null;
+                        JsonObject Parent = null;
                         if (PossibleParents.ContainsKey(treF.Name))
                             Parent = PossibleParents[treF.Name];
                         foreach (var quaJ in treF.GetFiles("*.json"))
                         {
-                            JsonValue json = WokeJ.ParseJson(quaJ.FullName);
+                            JsonObject json = WokeJ.ParseJson(quaJ.FullName) as JsonObject;
                             if (json == null)
                                 continue;
                             bool changed = false;

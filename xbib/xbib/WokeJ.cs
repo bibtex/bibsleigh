@@ -35,8 +35,6 @@ namespace xbib
                     json.RemoveAt(i);
         }
 
-
-
         internal static JsonValue GetElementByKey(JsonValue target, string key)
         {
             JsonObject json = target as JsonObject;
@@ -88,7 +86,8 @@ namespace xbib
         {
             try
             {
-                return JsonValue.Parse(File.ReadAllText(filename));
+                var json = JsonValue.Parse(File.ReadAllText(filename)) as JsonObject;
+                return json;
             }
             catch (ArgumentException ae)
             {
@@ -101,7 +100,7 @@ namespace xbib
         {
             StringBuilder sb = new StringBuilder();
             UnparseJson2("", json, sb);
-            return sb.ToString();
+            return sb.ToString().Trim();
         }
 
         private static void UnparseJson2(string key, JsonValue json, StringBuilder sb)

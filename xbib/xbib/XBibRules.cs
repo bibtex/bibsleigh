@@ -7,7 +7,7 @@ namespace xbib
 {
     internal abstract class XbRule
     {
-        internal abstract bool Enforce(JsonValue json, JsonValue parent);
+        internal abstract bool Enforce(JsonObject json, JsonObject parent);
     }
 
     internal class XrGuardedAction : XbRule
@@ -23,7 +23,7 @@ namespace xbib
                 Console.WriteLine($"[DEBUG] XrGuardedAction of {Guard} => {Act}");
         }
 
-        internal override bool Enforce(JsonValue json, JsonValue parent)
+        internal override bool Enforce(JsonObject json, JsonObject parent)
         {
             if (Guard.EvaluateB(json, parent))
                 return Act.ExecuteB(json, parent);
@@ -47,9 +47,8 @@ namespace xbib
                 Console.WriteLine($"[DEBUG] XrIterativeAction of {Focus} in {Guard} => {Act}");
         }
 
-        internal override bool Enforce(JsonValue json_, JsonValue parent)
+        internal override bool Enforce(JsonObject json, JsonObject parent)
         {
-            var json = json_ as JsonObject;
             if (json == null || !json.ContainsKey(Focus))
                 return false;
             JsonValue f = json[Focus];

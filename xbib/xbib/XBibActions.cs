@@ -1,11 +1,12 @@
 ﻿using System;
 using System.Json;
+using System.Linq;
 
 namespace xbib
 {
     abstract internal class XbAction
     {
-        abstract internal bool ExecuteB(JsonValue json, JsonValue parent);
+        abstract internal bool ExecuteB(JsonObject json, JsonObject parent);
 
         abstract internal JsonPrimitive ExecuteE(JsonPrimitive jp, JsonValue json, JsonValue parent);
     }
@@ -23,7 +24,7 @@ namespace xbib
                 Console.WriteLine($"[DEBUG] XaInherit of {parkey} as {key} is created");
         }
 
-        internal override bool ExecuteB(JsonValue json, JsonValue parent)
+        internal override bool ExecuteB(JsonObject json, JsonObject parent)
         {
             JsonValue old = WokeJ.GetElementByKey(json, Key);
             JsonValue neu = WokeJ.GetElementByKey(parent, ParentKey);
@@ -53,12 +54,12 @@ namespace xbib
                 Console.WriteLine($"[DEBUG] XaRemove of {key} is created");
         }
 
-        internal override bool ExecuteB(JsonValue json, JsonValue parent)
+        internal override bool ExecuteB(JsonObject json, JsonObject parent)
         {
             JsonValue old = WokeJ.GetElementByKey(json, Key);
             if (old == null)
                 return false;
-            (json as JsonObject).Remove(Key);
+            json.Remove(Key);
             return true;
         }
 
@@ -79,7 +80,7 @@ namespace xbib
                 Console.WriteLine($"[DEBUG] XaAssign of {key} with '{v}' is created");
         }
 
-        internal override bool ExecuteB(JsonValue json, JsonValue parent)
+        internal override bool ExecuteB(JsonObject json, JsonObject parent)
         {
             JsonValue old = WokeJ.GetElementByKey(json, Key);
             if (Value[0] == '$')
@@ -125,7 +126,7 @@ namespace xbib
             Size = x;
         }
 
-        internal override bool ExecuteB(JsonValue json, JsonValue parent)
+        internal override bool ExecuteB(JsonObject json, JsonObject parent)
         {
             JsonValue old = WokeJ.GetElementByKey(json, Key);
             if (old == null)
@@ -167,7 +168,7 @@ namespace xbib
             Size = x;
         }
 
-        internal override bool ExecuteB(JsonValue json, JsonValue parent)
+        internal override bool ExecuteB(JsonObject json, JsonObject parent)
         {
             JsonValue old = WokeJ.GetElementByKey(json, Key);
             if (old == null)
@@ -179,8 +180,10 @@ namespace xbib
             }
             else if (old is JsonArray oldA)
             {
-                WokeJ.ForAllElements(oldA, e => ExecuteB(e, parent));
-                return true; // overapproximation
+                // TODO
+                return false;
+                //WokeJ.ForAllElements(oldA, e => ExecuteB(e, parent));
+                //return true; // overapproximation
             }
             else
             if (Config.Debug)
@@ -208,9 +211,8 @@ namespace xbib
             KeyNew = newkey;
         }
 
-        internal override bool ExecuteB(JsonValue json_, JsonValue parent)
+        internal override bool ExecuteB(JsonObject json, JsonObject parent)
         {
-            var json = json_ as JsonObject;
             if (json == null)
             {
                 if (Config.Debug)
@@ -229,5 +231,29 @@ namespace xbib
         {
             throw new NotImplementedException();
         }
+    }
+
+    internal class XaTouch : XbAction
+    {
+        internal override bool ExecuteB(JsonObject json, JsonObject parent)
+        {
+            bool changed = false;
+            foreach (var k in json.Keys.ToList())
+            {
+                if (json[k] is JsonPrimitive jp)
+                {
+                    var s = jp.ToString();
+                    if (s.Length > 2 && s[0] == '"' && s[s.Length - 1] == '"' && Int32.TryParse(s.Substring(1, s.Length - 2), out int n))
+                    { 
+                        json[k] = new JsonPrimitive(n);
+                        changed = true;
+                    }
+                }
+            }
+            return changed;
+        }
+
+        internal override JsonPrimitive ExecuteE(JsonPrimitive jp, JsonValue json, JsonValue parent)
+            => jp;
     }
 }

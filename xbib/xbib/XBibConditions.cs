@@ -180,4 +180,17 @@ namespace xbib
         internal override string GetContext()
             => Key;
     }
+
+    internal class XcAlways : XbCondition
+    {
+        internal override bool EvaluateB(JsonValue json, JsonValue parent)
+            => true;
+
+        internal override bool EvaluateE(JsonPrimitive jp, JsonValue json, JsonValue parent)
+            => true;
+
+        internal override string GetContext()
+            => String.Empty;
+    }
+
 }
