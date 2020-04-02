@@ -243,10 +243,28 @@ namespace xbib
                 if (json[k] is JsonPrimitive jp)
                 {
                     var s = jp.ToString();
-                    if (s.Length > 2 && s[0] == '"' && s[s.Length - 1] == '"' && Int32.TryParse(s.Substring(1, s.Length - 2), out int n))
-                    { 
+                    if (s.Length < 3 || s[0] != '"' || s[s.Length - 1] != '"')
+                        continue;
+                    s = s.Substring(1, s.Length - 2);
+
+                    if (k == "journal" && s.Length < 10)
+                        Console.WriteLine($"Strange journal name in {json["title"]} : '{s}'");
+                    if (k == "booktitle" && s.Length < 10)
+                        Console.WriteLine($"Strange book name in {json["title"]} : '{s}'");
+                    if (Int32.TryParse(s, out int n))
+                    {
                         json[k] = new JsonPrimitive(n);
                         changed = true;
+                    }
+                    else if (k == "booktitle" && s.Length > 5)
+                    {
+                        foreach (var wrong in Constants.Numerals.Keys)
+                            if (s.IndexOf(wrong) > 0)
+                            {
+                                json[k] = new JsonPrimitive(s.Replace(wrong, Constants.Numerals[wrong]));
+                                changed = true;
+                                break;
+                            }
                     }
                 }
             }
