@@ -19,7 +19,11 @@ namespace xbib
         {
             Rules[PathToPaper] = new List<XbRule>();
             Rules[PathToConf] = new List<XbRule>();
+            ReadFromFile(filename);
+        }
 
+        private void ReadFromFile(string filename)
+        {
             string[] text = File.ReadAllLines(CuratePath(filename));
             int i = 0;
             string line;
@@ -49,6 +53,16 @@ namespace xbib
                 else if (line == "use the force")
                 {
                     Rules[ThePath].Add(new XrGuardedAction(new XcAlways(), new XaTouch()));
+                    i++;
+                }
+                else if (line.StartsWith("apply "))
+                {
+                    var fname = line.Substring(6);
+                    if (!fname.EndsWith(".xbib"))
+                        fname += ".xbib";
+                    if (!fname.StartsWith("/") && !fname.StartsWith("c:\\"))
+                        fname = Path.Combine(Path.GetDirectoryName(filename), fname);
+                    ReadFromFile(fname);
                     i++;
                 }
                 else
