@@ -60,7 +60,7 @@ namespace xbib
                 else // from now on we know neu is JsonPrimitive
                 if (old is JsonPrimitive oldP)
                 {
-                    if (oldP == value)
+                    if (oldP.ToString() == value.ToString())
                         return;
                     else
                     {

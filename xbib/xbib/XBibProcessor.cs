@@ -129,7 +129,7 @@ namespace xbib
                             i++;
                         }
                         if (j > 0)
-                            Console.WriteLine($"{unoF.Name}/{duoF.Name}/{treF.Name}: {i} entries{(Parent == null ? "" : " + parent")} - {j} updated");
+                            Console.WriteLine($"{unoF.Name}/{duoF.Name}/{treF.Name}: {i} entries{(Parent == null ? "" : " + parent")} = {j} updated");
                     }
                 }
         }

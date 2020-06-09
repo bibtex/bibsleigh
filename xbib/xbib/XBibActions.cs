@@ -229,7 +229,14 @@ namespace xbib
 
         internal override JsonPrimitive ExecuteE(JsonPrimitive jp, JsonValue json, JsonValue parent)
         {
-            throw new NotImplementedException();
+            if (json == null)
+            {
+                if (Config.Debug)
+                    Console.WriteLine("[ERROR] Cannot rename something outside a dictionary");
+                return jp;
+            }
+            WokeJ.AddKeyValue(json, KeyNew, jp);
+            return null;
         }
     }
 
